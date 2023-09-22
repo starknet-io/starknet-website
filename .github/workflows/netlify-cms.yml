@@ -55,8 +55,8 @@ jobs:
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.NEW_CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.NEW_CLOUDFLARE_ACCOUNT_ID }}
           projectName: starknet-netlify-cms
           directory: workspaces/netlify-cms/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
