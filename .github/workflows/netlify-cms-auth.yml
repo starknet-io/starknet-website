@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - deploy/netlify-cms-auth
+      - migration/website
 
 jobs:
   build_and_deploy:
