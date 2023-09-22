@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Storybook ${{ github.ref_name }}
-      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-storybook.pages.dev
+      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-storybook-cwm.pages.dev
     permissions:
       contents: read
       deployments: write
@@ -50,8 +50,8 @@ jobs:
       - name: Deploy storybook
         uses: cloudflare/pages-action@1
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.NEW_CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.NEW_CLOUDFLARE_ACCOUNT_ID }}
           projectName: starknet-storybook
           directory: workspaces/storybook/storybook-static
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
