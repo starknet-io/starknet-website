@@ -22,14 +22,24 @@ items:
       via its Hardware Signer 2-factor authentication and multi-signer 3-factor
       authentication capabilities.
   - body: Earn, stake and trade with low fees, high speeds & strong security.
+
     type_list:
       - type: browser_extension
         url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
+      - type: ios
+        url: https://apps.apple.com/us/app/argent-defi-in-a-tap/id1358741926
+      - type: android
+        url: https://play.google.com/store/apps/details?id=im.argent.contractwalletclient
+      - type: SDK
+        url: https://www.argent.xyz/web-wallet-sdk
     name: Argent X
     website_url: https://www.argent.xyz/argent-x/
     discord: https://discord.gg/8yVmtsgtgm
     twitter: https://twitter.com/argentHQ
     type:
       - browser_extension
+      - ios
+      - android
+      - SDK
     image: /assets/argent.jpg
     description: Earn, stake and trade with low fees, high speeds & strong security.
