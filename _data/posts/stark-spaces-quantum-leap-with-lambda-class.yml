@@ -1,0 +1,67 @@
+id: 14dd4fa0-fcdf-4d81-b4ad-d8c6aad7a646
+post_type: video
+title: STARK SPACES | Quantum Leap with Lambda Class
+published_date: 2023-09-04T11:53:24.678Z
+video:
+  url: https://www.youtube.com/watch?v=WNYqIGtuhBA&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=10&pp=iAQB
+  id: WNYqIGtuhBA
+  data:
+    kind: youtube#video
+    etag: KDwc9uxf5xdJk0DemhfQQ_-1tO0
+    id: WNYqIGtuhBA
+    snippet:
+      publishedAt: 2023-09-04T04:29:54Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | Quantum Leap with Lambda Class
+      description: >-
+        Dive deep into the behind-the-scenes magic of Starknet’s Quantum Leap
+        with Lambda Class.
+
+        We’ll discuss the incredible journey towards more TPS, a breakthrough in scaling Ethereum, and what’s on the horizon.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/WNYqIGtuhBA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/WNYqIGtuhBA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/WNYqIGtuhBA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/WNYqIGtuhBA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/WNYqIGtuhBA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | Quantum Leap with Lambda Class
+        description: >-
+          Dive deep into the behind-the-scenes magic of Starknet’s Quantum Leap
+          with Lambda Class.
+
+          We’ll discuss the incredible journey towards more TPS, a breakthrough in scaling Ethereum, and what’s on the horizon.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT38M50S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_wnyqigtuhba_maxres.png
+category: ecosystem
+short_desc: >
+  Dive deep into the behind-the-scenes magic of Starknet’s Quantum Leap with
+  Lambda Class.
+
+  We’ll discuss the incredible journey towards more TPS, a breakthrough in scaling Ethereum, and what’s on the horizon.

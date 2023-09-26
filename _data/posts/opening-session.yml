@@ -3,24 +3,15 @@ post_type: video
 title: Opening Session
 published_date: 2023-09-01T10:53:57.266Z
 video:
-  url: https://www.youtube.com/watch?v=qq6_GCZzxwk&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=2
+  url: https://youtu.be/WiY4Kt_4ulQ
   id: qq6_GCZzxwk
   data:
     kind: youtube#video
     etag: -JyRcNQPofO0q716vs2DzPyb-P4
     id: qq6_GCZzxwk
     snippet:
-      publishedAt: 2023-09-01T14:23:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Opening session
-      description: |-
-        Eli Ben-Sasson
-        Co-Founder & President
-        Starkware
-
-        Uri Kolodny
-        Co-Founder & CEO
-        Starkware
+      publishedAt: 2023-09-01T14:23:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/qq6_GCZzxwk/default.jpg
@@ -42,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/qq6_GCZzxwk/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Opening session
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Opening session
         description: |-
@@ -55,7 +47,15 @@ video:
           Uri Kolodny
           Co-Founder & CEO
           Starkware
-      defaultAudioLanguage: en-US
+      description: |-
+        Eli Ben-Sasson
+        Co-Founder & President
+        Starkware
+
+        Uri Kolodny
+        Co-Founder & CEO
+        Starkware
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT4M47S
       dimension: 2d
@@ -66,3 +66,5 @@ video:
       projection: rectangular
 image: /assets/youthumb_qq6_gczzxwk_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089

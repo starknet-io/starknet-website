@@ -28,8 +28,6 @@ blocks:
           * Volition will be implemented on testnet during Q4 2023. 
 
 
-
-
           ## Validity Rollups: Increasing Throughput, Reducing Costs 
 
 
@@ -105,4 +103,4 @@ blocks:
           ## Summary
 
 
-          Starknet's Volition tackles both security concerns and steep onchain data costs. By allowing data storage on Starknet L2, developers have a shot at cutting costs and boosting scalability, all while maintaining Ethereum's trusted security. The upside of employing Volition on Starknet is vast, potentially opening doors for innovative app development. Curious about Volition? Dive into a [comprehensive lecture](https://www.youtube.com/watch?v=uqUwVfDpTK0) by our head of product, Avihu Levy, and explore an [in-depth discussion](https://community.starknet.io/t/volition-hybrid-data-availability-solution/97387/17) on our community forum.
+          Starknet's Volition tackles both security concerns and steep onchain data costs. By allowing data storage on Starknet L2, developers have a shot at cutting costs and boosting scalability, all while maintaining Ethereum's trusted security. The upside of employing Volition on Starknet is vast, potentially opening doors for innovative app development. Curious about Volition? Dive into the[comprehensive lecture](https://www.youtube.com/watch?v=uqUwVfDpTK0) by our head of product, Avihu Levy, and explore an [in-depth discussion](https://community.starknet.io/t/volition-hybrid-data-availability-solution/97387/17) on our community forum.

@@ -3,37 +3,37 @@ post_type: video
 title: Starknet decentralized Protocol Discussion
 published_date: 2023-09-10T13:53:22.716Z
 video:
-  url: https://www.youtube.com/watch?v=RJ16eZmgq6k&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=36
-  id: RJ16eZmgq6k
+  url: https://youtu.be/GAPU22K0YhY?si=muvsAX0-FvCUYSZr
+  id: GAPU22K0YhY
   data:
     kind: youtube#video
-    etag: Nuf5EaSftzvAKObgY1RlMJ6BhRc
-    id: RJ16eZmgq6k
+    etag: YtbCjbQ2R0jA5J6Y_DIQz9lRCMI
+    id: GAPU22K0YhY
     snippet:
-      publishedAt: 2023-09-10T13:37:47Z
+      publishedAt: 2023-09-11T23:49:24Z
       channelId: UCnDWguR8mE2oDBsjhQkgbvg
       title: Starknet decentralized protocol discussion | Ilia Volokh
       description: We will slowly traverse the maze of questions and flows in the
         decentralized Starknet protocol presented in my talk.
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/RJ16eZmgq6k/default.jpg
+          url: https://i.ytimg.com/vi/GAPU22K0YhY/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/RJ16eZmgq6k/mqdefault.jpg
+          url: https://i.ytimg.com/vi/GAPU22K0YhY/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/RJ16eZmgq6k/hqdefault.jpg
+          url: https://i.ytimg.com/vi/GAPU22K0YhY/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/RJ16eZmgq6k/sddefault.jpg
+          url: https://i.ytimg.com/vi/GAPU22K0YhY/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/RJ16eZmgq6k/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/GAPU22K0YhY/maxresdefault.jpg
           width: 1280
           height: 720
       channelTitle: StarkWare
@@ -45,7 +45,7 @@ video:
           decentralized Starknet protocol presented in my talk.
       defaultAudioLanguage: en-US
     contentDetails:
-      duration: PT55M1S
+      duration: PT15M20S
       dimension: 2d
       definition: hd
       caption: "false"
@@ -54,5 +54,7 @@ video:
       projection: rectangular
 image: /assets/youthumb_hayos7e3ge0_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: We will slowly traverse the maze of questions and flows in the
   decentralized Starknet protocol presented in Ilia's talk.

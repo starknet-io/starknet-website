@@ -10,25 +10,8 @@ video:
     etag: pHYFa8KUzZP5C5Y6UrHM4CADmzw
     id: Rpz5iQTWbaA
     snippet:
-      publishedAt: 2023-09-03T18:40:36Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Diving into the code of Stone Prover
-      description: >-
-        Lior Goldberg
-
-        Starknet Core Group Manager
-
-        Starkware
-
-
-        Gidi Kaempfer
-
-        Head of Core Engineering
-
-        Starkware
-
-
-        An introduction to the StarkWare open source prover currently being used in production for Starknet and StarkEx. This session will include a demonstration of proving and verifying a Cairo program, spill light on the high-level STARK prover architecture, describe the various modes of operation and configuration options, touch on performance and memory consumption and spend some time strolling through the new code. Got any questions? We'll have the right people to answer them.
+      publishedAt: 2023-09-03T18:40:36.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Rpz5iQTWbaA/default.jpg
@@ -50,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/Rpz5iQTWbaA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Diving into the code of Stone Prover
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Diving into the code of Stone Prover
         description: >-
@@ -71,7 +55,23 @@ video:
 
 
           An introduction to the StarkWare open source prover currently being used in production for Starknet and StarkEx. This session will include a demonstration of proving and verifying a Cairo program, spill light on the high-level STARK prover architecture, describe the various modes of operation and configuration options, touch on performance and memory consumption and spend some time strolling through the new code. Got any questions? We'll have the right people to answer them.
-      defaultAudioLanguage: en-US
+      description: >-
+        Lior Goldberg
+
+        Starknet Core Group Manager
+
+        Starkware
+
+
+        Gidi Kaempfer
+
+        Head of Core Engineering
+
+        Starkware
+
+
+        An introduction to the StarkWare open source prover currently being used in production for Starknet and StarkEx. This session will include a demonstration of proving and verifying a Cairo program, spill light on the high-level STARK prover architecture, describe the various modes of operation and configuration options, touch on performance and memory consumption and spend some time strolling through the new code. Got any questions? We'll have the right people to answer them.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT55M48S
       dimension: 2d
@@ -82,6 +82,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_rpz5iqtwbaa_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: "An introduction to the StarkWare open-source prover currently being
   used in production for Starknet and StarkEx. This session will include a
   demonstration of proving and verifying a Cairo program, spill light on the

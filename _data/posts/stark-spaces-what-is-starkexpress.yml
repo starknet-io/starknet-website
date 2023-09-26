@@ -1,0 +1,58 @@
+id: b204f1d7-8444-44a9-9375-16945738f13b
+post_type: video
+title: STARK SPACES | What is StarkExpress
+published_date: 2023-07-03T11:51:27.351Z
+video:
+  url: https://www.youtube.com/watch?v=AgM7oGnhV8M&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=9&pp=iAQB
+  id: AgM7oGnhV8M
+  data:
+    kind: youtube#video
+    etag: zYqU2qMsJMT8Icol-Uo39Ai9Nxw
+    id: AgM7oGnhV8M
+    snippet:
+      publishedAt: 2023-09-03T21:07:42Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | What is StarkExpress
+      description: Learn all about StarkExpress, which allows developers to create
+        applications and integrate StarkExpress APIs.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/AgM7oGnhV8M/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/AgM7oGnhV8M/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/AgM7oGnhV8M/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/AgM7oGnhV8M/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/AgM7oGnhV8M/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | What is StarkExpress
+        description: Learn all about StarkExpress, which allows developers to create
+          applications and integrate StarkExpress APIs.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT28M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_agm7ognhv8m_maxres.png
+category: ecosystem
+short_desc: Learn all about StarkExpress, which allows developers to create
+  applications and integrate StarkExpress APIs.

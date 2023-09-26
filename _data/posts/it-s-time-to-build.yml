@@ -56,6 +56,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_pxpmtxyta0u_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: Starknet is gaining serious momentum, but there is still much to do
   in terms of new use cases and mass adoption. Join Argent as they announce
   plans to lay the foundation of construction on Starknet.

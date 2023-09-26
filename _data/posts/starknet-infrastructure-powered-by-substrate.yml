@@ -1,0 +1,60 @@
+id: d51b5e52-c1c4-48c0-8523-0c84c4d9e8db
+post_type: video
+title: Starknet Infrastructure Powered by Substrate
+published_date: 2023-09-03T13:01:28.839Z
+video:
+  url: https://www.youtube.com/watch?v=diTqNDoLR2M&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=20
+  id: diTqNDoLR2M
+  data:
+    kind: youtube#video
+    etag: TLf6De8Ln7cT3SMnGM9UzcbTtEU
+    id: diTqNDoLR2M
+    snippet:
+      publishedAt: 2023-09-03T16:53:48.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/diTqNDoLR2M/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/diTqNDoLR2M/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/diTqNDoLR2M/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/diTqNDoLR2M/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/diTqNDoLR2M/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: Starknet infrastructure powered by Substrate | Antiyro
+      categoryId: "28"
+      localized:
+        title: Starknet infrastructure powered by Substrate | Antiyro
+        description: Unlock Starknet's full potential via Substrate. A talk about
+          building Starknet infrastructures and app chains thanks to the
+      description: Unlock Starknet's full potential via Substrate. A talk about
+        building Starknet infrastructures and app chains thanks to the
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT8M42S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_ditqndolr2m_maxres.png
+category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
+short_desc: Unlock Starknet’s full potential via Substrate. A talk about
+  building Starknet infrastructures and app chains.

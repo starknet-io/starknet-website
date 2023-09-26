@@ -1,0 +1,55 @@
+id: 0f47879d-a5dc-4965-b7b1-b3f10f23c4c8
+post_type: video
+title: STARK Spaces | Braavos's New Features with Starknet
+published_date: 2023-09-04T11:55:09.596Z
+video:
+  url: https://www.youtube.com/watch?v=Fxlzfs3opXo&list=PLcIyXLwiPilVmfeWlxZhskABURfmsZuwu&index=12
+  id: Fxlzfs3opXo
+  data:
+    kind: youtube#video
+    etag: P360dUgfEgOFE8Eftxn5s4kCrgQ
+    id: Fxlzfs3opXo
+    snippet:
+      publishedAt: 2023-09-04T04:04:26Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Braavos's new features with Starknet
+      description: Learn about Braavos's newest features on Starknet
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Fxlzfs3opXo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Fxlzfs3opXo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Fxlzfs3opXo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Fxlzfs3opXo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Fxlzfs3opXo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Braavos's new features with Starknet
+        description: Learn about Braavos's newest features on Starknet
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT31M27S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_fxlzfs3opxo_maxres.png
+category: ecosystem
+short_desc: Learn about Braavos's newest features on Starknet

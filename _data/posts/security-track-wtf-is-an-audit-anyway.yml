@@ -1,0 +1,60 @@
+id: 74e1f526-b281-4054-b257-3e4ec654d50d
+post_type: video
+title: "Security Track: Wtf is an Audit Anyway?"
+published_date: 2023-09-10T10:55:20.643Z
+video:
+  url: https://www.youtube.com/watch?v=nUZX1ukVk7I&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=35
+  id: nUZX1ukVk7I
+  data:
+    kind: youtube#video
+    etag: cUWZx1P9glCtW0Sp76axTa-k2H8
+    id: nUZX1ukVk7I
+    snippet:
+      publishedAt: 2023-09-10T10:05:01Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Security track: Wtf is an audit anyway? | Sock"
+      description: How to think about securing your Starknet project so your audit is
+        actually an audit.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/nUZX1ukVk7I/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/nUZX1ukVk7I/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/nUZX1ukVk7I/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/nUZX1ukVk7I/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/nUZX1ukVk7I/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Security track: Wtf is an audit anyway? | Sock"
+        description: How to think about securing your Starknet project so your audit is
+          actually an audit.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT26M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/youthumb_nuzx1ukvk7i_maxres.png
+category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
+short_desc: How to think about securing your Starknet project so your audit is
+  actually an audit.

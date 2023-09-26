@@ -3,19 +3,15 @@ post_type: video
 title: Build Onchain Games on Starknet
 published_date: 2023-09-01T11:12:09.320Z
 video:
-  url: https://www.youtube.com/watch?v=r5ZtySfvMzM&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=7
+  url: https://youtu.be/QHrcihpOJG0?si=gRs3MD0IyLahP4BN
   id: r5ZtySfvMzM
   data:
     kind: youtube#video
     etag: YJ396JivfHHrhPt7uQj0gX5xewE
     id: r5ZtySfvMzM
     snippet:
-      publishedAt: 2023-09-01T16:09:11Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Build onchain games on Starknet | Tarrence van As
-      description: A survey of the past, present and future of fully onchain games.
-        Learn about the challenges and solutions we're building as part of the
-        Cartridge platform and Dojo toolchain.
+      publishedAt: 2023-09-01T16:09:11.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/r5ZtySfvMzM/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/r5ZtySfvMzM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Build onchain games on Starknet | Tarrence van As
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Build onchain games on Starknet | Tarrence van As
         description: A survey of the past, present and future of fully onchain games.
           Learn about the challenges and solutions we're building as part of the
           Cartridge platform and Dojo toolchain.
-      defaultAudioLanguage: en-US
+      description: A survey of the past, present and future of fully onchain games.
+        Learn about the challenges and solutions we're building as part of the
+        Cartridge platform and Dojo toolchain.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT13M45S
       dimension: 2d
@@ -56,6 +56,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_r5ztysfvmzm_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: A survey of the past, present, and future of fully onchain games.
   Learn about the challenges and solutions we're building as part of the
   Cartridge platform and Dojo toolchain.

@@ -10,12 +10,8 @@ video:
     etag: h0gdfH-ujP2xkAxApREqYwxuArI
     id: 5byzskxVAGg
     snippet:
-      publishedAt: 2023-09-01T15:56:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Rust on Starknet | Georgios Konstantopoulos
-      description: In this talk we’ll go over how the Rust programming language
-        unlocked performance and developer experience improvements for Cairo and
-        Starknet users and developers.
+      publishedAt: 2023-09-01T15:56:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/5byzskxVAGg/default.jpg
@@ -37,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/5byzskxVAGg/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Rust on Starknet | Georgios Konstantopoulos
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Rust on Starknet | Georgios Konstantopoulos
         description: In this talk we’ll go over how the Rust programming language
           unlocked performance and developer experience improvements for Cairo
           and Starknet users and developers.
-      defaultAudioLanguage: en-US
+      description: In this talk we’ll go over how the Rust programming language
+        unlocked performance and developer experience improvements for Cairo and
+        Starknet users and developers.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT15M21S
       dimension: 2d
@@ -56,6 +56,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_5byzskxvagg_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: >+
   In this talk, Georgios Konstantopoulos, CTO of Paradigm, will go over how the
   Rust programming language unlocked performance and developer experience

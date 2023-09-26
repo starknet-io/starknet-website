@@ -1,0 +1,18 @@
+type: meetup
+name: Unearthing the Starknet Book "Cairo VM"
+description: Blockchain is now intrinsic to our lives, with developers driving
+  its evolution. Cairo, a language offering swift and practical blockchain
+  tools, is emerging. This event targets tech students, particularly in Africa.
+  We'll explore Cairo VM's math principles behind STARKs for creating Validity
+  Proofs. Unlike EVM, Cairo VM isn't constrained. Join us for insights into
+  Cairo programs, including BlockHeader Web3 academy, integrating Cairo lang in
+  the 3rd cohort curriculum.
+url: https://www.meetup.com/starknet-kampala-meetups/events/296246389/
+start_date: 2023-10-06T11:00:51.116Z
+month: October 2023
+end_date: 2023-10-06T14:00:51.125Z
+show_in_past_events: false
+image: /assets/f2xhkqgwcaexqnd-1.png
+location: africa
+city: Kampala
+country: Uganda

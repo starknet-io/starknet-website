@@ -4,23 +4,15 @@ title: Decoding the Starknet Verifier - A Deep Dive into the Reverse Engineering
   Journey
 published_date: 2023-09-07T13:44:02.012Z
 video:
-  url: https://www.youtube.com/watch?v=gqmnIEZkDZw&list=PLcIyXLwiPilX2ncKfmXRSUPQ21AN-JaRo&index=33
+  url: https://youtu.be/v7BWGHJzmkg?si=1EL18597NM2aPuoS
   id: gqmnIEZkDZw
   data:
     kind: youtube#video
     etag: AMf75jQl4ZSZbuBmheWbB58HXCI
     id: gqmnIEZkDZw
     snippet:
-      publishedAt: 2023-09-07T18:40:07Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Decoding the Starknet Verifier: A Deep Dive into the Reverse Engineering
-        Journey | Andrew Milson"
-      description: In this session we’ll explore key insights gained from the creation
-        of Sandstorm, the first open-source STARK prover to submit an
-        independent proof to StarkWare’s Ethereum Verifier. Discussion will
-        include the challenges encountered in the reverse engineering process,
-        the current and future applications of Sandstorm, and the pivotal impact
-        of Sandstorm in the Starknet Ecosystem.
+      publishedAt: 2023-09-07T18:40:07.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/gqmnIEZkDZw/default.jpg
@@ -42,9 +34,11 @@ video:
           url: https://i.ytimg.com/vi/gqmnIEZkDZw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Decoding the Starknet Verifier: A Deep Dive into the Reverse Engineering
+        Journey | Andrew Milson"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Decoding the Starknet Verifier: A Deep Dive into the Reverse Engineering
           Journey | Andrew Milson"
@@ -54,7 +48,13 @@ video:
           include the challenges encountered in the reverse engineering process,
           the current and future applications of Sandstorm, and the pivotal
           impact of Sandstorm in the Starknet Ecosystem.
-      defaultAudioLanguage: en-US
+      description: In this session we’ll explore key insights gained from the creation
+        of Sandstorm, the first open-source STARK prover to submit an
+        independent proof to StarkWare’s Ethereum Verifier. Discussion will
+        include the challenges encountered in the reverse engineering process,
+        the current and future applications of Sandstorm, and the pivotal impact
+        of Sandstorm in the Starknet Ecosystem.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT19M8S
       dimension: 2d
@@ -65,6 +65,8 @@ video:
       projection: rectangular
 image: /assets/youthumb_gqmniezkdzw_maxres.png
 category: community-and-events
+topic:
+  - 043289e7-3b15-4840-9172-534d12593089
 short_desc: In this session, we’ll explore key insights gained from the creation
   of Sandstorm, the first open-source STARK prover to submit an independent
   proof to StarkWare’s Ethereum Verifier. Discussion will include the challenges
