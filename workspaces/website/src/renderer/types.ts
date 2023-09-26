@@ -23,6 +23,12 @@ export interface DocumentProps {
   video?: string;
 }
 
+export type SeoType = {
+  seoTitle?: string;
+  seoDescription?: string;
+  seoFocusKeywords?: string[];
+}
+
 export type PageContextCustom = {
   Page: Page;
   pageProps?: PageProps;
