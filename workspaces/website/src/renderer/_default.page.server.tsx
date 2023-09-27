@@ -1,6 +1,6 @@
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
-import { PageContextServer } from "./types";
+import { PageContextServer, SeoType } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
 import type { InjectFilterEntry } from "vite-plugin-ssr/types";
@@ -41,20 +41,23 @@ export async function render(pageContext: PageContextServer) {
   });
 
   const GOOGLE_TAG_ID = "G-WY42TERK5P";
+  const pageSeo = pageProps?.data as SeoType
   const documentProps =
     pageContext.documentProps ?? pageContext.exports.documentProps;
 
-  const title = documentProps?.title
-    ? `${documentProps?.title} - Starknet`
+  const title = documentProps?.title ?? pageSeo?.seoTitle
+    ? `${documentProps?.title ?? pageSeo?.seoTitle} - Starknet`
     : "Starknet";
 
   const description =
-    documentProps?.description ??
+    documentProps?.description ?? pageSeo?.seoDescription as string ??
     "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
 
   const image =
     documentProps?.image ??
     `${import.meta.env.VITE_SITE_URL}/assets/share/generic_landing.png`;
+  
+  const focusKeywords = pageSeo?.seoFocusKeywords as string[]
 
   const documentHtml = escapeInject`<!DOCTYPE html>
   <html>
@@ -66,6 +69,7 @@ export async function render(pageContext: PageContextServer) {
       <title>${title}</title>
       <meta name="title" content="${title}">
       <meta name="description" content="${description}">
+      <meta name="keywords" content="${focusKeywords?.join(',') ?? "starknet"}">
 
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="article">
