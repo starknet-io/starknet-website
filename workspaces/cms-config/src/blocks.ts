@@ -149,6 +149,14 @@ export const cardListItem = [
     index_file: "",
     meta: false
   },
+    {
+    label: "Twitter",
+    name: "twitter",
+    required: false,
+    widget: "string",
+    index_file: "",
+    meta: false
+  },
   {
     label: "Start date time",
     name: "start_date_time",
