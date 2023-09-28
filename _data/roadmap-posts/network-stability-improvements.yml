@@ -9,7 +9,13 @@ blocks:
       enhancements of our infrastructure. 
 
 
-      **T﻿his includes the following improvements:**
+      We are making progress in improving the synchronization of components and eliminating bottlenecks we found, ensuring their efficient operation.
+
+
+      We’re also investing in more rigorous stress-testing scenarios, to ensure our system can handle unexpected surges
+
+
+      **T﻿his includes the following:**
 
 
       * Performance benchmarking
@@ -17,6 +23,3 @@ blocks:
       * Active bug finding
 
       * Other network improvements including extra DoS protection
-
-
-      T﻿hese improvements will build a more stable base for other upcoming feature additions.
