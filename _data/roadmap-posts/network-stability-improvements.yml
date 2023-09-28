@@ -2,3 +2,25 @@ id: 4ee02950-7759-4271-8b13-9b4b0b36e69c
 title: Network stability improvements
 availability: Q4 2024
 stage: building-now
+blocks:
+  - type: markdown
+    body: >-
+      The current focus for Starknet is improving the overall network stability
+      with a series of enhancements of our infrastructure. 
+
+
+      **T﻿his includes the following improvements:**
+
+
+      * Feeder gateway deprecation for users & dapps
+
+      * Committer improvements
+
+      * Performance benchmarking
+
+      * Active bug finding
+
+      * Other network improvements including extra DoS protection
+
+
+      T﻿hese improvements will build a more stable base for other upcoming feature additions.
