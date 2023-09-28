@@ -5,8 +5,8 @@ stage: building-now
 blocks:
   - type: markdown
     body: >-
-      The current focus for Starknet is improving the overall network stability
-      with a series of enhancements of our infrastructure. 
+      Starknet is improving the overall network stability with a series of
+      enhancements of our infrastructure. 
 
 
       **T﻿his includes the following improvements:**
