@@ -26,7 +26,16 @@ blocks:
           So this post provides the information that I couldn’t find and provides links to information that someone else made the effort to provide elsewhere.
 
 
-          What can you do on Starknet? You can swap tokens, invest using financial dApps, play games and build your NFT collection. For more information, visit the [dApps page on Starknet.io](https://www.starknet.io/en/ecosystem/dapps).  
+          What can you do on Starknet? You can swap tokens, invest using financial dApps, play games and build your NFT collection. For more information, visit the [dApps page on Starknet.io](https://www.starknet.io/en/ecosystem/dapps).
+
+
+          ### About using MetaMask as a Starknet wallet
+
+
+          MetaMask has support for Starknet in the form of a MetaMask Snap. A *Snap* is the MetaMask term for a plugin. It’s in Beta, and I wanted to try it out. There’s a special section below just about installing and funding a MetaMask wallet.
+
+
+          Currently you can only send and receive L2 funds (it’s only in Beta!), but other features are in the pipeline, so I’m looking forward to being able to use MetaMask as a full-fledged Starknet wallet for more Starknet activities, such as minting NFTs.
 
 
           ## Prerequisites
@@ -45,16 +54,16 @@ blocks:
 
 
           1. Set up an Ethereum wallet.\
-             There are many. For a list, see [Ethereum wallets](https://ethereum.org/en/wallets/), and for a helpful guide, see [How to "create" an Ethereum account](https://ethereum.org/en/guides/how-to-create-an-ethereum-account/). Both are  on the Ethereum site. 
-
-             You can use a search engine like Google to help you decide on the right one for you. I found that [Best Ethereum Wallets of 2023](https://www.investopedia.com/best-ethereum-wallets-6830692) helped me, and to get started, I decided to use [MetaMask](https://metamask.io/). For information on setting up a wallet, see the documentation for the wallet you choose. 
+             There are many. For a list, see [Ethereum wallets](https://ethereum.org/en/wallets/), and for a helpful guide, see [How to "create" an Ethereum account](https://ethereum.org/en/guides/how-to-create-an-ethereum-account/). Both are on the Ethereum site. You can use a search engine like Google to help you decide on the right one for you. I found that [Best Ethereum Wallets of 2023](https://www.investopedia.com/best-ethereum-wallets-6830692) helped me, and to get started, I decided to use [MetaMask](https://metamask.io/). For information on setting up a wallet, see the documentation for the wallet you choose. 
           2. Deposit some ETH to your Ethereum wallet. You can use your credit card or your bank account with an exchange such as [Binance](https://www.binance.com/) or [Coinbase](https://www.coinbase.com/).
 
-          3. Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see *Setting up a Starknet Wallet* below. 
+          3. Set up a Starknet wallet, which includes funding the wallet and deploying your account on Starknet. For more information, see Setting up a Starknet wallet below. 
 
-             NOTE: You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). 
 
-          After you complete these procedures, you’ll be ready to start actually doing something. 
+          **NOTE:** You can also add funds directly to your Starknet wallet from a credit card or bank by using an on-ramp service, such as [Banxa](https://banxa.com/) or [Ramp](https://ramp.network/). At the moment, [Ramp](http://ramp) is the only such service that works with the MetaMask Starknet Snap.  If you choose to use an on-ramp service, go directly to step 3
+
+
+          After you complete these procedures, you’ll be ready to start actually *doing* something. 
 
 
           For example, this tutorial walks you through swapping ETH for another cryptocurrency using [Jediswap](https://app.jediswapio.xyz/). There are lots of other things you can do, such as providing liquidity to a pool, buying NFTs, minting your own NFTs, and playing games.
@@ -63,71 +72,136 @@ blocks:
           ## Let’s Get Started - Setting Up a Starknet Wallet
 
 
+          For information on using MetaMask, skip to *Using MetaMask as a Starknet wallet* below.
+
+
           Once you have an Ethereum wallet with some ETH, you can install and set up a Starknet wallet.
 
 
-          See the up-to-date list of available [Starknet wallets](https://www.starknet.io/en/ecosystem/wallets) on the Starknet site. For more information on a specific wallet, including installation instructions, see that wallet’s site. Whichever one you choose, make sure that you install it as a browser extension. 
+          See the up-to-date list of available [Starknet wallets](https://www.starknet.io/en/ecosystem/wallets) on the Starknet site. For more information on a specific wallet, including installation instructions, see that wallet’s site*.* Whichever one you choose, *make sure that you install it as a browser extension*. 
 
 
-          In this blog post I used wallets by [Braavos](https://braavos.app/) and [Argent](https://www.argent.xyz/argent-x/). 
+          In this blog post, I used wallets by [Braavos](https://braavos.app/) and [Argent](https://www.argent.xyz/argent-x/).
 
 
-          After you finish installing, you need to set up the wallet by adding funds to it. You can use StarkGate, a bridge that transfers funds between your Etherum wallet on L1 and your Starknet wallet on L2. You can go to StarkGate from a link in the wallet, or go to <https://starkgate.starknet.io/>.
+          After you finish installing, you need to set up the wallet by adding funds to it. You can use StarkGate, a bridge that transfers funds between your Ethereum wallet on L1 and your Starknet wallet on L2. StarkGate fully supports Braavos and Argent, and MetaMask support is in active development and should be in place soon. You can go to StarkGate from a link in the wallet, or go to <https://starkgate.starknet.io/>.
 
 
-          ![StarkGate home ](/assets/1-starkgate_home.png "StarkGate home ")
+          #### Procedure
 
 
-          ### Procedure
-
-
-          1. Click Connect Wallets, and then Get started.\
-             StarkGate prompts you to select an Ethereum wallet.
-
-             ![Wallets Ethereum ](/assets/2-wallets_ethereum.png "Wallets Ethereum ")
-          2. Click the wallet that you want to use. In this example, click MetaMask, as it is already  installed.
+          1. Click **Connect Wallets**, and then **Get Started**.\
+             StarkGate prompts you to select an Ethereum wallet.![](https://starkware.co/wp-content/uploads/2023/08/2-Wallets_Ethereum-279x300.png)
+          2. Click the wallet that you want to use. In this example, click **MetaMask**, as it is already installed.
 
           3. When your wallet prompts you to connect, approve the connection.\
              StarkGate completes the connection. Your Ethereum wallet is now connected.
-          4. When StarkGate prompts you to connect a Starknet wallet, click Connect Starknet Wallet.
+          4. StarkGate prompts you to connect a Starknet wallet, showing the wallets that you have connected to your browser. Click the wallet that you want to use.![](https://starkware.co/wp-content/uploads/2023/08/4-Wallets_Starknet-300x177.png)
 
-             ![Prompt to connect Starknet wallet](/assets/3-prompt_to_connect_starknet_wallet.png "Prompt to connect Starknet wallet")
-          5. When the wallets that you have connected to your browser appear, click the wallet that you want to use.
+          5. When the wallet prompts you to approve the connection. For example, this is what appeared when I clicked ArgentX:![](https://starkware.co/wp-content/uploads/2023/08/5-Argent_connect_prompt-179x300.png)
 
-             ![Wallets Starknet](/assets/4-wallets_starknet.png "Wallets Starknet")
-          6. When the wallet prompts you to, approve the connection. For example, this is what appeared when I clicked ArgentX:
 
-             ![Argent connect prompt ](/assets/5-argent_connect_prompt.png "Argent connect prompt ")
+          and this is what appeared when I clicked Braavos:
 
-             \
-             and this what appeared when I clicked Braavos:
 
-             ![Braavos connect prompt ](/assets/6-braavos_connect.png "Braavos connect prompt ")
+          ![](https://starkware.co/wp-content/uploads/2023/08/6-Braavos_connect-193x300.png)
 
-             StarkGate completes the connection.\
-             \
-             Your Starknet wallet is now connected, and it prompts you to add funds. In order to deploy your account on Starknet, you need to add funds.\
-             **NOTE**: Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
-          7. Confirm that you’re on the Deposit tab. 
 
-             ![Deposit tab](/assets/7-deposit_tab.png "Deposit tab")
-          8. StarkGate lets you select from several different types of tokens. This example uses the default token, ETH. Check that the available balance in your Ethereum wallet is enough to transfer funds and pay for the gas required to transfer the funds.
+          StarkGate completes the connection.\
 
-          9. Enter the amount of ETH you want to transfer.\
-             Your Ethereum wallet prompts you to confirm the transfer. Your wallet might also show you the estimated transaction cost. For example, MetaMask shows approximately how much gas is required to execute the transfer, as well as the cost of the required gas in ETH and USD.
-          10. Confirm the transfer in your Ethereum wallet.
+          \
 
-          11. StarkGate confirms the transaction and displays its status, including links to Etherscan and StarkScan, so you can view the transaction on both Ethereum and Starknet:
+          Your Starknet wallet is now connected, and it prompts you to add funds. In order to deploy your account on Starknet, you need to add funds.\
 
-              ![Transaction confirmation](/assets/8-transaction_confirmation.png "Transaction confirmation")
+          **NOTE:** Deploying an account incurs a small gas fee on Ethereum. But don’t worry, you only have to deploy the account once.
+
+
+          6. Confirm that you’re on the **Deposit** tab.
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/7-Deposit_tab-300x50.png)
+
+
+          7. StarkGate lets you select from several different types of tokens. This example uses the default token, ETH. Check that the available balance in your Ethereum wallet is enough to transfer funds and pay for the gas required to transfer the funds.
+
+
+          8. Enter the amount of ETH you want to transfer.\
+
+          Your Ethereum wallet prompts you to confirm the transfer. Your wallet might also show you the estimated transaction cost. For example, MetaMask shows approximately how much gas is required to execute the transfer, as well as the cost of the required gas in ETH and USD.
+
+
+          9. Confirm the transfer in your Ethereum wallet.
+
+
+          10. StarkGate confirms the transaction and displays its status, including links to Etherscan and StarkScan, so you can view the transaction on both Ethereum and Starknet:
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/8-Transaction_confirmation-300x296.png)
+
 
           After a short time, typically a few minutes, StarkGate should show updated balances in your Ethereum and Starknet wallets:
 
 
-          ![StarkGate updated balance ](/assets/9-starkgate_updated_bals.png "StarkGate updated balance ")
+          ![](https://starkware.co/wp-content/uploads/2023/08/9-StarkGate_updated_bals-300x190.png)
 
 
-          ## Swapping ETH for Another Token Using JediSwap
+          ## Using MetaMask as a Starknet wallet
+
+
+          I wrote this section as I walked through the installation process. It’s actually fairly straightforward, so you might not even need to use these steps, but I know that I find steps like these to be helpful, so you can follow along if you like.
+
+
+          **NOTE:** Because the Snap is being actively developed, the process you go through might differ from what appears here. But even if it does, this section should give you a general idea of what you need to do.
+
+
+          When I opened MetaMask in my browser, this is what I saw:
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_WhatsNew-179x300.png)
+
+
+          I clicked **Learn More**, and a page opened at <https://metamask.io/snaps/> that explains what Snaps are and how they work. Here are the steps I followed to install the Starknet Snap:
+
+
+          1. Click **Discover Snaps** in the site header. 
+
+          2. Click the **Starknet Snap** in the list.\
+             A page opens with information about the Starknet Snap, including its Github repo. I’m a big fan of open source, so…Yay!  The information also includes the developer, Consensys, and the auditors, Cobalt and Consensys Diligence. These are all well-respected Starknet developers, but you should verify that for yourself. (I do work for StarkWare, after all.)
+          3. Click **Add to MetaMask**, and read the **Third-party software notice**.
+
+          4. Click **Accept**. A message prompts you to connect the Snap to your wallet.
+
+          5. Click **Connect**.![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_connection_request-165x300.png)
+
+          6. After reading everything on this page, click **Install**.![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_Install_Snap-165x300.png)
+
+          7. Click **Confirm** to proceed with caution.![](https://starkware.co/wp-content/uploads/2023/08/MetMask_proceed_with_caution-240x300.png)
+
+
+          After the installation finishes, this message appears: **Installation completed successfully**.
+
+
+          8. Click the URL to open the Snap.
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_installation_complete-300x255.png)\
+
+          A message prompts you to connect your wallet.
+
+
+          9. Click **Connect**. A screen appears showing your new Starknet account address and your wallet balance.
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_acct_balance-300x216.png)
+
+
+          Now you need to fund your wallet. StarkGate should have support soon, but at the moment, to fund your wallet, you must receive L2 funds from another Starknet wallet or use the onramp service [Ramp](https://ramp.network/buy) with a credit card, to fund it.
+
+
+          Once you have funds in your wallet, you can send funds to another Starknet address. Like I said, more features are coming soon.
+
+
+          ## Swapping ETH for another token using JediSwap
 
 
           JediSwap is a community-driven Automated Market Maker (AMM) on Starknet that enables you to swap one type of token for another. The JediSwap documentation provides information on swapping and on adding liquidity. This procedure demonstrates swapping ETH for WBTC.
@@ -138,27 +212,37 @@ blocks:
 
           1. Go to JediSwap at <https://app.jediswap.xyz>.
 
-             ![](/assets/10-jediswap_connect_button.png)
-          2. Connect your wallet by clicking Connect Wallet and then selecting your Starknet wallet.
 
-          3. When your wallet prompts you to approve the connection, click Approve.\
-             Once JediSwap connects to your wallet, it shows your balance in each token that it supports. For example, my wallet has about 0.05 ETH.
+          2. Connect your wallet by clicking **Connect Wallet** and then selecting your Starknet wallet.
 
-             ![JediSwap ETH balance](/assets/11-jediswap_eth_balance.png "JediSwap connect button ")
-          4. Select the tokens that you want to swap in Swap From and Swap To (est.), and click Swap. I swapped 0.025 ETH for WBTC.
 
-          5. Your wallet prompts you to sign the transaction by clicking Sign. Clicking Sign submits the transaction
+          ![](https://starkware.co/wp-content/uploads/2023/08/10-JediSwap_Connect_button-300x58.png) 
 
-          6. JediSwap shows Transaction Submitted. Click Open in browser to view the transaction on StarkScan.
+
+          3. When your wallet prompts you to approve the connection, click **Approve**.\
+
+          Once JediSwap connects to your wallet, it shows your balance in each token that it supports. For example, my wallet has about 0.05 ETH.
+
+
+          ![](https://starkware.co/wp-content/uploads/2023/08/11-JediSwap_ETH_balance-300x85.png)
+
+
+          4. Select the tokens that you want to swap in **Swap From** and **Swap To (est.)**, and click **Swap**. I swapped 0.025 ETH for WBTC.
+
+
+          5. Your wallet prompts you to sign the transaction by clicking **Sign**. Clicking **Sign** submits the transaction
+
+
+          6. JediSwap shows Transaction Submitted. Click **Open in browser** to view the transaction on StarkScan.
+
 
           7. Open your wallet to see your balance and the assets that you own. For example, this is my Braavos wallet after the swap:
 
-             ![Wallet post swap ](/assets/12-wallet_post_swap.png "Wallet post swap ")
 
-          What now?
+          ## What now?
 
 
-          Now that you've taken those first steps into Starknet, it's time to plunge deeper into the ever-expanding Starknet ecosystem. As a permissionless network, Starknet sees new developers constantly creating novel dApps and features like stars bursting into being.
+          Now that you've taken those first steps into Starknet, it's time to plunge deeper into the ever-expanding Starknet ecosystem. As a permissionless network, Starknet sees new developers constantly creating novel dApps and features
 
 
           To safely navigate the uncharted waters of Starknet, make sure to:
@@ -172,13 +256,16 @@ blocks:
 
           * Be wary of scams. Verify URLs, transactions, and addresses - don't be lured into ambushes.
 
-          * And most importantly, enable wallet protections like 2FA, [Hardware Signers](https://www.youtube.com/watch?v=PbGKTQQgZGA), or [Wallet Shields](https://www.argent.xyz/blog/argent-shield-2fa-for-argent-x/). This novel protection level is possible on Starknet because of [native account abstraction](https://www.starknet.io/en/posts/engineering/native-account-abstraction-opening-blockchain-to-new-possibilities). 
+          * And most importantly, enable wallet protections like 2FA, [Hardware Signers](https://www.youtube.com/watch?v=PbGKTQQgZGA), or [Wallet Shields](https://www.argent.xyz/blog/argent-shield-2fa-for-argent-x/). This novel protection level is possible on Starknet because of [native account abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/). 
 
 
           By staying alert and doing thorough research, you can enjoy the full benefits of Starknet's ever-growing array of dApps and integrations. As with any new technology, educated caution is very important. If something sounds too good to be true, it probably is. With some common sense, you can explore Starknet safely.
 
 
+          ##  
+
+
           \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
 
 
-          This guide was written by Steve Goodman, Principal Technical Writer at StarkWare Industries. You can send questions to @CityONewOrleans on Twitter.
+          This guide was written by [Steve Goodman](mailto:steve@starkware.co), Principal Technical Writer at StarkWare Industries. You can send questions to @CityOfNewOrleans on Twitter.
