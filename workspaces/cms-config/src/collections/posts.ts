@@ -134,6 +134,22 @@ export const postsCollectionConfig = {
       widget: "text",
     },
     {
+      required: false,
+      name: "seoFocusKeywords",
+      label: "Seo focus keywords",
+      hint: "Enter the focus keywords separated by commas",
+      widget: 'list',
+      crowdin: true,
+    },
+    {
+      required: false,
+      name: "seoCanonicalUrl",
+      label: "Seo Canonical url",
+      hint: "If the article was lifted from somewhere else, you can link it here",
+      widget: 'string',
+      crowdin: true,
+    },
+    {
       name: "blocks",
       label: "Blocks",
       widget: "list",

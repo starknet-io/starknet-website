@@ -25,6 +25,7 @@ export interface DocumentProps {
 
 export type SeoType = {
   seoTitle?: string;
+  seoCanonicalUrl?: string;
   seoDescription?: string;
   seoFocusKeywords?: string[];
 }
