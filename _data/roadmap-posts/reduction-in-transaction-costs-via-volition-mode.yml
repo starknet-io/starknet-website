@@ -2,7 +2,7 @@ id: 2ec2ec7e-abd4-4916-8b57-b31f2c753402
 title: "A reduction in transaction costs via Volition mode "
 availability: Q2 2024
 version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
-stage: building-next
+stage: backlog
 blocks:
   - type: markdown
     body: >-
