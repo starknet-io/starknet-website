@@ -12,7 +12,7 @@ export const playlist: Chapter[] = [
     title: "How Starknet scales Ethereum",
     description: "Chapter 1 explains how Starknet works at a high level",
     thumbnail: "/assets/video/chapter1.png",
-    videoId: "2805da1fb7f9cd49888f680c26e386fd",
+    videoId: import.meta.env.VITE_ED_VIDEO_ID_1,
     durationTime: "02:42",
   },
   {
@@ -20,7 +20,7 @@ export const playlist: Chapter[] = [
     title: "The Starknet Sequencer",
     description: "Chapter 2 explains about the Starknet Sequencer",
     thumbnail: "/assets/video/chapter2.png",
-    videoId: "47d80010706a05bc4e4dae6cdd43b8be",
+    videoId: import.meta.env.VITE_ED_VIDEO_ID_2,
     durationTime: "02:24",
   },
   {
@@ -28,7 +28,7 @@ export const playlist: Chapter[] = [
     title: "The Starknet Prover",
     description: "Chapter 3 explains how the Starknet Prover works",
     thumbnail: "/assets/video/chapter3.png",
-    videoId: "a23465bbd7c3b27489a29abf4373a55d",
+    videoId: import.meta.env.VITE_ED_VIDEO_ID_3,
     durationTime: "02:26",
   },
   {
@@ -36,7 +36,7 @@ export const playlist: Chapter[] = [
     title: "Secure settlement on Ethereum",
     description: "Chapter 4 explains how to secure settlement on Ethereum",
     thumbnail: "/assets/video/chapter4.png",
-    videoId: "69ba2bd9bdd2ba2970c0fbe3b75c3ec0",
+    videoId: import.meta.env.VITE_ED_VIDEO_ID_4,
     durationTime: "03:28",
   },
 ];
