@@ -22,7 +22,6 @@ items:
       via its Hardware Signer 2-factor authentication and multi-signer 3-factor
       authentication capabilities.
   - body: Earn, stake and trade with low fees, high speeds & strong security.
-
     type_list:
       - type: browser_extension
         url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
@@ -43,3 +42,10 @@ items:
       - SDK
     image: /assets/argent.jpg
     description: Earn, stake and trade with low fees, high speeds & strong security.
+  - body: Manage your Starknet assets with MetaMask
+    name: MetaMask Snaps
+    website_url: https://braavos.app
+    discord: https://discord.com/invite/consensys
+    twitter: https://twitter.com/MetaMask
+    image: /assets/starkware-metamask.png
+    description: Manage your Starknet assets with MetaMask.
