@@ -65,10 +65,10 @@ jobs:
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
           VITE_CF_STREAM_URL: ${{ secrets.NEW_CF_STREAM_URL }}
-          VITE_ED_VIDEO_ID_1: 2805da1fb7f9cd49888f680c26e386fd
-          VITE_ED_VIDEO_ID_2: 47d80010706a05bc4e4dae6cdd43b8be
-          VITE_ED_VIDEO_ID_3: a23465bbd7c3b27489a29abf4373a55d
-          VITE_ED_VIDEO_ID_4: 69ba2bd9bdd2ba2970c0fbe3b75c3ec0
+          VITE_ED_VIDEO_ID_1: ${{ secrets.NEW_VITE_ED_VIDEO_ID_1 }}
+          VITE_ED_VIDEO_ID_2: ${{ secrets.NEW_VITE_ED_VIDEO_ID_2 }}
+          VITE_ED_VIDEO_ID_3: ${{ secrets.NEW_VITE_ED_VIDEO_ID_3 }}
+          VITE_ED_VIDEO_ID_4: ${{ secrets.NEW_VITE_ED_VIDEO_ID_4 }}
 
       - name: Publish
         uses: cloudflare/pages-action@v1
