@@ -1,6 +1,6 @@
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
-import { PageContextServer, SeoType } from "./types";
+import { DocumentProps, PageContextServer, SeoType } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
 import type { InjectFilterEntry } from "vite-plugin-ssr/types";
@@ -41,9 +41,9 @@ export async function render(pageContext: PageContextServer) {
   });
 
   const GOOGLE_TAG_ID = "G-WY42TERK5P";
-  const pageSeo = pageProps?.data as SeoType
+  const pageSeo = (pageProps?.data ?? pageProps?.roadmapPost ?? pageProps?.tutorial) as SeoType
   const documentProps =
-    pageContext.documentProps ?? pageContext.exports.documentProps;
+    pageContext.documentProps ?? pageContext.exports.documentProps
 
   const title = documentProps?.title ?? pageSeo?.seoTitle
     ? `${documentProps?.title ?? pageSeo?.seoTitle} - Starknet`
@@ -115,6 +115,10 @@ export async function render(pageContext: PageContextServer) {
               a.appendChild(r);
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
       </script>
+
+      ${pageSeo?.seoCanonicalUrl ? `
+        <link rel="canonical" href="${pageSeo?.seoCanonicalUrl}" />
+      `: ''}
     </head>
     <body>
       <div id="page-view">${stream}</div>

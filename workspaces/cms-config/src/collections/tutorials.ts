@@ -55,6 +55,29 @@ export const tutorialsCollectionConfig = {
       crowdin: true
     },
     {
+      required: false,
+      name: "seoTitle",
+      label: "Seo title",
+      hint: "If empty the title field will be used",
+      widget: "string",
+      crowdin: true,
+    },
+    {
+      required: false,
+      name: "seoDescription",
+      label: "Seo description",
+      widget: "string",
+      crowdin: true,
+    },
+    {
+      required: false,
+      name: "seoFocusKeywords",
+      label: "Seo focus keywords",
+      hint: "Enter the focus keywords separated by commas",
+      widget: 'list',
+      crowdin: true,
+    },
+    {
       name: "authors",
       label: "Authors",
       widget: "list",
