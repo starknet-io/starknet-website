@@ -44,8 +44,10 @@ items:
     description: Earn, stake and trade with low fees, high speeds & strong security.
   - body: Manage your Starknet assets with MetaMask
     name: MetaMask Snaps
-    website_url: https://braavos.app
+    website_url: https://snaps.consensys.io/starknet
     discord: https://discord.com/invite/consensys
     twitter: https://twitter.com/MetaMask
     image: /assets/starkware-metamask.png
     description: Manage your Starknet assets with MetaMask.
+    type:
+      - browser_extension
