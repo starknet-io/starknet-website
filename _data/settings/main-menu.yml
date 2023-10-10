@@ -17,6 +17,8 @@ items:
                 custom_title: Documentation
               - custom_title: Starknet Book
                 custom_external_link: https://book.starknet.io/
+              - custom_title: Cairo Book
+                custom_external_link: https://book.cairo-lang.org/
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - custom_internal_link: /roadmap/
