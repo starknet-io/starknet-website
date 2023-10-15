@@ -1,0 +1,18 @@
+type: meetup
+name: Starknet Germany - Cairo for beginners
+description: Join us for the first Starknet Germany workshop and learn about
+  provable Rust-like language Cairo as well as the Orion framework by Giza.  The
+  hands-on workshop by StarkWare will showcase practical building on the layer 2
+  validity rollup Starknet to scale Ethereum. The Giza team will introduce their
+  Orion framework, where you can learn how to develop provable ML models that
+  can be deployed on-chain.  We're bringing together developers, enthusiasts,
+  and industry experts for another event of our Starknet Germany event series.
+url: https://www.meetup.com/starknet-germany/events/296535241/
+start_date: 2023-10-19T00:30:24.849Z
+month: October 2023
+end_date: 2023-10-19T03:30:24.858Z
+show_in_past_events: false
+image: /assets/frame-4-11.png
+location: europe
+city: Berlin
+country: Germany
