@@ -70,8 +70,16 @@ blocks:
           custom_title: " Starknet Portugal"
       - link:
           hasIcon: true
+          custom_title: Starknet Portuguese-speaking
+          custom_external_link: https://t.me/StarkNetPt
+      - link:
+          hasIcon: true
           custom_title: Starknet Singapore
           custom_external_link: https://t.me/starknetsingapore
+      - link:
+          hasIcon: true
+          custom_title: Starknet Spanish-speaking
+          custom_external_link: https://t.me/starknet_es
       - link:
           hasIcon: true
           custom_external_link: https://t.me/starknetSwizerland
@@ -122,8 +130,12 @@ blocks:
           custom_external_link: https://twitter.com/StarknetNL
       - link:
           hasIcon: true
-          custom_title: Starknet Portuguese
+          custom_title: Starknet Portuguese-speaking
           custom_external_link: https://twitter.com/StarknetPt
+      - link:
+          hasIcon: true
+          custom_title: Starknet Spanish-speaking
+          custom_external_link: https://twitter.com/StarknetEs
       - link:
           hasIcon: true
           custom_title: "Starknet Turkey "
