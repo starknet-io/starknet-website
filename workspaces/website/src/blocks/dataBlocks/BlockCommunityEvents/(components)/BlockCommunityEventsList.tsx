@@ -46,13 +46,13 @@ export function BlockCommunityEventsList({
         facetsRefinements={{ locale: [params.locale] }}
         filters={`start_date_ts > ${getUnixTime(
           startOfDay(new Date())
-        )} AND type: community_event`}
+        )}`}
       />
       <Container maxW="1062px">
         <Box>
           <Flex justifyContent="center">
             <Heading variant="h2" color="heading-navy-fg" mb="64px">
-              Community Events
+              Upcoming Events
             </Heading>
           </Flex>
           <CustomHits hitsPerPage={hitsPerPage} />
