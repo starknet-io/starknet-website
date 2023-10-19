@@ -11,3 +11,10 @@ blocks:
     description: "Explore the wallets that allow you to interact with and build in
       the Starknet ecosystem. "
   - type: wallets
+    items:
+      - name: Example
+        type:
+          - browser_extension
+          - android
+          - ios
+        image: /assets/1-fherdrczy-d9w787cboy8q.png
