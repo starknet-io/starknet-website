@@ -55,7 +55,7 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
         indexName={`web_jobs_${env.ALGOLIA_INDEX}`}
       >
         <Configure
-          hitsPerPage={5}
+          hitsPerPage={40}
           facetsRefinements={{ 
             locale: [params.locale],
             status: ['active']
