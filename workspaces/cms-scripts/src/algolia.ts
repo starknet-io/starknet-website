@@ -81,6 +81,12 @@ try {
         })
         .wait();
     }
+
+    if (resourceName === "jobs") {
+      await index.setSettings({
+        customRanking: ["desc(published_at_ts)"],
+      });
+    }
   }
 } catch (err) {
   console.error(err);
