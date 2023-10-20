@@ -15,7 +15,7 @@ import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
   Configure,
-  useInfiniteHits,
+  useInfiniteHits
 } from "react-instantsearch-hooks-web";
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
@@ -55,8 +55,11 @@ export function JobsPage({ params, env, seo }: Props): JSX.Element | null {
         indexName={`web_jobs_${env.ALGOLIA_INDEX}`}
       >
         <Configure
-          hitsPerPage={40}
-          facetsRefinements={{ locale: [params.locale], status: ['active'] }}
+          hitsPerPage={5}
+          facetsRefinements={{ 
+            locale: [params.locale],
+            status: ['active']
+          }}
         />
         <JobsPageLayout params={params} seo={seo} />
       </InstantSearch>
