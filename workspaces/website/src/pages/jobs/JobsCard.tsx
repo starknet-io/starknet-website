@@ -1,5 +1,6 @@
 import { ListCard } from "@ui/Card/ListCard";
 import { JobsHit } from "./JobsPage";
+import moment from "moment";
 
 export default function JobsCard({ hit }: { hit: JobsHit }) {
   let tags: string[] = [];
@@ -10,7 +11,7 @@ export default function JobsCard({ hit }: { hit: JobsHit }) {
   return (
     <ListCard
       variant="job"
-      startDateTime={hit.contact?.name}
+      startDateTime={`${hit.contact?.name} - ${moment(hit.published_at).format('DD MMM, YYYY')}`}
       image={hit.contact?.logo}
       title={hit.job?.title}
       description={hit.job?.description}
