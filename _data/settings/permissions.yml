@@ -44,5 +44,4 @@ items:
       - all
   - username: Penguinseo
     access:
-      - pages
-      - posts
+      - all
