@@ -42,3 +42,6 @@ items:
   - username: Igal Steklov
     access:
       - all
+  - username: Penguinseo
+    access:
+      - all
