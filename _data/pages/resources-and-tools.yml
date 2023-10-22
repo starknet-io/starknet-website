@@ -74,6 +74,12 @@ blocks:
           custom_external_link: https://github.com/Shard-Labs/starknet-hardhat-plugin
         subLabel:
           label: A Cario plugin for  Hardhat
+      - link:
+          hasIcon: true
+          custom_title: Remix plugin
+          custom_external_link: https://remix.ethereum.org/?#activate=Starknet
+        subLabel:
+          label: A Remix IDE plugin that supports Starknet contracts from the browser.
   - type: link_list
     heading: "Editor plugins "
     listSize: lg
