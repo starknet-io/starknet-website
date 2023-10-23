@@ -19,6 +19,7 @@ export interface SEOTexts {
   jobs: {
     title: string;
     subtitle: string;
+    description: string;
   };
   search: {
     search: string;
