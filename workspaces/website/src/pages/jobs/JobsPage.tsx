@@ -20,6 +20,7 @@ import {
 import { useRefinementList } from "react-instantsearch-hooks";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { Heading } from "@ui/Typography/Heading";
+import { Text } from "@ui/Typography/Text";
 import { titleCase } from "src/utils/utils";
 import { RefinementListProps } from "react-instantsearch-hooks-web/dist/es/ui/RefinementList";
 import MobileFiltersButton from "../(components)/MobileFilter/MobileFiltersButton";
@@ -27,6 +28,7 @@ import useMobileFiltersDrawer from "../(components)/MobileFilter/useMobileFilter
 import MobileFiltersDrawer from "../(components)/MobileFilter/MobileFiltersDrawer";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import JobsCard from "./JobsCard";
+import { MarkdownBlock } from "src/blocks/MarkdownBlock";
 
 export interface AutoProps {
   readonly params: {
@@ -156,15 +158,25 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
     <PageLayout
       sectionHeaderTitle={seo.title}
       sectionHeaderDescription={seo.subtitle}
-      sectionHeaderBottomContent={
-        <MobileFiltersButton
-          filtersCount={filtersCounts}
-          onClick={onOpen}
-          style={{
-            marginBlock: "16px",
-          }}
-        />
-      }
+      sectionHeaderBottomContent={(
+        <>
+          <Text
+            color={'muted'}
+            style={{marginTop: '-36px'}}
+            variant={'body'}
+          >
+            <MarkdownBlock body={seo.description} />
+          </Text>
+            
+          <MobileFiltersButton
+            filtersCount={filtersCounts}
+            onClick={onOpen}
+            style={{
+              marginBlock: "16px",
+            }}
+          />
+        </>
+      )}
       breadcrumbs={
         <Breadcrumb separator="/">
           <BreadcrumbItem>

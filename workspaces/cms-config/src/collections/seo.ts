@@ -91,6 +91,11 @@ export const SEOCollectionConfig = {
           widget: "string",
           crowdin: true,
         },
+        {
+          label: "Recruitment text",
+          name: "description",
+          widget: "markdown"
+        }
       ],
     },
     {
