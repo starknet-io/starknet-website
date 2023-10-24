@@ -51,3 +51,12 @@ items:
     description: Manage your Starknet assets with MetaMask.
     type:
       - browser_extension
+  - name: "OKX "
+    body: World's leading Web3 multi-chain wallet.
+    type:
+      - browser_extension
+      - ios
+      - android
+    image: /assets/unnamed.jpg
+    twitter: https://twitter.com/okxweb3
+    website_url: https://www.okx.com/web3
