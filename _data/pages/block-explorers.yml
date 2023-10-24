@@ -38,6 +38,7 @@ blocks:
         website_url: https://www.oklink.com/starknet
         image: /assets/oklink-logo.jpeg
         discordHandle: ""
+        twitter: https://twitter.com/OKLink
     title: Block explorers
     randomize: true
   - type: card_list
