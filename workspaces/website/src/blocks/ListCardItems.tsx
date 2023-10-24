@@ -17,6 +17,10 @@ interface ListCardItems {
   website_url: string;
   twitter: string;
   image: string;
+  type_list: {
+    type: string;
+    url: string;
+  }[];
 }
 
 interface Props extends LocaleProps {
@@ -33,7 +37,6 @@ export default function ListCardItems({
   card_list_items
 }:
 Props): JSX.Element {
-
   return (
     <Box>
       <Container maxW="1062px">
@@ -49,6 +52,7 @@ Props): JSX.Element {
                 key={`${card.title}-${i}`}
                 description={card.description}
                 title={card.title}
+                type_list={card.type_list}
               />
             );
           })}
