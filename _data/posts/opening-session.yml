@@ -4,33 +4,33 @@ title: Opening Session
 published_date: 2023-09-01T10:53:57.266Z
 video:
   url: https://youtu.be/WiY4Kt_4ulQ
-  id: qq6_GCZzxwk
+  id: WiY4Kt_4ulQ
   data:
     kind: youtube#video
     etag: -JyRcNQPofO0q716vs2DzPyb-P4
-    id: qq6_GCZzxwk
+    id: WiY4Kt_4ulQ
     snippet:
       publishedAt: 2023-09-01T14:23:14.000Z
       liveBroadcastContent: none
       thumbnails:
         default:
-          url: https://i.ytimg.com/vi/qq6_GCZzxwk/default.jpg
+          url: https://i.ytimg.com/vi/WiY4Kt_4ulQ/default.jpg
           width: 120
           height: 90
         medium:
-          url: https://i.ytimg.com/vi/qq6_GCZzxwk/mqdefault.jpg
+          url: https://i.ytimg.com/vi/WiY4Kt_4ulQ/mqdefault.jpg
           width: 320
           height: 180
         high:
-          url: https://i.ytimg.com/vi/qq6_GCZzxwk/hqdefault.jpg
+          url: https://i.ytimg.com/vi/WiY4Kt_4ulQ/hqdefault.jpg
           width: 480
           height: 360
         standard:
-          url: https://i.ytimg.com/vi/qq6_GCZzxwk/sddefault.jpg
+          url: https://i.ytimg.com/vi/WiY4Kt_4ulQ/sddefault.jpg
           width: 640
           height: 480
         maxres:
-          url: https://i.ytimg.com/vi/qq6_GCZzxwk/maxresdefault.jpg
+          url: https://i.ytimg.com/vi/WiY4Kt_4ulQ/maxresdefault.jpg
           width: 1280
           height: 720
       defaultAudioLanguage: en-US
@@ -64,7 +64,7 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-image: /assets/youthumb_qq6_gczzxwk_maxres.png
+image: /assets/youthumb_WiY4Kt_4ulQ_maxres.png
 category: community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
