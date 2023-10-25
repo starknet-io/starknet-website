@@ -8,6 +8,9 @@ category: engineering
 topic:
   - 266fa988-350c-4842-b74e-379068ddcf34
 short_desc: ""
+seoFocusKeywords:
+  - STARK Security
+  - ""
 blocks:
   - type: markdown
     body: "#### Explore the Full Security Analysis of STARK"
