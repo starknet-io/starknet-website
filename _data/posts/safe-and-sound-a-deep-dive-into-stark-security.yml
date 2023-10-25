@@ -7,7 +7,11 @@ image: /assets/safe-and-sound-a-deep-dive-into-stark-security-300x168.jpg
 category: engineering
 topic:
   - 266fa988-350c-4842-b74e-379068ddcf34
-short_desc: ""
+short_desc: Dive into the intricate details of STARK security, a pivotal
+  component for ensuring computational integrity in trustless systems. This
+  article deciphers the latest ethSTARK update, elucidates the soundness error,
+  and dissects the transformation from IOPs to STARKs, ensuring 96 bits of
+  security for your computations.
 seoFocusKeywords:
   - STARK Security
   - ""
