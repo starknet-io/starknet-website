@@ -22,13 +22,13 @@ seoFocusKeywords:
 blocks:
   - type: markdown
     body: >-
-      ### Starknet is taking the emerging Autonomous Worlds space by storm
+      ## Starknet is taking the emerging Autonomous Worlds space by storm
 
 
       \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 
-      ## **TL;DR**
+      ### **TL;DR**
 
 
       * Starknet is a frontier in the evolving space of onchain gaming and autonomous worlds, channeling the power of Dojo engine and Madara to enable onchain gaming. 
@@ -38,7 +38,7 @@ blocks:
       * Multiple teams are utilizing Starknet’s capabilities to bypass EVM limitations and explore new horizons in gaming. 
 
 
-      ## **Intro**
+      ### **Intro**
 
 
       Autonomous worlds are the convergence of tech, gaming, decentralization, creativity, and innovation. These worlds operate independently and without a central authority, which allows users to engage and explore, create content, and interact, all without permission from anyone and without any concern of censorship. 
@@ -50,7 +50,7 @@ blocks:
       Let’s look at this new frontier of autonomous worlds and onchain gaming and the Starknet’s features, making it so suited for this vision.
 
 
-      ## **What Exactly are Autonomous Worlds?**
+      ### **What Exactly are Autonomous Worlds?**
 
 
       As mentioned above, autonomous worlds operate independently and without a central authority. Some of the key features of an autonomous world include:
@@ -71,7 +71,7 @@ blocks:
       But to exist, autonomous worlds **must be onchain**, on a network that can handle the requirements outlined above. At the same time, they **must be** highly performant and highly cost-efficient.That’s where Starknet comes in.
 
 
-      ## **The Origins of Onchain Gaming on Starknet**
+      ### **The Origins of Onchain Gaming on Starknet**
 
 
       In November 2021, StarkWare released [Starknet Alpha](https://starkware.co/starknet/), and prior to that, [Cairo](https://www.cairo-lang.org/). The combination of a Validity Rollup that provides Ethereum-grade security, and a new non-EVM compatible language, was a challenge and a puzzle that opened a new world of opportunities. The earliest adopters of Cairo (developers like [Perama](https://twitter.com/eth_worm) and [Guiltygyoza](https://twitter.com/guiltygyoza)) started delving deeper into the language, creating guides and experimenting with physics and neural networks. This level of innovation in the Ethereum ecosystem was impressive.
@@ -86,7 +86,7 @@ blocks:
       Teams such as [Realms](https://twitter.com/LootRealms), [Influence](https://twitter.com/influenceth), and [Briq](https://twitter.com/briqNFT) were among the earliest projects to build on Starknet. They came from the Solidity world, where complex games were nearly impossible to build. Others, such as [Topology](https://twitter.com/topology_gg), came directly as they had heard of the limitations of Solidity. For all of them, though, their visions were finally possible with Starknet. Cairo, as a general computation programming language, lifted barriers that were created by the EVM. Teams got a taste of the flexibility it offered builders.
 
 
-      ## **Escaping the EVM Limit: Online and Autonomous Games on Starknet**
+      ### **Escaping the EVM Limit: Online and Autonomous Games on Starknet**
 
 
       Currently, after years of research and iteration, Starknet is one of the first L2s that can sustainably host onchain, high-TPS games. It is the platform where game developers can finally build their complex visions of worlds that operate on a permissionless basis and in a decentralized manner. Among active L2s, Starknet has attracted the largest number of game developers and teams. 
@@ -95,7 +95,7 @@ blocks:
       Let’s look at two key technologies that make Starknet the premier platform for building and playing onchain games and autonomous worlds — Dojo gaming engine and the Madara sequencer. 
 
 
-      ### **Dojo Gaming Engine**
+      #### **Dojo Gaming Engine**
 
 
       In a recent [article](https://starkware.co/resource/dojo-on-starknet-game-on/), we covered in detail the **[Dojo Gaming Engine ](https://starkware.co/resource/dojo-on-starknet-game-on/)**— the world’s first provable onchain game engine. Dojo enables Starknet’s gaming builders to provide transparency, provability, and scalability for their games. 
@@ -110,7 +110,7 @@ blocks:
       Dojo consists of the Entity Component System (ECS) framework, which is a system for blockchain-based game development that promotes modularity, efficiency, and flexibility, and three additional useful tools for game developers: Sozo, Torii, and Katana. 
 
 
-      **Sozo**
+      ##### **Sozo**
 
 
       Sozo is a migration planner that handles the complex task of deploying autonomous worlds onchain. With a simple \`sozo migrate\` command, deploying an instance of the game world onchain is possible. 
@@ -119,7 +119,7 @@ blocks:
       Sozo also has the ability *for any participant in the ecosystem* to propose new components to the onchain gaming universe by using the simple CLI tool. This is a key philosophy of autonomous games: worlds can outlive the game’s creators, and additional contributors can extend the ecosystem with their own assets, levels, characters, and more.
 
 
-      **Katana**
+      ##### **Katana**
 
 
       Katana is a sequencer built for local game development. Running this sequencer on Starknet enables immense jumps in productivity. Katana enables RPC methods offered by Starknet on mainnet and allows the developer to test with various parameters such as the block time, base fee per transaction, etc. 
@@ -131,13 +131,13 @@ blocks:
       Running the node (once configured) is as easy as running the \`katana\` command on the CLI
 
 
-      **Torii**
+      ##### **Torii**
 
 
       Torii is an indexing layer built on top of the Dojo engine that connects the onchain infrastructure with game development clients such as Unity or Unreal Engine. Based on the developed game’s source, Torii can be used to easily start indexing game-specific events and expose a GraphQL API for queries. Simply running \`torii\` creates a GraphQL API running on http://localhost:8080, ready to be queried. 
 
 
-      ### **Madara Sequencer**
+      #### **Madara Sequencer**
 
 
       The [Madara sequencer](https://github.com/keep-starknet-strange/madara) is a high-performance Starknet sequencer that can create highly customizable and efficient *appchains*, especially suited for gaming. Madara is built using the proven Substrate framework used by the [Polkadot](https://www.polkadot.network/) ecosystem.
@@ -152,7 +152,7 @@ blocks:
       With many other possible parameters (such as block times, frequency of settlement on L2, or utilization of non-native data availability solutions), the possibility to launch their games on a Starknet appchain provides devs with choices and power. 
 
 
-      ## **Future Features: Offchain Provable Games** 
+      ### **Future Features: Offchain Provable Games** 
 
 
       Not every action that the player takes must be onchain. For some games, where the user’s actions should not be public before the state of the game changes, an offchain proof of the user’s action could be generated on the client, with only the proof stating the action took place being submitted onchain. Beyond multiplayer games, this infrastructure holds promise for auctions and voting-system applications where you might want to obscure the user’s input data.
@@ -161,7 +161,7 @@ blocks:
       Client-side proving also unlocks the possibility for models where gamers try out a hybrid approach: proofs are published, but only whenever something significant happens in-game (e.g., a level is passed or the character finds a rare asset). 
 
 
-      ## **Autonomous Worlds in Action—Shoshin**
+      ### **Autonomous Worlds in Action—Shoshin**
 
 
       In a [previous article](https://www.starknet.io/en/posts/ecosystem/let-the-games-begin-redefining-onchain-gaming-with-starknet), we looked at some of the largest gaming projects built on Starknet — from space colonization strategy games to ‘immutable arcade machines’ enabled by ZK circuits. We reviewed games that can be shaped and continue to evolve with the guidance of their player, even if their creators will not operate them.
@@ -179,7 +179,7 @@ blocks:
       episode from Shoshin of programming character action logic
 
 
-      ## **Conclusion**
+      ### **Conclusion**
 
 
       With onchain gaming and autonomous worlds, Starknet is not just refining the present state of gaming; It is shaping the future of how games are played, assets are owned, and communities are built.  
