@@ -162,7 +162,7 @@ const JobsPageLayout = ({ params, seo }: Pick<Props, "params" | "seo">) => {
         <>
           <Text
             color={'muted'}
-            style={{marginTop: '-36px'}}
+            style={{marginTop: '-40px'}}
             variant={'body'}
           >
             <MarkdownBlock body={seo.description} />
