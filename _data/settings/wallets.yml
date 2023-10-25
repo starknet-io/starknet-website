@@ -44,8 +44,19 @@ items:
     description: Earn, stake and trade with low fees, high speeds & strong security.
   - body: Manage your Starknet assets with MetaMask
     name: MetaMask Snaps
-    website_url: https://braavos.app
+    website_url: https://snaps.consensys.io/starknet
     discord: https://discord.com/invite/consensys
     twitter: https://twitter.com/MetaMask
     image: /assets/starkware-metamask.png
     description: Manage your Starknet assets with MetaMask.
+    type:
+      - browser_extension
+  - name: "OKX "
+    body: World's leading Web3 multi-chain wallet.
+    type:
+      - browser_extension
+      - ios
+      - android
+    image: /assets/unnamed.jpg
+    twitter: https://twitter.com/okxweb3
+    website_url: https://www.okx.com/web3

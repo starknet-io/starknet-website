@@ -1,0 +1,16 @@
+id: 4ee02950-7759-4271-8b13-9b4b0b36e69c
+title: Network stability improvements
+availability: Q4 2023
+version: 7ebb2648-9bd5-462d-97e3-e6381d7b8d61
+stage: building-now
+blocks:
+  - type: markdown
+    body: >-
+      Starknet is improving the overall network stability with a series of
+      enhancements of our infrastructure. 
+
+
+      We are making progress in improving the synchronization of components and eliminating bottlenecks we found, ensuring their efficient operation.
+
+
+      We’re also investing in more rigorous stress-testing scenarios, to ensure our system can handle unexpected surges.

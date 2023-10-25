@@ -34,6 +34,13 @@ blocks:
         website_url: https://www.orbiter.finance/?source=Ethereum&dest=Starknet
         image: /assets/orbiter.jpg
         twitter: https://twitter.com/Orbiter_Finance
+      - title: Owlto Finance
+        description: " Owlto Finance is a decentralized cross-rollup bridge that focuses
+          on L2."
+        link_url: https://owlto.finance/bridge
+        website_url: https://owlto.finance/bridge
+        twitter: https://twitter.com/Owlto_Finance
+        image: /assets/owlto-finance-logo.jpeg
     randomize: true
   - type: card_list
     title: What are fiat on-ramps?

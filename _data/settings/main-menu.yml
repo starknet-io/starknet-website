@@ -17,6 +17,8 @@ items:
                 custom_title: Documentation
               - custom_title: Starknet Book
                 custom_external_link: https://book.starknet.io/
+              - custom_title: Cairo Book
+                custom_external_link: https://book.cairo-lang.org/
               - custom_internal_link: /tutorials/
                 custom_title: Tutorials
               - custom_internal_link: /roadmap/
@@ -64,7 +66,8 @@ items:
             items:
               - custom_title: YouTube
                 custom_icon: SiYoutube
-                custom_internal_link: https://www.youtube.com/@starkware_ltd
+                custom_internal_link: ""
+                custom_external_link: https://www.youtube.com/@starkware_ltd
               - custom_title: Discord
                 custom_icon: SiDiscord
                 custom_external_link: https://starknet.io/discord
@@ -73,7 +76,8 @@ items:
                 custom_external_link: https://github.com/starknet-io/starknet-website
               - custom_title: Twitter
                 custom_icon: SiTwitter
-                custom_internal_link: https://twitter.com/Starknet
+                custom_internal_link: ""
+                custom_external_link: https://twitter.com/Starknet
   - title: Resources
     columns:
       - blocks:
@@ -112,8 +116,8 @@ items:
                 page: 575c22e7-477f-4a7e-9b90-7406b802176f
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
-              - custom_title: Starknet roundup newsletter
-                custom_external_link: https://starknetroundup.substack.com/
+              - custom_title: Starknet research hub
+                custom_external_link: https://starknet-research.beehiiv.com/
               - custom_title: Starknet Edu Blog
                 custom_external_link: https://medium.com/starknet-edu
                 hide_from_footer: true
