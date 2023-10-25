@@ -8,6 +8,16 @@ category: engineering
 topic:
   - decentralization
   - 63d577bc-fbb2-432c-8d43-ce4472c82338
+short_desc: >-
+  StarkWare is progressing towards decentralization in two threads: planning and
+  implementation.
+
+  Check out the roadmap for what lies ahead and the steps required to ensure the transition of the Starknet protocol to a decentralized proof-of-stake protocol.
+seoFocusKeywords:
+  - Starknet Decentralization
+  - Decentralized Proof-of-Stake Protocol
+  - Starknet Network Architecture
+  - Starknet Staker Onboarding
 blocks:
   - type: markdown
     body: >-
