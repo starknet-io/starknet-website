@@ -1,0 +1,100 @@
+id: de4b9b79-4ff2-4e64-b6e7-dd9856cbdccc
+post_type: article
+title: Safe and Sound – A Deep Dive into STARK Security
+toc: true
+published_date: 2023-10-25T13:48:05.431Z
+category: engineering
+topic:
+  - 266fa988-350c-4842-b74e-379068ddcf34
+blocks:
+  - type: markdown
+    body: >-
+      #### Explore the Full Security Analysis of STARK
+
+
+      #### TL;DR
+
+
+      * Non-interactive STARKs start as *Interactive* Oracle *Proofs* (IOPs), compiled into non-interactive ones in the random Oracle model.
+
+      * This post explains the recent update to the [ethSTARK documentation](https://eprint.iacr.org/2021/582.pdf), which gives a full and concrete analysis of the security of the ethSTARK protocol in the random oracle model.
+
+
+      ## STARK Security Explained
+
+
+      A STARK proof system (Scalable Transparent Argument of Knowledge) is a powerful tool for computational integrity: it allows verifying the correctness of computations performed on public data in a trustless manner. In this blog post, we delve into the security provided by STARK proofs, defining it and exploring techniques to prove scheme security.
+
+
+      (Read Section 6 in the ethSTARK documentation (version 1.2) for full details and the important and comprehensive [independent work](https://eprint.iacr.org/2023/1071.pdf) of Block et al. on the topic.)
+
+
+      What are we trying to achieve with our security analysis? We would like to prevent a “successful attack” on the STARK system, which is given by a false statement and a STARK proof accepted by the STARK verifier for this (false) statement. Since false statements are dangerous and they can come in all sizes and shapes, we want to be secure against *all* false statements. Any false statement, even as trivial as 1+1=3, combined with a STARK proof accepted by a STARK verifier for this statement, is considered a successful attack on the system. (Those with a cryptographic background may be interested to know that STARKs also satisfy stronger security notions such as *[knowledge soundness](https://eprint.iacr.org/2016/116.pdf)*, but for simplicity, this post focuses on the simpler case of soundness.*)*
+
+
+      How do we formally define the security of a STARK system? We do so by analyzing the “soundness error” which roughly measures the expected “cost” that an attacker would need to spend to construct a successful attack (i.e., find a STARK proof for a false statement that nevertheless is accepted by the STARK verifier). Mathematically speaking, the soundness error is a function *e*(*t*) that gets as input a time parameter “*t”*, representing the amount of computation time an attacker is willing to spend to mount the attack and outputs the success probability of the attacker in succeeding with the attack (finding a convincing proof of a false statement). As the “cost” *t* that the attacker is willing to spend grows, his success probability increases.
+
+
+      Thus far, we have defined the security of STARKs as a function *e(t),* which is not the way you naturally discuss security, say, on crypto Twitter. There, you probably heard statements of the form “The scheme has 96 bits of security”. How does such a statement translate to our security definition? There is no one answer to this, as people have slightly different interpretations of “*x* bits of security”:
+
+
+      * A very strict translation would mean that for any *t* between 1 and 2⁹⁶, the soundness error is *e*(*t*) *≤ 2⁹⁶* . This means that any attacker running time at most *2⁹⁶* has a tiny probability of success, smaller than *1/2⁹⁶*, which is smaller than one in a billion times a billion times a billion.
+
+      * A more relaxed, and perhaps more common, translation is that 96 bits of security means that for any *t*, it holds that *t*/*e*(*t*) *≥ 2⁹⁶*. This means that the success probability is (inverse) linear to the running time. For example, if an attacker has a running time 2⁸⁶, its success probability is at most 1/2¹⁰.
+
+
+      In this blog post, we will relate to the second option.
+
+
+      ## From IOPs to STARKs with 96-Bit Security
+
+
+      So how do we prove that a scheme has 96 bits of security? To answer that, we need to understand the high-level structure of how STARKs are constructed. A STARK consists of three main ingredients: an IOP (interactive oracle proof), a Merkle tree, and a Fiat-Shamir hash; the main component we will focus on is the IOP. Once these components are specified, one can compile them to yield a STARK. We will elaborate on these, what they are, and how to assemble them together.
+
+
+      The first component we’ll review is the IOP: An IOP is similar to a standard interactive proof, where a prover and verifier interact for multiple rounds (we limit ourselves to public-coin protocols, where the verifier only sends random challenges to the prover). In an IOP, the verifier does not read the prover messages entirely but instead samples a small number of bits from each prover message. This is what allows the succinctness of the later compiled STARK.
+
+
+      So we have an IOP, how do you build a STARK from it? The prover messages might be long (actually, they are longer than the computation itself). To compress the messages, we use Merkle trees. A Merkle tree is a binary hash tree where each leaf node represents a query or an answer in the IOP. The root of the tree is a commitment to the entire message. When the verifier wants to read a specific location in a message, the prover provides the value at the location and an authentication path. The verifier can then use the path to verify that the value is correct. The IOP verifier reads only a small number of locations from the prover messages. Thus, using a Merkle tree results in a succinct protocol (one with small communication).
+
+
+      ![stark security](https://starkware.co/wp-content/uploads/2023/10/stark-security.jpg)
+
+
+      ## Compressing Rounds
+
+
+      One may opt for interactive STARKs, meaning, but often it is convenient to make them non-interactive to simplify the process of generating them, so that the prover need not wait for external messages when constructing one. Indeed, this is the way currently all STARK systems are deployed, and this is the way the ethSTARK protocol is constructed. Non-interactive STARKs are also a special case of transparent SNARKs (transparency means that no trusted setup is needed to instantiate them; this is also known as an “Arthur Merlin protocol” or a “public coin IOP”). To this end, a final step is to apply Fiat-Shamir to compress the rounds to a single message, which we’ll call the STARK Proof. The Fiat-Shamir transformation converts an interactive protocol into a non-interactive one. The prover simulates the interactive protocol while “talking to a hash function”. To derive the random challenge for round *i*, the prover hashes the partial transcript up to round *i*, and interprets the output as the next challenge.
+
+
+      This ensures that the prover cannot change their responses after the challenge has been generated. However, the cheating prover has some new strategy avenues that it did not have with the interactive IOP. The prover can regenerate the verifier challenge by modifying the last prover message, which would give a new transcript and thus, a new challenge. As it turns out, the standard soundness notion of IOPs does not suffice to prove the security of the Fiat-Shamir transformation.
+
+
+      For example, consider an IOP with 96 rounds with the following “hack” to the verifier: if the first bit of the randomness of the verifier is 0 in each of the 96 rounds then the verifier accepts (without looking at the proof whatsoever). One can see that adding this hack to the verifier only adds a term of *1/2⁹⁶* to the soundness error of the IOP. However, after the Fiat-Shamir transformation, an attacker can easily modify the prover messages to ensure that each hash begins with a zero, essentially breaking the system within a very short time. Rest assured, this scary scenario is merely a theoretical example, not one that applies to deployed STARKs. So, let’s see why our STARKs are secure after all? In a nutshell, we’ll show that an attacker running at most t steps will succeed in attacking with probability at most *e(t) ≤ t / 2⁹⁶*. Details follow.
+
+
+      ## IOPs and Round-by-Round Soundness
+
+
+      A STARK can only be as secure as its underlying IOP. But what does it mean for an IOP to have 96-bits of security? The standard definition would say that the IOP has soundness error *1/2⁹⁶*: meaning that the probability of any attacker (regardless of running time) fooling the verifier is at most *1/2⁹⁶*. However, as we discussed, IOP soundness is only one component out of three, which does not suffice to get 96 bits of security for the STARK compiled from all three steps. Instead, the security of the compiled STARK is proven, assuming the STARK has 96 bits of *round-by-round* soundness error (sometimes a similar definition called *state-restoration soundness* is used).
+
+
+      Intuitively, the round-by-round soundness says that every round has 96-bits of security and not just the overall protocol. In more detail, round-by-round says that there exists a predicate that gets a partial transcript of the protocol and tells us if this transcript is “fooling”: The empty transcript is not “fooling”, a full transcript is “fooling” if and only if the verifier accepts it. Finally, for any partial transcript that is not one that “fools” the verifier, the probability that in the next round the transcript will become “fooling” is at most *1/2⁹⁶*. If such a predicate exists with these properties, we say that the protocol has 96 bits of round-by-round soundness (the predicate is not required to be efficiently computable).
+
+
+      In many cases, only the soundness of an IOP is analyzed and not its round-by-round soundness. Admittedly, it is hard to think of examples where an IOP has standard soundness but not round-by-round soundness (except for contrived examples). However, the differences between the two might come up when deriving concrete security bounds where each bit matters. Thus, to derive tight and concrete bounds, one must give a tight analysis of the round-by-round soundness of the IOP. This is precisely what we do to the [FRI protocol](https://www.youtube.com/watch?v=c3EHV3iJQSE) and then ethSTARK IOP that underlies the IOP of our STARKs. The analysis itself is far from trivial and beyond the scope of this post. Using the new analysis, we can set precise parameters for our proofs.
+
+
+      The round-by-round soundness does give us the desired guarantee. The prover can regenerate the challenge many times, but we know that for any round, the probability of generating a “fooling” transcript is *1/2⁹⁶*. Thus, if the prover has time *t*, which is measured as the number of hash invocations, then it can try at most *t* times to get a fooling transcript, which limits its success probability to *e(t) ≤* min*{t /2⁹⁶,1}*.
+
+
+      ## Adding All the Error Terms
+
+
+      Finally, for all of this to hold, we need to ensure that the prover cannot tamper with the Merkle tree. One can show that as long as the prover finds no collision in the hash function, it cannot cheat in the Merkle tree. The probability of an attacker finding a collision using *t* invocations (to a random hash function) is at most min{*t²/ 2ˢ,1}*, where *s* is the output length of the hash function (this is due to the “birthday paradox”). This is why we set the hash function to have a length that is double the desired security. Thus, if we have a hash function with output length 192 bits and an IOP with round-by-round soundness of 96 bits, we get a compiled STARK with soundness error *e*(*t*) = *t* /2⁹⁶ + min*{t² / 2¹⁹²,1}*. In particular, such a scheme has 95 bits of security since the function we use to define security, namely *t*/*e*(*t*), satisfies the inequality *t*/*e*(*t*) ≥ *t/(t /2⁹⁶ +* min*{t² / 2¹⁹²,1}),* and the right hand side of this inequality achieves its minimal valueat *t=2⁹⁶,* and for this value of *t* we have *t/e(t)* ≥ *2⁹⁵.*
+
+
+      ## Summary
+
+
+      In conclusion, STARKs provide a powerful method for verifying the correctness of computations performed on public data in a trustless manner. The security of STARKs is typically measured in terms of the “soundness error”, which represents the probability of an attacker successfully providing a false statement and convincing the verifier with a proof. To achieve a desired level of security, such as 96 bits, the underlying IOP must satisfy round-by-round soundness, ensuring that every round maintains a high level of security. We analyzed the round-by-round soundness of the IOP underlying our SATRKs which allowed us to derive concrete security bounds.
