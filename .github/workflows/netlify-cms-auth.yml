@@ -1,9 +1,7 @@
 name: Build and Deploy Netlify CMS Auth
 
 on:
-  push:
-    branches:
-      - deploy/netlify-cms-auth
+  workflow_dispatch:
 
 jobs:
   build_and_deploy:
