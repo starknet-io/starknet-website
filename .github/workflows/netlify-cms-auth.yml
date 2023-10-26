@@ -1,6 +1,7 @@
 name: Build and Deploy Netlify CMS Auth
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
