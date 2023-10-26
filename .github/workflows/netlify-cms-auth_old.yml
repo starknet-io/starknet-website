@@ -1,4 +1,4 @@
-name: Build and Deploy Netlify CMS Auth
+name: Build and Deploy Netlify CMS Auth Old
 
 on:
   push:
