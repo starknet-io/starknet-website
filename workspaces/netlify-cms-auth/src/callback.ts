@@ -25,7 +25,6 @@ export async function callback(
       postMessageHTML({
         status: "success",
         data: { token, provider },
-        env,
       }),
       {
         headers: {
@@ -38,7 +37,6 @@ export async function callback(
       postMessageHTML({
         status: "error",
         data: e,
-        env,
       }),
       {
         headers: {
@@ -52,10 +50,9 @@ export async function callback(
 interface PostMessageHTMLArgs {
   status: "success" | "error";
   data: any;
-  env: Env;
 }
 
-function postMessageHTML({ status, data, env }: PostMessageHTMLArgs) {
+function postMessageHTML({ status, data }: PostMessageHTMLArgs) {
   return `
     <!DOCTYPE html>
     <html>
@@ -65,8 +62,9 @@ function postMessageHTML({ status, data, env }: PostMessageHTMLArgs) {
         const allowedOrigin = (
           message.origin === 'http://localhost:1234' ||
           message.origin === 'http://127.0.0.1:1234' ||
-          /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin) ||
-          message.origin === '${env.CMS_URL}'
+          message.origin === 'https://starknet-netlify-cms-byd.pages.dev' ||
+          /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms-byd\\.pages\\.dev$/.test(message.origin) ||
+          /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin)
         );
 
         if (!allowedOrigin) return;
