@@ -53,10 +53,18 @@ items:
       - browser_extension
   - name: "OKX "
     body: World's leading Web3 multi-chain wallet.
+    description: World's leading Web3 multi-chain wallet.
     type:
       - browser_extension
       - ios
       - android
+    type_list:
+      - type: browser_extension
+        url: https://chrome.google.com/webstore/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge
+      - type: ios
+        url: https://apps.apple.com/us/app/okx-buy-bitcoin-eth-crypto/id1327268470
+      - type: android
+        url: https://play.google.com/store/apps/details?id=com.okinc.okex.gp
     image: /assets/unnamed.jpg
     twitter: https://twitter.com/okxweb3
     website_url: https://www.okx.com/web3
