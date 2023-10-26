@@ -58,7 +58,7 @@ blocks:
         link_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
         website_url: https://blastapi.io/public-api/starknet
-        type: Open-endpoints
+        type: Open endpoints
       - title: Nethermind
         description: Nethermind provides fast and reliable Starknet RPC service built
           for developers.
