@@ -16,10 +16,6 @@ export interface AmbassadorsListBlock {
   readonly type: "ambassadors_list";
 }
 
-export interface WalletsBlock {
-  readonly type: "wallets";
-  readonly no_of_items: number;
-}
 export interface BasicCardBlock {
   readonly type: "basic_card";
   readonly title: string;
@@ -44,20 +40,23 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
-interface Icon {
-  icon: string;
-  linkUrl: string;
-}
-
-interface ListCardItems {
+export interface ListCardItems {
   title: string;
   description: string;
-  linkUrl: string;
-  icons: Icon;
+  image: string;
   website_url: string;
   twitter: string;
-  image: string;
+  start_date_time: string;
+  location: string;
+  city: string;
+  discord: string;
+  type_list: {
+    type: string;
+    url: string;
+  }[];
+  type: string;
 }
+
 export interface ListCardItemsBlock {
   readonly type: "card_list";
   readonly title: string;
@@ -152,7 +151,6 @@ export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type Block =
   | MarkdownBlock
   | CommunityEventsBlock
-  | WalletsBlock
   | BasicCardBlock
   | ImageIconLinkCardBlock
   | HeroBlock

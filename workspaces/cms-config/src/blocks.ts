@@ -129,12 +129,6 @@ export const cardListItem = [
     crowdin: false,
   },
   {
-    label: "Link url",
-    name: "link_url",
-    widget: "string",
-    crowdin: false,
-  },
-  {
     label: "Image",
     required: false,
     name: "image",
@@ -149,7 +143,7 @@ export const cardListItem = [
     index_file: "",
     meta: false
   },
-    {
+  {
     label: "Twitter",
     name: "twitter",
     required: false,
@@ -174,14 +168,6 @@ export const cardListItem = [
     meta: false
   },
   {
-    label: "Tags (separate by comma)",
-    name: "tags",
-    required: false,
-    widget: "string",
-    index_file: "",
-    meta: false
-  },
-  {
     label: "City",
     name: "city",
     required: false,
@@ -198,16 +184,8 @@ export const cardListItem = [
     meta: false
   },
   {
-    label: "Venue",
-    name: "venue",
-    required: false,
-    widget: "string",
-    index_file: "",
-    meta: false
-  },
-  {
-    label: "Discord handle",
-    name: "discordHandle",
+    label: "Discord",
+    name: "discord",
     required: false,
     widget: "string",
     index_file: "",
@@ -238,14 +216,6 @@ export const cardListItem = [
     name: "type",
     required: false,
     widget: "string",
-    index_file: "",
-    meta: false
-  },
-  {
-    label: "Is image rounded",
-    name: "is_rounded",
-    required: false,
-    widget: "boolean",
     index_file: "",
     meta: false
   },
@@ -327,23 +297,6 @@ export const blocks = [
       {
         name: "type",
         widget: "hidden",
-      },
-    ],
-  },
-  {
-    name: "wallets",
-    label: "Wallets block",
-    widget: "object",
-    fields: [
-      {
-        name: "type",
-        widget: "hidden",
-      },
-      {
-        name: "no_of_items",
-        required: false,
-        widget: "string",
-        crowdin: false
       },
     ],
   },

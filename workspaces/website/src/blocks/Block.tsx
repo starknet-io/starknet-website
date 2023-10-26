@@ -8,7 +8,6 @@ import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { BlockGrouping } from "./BlockGrouping";
 import { ImageIconCard } from "../components/Card/ImageIconCard";
 import ListCardItems from "./ListCardItems";
-import BlockWallets from "./dataBlocks/BlockWallets/BlockWallets";
 import { Container } from "./Container";
 import { LinkList } from "./LinkList";
 import { AccordionItem, AccordionRoot } from "./AccordionBlock";
@@ -151,14 +150,6 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     return (
       <ListCardItems
         {...block}
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "wallets") {
-    return (
-      <BlockWallets
         params={{
           locale,
         }}
