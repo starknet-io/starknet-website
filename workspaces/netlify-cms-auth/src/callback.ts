@@ -67,7 +67,6 @@ function postMessageHTML({ status, data, env }: PostMessageHTMLArgs) {
           message.origin === 'http://127.0.0.1:1234' ||
           /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms\\.pages\\.dev$/.test(message.origin) ||
           /^https:\\/\\/[-_\\w]+\\.starknet-netlify-cms-byd\\.pages\\.dev$/.test(message.origin) ||
-          message.origin === 'https://starknet-netlify-cms-byd.pages.dev' ||
           message.origin === '${env.CMS_URL}'
         );
 
