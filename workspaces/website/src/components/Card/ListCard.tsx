@@ -31,16 +31,13 @@ type Props = {
   readonly location?: string;
   readonly image?: string;
   readonly href: string;
-  readonly tags?: string[];
   readonly city?: string;
   readonly country?: string;
-  readonly venue?: string;
-  readonly twitterHandle?: string;
-  readonly discordHandle?: string;
-  readonly variant?: "default" | "dapp" | "event" | "job" | "wallet";
+  readonly twitter?: string;
+  readonly discord?: string;
+  readonly variant?: "default" | "event" | "job";
   readonly type_list?: Type[];
   readonly type?: string[];
-  readonly isRounded?: boolean;
   readonly recap?: {
     label?: string;
     link: string;
@@ -216,10 +213,10 @@ export const ListCard = (props: Props) => {
                         />
                       </Link>
                     )}
-                  {props.twitterHandle && (
+                  {props.twitter && (
                     <Link
                       isExternal
-                      href={`${props.twitterHandle}`}
+                      href={`${props.twitter}`}
                     >
                       <Icon
                         boxSize="18px"
@@ -228,10 +225,10 @@ export const ListCard = (props: Props) => {
                       />
                     </Link>
                   )}
-                  {props.discordHandle && (
+                  {props.discord && (
                     <Link
                       isExternal
-                      href={`${props.discordHandle}`}
+                      href={`${props.discord}`}
                     >
                       <Icon
                         boxSize="18px"

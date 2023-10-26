@@ -623,8 +623,8 @@ export const Listcard = () => (
             type_list={hit.type_list}
             city={hit.city}
             country={hit.country}
-            twitterHandle={hit.twitter}
-            discordHandle={hit.discord}
+            twitter={hit.twitter}
+            discord={hit.discord}
             recap={hit.recap}
           />
         );

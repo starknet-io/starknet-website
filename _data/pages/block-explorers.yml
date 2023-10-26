@@ -37,7 +37,7 @@ blocks:
         link_url: https://www.oklink.com/starknet
         website_url: https://www.oklink.com/starknet
         image: /assets/oklink-logo.jpeg
-        discordHandle: ""
+        discord: ""
         twitter: https://twitter.com/OKLink
     title: Block explorers
     randomize: true
