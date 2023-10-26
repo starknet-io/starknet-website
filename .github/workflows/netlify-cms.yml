@@ -51,7 +51,7 @@ jobs:
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
           VITE_API_BASE_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev/api
           VITE_DATA_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev/data
-          VITE_BACKEND_AUTH_URL: https://auth.clivado.com
+          VITE_BACKEND_AUTH_URL: https://netlify-cms-auth.haim-6b2.workers.dev
 
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1
