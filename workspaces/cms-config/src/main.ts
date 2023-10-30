@@ -12,7 +12,7 @@ export const CMSConfig = {
     name: "github-yuki",
     repo: "starknet-io/starknet-website",
     branch: "dev",
-    base_url: "https://netlify-cms-auth.yukilabs.workers.dev",
+    base_url: "https://netlify-cms-auth.haim-6b2.workers.dev",
     preview_context: "Vercel – starknet-website",
   },
   publish_mode: "editorial_workflow",
