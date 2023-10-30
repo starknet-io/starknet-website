@@ -53,6 +53,9 @@ blocks:
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
+        type_list:
+          - type: "Open endpoints "
+            url: https://www.lavanet.xyz/get-started/starknet
       - title: Blast API
         description: API service for Starknet
         link_url: https://blastapi.io/public-api/starknet
