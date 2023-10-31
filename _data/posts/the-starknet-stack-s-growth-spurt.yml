@@ -110,33 +110,45 @@ blocks:
           The Starknet ecosystem aims to have multiple implementations of every single component in the Stack. Here is a taste of the different teams and the infrastructure they’re developing:
 
 
-          | Category         | Project                                                                                         | Entity        | Status             | Open-Source |
+          | Category         | Project                                                                                                 | Entity        | Status             | Open-Source |
 
-          | ---------------- | ----------------------------------------------------------------------------------------------- | ------------- | ------------------ | ----------- |
+          | ---------------- | ------------------------------------------------------------------------------------------------------- | ------------- | ------------------ | ----------- |
 
-          | Full Node        | [Pathfinder](https://github.com/eqlabs/pathfinder)                                              | Equilibrium   | In production      | Yes         |
+          | Full Node        | [Pathfinder](https://github.com/eqlabs/pathfinder)                                                      | Equilibrium   | In production      | Yes         |
 
-          | Full Node        | [Juno](https://github.com/NethermindEth/juno)                                                   | Nethermind    | In production      | Yes         |
+          | Full Node        | [Juno](https://github.com/NethermindEth/juno)                                                           | Nethermind    | In production      | Yes         |
 
-          | Full Node        | [Papyrus](https://github.com/starkware-libs/papyrus)                                            | StarkWare     | In development     | Yes         |
+          | Full Node        | [Papyrus](https://github.com/starkware-libs/papyrus)                                                    | StarkWare     | In development     | Yes         |
 
-          | Full Node        | [Deoxys](https://github.com/KasarLabs/deoxys)                                                   | KasarLabs     | In development     | Yes         |
+          | Full Node        | [Deoxys](https://github.com/KasarLabs/deoxys)                                                           | KasarLabs     | In development     | Yes         |
 
-          | Execution Engine | [Blockifier](https://github.com/starkware-libs/blockifier)                                      | StarkWare     | In production      | Yes         |
+          | Execution Engine | [Blockifier](https://github.com/starkware-libs/blockifier)                                              | StarkWare     | In production      | Yes         |
 
-          | Execution Engine | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                             | LambdaClass   | Soon in production | Yes         |
+          | Execution Engine | [starknet_in_rust](https://github.com/lambdaclass/starknet_in_rust)                                     | LambdaClass   | Soon in production | Yes         |
 
-          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)               | StarkWare     | In production      | Yes         |
+          | Sequencer        | [SW Sequencer](https://medium.com/starkware/starknets-new-sequencer-339e63845003)                       | StarkWare     | In production      | Yes         |
 
-          | Sequencer        | [Madara](https://github.com/keep-starknet-strange/madara)                                       | Community     | In development     | Yes         |
+          | Sequencer        | [Madara](https://github.com/keep-starknet-strange/madara)                                               | Community     | In development     | Yes         |
 
-          | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)                    | LambdaClass   | In development     | Yes         |
+          | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)                            | LambdaClass   | In development     | Yes         |
 
-          | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover) | StarkWare     | In production      | Yes         |
+          | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover)         | StarkWare     | In production      | Yes         |
 
-          | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿         | LambdaClass   | In development     | Yes         |
+          | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿                 | LambdaClass   | In development     | Yes         |
 
-          | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                          | Andrew Milson | In development     | Yes         |
+          | Prover           | [Sandstorm](https://github.com/andrewmilson/sandstorm)                                                  | Andrew Milson | In development     | Yes         |
+
+          | Cairo VM         | [Cairo VM Python](https://github.com/starkware-libs/cairo-lang/tree/master/src/starkware/cairo/lang/vm) | Starkware     | In production      | Yes         |
+
+          | Cairo VM         | [Cairo VM Rust](https://github.com/lambdaclass/cairo-vm)                                                | LambdaClass   | In production      | Yes         |
+
+          | Cairo VM         | [Cairo Zig](https://github.com/keep-starknet-strange/cairo-zig)                                         | Community     | In development     | Yes         |
+
+          | Cairo VM         | [Cairo VM Go](https://github.com/lambdaclass/cairo-vm_in_go)                                            | LambdaClass   | In development     | Yes         |
+
+          | Cairo VM         | [Cairo VM Go](https://github.com/NethermindEth/cairo-vm-go)                                             | Nethermind    | In development     | Yes         |
+
+          | Cairo VM         | [Cairo VM Typescript](https://github.com/kkrt-labs/cairo-vm-ts)                                         | Kakarot       | In development     | Yes         |
 
 
           * Block explorers: [Starkscan](https://starkscan.co/), [ViewBlock](https://viewblock.io/starknet), [Voyager](https://voyager.online/), and LambdaClass’ Explorer (in development)
