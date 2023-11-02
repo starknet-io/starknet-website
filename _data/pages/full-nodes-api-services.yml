@@ -31,6 +31,13 @@ blocks:
         image: /assets/logo_papyrus_80x80.png
     randomize: true
   - type: card_list
+    randomize: false
+    title: Open endpoints
+    card_list_items:
+      - title: Blast API
+        website_url: https://blastapi.io/public-api/starknet
+        image: /assets/5olekvre_400x400.jpg
+  - type: card_list
     title: API services
     card_list_items:
       - link_url: https://www.infura.io/networks/ethereum/starknet
