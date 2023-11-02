@@ -148,3 +148,11 @@ blocks:
           hasIcon: true
           custom_title: Starknet Vietnam
           custom_external_link: https://twitter.com/starknetvietnam
+  - type: link_list
+    randomize: false
+    heading: Translated Resources
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: "Mirror "
+          custom_external_link: https://mirror.xyz/0x568B12eBBE85521D2cd8a2C9B7a8EF3f48aa2d66
