@@ -65,3 +65,10 @@ video:
       projection: rectangular
 image: /assets/stark-spaces-proving-ethereum-with-herodotus-youtube.png
 category: ecosystem
+short_desc: >-
+  The Herodotus Accumulator project gives users and developers easy access to
+  reliable data, all the way from Ethereum’s genesis block until today, with
+  special help from storage proofs + StarkWare’s SHARP prover.
+
+
+  Join Raz from StarkWare and Marcello from Herodotus as they discuss Herodotus's journey towards Genesis.
