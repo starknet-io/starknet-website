@@ -62,6 +62,10 @@ blocks:
           custom_external_link: https://t.me/starknet_ecosystem
       - link:
           hasIcon: true
+          custom_title: Starknet France
+          custom_external_link: https://twitter.com/StarknetFr
+      - link:
+          hasIcon: true
           custom_title: Starknet India
           custom_external_link: https://t.me/starknetindia
       - link:
