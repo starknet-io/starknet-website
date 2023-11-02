@@ -110,6 +110,10 @@ blocks:
           custom_external_link: https://twitter.com/StarknetEco
       - link:
           hasIcon: true
+          custom_title: Starknet France
+          custom_external_link: https://twitter.com/StarknetFr
+      - link:
+          hasIcon: true
           custom_title: "Starknet Gaming "
           custom_external_link: https://twitter.com/Starknetgaming
       - link:
