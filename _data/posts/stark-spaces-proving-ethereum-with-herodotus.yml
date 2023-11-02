@@ -3,6 +3,65 @@ post_type: video
 title: STARK SPACES | Proving Ethereum with Herodotus
 published_date: 2023-11-02T16:02:09.626Z
 video:
-  url: https://twitter.com/i/spaces/1PlJQDwlyedGE?s=20
+  url: https://youtu.be/g3xnhbyTnJ0
+  id: g3xnhbyTnJ0
+  data:
+    kind: youtube#video
+    etag: x-YxwGfPXpBxYlWsaNX1CRSV9Pk
+    id: g3xnhbyTnJ0
+    snippet:
+      publishedAt: 2023-11-02T16:35:08Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | Proving Ethereum with Herodotus
+      description: >-
+        The Herodotus Accumulator project gives users and developers easy access
+        to reliable data, all the way from Ethereum’s genesis block until today,
+        with special help from storage proofs + StarkWare’s SHARP prover.
+
+
+        Join Raz from StarkWare and Marcello from Herodotus as they discuss Herodotus's journey towards Genesis.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/g3xnhbyTnJ0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/g3xnhbyTnJ0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/g3xnhbyTnJ0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/g3xnhbyTnJ0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/g3xnhbyTnJ0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | Proving Ethereum with Herodotus
+        description: >-
+          The Herodotus Accumulator project gives users and developers easy
+          access to reliable data, all the way from Ethereum’s genesis block
+          until today, with special help from storage proofs + StarkWare’s SHARP
+          prover.
+
+
+          Join Raz from StarkWare and Marcello from Herodotus as they discuss Herodotus's journey towards Genesis.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT36M2S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/stark-spaces-proving-ethereum-with-herodotus-youtube.png
 category: ecosystem
