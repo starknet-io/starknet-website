@@ -156,3 +156,5 @@ blocks:
           hasIcon: true
           custom_title: "Mirror "
           custom_external_link: https://mirror.xyz/0x568B12eBBE85521D2cd8a2C9B7a8EF3f48aa2d66
+        subLabel:
+          label: ""
