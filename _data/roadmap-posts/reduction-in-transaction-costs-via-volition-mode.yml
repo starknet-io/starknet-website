@@ -1,33 +1,14 @@
 id: 2ec2ec7e-abd4-4916-8b57-b31f2c753402
-title: "A reduction in transaction costs via Volition mode "
+title: "Transaction version 3 and Pay tx fees in STRK "
 availability: Q2 2024
 version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
 stage: building-next
 blocks:
   - type: markdown
     body: >-
-      As part of its roadmap, Starknet aims to significantly reduce transaction
-      costs by introducing Volition mode. Currently, L1 (Ethereum) data cost
-      accounts for the majority (95%) of transaction costs on Starknet. To
-      address this, Volition mode will enable developers to build applications
-      with a hybrid Data Availability (DA) approach, incorporating both on-chain
-      and off-chain data.
+      T﻿his version introduces the following two changes:
 
 
-      By leveraging Volition mode, Starknet anticipates a dramatic reduction in the cost of data. 
+      1. Introduction of transaction version 3.
 
-
-
-
-      **This reduction is expected to be achieved through two key factors:** 
-
-
-      * The implementation of Ethereum's EIP-4844 (Shard Blob Transaction)
-
-      * The introduction of Volition itself. 
-
-
-      Volition will be officially released only once EIP-4844 has been deployed to the Ethereum mainnet.
-
-
-      The specifics of Volition's design and developer interfaces will be shared soon, providing further details on how it will contribute to lowering transaction costs.
+      2. Will enable users to also pay transaction fees in STRK, in addition to the current ETH tx fee payment.
