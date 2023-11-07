@@ -56,7 +56,7 @@ the starknet website is deployed to cloudflare pages with the configuration belo
 | Name          | starknet-websites |
 | usage model   | Unbound           |
 
-### enviroment variables and secrets
+### environment variables and secrets
 #### in github
 | Name                        | Type   | Description                                                   |
 |-----------------------------|--------|---------------------------------------------------------------|
