@@ -1,0 +1,17 @@
+id: b6d6f28d-2f3c-4e20-994f-2f81b300bc62
+published_at: 2023-11-07T10:00:49.863Z
+status: active
+archive_after: 3
+contact:
+  name: Nethermind
+  logo: /assets/nethermind_icon_1600_black-1-.png
+job:
+  title: Smart Contract Auditor
+  description: "We’re seeking senior auditors and developers with smart contract
+    auditing experience/knowledge to join our team. You'll work on projects
+    written in Solidity and Cairo. Knowledge of Rust and/or GoLang is a great
+    plus. We are looking for someone who understands the Ethereum Virtual
+    Machine, Yellow Paper, and the Solidity language. "
+  type: full_time
+  location: remote
+  apply_url: https://boards.eu.greenhouse.io/nethermind/jobs/4195521101?gh_src=871523a2teu
