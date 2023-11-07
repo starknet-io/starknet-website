@@ -19,7 +19,7 @@ const outline = defineStyle({
     borderColor: "grey.morning",
     _dark: {
       color: "selected.100"
-    }
+    },
   },
   _active: {
     bg: "bg.200",

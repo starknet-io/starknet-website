@@ -110,6 +110,8 @@ export default function App() {
         backend: {
           ...CMSConfig.backend,
           branch,
+          base_url:
+          import.meta.env.VITE_BACKEND_AUTH_URL || CMSConfig.backend.base_url,
         },
       },
     });
