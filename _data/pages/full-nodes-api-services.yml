@@ -47,6 +47,8 @@ blocks:
         image: /assets/lava_network-symbol.jpg
         website_url: https://www.lavanet.xyz/get-started/starknet
         twitter: https://twitter.com/lavanetxyz
+        description: An open Starknet RPC endpoint, backed by a distributed network of
+          node providers.
   - type: card_list
     title: API services
     card_list_items:
