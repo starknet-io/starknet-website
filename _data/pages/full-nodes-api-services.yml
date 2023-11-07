@@ -31,13 +31,14 @@ blocks:
         image: /assets/logo_papyrus_80x80.png
     randomize: true
   - type: card_list
-    randomize: false
+    randomize: true
     title: Open endpoints
     card_list_items:
       - title: Blast API
         website_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
         twitter: https://twitter.com/BlastAPI
+        description: High availability Starknet Public API designed for developers.
       - website_url: http://starknetrpc.nethermind.io/
         title: Nethermind
         description: Nethermind's Starknet RPC service, now with open endpoints.
@@ -75,10 +76,11 @@ blocks:
         type_list: []
         twitter: https://twitter.com/lavanetxyz
       - title: Blast API
-        description: API service for Starknet
+        description: BLAST is a premium blockchain API platform providing
+          top-of-industry performance and reliability.
         link_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
-        website_url: https://blastapi.io/public-api/starknet
+        website_url: https://blastapi.io/
         type: ""
         type_list: []
         twitter: https://twitter.com/BlastAPI
