@@ -43,6 +43,10 @@ blocks:
         description: Nethermind's Starknet RPC service, now with open endpoints.
         image: /assets/nethermind_icon_1600_black-1-.png
         twitter: https://twitter.com/NethermindEth
+      - title: Lava Protocol
+        image: /assets/lava_network-symbol.jpg
+        website_url: https://www.lavanet.xyz/get-started/starknet
+        twitter: https://twitter.com/lavanetxyz
   - type: card_list
     title: API services
     card_list_items:
@@ -66,9 +70,7 @@ blocks:
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
-        type_list:
-          - type: "Open endpoints "
-            url: https://www.lavanet.xyz/get-started/starknet
+        type_list: []
         twitter: https://twitter.com/lavanetxyz
       - title: Blast API
         description: API service for Starknet
@@ -76,9 +78,7 @@ blocks:
         image: /assets/5olekvre_400x400.jpg
         website_url: https://blastapi.io/public-api/starknet
         type: ""
-        type_list:
-          - type: Open endpoints
-            url: https://blastapi.io/public-api/starknet
+        type_list: []
         twitter: https://twitter.com/BlastAPI
       - title: Nethermind
         description: Nethermind provides fast and reliable Starknet RPC service built
