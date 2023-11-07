@@ -37,6 +37,7 @@ blocks:
       - title: Blast API
         website_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
+        twitter: https://twitter.com/BlastAPI
       - website_url: http://starknetrpc.nethermind.io/
         title: Nethermind
         description: Nethermind's Starknet RPC service, now with open endpoints.
@@ -77,6 +78,7 @@ blocks:
         type_list:
           - type: Open endpoints
             url: https://blastapi.io/public-api/starknet
+        twitter: https://twitter.com/BlastAPI
       - title: Nethermind
         description: Nethermind provides fast and reliable Starknet RPC service built
           for developers.
