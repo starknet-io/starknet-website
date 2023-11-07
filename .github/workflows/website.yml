@@ -64,17 +64,17 @@ jobs:
           VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
-          VITE_CF_STREAM_URL: ${{ secrets.NEW_CF_STREAM_URL }}
-          VITE_ED_VIDEO_ID_1: ${{ secrets.NEW_VITE_ED_VIDEO_ID_1 }}
-          VITE_ED_VIDEO_ID_2: ${{ secrets.NEW_VITE_ED_VIDEO_ID_2 }}
-          VITE_ED_VIDEO_ID_3: ${{ secrets.NEW_VITE_ED_VIDEO_ID_3 }}
-          VITE_ED_VIDEO_ID_4: ${{ secrets.NEW_VITE_ED_VIDEO_ID_4 }}
+          VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
+          VITE_ED_VIDEO_ID_1: ${{ secrets.VITE_ED_VIDEO_ID_1 }}
+          VITE_ED_VIDEO_ID_2: ${{ secrets.VITE_ED_VIDEO_ID_2 }}
+          VITE_ED_VIDEO_ID_3: ${{ secrets.VITE_ED_VIDEO_ID_3 }}
+          VITE_ED_VIDEO_ID_4: ${{ secrets.VITE_ED_VIDEO_ID_4 }}
 
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ secrets.NEW_CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.NEW_CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: starknet-websites
           directory: dist/client
           workingDirectory: workspaces/website

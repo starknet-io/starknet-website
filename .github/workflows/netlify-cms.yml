@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Netlify CMS ${{ github.ref_name }}
-      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-netlify-cms.pages.dev
+      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-netlify-cms-byd.pages.dev
     permissions:
       contents: read
       deployments: write
@@ -47,10 +47,11 @@ jobs:
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
         env:
-          VITE_LIVE_PREVIEW_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev
+          VITE_LIVE_PREVIEW_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
-          VITE_API_BASE_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev/api
-          VITE_DATA_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-website.pages.dev/data
+          VITE_API_BASE_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/api
+          VITE_DATA_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/data
+          VITE_BACKEND_AUTH_URL: https://netlify-cms-auth.haim-6b2.workers.dev
 
       - name: Deploy Netlify CMS
         uses: cloudflare/pages-action@1
@@ -60,4 +61,4 @@ jobs:
           projectName: starknet-netlify-cms
           directory: workspaces/netlify-cms/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}
+          branch: main
