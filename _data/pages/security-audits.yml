@@ -19,6 +19,10 @@ blocks:
       - title: ChainSecurity
         image: /assets/chiansecurity-logo.png
         website_url: https://chainsecurity.com/
+        description: ChainSecurity conducts smart contract audits since 2017 and enjoys
+          an excellent track record having secured some of the largest DeFi
+          protocols and Web3 projects.
+        twitter: https://twitter.com/chain_security
       - title: ConsenSys Diligence
         website_url: http://consensys.net/diligence
         image: /assets/consensys-diligence-logo.svg
