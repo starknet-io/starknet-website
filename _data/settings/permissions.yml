@@ -48,3 +48,4 @@ items:
   - username: stoobie
     access:
       - roadmap
+    name: Steve Goodman
