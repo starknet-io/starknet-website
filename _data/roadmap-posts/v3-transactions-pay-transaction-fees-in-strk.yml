@@ -1,6 +1,8 @@
 id: 891eedc6-385c-4cc7-8bea-fee61353b51a
 title: V3 transactions; pay transaction fees in STRK
 availability: Q1 2024
+version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
+stage: building-now
 blocks:
   - type: markdown
     body: |-
