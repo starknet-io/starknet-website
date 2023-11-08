@@ -13,4 +13,4 @@ blocks:
       to introduce a fee market in version 0.14.0. 
 
 
-      This fee market will allow for an efficient allocation of Starknet's limited resources based on users' willingness to pay for a transaction, rather than simply following the order of transactions in line. By implementing a fee market, Starknet aims to provide a more predictable and seamless experience for users, even during periods of high network activity.
+      This fee market will allow for an efficient allocation of Starknet's limited resources based on users' willingness to pay for a transaction, rather than simply following the order of transactions in the queue. By implementing a fee market, Starknet aims to provide a more predictable and seamless experience for users, even during periods of high network activity.
