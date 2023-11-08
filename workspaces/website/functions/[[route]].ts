@@ -32,6 +32,7 @@ async function ittyAssetshandler(
 router.get("/*.png", ittyAssetshandler);
 router.get("/*.svg", ittyAssetshandler);
 router.get("/*.ico", ittyAssetshandler);
+router.get("/*.txt", ittyAssetshandler);
 router.get("/assets/*", ittyAssetshandler);
 
 router.all("/data/*", preflight);
