@@ -45,3 +45,7 @@ items:
   - username: Penguinseo
     access:
       - all
+  - username: stoobie
+    access:
+      - roadmap
+    name: Steve Goodman
