@@ -1,0 +1,10 @@
+id: 891eedc6-385c-4cc7-8bea-fee61353b51a
+title: V3 transactions; pay transaction fees in STRK
+availability: Q1 2024
+blocks:
+  - type: markdown
+    body: |-
+      T﻿his version introduces the following changes:
+
+      1. A﻿ll Starknet transaction versions are updated to v3.
+      2. In addition ETH, users can pay transactoin fees in STRK.
