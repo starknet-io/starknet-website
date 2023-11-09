@@ -6,13 +6,17 @@ import AnnouncementPostCard from "./AnnouncementPostCard";
 export type AnnouncementsPageProps = {
   announcements: readonly AnnouncementDetails[];
   locale: string;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
 };
 export default function AnnouncementsPage({
   announcements,
+  env,
   locale,
 }: AnnouncementsPageProps) {
   return (
-    <RoadmapLayout locale={locale} mode="ANNOUNCEMENTS">
+    <RoadmapLayout env={env} locale={locale} mode="ANNOUNCEMENTS">
       <Heading variant="h3" mb="2rem">
         Announcements
       </Heading>
