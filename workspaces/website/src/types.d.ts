@@ -7,4 +7,7 @@ declare interface LocaleProps {
 }
 declare interface PAGES_VARS {
   readonly YOUTUBE_API_KEY: string;
+  readonly MAILCHIMP_API_KEY: string;
+  readonly MAILCHIMP_NEWSLETTER_URL: string;
+  readonly CLOUDFLARE_RECAPTCHA_KEY: string;
 }

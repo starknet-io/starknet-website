@@ -79,6 +79,10 @@ body.chakra-ui-dark {
   --aa-item-background-rgb: 30, 29, 29;
 }
 
+.chakra-alert {
+  padding: 16px 32px !important;
+}
+
 body.chakra-ui-dark .aa-Input::placeholder {
   color: rgba(var(--aa-primary-color-rgb), 1);
 }

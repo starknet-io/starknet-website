@@ -15,6 +15,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const roadmapSettings = await getRoadmapSettings(locale, pageContext.context);
 
   const pageProps: RoadmapPageProps = {
+      env: {
+        CLOUDFLARE_RECAPTCHA_KEY: import.meta.env.VITE_CLOUDFLARE_RECAPTCHA_KEY,
+      },
       roadmapPosts,
       roadmapVersions,
       roadmapSettings,

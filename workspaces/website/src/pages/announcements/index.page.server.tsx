@@ -10,6 +10,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
 
   const pageProps: AnnouncementsPageProps = {
       announcements,
+      env: {
+        CLOUDFLARE_RECAPTCHA_KEY: import.meta.env.VITE_CLOUDFLARE_RECAPTCHA_KEY,
+      },
       locale,
   };
 

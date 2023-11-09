@@ -1,3 +1,7 @@
+/**
+ * Module dependencies.
+ */
+
 import { Router, createCors, error, json } from 'itty-router'
 
 // now let's create a router (note the lack of "new")
@@ -48,3 +52,70 @@ apiRouter.get(
     );
   }
 );
+
+/**
+ * Newsletter subscribe api route.
+ */
+
+apiRouter.post(
+  '/newsletter-subscribe',
+  async (req, env: PAGES_VARS) => {
+    try {
+      const formData = new FormData();
+
+      formData.append('secret', env.CLOUDFLARE_RECAPTCHA_KEY);
+      formData.append('response', req.query.token as string);
+      
+      const captchaUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+      const captchaResponse = await fetch(captchaUrl, {
+        body: formData,
+        method: 'POST',
+      });
+
+      const captchaResult = await captchaResponse.json() as { success: boolean };
+
+      if (!captchaResult.success) {
+        return corsify(error(
+          422,
+          { title: 'Invalid Captcha' }
+        ));
+      }
+      
+      const mailchimpResponse = await fetch(
+        env.MAILCHIMP_NEWSLETTER_URL,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${btoa(`anystring:${env.MAILCHIMP_API_KEY}`)}`
+          },
+          body: JSON.stringify({
+            email_address: req.query.email as string,
+            status: 'subscribed',
+          })
+        }
+      )
+
+      const mailchimpResult = await mailchimpResponse.json() as any;
+
+      if(mailchimpResponse.ok !== true) {
+        return corsify(error(
+          mailchimpResponse.status,
+          mailchimpResult
+        ));
+      }
+
+      return corsify(json({
+        message: 'Successfully subscribed to newsletter!',
+        ...mailchimpResult
+      }));
+    } catch (err) {
+      return corsify(error(
+        (err as any)?.status ?? 500,
+        (err as any)?.response?.text ? JSON.parse((err as any)?.response?.text) : {
+          error: 'Internal Server Error'
+        }
+      ));
+    }
+  }
+)

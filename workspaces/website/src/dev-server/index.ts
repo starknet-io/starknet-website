@@ -38,7 +38,7 @@ app.all(/\/api(.*)/, async (req, res, next) => {
       res.header(key, value);
     });
 
-    res.send(await httpResponse.text());
+    res.status(httpResponse.status).send(await httpResponse.text());
   } else {
     res.send("API!");
   }
