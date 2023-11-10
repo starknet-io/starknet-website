@@ -146,6 +146,20 @@ export interface OrderedBlock {
   readonly blocks: readonly OrderedItem[];
 }
 
+export interface ChapterInfo {
+  content: MarkdownBlock['body'];
+  subtitle: string;
+  title: string;
+};
+
+export interface VideoSectionBlock {
+  readonly type: "video_section";
+  readonly 'scaling-eth': ChapterInfo;
+  readonly sequencer: ChapterInfo;
+  readonly prover: ChapterInfo;
+  readonly 'eth-settlement': ChapterInfo;
+}
+
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type Block =
@@ -160,7 +174,8 @@ export type Block =
   | AccordionBlock
   | OrderedBlock
   | ListCardItemsBlock
-  | AmbassadorsListBlock;
+  | AmbassadorsListBlock
+  | VideoSectionBlock;
 
 export interface Container {
   readonly type: "container";
