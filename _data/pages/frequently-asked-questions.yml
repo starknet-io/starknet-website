@@ -24,7 +24,7 @@ blocks:
           [StarkScan](https://starkscan.co/),
           [Voyager](https://voyager.online/txns),
           [ViewBlock](https://viewblock.io/starknet)."
-      - label: "What are Starknet Appchains? "
+      - label: What are Starknet Appchains? 
         body: >-
           Starknet Appchains are instances of Starknet that power a specific
           application (or a host of applications). Setting up a Starknet
