@@ -62,11 +62,11 @@ blocks:
         website_url: https://tokenflow.live/
   - type: card_list
     randomize: true
-    title: NFT API Services
+    title: Enhanced API
     card_list_items:
-      - website_url: https://starkscan.readme.io/reference/retrieve-nft
+      - website_url: https://starkscan.co/api-info
         image: /assets/starkscan.jpg
         title: Starkscan
-      - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints
+      - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints#nft-api
         title: "Alchemy "
         image: /assets/alchemy-mark-blue-gradient.png
