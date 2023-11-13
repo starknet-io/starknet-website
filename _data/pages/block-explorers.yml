@@ -60,3 +60,12 @@ blocks:
         title: Token Flow
         image: /assets/token-flow-logo.jpg
         website_url: https://tokenflow.live/
+  - type: card_list
+    randomize: true
+    title: NFT API Services
+    card_list_items:
+      - website_url: https://starkscan.readme.io/reference/retrieve-nft
+        image: /assets/starkscan.jpg
+        title: Starkscan
+      - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints
+        title: "Alchemy "
