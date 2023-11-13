@@ -60,3 +60,13 @@ blocks:
         title: Token Flow
         image: /assets/token-flow-logo.jpg
         website_url: https://tokenflow.live/
+  - type: card_list
+    randomize: true
+    title: Enhanced API
+    card_list_items:
+      - website_url: https://starkscan.co/api-info
+        image: /assets/starkscan.jpg
+        title: Starkscan
+      - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints#nft-api
+        title: "Alchemy "
+        image: /assets/alchemy-mark-blue-gradient.png
