@@ -32,7 +32,7 @@ interface KeyValuePairs {
 const stages: KeyValuePairs = {
   "building-now": "Building now",
   "building-next": "Building next",
-  "backlog": "Backlog",
+  "backlog": "Details are WIP",
 };
 
 export type RoadmapPostProps = {
