@@ -69,3 +69,4 @@ blocks:
         title: Starkscan
       - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints
         title: "Alchemy "
+        image: /assets/alchemy-mark-blue-gradient.png
