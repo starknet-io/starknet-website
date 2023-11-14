@@ -5,5 +5,11 @@ version: 563c2fc3-fd9c-4440-a067-8c2dc680ef74
 stage: building-next
 blocks:
   - type: markdown
-    body: S﻿tarknet will benefit from the improvements on Ethereum as part of
-      EIP-4844.
+    body: >-
+      As part of its roadmap, Starknet aims to significantly reduce transaction
+      costs. 
+
+      Currently, L1 (Ethereum) data cost accounts for the majority (95%) of transaction costs on Starknet. EIP-4844 is a step towards full data sharding on Ethereum. This EIP, together with the supporting changes in Starknet’s protocol, should result in a reduction in the cost of Starknet data storage on L1.
+
+
+      For more information, see [EIP-4844: Shard Blob Transactions](https://eips.ethereum.org/EIPS/eip-4844) on the Ethereum Improvement Protocols site.
