@@ -70,3 +70,5 @@ blocks:
       - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints#nft-api
         title: "Alchemy "
         image: /assets/alchemy-mark-blue-gradient.png
+        description: Get all the Starknet data you need for transactions, token
+          information, and debugging, in fewer requests.
