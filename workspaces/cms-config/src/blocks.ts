@@ -249,6 +249,30 @@ export const cardListItem = [
   },
 ] satisfies CmsField[];
 
+const videoChapterFields = [
+  {
+    crowdin: true,
+    label: 'Title',
+    name: 'title',
+    required: true,
+    widget: 'string'
+  },
+  {
+    crowdin: true,
+    label: 'Description',
+    name: 'description',
+    required: true,
+    widget: 'string'
+  },
+  {
+    crowdin: true,
+    label: 'Content',
+    name: 'content',
+    required: true,
+    widget: 'markdown'
+  }
+] satisfies CmsField[];
+
 export const blocks = [
   {
     name: "markdown",
@@ -663,6 +687,40 @@ export const blocks = [
         ],
       },
     ],
+  }, {
+    name: "video_section",
+    label: "Education video section",
+    widget: "object",
+    fields: [
+      {
+        crowdin: true,
+        label: 'Chapter 1',
+        name: 'scaling-eth',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 2',
+        name: 'sequencer',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 3',
+        name: 'prover',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 4',
+        name: 'eth-settlement',
+        widget: 'object',
+        fields: videoChapterFields
+      }
+    ]
   },
   {
     name: "ordered_block",
