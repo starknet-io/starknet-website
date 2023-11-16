@@ -7,7 +7,7 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: block_explorers
-    title: Block explorers & indexers
+    title: Block explorers, indexers & Enhanced API 
     description: Explore blocks, indexers, and other metrics of Starknet transactions.
   - type: card_list
     card_list_items:
