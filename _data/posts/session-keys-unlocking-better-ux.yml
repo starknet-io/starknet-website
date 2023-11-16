@@ -8,6 +8,12 @@ category: ecosystem
 topic:
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
   - account-abstraction
+short_desc: " Session Keys by StarkWare: Improving user experience and bringing
+  scalability, security, and privacy to blockchain"
+seoFocusKeywords:
+  - Account
+  - abstraction
+seoCanonicalUrl: https://starkware.co/resource/session-keys-unlocking-better-ux/
 blocks:
   - type: group
     blocks:
@@ -19,7 +25,7 @@ blocks:
           Ethereum has revolutionized the world of decentralized applications (dApps), offering a secure and transparent way to interact online.  However, early blockchain networks like Ethereum, provide a basic account model which is unintuitive for most users, called [Externally Owned Accounts](https://ethereum.org/en/developers/docs/accounts/) (EOAs).
 
 
-          In a recent blog post about native account bstraction, we dived into the key challenges posed by EOAs:
+          In a recent blog post about native account abstraction, we dived into the key challenges posed by EOAs:
 
 
           * A subpar blockchain user experience.
