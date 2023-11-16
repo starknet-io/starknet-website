@@ -102,6 +102,10 @@ blocks:
           custom_external_link: https://twitter.com/StarkNetAfrica
       - link:
           hasIcon: true
+          custom_title: Starknet Astro
+          custom_external_link: https://twitter.com/StarkNetAstroCN
+      - link:
+          hasIcon: true
           custom_title: Starknet China
           custom_external_link: https://twitter.com/StarkNet_ZH
       - link:
