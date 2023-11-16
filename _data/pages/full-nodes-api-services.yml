@@ -31,6 +31,26 @@ blocks:
         image: /assets/logo_papyrus_80x80.png
     randomize: true
   - type: card_list
+    randomize: true
+    title: Open endpoints
+    card_list_items:
+      - title: Blast API
+        website_url: https://blastapi.io/public-api/starknet
+        image: /assets/5olekvre_400x400.jpg
+        twitter: https://twitter.com/BlastAPI
+        description: High availability Starknet Public API designed for developers.
+      - website_url: http://starknetrpc.nethermind.io/
+        title: Nethermind
+        description: Nethermind's Starknet RPC service, now with open endpoints.
+        image: /assets/nethermind_icon_1600_black-1-.png
+        twitter: https://twitter.com/NethermindEth
+      - title: Lava Protocol
+        image: /assets/lava_network-symbol.jpg
+        website_url: https://www.lavanet.xyz/get-started/starknet
+        twitter: https://twitter.com/lavanetxyz
+        description: An open Starknet RPC endpoint, backed by a distributed network of
+          node providers.
+  - type: card_list
     title: API services
     card_list_items:
       - link_url: https://www.infura.io/networks/ethereum/starknet
@@ -53,17 +73,24 @@ blocks:
         title: Lava Protocol
         description: Lava is an open-source protocol for reliable access to RPC data
         image: /assets/logo_lava_80x80.png
+        type_list: []
+        twitter: https://twitter.com/lavanetxyz
       - title: Blast API
-        description: API service for Starknet
+        description: BLAST is a premium blockchain API platform providing
+          top-of-industry performance and reliability.
         link_url: https://blastapi.io/public-api/starknet
         image: /assets/5olekvre_400x400.jpg
-        website_url: https://blastapi.io/public-api/starknet
+        website_url: https://blastapi.io/
+        type: ""
+        type_list: []
+        twitter: https://twitter.com/BlastAPI
       - title: Nethermind
         description: Nethermind provides fast and reliable Starknet RPC service built
           for developers.
         image: /assets/nethermind_icon_1600_black-1-.png
         website_url: http://starknetrpc.nethermind.io/
         link_url: http://starknetrpc.nethermind.io/
+        twitter: https://twitter.com/NethermindEth
       - description: Chainbase is an open Web3 data infrastructure for accessing,
           organizing, and analyzing on-chain data at scale.
         title: Chainbase

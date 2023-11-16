@@ -32,10 +32,13 @@ interface KeyValuePairs {
 const stages: KeyValuePairs = {
   "building-now": "Building now",
   "building-next": "Building next",
-  "backlog": "Backlog",
+  "backlog": "Details are WIP",
 };
 
 export type RoadmapPostProps = {
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  };
   roadmapPost: RoadmapPostType;
   roadmapVersion?: RoadmapVersion;
   locale: string;
@@ -43,6 +46,7 @@ export type RoadmapPostProps = {
 }
 
 export default function RoadmapPost({
+  env,
   roadmapPost,
   locale,
   roadmapVersion,
@@ -140,7 +144,7 @@ export default function RoadmapPost({
           <Spacer height="32px" />
           <Divider mb="6" />
           <MarkdownBlock body={psCopy as string} />
-          <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+          <RoadmapSubscribeForm env={env} isOpen={isOpen} setIsOpen={setIsOpen} />
           <Divider mt="6" />
         </Container>
       }

@@ -1,0 +1,185 @@
+id: 336f1214-7e74-496c-bcb0-95fa7ade757f
+post_type: article
+title: Building Complex, Fully Onchain Games with Starknet
+toc: true
+published_date: 2023-11-07T06:43:49.732Z
+image: /assets/on-chain-gaming-realms-influence-c.jpg
+category: engineering
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - account-abstraction
+short_desc: >
+  Building fully onchain games and shaping the future of Web 3, using Starknet's
+  special features. dive into the complex worlds of Loot Survivor and
+  Influence. 
+seoFocusKeywords:
+  - Onchain games
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ## TL;DR
+
+
+          * Starknet enables complex innovative, fully onchain gaming
+
+          * Two games are nearing release: Loot Survivor and Influence
+
+          * Both games use features unique to Starknet, such as arcade accounts, optimistic client-side rendering, and autonomous worlds, to enable the first generation of truly onchain games
+
+          * Starknet powers the future of fully onchain, complex, gaming
+
+
+          In an [earlier post](https://medium.com/starkware/let-the-games-begin-redefining-on-chain-gaming-with-starknet-1e6e6d6c37fa) on the status of onchain gaming with Starknet, we introduced some of the most innovative gaming projects being developed on the Ethereum L2 Starknet—[Realms: Eternum](https://medium.com/starkware/let-the-games-begin-redefining-on-chain-gaming-with-starknet-1e6e6d6c37fa), [Loot Survivor](https://loot-survivor.vercel.app/), and [Influence](https://www.influenceth.io/). We also discussed Cairo—the STARK-proof-based, Rust-inspired language for writing smart contracts on Starknet—and how it powers these first truly onchain games. 
+
+
+          In this article, we’ll give you updates from the developers behind Loot Survivor and Influence ahead of their first releases. We’ll look at the features they’ve built, and how the developers used the technical advances of Starknet to build decentralized, onchain games that would be nearly impossible to create on any other platform.
+
+
+          ## Loot Survivor
+
+
+          [Loot Survivor](https://loot-survivor.vercel.app/) is a pay-per-session strategy game where the player is granted a single life per session. In that session they are tasked with finding and improving weapons, fighting beasts, and earning rewards. Players interact with over 70 beasts, 60 obstacles, and dozens of weapons. 
+
+
+          The benefit of this single life is that if the player's hero dies, the player can easily start a new in-game session without having lost some large NFT investment. ![](https://lh7-us.googleusercontent.com/FIZ7Aw0QpvgR6HW7uxQ389htKd8V2_ezRj9DqOaJvA3p-GAp6n7pFoGkWhz2PKcXqElpHyM_gxhzUDB8jF7q-ViPsolASYDtW_lH9LETzDYCC7mIudf9c0QRMkBfo0sh1FALRPD_xmhhWefop3wOI9Y)
+
+
+          To start a game, players can either connect their Argent or Braavos wallet, or log in with their email address. The ability to log in with just an email address  (powered by Argent) also seamlessly generates a wallet behind the scenes. 
+
+
+          While outwardly straightforward, this example of easy accessibility in web3 games has been missing since web3’s inception,was desperately needed, and is made possible by account abstraction on Starknet
+
+
+          Once logged in, the player chooses a single weapon, and the game journey begins. 
+
+
+          Behind the intricate plot and many possibilities of the game lies a complex game architecture. Let’s explore what new ideas and concepts the team behind Loot Survivor used to create this first truly autonomous onchain game. 
+
+
+          ### Arcade Accounts
+
+
+          When the player begins the game, they are prompted to create an arcade account for the session, similar to a "burner" account. Crating this “use-and-throw” account is possible thanks to [Cairo](https://www.cairo-lang.org/) language special feature of Account abstraction (discussed in detail [here](https://medium.com/starknet-edu/account-abstraction-on-starknet-part-i-2ff84c6a3c30)).
+
+
+          The advantage of having arcade accounts is that certain types of transactions can be sent onchain without asking the user for a signature every time an action is taken. While pressing "Sign" and "Send" on the wallet whenever an action occurs is an important security measure, it’s highly impractical in gaming, where players execute many actions per session. On Starknet, bypassing the repeated signature step offers added convenience rather than posing a security risk.
+
+
+          ### Optimistic Client Rendering
+
+
+          Another major issue with onchain gaming is that once a user sends a transaction, they have to wait for the transaction to be accepted on the network before proceeding. This can slow down the game and make it unusable. But due to the previously mentioned in-game optionality, this step can now be skipped, creating a much better user experience. 
+
+
+          This is exactly what Loot Survivor achieves by implementing optimistic updates on the client side. When a user completes an action, the transaction is simulated on a local client implementation, and if the transaction does not fail, the game optimistically goes on. 
+
+
+          ### Single Storage Contracts
+
+
+          The Loot Survivor game is a nascent example of a completely onchain game—no part of the game state is stored off-chain. In Loot Survivor, a complete player-related state (such as health, XP, weapons, and attachments) is stored in a 252-bit Cairo [felt](https://book.starknet.io/chapter_9/felts.html). Any action, or set of actions, that change the player state results in a single storage update—meaning multiple state changes, too, are aggregated into a single storage update. Since the [number of unique storage updates](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/fee-mechanism/) determines the transaction fee, associated gas fees of in-game actions are drastically reduced. 
+
+
+          ### Entropy-Based Bot Resilience
+
+
+          Onchain games often have financial incentives for players to win rewards (in most cases, tokens). But this existence of financial incentives also encourages users to exploit the system. To counteract this, Loot Survivor uses global game entropy in conjunction with the player's unique entropy to decide the game's plot. 
+
+
+          Global entropy is a variable that anyone can adjust by invoking the external public function called rotate_game_entropy(). It's assumed that the community around the game will run bots that periodically call the rotate_game_entropy()function to constantly change the variable and ensure no one can use knowledge of the variable to cheat the system.
+
+
+          Additionally, every adventurer is given a distinct entropy when starting a game. This guarantees diverse outcomes for players despite a common game entropy. Whenever an action is taken, the global entropy is combined with the player entropy to generate a distinctive outcome every time the game is played. 
+
+
+          ![](https://lh7-us.googleusercontent.com/2mi34D8L4C-vRnWid7Zo2kUDnoIhghx05asYpyjApbjgaKm2d64MyW1yaOUJ_D13N_-drTh7lLuIgex8NIErT1O8dtcRNXY5zDcfn4tQHyaJLjJ8pJ_CDLEUHyZuWwGlrQ98P72GEMF1321X7DHl-mk)
+
+
+          Loot Survivor is available on testnet and is [ready to be played](https://goerli-survivor.realms.world/). Beyond just the opportunity to be among the early testers for one of the inaugural fully onchain games—you can earn tokens! A percentage of the tokens inserted into the Loot Survivor arcade machine are distributed to the top three scorers on the global leaderboard as a reward.
+
+
+          ## Influence
+
+
+          Influence is a player-driven, massive multiplayer online (MMO), space-strategy game. Its plot revolves around space colonization of an uninhabited star system many years into the future, after humans have been forced to flee Earth. 
+
+
+          The game has three stages: Exploitation, Discovery, and Conflict. The [latest game update](https://influenceth.substack.com/p/flight-path-to-game-launch?utm_source=profile&utm_medium=reader2), Limited Mainnet Release, allows players to explore the vast space of asteroids that will be made available in the first stage of the game—Exploitation. In the current release, players can bridge their assets from Ethereum mainnet to Starknet, name their asteroids, form a crew, and complete long-range asteroid scans (an in-game action which sets asteroid bonuses and rarity, and releases information about the asteroid, such as which resources are available, but not a detailed summary of the abundances and location of these resources). 
+
+
+          ![](https://lh7-us.googleusercontent.com/qt_yqz-srYqnfWT__toDycGFeFYQ9f8PlpSGym1EarxaclSJtiMhUjTswcepaoWqp3b7leRz9YVOz_Hi_MLMQ3j4s7mX0eP61Pfp7ZQR6CLVhjCMw23aIJhc-QaXkuS2xWeIAOFQujzAAd792jUai60)
+
+
+          The game is in testnet with a fully playable pre-release in the final stages of production. Cairo has been crucial in the development of the main [features](https://wiki.influenceth.io/en/docs/press-kit) that an onchain game such as Influence requires. 
+
+
+          ### Account Abstraction
+
+
+          The Influence team is working closely with Argent to deliver account abstraction benefits using session keys. Session keys enable temporary sessions that can be used to send transactions on behalf of the user without asking for a signature. These session keys allow only specific functions to be called on behalf of the user, enabling multiple transactions to be sent without asking the player repeatedly for permission. 
+
+
+          Below is an example code of how session keys are created:
+
+
+          ```
+
+          import { Signer, ec } from "starknet"
+
+
+          // gets signer with random private key you need to store if you want to reuse the session
+
+          const sessionSigner = new Signer()
+
+
+          const requestSession: RequestSession = {
+            key: await sessionSigner.getPublicKey(),
+            expires: Math.floor((Date.now() + 1000 * 60 * 60 * 24) / 1000), // 1 day in seconds
+            policies: [
+              {
+                contractAddress: "0x...",
+                selector: "doAction"
+              }
+            ]
+          }
+
+          ```
+
+
+          ([Source](https://docs.argent.xyz/starknet/session-keys-experimental-feature))
+
+
+          ### Action Log
+
+
+          Whenever players submit an action in the game, that action is immediately reflected in the action log of the game. This provides immediate feedback to players as they engage with the game and make decisions. Thus, players are shielded from the intricate details of blockchain technology, where a transaction can exist in various stages, such as sent, pending, confirmed on L2, or approved on L1. In the new age of onchain gaming, players don’t need to understand these technicalities of blockchain to enjoy the game. These details are abstracted away.
+
+
+          ![](https://lh7-us.googleusercontent.com/2gbYftMwFHGb5ZGv6vFTX6MzLrIFNIX7b8bfsYE5w22J1EffeAMsUYpzal9Fts7c-UHO3DM0P6mdes-anjcLOHeX0NEQEu15pe1fHznI_wDHDjpC3_UJ4F2ddigAujaBTgWlK2SCdSoKnQAWay2jrME)
+
+
+          The action log is in purple on the left. After the action is verified onchain, it will complete and give players a notification.
+
+
+          ### Autonomous Worlds
+
+
+          Both Influence and Loot Survivor are building games compatible with autonomous worlds. In an autonomous-worlds game, the code must be written so that even if the original developers behind the game stop releasing new features, it’s possible for anyone else to build on top of the game’s smart contracts. This means that multiple user interfaces can be available for the same game (and the same in-game assets/resources). 
+
+
+          To incentivize teams to develop front-end interfaces of their own, the developers of these games generally include some incentive for the interface developer to build on top of existing smart contracts. For example, a specific percentage of in-game SWAY tokens (or LORDS in the case of Loot Survivor) are transferred to a wallet specified by the UI developer, thus funding their research and development.
+
+
+          ## The Frontier of Onchain Gaming
+
+
+          The frontier of onchain gaming is vast and unexplored. Teams like Influence and Realms are on the edge, constantly iterating over new paradigms to create truly eternal onchain games and autonomous worlds. Starknet and Cairo have emerged as the key tools in shaping this gaming future.
+
+
+          Feel free to play [Influence](https://www.influenceth.io/) or [Realms](https://www.realm.art/) today.\
+
+          \
+
+          If you're interested in building your gaming dApp on Starknet, check out our Starknet Book (link to <https://book.starknet.io/>)

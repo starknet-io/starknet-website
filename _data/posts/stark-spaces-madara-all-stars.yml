@@ -1,0 +1,60 @@
+id: 9e42ce58-ea7b-4d13-9fb6-b737ab1ecd7e
+post_type: video
+title: STARK SPACES | Madara all-stars
+published_date: 2023-10-25T12:00:55.810Z
+video:
+  url: https://youtu.be/dVjQj5DVl-c
+  id: dVjQj5DVl-c
+  data:
+    kind: youtube#video
+    etag: UFJ-KCUiXWA0jItzJLQiSS5gwtg
+    id: dVjQj5DVl-c
+    snippet:
+      publishedAt: 2023-10-30T16:29:27Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | Madara all stars
+      description: Hear from the superstars of Madara about what they are building and
+        what's in store for this epic community project.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/dVjQj5DVl-c/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/dVjQj5DVl-c/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/dVjQj5DVl-c/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/dVjQj5DVl-c/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/dVjQj5DVl-c/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | Madara all stars
+        description: Hear from the superstars of Madara about what they are building and
+          what's in store for this epic community project.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT58M51S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/stark-spaces-full-nodes-on-starknet.png
+category: ecosystem
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: Hear from the superstars of Madara about what they are building and
+  what's in store for this epic community project.

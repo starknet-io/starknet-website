@@ -41,6 +41,11 @@ blocks:
         website_url: https://owlto.finance/bridge
         twitter: https://twitter.com/Owlto_Finance
         image: /assets/owlto-finance-logo.jpeg
+      - description: Lightning-fast secure bridge for seamless cross-chain transactions.
+        title: rhino.fi
+        image: /assets/rhino.fi-logo.png
+        website_url: http://rhino.fi/
+        twitter: https://twitter.com/rhinofi
     randomize: true
   - type: card_list
     title: What are fiat on-ramps?

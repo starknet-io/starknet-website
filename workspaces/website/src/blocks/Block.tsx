@@ -18,6 +18,7 @@ import { getHomeSEO } from "@starknet-io/cms-data/src/seo";
 import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
 import { HeadingContainer } from "./HeadingContainer";
+import VideoSectionBlock from "./VideoSectionBlock";
 
 interface Props {
   readonly block: TopLevelBlock;
@@ -155,6 +156,10 @@ export function Block({ block, locale }: Props): JSX.Element | null {
         }}
       />
     );
+  } else if (block.type === "video_section") {
+    return (
+      <VideoSectionBlock {...block} />
+    )
   } else {
     // this will report type error if there is unhandled block.type
     block satisfies never;

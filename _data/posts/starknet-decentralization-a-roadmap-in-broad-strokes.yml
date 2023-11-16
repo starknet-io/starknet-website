@@ -21,7 +21,7 @@ seoFocusKeywords:
 blocks:
   - type: markdown
     body: >-
-      ### **TL;DR**
+      ## **TL;DR**
 
 
       * StarkWare is progressing towards decentralization in two threads: planning and implementation.
@@ -29,7 +29,7 @@ blocks:
       * A clear roadmap lies ahead for the steps required to ensure the transition of the Starknet protocol to a decentralized proof-of-stake protocol.
 
 
-      ### **Intro**
+      ## **Intro**
 
 
       Starknet enjoys the security and decentralization provided by Ethereum by sending STARK proofs of its state transitions for verification on the Ethereum blockchain. This flow places substantial limits on the power of otherwise centralized entities building and maintaining Starknet, such as StarkWare and the Starknet Foundation: no centralized entity on the network can forge transaction messages that would misstate or otherwise fraudulently manipulate user data or assets. 
@@ -38,7 +38,7 @@ blocks:
       This is the first and most critical step in ensuring that Starknet is trust-minimized, and that users of Starknet are not reliant on the honesty of any centralized party when they use the network. However, more must be done to ensure full trust-minimization and decentralization, so that even if entities like the Foundation or StarkWare were to disappear, the network would continue to function as designed and without interruption. This post outlines a tentative roadmap for those next steps.
 
 
-      ### **How We Got Here**
+      ## **How We Got Here**
 
 
       Just under a year ago, we began documenting our decentralization research process in [a long series of blog posts](https://community.starknet.io/t/starknet-decentralized-protocol-i-introduction/2671) which culminated in a [simple concrete proposal](https://community.starknet.io/t/simple-decentralized-protocol-proposal/99693). 
@@ -55,7 +55,7 @@ blocks:
       In this post we will focus on the latter.
 
 
-      ### **The Transition Process**
+      ## **The Transition Process**
 
 
       In a nutshell, the transition process itself has four main threads:
@@ -73,7 +73,7 @@ blocks:
       The numbering represents some obvious sequential dependencies, but a lot of concurrent work is possible. Below we slightly expand with a paragraph for each thread.
 
 
-      ### **Decentralized Network Architecture** 
+      ## **Decentralized Network Architecture** 
 
 
       The Starknet network will move to a more decentralized model: 
@@ -90,7 +90,7 @@ blocks:
       First, the Sequencer will sign its blocks to alleviate some trust assumptions and prepare for a vote-based BFT protocol with many voters. Second, data propagation will take on a more distributed flavor, with nodes helping each other to sync on the state and complete their local view.
 
 
-      ### **Working Towards a Fully Open-Sourced Software Stack**
+      ## **Working Towards a Fully Open-Sourced Software Stack**
 
 
       **Open-Source Software Stack:** Ensuring availability of an open-source software stack is critical to enable everyone to participate in the various aspects of the protocol and the network. As more components are implemented, both by StarkWare and by other contributors, they will be released for everyone to test, criticize, and get comfortable with. Some notable examples (of already open sourced parts of the stack) are full nodes (Pathfinder, Juno, Deoxys), Provers (Stone, Sandstorm), Sequencers (Blockifier, Madara), and Block Explorers (Starkscan, Voyager, ViewBlock, Stark Compass) 
@@ -102,7 +102,7 @@ blocks:
       **Staker onboarding:** We must give time for the L1 staking contract to accumulate sufficient staked tokens to secure the decentralized protocol with real economic weight. This is to avoid a scenario where a small number of participants with little actual skin in the game maliciously attempt to take control of Starknet.
 
 
-      ### **Conclusion**
+      ## **Conclusion**
 
 
       In summary, we have given here a rough overview of the tentative roadmap to decentralizing Starknet. As with any engineering plan, certainly one of this complexity, it is likely to evolve and change over time as our community of contributing builders develops better insights and understanding.

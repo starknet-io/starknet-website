@@ -1,0 +1,15 @@
+type: conference
+name: "Nethermind Summit "
+description: "Nethermind Summit Istanbul is a 1-day builder event for a global
+  community of developers, engineers, and researchers. The day will feature
+  technical explorations around the cornerstones of blockchain: Security,
+  Decentralization, and Scalability."
+url: https://lu.ma/nethermind-summit-istanbul
+start_date: 2023-11-15T07:00:00.524Z
+month: November 2023
+end_date: 2023-11-15T17:00:00.530Z
+show_in_past_events: false
+image: /assets/ntm.png
+location: asia
+city: Istanbul
+country: Turkey
