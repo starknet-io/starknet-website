@@ -15,7 +15,7 @@ export const roadmapStagesFields = [
     icon: BiBullseye
   },
   {
-    label: "Backlog",
+    label: "Details are WIP",
     value: "backlog",
     icon: AiOutlineAppstore
   },

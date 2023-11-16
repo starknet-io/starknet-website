@@ -11,9 +11,13 @@ type RoadmapLayoutProps = {
   mode: "ROADMAP" | "ANNOUNCEMENTS";
   locale: string;
   roadmapSettings?: Roadmap;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
 };
 export default function RoadmapLayout({
   children,
+  env,
   mode,
   locale,
   roadmapSettings
@@ -31,7 +35,7 @@ export default function RoadmapLayout({
               {...roadmapSettings?.show_hero_cta && { buttonText: roadmapSettings?.hero_cta_copy} }
               onButtonClick={() => setIsOpen(true)}
             />}
-            <RoadmapSubscribeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+            <RoadmapSubscribeForm env={env} isOpen={isOpen} setIsOpen={setIsOpen} />
             <Box my="56px"></Box>
             {/* <Flex
               as="ul"

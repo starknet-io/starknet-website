@@ -4064,6 +4064,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@marsidev/react-turnstile@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "@marsidev/react-turnstile@npm:0.3.2"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 2c192fa9dfb0f78d007293944de098865366b85ddbf80b19659dae565e54778a880721d325748b2f4a08985b1a66f9b9325e09ff4c05364c676246363abeb559
+  languageName: node
+  linkType: hard
+
 "@mdx-js/react@npm:^2.1.5":
   version: 2.3.0
   resolution: "@mdx-js/react@npm:2.3.0"
@@ -4771,6 +4781,7 @@ __metadata:
     "@fontsource/tajawal": ^4.5.9
     "@headlessui/react": ^1.7.14
     "@heroicons/react": ^2.0.17
+    "@marsidev/react-turnstile": ^0.3.2
     "@starknet-io/cms-data": "workspace:*"
     "@starknet-io/cms-utils": "workspace:*"
     "@types/cors": ^2.8.13

@@ -1,9 +1,19 @@
 import remarkParse from "remark-parse";
 import { unified } from "unified";
 import { Index } from "unist-util-index";
-
 import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 import { HeadingData } from "./TableOfContents";
+
+/**
+ * `Node`type.
+ */
+
+type Node = {
+  children: Node[];
+  depth: number;
+  type: string;
+  value: string;
+} 
 
 export function blocksToTOC(blocks: readonly TopLevelBlock[] = [], level: number, tableOfContents: HeadingData[] = []): readonly HeadingData[] {
   blocks.forEach((block) => {
@@ -50,18 +60,21 @@ export function blocksToTOC(blocks: readonly TopLevelBlock[] = [], level: number
         .use(() => {
           return (tree: any) => {
             const typeIndex = new Index("type", tree);
-            const headings = typeIndex.get("heading");
-
-            const headingItems: HeadingData[] = headings.map((node: any) => {
-              const textNode = node.children.find((n: any) => {
-                return n.type === "text";
+            const headings = typeIndex.get("heading") as Node[];
+            const headingItems = headings.map(node => {
+              const textNode = node?.children?.find(child => {
+                return (child.type === "text" || child.type === "strong") && node.depth < 4;
               });
 
+              if (!textNode) {
+                return null;
+              }
+
               return {
-                title: textNode?.value ?? "",
-                level
+                title: textNode?.value ?? textNode?.children[0].value ?? "",
+                level: node.depth - 1
               };
-            });
+            }).filter(heading => !!heading) as HeadingData[];
 
             tableOfContents.push(...headingItems);
           };

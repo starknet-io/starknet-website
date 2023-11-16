@@ -64,6 +64,7 @@ jobs:
           VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
           VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
           VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          VITE_CLOUDFLARE_RECAPTCHA_KEY: ${{ secrets.CLOUDFLARE_RECAPTCHA_KEY }}
           VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
           VITE_ED_VIDEO_ID_1: ${{ secrets.VITE_ED_VIDEO_ID_1 }}
           VITE_ED_VIDEO_ID_2: ${{ secrets.VITE_ED_VIDEO_ID_2 }}

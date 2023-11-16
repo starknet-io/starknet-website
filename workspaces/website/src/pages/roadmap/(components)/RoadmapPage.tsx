@@ -11,8 +11,12 @@ export type RoadmapPageProps = {
   roadmapVersions: readonly RoadmapVersion[];
   roadmapSettings: Roadmap;
   locale: string;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
 };
 export default function RoadmapPage({
+  env,
   roadmapPosts,
   roadmapVersions,
   roadmapSettings,
@@ -39,7 +43,7 @@ export default function RoadmapPage({
   }, [roadmapPosts]);
 
   return (
-    <RoadmapLayout locale={locale} mode="ROADMAP" roadmapSettings={roadmapSettings}>
+    <RoadmapLayout env={env} locale={locale} mode="ROADMAP" roadmapSettings={roadmapSettings}>
       {roadmapStagesFields.map((stage) => {
         const stagePosts = roadmapPostsByStage[stage.value] || [];
 

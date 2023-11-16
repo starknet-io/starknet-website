@@ -17,6 +17,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   console.log('roadmapVersions', roadmapVersions)
 
   const pageProps: RoadmapPostProps = {
+      env: {
+        CLOUDFLARE_RECAPTCHA_KEY: import.meta.env.VITE_CLOUDFLARE_RECAPTCHA_KEY,
+      },
       roadmapPost,
       roadmapVersion: roadmapVersions.find(r => r.version === roadmapPost.version)!,
       locale,
