@@ -336,7 +336,7 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
   padding: 1rem 0;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 600px) {
   .aa-DetachedSearchButton:focus {
     box-shadow: none;
     outline: none;
@@ -346,3 +346,16 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
     background-color: transparent;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .aa-DetachedSearchButton {
+    min-width: 40px;
+    width: 40px;
+  }
+  .aa-DetachedSearchButtonPlaceholder{
+    display: none;
+  }
+  .aa-DetachedSearchButton svg {
+    color: var(--chakra-colors-darkMode-card);
+  }
+}
+

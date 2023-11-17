@@ -47,8 +47,8 @@ export const NavLayout = (props: NavLayoutProps) => {
           <a href={`/${locale}/`}>
             <StarknetLogo />
           </a>
-          <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
+          <Box display={{ base: "none", lg: "block" }} pl={{ xl: "34px" }}>
+              <ButtonGroup variant="link" spacing={{ xl: "18px" }}>
                 {props.items}
               </ButtonGroup>
           </Box>
@@ -87,7 +87,7 @@ export const NavLayout = (props: NavLayoutProps) => {
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
-              marginInlineStart="12px !important"
+              ml={{ xl: "12px !important" }}
             /></Box>
         </HStack>
       </HStack>

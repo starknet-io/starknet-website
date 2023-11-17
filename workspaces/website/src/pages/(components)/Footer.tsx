@@ -34,7 +34,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
           />
         }
         align="stretch"
-        gap={10}
+        gap={{base: 10, md: 0, xl: 10}}
         alignItems="flex-start"
         justifyContent="flex-start"
         direction={{ base: "column", md: "row" }}
