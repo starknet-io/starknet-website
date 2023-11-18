@@ -346,3 +346,13 @@ body.chakra-ui-dark .aa-Item[aria-selected=true] svg{
     background-color: transparent;
   }
 }
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .aa-DetachedSearchButton {
+    min-width: 40px;
+    width: 40px;
+  }
+  .aa-DetachedSearchButtonPlaceholder{
+    display: none;
+  }
+}
+
