@@ -178,3 +178,11 @@ blocks:
           custom_title: Mirror - Starknet Astro
         subLabel:
           label: "Chinese collection of Starknet articles, translated by Starknet Astro. "
+  - type: link_list
+    randomize: false
+    heading: Community Youtube Channels
+    blocks:
+      - link:
+          hasIcon: true
+          custom_external_link: https://www.youtube.com/channel/UC-QwzE3vJFdMvgbo4eUzYQg
+          custom_title: "Starknet Astro "
