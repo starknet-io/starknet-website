@@ -2,6 +2,8 @@ id: fcc18a40-7261-45dc-b1a3-fcd23c642e39
 post_type: video
 title: "From Zero to Onchain Hero: Building Complex Games on Starknet"
 published_date: 2023-11-15T14:15:16.301Z
+video:
+  url: https://youtu.be/VQM5puaKcRA
 image: /assets/stark-spaces-gaming-on-starknet-premiere.jpg
 category: ecosystem
 topic:
