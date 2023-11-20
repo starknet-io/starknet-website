@@ -25,6 +25,7 @@ export const SectionHeader = ({
       <Stack spacing="3" pb={6}>
         <Box>
           <Heading
+            as="h1"
             variant="h2"
             color="heading-navy-fg"
             fontWeight="extrabold"
