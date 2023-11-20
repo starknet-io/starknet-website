@@ -259,6 +259,7 @@ export const HeroImage = ({
                   </Box>
 
                   <Heading
+                    as="h1"
                     color="heading-navy-fg"
                     variant="h2"
                     size={useBreakpointValue({ base: "md", md: "lg" })}
