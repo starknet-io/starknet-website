@@ -74,6 +74,7 @@ export default function CMSPage({
             {data.show_title ? <>
               <Box pb="6">
                 <Heading
+                  as="h1"
                   variant="h2"
                   color="heading-navy-fg"
                   fontWeight="extrabold"
