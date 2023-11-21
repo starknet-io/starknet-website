@@ -74,7 +74,7 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability",
       widget: "select",
       options: [
-        "No time yet",
+        "TBD",
         "Q2 2023",
         "Q3 2023",
         "Q4 2023",
