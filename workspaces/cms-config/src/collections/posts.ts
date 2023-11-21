@@ -83,6 +83,11 @@ export const postsCollectionConfig = {
       default: "article",
     },
     {
+      name: "isFeatured",
+      label: "Is featured post",
+      widget: "boolean",
+    },
+    {
       name: "title",
       label: "Post Title",
       widget: "string",
@@ -113,10 +118,11 @@ export const postsCollectionConfig = {
       name: "category",
       label: "Category",
       widget: "relation",
+      multiple: true,
       collection: "categories",
       search_fields: ["name"],
       value_field: "id",
-      display_fields: ["name"],
+      display_fields:(["name", "({{parentCategory}})"]),
     },
     {
       name: "topic",
@@ -130,7 +136,12 @@ export const postsCollectionConfig = {
     },
     {
       name: "short_desc",
-      label: "Short Description",
+      label: "Seo Description",
+      widget: "text",
+    },
+    {
+      name: "post_desc",
+      label: "Post Description",
       widget: "text",
     },
     {

@@ -26,6 +26,7 @@ export interface Post extends Meta {
   readonly category: string;
   readonly topic: string[];
   readonly short_desc: string;
+  readonly post_desc: string;
   readonly post_type: string;
   readonly post_date: string;
   readonly published_date: string;
@@ -137,6 +138,7 @@ export async function fileToPost(
     video: data.video,
     topic: data.topic ?? [],
     short_desc: data.short_desc,
+    post_desc: data.post_desc,
     image: data.image,
     blocks: data.blocks ?? [],
     locale,
@@ -450,6 +452,7 @@ export async function getSimpleData<T = {}>(
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
   const filenames = await scandir(`_data/${resourceName}`);
+  const slugsInUse = new Set<string>();
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -457,8 +460,21 @@ export async function getSimpleData<T = {}>(
       const sourceData = await yaml(sourceFilepath);
       const data = await translateFile(locale, resourceName, filename);
       const defaultLocaleTitle = sourceData.title ?? sourceData.name;
+      let slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
 
-      const slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
+      if (slugsInUse.has(slug ?? '')) {
+        let number = 1;
+
+        while (slugsInUse.has(`${slug}-${number}`)) {
+          number++;
+        }
+
+        slug = `${slug}-${number}`;
+      }
+  
+      if (slug) {
+        slugsInUse.add(slug);
+      }
 
       const dates: { [key: string]: number } = {};
 

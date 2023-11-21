@@ -65,6 +65,69 @@ const outline = defineStyle({
   }
 });
 
+const outlineFull = defineStyle({
+  borderRadius: 4,
+  fontWeight: "medium",
+  fontSize: "16px",
+  color: "btn-primary-bgg",
+  borderColor: "btn-primary-bg",
+  borderWidth: "1px",
+  bg: "bg-default",
+  minWidth: "none",
+  lineHeight: "24px",
+  height: "auto",
+  padding: "12px 40px",
+  _hover: {
+    color: "btn-outline-hover-fg",
+    borderColor: "grey.morning",
+    _dark: {
+      color: "selected.100"
+    },
+  },
+  _active: {
+    bg: "bg.200",
+    color: "grey.greyDusk",
+    borderColor: "grey.morning",
+    borderWidth: "1px",
+    boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+    outlineWidth: 1,
+    _focus: {
+      bg: "bg.200",
+      color: "grey.greyDusk",
+      borderColor: "grey.morning",
+      borderWidth: "1px",
+      boxShadow: "inset 0px 4px 0px rgba(0, 0, 0, 0.1)",
+      outlineWidth: 1
+    },
+    _dark: {
+      bg: "black",
+      color: "grey.greyDusk",
+      borderColor: "grey.greyDusk",
+      outlineWidth: 1,
+      _focus: {
+        bg: "black",
+        color: "grey.greyDusk",
+        borderColor: "grey.greyDusk",
+        outlineWidth: 1
+      }
+    }
+  },
+  _focus: {
+    boxShadow: "none",
+    borderColor: "selected.main",
+    _dark: {
+      boxShadow: "none",
+      borderColor: "selected.100",
+      borderWidth: "1px",
+      borderStyle: "solid"
+    }
+  },
+  _dark: {
+    border: "1px solid grey.greyDusk",
+    color: "white"
+  }
+});
+
 const outlineLight = defineStyle({
   borderRadius: 4,
   fontWeight: "medium",
@@ -577,6 +640,67 @@ const category = defineStyle({
   },
 });
 
+const categoryVertical = defineStyle({
+  cursor: "pointer",
+  borderRadius: 0,
+  fontWeight: "medium",
+  fontSize: "14px",
+  lineHeight: "14px",
+  padding: "26px 12px",
+  color: "tabs-fg",
+  borderLeftWidth: "1px",
+  borderColor: "tabs-border-bg",
+
+  bg: "tabs-bg",
+  _hover: {
+    bg: "tabs-bg",
+    color: "tabs-hover-fg",
+  },
+  _active: {
+    bg: "tabs-bg",
+    color: "tabs-fg-active",
+    borderColor: "tabs-border-active-bg",
+  },
+});
+
+
+const smallFilter = defineStyle({
+  borderRadius: '8px',
+  fontWeight: "500",
+  fontSize: "12px",
+  lineHeight: "12px",
+  padding: "10px 12px",
+  color: "btn-filter-fg",
+  bg: "btn-filter-bg",
+  _hover: {
+    bg: "btn-filter-hover-bg",
+    color: "btn-filter-hover-fg",
+  },
+  _active: {
+    bg: "btn-filter-active-bg",
+    color: "btn-filter-active-fg",
+  },
+});
+
+const smallFilterActive = defineStyle({
+  borderRadius: '8px',
+  fontWeight: "medium",
+  fontSize: "12px",
+  lineHeight: "12px",
+  padding: "10px 12px",
+  bg: "btn-primary-bg",
+  color: "btn-filter-active-fg",
+  opacity: 0.72,
+  _hover: {
+    bg: "btn-filter-active-hover-bg",
+    color: "btn-filter-active-hover-fg",
+  },
+  _dark: {
+    opacity: 1,
+    bg: '#70AAFF'
+  }
+});
+
 const icon = defineStyle({
   height: "auto",
   padding: "11px",
@@ -641,6 +765,7 @@ const icon = defineStyle({
 export const buttonTheme = defineStyleConfig({
   variants: {
     outline,
+    outlineFull,
     outlineLight,
     outlineRounded,
     secondaryHero,
@@ -649,7 +774,10 @@ export const buttonTheme = defineStyleConfig({
     ghost,
     filter,
     filterActive,
+    smallFilter,
+    smallFilterActive,
     category,
+    categoryVertical,
     switch: switchButton,
     icon
   },
