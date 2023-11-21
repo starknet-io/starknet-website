@@ -26,7 +26,7 @@ blocks:
       - link:
           hasIcon: true
           custom_title: Starknet Brand Book
-          custom_internal_link: public/assets/starknet-community-brand-book-2023.pdf
+          custom_internal_link: /assets/starknet-community-brand-book-2023.pdf
   - type: markdown
     body: |-
       ## Cairo logo kit
