@@ -4799,7 +4799,7 @@ __metadata:
     date-fns: ^2.30.0
     eslint: ^8.39.0
     eslint-plugin-storybook: ^0.6.11
-    framer-motion: ^10.12.4
+    framer-motion: ^10.16.16
     fsevents: ^2.3.2
     highlight.js: ^11.8.0
     highlightjs-cairo: ^0.2.0
@@ -10305,9 +10305,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^10.12.4":
-  version: 10.12.8
-  resolution: "framer-motion@npm:10.12.8"
+"framer-motion@npm:^10.16.16":
+  version: 10.16.16
+  resolution: "framer-motion@npm:10.16.16"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     tslib: ^2.4.0
@@ -10322,7 +10322,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 2e21e06eed99967e816c27101cc4d438048d9c7c36d318acfdb4f3d14eee593b022696303a9416032caf735f6817cdc6b287a7ed004b21d07f67c7cbe534edfe
+  checksum: 992d755faab7171aecd4b548ea4c3baf6a9172b9348a98033e594a46a9f3f90c6f5854898d48884c3ecf7db4fc2ae3f05e27e125b4c5b397e836d765265577c1
   languageName: node
   linkType: hard
 

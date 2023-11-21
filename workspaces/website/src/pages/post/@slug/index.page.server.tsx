@@ -1,9 +1,17 @@
+/**
+ * Module dependencies
+ */
+
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getPostBySlug } from "@starknet-io/cms-data/src/posts";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { DocumentProps, PageContextServer } from "src/renderer/types";
-import { Props } from "src/pages/posts/PostPage";
+import { Props } from "src/pages/post/PostPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+
+/**
+ * Export `onBeforeRender` function.
+ */
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -19,6 +27,12 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     post ,
     categories: await getCategories(locale, pageContext.context),
     topics: await getTopics(locale, pageContext.context),
+    env: {
+      ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
+      ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
+      ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
+      SITE_URL: import.meta.env.VITE_SITE_URL,
+    },
     params: {
       locale,
       slug: pageContext.routeParams!.slug!,
