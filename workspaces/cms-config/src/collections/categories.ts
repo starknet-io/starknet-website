@@ -25,6 +25,16 @@ export const categoriesCollectionConfig = {
       crowdin: true
     },
     {
+      name: 'parentCategory',
+      label: 'Parent category',
+      widget: 'relation',
+      collection: 'categories',
+      search_fields: ['name'],
+      value_field: 'id',
+      display_fields: ['name'],
+      options_length: 300
+    },
+    {
       name: "show_custom_featured_post",
       label: "Show custom featured post",
       widget: "boolean",

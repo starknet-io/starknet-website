@@ -132,6 +132,31 @@ export const settingsCollectionConfig = {
       ],
     },
     {
+      label: "Featured Sections",
+      name: "featured-sections",
+      file: `_data/settings/featured-sections.yml`,
+      crowdin: false,
+      fields: [
+        {
+          label: "Category sections",
+          name: "items",
+          widget: "list",
+          fields: [
+            {
+              name: 'category',
+              label: 'Category',
+              widget: 'relation',
+              collection: 'categories',
+              search_fields: ['name'],
+              value_field: 'id',
+              display_fields: ['name'],
+              options_length: 300
+            },
+          ],
+        },
+      ],
+    },
+    {
       label: "Wallets",
       name: "wallets",
       file: `_data/settings/wallets.yml`,

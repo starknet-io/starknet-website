@@ -5,8 +5,10 @@
 import { getCategories } from "@starknet-io/cms-data/src/categories";
 import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { PageContextServer } from "src/renderer/types";
-import { Props } from "src/pages/posts/PostsPage";
+import { Props } from "src/pages/posts/CategoryPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+import { normalizeCategories } from "src/utils/blog";
+import qs from "qs";
 
 /**
  * Export `onBeforeRender` function.
@@ -14,18 +16,25 @@ import { getDefaultPageContext } from "src/renderer/helpers";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
+  const query = qs.parse((pageContext as any)._urlPristine?.split("?")[1] ?? '');
   const { locale } = defaultPageContext;
   const { category: categorySlug } = pageContext.routeParams!;
   const categories = await getCategories(locale, pageContext.context);
   const category = categories.find((category) => category.slug === categorySlug);
 
   const pageProps: Props = {
-    categories,
+    categories: normalizeCategories(categories),
     topics: await getTopics(locale, pageContext.context),
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
       ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
       ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
+    },
+    query: {
+      postType: query.postType as string,
+      ...!!query.topicFilters && {
+        topicFilters: (Array.isArray(query.topicFilters) ? query.topicFilters : [query.topicFilters]) as string[],
+      }
     },
     params: {
       locale,
