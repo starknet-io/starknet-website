@@ -11,7 +11,7 @@ blocks:
     description: "Explore the wallets that allow you to interact with and build in
       the Starknet ecosystem. "
   - type: card_list
-    randomize: false
+    randomize: true
     card_list_items:
       - title: Argent X
         description: Earn, stake and trade with low fees, high speeds & strong security.
