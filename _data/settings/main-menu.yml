@@ -81,12 +81,12 @@ items:
   - title: Resources
     columns:
       - blocks:
-          - title: All blog posts
+          - title: Content
             items:
               - custom_internal_link: /posts/
                 custom_title: All blog posts
               - custom_title: Community & events
-                custom_internal_link: /posts/community-and-events
+                custom_internal_link: /posts/events-and-webinars
                 hide_from_footer: true
               - custom_title: Community calls
                 custom_internal_link: /posts/community-calls
@@ -107,7 +107,7 @@ items:
                 custom_internal_link: /posts/tutorials-and-guides
                 hide_from_footer: true
               - custom_title: STARK Struck Podcast
-                custom_internal_link: /posts/stark-struck
+                custom_internal_link: /posts/stark-struck-podcast
                 hide_from_footer: true
       - blocks:
           - title: OTHER
