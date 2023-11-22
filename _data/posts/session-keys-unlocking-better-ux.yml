@@ -56,7 +56,7 @@ blocks:
           In the DeFi realm, the current inconvenience of decentralized exchanges (DEXs) lies in the necessity to approve each transaction individually at various stages. However, with session keys, we can replicate the seamless experience of centralized exchanges (CEXs) without succumbing to their drawbacks. For instance, a user could create a session key valid for an hour, allowing trades of up to $7000 on a decentralized exchange without the need for individual confirmation of each transaction through their wallet. This not only simplifies the process but also contributes to a more user-friendly and efficient DeFi ecosystem. 
 
 
-          ![](https://starkware.co/wp-content/uploads/2023/11/Session-keys-2.png)
+          ![](/assets/sk.png)
 
 
           ### Gaming
