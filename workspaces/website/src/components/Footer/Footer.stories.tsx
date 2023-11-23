@@ -278,7 +278,7 @@ export const Solid = () => (
                           title: "BLOG & MEDIA",
                           items: [
                             {
-                              custom_title: "All blog posts",
+                              custom_title: "Content",
                               custom_internal_link: "/posts/",
                             },
                             {
