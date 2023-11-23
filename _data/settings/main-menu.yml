@@ -81,7 +81,7 @@ items:
   - title: Resources
     columns:
       - blocks:
-          - title: All blog posts
+          - title: All content
             items:
               - custom_internal_link: /posts/
                 custom_title: All blog posts
