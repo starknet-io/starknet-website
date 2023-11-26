@@ -66,13 +66,14 @@ blocks:
       - type: image_icon_link_card
         color: peach
         title: Starknet Basecamp
-        description: Sign up for the next basecamp and learn everything about Starknet -
-          from STARK mathematics to Cairo 1 smart contracts best practices.
+        description: Register for an upcoming Basecamp cohort or watch the previous
+          recordings, where you will learn everything about Starknet, Cairo, and
+          STARKs.
         icon: /assets/basecamp.svg
         link:
-          custom_title: Sign-up
+          custom_title: View
           custom_internal_link: ""
-          custom_external_link: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
+          custom_external_link: https://starknet.notion.site/Starknet-Basecamp-1541b3c1f49f439da872d3d71647d834?pvs=4
         withIllustration: true
       - type: image_icon_link_card
         color: cyan
