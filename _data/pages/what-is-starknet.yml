@@ -1,6 +1,7 @@
 id: 93b845d7-5662-4cd4-8c13-3730440880c0
 title: What is Starknet?
 template: content
+toc: false
 parent_page: /learn/
 breadcrumbs: false
 page_last_updated: true
@@ -9,16 +10,14 @@ blocks:
     title: "What is Starknet? "
   - type: markdown
     body: >-
-      ## I﻿ntroduction
-
-
-      Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
+      Starknet is a Validity Rollup Layer 2. It provides high throughput, low
+      gas costs, and retains Ethereum Layer 1 levels of security
 
 
       Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
   - type: video_section
     scaling-eth:
-      title: How Starknet Scales Ethereum
+      title: How Starknet Works
       description: Chapter 1 explains how Starknet works at a high level
       content: >-
         ### How Starknet Scales Ethereum
