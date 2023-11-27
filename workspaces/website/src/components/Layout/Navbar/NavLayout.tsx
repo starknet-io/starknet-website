@@ -70,17 +70,21 @@ export const NavLayout = (props: NavLayoutProps) => {
               />
             </Box>
 
-              <Box
-                w="1px"
-                bg="nav-footer-br"
-                h="30px"
-                position="relative"
-                marginInlineStart="12px !important"
-                display={{ base: "none", lg: "block" }}
-              />
-              <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
-               {props.languageSwitcher}
-              </Box>
+            {!!props.languageSwitcher && (
+              <>
+                <Box
+                  w="1px"
+                  bg="nav-footer-br"
+                  h="30px"
+                  position="relative"
+                  marginInlineStart="12px !important"
+                  display={{ base: "none", lg: "block" }}
+                />
+                <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
+                  {props.languageSwitcher}
+                </Box>
+              </>
+            )}
 
             <Box display={{ base: "block", lg: "none" }}><IconButton
               ref={menuButtonRef}
