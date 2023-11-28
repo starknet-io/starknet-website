@@ -160,6 +160,12 @@ export interface VideoSectionBlock {
   readonly 'eth-settlement': ChapterInfo;
 }
 
+export interface NewsletterBlock {
+  readonly type: "newsletter_popup";
+  readonly title: string;
+  readonly description: string;
+}
+
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type Block =
@@ -175,7 +181,8 @@ export type Block =
   | OrderedBlock
   | ListCardItemsBlock
   | AmbassadorsListBlock
-  | VideoSectionBlock;
+  | VideoSectionBlock
+  | NewsletterBlock;
 
 export interface Container {
   readonly type: "container";
