@@ -37,6 +37,7 @@ type Props = {
   | "pink"
   | "grey",
   orientation?: "left" | "right"
+  onClick?: () => void;
 };
 
 type titleVariantType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -54,11 +55,12 @@ export const ImageIconCard = ({
   withIllustration = false,
   variant = "image_icon_link_card",
   columns = 4,
-  orientation = "left"
+  orientation = "left",
+  onClick
 }: Props) => {
-  const { href = 'test', label } = getComputedLinkData(locale, link ?? {
-      custom_title: 'dsa',
-      custom_internal_link: 'asd'
+  const { href , label } = getComputedLinkData(locale, link ?? {
+      custom_title: '',
+      custom_internal_link: ''
   });
   let titleVariant;
   let descriptionVariant;
@@ -101,9 +103,11 @@ export const ImageIconCard = ({
       descriptionVariant = size === "large" ? "body" : "cardBody";
       linkVariant = size === "large" ? "cardLink" : "smallCardLink";
   }
+
   return (
     <LinkBox
       sx={{ textDecoration: "none!important" }}
+      onClick={onClick}
     >
       <CardGradientBorder
         padding="0"
@@ -174,7 +178,7 @@ export const ImageIconCard = ({
                     lineHeight="24px"
                   >
                     {description}{" "}
-                    {variant === "community_card" && (
+                    {variant === "community_card" && href !== '#' && (
                       <CustomLink
                         variant={linkVariant as linkVariantType}
                         color="selected.main"

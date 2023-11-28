@@ -19,13 +19,17 @@ import { useAsync } from "react-streaming";
 import { usePageContext } from "src/renderer/PageContextProvider";
 import { HeadingContainer } from "./HeadingContainer";
 import VideoSectionBlock from "./VideoSectionBlock";
+import { NewsletterCard } from "@ui/Card/NewsletterCard";
 
 interface Props {
   readonly block: TopLevelBlock;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
   readonly locale: string;
 }
 
-export function Block({ block, locale }: Props): JSX.Element | null {
+export function Block({ block, env, locale }: Props): JSX.Element | null {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "container") {
@@ -33,6 +37,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
           <Block
+            env={env}
             key={i}
             block={block}
             locale={locale}
@@ -42,6 +47,8 @@ export function Block({ block, locale }: Props): JSX.Element | null {
     );
   } else if (block.type === "image_icon_link_card") {
     return <ImageIconCard {...block} locale={locale} />;
+  } else if (block.type === "newsletter_popup") {
+    return <NewsletterCard {...block} env={env} locale={locale} />;
   } else if (block.type === "markdown") {
     return <MarkdownBlock body={block.body} /> ;
   } else if (block.type === "ambassadors_list") {
@@ -66,6 +73,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       >
         {block.blocks.map((block, i) => (
           <Block
+            env={env}
             key={i}
             block={block}
             locale={locale}
@@ -110,6 +118,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       <BlockGrouping>
         {block.blocks.map((block, i) => (
           <Block
+            env={env}
             key={i}
             block={block}
             locale={locale}
@@ -122,6 +131,7 @@ export function Block({ block, locale }: Props): JSX.Element | null {
       <HeadingContainer heading={block.heading} headingVariant={block.heading_variant}>
         {block.blocks.map((block, i) => (
           <Block
+            env={env}
             key={i}
             block={block}
             locale={locale}
