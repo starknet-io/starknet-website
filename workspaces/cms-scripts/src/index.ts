@@ -87,6 +87,7 @@ const createSharedData = async () => {
     "jobs",
     "search",
     "language",
+    "newsletter"
   ];
 
   for (const locale of locales) {
@@ -160,6 +161,7 @@ const simpleFiles = [
   await getSimpleFiles("seo", "footer", true),
   await getSimpleFiles("seo", "home", true),
   await getSimpleFiles("seo", "language", true),
+  await getSimpleFiles("seo", "newsletter", true),
   await getSimpleFiles("seo", "search", true),
 ];
 

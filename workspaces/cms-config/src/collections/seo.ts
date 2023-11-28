@@ -149,6 +149,31 @@ export const SEOCollectionConfig = {
           crowdin: true,
         },
       ],
+    }, {
+      label: "Starknet newsletter",
+      name: "newsletter",
+      file: `_data/seo/newsletter.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Sub Title",
+          name: "subtitle",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          crowdin: true,
+        }
+      ],
     },
   ],
 } satisfies CmsCollection;
