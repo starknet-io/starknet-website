@@ -721,8 +721,25 @@ export const blocks = [
         fields: videoChapterFields
       }
     ]
-  },
-  {
+  }, {
+    name: "newsletter_popup",
+    label: "Newsletter Popup",
+    widget: "object",
+    fields: [
+      {
+        crowdin: true,
+        label: 'Title',
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        crowdin: true,
+        label: 'Description',
+        name: 'description',
+        widget: 'string'
+      },
+    ]
+  }, {
     name: "ordered_block",
     label: "Ordered Block",
     widget: "object",

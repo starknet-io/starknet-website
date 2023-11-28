@@ -13,7 +13,6 @@ import { getDefaultPageContext } from "src/renderer/helpers";
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
-  console.log(defaultPageContext.seo)
 
   const pageProps: Props = {
     seo: defaultPageContext.seo.newsletter,
