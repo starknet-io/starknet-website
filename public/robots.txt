@@ -7,3 +7,5 @@ Disallow: /fr/*
 Disallow: /ja/*
 Disallow: /ko/*
 Disallow: /pt/*
+Disallow: /*/subscribe-newsletter
+Disallow: /subscribe-newsletter
