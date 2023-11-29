@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "yarn workspace @starknet-io/website dev",
     "build": "yarn workspace @starknet-io/website build",
+    "imagemin": "node bin/imagemin.js",
     "start": "",
     "lint": "",
     "fmt": "yarn rome:format",
@@ -115,6 +116,8 @@
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.0",
     "@types/youtube-player": "^5.5.7",
-    "eslint-plugin-storybook": "^0.6.11"
+    "chalk": "^4.1.2",
+    "eslint-plugin-storybook": "^0.6.11",
+    "sharp": "^0.32.6"
   }
 }
