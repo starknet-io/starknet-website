@@ -1,0 +1,43 @@
+name: Check Image Size
+
+on: pull_request
+
+env:
+  MAX_SIZE: 3145728
+  MAX_SIZE_MB: 3MB
+
+jobs:
+  imageSizeCheck:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check image size
+      run: |
+        exceeded=false
+        for file in $(git diff --name-only --diff-filter=A ${{ github.event.before }} ${{ github.sha }} | grep -E '\.(jpg|jpeg|png|gif|webp)$'); do
+          if [ $(stat -c%s "$file") -gt ${{ env.MAX_SIZE }} ]; then
+            echo "$file exceeds ${{ env.MAX_SIZE_MB }}"
+            exceeded=true
+          fi
+        done
+
+        if [ "$exceeded" = true ] ; then
+          echo "::error::Some images exceed ${{ env.MAX_SIZE_MB }} size limit."
+          exit 1
+        fi
+
+    - name: Add Comment
+      if: failure()
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue_number = context.issue.number;
+          github.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issue_number,
+            body: 'The PR contains images that exceed the ${{ env.MAX_SIZE_MB }} size limit. Please reduce the size of the images.'
+          });
