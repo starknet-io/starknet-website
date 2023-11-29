@@ -1,0 +1,52 @@
+name: Check Image Size
+
+on:
+  pull_request:
+  push:
+
+env:
+  MAX_SIZE: 1048576  # 1MB in bytes
+  MAX_SIZE_MB: 1MB
+
+jobs:
+  imageSizeCheck:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Find image files
+      id: find_images
+      run: |
+        image_files=$(git diff --name-only --diff-filter=A ${{ github.event.before }} ${{ github.sha }} | grep -E '\.(jpg|jpeg|png|gif|webp)$' | wc -l)
+        echo "::set-output name=image_count::$image_files"
+
+    - name: Check image size
+      if: steps.find_images.outputs.image_count != '0'
+      run: |
+        exceeded=false
+        for file in $(git diff --name-only --diff-filter=A ${{ github.event.before }} ${{ github.sha }} | grep -E '\.(jpg|jpeg|png|gif|webp)$'); do
+          if [ $(stat -c%s "$file") -gt ${{ env.MAX_SIZE }} ]; then
+            echo "$file exceeds ${{ env.MAX_SIZE_MB }}"
+            exceeded=true
+          fi
+        done
+
+        if [ "$exceeded" = true ] ; then
+          echo "::error::Some images exceed ${{ env.MAX_SIZE_MB }} size limit."
+          exit 1
+        fi
+
+    - name: Add Comment
+      if: failure() && steps.find_images.outputs.image_count != '0'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue_number = context.issue.number;
+          github.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: issue_number,
+            body: 'The PR contains images that exceed the ${{ env.MAX_SIZE_MB }} size limit. Please reduce the size of the images.'
+          });
