@@ -8,14 +8,13 @@ blocks:
   - type: page_header
     title: "What is Starknet? "
   - type: markdown
-    body: >-
-      ## I﻿ntroduction
+    body: >
+      Starknet is a Validity-Rollup (aka ZK-Rollup) Layer 2 network that
+      operates on top of Ethereum, enabling dApps to massively scale without
+      compromising on security.
 
 
-      Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
-
-
-      Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+      It achieves this by bundling transactions into an off-chain computed STARK proof. This proof is then submitted to Ethereum as a single transaction, resulting in significantly higher throughput, faster processing times, and much lower costs, all while retaining the robust security of the Ethereum settlement layer.
   - type: video_section
     scaling-eth:
       title: How Starknet Scales Ethereum
