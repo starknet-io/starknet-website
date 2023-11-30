@@ -61,4 +61,4 @@ jobs:
           projectName: starknet-netlify-cms
           directory: workspaces/netlify-cms/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}
