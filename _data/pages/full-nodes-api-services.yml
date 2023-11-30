@@ -39,7 +39,7 @@ blocks:
         image: /assets/5olekvre_400x400.jpg
         twitter: https://twitter.com/BlastAPI
         description: High availability Starknet Public API designed for developers.
-      - website_url: http://starknetrpc.nethermind.io/
+      - website_url: https://data.voyager.online/
         title: Nethermind
         description: Nethermind's Starknet RPC service, now with open endpoints.
         image: /assets/nethermind_icon_1600_black-1-.png
