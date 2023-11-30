@@ -69,6 +69,7 @@ blocks:
         title: Starkscan
         description: Get Starknet data via the Starkscan REST API. Leverage the power of
           a leading Starknet block explorer in your apps.
+        twitter: https://twitter.com/StarkscanCo
       - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints#nft-api
         title: "Alchemy "
         image: /assets/alchemy-mark-blue-gradient.png
