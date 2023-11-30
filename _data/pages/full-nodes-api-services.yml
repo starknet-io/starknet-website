@@ -1,5 +1,5 @@
 id: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
-title: Full-nodes & API services
+title: Full-nodes & RPC services
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -51,7 +51,7 @@ blocks:
         description: An open Starknet RPC endpoint, backed by a distributed network of
           node providers.
   - type: card_list
-    title: API services
+    title: RPC services
     card_list_items:
       - link_url: https://www.infura.io/networks/ethereum/starknet
         website_url: https://www.infura.io/networks/ethereum/starknet
