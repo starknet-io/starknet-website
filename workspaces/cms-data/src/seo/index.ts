@@ -21,6 +21,11 @@ export interface SEOTexts {
     subtitle: string;
     description: string;
   };
+  newsletter: {
+    title: string;
+    subtitle: string;
+    description: string;
+  };
   search: {
     search: string;
     cancel: string;

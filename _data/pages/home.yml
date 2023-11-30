@@ -52,6 +52,9 @@ blocks:
           operates as a Validity-rollup (or ZK-rollup): it "bundles" many
           transactions and "rolls" them to Ethereum as a single transaction.'
         columns: "4"
+  - title: "Starknet newsletter. "
+    type: newsletter_popup
+    description: "Sign up to receive the latest news and updates from the Starknet ecosystem. "
   - type: flex_layout
     heading_variant: h3
     base: 1

@@ -17,17 +17,21 @@ import { blocksToTOC } from "./TableOfContents/blocksToTOC";
 
 type CMSPageProps = {
   data: PageType;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
   locale: string;
 };
 export default function CMSPage({
   data,
+  env,
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
   return (
     <Box>
       <PageLayout
-        contentMaxW={data.template === "narrow content" ? "846px" : null}
+        contentMaxW={data.template === "narrow content" ? "846px" : undefined}
         breadcrumbs={
           <>
             {data.breadcrumbs &&
@@ -87,6 +91,7 @@ export default function CMSPage({
             {data.blocks?.map((block, i) => {
               return (
                 <Block
+                  env={env}
                   key={i}
                   block={block}
                   locale={locale}
