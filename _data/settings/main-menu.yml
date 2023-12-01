@@ -84,7 +84,7 @@ items:
           - title: Content
             items:
               - custom_internal_link: /posts/
-                custom_title: All blog posts
+                custom_title: All content
               - custom_title: Community & events
                 custom_internal_link: /posts/events-and-webinars
                 hide_from_footer: true
