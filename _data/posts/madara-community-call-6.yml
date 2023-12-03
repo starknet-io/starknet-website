@@ -10,17 +10,8 @@ video:
     etag: nje9nJfS2LJYWYAnXQc7p1OgUNA
     id: SIYskFL-qL0
     snippet:
-      publishedAt: 2023-06-02T16:38:42Z
-      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
-      title: "Madara community call #6"
-      description: |-
-        Agenda
-        Backlog Review and Task Updates from Contributors
-        Plan for Cairo 1.0 support (@tdelabro)
-        Coding practices (@abdelhamidbakhta) -
-        Benchmark infrastructure (@ClementWalter)
-        Deep dive on starknet_getEvents (@greged93 )
-        Deep dive on starknet_addInvokeTransaction (@drspacemn)
+      publishedAt: 2023-06-02T16:38:42.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/SIYskFL-qL0/default.jpg
@@ -43,8 +34,8 @@ video:
           width: 1280
           height: 720
       channelTitle: Keep Starknet Strange
+      title: "Madara community call #6"
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: "Madara community call #6"
         description: |-
@@ -55,6 +46,15 @@ video:
           Benchmark infrastructure (@ClementWalter)
           Deep dive on starknet_getEvents (@greged93 )
           Deep dive on starknet_addInvokeTransaction (@drspacemn)
+      description: |-
+        Agenda
+        Backlog Review and Task Updates from Contributors
+        Plan for Cairo 1.0 support (@tdelabro)
+        Coding practices (@abdelhamidbakhta) -
+        Benchmark infrastructure (@ClementWalter)
+        Deep dive on starknet_getEvents (@greged93 )
+        Deep dive on starknet_addInvokeTransaction (@drspacemn)
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
     contentDetails:
       duration: PT1H20M20S
       dimension: 2d
@@ -63,6 +63,7 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/madara-community-call-6.png
 category: community-and-events
 topic:
   - cairo
