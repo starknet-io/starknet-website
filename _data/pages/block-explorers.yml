@@ -39,6 +39,9 @@ blocks:
         image: /assets/oklink-logo.jpeg
         discord: ""
         twitter: https://twitter.com/OKLink
+      - description: Seamlessly explore any NFT data on the Starknet via Starknet NFTScan.
+        website_url: https://starknet.nftscan.com/
+        title: NFTScan - NFT explorer
     title: Block explorers
     randomize: true
   - type: card_list
@@ -75,4 +78,7 @@ blocks:
         image: /assets/alchemy-mark-blue-gradient.png
         description: Get all the Starknet data you need for transactions, token
           information, and debugging, in fewer requests.
+      - title: NFTScan
+        description: Leverage NFTScan's feature-rich NFT APIs for your projects.
+        website_url: https://developer.nftscan.com/
     description: ""
