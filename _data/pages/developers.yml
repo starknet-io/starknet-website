@@ -101,7 +101,7 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/
           - link:
               custom_title: "Setting up a Starknet account "
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/account_setup/
+              custom_external_link: https://docs.starknet.io/documentation/quick_start/set_up_an_account/
           - link:
               custom_title: Latest Starknet version
               custom_external_link: https://docs.starknet.io/documentation/starknet_versions/version_notes/
@@ -110,26 +110,26 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
           - link:
               custom_title: "CLI commands "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
+              custom_external_link: https://book.starkli.rs/ref/commands
       - type: link_list
         heading: Architecture & concepts
         listSize: lg
         blocks:
           - link:
               custom_title: Block structure
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/header/
           - link:
               custom_title: "Transaction lifecycle "
               custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
           - link:
               custom_title: "Transaction structure "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/transaction-life-cycle/
           - link:
               custom_title: Contract ABI
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Smart_Contracts/contract-abi/
           - link:
               custom_title: "Account abstraction "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Accounts/introduction/
       - type: link_list
         heading: "Tools & resources "
         listSize: lg
@@ -138,8 +138,5 @@ blocks:
               custom_title: Starknet block explorers
               custom_external_link: https://docs.starknet.io/documentation/tools/ref_block_explorers/
           - link:
-              custom_title: "Starknet CLI reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
-          - link:
-              custom_title: "Starknet compiler reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
+              custom_title: "Starkli CLI "
+              custom_external_link: https://book.starkli.rs
