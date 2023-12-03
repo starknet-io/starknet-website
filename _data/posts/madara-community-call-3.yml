@@ -10,14 +10,8 @@ video:
     etag: 9wjfVd2WFK-Rn5o3rgVdWBDaYnY
     id: VyvDAxF46uc
     snippet:
-      publishedAt: 2023-04-07T15:06:12Z
-      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
-      title: "Madara Community Call #3"
-      description: |-
-        Agenda
-        - Backlog review and update on tasks by contributors
-        - Sharingan testnet update (@abdelhamidbakhta @tarrencev)
-        - RPC implementation deep dive (@tdelabro)
+      publishedAt: 2023-04-07T15:06:12.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/VyvDAxF46uc/default.jpg
@@ -40,8 +34,8 @@ video:
           width: 1280
           height: 720
       channelTitle: Keep Starknet Strange
+      title: "Madara Community Call #3"
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: "Madara Community Call #3"
         description: |-
@@ -49,6 +43,12 @@ video:
           - Backlog review and update on tasks by contributors
           - Sharingan testnet update (@abdelhamidbakhta @tarrencev)
           - RPC implementation deep dive (@tdelabro)
+      description: |-
+        Agenda
+        - Backlog review and update on tasks by contributors
+        - Sharingan testnet update (@abdelhamidbakhta @tarrencev)
+        - RPC implementation deep dive (@tdelabro)
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
     contentDetails:
       duration: PT1H37M
       dimension: 2d
@@ -59,6 +59,9 @@ video:
       projection: rectangular
 image: /assets/madara-community-cal-3-.png
 category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: |
   Agenda
   1. Backlog review and update on tasks by contributors
