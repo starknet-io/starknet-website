@@ -1,0 +1,69 @@
+id: fdd2d2dd-d45a-40d6-8dea-0b55fec0a851
+post_type: video
+title: "Madara Community Call #3"
+published_date: 2023-12-03T13:17:04.703Z
+video:
+  url: https://www.youtube.com/watch?v=VyvDAxF46uc
+  id: VyvDAxF46uc
+  data:
+    kind: youtube#video
+    etag: 9wjfVd2WFK-Rn5o3rgVdWBDaYnY
+    id: VyvDAxF46uc
+    snippet:
+      publishedAt: 2023-04-07T15:06:12.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/VyvDAxF46uc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/VyvDAxF46uc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/VyvDAxF46uc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/VyvDAxF46uc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/VyvDAxF46uc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      title: "Madara Community Call #3"
+      categoryId: "22"
+      localized:
+        title: "Madara Community Call #3"
+        description: |-
+          Agenda
+          - Backlog review and update on tasks by contributors
+          - Sharingan testnet update (@abdelhamidbakhta @tarrencev)
+          - RPC implementation deep dive (@tdelabro)
+      description: |-
+        Agenda
+        - Backlog review and update on tasks by contributors
+        - Sharingan testnet update (@abdelhamidbakhta @tarrencev)
+        - RPC implementation deep dive (@tdelabro)
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+    contentDetails:
+      duration: PT1H37M
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-cal-3-.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+short_desc: |
+  Agenda
+  1. Backlog review and update on tasks by contributors
+  2. Sharingan testnet update (@abdelhamidbakhta @tarrencev)
+  3. RPC implementation deep dive (@tdelabro)
