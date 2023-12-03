@@ -1,5 +1,5 @@
 id: 891eedc6-385c-4cc7-8bea-fee61353b51a
-title: v3 transactions
+title: "Transactions fees with STRK "
 availability: Q1 2024
 version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
 stage: building-now
@@ -15,7 +15,7 @@ blocks:
       In addition to fee payment in STRK, v3 transactions are structured to support several upcoming features detailed below.
 
 
-      > **I﻿MPORTANT** While V3 transactions will support the following features, not all the features that they will support will be available in Starknet V0.13.0.
+      > **I﻿MPORTANT** While v3 transactions will support the following features, not all the features that they will support will be available in Starknet v0.13.0.
 
 
       * A **fee market**, starting with Starknet v0.14.0, to enable users to optimize their transaction process by the network during periods of congestion.
