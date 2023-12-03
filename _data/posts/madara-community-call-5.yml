@@ -1,0 +1,75 @@
+id: de1e67c1-4600-466d-8eb8-5913ae66a7f7
+post_type: video
+title: "Madara community call #5"
+published_date: 2023-12-03T13:55:37.970Z
+video:
+  url: https://www.youtube.com/watch?v=stK61jIlA14
+  id: stK61jIlA14
+  data:
+    kind: youtube#video
+    etag: -c6FEGdBveygSbe0e50LbJC0_MY
+    id: stK61jIlA14
+    snippet:
+      publishedAt: 2023-05-22T07:20:05Z
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+      title: "Madara community call #5"
+      description: |-
+        Agenda
+        - Backlog Review and Task Updates from Contributors
+        - Dojo & Cartridge update (@tarrencev)
+        - Starknet Hackathon & Madara track (@EvolveArt)
+        - Roadmap (@abdelhamidbakhta)
+        - Deep dive on `starknet_addInvokeTransaction` (@drspacemn)
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/stK61jIlA14/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/stK61jIlA14/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/stK61jIlA14/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/stK61jIlA14/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/stK61jIlA14/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: "Madara community call #5"
+        description: |-
+          Agenda
+          - Backlog Review and Task Updates from Contributors
+          - Dojo & Cartridge update (@tarrencev)
+          - Starknet Hackathon & Madara track (@EvolveArt)
+          - Roadmap (@abdelhamidbakhta)
+          - Deep dive on `starknet_addInvokeTransaction` (@drspacemn)
+    contentDetails:
+      duration: PT45M2S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-call-5.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+short_desc: |
+  Agenda:
+  1. Backlog Review and Task Updates from Contributors
+  2. Dojo & Cartridge update (@tarrencev)
+  3. Starknet Hackathon & Madara track (@EvolveArt)
+  4. Roadmap (@abdelhamidbakhta)
+  5. Deep dive on `starknet_addInvokeTransaction` (@drspacemn)
