@@ -10,19 +10,8 @@ video:
     etag: aIfu4a5w2lZLY1XNXg7XHMFtCkw
     id: IryiujOJaFo
     snippet:
-      publishedAt: 2023-04-17T07:52:23Z
-      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
-      title: "Madara Community Call #4"
-      description: >-
-        - Backlog Review and Task Updates from Contributors
-
-        - Sharingan Testnet Progress (@tarrencev @abdelhamidbakhta)
-
-        - Cairo to MLIR project introduction by LambdaClass
-
-        - Deep Dive: starknet_call RPC Endpoint Implementation feat: starknet_call ✨ #209 (@EvolveArt)
-
-        - Starknet decentralization protocol proposals analysis #83 (@drspacemn)
+      publishedAt: 2023-04-17T07:52:23.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/IryiujOJaFo/default.jpg
@@ -45,8 +34,8 @@ video:
           width: 1280
           height: 720
       channelTitle: Keep Starknet Strange
+      title: "Madara Community Call #4"
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: "Madara Community Call #4"
         description: >-
@@ -59,6 +48,17 @@ video:
           - Deep Dive: starknet_call RPC Endpoint Implementation feat: starknet_call ✨ #209 (@EvolveArt)
 
           - Starknet decentralization protocol proposals analysis #83 (@drspacemn)
+      description: >-
+        - Backlog Review and Task Updates from Contributors
+
+        - Sharingan Testnet Progress (@tarrencev @abdelhamidbakhta)
+
+        - Cairo to MLIR project introduction by LambdaClass
+
+        - Deep Dive: starknet_call RPC Endpoint Implementation feat: starknet_call ✨ #209 (@EvolveArt)
+
+        - Starknet decentralization protocol proposals analysis #83 (@drspacemn)
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
     contentDetails:
       duration: PT1H19M56S
       dimension: 2d
@@ -73,12 +73,12 @@ topic:
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
   - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: >
-  - Backlog Review and Task Updates from Contributors
+  Agenda: 1. Backlog Review and Task Updates from Contributors
 
-  - Sharingan Testnet Progress (@tarrencev @abdelhamidbakhta)
+  2. Sharingan Testnet Progress (@tarrencev @abdelhamidbakhta)
 
-  - Cairo to MLIR project introduction by LambdaClass
+  3. Cairo to MLIR project introduction by LambdaClass
 
-  - Deep Dive: starknet_call RPC Endpoint Implementation feat: starknet_call ✨ #209 (@EvolveArt)
+  4. Deep Dive: starknet_call RPC Endpoint Implementation feat: starknet_call ✨ #209 (@EvolveArt)
 
-  - Starknet decentralization protocol proposals analysis #83 (@drspacemn)
+  5. Starknet decentralization protocol proposals analysis #83 (@drspacemn)
