@@ -28,7 +28,9 @@ items:
               - custom_title: Developers blog
                 custom_internal_link: /posts/developers
               - custom_title: Starknet Devs Newsletter
-                custom_internal_link: https://www.starknet.io/subscribe-newsletter
+                custom_internal_link: ""
+                custom_external_link: https://www.starknet.io/subscribe-newsletter
+                page: ""
   - title: Ecosystem
     columns:
       - blocks:
