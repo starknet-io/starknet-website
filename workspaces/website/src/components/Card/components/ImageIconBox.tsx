@@ -51,8 +51,8 @@ const colors = {
   "blue-default": {
     gradient:
       "linear(180.15deg, gradient-blue-default-a 0.2%, gradient-blue-default-b 105.43%)",
-      iconGradientColor1: "#81D2FF",
-      iconGradientColor2: "#5B5F68"
+      iconGradientColor1: "#E1B0A8",
+      iconGradientColor2: "#D3A2E7"
   },
   cyan: {
     gradient:
