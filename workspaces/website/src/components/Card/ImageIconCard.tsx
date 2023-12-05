@@ -21,6 +21,7 @@ type Props = {
   title: string;
   link?: LinkData;
   icon?: string;
+  defaultIcon?: string;
   description?: string;
   locale: string,
   size?: "large" | "small",
@@ -46,6 +47,7 @@ type descriptionVariantType = "body" | "cardBody" | "breadcrumbs" | "footerLink"
 
 export const ImageIconCard = ({
   title,
+  defaultIcon = "/assets/cards/user-group.svg",
   description,
   link,
   icon,
@@ -131,7 +133,7 @@ export const ImageIconCard = ({
           alignItems={{ lg: variant === "large_card" ? "center" : "initial" }}
           height="100%"
         >
-          <ImageIconBox title={title} variant={variant} color={color} size={size} icon={variant === "community_card" ? "/assets/cards/user-group.svg" : icon} withIllustration={withIllustration} />
+          <ImageIconBox title={title} variant={variant} color={color} size={size} icon={variant === "community_card" ? defaultIcon : icon} withIllustration={withIllustration} />
           <Box
             padding={{
               base: variant === "community_card" ? "24px 32px 0 0" : (size === "large" && icon && variant === "image_icon_link_card") ?
