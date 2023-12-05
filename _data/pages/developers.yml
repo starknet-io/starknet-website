@@ -55,7 +55,7 @@ blocks:
     heading: Courses
     blocks:
       - type: image_icon_link_card
-        color: purple
+        color: blue-default
         title: Learn Through Tutorials
         description: "Learn from the Starknet's community of developers and technologies. "
         icon: /assets/7.svg
@@ -64,7 +64,7 @@ blocks:
           custom_internal_link: /tutorials/
         withIllustration: true
       - type: image_icon_link_card
-        color: peach
+        color: blue-default
         title: Starknet Basecamp
         description: Register for an upcoming Basecamp cohort or watch the previous
           recordings, where you will learn everything about Starknet, Cairo, and
@@ -76,7 +76,7 @@ blocks:
           custom_external_link: https://starknet.notion.site/Starknet-Basecamp-1541b3c1f49f439da872d3d71647d834?pvs=4
         withIllustration: true
       - type: image_icon_link_card
-        color: cyan
+        color: blue-default
         title: "Starknet Edu "
         description: Educational developer resources for Starknet and Cairo.
         icon: /assets/starknet_edu.svg
