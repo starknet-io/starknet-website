@@ -40,8 +40,8 @@ blocks:
           transactions and "rolls" them to Ethereum as a single transaction.'
         columns: "4"
   - type: newsletter_popup
-    title: Starknet newsletter
-    description: "Sign up to receive the latest news and updates from Starknet. "
+    title: Starknet Devs Newsletter
+    description: Stay up to date with Starknet news and version updates.
   - type: flex_layout
     heading_variant: h3
     base: 1
