@@ -7,18 +7,6 @@ blocks:
   - type: group
     blocks:
       - type: home_hero
-      - size: large
-        color: orange
-        variant: community_card
-        orientation: left
-        withIllustration: false
-        title: Community led.
-        type: image_icon_link_card
-        link:
-          custom_title: Get involved.
-          page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
-        description: This website is a community powered guide to the Starknet ecosystem.
-        columns: "4"
   - type: group
     blocks:
       - size: large
@@ -51,6 +39,9 @@ blocks:
           operates as a Validity-rollup (or ZK-rollup): it "bundles" many
           transactions and "rolls" them to Ethereum as a single transaction.'
         columns: "4"
+  - type: newsletter_popup
+    title: Starknet newsletter
+    description: "Sign up to receive the latest news and updates from Starknet. "
   - type: flex_layout
     heading_variant: h3
     base: 1

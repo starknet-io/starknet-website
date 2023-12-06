@@ -42,6 +42,7 @@ export const NewsletterCard = ({
 
       <ImageIconCard 
         columns={4}
+        defaultIcon={'/assets/cards/newsletter.svg'}
         description={description}
         onClick={() => setIsOpen(true)}
         orientation={'left'}
