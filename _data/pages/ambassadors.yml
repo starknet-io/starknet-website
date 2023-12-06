@@ -2,7 +2,7 @@ id: 5ecdf9cf-d433-478a-a280-07e0f860534f
 title: Ambassadors Program
 show_title: true
 template: narrow content
-toc: false
+hideToc: true
 parent_page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
 breadcrumbs: true
 page_last_updated: true
