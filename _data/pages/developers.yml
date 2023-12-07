@@ -17,7 +17,7 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: blue-default
-        title: Read the Docs
+        title: Read the Starknet Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
         icon: /assets/read_the_docs.svg
@@ -28,9 +28,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Read the Starknet Book
-        description: Developed by the Starknet community, the Starknet book teaches
-          Cairo programming and Starknet development. Start reading and conquer
-          the Ethereum world.
+        description: "Developed by the Starknet community, the Starknet book teaches how
+          to build on Starknet. "
         icon: /assets/docs.svg
         link:
           custom_external_link: https://book.starknet.io/
