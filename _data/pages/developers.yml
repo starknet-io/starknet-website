@@ -65,9 +65,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Starknet Basecamp
-        description: Register for an upcoming Basecamp cohort or watch the previous
-          recordings, where you will learn everything about Starknet, Cairo, and
-          STARKs.
+        description: Register for the next Basecamp or watch previous recordings, where
+          you will learn about Starknet, Cairo, and STARKs.
         icon: /assets/basecamp.svg
         link:
           custom_title: View
