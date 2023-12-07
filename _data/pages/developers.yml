@@ -140,6 +140,3 @@ blocks:
           - link:
               custom_title: "Starknet CLI reference "
               custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
-          - link:
-              custom_title: "Starknet compiler reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
