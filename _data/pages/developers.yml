@@ -55,7 +55,7 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: blue-default
-        title: Learn Through Tutorials
+        title: Tutorials
         description: "Learn from the Starknet's community of developers and technologies. "
         icon: /assets/7.svg
         link:
