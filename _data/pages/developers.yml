@@ -126,10 +126,10 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
           - link:
               custom_title: Contract ABI
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Smart_Contracts/contract-abi/
           - link:
               custom_title: "Account abstraction "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Accounts/introduction/
       - type: link_list
         heading: "Tools & resources "
         listSize: lg
