@@ -108,9 +108,6 @@ blocks:
           - link:
               custom_title: Upcoming Starknet versions
               custom_external_link: https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
-          - link:
-              custom_title: "CLI commands "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
       - type: link_list
         heading: Architecture & concepts
         listSize: lg
@@ -138,5 +135,5 @@ blocks:
               custom_title: Starknet block explorers
               custom_external_link: https://docs.starknet.io/documentation/tools/ref_block_explorers/
           - link:
-              custom_title: "Starknet CLI reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
+              custom_title: StarkLi CLI
+              custom_external_link: https://docs.starknet.io/documentation/tools/devtools/#starkli
