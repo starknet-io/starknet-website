@@ -2,6 +2,64 @@ id: daace789-b409-410d-aedb-71655ba09137
 post_type: video
 title: Scaling on-chain gaming with Cartridge
 published_date: 2023-12-05T13:45:09.137Z
+video:
+  url: https://youtu.be/3v6ASApIiV8
+  id: 3v6ASApIiV8
+  data:
+    kind: youtube#video
+    etag: QcKsGUE7F_cmDFMgi8TUyi7WuUw
+    id: 3v6ASApIiV8
+    snippet:
+      publishedAt: 2023-12-07T13:24:10Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Scaling on-chain gaming with Cartridge
+      description: >-
+        Meet Slot, a fractal scaling approach to autonomous worlds and onchain
+        gaming. It stands out as the inaugural rollup-as-a-service tailored
+        specifically to meet the demands of onchain gaming, including high
+        performance, reduced latency, and affordable computation.
+
+
+        Join us for a conversation with Tarrence from Cartridge and Louis from StarkWare to learn more about Slot from the source.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/3v6ASApIiV8/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/3v6ASApIiV8/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/3v6ASApIiV8/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/3v6ASApIiV8/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Scaling on-chain gaming with Cartridge
+        description: >-
+          Meet Slot, a fractal scaling approach to autonomous worlds and onchain
+          gaming. It stands out as the inaugural rollup-as-a-service tailored
+          specifically to meet the demands of onchain gaming, including high
+          performance, reduced latency, and affordable computation.
+
+
+          Join us for a conversation with Tarrence from Cartridge and Louis from StarkWare to learn more about Slot from the source.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT57M32S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/stark-spaces-scaling-onchain-gaming-with-cartridge-web-reduced.jpg
 category: ecosystem
 topic:
