@@ -119,3 +119,40 @@ blocks:
           hasIcon: true
           custom_title: "Part 3: Starknet Token Design"
           custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+  - type: heading_container
+    heading: Further Reading
+    heading_variant: h2
+    blocks:
+      - type: link_list
+        randomize: false
+        heading: Decentralization
+        blocks:
+          - link:
+              hasIcon: true
+              custom_title: "Part 1: A Decentralization Proposal"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+          - link:
+              hasIcon: true
+              custom_title: "Part 2: A Decentralization and Governance Proposal for Starknet"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+          - link:
+              hasIcon: true
+              custom_title: "Part 3: Starknet Token Design"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
+
+      - type: link_list
+        randomize: false
+        heading: Third Party Articles
+        blocks:
+          - link:
+              hasIcon: true
+              custom_title: "Part 1: A Decentralization Proposal"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal
+          - link:
+              hasIcon: true
+              custom_title: "Part 2: A Decentralization and Governance Proposal for Starknet"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet
+          - link:
+              hasIcon: true
+              custom_title: "Part 3: Starknet Token Design"
+              custom_internal_link: https://www.starknet.io/en/posts/governance/part-3-starknet-token-design
