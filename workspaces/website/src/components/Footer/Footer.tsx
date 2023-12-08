@@ -190,7 +190,8 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
     <Link
       fontSize="sm"
       px="0"
-      height="36px"
+      py="6px"
+      lineHeight="24px"
       bg="navbar-link-bg"
       color={useColorModeValue("footer-link-fg", "footer-link-fg")}
       borderRadius={18}
