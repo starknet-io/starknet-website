@@ -30,7 +30,7 @@ export const MenuItemWithDropdown = ({ children, label }: Props) => (
             bg={isOpen ? "button-nav-hover-bg" : "button-nav-bg"}
             size="sm"
             pl="16px"
-            pr="8px"
+            pr={{ xl: "8px" }}
             height="40px"
             variant="link"
             borderRadius="4px"

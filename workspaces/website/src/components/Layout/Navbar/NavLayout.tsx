@@ -6,6 +6,7 @@ import {
   useColorMode,
   Box,
 } from "@chakra-ui/react";
+
 import { IconButton } from "@ui/IconButton";
 import { StarknetLogo } from "@ui/Logo/StarknetLogo";
 import {
@@ -48,9 +49,9 @@ export const NavLayout = (props: NavLayoutProps) => {
             <StarknetLogo />
           </a>
           <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
-                {props.items}
-              </ButtonGroup>
+            <ButtonGroup variant="link" spacing={{ md: "12px", xl: "18px"}} sx={{ pl: { lg: "16px", xl: "34px" } }}>
+              {props.items}
+            </ButtonGroup>
           </Box>
         </HStack>
         <HStack spacing={6}>
@@ -91,7 +92,7 @@ export const NavLayout = (props: NavLayoutProps) => {
               icon={<Icon as={MenuIcon} fontSize="2xl" />}
               aria-label="Open Menu"
               onClick={onClickMenu}
-              marginInlineStart="12px !important"
+              ml={{ xl: "12px !important" }}
             /></Box>
         </HStack>
       </HStack>
