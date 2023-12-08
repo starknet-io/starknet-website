@@ -83,10 +83,10 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
           p: (props) => (
             <Text pt={1} pb={3} lineHeight="32px" variant="body" {...props} />
           ),
-          ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
-          ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
+          ul: (props) => <UnorderedList pl={1} mb="lg" {...props} />,
+          ol: (props) => <OrderedList mb="lg" pl={1} {...props} />,
           li: (props) => <ListItem lineHeight="32px" {...props} />,
-          img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
+          img: (props) => <Img my="lg" borderRadius="8px" {...props} />,
           a: (props) => <Link variant="standard" {...props} />,
           pre: (props) => {
             // @ts-ignore
