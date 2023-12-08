@@ -23,7 +23,7 @@ export function youtubeVideoIdFromURL(url: string): string | undefined | void {
 
 export function slugify(value: string): string {
   return String(value)
-    .normalize("NFD") // split an accented letter in the base letter and the acent
+    .normalize("NFD") // split an accented letter in the base letter and the accent
     .replace(/[\u0300-\u036f]/g, "") // remove all previously split accents
     .toLowerCase()
     .trim()
@@ -89,8 +89,8 @@ export async function getJSON(
   return res.json();
 }
 
-export const convertStringTagsToArray = (commaSeperatedTags: string = "") => {
-  return commaSeperatedTags
+export const convertStringTagsToArray = (commaSeparatedTags: string = "") => {
+  return commaSeparatedTags
     .replace(/,\s*$/, "")
     .split(",")
     .map((t: string) => t.trim());

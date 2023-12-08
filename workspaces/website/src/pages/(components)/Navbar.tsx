@@ -1,5 +1,5 @@
 
-import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
+import * as NavAccordion from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
@@ -134,12 +134,12 @@ export default function Navbar({
           )
         )}
         mobileNavItems={
-          <NavAccordian.Root>
+          <NavAccordion.Root>
             {mainMenu?.items?.map((mainMenuItem, mainMenuItemIndex) => {
               return (
-                <NavAccordian.Item key={mainMenuItemIndex}>
-                  <NavAccordian.Button title={mainMenuItem.title} />
-                  <NavAccordian.Panel>
+                <NavAccordion.Item key={mainMenuItemIndex}>
+                  <NavAccordion.Button title={mainMenuItem.title} />
+                  <NavAccordion.Panel>
                     {mainMenuItem.columns?.length &&
                       mainMenuItem.columns?.map((column, columnIndex) => (
                         <Box key={columnIndex}>
@@ -180,11 +180,11 @@ export default function Navbar({
                           ))}
                         </Box>
                       ))}
-                  </NavAccordian.Panel>
-                </NavAccordian.Item>
+                  </NavAccordion.Panel>
+                </NavAccordion.Item>
               );
             })}
-          </NavAccordian.Root>
+          </NavAccordion.Root>
         }
       />
     </NavbarContainer>

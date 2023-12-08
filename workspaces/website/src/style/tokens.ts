@@ -77,8 +77,8 @@ export const tokens = {
       "navbar-link-visited-fg": "#2166EF",
       "nav-dialog-bg": "#FBFBFB",
       "nav-header-bg": "#ffffff",
-      "nav-accordian-expanded-bg": "#0C0C4F",
-      "nav-accordian-expanded-fg": "#FFFFFF",
+      "nav-accordion-expanded-bg": "#0C0C4F",
+      "nav-accordion-expanded-fg": "#FFFFFF",
       "nav-footer-br": "#EFEFEF",
       "nav-searchinput-bg": "#F6F6F6",
       "nav-searchinput-fg": "#858585",
@@ -280,8 +280,8 @@ export const tokens = {
       "navbar-link-visited-fg": "#2166EF",
       "nav-dialog-bg": "#1B1B1B",
       "nav-header-bg": "#000000",
-      "nav-accordian-expanded-bg": "#AFCAFF",
-      "nav-accordian-expanded-fg": "#121212",
+      "nav-accordion-expanded-bg": "#AFCAFF",
+      "nav-accordion-expanded-fg": "#121212",
       "nav-footer-br": "#313131",
       "nav-searchinput-bg": "#1B1B1B",
       "nav-searchinput-fg": "#AFCAFF",
@@ -658,13 +658,13 @@ export const semanticTokens = {
       default: tokens.colors.light["nav-header-bg"],
       _dark: tokens.colors.dark["nav-header-bg"],
     },
-    "nav-accordian-expanded-bg": {
-      default: tokens.colors.light["nav-accordian-expanded-bg"],
-      _dark: tokens.colors.dark["nav-accordian-expanded-bg"],
+    "nav-accordion-expanded-bg": {
+      default: tokens.colors.light["nav-accordion-expanded-bg"],
+      _dark: tokens.colors.dark["nav-accordion-expanded-bg"],
     },
-    "nav-accordian-expanded-fg": {
-      default: tokens.colors.light["nav-accordian-expanded-fg"],
-      _dark: tokens.colors.dark["nav-accordian-expanded-fg"],
+    "nav-accordion-expanded-fg": {
+      default: tokens.colors.light["nav-accordion-expanded-fg"],
+      _dark: tokens.colors.dark["nav-accordion-expanded-fg"],
     },
     "nav-footer-br": {
       default: tokens.colors.light["nav-footer-br"],

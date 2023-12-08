@@ -31,7 +31,7 @@ export const NavLayout = (props: NavLayoutProps) => {
   const MenuIcon = isMenuOpen ? HiOutlineXMark : HiBars3;
   const { locale } = usePageContext();
   const { colorMode, toggleColorMode } = useColorMode();
-  const toogleTheme = () => {
+  const toggleTheme = () => {
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
@@ -65,7 +65,7 @@ export const NavLayout = (props: NavLayoutProps) => {
                   )
                 }
                 aria-label="Toggle color mode"
-                onClick={toogleTheme}
+                onClick={toggleTheme}
                 marginInlineStart="0 !important"
               />
             </Box>
