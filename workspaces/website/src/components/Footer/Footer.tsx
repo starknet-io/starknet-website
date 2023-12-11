@@ -173,9 +173,7 @@ const Column = ({ title, children, color }: ColumnProps) => {
       >
         {title}
       </Heading>
-      <Stack spacing="1" shouldWrapChildren>
-        {children}
-      </Stack>
+      {children}
     </Stack>
   );
 };
@@ -190,7 +188,6 @@ const FooterLink = ({ children, href, isExternal }: FooterLinkProps) => {
     <Link
       fontSize="sm"
       px="0"
-      height="36px"
       bg="navbar-link-bg"
       color={useColorModeValue("footer-link-fg", "footer-link-fg")}
       borderRadius={18}
