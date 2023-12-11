@@ -221,6 +221,7 @@ export interface Page extends Meta {
   readonly toc?: boolean;
   readonly template: "landing" | "content" | "narrow content";
   readonly tocCustomTitle?: string;
+  readonly hidden_page: boolean;
   readonly breadcrumbs: boolean;
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;

@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import '@ui/CodeHighlight/code-highlight-init'
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
+import NotFound from "@ui/NotFound/NotFound";
 
 type CMSPageProps = {
   data: PageType;
@@ -28,6 +29,11 @@ export default function CMSPage({
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
+
+  if (data?.hidden_page) {
+    return <NotFound type="page" />;
+  }
+
   return (
     <Box>
       <PageLayout
