@@ -1,30 +1,7 @@
 id: /learn/
 title: Learn
 template: landing
+hidden_page: true
 breadcrumbs: true
 page_last_updated: false
-blocks:
-  - type: hero
-    variant: learn
-    title: "Learn "
-    description: An educational guide to Starknet, how it works and how to start using it.
-  - type: group
-    blocks:
-      - size: large
-        color: orange
-        variant: image_icon_link_card
-        orientation: left
-        withIllustration: false
-        title: Starknet 101
-        icon: /assets/hero-1-.svg
-        type: image_icon_link_card
-        link:
-          custom_internal_link: /learn/
-          custom_title: Learn
-        description: Starknet is a layer-2 network that uses math and cryptography to
-          securely scale Ethereum. It is known as a Validity-rollup (or
-          ZK-rollup); it ”rolls” many transactions up to send to Ethereum as a
-          single transaction. Read on to learn the fundamentals.
-        columns: "4"
-  - type: markdown
-    body: Learn!
+blocks: []
