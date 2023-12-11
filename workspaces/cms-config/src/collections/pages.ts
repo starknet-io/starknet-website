@@ -86,6 +86,12 @@ export const pagesCollectionConfig = {
       display_fields: ["title"],
     },
     {
+      name: "hidden_page",
+      label: "Omit page from navigation",
+      widget: "boolean",
+      default: false,
+    },
+    {
       name: "breadcrumbs",
       label: "Show breadcrumbs",
       widget: "boolean",
