@@ -1,0 +1,84 @@
+id: cffdb4a3-badb-48d3-ba4f-7abebeb47526
+post_type: video
+title: Shoshin - Onchain Gaming on Starknet
+published_date: 2023-11-28T13:16:54.133Z
+video:
+  url: https://www.youtube.com/watch?v=8NE1_Sw9MxM&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=1&pp=iAQB
+  id: 8NE1_Sw9MxM
+  data:
+    kind: youtube#video
+    etag: DXhnQXdqD6NMcFd8zp7m83mXqWQ
+    id: 8NE1_Sw9MxM
+    snippet:
+      publishedAt: 2023-11-28T13:16:39.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/8NE1_Sw9MxM/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/8NE1_Sw9MxM/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/8NE1_Sw9MxM/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/8NE1_Sw9MxM/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/8NE1_Sw9MxM/maxresdefault.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: Shoshin - Onchain Gaming on Starknet
+      categoryId: "28"
+      localized:
+        title: Shoshin - Onchain Gaming on Starknet
+        description: >-
+          Let's dive into Shoshin - an onchain game on Starknet! Learn how this
+          asynchronous and TPS agnostic strategy crypto game allows you to train
+          fighters to win epic battles. The game runs smoothly and quickly in
+          your browser through the Cairo VM, with your score validated by
+          Starknet without additional computations.
+
+
+          To play Shoshin: https://shoshin.gg/
+
+          Visit https://www.starknet.io/en/ and https://starkware.co/
+      description: >-
+        Let's dive into Shoshin - an onchain game on Starknet! Learn how this
+        asynchronous and TPS agnostic strategy crypto game allows you to train
+        fighters to win epic battles. The game runs smoothly and quickly in your
+        browser through the Cairo VM, with your score validated by Starknet
+        without additional computations.
+
+
+        To play Shoshin: https://shoshin.gg/
+
+        Visit https://www.starknet.io/en/ and https://starkware.co/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT1M55S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/shoshin-onchain-gaming-on-starknet.png
+category: stark-math
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - getting-started
+short_desc: Let's dive into Shoshin - an onchain game on Starknet! Learn how
+  this asynchronous and TPS agnostic strategy crypto game allows you to train
+  fighters to win epic battles. The game runs smoothly and quickly in your
+  browser through the Cairo VM, with your score validated by Starknet without
+  additional computations.
+seoFocusKeywords:
+  - On-chain Gaming
