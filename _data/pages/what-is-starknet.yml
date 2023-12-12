@@ -1,7 +1,6 @@
 month: December 2023
-toc: false
+hideToc: true
 parent_page: /learn/
-breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: page_header
@@ -84,10 +83,12 @@ blocks:
           custom_external_link: https://www.youtube.com/watch?v=QPNp8w9rx7o
         subLabel:
           label: "Eli-Ben Sasson "
+toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
 name: ZK Bankai Hacker House
 url: https://fat-kiss-zk.notion.site/fat-kiss-zk/zk-Bankai-Hacker-House-dd5d8f5e8c464237b98e654cc16bd538
+breadcrumbs: false
 end_date: 2023-12-07T16:00:52.343Z
 location: asia
 country: India
