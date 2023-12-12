@@ -234,7 +234,6 @@ export const ImageIconBox = ({
       </Box> : icon &&
       <Box
         padding={variant === "community_card" ? iconProps.communityCardPadding : iconProps.imagePadding}
-        {...(variant === "large_card" && { flex: "100%" })}
       >
         <ComponentToRender
           {...iconProps}

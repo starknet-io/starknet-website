@@ -1,8 +1,39 @@
+/**
+ * Module dependencies
+ */
 import React from 'react';
 
-const ImageIcon: React.FC<{icon?: string, alt?: string, filter?: string, borderRadius?: string}> = ({ icon, alt = "", filter, borderRadius }) => {
+/**
+ * `Props` type.
+ */
+
+type Props = {
+  icon?: string,
+  alt?: string,
+  filter?: string,
+  borderRadius?: string,
+};
+
+/**
+ * Export `ImageIcon` component.
+ */
+
+const ImageIcon: React.FC<Props> = ({
+  icon,
+  alt = "",
+  filter,
+  borderRadius,
+}) => {
   return (
-    <img style={{filter, borderRadius}} src={icon} alt={alt} />
+    <img
+      style={{
+        borderRadius,
+        filter,
+        maxHeight: '400px'
+      }} 
+      src={icon}
+      alt={alt} 
+    />
   )
 };
 
