@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "update-algolia-index": "vite-node src/algolia.ts",
-    "update-dynamic-data": "vite-node src/index.ts",
+    "update-dynamic-data": "vite-node src/index.ts && yarn sitemap",
     "update-jobs": "vite-node src/jobs-update.ts",
     "pre-crowdin": "vite-node src/pre-crowdin.ts",
+    "sitemap": "vite-node src/sitemap.ts",
     "build": "tsc"
   },
   "dependencies": {
