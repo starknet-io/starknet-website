@@ -1,0 +1,77 @@
+id: 680fc434-b3a8-4e81-ab61-84fb0778b769
+post_type: video
+title: Dojo - Provable Game Engine on Starknet
+published_date: 2023-11-28T13:28:47.308Z
+video:
+  url: https://www.youtube.com/watch?v=lclg7FmIkLQ&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=2
+  id: lclg7FmIkLQ
+  data:
+    kind: youtube#video
+    etag: jI6LFofmlGUbDrpubrvOwZC0zL4
+    id: lclg7FmIkLQ
+    snippet:
+      publishedAt: 2023-11-28T13:35:51Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Dojo - Provable Game Engine on Starknet
+      description: >-
+        Discover how Dojo is revolutionizing the gaming experience with its
+        unique features and cutting-edge technology. Whether you're a gamer,
+        developer, or crypto-enthusiast, Dojo offers something for everyone.
+
+
+        Check them out here: https://www.dojoengine.org/en/
+
+        Visit https://www.starknet.io/en/ and https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/lclg7FmIkLQ/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/lclg7FmIkLQ/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/lclg7FmIkLQ/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/lclg7FmIkLQ/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/lclg7FmIkLQ/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Dojo - Provable Game Engine on Starknet
+        description: >-
+          Discover how Dojo is revolutionizing the gaming experience with its
+          unique features and cutting-edge technology. Whether you're a gamer,
+          developer, or crypto-enthusiast, Dojo offers something for everyone.
+
+
+          Check them out here: https://www.dojoengine.org/en/
+
+          Visit https://www.starknet.io/en/ and https://starkware.co/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT2M
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/dojo-provable-game-engine-on-starknet.png
+category: stark-math
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+short_desc: Discover how Dojo is revolutionizing the gaming experience with its
+  unique features and cutting-edge technology. Whether you're a gamer,
+  developer, or crypto-enthusiast, Dojo offers something for everyone.
+seoFocusKeywords:
+  - On-chain Gaming
