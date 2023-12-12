@@ -434,7 +434,7 @@ export const blocks = [
         widget: "select",
         default: "left",
         required: false,
-        options: ["left", "right"],
+        options: ["left", "right", "vertical"],
       }
     ],
   },
@@ -765,6 +765,54 @@ export const blocks = [
   },
 ] satisfies CmsFieldList["types"];
 
+const flexLayout = {
+  name: "flex_layout",
+  label: "Flex layout",
+  widget: "object" as "object",
+  fields: [
+    {
+      name: "base",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "md",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "lg",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "xl",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "heading",
+      required: false,
+      widget: "string",
+      crowdin: true
+    },
+    {
+      name: "heading_variant",
+      widget: "select",
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      required: false,
+      default: "sm",
+    },
+    {
+      name: "blocks",
+      label: "Blocks",
+      widget: "list",
+      types: blocks,
+      default: [],
+    },
+  ],
+} satisfies CmsField; 
+
 export const topLevelBlocks = [
   {
     name: "group",
@@ -775,7 +823,7 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
@@ -794,7 +842,7 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
@@ -822,57 +870,11 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
   },
-  {
-    name: "flex_layout",
-    label: "Flex layout",
-    widget: "object",
-    fields: [
-      {
-        name: "base",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "md",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "lg",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "xl",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "heading",
-        required: false,
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "heading_variant",
-        widget: "select",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
-        required: false,
-        default: "sm",
-      },
-      {
-        name: "blocks",
-        label: "Blocks",
-        widget: "list",
-        types: blocks,
-        default: [],
-      },
-    ],
-  },
+  flexLayout,
   ...blocks,
 ] satisfies CmsFieldList["types"];

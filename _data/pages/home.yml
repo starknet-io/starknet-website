@@ -14,30 +14,77 @@ blocks:
         variant: large_card
         orientation: left
         withIllustration: false
-        title: What is Starknet?
-        icon: /assets/illustration-how-it-works.png
+        title: Unlimited Scale
+        icon: /assets/unlimited-scale.png
         type: image_icon_link_card
         link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: What is Starknet?
-        description: Starknet is a decentralized layer-2 network that enables Ethereum
-          to scale securely and dapps to achieve unlimited scale for
-          transactions and computation.
+          custom_title: Discover validity rollups
+          custom_internal_link: /learn/what-is-starknet
+        description: Starknet utilizes the power of STARK technology to ensure
+          computational integrity. By validating off-chain transactions with
+          advanced math and cryptography, Starknet overcomes Ethereum’s
+          scalability limitations. Starknet is a Validity Rollup that provides
+          unlimited scale while retaining Ethereum’s security and
+          decentralization.
         columns: "4"
+      - type: flex_layout
+        heading_variant: sm
+        blocks:
+          - size: large
+            color: orange
+            variant: large_card
+            orientation: vertical
+            withIllustration: false
+            title: Superior UX
+            icon: /assets/superior-ux.png
+            type: image_icon_link_card
+            link:
+              custom_title: Dive into native AA
+              custom_internal_link: /posts/developers/native-account-abstraction-opening-blockchain-to-new-possibilities
+            description: "Starknet offers efficient and user-friendly experiences by
+              employing Native Account Abstraction. All accounts are smart
+              accounts: their behavior is determined by their developers rather
+              than at the protocol level. This means unparalleled flexibility in
+              account management. Developers can customize their applications
+              beyond protocol constraints to elevate user experience and
+              security.  "
+            columns: "4"
+          - size: large
+            color: orange
+            variant: large_card
+            orientation: vertical
+            withIllustration: false
+            title: Thriving ecosystem
+            icon: /assets/thriving-ecosystem.png
+            type: image_icon_link_card
+            link:
+              custom_title: The growing Starknet Stack
+              custom_internal_link: /posts/ecosystem/the-starknet-stacks-growth-spurt
+            description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
+              passionate community of developers, users, and partners. With the
+              Starknet Stack evolving at an astounding pace, this vibrant
+              collective has developed the most decentralized Rollup Stack,
+              enhancing network security, censorship resistance, resilience, and
+              transparency.
+            columns: "4"
+        base: 1
+        md: 2
       - size: large
         color: orange
         variant: large_card
-        orientation: right
+        orientation: left
         withIllustration: false
-        title: How does Starknet scale Ethereum?
-        icon: /assets/illustration-scaling.png
+        title: Creativity Unleashed
+        icon: /assets/creativity-unleased.png
         type: image_icon_link_card
         link:
-          page: 93b845d7-5662-4cd4-8c13-3730440880c0
-          custom_title: How does it work
-        description: 'Starknet uses math and cryptography to securely scale Ethereum. It
-          operates as a Validity-rollup (or ZK-rollup): it "bundles" many
-          transactions and "rolls" them to Ethereum as a single transaction.'
+          custom_title: Build with Cairo
+          custom_external_link: https://www.cairo-lang.org/
+        description: Starknet devs are empowered to code solutions that make a
+          difference. Cairo, Starknet’s native smart contract language, allows
+          developers to push the boundaries of their applications by allowing
+          them to code any kind of business logic.   Building with Cairo,
+          developers can let their vision reach its full potential on Starknet.
         columns: "4"
   - type: newsletter_popup
     title: Starknet Devs Newsletter
