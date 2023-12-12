@@ -107,7 +107,7 @@ export default function CMSPage({
           </Flex>
         }
         rightAside={
-          data.template === "content" ? (
+          data.template === "content" && !data.hideToc ? (
             <TableOfContents headings={blocksToTOC(data.blocks, 1)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
           ) : null
         }
