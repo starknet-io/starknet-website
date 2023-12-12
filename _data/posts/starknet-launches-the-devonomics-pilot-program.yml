@@ -1,0 +1,216 @@
+id: 187ae4bf-0e66-4577-a522-052fb7b6536e
+post_type: article
+title: Starknet Launches the ‘Devonomics’ Pilot Program
+published_date: 2023-12-12T13:35:44.308Z
+image: /assets/devonomics.jpeg
+category: engineering
+topic:
+  - decentralization
+  - f9337f26-ae48-4f38-be86-8fe0c465ea13
+short_desc: In accordance with its vision of decentralized governance, the
+  Starknet Foundation, in collaboration with StarkWare, is launching the
+  Devonomics Pilot Program which will distribute over 1,600 ETH (over $3,500,000
+  at current prices) to Starknet developers. This constitutes approximately 10%
+  of all Starknet fees accrued from November 2021 until November 30, 2023. The
+  distribution will be done via a novel mechanism, unique to the Ethereum L2
+  landscape, that aims for fairness, inclusivity, and transparency.
+blocks:
+  - type: markdown
+    body: >-
+      #### Moving towards decentralization by supporting and empowering Starknet
+      developers
+
+
+      ## TL;DR
+
+
+      * The Starknet Foundation, in collaboration with StarkWare, is launching Devonomics, an experimental pilot program that puts Starknet developers first by rewarding and empowering them.
+
+      * Devonomics is initially allocating over 1600 ETH ($3.5M+ at time of publication), constituting 10% of all transaction fees accumulated until November 30, 2023.
+
+      * The program runs through a transparent and inclusive distribution process, unique to Ethereum’s L2 landscape.
+
+      * The end goal of Devonomics is to bolster developer participation in decision-making and the future operation of Starknet.
+
+
+      ## Overview  
+
+
+      In accordance with its [vision of decentralized governance](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), the Starknet Foundation, in collaboration with StarkWare, is launching the Devonomics Pilot Program which will distribute over 1,600 ETH (over $3,500,000 at current prices) to Starknet developers. This constitutes approximately 10% of all Starknet fees accrued from November 2021 until November 30, 2023. The distribution will be done via a novel mechanism, unique to the Ethereum L2 landscape, that aims for fairness, inclusivity, and transparency. 
+
+
+      This post provides background on Starknet, describes the details of Devonomics, and explains how it relates to Starknet’s decentralization vision. Finally, it discusses Devonomics in the broader context of other initiatives for Starknet users and developers. 
+
+
+      ## Background on Starknet
+
+
+      Since Nov ‘21, developers worldwide have worked around the clock to build and develop Starknet’s Mainnet, the first Turing-complete Validity Rollup on Ethereum. As a result, Starknet is now the largest developer ecosystem among all L2s, having grown 14% over the past year to become the [8th largest](https://www.developerreport.com/) blockchain developer community, and the leader in the L2 landscape.
+
+
+      This growth is partially explained by the mature technology stack Starknet offers. This stack is built on [STARKs](https://starkware.co/stark/) - the safest and most scalable proof system; [Cairo](https://www.cairo-lang.org/) - an ergonomic and dev-friendly smart contract language; and includes novel blockchain features like [native account abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/). 
+
+
+      Another explanation for the rapid growth of Starknet’s developer ecosystem is [its vision](https://medium.com/@starkware/part-1-starknet-sovereignty-a-decentralization-proposal-bca3e98a01ef), in which Devonomics plays a key role. 
+
+
+      ## Starknet’s Vision Reflected in Devonomics
+
+
+      Starknet’s founding vision recognized that developers are central to the network’s mission of scaling Ethereum, while retaining Ethereum’s core principles of decentralization, transparency, inclusivity, and security. 
+
+
+      By distributing fees via the Devonomics Program, Starknet is progressing according to this vision in the following ways:  
+
+
+      1. #### **Rewarding developers for operating and developing the network** 
+
+
+      Devonomics will give devs additional rewards for operating core network infrastructure or building new dApps and incentivize them to continue doing so in the future. In this sense, the program is a realization of the network’s governance vision. “A fair, open, and censorship-resistant service is only possible if several parties show up to compete to perform work that powers the decentralized service, and that can only be guaranteed if those workers are compensated for their role as operators of the network.” ([A Decentralization and Governance Proposal for Starknet](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778)) 
+
+
+      2. #### **Empowering developers to govern the network in a decentralized manner**
+
+
+      Devonomics helps those who build the network and its dApps play a prominent role in governing the network. It ensures that no single centralized entity holds sway over Starknet. It uses a reliable method for judging the level of contribution of dApps to the ecosystem, assessed by fees generated, and likewise will use reliable methods to judge the contribution of core developers. These judgements are then reflected in the strength each developer has in the governance of the ecosystem. 
+
+
+      3. #### **Maintaining and securing the network by staking**
+
+
+      In the future, all fees on Starknet will be denominated in STRK and the operation of the network will be decentralized via a Proof-of-Stake based protocol. At that time, Devonomics will enable devs to stake their STRK to participate in ensuring the liveness and security of the network, via sequencing, STARK-proving services and data availability provisioning, to name a few examples.
+
+
+      ## Overview of the Devonomics Pilot Program
+
+
+      As mentioned above, Devonomics will initially allocate 10% of Starknet transaction fees accrued from the launch of Mainnet in November 2021 until the end of November 2023. This is over 1,600 ETH (over $3,500,000 at the time of writing). 
+
+
+      This sum will be distributed by the Starknet Foundation to two cohorts of developers, (a) dApp Developers and (b) Core Developers, as follows:
+
+
+      #### Fee allocation for dApp Developers
+
+
+      **The program will distribute 8% of collected fees (over 1,200 ETH) to dApp Developers.** 
+
+
+      The value offered to users by a smart contract is reflected in the amount of fees collected by that smart contract. By allocating a fixed portion of fees to each smart contract, Starknet rewards dApp Developers objectively, transparently and fairly, in correlation with the value they offer to Starknet users. In other words, smart contracts that contribute to users’ engagement with Starknet will receive more funds. 
+
+
+      The computation of the exact allocation to each dApp is done by measuring the L1 and L2 fees paid by users of these contracts (the fee estimation algorithm has been built to ensure the inclusion of a variety of dApps and will likely be modified over time). In the future, the allocation of fees and ongoing newly minted Stark Tokens to dApp Developers will be automatically done by the Starknet protocol itself in a manner that is fair, transparent and objective.\
+
+      \
+
+      A description of the fee allocation algorithm and the list of recipient Starknet accounts can be found [here](https://www.notion.so/starkware/Devonomics-Pilot-Program-4ecf9d8ea5864bb29e347be8926932f5).
+
+
+
+
+      #### Fee allocation for Core Developers 
+
+
+      **The program will distribute 2% of collected fees (over 300 ETH) to Core Developers.**
+
+
+      While the relative value offered by dApp Developers can be assessed by the fees users pay, there is no known objective metric to compare the contribution of Core Developers, such as those who write code for provers, sequencers, full nodes, long-term storage providers, etc. Therefore some human discretion is needed. However, having a single central entity assigning a fixed portion of fees to Core Developers would be arbitrary and open to favoritism. With this in mind, we are conducting research on the best practices to evaluate contributions in a fair, transparent, and efficient manner, and we are learning from existing mechanisms in the blockchain space. 
+
+
+      For the current Pilot Program, we decided to put the responsibility for recommending the assignment of funds to Core Developers in the hands of the very dApp Developers who receive fees from the program. We made this decision in order to have a simple yet reliable mechanism for the Pilot Program, as dApp Developers are familiar with core projects and their contribution to Starknet. 
+
+
+      In other words, during the Pilot Program, each dApp Developer will be asked to recommend how to allocate an additional 25% of fee revenue on top of what they have received. Thereby, an additional 2% of fees collected by Starknet (over 300 ETH) will be apportioned by dApp Developers to Core Developers whose work they value.
+
+
+      Example: Suppose Alice, a dApp Developer, is set to receive 8 ETH. As part of the claiming process, Alice will be asked to recommend how to allocate a separate amount of 2 ETH (i.e., 25% of her allocated amount), to Core Developers, at arm’s length. To clarify, this amount of 2 ETH is separate from, and additional to, the 8 ETH that Alice receives as a dApp Developer, and is paid directly from the Starknet Foundation to the Core Developers.
+
+
+      Further restrictions appear in the “Fine Print” section below. 
+
+
+      ## Other Starknet Initiatives for Users and Developers 
+
+
+      Devonomics is one of several complementary initiatives that reflect Starknet’s commitment to decentralization. These initiatives seek to empower important network stakeholders who have contributed in the past to Starknet’s success, and ensure that present and future stakeholders continue to maintain Starknet as a public good. Previous Starknet Foundation initiatives include:
+
+
+      * [The Early Adopter Grant (EAG) Program](https://community.starknet.io/t/announcing-round-1-of-early-adopter-grants-eag/54269)
+
+      * [The Early Community Member Program (ECMP)](https://community.starknet.io/t/announcing-the-early-community-member-program/102092) 
+
+      * Developer Partnerships (DPs) 
+
+      * Grants to Individual Contributors
+
+
+      Regarding user-facing initiatives, the upcoming first round of Provisions, the first of several rounds, will initiate Starknet’s user-focused decentralization efforts. Future user-oriented initiatives include rebates denominated in STRK on transactions performed, and other mechanisms that recognize and reward the contribution of users to the network.
+
+
+      Finally, in the near future there is expected to be a significant reduction in fees, a benefit to all ecosystem users.
+
+
+      ## Summary
+
+
+      The Devonomics Pilot Program is an important step in Starknet’s progress towards a fully decentralized ecosystem in both its tech stack and the processes that govern it. Put simply, it is a bold experiment in building and sustaining a decentralized community.
+
+
+      By allocating 10% of transaction fees to developers, the program seeks to encourage the growth of the Starknet community and bolster the role developers play in the network’s decision making processes. As the program is expected to change over time, developers are encouraged to actively participate and explore this exciting space together by providing feedback to shape the pilot program’s evolution into something more robust and permanent.
+
+
+      Want to join the discussion about the Devonomics Pilot? Join our [community forum](https://community.starknet.io/) and follow [Starknet on X](https://twitter.com/Starknet).
+
+
+      To become a member of Starknet’s community, get started with the [Starknet Book](https://book.starknet.io/) and [Cairo Book](https://book.cairo-lang.org/). 
+
+
+      \
+
+      —----------
+
+
+      Fine Print 
+
+
+      * At the moment, there is no need to reach out to the Starknet Foundation or any other party in the Starknet ecosystem regarding participation in the program. The Starknet Foundation will initially reach out to projects directly and later on share details on how to receive fee allocations through the program.
+
+
+
+
+      * Fees in the first phase of the program will be paid in ETH, and, when relevant after the launch of Starknet v0.13.0, in both ETH and STRK. Generally speaking, Devonomics will be denominated in the token(s) used to pay transaction fees on Starknet. 
+
+
+
+
+      * It should be noted that the Devonomics mechanism is not supposed to replace sustainable business models for projects. In particular, it may be modified over time and may be terminated at any point in time based on an evaluation of its benefit to the Starknet ecosystem.
+
+
+
+
+      * The mechanisms for allocating fees to both dApp and Core Developers will be modified over time, to improve transparency, fairness and efficiency. 
+
+
+
+
+      * The fraction distributed is very likely to change over time, e.g., following events such as future fee reductions on Starknet due to greater efficiency and scale, the introduction of EIP-4844, introduction of a fee market to Starknet and modification of the Starknet gas computation model. The percentage may also evolve based on community feedback and other factors.
+
+      * The Starknet Foundation will strive to allocate fees in accordance with the outlined pilot program. However, final discretion on all payments will be left to the Starknet Foundation, to accommodate regulatory and financial obligations.
+
+      * The Devonomics Pilot Program has a total budget of 8% for dApps and 2% for Core Developers, but this does not create a current or future commitment, legal or otherwise, to allocate to any dApp 8% of the fees collected through such dApp. The exact computation method for the Pilot Program is merely an attempt to approximate a fair allocation. 
+
+
+
+
+      * The claiming threshold for receiving fees in this round is set at 0.1ETH. In case this threshold is not reached, fees will accumulate and roll over to the next distribution date until the threshold is met.
+
+
+
+
+      ## FAQs Section: 
+
+
+      What do I need to do to receive Devnomics?
+
+
+      Nothing, at the moment. The Starknet Foundation will release further details at a later point in time and will contact the relevant projects.
