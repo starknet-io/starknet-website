@@ -54,7 +54,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
                 {mainMenuItem.columns?.map((column, columnIndex) => (
                   <Box key={columnIndex}>
                     {column.blocks?.map((block, blockIndex) => (
-                      <Box key={blockIndex}>
+                      <Stack key={blockIndex} spacing="4">
                         {block.items?.map((item, itemIndex) => {
                           if (
                             item.hide_from_footer ||
@@ -88,7 +88,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
                             </FooterComponent.FooterLink>
                           );
                         })}
-                      </Box>
+                      </Stack>
                     ))}
                   </Box>
                 ))}
