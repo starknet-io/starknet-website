@@ -1,0 +1,86 @@
+id: 2519fa53-5701-48b3-b84d-f9c1c450b83f
+post_type: video
+title: DEX Aggregators on Starknet
+published_date: 2023-11-29T13:38:38.513Z
+video:
+  url: https://www.youtube.com/watch?v=R_Cy-DNVmeE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
+  id: R_Cy-DNVmeE
+  data:
+    kind: youtube#video
+    etag: 0HZJto-MsFboW_hplBz4aRBQnG8
+    id: R_Cy-DNVmeE
+    snippet:
+      publishedAt: 2023-11-28T13:47:01Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: DEX Aggregators on Starknet
+      description: >-
+        Discover how DEX aggregators are transforming the way we trade
+        cryptocurrencies, offering enhanced efficiency, improved liquidity, and
+        reduced slippage.
+
+
+        Check out AVNU https://www.avnu.fi/ and Fibrous https://fibrous.finance/
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/R_Cy-DNVmeE/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/R_Cy-DNVmeE/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/R_Cy-DNVmeE/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/R_Cy-DNVmeE/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/R_Cy-DNVmeE/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: DEX Aggregators on Starknet
+        description: >-
+          Discover how DEX aggregators are transforming the way we trade
+          cryptocurrencies, offering enhanced efficiency, improved liquidity,
+          and reduced slippage.
+
+
+          Check out AVNU https://www.avnu.fi/ and Fibrous https://fibrous.finance/
+
+
+          https://starkware.co/
+
+          https://www.starknet.io/en
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1M45S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/dex-aggregators-on-starknet.png
+category: stark-math
+topic:
+  - defi
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: >
+  Discover how DEX aggregators are transforming the way we trade
+  cryptocurrencies, offering enhanced efficiency, improved liquidity, and
+  reduced slippage.
+seoFocusKeywords:
+  - DEX Aggregators
+  - DeFi
