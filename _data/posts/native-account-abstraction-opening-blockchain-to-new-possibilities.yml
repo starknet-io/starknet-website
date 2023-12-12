@@ -14,17 +14,10 @@ blocks:
   - type: group
     blocks:
       - type: markdown
+        body: "##### Smooth UX, innovative technology, increased adoption"
+      - type: markdown
         body: >-
-          ##### Smooth UX, innovative technology, increased adoption
-
-
-          ##  
-
-
-          ##  
-
-
-          ## **TL;DR** 
+          ##  **TL;DR** 
 
 
           * Blockchain’s journey to the heart of the mainstream hit a wall: security and UX limits created a barrier to introducing blockchain to a wider audience of Web 2 users. 
