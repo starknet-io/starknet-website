@@ -1,0 +1,79 @@
+id: f3f5e09e-e5c8-4373-928c-16d69d0a76af
+post_type: video
+title: "Madara community call #6"
+published_date: 2023-12-03T13:59:24.629Z
+video:
+  url: https://www.youtube.com/watch?v=SIYskFL-qL0
+  id: SIYskFL-qL0
+  data:
+    kind: youtube#video
+    etag: nje9nJfS2LJYWYAnXQc7p1OgUNA
+    id: SIYskFL-qL0
+    snippet:
+      publishedAt: 2023-06-02T16:38:42.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/SIYskFL-qL0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/SIYskFL-qL0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/SIYskFL-qL0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/SIYskFL-qL0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/SIYskFL-qL0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      title: "Madara community call #6"
+      categoryId: "22"
+      localized:
+        title: "Madara community call #6"
+        description: |-
+          Agenda
+          Backlog Review and Task Updates from Contributors
+          Plan for Cairo 1.0 support (@tdelabro)
+          Coding practices (@abdelhamidbakhta) -
+          Benchmark infrastructure (@ClementWalter)
+          Deep dive on starknet_getEvents (@greged93 )
+          Deep dive on starknet_addInvokeTransaction (@drspacemn)
+      description: |-
+        Agenda
+        Backlog Review and Task Updates from Contributors
+        Plan for Cairo 1.0 support (@tdelabro)
+        Coding practices (@abdelhamidbakhta) -
+        Benchmark infrastructure (@ClementWalter)
+        Deep dive on starknet_getEvents (@greged93 )
+        Deep dive on starknet_addInvokeTransaction (@drspacemn)
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+    contentDetails:
+      duration: PT1H20M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-call-6.png
+category: community-and-events
+topic:
+  - cairo
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+short_desc: |-
+  Agenda:
+  1. Backlog Review and Task Updates from Contributors
+  2. Plan for Cairo 1.0 support (@tdelabro)
+  3. Coding practices (@abdelhamidbakhta) -
+  4. Benchmark infrastructure (@ClementWalter)
+  5. Deep dive on starknet_getEvents (@greged93 )
+  6. Deep dive on starknet_addInvokeTransaction (@drspacemn)

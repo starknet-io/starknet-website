@@ -1,0 +1,73 @@
+id: 66a13c0d-d42d-4ea6-818b-9b5701ce6a68
+post_type: video
+title: "Satoru Community Call #1"
+published_date: 2023-12-03T12:53:59.468Z
+video:
+  url: https://www.youtube.com/watch?v=Yo4-P40-K5I
+  id: Yo4-P40-K5I
+  data:
+    kind: youtube#video
+    etag: DeCquhjtRSvQhUEh5LZz3OuKO-0
+    id: Yo4-P40-K5I
+    snippet:
+      publishedAt: 2023-09-21T14:35:40.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Yo4-P40-K5I/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Yo4-P40-K5I/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Yo4-P40-K5I/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Yo4-P40-K5I/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Yo4-P40-K5I/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      title: "Satoru Community Call #1"
+      categoryId: "22"
+      localized:
+        title: "Satoru Community Call #1"
+        description: |-
+          #starknet #ethereum #gmx
+          Kick off intro (@abdelhamidbakhta)
+          What is GMX and how to use it ? (@sparqet)
+          Satoru architecture deep dive (@zarboq)
+          Sharing experience on building a frontend for GMX (@nissoh)
+          Issue backlog
+      description: |-
+        #starknet #ethereum #gmx
+        Kick off intro (@abdelhamidbakhta)
+        What is GMX and how to use it ? (@sparqet)
+        Satoru architecture deep dive (@zarboq)
+        Sharing experience on building a frontend for GMX (@nissoh)
+        Issue backlog
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+    contentDetails:
+      duration: PT1H9M6S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/satoru-community-call-1.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+short_desc: |
+  1. Kick off intro (@abdelhamidbakhta)
+  2. What is GMX and how to use it ? (@sparqet)
+  3. Satoru architecture deep dive (@zarboq)
+  4. Sharing experience on building a frontend for GMX (@nissoh)
+  5. Issue backlog

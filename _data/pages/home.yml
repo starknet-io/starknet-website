@@ -87,8 +87,8 @@ blocks:
           developers can let their vision reach its full potential on Starknet.
         columns: "4"
   - type: newsletter_popup
-    title: Starknet newsletter
-    description: "Sign up to receive the latest news and updates from Starknet. "
+    title: Starknet Devs Newsletter
+    description: Stay up to date on Starknet news and version updates.
   - type: flex_layout
     heading_variant: h3
     base: 1

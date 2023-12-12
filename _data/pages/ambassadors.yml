@@ -178,6 +178,8 @@ blocks:
         discord: Louthing#3654
         tags:
           - tag: Event organizer
+          - tag: Event speaker
+          - tag: Content generator
         image: /assets/louthing-final.png
       - full_name: Nurstar
         title: Content Creator and Community Builder

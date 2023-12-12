@@ -1,0 +1,56 @@
+id: c74b6e04-c5e9-4b50-ba99-084237bc52c1
+post_type: video
+title: "Madara Community Call #12"
+published_date: 2023-12-03T14:47:14.553Z
+video:
+  url: https://www.youtube.com/watch?v=xkz7jKOaKd0
+  id: xkz7jKOaKd0
+  data:
+    kind: youtube#video
+    etag: aYtOCqAyNbaigxFVZLqRASV8dKU
+    id: xkz7jKOaKd0
+    snippet:
+      publishedAt: 2023-10-04T16:50:38Z
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+      title: "Madara Community Call #12"
+      description: "Join the Akatsuki: https://github.com/keep-starknet-strange/madara"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/xkz7jKOaKd0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/xkz7jKOaKd0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/xkz7jKOaKd0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/xkz7jKOaKd0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/xkz7jKOaKd0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: "Madara Community Call #12"
+        description: "Join the Akatsuki: https://github.com/keep-starknet-strange/madara"
+    contentDetails:
+      duration: PT50M4S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-call-12.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
