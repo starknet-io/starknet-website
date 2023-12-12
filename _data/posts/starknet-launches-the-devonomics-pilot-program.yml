@@ -90,6 +90,8 @@ blocks:
       This sum will be distributed by the Starknet Foundation to two cohorts of developers, (a) dApp Developers and (b) Core Developers, as follows:
 
 
+
+
       #### Fee allocation for dApp Developers
 
 
@@ -108,7 +110,7 @@ blocks:
 
 
 
-      #### Fee allocation for Core Developers 
+      #### Fee allocation for Core Developers
 
 
       **The program will distribute 2% of collected fees (over 300 ETH) to Core Developers.**
@@ -175,23 +177,11 @@ blocks:
 
       * At the moment, there is no need to reach out to the Starknet Foundation or any other party in the Starknet ecosystem regarding participation in the program. The Starknet Foundation will initially reach out to projects directly and later on share details on how to receive fee allocations through the program.
 
-
-
-
       * Fees in the first phase of the program will be paid in ETH, and, when relevant after the launch of Starknet v0.13.0, in both ETH and STRK. Generally speaking, Devonomics will be denominated in the token(s) used to pay transaction fees on Starknet. 
-
-
-
 
       * It should be noted that the Devonomics mechanism is not supposed to replace sustainable business models for projects. In particular, it may be modified over time and may be terminated at any point in time based on an evaluation of its benefit to the Starknet ecosystem.
 
-
-
-
       * The mechanisms for allocating fees to both dApp and Core Developers will be modified over time, to improve transparency, fairness and efficiency. 
-
-
-
 
       * The fraction distributed is very likely to change over time, e.g., following events such as future fee reductions on Starknet due to greater efficiency and scale, the introduction of EIP-4844, introduction of a fee market to Starknet and modification of the Starknet gas computation model. The percentage may also evolve based on community feedback and other factors.
 
@@ -199,18 +189,13 @@ blocks:
 
       * The Devonomics Pilot Program has a total budget of 8% for dApps and 2% for Core Developers, but this does not create a current or future commitment, legal or otherwise, to allocate to any dApp 8% of the fees collected through such dApp. The exact computation method for the Pilot Program is merely an attempt to approximate a fair allocation. 
 
-
-
-
       * The claiming threshold for receiving fees in this round is set at 0.1ETH. In case this threshold is not reached, fees will accumulate and roll over to the next distribution date until the threshold is met.
 
 
+      ## FAQs: 
 
 
-      ## FAQs Section: 
-
-
-      What do I need to do to receive Devnomics?
+      **What do I need to do to receive Devnomics?**
 
 
       Nothing, at the moment. The Starknet Foundation will release further details at a later point in time and will contact the relevant projects.
