@@ -218,7 +218,7 @@ export interface Page extends Meta {
   readonly link: string;
   readonly title: string;
   readonly show_title?: boolean;
-  readonly toc?: boolean;
+  readonly hideToc?: boolean;
   readonly template: "landing" | "content" | "narrow content";
   readonly tocCustomTitle?: string;
   readonly hidden_page: boolean;
