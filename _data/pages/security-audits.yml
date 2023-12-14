@@ -63,6 +63,9 @@ blocks:
         website_url: https://beosin.com/
         twitter: https://x.com/Beosin_com
         discord: https://discord.com/invite/DBBcJN4atM
+      - title: OtterSec
+        website_url: https://osec.io/
+        twitter: https://twitter.com/osec_io
   - type: card_list
     randomize: true
     title: Bug Bounty Program
