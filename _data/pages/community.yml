@@ -58,9 +58,10 @@ blocks:
         link:
           custom_internal_link: ""
           custom_title: View
-          page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
-        description: Explore Starknet governance - participate in the discussions,
-          become a delegate.
+          page: ""
+          custom_external_link: https://governance.starknet.io/
+        description: Explore Starknet governance - participate in discussions, become a
+          delegate, and vote.
         columns: "4"
       - size: large
         color: blue-default
