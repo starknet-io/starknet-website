@@ -34,6 +34,7 @@ router.get("/*.svg", ittyAssetshandler);
 router.get("/*.ico", ittyAssetshandler);
 router.get("/*.txt", ittyAssetshandler);
 router.get("/assets/*", ittyAssetshandler);
+router.get("/sitemap.xml", ittyAssetshandler);
 
 router.all("/data/*", preflight);
 router.get("/data/*", async (req, context: EventContext<{}, any, Record<string, unknown>>) => {
