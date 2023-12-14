@@ -1,6 +1,6 @@
 import { renderToStream } from "react-streaming/server";
 import { escapeInject } from "vite-plugin-ssr/server";
-import { DocumentProps, PageContextServer, SeoType } from "./types";
+import { PageContextServer, SeoType } from "./types";
 import { PageShell } from "./PageShell";
 import { getDefaultPageContext } from "./helpers";
 import type { InjectFilterEntry } from "vite-plugin-ssr/types";
@@ -56,11 +56,11 @@ export async function render(pageContext: PageContextServer) {
   const image =
     documentProps?.image ??
     `${import.meta.env.VITE_SITE_URL}/assets/share/generic_landing.png`;
-  
+
   const focusKeywords = pageSeo?.seoFocusKeywords as string[]
 
   const documentHtml = escapeInject`<!DOCTYPE html>
-  <html>
+  <html lang="en">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -81,7 +81,7 @@ export async function render(pageContext: PageContextServer) {
       <meta property="og:video:height" content="720">
       <meta property="og:video:width" content="1280">
 
-      
+
       <!-- Twitter -->
       <meta property="twitter:card" content=${
         documentProps?.video ? "player" : "summary_large_image"
@@ -94,7 +94,7 @@ export async function render(pageContext: PageContextServer) {
       <meta property="twitter:player" content="${documentProps?.video || ""}">
       <meta property="twitter:player:height" content="720">
       <meta property="twitter:player:width" content="1280">
-      
+
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}"></script>
       <script>
