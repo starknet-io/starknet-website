@@ -102,4 +102,6 @@ blocks:
         twitter: https://twitter.com/drpcorg
         website_url: https://drpc.org/public-endpoints/starknet
         discord: https://drpc.org/discord
+        description: DRPC is a decentralized network of RPC endpoints with unlimited
+          scalability supporting 29+ chains.
     randomize: true
