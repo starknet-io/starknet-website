@@ -60,6 +60,9 @@ blocks:
           alert.
         title: Beosin
         image: /assets/beosin-logo.jpg
+        website_url: https://beosin.com/
+        twitter: https://x.com/Beosin_com
+        discord: https://discord.com/invite/DBBcJN4atM
   - type: card_list
     randomize: true
     title: Bug Bounty Program
