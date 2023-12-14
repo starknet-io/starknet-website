@@ -54,7 +54,7 @@ blocks:
             variant: large_card
             orientation: vertical
             withIllustration: false
-            title: Thriving ecosystem
+            title: Thriving Ecosystem
             icon: /assets/thriving-ecosystem.png
             type: image_icon_link_card
             link:
