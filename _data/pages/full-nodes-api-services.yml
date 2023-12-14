@@ -97,4 +97,9 @@ blocks:
         link_url: https://chainbase.com/chainNetwork/Starknet
         website_url: https://chainbase.com/chainNetwork/Starknet
         image: /assets/logo_icon_black_512.png
+      - title: DRPC
+        image: /assets/f9yrudg__400x400.jpg
+        twitter: https://twitter.com/drpcorg
+        website_url: https://drpc.org/public-endpoints/starknet
+        discord: https://drpc.org/discord
     randomize: true
