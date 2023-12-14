@@ -55,6 +55,11 @@ blocks:
           Web3 / ZKP companies.
         link_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
+      - description: Beosin provides one-stop blockchain security solutions for projects
+          on Starknet including security audit, on-chain risk monitoring and
+          alert.
+        title: Beosin
+        image: /assets/beosin-logo.jpg
   - type: card_list
     randomize: true
     title: Bug Bounty Program
