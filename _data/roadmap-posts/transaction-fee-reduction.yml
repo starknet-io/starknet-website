@@ -1,7 +1,7 @@
 id: 594d24ff-022b-424b-abb7-6605bb6940e3
 title: Transaction Fee Reduction
 availability: Q1 2024
-version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
+version: 68080885-a1b0-492b-8d5b-181a2abbcd51
 stage: building-now
 blocks:
   - type: markdown
