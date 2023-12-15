@@ -1,21 +1,18 @@
-id: 93b845d7-5662-4cd4-8c13-3730440880c0
-title: What is Starknet?
-template: content
+month: December 2023
+hideToc: true
 parent_page: /learn/
-breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: page_header
     title: "What is Starknet? "
   - type: markdown
-    body: >-
-      ## I﻿ntroduction
+    body: >
+      Starknet is a Validity-Rollup (aka ZK-Rollup) Layer 2 network that
+      operates on top of Ethereum, enabling dApps to massively scale without
+      compromising on security.
 
 
-      Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security
-
-
-      Given a sudoku puzzle, verifying a solution is easier than solving from scratch. If our goal is to convince people of the statement “this puzzle has been solved”, we can save a lot of computation by having one person compute a solution and then propagate it for others to verify. In this strategy, each computation of a solution becomes a one-time event which does not require replication by society. In a similar vein, Starknet scales Ethereum by replacing heavy L1 computation with lighter (hence cheaper!) L1 verification using STARK proofs computed off-chain.
+      It achieves this by bundling transactions into an off-chain computed STARK proof. This proof is then submitted to Ethereum as a single transaction, resulting in significantly higher throughput, faster processing times, and much lower costs, all while retaining the robust security of the Ethereum settlement layer.
   - type: video_section
     scaling-eth:
       title: How Starknet Scales Ethereum
@@ -86,3 +83,25 @@ blocks:
           custom_external_link: https://www.youtube.com/watch?v=QPNp8w9rx7o
         subLabel:
           label: "Eli-Ben Sasson "
+toc: false
+city: Bangalore
+start_date: 2023-12-01T07:00:52.336Z
+name: ZK Bankai Hacker House
+url: https://fat-kiss-zk.notion.site/fat-kiss-zk/zk-Bankai-Hacker-House-dd5d8f5e8c464237b98e654cc16bd538
+breadcrumbs: false
+end_date: 2023-12-07T16:00:52.343Z
+location: asia
+country: India
+id: 93b845d7-5662-4cd4-8c13-3730440880c0
+title: What is Starknet?
+template: content
+type: conference
+image: /assets/0xabix_bleach_anime_poster_with_soul_reapers_shown_as_computer__febdbfb1-942a-4cbe-bc94-6903f76c609c.png
+description: zk - Bankai is hosting a hacker house for serious hand-picked zk
+  Builders from the Indian builder community. The house will be hosted from
+  December 1 - December 7 in the coolest Web3 hub in Bangalore, Karnataka. Zo
+  World (https://zo.xyz/) hosts core Web3 builders, developers and founders in
+  its space.   The idea is simple, get the best people in the zk space and put
+  them under one roof, see what comes out of it? zk bankai is a community of 35
+  people currently, and we’ll be inviting about 30 hackers IRL for the Hacker
+  house.

@@ -64,5 +64,6 @@ _crowdin
 *.__*
 dist
 public/data
+public/sitemap.xml
 !_crowdin/translation
 .wrangler/

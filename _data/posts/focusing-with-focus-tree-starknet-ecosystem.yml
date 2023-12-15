@@ -1,0 +1,89 @@
+id: 1699b694-b9d4-4099-8478-8c695d62d229
+post_type: video
+title: Focusing with Focus Tree - Starknet Ecosystem
+published_date: 2023-11-29T13:35:15.214Z
+video:
+  url: https://www.youtube.com/watch?v=m4Dxu4W3CJw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=4
+  id: m4Dxu4W3CJw
+  data:
+    kind: youtube#video
+    etag: Nq9XdpK5gtOErGtyQUEHURlTpV4
+    id: m4Dxu4W3CJw
+    snippet:
+      publishedAt: 2023-11-29T12:43:37Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Focusing with Focus Tree - Starknet Ecosystem
+      description: >-
+        Join us in discovering Focus Tree, the gamified solution designed to
+        improve your focus. See how building gardens and earning Tiles can help
+        you maintain concentration in a digital world. 
+
+        Ready for a healthier tech relationship? 
+
+
+        Download here: https://www.focustree.app/
+
+
+        Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/m4Dxu4W3CJw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/m4Dxu4W3CJw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/m4Dxu4W3CJw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/m4Dxu4W3CJw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/m4Dxu4W3CJw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Focusing with Focus Tree - Starknet Ecosystem
+        description: >-
+          Join us in discovering Focus Tree, the gamified solution designed to
+          improve your focus. See how building gardens and earning Tiles can
+          help you maintain concentration in a digital world. 
+
+          Ready for a healthier tech relationship? 
+
+
+          Download here: https://www.focustree.app/
+
+
+          Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1M8S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/focusing-with-focus-tree-starknet-ecosystem.png
+category: stark-math
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+short_desc: >-
+  Join us in discovering Focus Tree, the gamified solution designed to improve
+  your focus. See how building gardens and earning Tiles can help you maintain
+  concentration in a digital world. 
+
+  Ready for a healthier tech relationship? 
+
+
+  Download here: https://www.focustree.app/
+seoFocusKeywords:
+  - On-chain Gaming

@@ -1,0 +1,120 @@
+id: 398267b5-cce8-4bb0-8ef3-43e2f426b6c6
+post_type: article
+title: Starknet Builders’ Council Modus Operandi
+toc: true
+published_date: 2023-11-22T07:58:45.407Z
+image: /assets/builders-council.jpg
+category: governance
+topic:
+  - f9337f26-ae48-4f38-be86-8fe0c465ea13
+  - 36d7bb3d-99ff-45e5-aefb-329bceb17365
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          
+
+          Starknet’s Builders’ Council was established on December 5th, 2022, as an integral component of the [1st Phase of Starknet Governance](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase). It stands as an assembly of Starknet builders deeply committed to making well-informed technical decisions that will support and maintain Starknet and its ecosystem.
+
+
+          As of August 29th, 2023, the Builders Council has been entrusted with a voting power delegation amounting to 1.2 billion tokens. This delegation represents a substantial 23.3% of the total voting power within the 1st Phase of Governance. This allocation underscores the Council's crucial role in shaping the future direction of the Starknet ecosystem.
+
+
+          ## Role of the Builders’ Council
+
+
+          The Builders’ Council plays a vital role within the Starknet ecosystem and governance mechanisms, characterized by the following key responsibilities:
+
+
+          1. Informed decision-making: The Council conducts comprehensive learning and deliberation processes for each proposed decision. The primary objective is to arrive at well-reasoned and expertly informed decisions that will benefit Starknet.
+
+          2. Advocacy for the community: The Council actively engages in discussions and voting processes, representing the interests and perspectives of Starknet community members.
+
+          3. Transparency: The Council operates in a transparent manner. It ensures that the Council's discussions, decisions, and activities are made accessible and comprehensible to the broader community.
+
+          4. Alignment with vision and values: The Council ensures that the decisions it makes are fully aligned with Starknet's vision and core values.
+
+
+          For further information about the Builders’ Council’s role read the [Mission Statement](https://community.starknet.io/t/starknet-builders-council-mission-statement/4045), published on December 14th, 2022.
+
+
+          ## Practical Aspects
+
+
+          ### Code of Conduct
+
+
+          In order to foster a community characterized by respect, inclusivity, and safety, all members of the Builders’ Council are expected to adhere to the following principles:
+
+
+          1. Active Participation: Members are expected to actively engage in discussions and decision-making processes.
+
+          2. Accessibility: Members should remain accessible to the community through open discussions on the Starknet community forum.
+
+          3. Ethical Behavior: Members should uphold the highest standards of ethics, integrity, professionalism, and accountability in all their interactions.
+
+          4. Positive Communication: Members are encouraged to contribute to a positive and respectful culture of communication.
+
+          5. Respect and Non-discrimination: Members are expected to conduct themselves in a respectful manner that promotes diversity and inclusivity. Members must refrain from engaging in any form of disrespect, including but not limited to hate speech, racism, misogyny, gender-based hatred, ageism, religious discrimination, discrimination based on sexual orientation, ableism, or ad hominem attacks.
+
+          6. Non-Violence: Members are expected to avoid promoting or endorsing physical or verbal violent behavior, or any actions that may cause harm.
+
+          7. No Abuse of Position: Members must not exploit their position within the Council to promise retribution or undue advantages to others.
+
+          8. Conflict of Interests: Members are required to declare and, when necessary, withdraw from participation in cases where a conflict of interest arises.
+
+          9. Confidentiality: Sensitive information obtained during discussions must remain confidential and must not be disclosed.
+
+
+          Adherence to these principles is essential to maintaining the integrity and effectiveness of the Builders’ Council and fostering a harmonious and productive community.
+
+
+          ### Tooling for Members
+
+
+          1. Discussion and voting Platform: Members of the Builders’ Council will gain access to a designated forum for organized discussions. Currently, this forum is hosted on a dedicated Telegram channel. Voting will occur through pre-announced video calls. Please note that the platforms for discussions and voting may evolve over time to better suit the Council's needs.
+
+          2. Multisig execution: The Builders’ Council uses a Safe multisignature wallet to receive delegated voting power from the Starknet Foundation and to execute on the Council’s decisions. Each Council member serves as a signer on the Safe, ensuring collective participation in the decision’s execution. After a vote, the consensus reached on a vote will be translated into a multisignature execution: a transaction will be created on the Safe, and approved by a simple majority of signers.
+
+
+          Upon departing from the Council, access to these tools, as well as any forthcoming tools, will be promptly revoked.
+
+
+          ## Council Curation
+
+
+          ### Appointing Members
+
+
+          Currently, members of the Builders’ Council are appointed by the Starknet Foundation or its authorized representative, in accordance with the recommendations or proposals put forth by the [Governance Committee](https://www.starknet.io/en/posts/foundation-and-governance/the-starknet-foundation-meet-the-committees).
+
+
+          As of the present, the Builders’ Council comprises 16 members, with plans for future expansion to a maximum membership cap of 20 members. Further details regarding the nomination and appointment procedures will be communicated in the near future.
+
+
+          ### Member Resignation
+
+
+          Any Council member retains the prerogative to resign from their position at any time by formally declaring their resignation or by quitting the forum for discussions.
+
+
+          In such cases, the appointment of a new Council member may be contingent upon circumstances and requirements. Additionally, any departing member shall, as needed, provide assistance in any Safe multisig transition.
+
+
+          ### Member Removal 
+
+
+          Non-adherence to the established code of conduct or failure to fulfill one's obligations may lead to the removal of a member. In such cases, the appointment of a new Council member may be contingent upon the decision made by the Starknet Foundation or its authorized representative, following the recommendations put forth by the Governance Committee.
+
+
+          ### Quorum and Majority
+
+
+          In Starknet’s 1st Phase of governance, no minimum quorum is mandated, and all voting procedures will be decided by a simple majority among those who voted. This decision is then translated into a Safe transaction and approved by the signers, as explained in the previous section.
+
+
+          ## Amendment of the Modus Operandi
+
+
+          The modus operandi, as delineated on November 22nd, 2023, encapsulates Starknet’s current governance state and the present comprehension of the means to establish an activa, engaged, and proficient Council. We are collectively engaged in an ongoing process of learning and improvement with the aim of enhancing our operations. Consequently, the modus operandi is anticipated to undergo refinement and development as we progress.

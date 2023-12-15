@@ -7,36 +7,40 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: |-
-      ## Starknet logo kit
+      ## Starknet brand assets
 
       ![](/assets/sn_logo_banner.png)
   - type: link_list
     heading: ""
-    listSize: "lg"
+    listSize: lg
     blocks:
       - link:
-          custom_title: SVG only
+          custom_title: SVG format logos
           custom_internal_link: /assets/starknet-logos-svg.zip
       - link:
-          custom_title: PNG only
+          custom_title: PNG format logos
           custom_internal_link: /assets/starknet-logos-png.zip
       - link:
-          custom_title: Complete kit
+          custom_title: Complete logo kit
           custom_internal_link: /assets/starknet-logos-complete.zip
+      - link:
+          hasIcon: true
+          custom_title: Starknet Brand Book
+          custom_internal_link: /assets/starknet-community-brand-book-2023.zip
   - type: markdown
     body: |-
       ## Cairo logo kit
 
       ![](/assets/cairo_logo_banner.png)
   - type: link_list
-    listSize: "lg"
+    listSize: lg
     blocks:
       - link:
-          custom_title: SVG only
+          custom_title: SVG format logos
           custom_internal_link: /assets/cairo-logos-svg.zip
       - link:
-          custom_title: PNG only
+          custom_title: PNG format logos
           custom_internal_link: /assets/cairo-logos-png.zip
       - link:
-          custom_title: Complete kit
+          custom_title: Complete logo kit
           custom_internal_link: /assets/cairo-logos-complete.zip

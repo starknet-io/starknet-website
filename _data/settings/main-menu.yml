@@ -27,6 +27,10 @@ items:
                 custom_title: Tools & resources
               - custom_title: Developers blog
                 custom_internal_link: /posts/developers
+              - custom_title: Starknet Devs Newsletter
+                custom_internal_link: /subscribe-newsletter
+                custom_external_link: ""
+                page: ""
   - title: Ecosystem
     columns:
       - blocks:
@@ -53,8 +57,8 @@ items:
                 custom_title: Events
               - custom_internal_link: /jobs
                 custom_title: Ecosystem jobs
-              - page: 3a3c4592-f9a7-4ccc-b672-50ea6a4ab2b3
-                custom_title: Governance
+              - custom_title: Governance
+                custom_external_link: https://governance.starknet.io/
               - custom_internal_link: ""
                 custom_title: Ambassador program
                 page: 5ecdf9cf-d433-478a-a280-07e0f860534f
@@ -84,7 +88,7 @@ items:
           - title: Content
             items:
               - custom_internal_link: /posts/
-                custom_title: All blog posts
+                custom_title: All content
               - custom_title: Community & events
                 custom_internal_link: /posts/events-and-webinars
                 hide_from_footer: true
@@ -101,8 +105,9 @@ items:
                 custom_internal_link: /posts/foundation
                 hide_from_footer: true
               - custom_title: Governance
-                custom_internal_link: /posts/governance
+                custom_internal_link: ""
                 hide_from_footer: true
+                custom_external_link: https://governance.starknet.io/
               - custom_title: Tutorials & guides
                 custom_internal_link: /posts/tutorials-and-guides
                 hide_from_footer: true

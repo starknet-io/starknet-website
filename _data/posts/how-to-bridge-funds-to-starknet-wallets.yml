@@ -1,0 +1,89 @@
+id: 3e37e5ad-e621-43fe-be84-85e3cd0f861a
+post_type: video
+title: How to bridge funds to Starknet - Wallets
+published_date: 2023-12-04T14:38:18.036Z
+video:
+  url: https://www.youtube.com/watch?v=NKu3VSwCAAw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=6
+  id: NKu3VSwCAAw
+  data:
+    kind: youtube#video
+    etag: wBnOLSG9KFPvOwlIMCWsrWP_bMw
+    id: NKu3VSwCAAw
+    snippet:
+      publishedAt: 2023-12-04T13:51:32Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: How to bridge funds to Starknet - Wallets
+      description: >-
+        Welcome to our tutorial on getting started with Starknet! In this video,
+        we'll guide you through the essentials of Starknet, a permissionless
+        decentralized rollup focused on bringing scale to Ethereum. 
+
+
+        For more details, visit this blog post: https://starkware.co/resource/getting-started-using-starknet-setting-up-a-starknet-wallet/
+
+
+        https://starkgate.starknet.io/
+
+
+        https://www.starknet.io/en
+
+        https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/NKu3VSwCAAw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/NKu3VSwCAAw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/NKu3VSwCAAw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/NKu3VSwCAAw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/NKu3VSwCAAw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: How to bridge funds to Starknet - Wallets
+        description: >-
+          Welcome to our tutorial on getting started with Starknet! In this
+          video, we'll guide you through the essentials of Starknet, a
+          permissionless decentralized rollup focused on bringing scale to
+          Ethereum. 
+
+
+          For more details, visit this blog post: https://starkware.co/resource/getting-started-using-starknet-setting-up-a-starknet-wallet/
+
+
+          https://starkgate.starknet.io/
+
+
+          https://www.starknet.io/en
+
+          https://starkware.co/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT2M34S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/how-to-bridge-funds-to-starknet-wallets.png
+category: stark-math
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+  - getting-started
+short_desc: "Welcome to our tutorial on getting started with Starknet! In this
+  video, we'll guide you through the essentials of Starknet, a permissionless
+  decentralized rollup focused on bringing scale to Ethereum. "

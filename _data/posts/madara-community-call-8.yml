@@ -1,0 +1,18 @@
+id: bb4cf937-6021-4bd7-ad67-4225782d4d1e
+post_type: video
+title: "Madara Community Call #8"
+published_date: 2023-12-03T14:30:44.512Z
+video:
+  url: https://www.youtube.com/watch?v=co8_A8GQL8Q
+image: /assets/madara-community-call-8.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+short_desc: |-
+  Agenda: 
+  1. Project backlog review
+  2. Pragma hackathon Madara builders
+  3. Moro presentation by @tekkac
+  4. State root computation deep dive @EvolveArt
+  5. Proving / Data availability deep dive @drspacemn
