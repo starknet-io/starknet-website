@@ -67,12 +67,6 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          custom_title: "Starknet primer "
-          custom_external_link: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
-        subLabel:
-          label: drspaceman
-      - type: link_list_item
-        link:
           custom_title: "The Starknet stack "
           custom_external_link: ""
           custom_internal_link: ""
