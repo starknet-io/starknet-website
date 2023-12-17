@@ -69,8 +69,8 @@ blocks:
         link:
           custom_title: "The Starknet Stack "
           custom_external_link: ""
-          custom_internal_link: ""
-          post: 8c20a40b-9c78-483a-9ea2-c98df56a766e
+          custom_internal_link: https://www.starknet.io/en/posts/ecosystem/the-starknet-stacks-growth-spurt
+          post: ""
         subLabel:
           label: ""
       - type: link_list_item
@@ -81,13 +81,15 @@ blocks:
           label: "Eli-Ben Sasson "
       - link:
           hasIcon: true
-          post: c0b83aa7-4ae7-4dfc-a064-45a82fefdcbe
+          post: ""
           custom_title: "Getting Started: Setting Up a Starknet Wallet"
+          custom_internal_link: https://www.starknet.io/en/posts/tutorials-and-guides/getting-started-using-starknet-setting-up-a-starknet-wallet
       - link:
           hasIcon: true
           custom_title: "Starknet's Foundational Elements: Cairo VM, CASM, Cairo Zero,
             Cairo, and Sierra"
-          post: 816d8e30-6715-4532-887b-83257264c0cd
+          post: ""
+          custom_internal_link: https://www.starknet.io/en/posts/developers/the-whats-what-of-the-cairo-world
       - link:
           hasIcon: true
           custom_title: "Native Account Abstraction: Introduction"
