@@ -92,6 +92,7 @@ blocks:
           hasIcon: true
           custom_title: "Native Account Abstraction: Introduction"
           post: cbc85861-5340-4036-b2ab-cf4aa29d8b95
+          custom_internal_link: https://www.starknet.io/en/posts/engineering/native-account-abstraction-opening-blockchain-to-new-possibilities
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
