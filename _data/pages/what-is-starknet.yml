@@ -67,7 +67,7 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          custom_title: "The Starknet stack "
+          custom_title: "The Starknet Stack "
           custom_external_link: ""
           custom_internal_link: ""
           post: 8c20a40b-9c78-483a-9ea2-c98df56a766e
@@ -79,6 +79,10 @@ blocks:
           custom_external_link: https://www.youtube.com/watch?v=QPNp8w9rx7o
         subLabel:
           label: "Eli-Ben Sasson "
+      - link:
+          hasIcon: true
+          post: c0b83aa7-4ae7-4dfc-a064-45a82fefdcbe
+          custom_title: "Getting Started: Setting Up a Starknet Wallet"
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
