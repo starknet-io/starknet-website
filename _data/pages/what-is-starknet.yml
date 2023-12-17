@@ -85,7 +85,8 @@ blocks:
           custom_title: "Getting Started: Setting Up a Starknet Wallet"
       - link:
           hasIcon: true
-          custom_title: Cairo - Intro to Cairo's Different Components
+          custom_title: "Starknet's Foundational Elements: Cairo VM, CASM, Cairo Zero,
+            Cairo, and Sierra"
           post: 816d8e30-6715-4532-887b-83257264c0cd
 toc: false
 city: Bangalore
