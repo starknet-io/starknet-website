@@ -43,6 +43,12 @@ blocks:
           custom_external_link: https://github.com/software-mansion/starknet-jvm
         subLabel:
           label: A JVM languages (Java, Kotlin, Scala) SDK for Starknet
+      - link:
+          hasIcon: true
+          custom_title: Orion
+          custom_external_link: https://github.com/gizatechxyz/Orion-Hub
+        subLabel:
+          label: Cairo library to build ZKML programs
   - type: link_list
     heading: Development frameworks - Cairo 0
     listSize: lg
