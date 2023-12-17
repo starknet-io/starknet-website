@@ -74,9 +74,11 @@ blocks:
       - type: link_list_item
         link:
           custom_title: "The Starknet stack "
-          custom_external_link: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
+          custom_external_link: ""
+          custom_internal_link: ""
+          post: 8c20a40b-9c78-483a-9ea2-c98df56a766e
         subLabel:
-          label: "drspaceman "
+          label: ""
       - type: link_list_item
         link:
           custom_title: "An introduction to Starknet, STARKs and Cairo "
