@@ -88,6 +88,10 @@ blocks:
           custom_title: "Starknet's Foundational Elements: Cairo VM, CASM, Cairo Zero,
             Cairo, and Sierra"
           post: 816d8e30-6715-4532-887b-83257264c0cd
+      - link:
+          hasIcon: true
+          custom_title: "Native Account Abstraction: Introduction"
+          post: cbc85861-5340-4036-b2ab-cf4aa29d8b95
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
