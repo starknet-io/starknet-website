@@ -66,6 +66,10 @@ blocks:
       - title: OtterSec
         website_url: https://osec.io/
         twitter: https://twitter.com/osec_io
+        description: OtterSec is a blockchain security company with a holistic and
+          collaborative approach to identifying and patching critical exploits
+          for clients before they go to market.
+        image: /assets/ottersec-logo.jpg
   - type: card_list
     randomize: true
     title: Bug Bounty Program
