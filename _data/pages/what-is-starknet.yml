@@ -83,6 +83,10 @@ blocks:
           hasIcon: true
           post: c0b83aa7-4ae7-4dfc-a064-45a82fefdcbe
           custom_title: "Getting Started: Setting Up a Starknet Wallet"
+      - link:
+          hasIcon: true
+          custom_title: Cairo - Intro to Cairo's Different Components
+          post: 816d8e30-6715-4532-887b-83257264c0cd
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
