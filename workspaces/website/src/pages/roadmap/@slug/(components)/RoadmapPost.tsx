@@ -117,7 +117,7 @@ export default function RoadmapPost({
           <Box mb={"2rem"}>
             <RoadmapPostVersion roadmapVersion={roadmapVersion} />
           </Box>
-          <Heading variant="h2" color="heading-navy-fg" fontWeight="extrabold">
+          <Heading as="h1" variant="h2" color="heading-navy-fg" fontWeight="extrabold">
             {roadmapPost.title}
           </Heading>
           <Flex direction="row" alignItems="center" mt="6" mb="32px" justifyContent="space-between">
@@ -131,7 +131,7 @@ export default function RoadmapPost({
             <div>{roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}</div>
           </Flex>
           <Divider mt="8px" mb="32px" />
-          
+
           <Flex direction="column" gap="32px">
             {roadmapPost.blocks?.map((block, i) => (
               <Block
