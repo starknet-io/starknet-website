@@ -8,6 +8,10 @@ const community_calls = defineStyle({
   background: "badge-community-calls-bg",
   color: "badge-community-calls-fg",
 });
+const tutorials_and_guides = defineStyle({
+  background: "badge-tutorials-and-guides-bg",
+  color: "badge-tutorials-and-guides-fg",
+});
 const stark_math = defineStyle({
   background: "badge-stark-math-bg",
   color: "badge-stark-math-fg",
@@ -59,6 +63,7 @@ export const badgeTheme = defineStyleConfig({
   variants: {
     developers,
     community_calls,
+    tutorials_and_guides,
     stark_math,
     stark_struck_podcast,
     stark_at_home,
