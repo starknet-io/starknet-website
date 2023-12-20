@@ -15,7 +15,7 @@ blocks:
     description: Bridges allow users to move assets between crypto ecosystems, such
       as blockchains or exchanges.
     card_list_items:
-      - image: /assets/starkgate.jpg
+      - image: /assets/starkgate-symbol-dark.png
         title: StarkGate
         description: StarkGate is the official bridge between Starknet and Ethereum.
         link_url: https://starkgate.starknet.io
