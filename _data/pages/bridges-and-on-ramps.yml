@@ -46,7 +46,7 @@ blocks:
         image: /assets/rhino.fi-logo.png
         website_url: http://rhino.fi/
         twitter: https://twitter.com/rhinofi
-    randomize: true
+    randomize: false
   - type: card_list
     title: What are fiat on-ramps?
     description: Fiat on-ramps are service providers that allows for the exchange of
