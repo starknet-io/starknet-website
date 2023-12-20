@@ -62,6 +62,7 @@ blocks:
           custom_title: View
           custom_internal_link: /tutorials/
         withIllustration: true
+        size: null
       - type: image_icon_link_card
         color: blue-default
         title: Starknet Basecamp
