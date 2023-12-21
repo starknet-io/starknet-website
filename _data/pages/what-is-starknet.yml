@@ -3,9 +3,6 @@ hideToc: true
 parent_page: /learn/
 page_last_updated: true
 blocks:
-  - type: page_header
-    title: What is Starknet?
-    description: ""
   - type: markdown
     body: >
       Starknet is a Validity-Rollup (aka ZK-Rollup) Layer 2 network that
