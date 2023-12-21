@@ -46,6 +46,16 @@ blocks:
         image: /assets/rhino.fi-logo.png
         website_url: http://rhino.fi/
         twitter: https://twitter.com/rhinofi
+      - website_url: https://minibridge.chaineye.tools/
+        twitter: https://twitter.com/Chaineye_tools
+        title: Chaineye Mini Bridge
+        image: /assets/chaineye-mini-bridge-logo.jpeg
+      - title: Rango
+        twitter: https://twitter.com/RangoExchange
+        discord: https://discord.com/invite/q3EngGyTrZ
+        website_url: https://app.rango.exchange/swap/ARBITRUM.ETH/STARKNET.ETH--0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7/
+        description: "Rango is an ultimate cross-chain dex and bridge aggregator. "
+        image: /assets/rango-icon.png
     randomize: false
   - type: card_list
     title: What are fiat on-ramps?
