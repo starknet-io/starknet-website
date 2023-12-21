@@ -117,6 +117,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     as="a"
                     href="https://starknet.io/discord"
                     aria-label="Discord"
+                    openInNewTab={true}
                     icon={<SiDiscord fontSize="1.25rem" />}
                     size="small"
                     marginRight="16px"
@@ -125,6 +126,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     as="a"
                     href="https://github.com/starknet-io/starknet-website"
                     aria-label="GitHub"
+                    openInNewTab={true}
                     icon={<SiGithub fontSize="1.25rem" />}
                     size="small"
                     marginRight="16px"
@@ -133,6 +135,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     as="a"
                     href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
                     aria-label="YouTube"
+                    openInNewTab={true}
                     icon={<SiYoutube fontSize="1.25rem" />}
                     size="small"
                     marginRight="16px"
@@ -141,6 +144,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     as="a"
                     href="https://twitter.com/Starknet"
                     aria-label="Twitter"
+                    openInNewTab={true}
                     icon={<SiTwitter fontSize="1.25rem" />}
                     size="small"
                   />
