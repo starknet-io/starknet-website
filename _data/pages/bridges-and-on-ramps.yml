@@ -46,6 +46,10 @@ blocks:
         image: /assets/rhino.fi-logo.png
         website_url: http://rhino.fi/
         twitter: https://twitter.com/rhinofi
+      - website_url: https://minibridge.chaineye.tools/
+        twitter: https://twitter.com/Chaineye_tools
+        title: Chaineye Mini Bridge
+        image: /assets/chaineye-mini-bridge-logo.jpeg
     randomize: false
   - type: card_list
     title: What are fiat on-ramps?
