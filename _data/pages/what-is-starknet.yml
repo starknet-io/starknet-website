@@ -52,8 +52,8 @@ blocks:
       title: Secure Settlement on Ethereum
       description: Chapter 4 explains how to secure settlement on Ethereum
   - type: page_header
-    title: "What is Starknet? "
-    description: Something
+    title: What is Starknet?
+    description: ""
   - type: markdown
     body: >
       Starknet is a Validity-Rollup (aka ZK-Rollup) Layer 2 network that
