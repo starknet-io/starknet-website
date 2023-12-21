@@ -50,6 +50,10 @@ blocks:
         twitter: https://twitter.com/Chaineye_tools
         title: Chaineye Mini Bridge
         image: /assets/chaineye-mini-bridge-logo.jpeg
+      - title: Rango
+        twitter: https://twitter.com/RangoExchange
+        discord: https://discord.com/invite/q3EngGyTrZ
+        website_url: https://rango.exchange/
     randomize: false
   - type: card_list
     title: What are fiat on-ramps?
