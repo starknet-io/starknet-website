@@ -101,7 +101,7 @@ export default function PostByCategory({
               {post.post_type}
             </Badge>
           </Box>
-          <Heading variant="h2" color="heading-navy-fg" fontWeight="extrabold">
+          <Heading as="h1" variant="h2" color="heading-navy-fg" fontWeight="extrabold">
             {post.title}
           </Heading>
           <Flex mt="16px">

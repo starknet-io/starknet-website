@@ -165,9 +165,9 @@ export const HeroImage = ({
 
       <Box zIndex={2} position="relative" height={{ lg: "420px" }}>
         <Container
+          pr={{ base: "0", sm: "64px" }}
           py={{ base: "64px", lg: "0" }}
           px={{ base: "1rem", lg: "0" }}
-          pr={{ base: "64px", md: "64px" }}
           height="full"
           maxW="none"
         >

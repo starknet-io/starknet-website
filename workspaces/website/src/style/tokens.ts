@@ -136,6 +136,8 @@ export const tokens = {
       "badge-engineering-fg": "#991B1B",
       "badge-community-calls-bg": "#FEF3C7",
       "badge-community-calls-fg": "#92400E",
+      "badge-tutorials-and-guides-bg": "#FBF2B1",
+      "badge-tutorials-and-guides-fg": "#8B7710",
       "badge-stark-math-bg": "#DBEAFE",
       "badge-stark-math-fg": "#1E40AF",
       "badge-governance-bg": "#EDE9FE",
@@ -340,6 +342,8 @@ export const tokens = {
       "badge-engineering-fg": "#991B1B",
       "badge-community-calls-bg": "#FEF3C7",
       "badge-community-calls-fg": "#92400E",
+      "badge-tutorials-and-guides-bg": "#FBF2B1",
+      "badge-tutorials-and-guides-fg": "#8B7710",
       "badge-stark-math-bg": "#DBEAFE",
       "badge-stark-math-fg": "#1E40AF",
       "badge-governance-bg": "#EDE9FE",
@@ -945,6 +949,14 @@ export const semanticTokens = {
     "badge-community-calls-fg": {
       default: tokens.colors.light["badge-community-calls-fg"],
       _dark: tokens.colors.dark["badge-community-calls-fg"],
+    },
+    "badge-tutorials-and-guides-bg": {
+      default: tokens.colors.light["badge-tutorials-and-guides-bg"],
+      _dark: tokens.colors.dark["badge-tutorials-and-guides-bg"],
+    },
+    "badge-tutorials-and-guides-fg": {
+      default: tokens.colors.light["badge-tutorials-and-guides-fg"],
+      _dark: tokens.colors.dark["badge-tutorials-and-guides-fg"],
     },
     "badge-stark-math-bg": {
       default: tokens.colors.light["badge-stark-math-bg"],
