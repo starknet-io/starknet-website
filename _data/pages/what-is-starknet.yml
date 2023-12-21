@@ -2,29 +2,7 @@ month: December 2023
 hideToc: true
 parent_page: /learn/
 page_last_updated: true
-blocks:
-  - type: link_list
-    heading: Further reading
-    listSize: lg
-    blocks:
-      - type: link_list_item
-        link:
-          custom_title: "Starknet primer "
-          custom_external_link: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
-        subLabel:
-          label: drspaceman
-      - type: link_list_item
-        link:
-          custom_title: "The Starknet stack "
-          custom_external_link: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
-        subLabel:
-          label: "drspaceman "
-      - type: link_list_item
-        link:
-          custom_title: "An introduction to Starknet, STARKs and Cairo "
-          custom_external_link: https://www.youtube.com/watch?v=QPNp8w9rx7o
-        subLabel:
-          label: "Eli-Ben Sasson "
+blocks: []
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z
