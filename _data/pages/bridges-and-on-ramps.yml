@@ -53,7 +53,9 @@ blocks:
       - title: Rango
         twitter: https://twitter.com/RangoExchange
         discord: https://discord.com/invite/q3EngGyTrZ
-        website_url: https://rango.exchange/
+        website_url: https://app.rango.exchange/swap/ARBITRUM.ETH/STARKNET.ETH--0x49d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7/
+        description: "Rango is an ultimate cross-chain dex and bridge aggregator. "
+        image: /assets/rango-icon.png
     randomize: false
   - type: card_list
     title: What are fiat on-ramps?
