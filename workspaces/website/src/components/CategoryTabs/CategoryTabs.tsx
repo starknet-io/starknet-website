@@ -52,9 +52,9 @@ export const CategoryTabs = ({
         width="100%"
         padding={'0 24px'}
       >
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
-            <Box>
+            <Box key={item.label + index}>
               <Button
                 as={item.link ? "a" : "button"}
                 href={item.link}
