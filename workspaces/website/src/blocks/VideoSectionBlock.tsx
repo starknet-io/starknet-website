@@ -26,6 +26,8 @@ type ChapterType = Chapter & ChapterInfo;
  */
 
 export default function VideoSectionBlock(props: VideoSectionProps) {
+  const { playlistOnBottom, chapterDescriptionFullWidth } = props;
+
   const normalizedPlaylist = useMemo(() => {
     return playlist.map((chapter) => {
       const chapterInfo = props[chapter.id as keyof VideoSectionProps] as ChapterInfo;
@@ -55,7 +57,7 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
         onChapterChange={(id) => 
           setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
         }
-        playlistOnBottom
+        playlistOnBottom={playlistOnBottom}
       />
 
       <Box mt="md">
@@ -68,10 +70,11 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
             id: p.id,
             label: p.subtitle,
           }))}
+          playlistOnBottom={playlistOnBottom}
         />
 
         <Box
-          maxW="656px"
+          maxW={chapterDescriptionFullWidth ? "100%" : "656px"}
           marginInline="auto"
           marginTop={'32px'}
         >

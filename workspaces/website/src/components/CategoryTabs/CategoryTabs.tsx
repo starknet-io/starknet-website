@@ -24,6 +24,7 @@ export type CategoryTabsProps = {
   items: CategoryTabItem[];
   activeItemId: string;
   onTabClick?: (id: string) => void;
+  playlistOnBottom: boolean;
 };
 
 /**
@@ -34,12 +35,14 @@ export const CategoryTabs = ({
   items,
   activeItemId,
   onTabClick,
+  playlistOnBottom,
 }: CategoryTabsProps) => {
   return (
     <Box
       borderTopWidth="1px"
       borderBottomWidth="1px"
       borderColor="border.divider"
+      marginTop={{ base: "32px", lg: !playlistOnBottom ? "64px" : "32px"  }}
       width="100%"
     >
       <Flex
