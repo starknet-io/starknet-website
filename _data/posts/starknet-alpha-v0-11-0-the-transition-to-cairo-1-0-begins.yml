@@ -4,7 +4,8 @@ title: "Starknet Alpha v0.11.0: The Transition to Cairo 1.0 Begins"
 toc: true
 published_date: 2023-03-21T17:00:11.141Z
 image: /assets/new-land.png
-category: engineering
+category:
+  - engineering
 topic:
   - cairo
   - starknet

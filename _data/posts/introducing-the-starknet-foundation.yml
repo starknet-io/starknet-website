@@ -3,7 +3,8 @@ post_type: article
 title: "Introducing: The Starknet Foundation"
 published_date: 2022-11-09T00:00:00+00:00
 image: /assets/1_w1dobj1hvyuqvb2z60ug_a-1.png
-category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
+category:
+  - 757155c6-ce07-49f1-af21-907b7e0b1cb1
 topic:
   - starknet
   - decentralization

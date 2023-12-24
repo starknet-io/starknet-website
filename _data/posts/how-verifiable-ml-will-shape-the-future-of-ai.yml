@@ -57,7 +57,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_drszsynmjig_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: This talk will highlight why in a world where AI is growing so fast,

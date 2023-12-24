@@ -73,7 +73,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/dex-aggregators-on-starknet.png
-category: stark-math
+category:
+  - stark-math
 topic:
   - defi
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5

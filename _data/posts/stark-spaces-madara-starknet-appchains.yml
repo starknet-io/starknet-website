@@ -54,6 +54,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_hnikjcxrl7y_maxres.png
-category: ecosystem
+category:
+  - ecosystem
 short_desc: Learn more about Madara, a high-performance Starknet sequencer that
   provides the power to create customizable and efficient appchains.

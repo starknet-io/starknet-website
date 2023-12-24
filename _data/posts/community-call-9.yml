@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #9"
 published_date: 2022-03-01T00:00:00+00:00
 image: /assets/cc09.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Hosting zkLend

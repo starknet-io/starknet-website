@@ -55,7 +55,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_r5ztysfvmzm_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: A survey of the past, present, and future of fully onchain games.

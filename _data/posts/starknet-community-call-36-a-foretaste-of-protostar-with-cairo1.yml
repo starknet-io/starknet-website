@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/community-calls-36.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - cairo
 short_desc: Cairo1 support introduces a lot of new changes to the testing flow

@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-perpetuals-on-apex.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - defi
 short_desc: >-

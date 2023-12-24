@@ -3,7 +3,8 @@ post_type: article
 title: Account Abstraction
 published_date: 2023-01-23T00:00:00+00:00
 image: /assets/1_g1jhsyeqe49zqrxbdbgddw-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - account-abstraction
   - starknet

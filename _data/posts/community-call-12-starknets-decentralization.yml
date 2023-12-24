@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #12 | Starknet’s decentralization"
 published_date: 2022-04-12T14:04:24.552Z
 image: /assets/cc12.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Join us for our 12th Community Call! Today we are going to have a

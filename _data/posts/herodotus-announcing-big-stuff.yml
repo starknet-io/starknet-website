@@ -70,4 +70,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/herodotus-announcing-big-stuff.jpg
-category: community-and-events
+category:
+  - community-and-events

@@ -4,7 +4,8 @@ title: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant
   Ecosystem of dApps
 published_date: 2021-10-29T15:46:35.198Z
 image: /assets/interviews04.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: Topics discussed include how StarkWare stacks up against other

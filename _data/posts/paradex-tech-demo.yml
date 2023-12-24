@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/paradex-tech-demo.jpg
-category: community-and-events
+category:
+  - community-and-events

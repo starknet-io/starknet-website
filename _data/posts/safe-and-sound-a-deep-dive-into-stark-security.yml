@@ -4,7 +4,8 @@ title: Safe and Sound – A Deep Dive into STARK Security
 toc: true
 published_date: 2023-10-04T13:48:05.431Z
 image: /assets/swmarketing_stark_security_blockchain_security_providing_the_hi_6c75f233-f985-4bb5-a130-e1defafc5299.png
-category: engineering
+category:
+  - engineering
 topic:
   - 266fa988-350c-4842-b74e-379068ddcf34
 short_desc: Dive into the intricate details of STARK security, a pivotal

@@ -3,7 +3,8 @@ post_type: article
 title: STARKs, StarkEx, and Starknet
 published_date: 2022-06-02T00:00:00+00:00
 image: /assets/1_pphtx1txwzgvcr4wnnw7dg-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - starknet
   - ethereum

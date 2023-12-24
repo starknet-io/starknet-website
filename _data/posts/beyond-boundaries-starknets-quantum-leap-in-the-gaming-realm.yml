@@ -68,4 +68,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/beyond-boundaries-starknet-s-quantum-leap-in-the-gaming-realm.jpg
-category: community-and-events
+category:
+  - community-and-events

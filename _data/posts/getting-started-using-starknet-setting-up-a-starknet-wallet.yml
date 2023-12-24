@@ -4,7 +4,8 @@ title: "Getting Started Using Starknet: Setting Up a Starknet Wallet"
 toc: true
 published_date: 2023-08-17T06:57:33.268Z
 image: /assets/getting-started.png
-category: stark-math
+category:
+  - stark-math
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: >

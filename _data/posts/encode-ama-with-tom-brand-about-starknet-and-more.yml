@@ -3,7 +3,8 @@ post_type: video
 title: Encode AMA with Tom Brand, about Starknet and more
 published_date: 2022-06-22T15:49:29.553Z
 image: /assets/interviews06.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: Tom is the Product Manager at StarkWare, and in the session, he

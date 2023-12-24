@@ -60,7 +60,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome07.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: We are in the midst of a Cambrian Explosion in the field of

@@ -3,7 +3,8 @@ post_type: video
 title: STARK Struck Podcast | Ep 4 | Oskar & Jonas from Empiric
 published_date: 2022-09-22T00:00:00+00:00
 image: /assets/starkstruck04.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from

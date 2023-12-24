@@ -72,4 +72,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/start-stealing-the-f-briq-tips-tricks-for-a-great-web3-uxjpg.jpeg
-category: community-and-events
+category:
+  - community-and-events

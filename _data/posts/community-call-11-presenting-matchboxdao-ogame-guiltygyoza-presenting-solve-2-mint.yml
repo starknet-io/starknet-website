@@ -4,7 +4,8 @@ title: "Community Call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
   presenting Solve 2 Mint"
 published_date: 2022-03-29T14:02:42.065Z
 image: /assets/cc11.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Presenting MatchboxDAO, OGame, Guiltygyoza presenting Solve 2 Mint

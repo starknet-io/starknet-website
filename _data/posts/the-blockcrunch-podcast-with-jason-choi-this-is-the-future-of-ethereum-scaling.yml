@@ -4,7 +4,8 @@ title: "The Blockcrunch Podcast with Jason Choi: “This is the future of Ethere
   scaling”"
 published_date: 2021-09-26T15:43:08.984Z
 image: /assets/interview02.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: "Why ZK-Rollups are the future vs. other Layer 2s Starkware vs.

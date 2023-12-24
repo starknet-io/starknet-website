@@ -50,7 +50,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome02.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Eli Ben Sasson talks about FFT vs. PPC

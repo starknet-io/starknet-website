@@ -53,7 +53,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-kakarot-zk-evm-in-cairo.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - cairo
 short_desc: Find out what Vitalik Buterin, Eli Ben-Sasson, Shahar Papini, and

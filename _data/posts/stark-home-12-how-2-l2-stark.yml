@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome12.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: How 2 L2 STARK?

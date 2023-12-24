@@ -3,7 +3,8 @@ post_type: article
 title: Rollup, Validium, Volition — Where is your data stored?
 published_date: 2022-11-21T00:00:00+00:00
 image: /assets/rollup-validium-volition-where-is-your-data-stored.png
-category: engineering
+category:
+  - engineering
 topic:
   - zk-proofs
   - ethereum

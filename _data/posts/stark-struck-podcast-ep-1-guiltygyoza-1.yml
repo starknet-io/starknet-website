@@ -3,7 +3,8 @@ post_type: video
 title: STARK Struck Podcast | Ep 1 | GuiltyGyoza
 published_date: 2022-08-08T00:00:00+00:00
 image: /assets/starkstruck01.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: Join Henri Lieutaud from the StarkNet team and GuiltyGyoza, on what

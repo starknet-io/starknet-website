@@ -4,7 +4,8 @@ title: "Community Call #4 | Argent X presentation, and bridging and messaging on
   Starknet"
 published_date: 2021-12-15T00:00:00+00:00
 image: /assets/cc04.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Argent X presentation, roadmap, transactions stages update and

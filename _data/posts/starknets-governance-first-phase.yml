@@ -3,7 +3,8 @@ post_type: article
 title: "Starknet’s Governance: First Phase"
 published_date: 2022-12-14T00:00:00+00:00
 image: /assets/1_c_dvdnueakshzhiyfezoug-1-1.png
-category: governance
+category:
+  - governance
 topic:
   - open_source
   - f9337f26-ae48-4f38-be86-8fe0c465ea13

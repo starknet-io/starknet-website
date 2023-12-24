@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #5 | 2021 Wrap up, fee mechanism, Alpha versions"
 published_date: 2022-01-06T00:00:00+00:00
 image: /assets/cc05.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: 2021 wrap-up, fee mechanism, Alpha versions

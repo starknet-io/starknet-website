@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/community-calls-37.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - 3fc1282e-a54b-4932-b14e-a3b3d24a9a1f
   - f9337f26-ae48-4f38-be86-8fe0c465ea13

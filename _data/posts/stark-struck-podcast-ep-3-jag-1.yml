@@ -3,7 +3,8 @@ post_type: video
 title: STARK Struck Podcast | Ep 3 | Jag
 published_date: 2022-09-07T00:00:00+00:00
 image: /assets/starkstruck03.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: Join Henri Lieutaud from the StarkNet team & Jag, on what gets them

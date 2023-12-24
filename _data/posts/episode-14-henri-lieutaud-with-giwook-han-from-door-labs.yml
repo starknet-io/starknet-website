@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-strcuk-episode-14.jpg
-category: stark-struck
+category:
+  - stark-struck
 short_desc: >-
   Join Henri Lieutaud from the Starknet team and Giwook Han from Door Labs, on
   what gets them excited about technology in general, blockchain in particular,

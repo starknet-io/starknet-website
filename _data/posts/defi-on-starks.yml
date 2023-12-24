@@ -3,6 +3,7 @@ post_type: video
 title: DeFi on Starks
 published_date: 2023-08-04T06:59:52.535Z
 image: /assets/defi-on-starks-soo-nahm-brian-fu-eduard-jubany-tur-swapnil-raj-david-garai.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - defi

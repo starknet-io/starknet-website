@@ -3,7 +3,8 @@ post_type: article
 title: StarkGate Alpha
 published_date: 2022-04-04T00:00:00+00:00
 image: /assets/1_4hilekoqgikvff5xq7vfcg-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - starknet
   - ethereum

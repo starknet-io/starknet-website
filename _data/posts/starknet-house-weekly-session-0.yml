@@ -3,7 +3,8 @@ post_type: video
 title: Starknet House weekly session 0
 published_date: 2022-06-05T15:57:13.652Z
 image: /assets/sn_house01.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: >+

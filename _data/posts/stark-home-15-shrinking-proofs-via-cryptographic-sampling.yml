@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome15.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Shrinking proofs via cryptographic sampling

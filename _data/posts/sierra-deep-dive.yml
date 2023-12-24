@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/sierra-deep-dive-lior-goldberg.jpg
-category: community-and-events
+category:
+  - community-and-events

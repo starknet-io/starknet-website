@@ -3,7 +3,8 @@ post_type: article
 title: How Starknet is Revolutionizing Crypto Signing
 published_date: 2022-10-01T00:00:00+00:00
 image: /assets/how-starknet-is-revolutionizing-crypto-signing.png
-category: engineering
+category:
+  - engineering
 topic:
   - account-abstraction
   - 266fa988-350c-4842-b74e-379068ddcf34

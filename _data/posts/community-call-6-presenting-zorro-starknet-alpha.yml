@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #6 | Presenting Zorro, Starknet Alpha"
 published_date: 2022-01-18T00:00:00+00:00
 image: /assets/cc06.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Presenting Zorro, Starknet Alpha

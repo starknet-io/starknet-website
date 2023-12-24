@@ -65,7 +65,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc28.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Presentation by summary.dev + Performance roadmap update with

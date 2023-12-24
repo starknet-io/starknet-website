@@ -53,7 +53,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc10.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Building React apps on Starknet with Francesco Ceccon, AMA about

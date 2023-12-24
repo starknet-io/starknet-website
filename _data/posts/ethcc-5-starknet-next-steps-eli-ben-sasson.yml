@@ -3,7 +3,8 @@ post_type: video
 title: "ETHCC (5): Starknet - Next steps - Eli Ben-Sasson "
 published_date: 2022-07-21T12:24:41.336Z
 image: /assets/vid_events04.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: >

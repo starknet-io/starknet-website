@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_wnyqigtuhba_maxres.png
-category: ecosystem
+category:
+  - ecosystem
 short_desc: >
   Dive deep into the behind-the-scenes magic of Starknet’s Quantum Leap with
   Lambda Class.

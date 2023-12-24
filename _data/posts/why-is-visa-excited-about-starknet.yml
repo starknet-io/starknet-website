@@ -3,7 +3,8 @@ post_type: video
 title: Why is Visa excited about Starknet?
 published_date: 2022-12-20T16:54:47.934Z
 image: /assets/interviews09.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
   - defi

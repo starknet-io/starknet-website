@@ -3,7 +3,8 @@ post_type: article
 title: "The Starknet Foundation: Meet the Committees"
 published_date: 2023-03-20T06:23:34.701Z
 image: /assets/starknet-fnd-meet-the-committees-post-v4-3x.png
-category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
+category:
+  - 757155c6-ce07-49f1-af21-907b7e0b1cb1
 short_desc: The Foundation is excited to publicly announce the appointment of
   five committees, each entrusted with a specific mandate that aligns with
   Starknet’s mission and priorities. Each committee’s mandate is not set in

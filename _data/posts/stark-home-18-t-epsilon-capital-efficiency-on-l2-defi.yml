@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome18.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: T+epsilon - capital efficiency on L2-DeFi

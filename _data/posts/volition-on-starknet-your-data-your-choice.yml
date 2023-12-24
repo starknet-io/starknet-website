@@ -4,7 +4,8 @@ title: "Volition on Starknet: Your Data, Your Choice "
 toc: true
 published_date: 2023-08-10T13:42:32.701Z
 image: /assets/volition-2-.png
-category: engineering
+category:
+  - engineering
 topic:
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
   - ef41aa70-6d30-4d4d-9543-10ffd53a1587

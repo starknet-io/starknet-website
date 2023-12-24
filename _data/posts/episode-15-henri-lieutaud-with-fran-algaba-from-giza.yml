@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_hzhaw8ubovg_maxres.jpg
-category: stark-struck
+category:
+  - stark-struck
 short_desc: Join Henri Lieutaud from the Starknet team and Fran Algaba from
   Giza, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically.
