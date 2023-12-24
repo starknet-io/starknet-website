@@ -4,7 +4,8 @@ title: Empire podcast – StarkWare, L3s and the ZK Rollup Future | Eli
   Ben-Sasson, Uri Kolodny
 published_date: 2022-10-03T15:53:21.818Z
 image: /assets/interviews08.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: "In this episode of Empire, Jason and Santi are joined by Eli

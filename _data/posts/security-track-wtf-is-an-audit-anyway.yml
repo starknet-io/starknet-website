@@ -53,7 +53,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_nuzx1ukvk7i_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: How to think about securing your Starknet project so your audit is

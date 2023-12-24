@@ -4,7 +4,8 @@ title: "Starknet: Decentralized and Permissionless ZK-Rollups"
 published_date: 2021-08-17T15:41:28.024Z
 : 16 min watch
 image: /assets/interviews01.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - zk-proofs
   - starknet

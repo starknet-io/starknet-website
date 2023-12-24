@@ -4,7 +4,8 @@ title: "Community Call #2 | Shard Labs, HardHat plugin, Data availability,
   Volition and more"
 published_date: 2021-11-22T00:00:00+00:00
 image: /assets/cc02.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: "Presenting Shard Labs, HardHat plugin, Data availability, Volition,

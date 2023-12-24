@@ -44,7 +44,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome04.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: How do you map a program to a polynomial? Eli Ben-Sasson waves his

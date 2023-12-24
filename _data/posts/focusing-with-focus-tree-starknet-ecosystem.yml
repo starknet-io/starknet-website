@@ -73,7 +73,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/focusing-with-focus-tree-starknet-ecosystem.png
-category: stark-math
+category:
+  - stark-math
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: >-

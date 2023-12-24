@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/community-building-in-starknet-louis-guthmann.jpg
-category: community-and-events
+category:
+  - community-and-events

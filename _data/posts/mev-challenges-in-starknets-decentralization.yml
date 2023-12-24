@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_z771qdpctwa_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: As Starknet progresses toward decentralization, addressing Miner

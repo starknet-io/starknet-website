@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #21 | Multi sigs on Starknet, roadmap updates"
 published_date: 2022-08-23T11:03:27.485Z
 image: /assets/cc21.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Multi sigs on Starknet, roadmap updates.

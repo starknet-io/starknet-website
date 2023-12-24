@@ -61,7 +61,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-scaling-onchain-gaming-with-cartridge-web-reduced.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: >-

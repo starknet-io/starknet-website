@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #19 | Talking with Mirko from Equilibrium about full-nodes"
 published_date: 2022-07-26T10:59:41.168Z
 image: /assets/cc19.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Join us for our 19th Community call. Today we are hosting Mirko from

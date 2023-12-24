@@ -3,7 +3,8 @@ post_type: video
 title: Super Scaling with StarkWare at Bankless
 published_date: 2021-11-23T16:47:52.507Z
 image: /assets/interviews05.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: >

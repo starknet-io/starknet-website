@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/l2-dai-allows-stealing-a-technical-explainer.jpg
-category: community-and-events
+category:
+  - community-and-events

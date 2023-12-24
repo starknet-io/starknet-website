@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #32 | Starknet v0.11 and Cairo 1.0"
 published_date: 2023-01-26T13:01:25.160Z
 image: /assets/cc32.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: >

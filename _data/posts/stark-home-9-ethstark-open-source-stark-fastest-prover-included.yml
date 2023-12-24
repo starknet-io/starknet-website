@@ -58,7 +58,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome09.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: "We are releasing our open-source ethSTARK library and had special

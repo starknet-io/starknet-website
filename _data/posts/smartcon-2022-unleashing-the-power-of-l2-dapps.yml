@@ -114,7 +114,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/smartcon_gal_starknet-unleashing-the-power-of-l2-dapps.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: >-

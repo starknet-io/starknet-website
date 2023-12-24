@@ -3,7 +3,8 @@ post_type: article
 title: Cairo 1.0
 published_date: 2022-09-12T07:39:12.402Z
 image: /assets/1_iy9nqgkt4hudnuyvanyyyw-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - cairo
   - zk-proofs

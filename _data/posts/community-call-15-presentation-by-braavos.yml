@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #15 | Presentation by Braavos"
 published_date: 2022-05-24T14:07:30.249Z
 image: /assets/cc15.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Join us for our 15th community call - Presentation by Braavos

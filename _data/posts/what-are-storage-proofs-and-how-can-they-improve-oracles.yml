@@ -3,7 +3,8 @@ post_type: article
 title: What are Storage Proofs and how can they improve Oracles?
 published_date: 2023-04-21T12:20:37.786Z
 image: /assets/what-are-storage-proofs-and-how-can-they-improve-oracles-blog-post-image-.png
-category: engineering
+category:
+  - engineering
 short_desc: Trustless Cross-Chain Information Access on Starknet
 blocks:
   - type: markdown

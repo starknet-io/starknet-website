@@ -70,4 +70,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/introducing-the-starknet-foundation-diego-oliva.jpg
-category: community-and-events
+category:
+  - community-and-events

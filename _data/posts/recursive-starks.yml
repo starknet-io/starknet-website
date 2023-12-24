@@ -3,7 +3,8 @@ post_type: article
 title: Recursive STARKs
 published_date: 2022-08-11T00:00:00+00:00
 image: /assets/1_ydtct9p1meoeitb6r5zndg-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - starknet
   - 23d02918-cb8c-4484-a45b-0788d9da3995

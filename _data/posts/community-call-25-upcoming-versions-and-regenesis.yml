@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #25 | Upcoming versions and Regenesis"
 published_date: 2022-10-18T11:50:52.325Z
 image: /assets/cc25.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Today we will have Tom Brand from StarkWare talking about the

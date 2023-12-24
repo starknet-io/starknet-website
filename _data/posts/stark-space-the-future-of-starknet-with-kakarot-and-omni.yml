@@ -51,5 +51,6 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/twitter-space-the-future-of-starknet-with-kakarot-and-omni-0.5-hub.png
-category: ecosystem
+category:
+  - ecosystem
 topic: []

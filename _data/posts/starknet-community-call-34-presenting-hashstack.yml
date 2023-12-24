@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-34-presenting-haskstack-youtube1.png
-category: community-calls
+category:
+  - community-calls
 topic:
   - defi
 short_desc: Hashstack provides a permissionless under-collateralized lending

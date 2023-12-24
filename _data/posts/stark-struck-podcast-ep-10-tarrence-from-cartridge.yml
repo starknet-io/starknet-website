@@ -3,7 +3,8 @@ post_type: video
 title: STARK Struck Podcast | Ep 10 | Tarrence from Cartridge
 published_date: 2023-01-26T00:00:00+00:00
 image: /assets/starkstruck10.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: "Join Henri Lieutaud from the StarkNet team and Tarrence from

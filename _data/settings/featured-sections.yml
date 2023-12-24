@@ -1,9 +1,9 @@
 items:
-  - categroy: community-and-events
-  - categroy: community-calls
-  - categroy: ecosystem
-  - categroy: engineering
-  - categroy: 757155c6-ce07-49f1-af21-907b7e0b1cb1
-  - categroy: governance
-  - categroy: stark-math
-  - categroy: stark-struck
+  - category: community-and-events
+  - category: community-calls
+  - category: ecosystem
+  - category: engineering
+  - category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
+  - category: governance
+  - category: stark-math
+  - category: stark-struck

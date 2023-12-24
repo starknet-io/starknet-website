@@ -81,7 +81,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-struck-episode-11.jpg
-category: stark-struck
+category:
+  - stark-struck
 short_desc: >-
   In this special STARK Struck episode, Join Liron Hayman from StarkWare and
   David Lavecky & Tim Moddel from Canvas as they chat about the company,

@@ -55,7 +55,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_tmceo8ylbzu_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: This session briefly discusses some of the issues, thoughts,

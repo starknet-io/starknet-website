@@ -78,4 +78,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/giza-enabling-ml-in-the-blockchain-using-cairo.jpg
-category: community-and-events
+category:
+  - community-and-events

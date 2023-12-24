@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starknet-infrastructure-web3-routers-antiryo.jpg
-category: community-and-events
+category:
+  - community-and-events

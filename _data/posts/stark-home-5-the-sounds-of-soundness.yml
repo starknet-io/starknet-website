@@ -52,7 +52,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome05.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: How do parrots check their phone bill? And what does it have to do

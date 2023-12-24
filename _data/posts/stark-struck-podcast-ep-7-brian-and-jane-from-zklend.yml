@@ -3,7 +3,8 @@ post_type: video
 title: STARK Struck Podcast | Ep 7 | Brian and Jane from ZKLend
 published_date: 2022-12-01T00:00:00+00:00
 image: /assets/starkstruck07.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from

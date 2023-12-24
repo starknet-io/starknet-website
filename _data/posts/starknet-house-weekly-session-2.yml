@@ -3,7 +3,8 @@ post_type: video
 title: Starknet House weekly session 2
 published_date: 2023-02-02T17:00:11.155Z
 image: /assets/sn_house03.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of

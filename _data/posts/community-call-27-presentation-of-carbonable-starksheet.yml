@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #27 | Presentation of Carbonable + StarkSheet"
 published_date: 2022-11-15T12:54:11.594Z
 image: /assets/cc27.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Presentation of Carbonable + StarkSheet

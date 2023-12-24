@@ -80,4 +80,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/the-radius-a-sequencing-layer-to-make-app-specific-rollups-sustainable.jpg
-category: community-and-events
+category:
+  - community-and-events

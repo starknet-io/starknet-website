@@ -5,7 +5,8 @@ title: Simple Guide on Starkgate 1-Click Withdraw
 toc: true
 published_date: 2023-05-01T08:33:35.784Z
 image: /assets/artboard-40.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: Have you ever found yourself forgetting to withdraw your assets from

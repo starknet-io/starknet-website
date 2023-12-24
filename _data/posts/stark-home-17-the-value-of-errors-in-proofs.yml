@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome17.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: The value of errors in proofs.

@@ -3,7 +3,8 @@ post_type: article
 title: The Starknet Stack’s Growth Spurt
 published_date: 2023-07-19T06:45:50.950Z
 image: /assets/starknet-stack.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - decentralization
   - open_source

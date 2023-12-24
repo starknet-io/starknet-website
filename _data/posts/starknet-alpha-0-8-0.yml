@@ -3,7 +3,8 @@ post_type: article
 title: Starknet Alpha 0.8.0
 published_date: 2022-03-14T00:00:00+00:00
 image: /assets/1_ggubr2p13tuldmhdp1nk1a-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

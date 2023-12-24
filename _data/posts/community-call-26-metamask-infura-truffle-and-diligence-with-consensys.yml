@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #26 | MetaMask, Infura, Truffle and Diligence with Consensys"
 published_date: 2022-11-02T12:52:57.422Z
 image: /assets/cc26.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Today Consensys will present their Starknet efforts, including

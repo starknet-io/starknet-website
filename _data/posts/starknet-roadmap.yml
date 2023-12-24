@@ -66,6 +66,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starknet-community-update-tom-brand.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 63d577bc-fbb2-432c-8d43-ce4472c82338

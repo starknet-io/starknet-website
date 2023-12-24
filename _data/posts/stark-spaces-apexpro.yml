@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/ts03.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: STARK SPACES | ApeXPro

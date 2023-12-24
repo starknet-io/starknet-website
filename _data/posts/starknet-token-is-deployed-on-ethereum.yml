@@ -3,7 +3,8 @@ post_type: article
 title: Starknet token is deployed on Ethereum
 published_date: 2022-11-16T00:00:00+00:00
 image: /assets/1_3pfkdorogg874-rro5z-2w-1.png
-category: governance
+category:
+  - governance
 topic:
   - starknet
   - ethereum

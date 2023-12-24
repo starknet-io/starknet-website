@@ -3,7 +3,8 @@ post_type: article
 title: Harnessing the Beast -  Madara and the Revolution of Starknet Appchains
 published_date: 2023-07-20T13:00:54.823Z
 image: /assets/madara-2-.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - decentralization
 short_desc: Prepare to witness a new era of possibilities in the realm of

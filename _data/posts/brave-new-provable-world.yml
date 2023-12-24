@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/brave-new-provable-world.jpg
-category: community-and-events
+category:
+  - community-and-events

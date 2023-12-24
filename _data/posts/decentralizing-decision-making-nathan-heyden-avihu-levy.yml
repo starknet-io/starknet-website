@@ -3,7 +3,8 @@ post_type: video
 title: Decentralizing Decision Making- Nathan Heyden & Avihu Levy
 published_date: 2021-10-26T15:44:45.500Z
 image: /assets/interviews03.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: Presented @ Village Underground, Lisbon 2021

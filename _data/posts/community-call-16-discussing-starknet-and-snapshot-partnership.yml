@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #16 | Discussing Starknet and Snapshot partnership"
 published_date: 2022-06-09T10:55:00.240Z
 image: /assets/cc16.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Hosting Nathan and Orlando from Snapshot and discussing StarkNet and

@@ -54,7 +54,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome08.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest

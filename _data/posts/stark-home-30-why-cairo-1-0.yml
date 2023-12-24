@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-at-home-cairo-1.0-2.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - cairo
 short_desc: In this session of STARK @ Home, we invited Vitalik Buterin to

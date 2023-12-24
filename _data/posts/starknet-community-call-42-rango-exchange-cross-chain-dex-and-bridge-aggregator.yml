@@ -65,7 +65,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-42-rango-exchange-multi-chain-dex-aggregator-youtube.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
   - defi

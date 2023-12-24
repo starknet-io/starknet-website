@@ -56,7 +56,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/ethcc-conference-video-image.jpeg
-category: community-and-events
+category:
+  - community-and-events
 short_desc: "This talk will survey Starknet’s progress, next steps, and mission:
   to empower individuals to implement and use any social function with the
   integrity that arises only from a maximally broad social consensus."

@@ -70,6 +70,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/lambda-class-stark-prover.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4

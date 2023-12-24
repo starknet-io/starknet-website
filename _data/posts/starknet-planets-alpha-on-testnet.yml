@@ -3,7 +3,8 @@ post_type: article
 title: Starknet Planets Alpha on Testnet
 published_date: 2021-06-14T00:00:00+00:00
 image: /assets/1_uhpmiquyamkerl2mbregna-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

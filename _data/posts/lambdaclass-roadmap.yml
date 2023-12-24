@@ -66,4 +66,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/lambdaclass-roadmap-federico-carrone-leandro-ferrigno.jpg
-category: community-and-events
+category:
+  - community-and-events

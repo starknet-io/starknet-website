@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #7 | Greg from Nethermind and updates on Starknet Roadmap"
 published_date: 2022-02-01T00:00:00+00:00
 image: /assets/cc07.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Greg from Nethermind, updates on Starknet Roadmap, Upcoming Starknet Event
