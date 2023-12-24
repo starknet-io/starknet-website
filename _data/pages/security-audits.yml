@@ -55,6 +55,30 @@ blocks:
           Web3 / ZKP companies.
         link_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
+      - title: Blaize
+        description: Blaize as a blockchain development team provides a wide range of outsourced 
+          blockchain software development services. This includes blockchain and
+          smart contracts auditing service for Web3 / ZKP companies.
+        website_url: https://blaize.tech/
+        image: /assets/blaize-tech-logo.png
+        twitter: https://twitter.com/blaize_tech
+      - title: QuillAudits
+        description: QuillAudits provides smart contract audit services for Web3 / ZKP projects.
+        website_url: https://www.quillaudits.com/
+        image: /assets/quillaudits-logo.png
+        twitter: https://twitter.com/quillaudits
+      - title: PeckShield
+        description: PeckShield providing services related to Smart Contract Audits,
+         Pen Test and Emergency Response, and Threat Monitoring and Prevention.
+        website_url: https://peckshield.com/
+        image: /assets/peckshield-logo.jpg
+        twitter: https://twitter.com/peckshield
+      - title: Zellic
+        description: Zellic is a company specializing in blockchain security,
+         delivering products and audits to organizations in Web3.
+        website_url: https://www.zellic.io/
+        image: /assets/zellic-logo.png
+        twitter: https://twitter.com/zellic_io
   - type: card_list
     randomize: true
     title: Bug Bounty Program
