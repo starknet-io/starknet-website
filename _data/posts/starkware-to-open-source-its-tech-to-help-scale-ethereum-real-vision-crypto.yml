@@ -172,7 +172,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkware-to-open-source-its-tech-to-help-scale-ethereum-real-vision.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic: []
 short_desc: "A gathering in Tel Aviv is exploring the way to scale Ethereum
   through Layer 2 blockchains. Ash Bennington and Marco Olivera are joined live

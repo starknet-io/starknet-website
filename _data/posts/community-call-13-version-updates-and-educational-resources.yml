@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #13 | Version updates and educational resources"
 published_date: 2022-05-10T14:06:18.594Z
 image: /assets/cc13.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Join us for our 13th community call – Presenting New version of

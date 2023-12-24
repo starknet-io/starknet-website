@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc18.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Nethermind presenting Warp transpiler.

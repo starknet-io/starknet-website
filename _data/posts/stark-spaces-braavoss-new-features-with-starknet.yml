@@ -51,5 +51,6 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_fxlzfs3opxo_maxres.png
-category: ecosystem
+category:
+  - ecosystem
 short_desc: Learn about Braavos's newest features on Starknet

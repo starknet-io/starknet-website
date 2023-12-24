@@ -96,7 +96,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-43-introducing-madara_-crafting-bespoke-starknet-appchains-youtube.png
-category: community-calls
+category:
+  - community-calls
 topic:
   - cairo
   - decentralization

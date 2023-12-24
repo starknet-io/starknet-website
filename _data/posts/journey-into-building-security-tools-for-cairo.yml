@@ -66,6 +66,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/journey-into-building-security-tools-for-cairo.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - cairo

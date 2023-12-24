@@ -57,7 +57,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-full-nodes-on-starknet-reduced.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - full_node
 short_desc: Hear from Juno, a full node on Starknet, about what they got

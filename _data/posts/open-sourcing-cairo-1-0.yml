@@ -3,7 +3,8 @@ post_type: article
 title: Open-sourcing Cairo 1.0!
 published_date: 2022-11-24T00:00:00+00:00
 image: /assets/1_rszxhxcej7j0c4bpew5lrq-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - starknet
   - cairo

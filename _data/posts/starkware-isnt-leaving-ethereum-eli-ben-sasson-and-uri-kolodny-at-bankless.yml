@@ -3,7 +3,8 @@ post_type: video
 title: “StarkWare isn’t Leaving Ethereum” / Eli Ben-Sasson and Uri Kolodny at Bankless
 published_date: 2022-07-29T15:51:43.013Z
 image: /assets/interviews07.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
   - ethereum

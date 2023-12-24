@@ -3,7 +3,8 @@ post_type: video
 title: "ETHCC (5): Stark Recursion - Avihu Levy "
 published_date: 2022-07-20T12:27:33.521Z
 image: /assets/vid_events04.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: STARK Recursion is just around the corner! What does it mean? what

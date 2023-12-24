@@ -4,7 +4,8 @@ title: ​​The What’s What of the Cairo World
 toc: true
 published_date: 2023-09-11T13:39:54.110Z
 image: /assets/cairo-terminology-.png
-category: engineering
+category:
+  - engineering
 topic:
   - cairo
 short_desc: "Delve into Starknet's foundational elements: Cairo VM, CASM, Cairo

@@ -3,7 +3,8 @@ post_type: article
 title: Starknet Alpha 4 Release
 published_date: 2021-11-17T00:00:00+00:00
 image: /assets/1_npu7yslcr2lepvlggffrlw-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - starknet
   - fce5e543-fa05-4356-9ff9-bf83196b299f

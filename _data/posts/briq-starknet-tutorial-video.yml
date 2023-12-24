@@ -59,7 +59,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/briq-starknet-tutorial-video.png
-category: stark-math
+category:
+  - stark-math
 topic:
   - getting-started
 short_desc: Briq is an NFT building protocol that allows users to build NFTs out

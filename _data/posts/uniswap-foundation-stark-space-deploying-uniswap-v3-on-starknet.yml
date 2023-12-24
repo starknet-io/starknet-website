@@ -50,4 +50,5 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-category: ecosystem
+category:
+  - ecosystem

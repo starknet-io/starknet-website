@@ -53,6 +53,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_agm7ognhv8m_maxres.png
-category: ecosystem
+category:
+  - ecosystem
 short_desc: Learn all about StarkExpress, which allows developers to create
   applications and integrate StarkExpress APIs.

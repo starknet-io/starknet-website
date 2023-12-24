@@ -3,7 +3,8 @@ post_type: article
 title: Starknet Alpha 1
 published_date: 2021-07-19T00:00:00+00:00
 image: /assets/1_pq_ydwu9lyweznfr8-1_ja-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

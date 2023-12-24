@@ -55,7 +55,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome03.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: This week Eli Ben-Sasson explains the pretty properties of

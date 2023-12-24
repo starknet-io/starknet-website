@@ -98,7 +98,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome01.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: "ZK Study Club is a study group where we cover specific topics in

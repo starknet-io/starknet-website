@@ -65,7 +65,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-struck-episode-12.jpg
-category: stark-struck
+category:
+  - stark-struck
 short_desc: >
   Join Henri Lieutaud from the Starknet team and Rohit from Jediswap on what
   gets them excited about technology in general, blockchain in particular, and

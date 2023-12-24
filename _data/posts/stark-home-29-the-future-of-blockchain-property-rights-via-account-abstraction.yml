@@ -86,7 +86,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-home-29.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - account-abstraction
 short_desc: ""

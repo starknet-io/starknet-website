@@ -4,7 +4,8 @@ title: "Let the Games Begin: Redefining On-Chain Gaming with Starknet"
 toc: true
 published_date: 2023-08-03T12:41:17.072Z
 image: /assets/onchain-gaming-copy-3.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - decentralization
 short_desc: Starknet is changing the gaming world by enabling fast and cheap

@@ -51,7 +51,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome20.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Madhu Sudan - A Picture is Worth a Thousand Words.

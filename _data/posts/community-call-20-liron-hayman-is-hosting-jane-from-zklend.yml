@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #20 | Liron Hayman is hosting Jane from zkLend"
 published_date: 2022-08-09T11:01:08.273Z
 image: /assets/cc20.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Liron Hayman is hosting Jane from zkLend.

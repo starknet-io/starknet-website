@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #29 | Community Update"
 published_date: 2022-12-13T12:57:36.219Z
 image: /assets/cc29.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: "Join us for our #29 Starknet community call with @OhadBarta and

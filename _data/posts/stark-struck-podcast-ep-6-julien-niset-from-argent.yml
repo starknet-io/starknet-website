@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkstruck06.jpg
-category: stark-struck
+category:
+  - stark-struck
 topic:
   - starknet
 short_desc: "Join Henri Lieutaud from the StarkNet team and Julien Niset from

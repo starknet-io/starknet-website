@@ -50,7 +50,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome10.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Zero-Knowledge – The Known Unknown.

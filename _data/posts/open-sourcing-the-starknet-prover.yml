@@ -3,7 +3,8 @@ post_type: article
 title: Open-sourcing the Starknet Prover
 published_date: 2023-02-05T13:05:15.732Z
 image: /assets/1_qiudaqvmaypqf-hbrphxpw-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
   - open_source

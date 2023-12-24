@@ -3,7 +3,8 @@ post_type: article
 title: Starknet’s new Sequencer
 published_date: 2023-01-30T00:00:00+00:00
 image: /assets/1_4gpnmtk-0jm5gppo1m77mq-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - open_source
   - starknet

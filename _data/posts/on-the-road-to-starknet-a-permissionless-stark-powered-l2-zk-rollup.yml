@@ -3,7 +3,8 @@ post_type: article
 title: "On the Road to Starknet: A Permissionless STARK-Powered L2 ZK-Rollup"
 published_date: 2021-01-26T00:00:00+00:00
 image: /assets/ontheroad_01-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

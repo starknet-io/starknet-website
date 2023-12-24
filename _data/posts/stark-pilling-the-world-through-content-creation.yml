@@ -64,4 +64,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_igabeq27hls_standard.png
-category: community-and-events
+category:
+  - community-and-events

@@ -72,4 +72,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/apibara-open-source-platform-for-streaming-on-chain-data.jpg
-category: community-and-events
+category:
+  - community-and-events

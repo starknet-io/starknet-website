@@ -64,7 +64,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-proving-ethereum-with-herodotus-youtube.png
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - e76017df-d92d-49a5-b996-1275f91844c2
 short_desc: >-

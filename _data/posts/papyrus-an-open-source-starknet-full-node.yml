@@ -3,7 +3,8 @@ post_type: article
 title: "Papyrus: An open-source Starknet full node"
 published_date: 2023-01-11T01:00:00.000Z
 image: /assets/papyrus-an-open-source-starknet-full-node.png
-category: engineering
+category:
+  - engineering
 topic:
   - decentralization
   - full_node

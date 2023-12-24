@@ -57,7 +57,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc23.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: |-

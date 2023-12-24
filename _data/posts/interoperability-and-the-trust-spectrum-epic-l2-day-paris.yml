@@ -64,7 +64,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/epic-l2-day-paris.jpg
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
   - ca272092-827b-4603-a3a6-b0fdbbc624ad

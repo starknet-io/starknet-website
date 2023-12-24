@@ -53,7 +53,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_fibe13worzu_maxres.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
 short_desc: Join Door Labs for a live demo of their advanced ticketing platform.

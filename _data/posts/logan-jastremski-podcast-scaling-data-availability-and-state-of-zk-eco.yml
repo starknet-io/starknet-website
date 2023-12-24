@@ -148,7 +148,8 @@ video:
         - On Orca, you can trade tokens lightning fast and confidently (thanks to our Fair Price Indicator). Additionally, you can provide liquidity to our concentrated liquidity pools (Whirlpools) to earn trading fees and token emissions.
       channelId: UC8__jTM6-_GOkRmOBPrTB0A
 image: /assets/logan-jastremski-podcast-scaling-data-availability-and-state-of-zk-eco.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: |-

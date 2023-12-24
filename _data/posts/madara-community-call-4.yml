@@ -68,7 +68,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/madara-community-call-4.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
   - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d

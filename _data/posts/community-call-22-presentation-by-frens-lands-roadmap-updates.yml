@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #22 | Presentation by Frens Lands & roadmap updates"
 published_date: 2022-09-06T11:05:02.904Z
 image: /assets/cc22.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Join our 22nd community call for a presentation by Frens Lands and

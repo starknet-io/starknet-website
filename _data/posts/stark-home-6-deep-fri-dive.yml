@@ -52,7 +52,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome06.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a

@@ -70,4 +70,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/pragma-the-provable-oracle.jpg
-category: community-and-events
+category:
+  - community-and-events

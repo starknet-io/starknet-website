@@ -70,4 +70,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/zerosync-introducing-validity-proofs-to-bitcoin.jpg
-category: community-and-events
+category:
+  - community-and-events

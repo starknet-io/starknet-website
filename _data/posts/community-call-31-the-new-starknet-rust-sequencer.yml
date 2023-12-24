@@ -3,7 +3,8 @@ post_type: video
 title: "Community Call #31 | The New Starknet Rust Sequencer"
 published_date: 2023-01-17T13:00:07.686Z
 image: /assets/cc31.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
   - starknet
 short_desc: Today we will host Elin Tulchinsky and Alon Haramati from StarkWare

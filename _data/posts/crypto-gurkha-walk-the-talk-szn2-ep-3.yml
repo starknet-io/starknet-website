@@ -3,7 +3,8 @@ post_type: video
 title: Crypto Gurkha | Walk the Talk SZN2 EP 3
 published_date: 2022-11-18T17:02:13.788Z
 image: /assets/sddefault.jpg
-category: ecosystem
+category:
+  - ecosystem
 topic:
   - starknet
 short_desc: On this Episode I met up with Motty the CEO and founder of Braavos

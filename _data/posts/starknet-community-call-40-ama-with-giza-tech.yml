@@ -63,7 +63,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-40-ama-with-giza-tech-youtube.png
-category: community-calls
+category:
+  - community-calls
 topic:
   - c509a814-84b5-4552-b21e-980b92f215f6
 short_desc: Giza is a permissionless protocol in Starknet for deploying machine

@@ -55,7 +55,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_qcsbj49ybba_maxres.png
-category: ecosystem
+category:
+  - ecosystem
 short_desc: Deep dive into the world of Oracles on Starknet and their mystical
   powers with a special roundtable discussion featuring Redstone, Switchboard,
   Stork, and Pragma.

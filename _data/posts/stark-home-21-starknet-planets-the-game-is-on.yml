@@ -47,7 +47,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome21.png
-category: community-and-events
+category:
+  - community-and-events
 topic:
   - starknet
 short_desc: Starknet Planets - The game is on!

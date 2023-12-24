@@ -127,7 +127,8 @@ post_type: article
 title: Starknet Goals and Roadmap 2023
 published_date: 2023-04-24T14:18:24.983Z
 image: /assets/blog-post-image-starknet-goals-.png
-category: engineering
+category:
+  - engineering
 topic:
   - 63d577bc-fbb2-432c-8d43-ce4472c82338
 short_desc: >

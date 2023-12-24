@@ -70,4 +70,5 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/snarks-on-starks-an-emulated-field-journey-for-garaga.jpg
-category: community-and-events
+category:
+  - community-and-events
