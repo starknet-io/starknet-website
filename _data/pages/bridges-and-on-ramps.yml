@@ -50,6 +50,7 @@ blocks:
         twitter: https://twitter.com/Chaineye_tools
         title: Chaineye Mini Bridge
         image: /assets/chaineye-mini-bridge-logo.jpeg
+        description: Low cost bridge optimized for small transfer scenarios.
       - title: Rango
         twitter: https://twitter.com/RangoExchange
         discord: https://discord.com/invite/q3EngGyTrZ
