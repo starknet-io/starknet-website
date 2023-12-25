@@ -16,6 +16,7 @@ blocks:
       - title: ABDK
         website_url: https://www.abdk.consulting/
         image: /assets/abdk-logo.png
+        twitter: https://twitter.com/ABDKconsulting
       - title: ChainSecurity
         image: /assets/chiansecurity-logo.png
         website_url: https://chainsecurity.com/
@@ -29,17 +30,20 @@ blocks:
         description: ConsenSys is a leading smart contract auditing and blockchain
           security tooling for smart contract developers, auditors and web3
           protocols.
+        twitter: https://twitter.com/ConsenSysAudits
       - title: Nethermind Security
         website_url: https://nethermind.io/smart-contracts-audits/
         image: /assets/nethermind_security_ico.png
         description: Nethermind Security is the security arm of Nethermind, providing
           services related to Smart Contract Audits, Formal Verification, and
           Real-Time Monitoring.
+        twitter: https://twitter.com/NethermindStark
       - title: OpenZeppelin
         website_url: https://www.openzeppelin.com/
         image: /assets/openzeppelin-logo.png
         description: OpenZeppelin is a leading blockchain security company providing
           products and audits to trusted organizations in Web3.
+        twitter: https://twitter.com/OpenZeppelin
       - website_url: http://www.trailofbits.com
         image: /assets/trail-of-bits-logo.png
         title: Trail of Bits
@@ -47,6 +51,7 @@ blocks:
           most targeted organizations and products, combining high-end security
           research, with a real-world attacker mentality to reduce risk and
           fortify code.
+        twitter: https://twitter.com/trailofbits
       - title: Ginger Security
         image: /assets/ginger-security-logo.png
         website_url: https://gingersec.xyz/
@@ -55,6 +60,7 @@ blocks:
           Web3 / ZKP companies.
         link_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
+        twitter: https://twitter.com/extropy
       - title: Blaize
         description: Blaize as a blockchain development team provides a wide range of outsourced 
           blockchain software development services. This includes blockchain and
