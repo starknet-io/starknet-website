@@ -6,8 +6,10 @@ published_date: 2023-09-11T13:39:54.110Z
 image: /assets/cairo-terminology-.png
 category:
   - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
 topic:
   - cairo
+  - getting-started
 short_desc: "Delve into Starknet's foundational elements: Cairo VM, CASM, Cairo
   Zero, Cairo, and Sierra. Discover their pivotal role in Layer 2 scaling,
   enhancing Ethereum efficiency, and advancing the developer landscape in
