@@ -38,14 +38,14 @@ items:
             items:
               - page: 0dc3d102-0936-433e-9219-f46e3087e396
               - page: d202009a-3541-4366-b664-36ef2e492aa3
+              - custom_title: StarkGate
+                custom_external_link: https://starkgate.starknet.io/
               - page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
               - page: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
               - page: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
               - custom_title: Security & audits
                 custom_internal_link: ""
                 page: af68f1f8-b2a3-49e2-bec0-f36165cc331f
-              - custom_title: StarkGate
-                custom_external_link: https://starkgate.starknet.io/
   - title: Community
     columns:
       - blocks:
