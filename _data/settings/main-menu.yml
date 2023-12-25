@@ -44,6 +44,8 @@ items:
               - custom_title: Security & audits
                 custom_internal_link: ""
                 page: af68f1f8-b2a3-49e2-bec0-f36165cc331f
+              - custom_title: StarkGate
+                custom_external_link: https://starkgate.starknet.io/
   - title: Community
     columns:
       - blocks:
