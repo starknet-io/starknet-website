@@ -58,7 +58,7 @@ blocks:
       - title: Extropy
         description: Extropy provides auditing, training and development services for
           Web3 / ZKP companies.
-        link_url: https://security.extropy.io/
+        website_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
         twitter: https://twitter.com/extropy
       - title: Blaize
