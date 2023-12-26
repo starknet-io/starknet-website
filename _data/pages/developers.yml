@@ -19,7 +19,7 @@ blocks:
         color: blue-default
         title: Read the Starknet Docs
         description: Read the official Starknet documentation to build your first
-          contracts and dapps.
+          contracts and dApps.
         icon: /assets/read-docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
