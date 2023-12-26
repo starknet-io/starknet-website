@@ -203,6 +203,7 @@ export const ImageIconBox = ({
         height={size === "large" ? "292px" : "263px"}
         overflow="hidden"
         className="card-image"
+        width="calc(100% - 16px)"
         _dark={{ background: variant === "dapp" && "linear-gradient(12.57deg, #2C292B -31.18%, #474D50 102.25%)"}}
       >
         <Box
