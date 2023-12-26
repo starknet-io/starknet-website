@@ -36,7 +36,7 @@ blocks:
             orientation: vertical
             withIllustration: false
             title: Superior UX
-            icon: /assets/superior-ux.png
+            icon: /assets/ux-superior.png
             type: image_icon_link_card
             link:
               custom_title: Dive into native AA
