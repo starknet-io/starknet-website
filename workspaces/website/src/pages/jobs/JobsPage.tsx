@@ -322,18 +322,32 @@ interface Job {
 export type JobsHit = {
   contact?: Contact; // contact can be undefined in live preview
   job?: Job; // job can be undefined in live preview
-  published_at?: string;
+  published_at: string;
   archived?: string;
-  archive_after: string;
+  archive_after?: number;
+};
+
+const isArchived = (published_at: string, archive_after: number): boolean | null => {
+  if (archive_after === undefined) {
+    return null;
+  }
+
+  const currentDate = new Date();
+  const publishedDate = new Date(published_at);
+  const archivedDate = new Date(publishedDate.setMonth(publishedDate.getMonth() + archive_after));
+
+  return archivedDate <= currentDate;
 };
 
 function CustomHits() {
   const { hits, showMore, isLastPage } = useInfiniteHits<JobsHit>();
 
+  const activeHits = hits.filter(hit => !isArchived(hit.published_at, hit.archive_after!));
+
   return (
     <>
       <Flex gap={4} direction="column" flex={1}>
-        {hits.map((hit, i) => (
+        {activeHits.map((hit, i) => (
           <JobsCard key={i} hit={hit} />
         ))}
       </Flex>
