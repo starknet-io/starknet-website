@@ -87,8 +87,8 @@ blocks:
         link:
           custom_title: View
           custom_external_link: https://starknet.notion.site/starknet/Starknet-Basecamp-Hub-1541b3c1f49f439da872d3d71647d834
-        description: Register for an upcoming Basecamp cohort or watch the previous
-          recordings to learn everything about Starknet, Cairo, and STARKs.
+        description: Register to the next Basecamp or watch previous recordings to learn
+          about Starknet, Cairo, and STARKs.
         columns: "4"
       - size: large
         color: blue-default
@@ -143,14 +143,13 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: true
-        title: Starknet Devs Newsletter
+        title: Devs Newsletter
         icon: /assets/devs-newsletter.svg
         type: image_icon_link_card
         link:
           custom_internal_link: /subscribe-newsletter
           custom_title: View
-        description: Sign up for Starknet Devs Newsletter and keep up to date on version
-          updates.
+        description: Sign up for the Devs Newsletter and keep up to date on version updates.
         columns: "4"
       - size: large
         color: blue-default
