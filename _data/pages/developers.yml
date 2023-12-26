@@ -28,8 +28,8 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Read the Starknet Book
-        description: "Developed by the Starknet community, the Starknet book teaches how
-          to build on Starknet. "
+        description: "Developed by the community, the Starknet book teaches how to build
+          on Starknet. "
         icon: /assets/read-book.svg
         link:
           custom_external_link: https://book.starknet.io/
@@ -87,8 +87,8 @@ blocks:
         link:
           custom_title: View
           custom_external_link: https://starknet.notion.site/starknet/Starknet-Basecamp-Hub-1541b3c1f49f439da872d3d71647d834
-        description: Register to the next Basecamp or watch previous recordings to learn
-          about Starknet, Cairo, and STARKs.
+        description: Sign-up to the next Basecamp or watch recordings to learn about
+          Starknet.
         columns: "4"
       - size: large
         color: blue-default
@@ -101,8 +101,7 @@ blocks:
         link:
           custom_title: View
           custom_external_link: https://www.starknet.io/en/tutorials
-        description: Get the expert guidance you need to enhance your Starknet dev
-          skills with our hands-on video tutorials.
+        description: Enhance your Starknet dev skills with hands-on video tutorials.
         columns: "4"
     base: 1
     md: 2
