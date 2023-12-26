@@ -93,6 +93,7 @@ export default function PostByCategory({
               borderRadius={"8px"}
               src={post.image}
               alt={post.title}
+              width={"100%"}
             />
           ) : null}
 
