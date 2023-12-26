@@ -55,7 +55,7 @@ blocks:
             orientation: vertical
             withIllustration: false
             title: Thriving Ecosystem
-            icon: /assets/thriving-ecosystem.png
+            icon: /assets/creativity-unleased.png
             type: image_icon_link_card
             link:
               custom_title: The growing Starknet Stack
@@ -75,7 +75,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Creativity Unleashed
-        icon: /assets/creativity-unleased.png
+        icon: /assets/thriving-ecosystem.png
         type: image_icon_link_card
         link:
           custom_title: Build with Cairo
