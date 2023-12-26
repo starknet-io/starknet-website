@@ -4,6 +4,7 @@ status: active
 archive_after: 3
 contact:
   name: Starknet ID
+  logo: /assets/starknet-id-logo.jpg
 job:
   title: Web3 Community Lead Offer
   description: "Starknet ID is an identity provider on Starknet. The protocol
