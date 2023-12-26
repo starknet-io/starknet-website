@@ -20,7 +20,7 @@ blocks:
         title: Read the Starknet Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/read_the_docs.svg
+        icon: /assets/read-docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
@@ -30,7 +30,7 @@ blocks:
         title: Read the Starknet Book
         description: "Developed by the Starknet community, the Starknet book teaches how
           to build on Starknet. "
-        icon: /assets/docs.svg
+        icon: /assets/read-book.svg
         link:
           custom_external_link: https://book.starknet.io/
           custom_internal_link: ""
