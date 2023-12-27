@@ -98,10 +98,10 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: blue-default
-        title: "Developer documentation "
+        title: Starknet Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/docs.svg
+        icon: /assets/read-docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View docs
