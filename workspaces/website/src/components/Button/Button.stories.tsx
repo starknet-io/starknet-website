@@ -97,6 +97,16 @@ export const Ghost = () => (
   </ThemeProvider>
 );
 
+export const Gradient = () => (
+  <ThemeProvider>
+    <HStack p={12}>
+      <>
+        <Button variant="gradient">Gradient button</Button>
+      </>
+    </HStack>
+  </ThemeProvider>
+);
+
 export const PrimaryHero = () => (
   <ThemeProvider>
     <HStack p={12}>

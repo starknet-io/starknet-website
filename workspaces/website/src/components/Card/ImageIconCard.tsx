@@ -15,6 +15,7 @@ import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { getComputedLinkData } from "src/utils/utils";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { LinkData } from "@starknet-io/cms-data/src/settings/main-menu";
+import { Button } from "@ui/Button";
 
 type Props = {
   variant?: "image_icon_link_card" | "icon_link_card" | "dapp" | "large_card" | "community_card";
@@ -69,6 +70,7 @@ export const ImageIconCard = ({
   let linkVariant;
   let cardFooterPadding;
   let globalPadding;
+  let buttonVariant;
   switch (variant) {
     case "image_icon_link_card":
       titleVariant = size === "large" ? "h3" : "h4";
@@ -92,6 +94,7 @@ export const ImageIconCard = ({
       descriptionVariant = "body";
       cardFooterPadding = "24px 0 0 0";
       linkVariant = "cardLink";
+      buttonVariant = "gradient";
       break;
     case "community_card":
       titleVariant = "h4";
@@ -200,7 +203,17 @@ export const ImageIconCard = ({
               </Stack>
             </CardBody>
 
-            {link && variant !== "dapp" && variant !== "community_card" && (
+            {link && variant === "large_card" && (
+              <CardFooter padding={cardFooterPadding}>
+                <ButtonGroup spacing="2">
+                  <Button href={href} variant={buttonVariant}>
+                    {label} &rarr;
+                  </Button>
+                </ButtonGroup>
+              </CardFooter>
+            )}
+
+            {link && variant !== "dapp" && variant !== "community_card" && variant !== "large_card" && (
               <CardFooter padding={cardFooterPadding}>
                 <ButtonGroup spacing="2">
                   <CustomLink
