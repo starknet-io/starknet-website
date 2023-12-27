@@ -10,14 +10,8 @@ video:
     etag: CKrU2G3hUpUVpI2qAtbcASPzZgw
     id: kuIZiWQIkOs
     snippet:
-      publishedAt: 2023-08-04T07:15:01Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "ZeroSync : Introducing validity proofs to Bitcoin - Robin Linus"
-      description: |-
-        ZeroSync : https://zerosync.org/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T07:15:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/kuIZiWQIkOs/default.jpg
@@ -39,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/kuIZiWQIkOs/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "ZeroSync : Introducing validity proofs to Bitcoin - Robin Linus"
       tags:
         - crypto
         - ethereum
@@ -50,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "ZeroSync : Introducing validity proofs to Bitcoin - Robin Linus"
         description: |-
@@ -60,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        ZeroSync : https://zerosync.org/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT34M17S
       dimension: 2d
@@ -72,3 +72,6 @@ video:
 image: /assets/zerosync-introducing-validity-proofs-to-bitcoin.jpg
 category:
   - community-and-events
+  - ecosystem
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
