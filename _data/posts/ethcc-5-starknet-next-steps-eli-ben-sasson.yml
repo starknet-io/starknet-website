@@ -2,16 +2,6 @@ id: 901cc24c-c83b-4e76-8a66-b0c546162335
 post_type: video
 title: "ETHCC (5): Starknet - Next steps - Eli Ben-Sasson "
 published_date: 2022-07-21T12:24:41.336Z
-image: /assets/vid_events04.jpg
-category:
-  - community-and-events
-topic:
-  - starknet
-short_desc: >
-  Starknet has come a long way since its announcement a year and a
-  half ago. A vibrant community has formed around it, and it’s growing rapidly.
-  This exciting and expanding universe poses new challenges, and requires new
-  tools. This talk will share our vision for the near future of Starknet
 video:
   url: https://www.youtube.com/watch?v=4asIQyWwGko
   id: 4asIQyWwGko
@@ -20,14 +10,8 @@ video:
     etag: 6iTOSiBfBGBQeXB1mGh-A7fZhn4
     id: 4asIQyWwGko
     snippet:
-      publishedAt: 2022-07-21T21:13:59Z
-      channelId: UC_kOxlaYNOTtNwtwySZ0B8w
-      title: Eli Ben-Sasson - StarkNet - Next steps
-      description: StarkNet has come a long way since its announcement a year and a
-        half ago. A vibrant community has formed around it, and it’s growing
-        rapidly. This exciting and expanding universe poses new challenges, and
-        requires new tools. This talk will share our vision for the near future
-        of StarkNet
+      publishedAt: 2022-07-21T21:13:59.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/4asIQyWwGko/default.jpg
@@ -50,8 +34,8 @@ video:
           width: 1280
           height: 720
       channelTitle: Grand Amphi Théatre
+      title: Eli Ben-Sasson - StarkNet - Next steps
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Eli Ben-Sasson - StarkNet - Next steps
         description: StarkNet has come a long way since its announcement a year and a
@@ -59,6 +43,12 @@ video:
           rapidly. This exciting and expanding universe poses new challenges,
           and requires new tools. This talk will share our vision for the near
           future of StarkNet
+      description: StarkNet has come a long way since its announcement a year and a
+        half ago. A vibrant community has formed around it, and it’s growing
+        rapidly. This exciting and expanding universe poses new challenges, and
+        requires new tools. This talk will share our vision for the near future
+        of StarkNet
+      channelId: UC_kOxlaYNOTtNwtwySZ0B8w
     contentDetails:
       duration: PT27M49S
       dimension: 2d
@@ -67,3 +57,18 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/vid_events04.jpg
+category:
+  - community-and-events
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
+topic:
+  - starknet
+  - events
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - ethereum
+short_desc: >
+  Starknet has come a long way since its announcement a year and a half ago. A
+  vibrant community has formed around it, and it’s growing rapidly. This
+  exciting and expanding universe poses new challenges, and requires new tools.
+  This talk will share our vision for the near future of Starknet
