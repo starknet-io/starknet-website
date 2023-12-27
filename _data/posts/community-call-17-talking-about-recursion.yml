@@ -2,12 +2,6 @@ id: ef698cb6-e73f-4207-a2eb-b857053ab147
 post_type: video
 title: "Community Call #17 - Talking about Recursion"
 published_date: 2022-06-27T10:56:35.938Z
-image: /assets/cc17.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: Talking about Recursion.
 video:
   url: https://youtu.be/95RHzcmbHMo
   id: 95RHzcmbHMo
@@ -16,10 +10,8 @@ video:
     etag: -4bf6p-8JxEhSXjIr6dZn7zeljU
     id: 95RHzcmbHMo
     snippet:
-      publishedAt: 2022-06-27T09:05:42Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet community call #17 - Talking about Recursion"
-      description: ""
+      publishedAt: 2022-06-27T09:05:42.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/95RHzcmbHMo/default.jpg
@@ -41,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/95RHzcmbHMo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet community call #17 - Talking about Recursion"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet community call #17 - Talking about Recursion"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT52M26S
       dimension: 2d
@@ -56,3 +50,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc17.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - starknet
+  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
+short_desc: Talking about Recursion.
