@@ -52,6 +52,8 @@ video:
 image: /assets/starkhome02.png
 category:
   - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
 topic:
-  - starknet
+  - cryptography
+  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
 short_desc: Eli Ben Sasson talks about FFT vs. PPC
