@@ -62,8 +62,11 @@ video:
 image: /assets/starkhome26.png
 category:
   - community-and-events
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
 topic:
   - starknet
+  - cryptography
 short_desc: Watch this special episode of STARK @ Home with Professor Shafi
   Goldwasser, 2012 Turing Award Laureate, talking with Eli Ben-Sasson about the
   amazing untold story of the origin of Zero Knowledge and Interactive Proofs
