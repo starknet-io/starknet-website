@@ -10,19 +10,8 @@ video:
     etag: lEBLhli_5R74t1e9B8PUMntjPAE
     id: 8QT7edN2Xnk
     snippet:
-      publishedAt: 2023-08-02T20:07:36Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Beerus - new generation of Starknet Light Client - Paul-Henry Kajfasz
-      description: >-
-        Paul-Henri on Twitter :
-        https://twitter.com/phklive?s=21&t=dlKr1P4tCbVI5QXisA7pgw
-
-        Beerus : https://github.com/keep-starknet-strange/beerus/discussions/515
-
-
-        StarkNetCC : https://www.starknet.cc/
-
-        Starkware : https://starkware.co/
+      publishedAt: 2023-08-02T20:07:36.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/8QT7edN2Xnk/default.jpg
@@ -44,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/8QT7edN2Xnk/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Beerus - new generation of Starknet Light Client - Paul-Henry Kajfasz
       tags:
         - crypto
         - ethereum
@@ -55,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Beerus - new generation of Starknet Light Client - Paul-Henry Kajfasz
         description: >-
@@ -70,7 +60,17 @@ video:
           StarkNetCC : https://www.starknet.cc/
 
           Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: >-
+        Paul-Henri on Twitter :
+        https://twitter.com/phklive?s=21&t=dlKr1P4tCbVI5QXisA7pgw
+
+        Beerus : https://github.com/keep-starknet-strange/beerus/discussions/515
+
+
+        StarkNetCC : https://www.starknet.cc/
+
+        Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT20M25S
       dimension: 2d
@@ -82,3 +82,9 @@ video:
 image: /assets/beerus-new-generation-of-starknet-light-client-.jpg
 category:
   - community-and-events
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - ecosystem
+  - engineering
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - decentralization
