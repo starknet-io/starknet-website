@@ -88,4 +88,5 @@ blocks:
         discord: discord.gg/nftscan
         image: /assets/400_400.png
         twitter: https://twitter.com/nftscan_com
-    description: ""
+    description: An enhanced API is a set of tools designed to simplify developers’
+      access to complex queries on Starknet data.
