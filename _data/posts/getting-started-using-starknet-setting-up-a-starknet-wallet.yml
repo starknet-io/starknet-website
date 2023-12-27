@@ -7,8 +7,10 @@ image: /assets/getting-started.png
 category:
   - stark-math
   - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+  - ecosystem
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
+  - starknet
 short_desc: >
   A gentle hand-holding guide for your first steps using Starknet and learning
   how to set up a Starknet wallet and transfer funds from an Ethereum wallet.  
