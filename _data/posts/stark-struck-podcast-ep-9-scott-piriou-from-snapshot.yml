@@ -2,14 +2,6 @@ id: 37b2e0d8-dd87-4ba3-b3be-a15307db2c70
 post_type: video
 title: STARK Struck Podcast | Ep 9 | Scott Piriou from Snapshot
 published_date: 2023-01-04T00:00:00+00:00
-image: /assets/starkstruck09.jpg
-category:
-  - stark-struck
-topic:
-  - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Scott Piriou from
-  Snapshot, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically.   "
 video:
   url: https://youtu.be/NPcpug9sQcg
   id: NPcpug9sQcg
@@ -18,17 +10,8 @@ video:
     etag: o2ezyttLEaRowaJhUCdQduAGpQw
     id: NPcpug9sQcg
     snippet:
-      publishedAt: 2023-01-04T14:00:16Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
-        Snapshot
-      description: >-
-        Join Henri Lieutaud from the StarkNet team and Scott Piriou from
-        Snapshot, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.    
-
-
-        Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
+      publishedAt: 2023-01-04T14:00:16.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/NPcpug9sQcg/default.jpg
@@ -50,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/NPcpug9sQcg/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
+        Snapshot
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 9 | Henri Lieutaud with Scott Piriou from
           Snapshot
@@ -63,7 +48,14 @@ video:
 
 
           Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and Scott Piriou from
+        Snapshot, on what gets them excited about technology in general,
+        blockchain in particular, and validity rollups specifically.    
+
+
+        Twitter: @scottpiriou @SnapshotLabs @henrlihenrli @Starknet_Edu
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT56M55S
       dimension: 2d
@@ -72,3 +64,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck09.jpg
+category:
+  - stark-struck
+  - ecosystem
+topic:
+  - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: "Join Henri Lieutaud from the StarkNet team and Scott Piriou from
+  Snapshot, on what gets them excited about technology in general, blockchain in
+  particular, and validity rollups specifically.   "
