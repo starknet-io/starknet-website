@@ -2,12 +2,6 @@ id: fde6972f-d48d-4cfa-ab30-9e5b8d8dc98d
 post_type: video
 title: "Community Call #7 | Greg from Nethermind and updates on Starknet Roadmap"
 published_date: 2022-02-01T00:00:00+00:00
-image: /assets/cc07.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: Greg from Nethermind, updates on Starknet Roadmap, Upcoming Starknet Event
 video:
   url: https://youtu.be/4kb4wSDETLM
   id: 4kb4wSDETLM
@@ -16,11 +10,8 @@ video:
     etag: oI46L1SaRVrTV-JE2521yd8gM_s
     id: 4kb4wSDETLM
     snippet:
-      publishedAt: 2022-02-07T16:18:53Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
-        StarkNet Roadmap"
-      description: ""
+      publishedAt: 2022-02-07T16:18:53.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/4kb4wSDETLM/default.jpg
@@ -42,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/4kb4wSDETLM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
+        StarkNet Roadmap"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #7 | Greg from Nethermind and updates on
           StarkNet Roadmap"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT51M38S
       dimension: 2d
@@ -58,3 +52,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc07.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: Greg from Nethermind, updates on Starknet Roadmap, Upcoming Starknet Event
