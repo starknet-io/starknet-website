@@ -61,8 +61,11 @@ video:
 image: /assets/stark-at-home-cairo-1.0-2.jpg
 category:
   - community-and-events
+  - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
 topic:
   - cairo
+  - open_source
 short_desc: In this session of STARK @ Home, we invited Vitalik Buterin to
   discuss the creation of new programming languages. We'll review Cairo 1.0 and
   answer the questions of why it was created, what one should pay attention to
