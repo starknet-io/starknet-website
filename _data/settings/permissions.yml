@@ -52,3 +52,6 @@ items:
   - username: Mrericsumner
     access:
       - posts
+  - username: OfirEinhorn
+    access:
+      - posts
