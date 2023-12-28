@@ -85,7 +85,10 @@ video:
 image: /assets/youthumb_dslrjxlprwy_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+  - ecosystem
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - cairo
 short_desc: The founders of Topology will talk about a new world to experiment
   on verifiable digital physics and autonomous agents in CairoVM.
