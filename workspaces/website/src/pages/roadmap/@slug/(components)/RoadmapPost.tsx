@@ -113,7 +113,7 @@ export default function RoadmapPost({
         roadmapPost?.gitlog?.date
       ).fromNow()}`}
       main={
-        <Container maxWidth="846px">
+        <Box maxWidth="846px">
           <Box mb={"2rem"}>
             <RoadmapPostVersion roadmapVersion={roadmapVersion} />
           </Box>
@@ -146,7 +146,7 @@ export default function RoadmapPost({
           <MarkdownBlock body={psCopy as string} />
           <RoadmapSubscribeForm env={env} isOpen={isOpen} setIsOpen={setIsOpen} />
           <Divider mt="6" />
-        </Container>
+        </Box>
       }
     />
   );
