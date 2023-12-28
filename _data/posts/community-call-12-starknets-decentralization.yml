@@ -2,13 +2,6 @@ id: 38b8fb5a-646d-4a30-9b0f-27c620d497cf
 post_type: video
 title: "Community Call #12 | Starknet’s decentralization"
 published_date: 2022-04-12T14:04:24.552Z
-image: /assets/cc12.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: Join us for our 12th Community Call! Today we are going to have a
-  presentation about Starknet’s decentralization by Ohad.
 video:
   url: https://youtu.be/rQd6xXIQ43g
   id: rQd6xXIQ43g
@@ -17,11 +10,8 @@ video:
     etag: XfQW-Gu4IZCufOxYHgjSblfw304
     id: rQd6xXIQ43g
     snippet:
-      publishedAt: 2022-04-13T01:45:13Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #12 | StarkNet’s decentralization"
-      description: Join us for our 12th Community Call! Today we are going to have a
-        presentation about StarkNet’s decentralization by Ohad.
+      publishedAt: 2022-04-13T01:45:13.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/rQd6xXIQ43g/default.jpg
@@ -43,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/rQd6xXIQ43g/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #12 | StarkNet’s decentralization"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #12 | StarkNet’s decentralization"
         description: Join us for our 12th Community Call! Today we are going to have a
           presentation about StarkNet’s decentralization by Ohad.
-      defaultAudioLanguage: en-US
+      description: Join us for our 12th Community Call! Today we are going to have a
+        presentation about StarkNet’s decentralization by Ohad.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H8M1S
       dimension: 2d
@@ -59,3 +52,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc12.jpg
+category:
+  - community-calls
+topic:
+  - starknet
+  - decentralization
+short_desc: Join us for our 12th Community Call! Today we are going to have a
+  presentation about Starknet’s decentralization by Ohad.
