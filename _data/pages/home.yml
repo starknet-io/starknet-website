@@ -18,7 +18,7 @@ blocks:
         icon: /assets/unlimited-scale.png
         type: image_icon_link_card
         link:
-          custom_title: Discover validity rollups
+          custom_title: How Starknet Works
           custom_internal_link: /learn/what-is-starknet
         description: Starknet utilizes the power of STARK technology to ensure
           computational integrity. By validating off-chain transactions with
@@ -39,7 +39,7 @@ blocks:
             icon: /assets/ux-superior.png
             type: image_icon_link_card
             link:
-              custom_title: Dive into native AA
+              custom_title: Dive into Native AA
               custom_internal_link: /posts/developers/native-account-abstraction-opening-blockchain-to-new-possibilities
             description: "Starknet offers efficient and user-friendly experiences by
               employing Native Account Abstraction. All accounts are smart
@@ -58,7 +58,7 @@ blocks:
             icon: /assets/creativity-unleased.png
             type: image_icon_link_card
             link:
-              custom_title: The growing Starknet Stack
+              custom_title: The Growing Starknet Stack
               custom_internal_link: /posts/ecosystem/the-starknet-stacks-growth-spurt
             description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
               passionate community of developers, users, and partners. With the
@@ -83,7 +83,7 @@ blocks:
         description: Starknet devs are empowered to code solutions that make a
           difference. Cairo, Starknet’s native smart contract language, allows
           developers to push the boundaries of their applications by allowing
-          them to code any kind of business logic.   Building with Cairo,
+          them to code any kind of business logic. Building with Cairo,
           developers can let their vision reach its full potential on Starknet.
         columns: "4"
   - type: newsletter_popup
