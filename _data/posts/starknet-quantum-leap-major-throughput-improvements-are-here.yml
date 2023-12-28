@@ -6,11 +6,14 @@ published_date: 2023-07-05T16:00:10.445Z
 image: /assets/frame-17.png
 category:
   - ecosystem
+  - engineering
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
   - 63d577bc-fbb2-432c-8d43-ce4472c82338
   - cairo
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - starknet
+  - ethereum
 short_desc: >
   Starknet Alpha V0.12.0 focuses on enhancing performance and user experience.
   The new version introduces a Rust-based implementation of the Sequencer,
