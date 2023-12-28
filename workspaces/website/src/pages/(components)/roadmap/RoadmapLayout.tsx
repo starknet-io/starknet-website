@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { HeroImage } from "@ui/HeroImage/HeroImage";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import { ReactNode } from "react";
@@ -27,7 +27,7 @@ export default function RoadmapLayout({
     <>
       <PageLayout
         main={
-          <Container>
+          <Box>
             {roadmapSettings?.show_hero_banner && <HeroImage
               title={roadmapSettings?.hero_title}
               description={roadmapSettings?.hero_description}
@@ -68,7 +68,7 @@ export default function RoadmapLayout({
               </Box>
             </Flex> */}
             {children}
-          </Container>
+          </Box>
         }
       />
     </>
