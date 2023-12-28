@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-import { Box } from "@chakra-ui/react";
+import { Box, Show } from "@chakra-ui/react";
 import {
   VideoSectionBlock as VideoSectionProps,
   ChapterInfo
@@ -60,18 +60,20 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
         playlistOnBottom={playlistOnBottom}
       />
 
-      <Box mt="md">
-        <CategoryTabs
-          activeItemId={currentChapter.id}
-          onTabClick={(id) => 
-            setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
-          }
-          items={normalizedPlaylist.map((p) => ({
-            id: p.id,
-            label: p.subtitle,
-          }))}
-          playlistOnBottom={playlistOnBottom}
-        />
+      <Box marginTop={{ base: "32px", lg: !playlistOnBottom ? "64px" : "32px"  }}>
+        <Show above="lg">   
+          <CategoryTabs
+            activeItemId={currentChapter.id}
+            onTabClick={(id) => 
+              setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
+            }
+            items={normalizedPlaylist.map((p) => ({
+              id: p.id,
+              label: p.subtitle,
+            }))}
+            playlistOnBottom={playlistOnBottom}
+          />
+        </Show>
 
         <Box
           maxW={chapterDescriptionFullWidth ? "100%" : "656px"}
