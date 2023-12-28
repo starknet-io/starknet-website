@@ -52,3 +52,9 @@ items:
   - username: Mrericsumner
     access:
       - posts
+  - username: OfirEinhorn
+    access:
+      - posts
+  - username: Poley7
+    access:
+      - posts
