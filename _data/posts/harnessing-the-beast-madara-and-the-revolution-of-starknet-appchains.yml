@@ -5,8 +5,11 @@ published_date: 2023-07-20T13:00:54.823Z
 image: /assets/madara-2-.png
 category:
   - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
   - decentralization
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - cryptography
 short_desc: Prepare to witness a new era of possibilities in the realm of
   blockchains, enabled by Madara. A high-performance Starknet sequencer,
   providing the power to create customizable and efficient appchains.
