@@ -44,6 +44,7 @@ export default function ChaptersPlaylist({
       display={{ base: "flex", lg: "grid" }}
       maxH={{ base: "auto", lg: height }}
       gap={{ base: "40px", lg: "16px" }}
+      paddingBottom={{ base: "12px", lg: "0px" }}
       overflowY="auto"
       overflowX="auto"
       flexWrap="nowrap"
