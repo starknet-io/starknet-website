@@ -10,14 +10,8 @@ video:
     etag: lAH4fcksOIj1NMxzXXdIlNM9WRk
     id: ttJ2z5KnhFA
     snippet:
-      publishedAt: 2023-08-04T09:15:03Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "SNARKS on STARKS : An Emulated Field journey for Garaga - Feltroid"
-      description: |-
-        Garaga : https://github.com/keep-starknet-strange/garaga
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T09:15:03.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/ttJ2z5KnhFA/default.jpg
@@ -39,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/ttJ2z5KnhFA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "SNARKS on STARKS : An Emulated Field journey for Garaga - Feltroid"
       tags:
         - crypto
         - ethereum
@@ -50,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "SNARKS on STARKS : An Emulated Field journey for Garaga - Feltroid"
         description: |-
@@ -60,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Garaga : https://github.com/keep-starknet-strange/garaga
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT17M27S
       dimension: 2d
@@ -72,3 +72,4 @@ video:
 image: /assets/snarks-on-starks-an-emulated-field-journey-for-garaga.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
