@@ -152,6 +152,7 @@ category:
   - ecosystem
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
 short_desc: |-
   Deep dive into the core bottlenecks of scaling ZK Tech:
   - The state of the ecosystem
