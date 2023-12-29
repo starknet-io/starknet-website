@@ -97,4 +97,9 @@ blocks:
         link_url: https://chainbase.com/chainNetwork/Starknet
         website_url: https://chainbase.com/chainNetwork/Starknet
         image: /assets/logo_icon_black_512.png
+      - description: Reddio provides lowest average latency Starknet/Etherum RPC service around the globe
+        title: Reddio
+        link_url: https://www.reddio.com/node
+        website_url: https://www.reddio.com/node
+        image: /assets/reddio_logo.jpg
     randomize: true
