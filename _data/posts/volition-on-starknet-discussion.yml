@@ -71,8 +71,9 @@ video:
 image: /assets/youthumb_uwk8ofc3yoa_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - c8cf00c8-69f5-464f-bf4d-5a0b28d12246
 short_desc: Volition presents a design proposal aimed at reducing L1 data
   availability costs, which currently account for over 90% of the average
   transaction cost on Starknet. This proposal offers developers and users the
