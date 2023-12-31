@@ -10,12 +10,8 @@ video:
     etag: izQENOd91CHIJHNXRaZoEERRDQM
     id: d1IqNH_7dj0
     snippet:
-      publishedAt: 2023-08-04T14:45:02Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Paradex : Tech demo - Sergey Vidyuk"
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T14:45:02.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/d1IqNH_7dj0/default.jpg
@@ -37,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/d1IqNH_7dj0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Paradex : Tech demo - Sergey Vidyuk"
       tags:
         - crypto
         - ethereum
@@ -48,15 +46,17 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Paradex : Tech demo - Sergey Vidyuk"
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT13M41S
       dimension: 2d
@@ -68,3 +68,6 @@ video:
 image: /assets/paradex-tech-demo.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - 14642a28-1ac7-4b67-9e4e-d56d12f06bed
