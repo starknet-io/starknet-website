@@ -64,11 +64,11 @@ video:
       projection: rectangular
 image: /assets/cc29.jpg
 category:
-  - community-calls
   - ecosystem
+  - community-calls
 topic:
-  - starknet
-  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - decentralization
+  - defi
 short_desc: "Join us for our #29 Starknet community call with @OhadBarta and
   Ariel (@FeedTheFed)! Ohad will be talking about AAVE Starknet deployment, and
   Ariel will be giving an in-depth look at Sierra."
