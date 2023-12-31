@@ -10,11 +10,8 @@ video:
     etag: YtbCjbQ2R0jA5J6Y_DIQz9lRCMI
     id: GAPU22K0YhY
     snippet:
-      publishedAt: 2023-09-11T23:49:24Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Starknet decentralized protocol discussion | Ilia Volokh
-      description: We will slowly traverse the maze of questions and flows in the
-        decentralized Starknet protocol presented in my talk.
+      publishedAt: 2023-09-11T23:49:24.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/GAPU22K0YhY/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/GAPU22K0YhY/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Starknet decentralized protocol discussion | Ilia Volokh
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Starknet decentralized protocol discussion | Ilia Volokh
         description: We will slowly traverse the maze of questions and flows in the
           decentralized Starknet protocol presented in my talk.
-      defaultAudioLanguage: en-US
+      description: We will slowly traverse the maze of questions and flows in the
+        decentralized Starknet protocol presented in my talk.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT15M20S
       dimension: 2d
@@ -55,7 +55,9 @@ video:
 image: /assets/youthumb_hayos7e3ge0_maxres.png
 category:
   - community-and-events
+  - engineering
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
+  - decentralization
 short_desc: We will slowly traverse the maze of questions and flows in the
   decentralized Starknet protocol presented in Ilia's talk.
