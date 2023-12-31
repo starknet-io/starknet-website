@@ -2,13 +2,6 @@ id: 4ca439d7-c990-4180-969d-966673ef3e44
 post_type: video
 title: "Community Call #24 | Presentation by Cartridge"
 published_date: 2022-10-04T11:48:06.184Z
-image: /assets/cc24.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: On todays community call we have a presentation by Tarrence all
-  about Cartridge.
 video:
   url: https://youtu.be/nxV7-LkKyFs
   id: nxV7-LkKyFs
@@ -17,13 +10,8 @@ video:
     etag: 2MaVcmIBFEdkpprfwQLhYkO1m3w
     id: nxV7-LkKyFs
     snippet:
-      publishedAt: 2022-10-05T01:35:08Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #24 | Presentation by Cartridge"
-      description: |-
-        Join us for StarkNet's community call.
-        Today we will have Tarrence with a presentation about Cartridge.
-        @tarrenceva  @cartridge_gg on Twitter.
+      publishedAt: 2022-10-05T01:35:08.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/nxV7-LkKyFs/default.jpg
@@ -45,16 +33,21 @@ video:
           url: https://i.ytimg.com/vi/nxV7-LkKyFs/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #24 | Presentation by Cartridge"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #24 | Presentation by Cartridge"
         description: |-
           Join us for StarkNet's community call.
           Today we will have Tarrence with a presentation about Cartridge.
           @tarrenceva  @cartridge_gg on Twitter.
-      defaultAudioLanguage: en-US
+      description: |-
+        Join us for StarkNet's community call.
+        Today we will have Tarrence with a presentation about Cartridge.
+        @tarrenceva  @cartridge_gg on Twitter.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT56M20S
       dimension: 2d
@@ -63,3 +56,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc24.jpg
+category:
+  - ecosystem
+  - community-calls
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+short_desc: On todays community call we have a presentation by Tarrence all
+  about Cartridge.
