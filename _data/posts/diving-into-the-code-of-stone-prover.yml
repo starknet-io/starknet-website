@@ -85,6 +85,8 @@ category:
   - community-and-events
 topic:
   - 043289e7-3b15-4840-9172-534d12593089
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - open_source
 short_desc: "An introduction to the StarkWare open-source prover currently being
   used in production for Starknet and StarkEx. This session will include a
   demonstration of proving and verifying a Cairo program, spill light on the
