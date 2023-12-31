@@ -38,7 +38,7 @@ blocks:
         description: " Owlto Finance is a decentralized cross-rollup bridge that focuses
           on L2."
         link_url: https://owlto.finance/bridge
-        website_url: https://owlto.finance/bridge
+        website_url: https://owlto.finance/bridge?from=Ethereum&to=Starknet
         twitter: https://twitter.com/Owlto_Finance
         image: /assets/owlto-finance-logo.jpeg
       - description: Lightning-fast secure bridge for seamless cross-chain transactions.
@@ -46,7 +46,7 @@ blocks:
         image: /assets/rhino.fi-logo.png
         website_url: http://rhino.fi/
         twitter: https://twitter.com/rhinofi
-      - website_url: https://minibridge.chaineye.tools/
+      - website_url: https://minibridge.chaineye.tools/?src=ethereum&dst=starknet
         twitter: https://twitter.com/Chaineye_tools
         title: Chaineye Mini Bridge
         image: /assets/chaineye-mini-bridge-logo.jpeg
