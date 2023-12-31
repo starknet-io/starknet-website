@@ -10,14 +10,8 @@ video:
     etag: Z3S1aB9r5SM8zgdjK2ya3Y48Vyk
     id: 1bQcyNh6p08
     snippet:
-      publishedAt: 2023-08-04T13:30:01Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Herodotus : Announcing big stuff - Marcello Bardus"
-      description: |-
-        Herodotus : https://www.herodotus.dev/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T13:30:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/1bQcyNh6p08/default.jpg
@@ -39,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/1bQcyNh6p08/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Herodotus : Announcing big stuff - Marcello Bardus"
       tags:
         - crypto
         - ethereum
@@ -50,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Herodotus : Announcing big stuff - Marcello Bardus"
         description: |-
@@ -60,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Herodotus : https://www.herodotus.dev/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT14M12S
       dimension: 2d
@@ -72,3 +72,6 @@ video:
 image: /assets/herodotus-announcing-big-stuff.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
