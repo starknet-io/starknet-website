@@ -10,15 +10,8 @@ video:
     etag: 4f32OGockQqRoNM8x4UQVn-Ph9k
     id: 7Y9e4DfcJFY
     snippet:
-      publishedAt: 2023-08-04T10:15:00Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Start stealing the f*** briq: tips & tricks for a great web3 UX -
-        Lancelot De Ferrière"
-      description: |-
-        Briq : https://briq.construction/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T10:15:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/7Y9e4DfcJFY/default.jpg
@@ -40,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/7Y9e4DfcJFY/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Start stealing the f*** briq: tips & tricks for a great web3 UX -
+        Lancelot De Ferrière"
       tags:
         - crypto
         - ethereum
@@ -51,9 +47,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Start stealing the f*** briq: tips & tricks for a great web3 UX -
           Lancelot De Ferrière"
@@ -62,7 +57,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Briq : https://briq.construction/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT15M1S
       dimension: 2d
@@ -74,3 +74,6 @@ video:
 image: /assets/start-stealing-the-f-briq-tips-tricks-for-a-great-web3-uxjpg.jpeg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - 7a538f38-cebc-4e85-9434-0f8840e01d6c
