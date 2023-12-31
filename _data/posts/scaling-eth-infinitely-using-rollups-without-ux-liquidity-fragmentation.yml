@@ -10,13 +10,8 @@ video:
     etag: QweUEUi56yETrHhRohQ-WPUOL9I
     id: H107ar01zxw
     snippet:
-      publishedAt: 2023-08-04T14:15:01Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity
-        fragmentation - Daniel Lumi
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T14:15:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/H107ar01zxw/default.jpg
@@ -38,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/H107ar01zxw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity
+        fragmentation - Daniel Lumi
       tags:
         - crypto
         - ethereum
@@ -49,16 +47,18 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Scaling ETH "Infinitely" using Rollups without UX & Liquidity
           fragmentation - Daniel Lumi
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT20M9S
       dimension: 2d
@@ -70,3 +70,7 @@ video:
 image: /assets/scaling-eth-infinitely-using-rollups-without-ux-liquidity-fragmentation.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
