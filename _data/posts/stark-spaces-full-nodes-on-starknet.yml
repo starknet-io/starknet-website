@@ -10,13 +10,8 @@ video:
     etag: R9nStcbtcjd-yMtma_viJHnkdrw
     id: 2ZrrltCIBug
     snippet:
-      publishedAt: 2023-10-30T12:22:25Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | Full nodes on Starknet
-      description: Hear from Juno, a full node on Starknet, about what they got
-        involved in with Starknet, the challenges they faced, how they came up
-        with creative solutions, and what differentiates them from an Ethereum
-        node.
+      publishedAt: 2023-10-30T12:22:25.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/2ZrrltCIBug/default.jpg
@@ -38,16 +33,21 @@ video:
           url: https://i.ytimg.com/vi/2ZrrltCIBug/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | Full nodes on Starknet
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | Full nodes on Starknet
         description: Hear from Juno, a full node on Starknet, about what they got
           involved in with Starknet, the challenges they faced, how they came up
           with creative solutions, and what differentiates them from an Ethereum
           node.
-      defaultAudioLanguage: en-US
+      description: Hear from Juno, a full node on Starknet, about what they got
+        involved in with Starknet, the challenges they faced, how they came up
+        with creative solutions, and what differentiates them from an Ethereum
+        node.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT22M51S
       dimension: 2d
@@ -59,6 +59,7 @@ video:
 image: /assets/stark-spaces-full-nodes-on-starknet-reduced.png
 category:
   - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
   - full_node
 short_desc: Hear from Juno, a full node on Starknet, about what they got
