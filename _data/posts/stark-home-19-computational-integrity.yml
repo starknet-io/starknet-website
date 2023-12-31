@@ -56,7 +56,5 @@ category:
   - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
   - 217311b0-fc55-4192-9257-aa82004ddb73
   - stark-math
-topic:
-  - starknet
-  - cryptography
+topic: []
 short_desc: Computational integrity.
