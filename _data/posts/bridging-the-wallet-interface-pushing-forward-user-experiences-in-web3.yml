@@ -63,8 +63,10 @@ video:
 image: /assets/youthumb_8mzw0ovk__m_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+  - engineering
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: "The Starkgate bridge plays a crucial role in the Starkware
   ecosystem. In this talk, we'll explore how the Starkware team and Dynamic.xyz
   rebuilt the bridge authentication flow (see it in action here:
