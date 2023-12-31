@@ -2,12 +2,6 @@ id: b5951596-5ba9-430b-ba49-bf5ed23feb44
 post_type: video
 title: "Community Call #20 | Liron Hayman is hosting Jane from zkLend"
 published_date: 2022-08-09T11:01:08.273Z
-image: /assets/cc20.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: Liron Hayman is hosting Jane from zkLend.
 video:
   url: https://youtu.be/aWYIhtCXBYw
   id: aWYIhtCXBYw
@@ -16,10 +10,8 @@ video:
     etag: nlk1je9nyo8_Xmoc3Y5DQR38_KQ
     id: aWYIhtCXBYw
     snippet:
-      publishedAt: 2022-08-10T01:35:12Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
-      description: Liron Hayman is hosting Jane from zkLend
+      publishedAt: 2022-08-10T01:35:12.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/aWYIhtCXBYw/default.jpg
@@ -41,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/aWYIhtCXBYw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #20 | Liron Hayman is hosting Jane from zkLend"
         description: Liron Hayman is hosting Jane from zkLend
-      defaultAudioLanguage: en-US
+      description: Liron Hayman is hosting Jane from zkLend
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT56M51S
       dimension: 2d
@@ -56,3 +50,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc20.jpg
+category:
+  - ecosystem
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - defi
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+short_desc: Liron Hayman is hosting Jane from zkLend.
