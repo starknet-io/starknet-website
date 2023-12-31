@@ -52,6 +52,7 @@ video:
       projection: rectangular
 image: /assets/cc20.jpg
 category:
+  - community-calls
   - ecosystem
 topic:
   - 8930f558-6756-4e54-93e6-349ca99c158e
