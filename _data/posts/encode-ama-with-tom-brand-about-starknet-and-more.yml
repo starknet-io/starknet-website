@@ -2,14 +2,6 @@ id: 322f922f-27c8-48cc-924c-50314e2b8fc8
 post_type: video
 title: Encode AMA with Tom Brand, about Starknet and more
 published_date: 2022-06-22T15:49:29.553Z
-image: /assets/interviews06.jpg
-category:
-  - ecosystem
-topic:
-  - starknet
-short_desc: Tom is the Product Manager at StarkWare, and in the session, he
-  talks about the beginnings of his career in web3, ZK proofs and ZK rollups,
-  Cairo, Starknet and StarkWare, go-to-market strategy and much more!
 video:
   url: https://youtu.be/PlpnV_k-hek
   id: PlpnV_k-hek
@@ -18,96 +10,8 @@ video:
     etag: ZH9I3qzLzd98Q0SzytmTqb65lOA
     id: PlpnV_k-hek
     snippet:
-      publishedAt: 2022-06-29T11:13:19Z
-      channelId: UC8MwfizU_2GYh_LugWJom6A
-      title: "Encode Club: Tom Brand AMA"
-      description: >-
-        We were delighted to welcome Tom Brand for an AMA session on
-        Tuesday, 14th June! 🚀
-
-
-        Tom is the Product Manager at StarkWare, and in the session, he talks about the beginnings of his career in web3, ZK proofs and ZK rollups, Cairo, StarkNet and StarkWare, go-to-market strategy and much more!
-
-
-        You can find the transcript and further details here: https://medium.com/encode-club/tom-brand-product-manager-at-starkware-ama-9fcca9e46a64?source=friends_link&sk=162fc802fcfeb9cb49b83b39e57b7ad4
-
-
-        About Tom
-
-        Tom Brand is the Product Manager & Blockchain Researcher at StarkWare with 5 years of experience in finding technological solutions to complex real-world problems. He is passionate about researching the consensus protocol and the security properties of Proof of Stake protocol. Tom has an M.Sc. in Computer Science at the Technion Israel Institute for Technology.
-
-
-        About StarkWare
-
-        StarkWare develops STARK-based solutions for the blockchain industry. Their products enable a secure, trustless, and scalable operating for blockchain applications. StarkWare develops StarkEx, a standalone permissioned Validity-Rollup, and StarkNet, a permissionless decentralized ZK-Rollup. More info here: https://starkware.co
-
-
-        Other Encode AMAs: https://www.encode.club/amas​
-
-
-        About Encode Club
-
-        Encode Club is an online blockchain education platform onboarding talented people into the crypto space. We work with leading companies, networks, communities, and universities. We educate people by way of events, workshops, courses hackathons, accelerators, and bootcamps. We also have a separate investment fund and recruitment arm. For more information visit our website: https://www.encode.club/​​​​
-
-
-        Join the Community
-
-        🐥 Encode Twitter: https://twitter.com/encodeclub 
-
-        🗣 Encode Discord: https://discord.gg/k32RTEptXc
-
-
-        Timestamps:
-
-        00:00:00 Introduction
-
-        00:02:47 Career ambitions
-
-        00:04:22 Getting to know web3
-
-        00:07:21 ZK proof and ZK rollups
-
-        00:11:30 StarkWare and Ethereum
-
-        00:13:03 Cairo language
-
-        00:20:03 Cairo development
-
-        00:24:29 StarkWare road map
-
-        00:27:20 Rollups, proofs and ZK in the future
-
-        00:30:15 A road map for the decentralization of provers
-
-        00:32:31 A helpful go-to-market strategy
-
-        00:36:54 A road map of the parallelization of transaction processing
-
-        00:42:26 Building on a higher-level language on Cairo
-
-        00:43:21 Blockchain reset
-
-        00:45:36 StarkNet's strengths
-
-        00:47:00 Whitelist for contracts
-
-        00:47:51 Resources about ZK proofs
-
-        00:49:00 Connection of dApps
-
-        00:49:36 High inflation & corruption and crypto
-
-        00:52:37 TEE confidentiality
-
-        00:53:48 Custom hardware
-
-        00:54:42 Migrating NFTs
-
-        00:56:34 StarkNet merch
-
-        00:57:31 Advantages of account abstraction
-
-        01:01:26 Conclusion
+      publishedAt: 2022-06-29T11:13:19.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/PlpnV_k-hek/default.jpg
@@ -129,14 +33,15 @@ video:
           url: https://i.ytimg.com/vi/PlpnV_k-hek/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-GB
       channelTitle: Encode Club
+      title: "Encode Club: Tom Brand AMA"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Encode Club: Tom Brand AMA"
         description: >-
-          We were delighted to welcome Tom Brand for an AMA session on
-          Tuesday, 14th June! 🚀
+          We were delighted to welcome Tom Brand for an AMA session on Tuesday,
+          14th June! 🚀
 
 
           Tom is the Product Manager at StarkWare, and in the session, he talks about the beginnings of his career in web3, ZK proofs and ZK rollups, Cairo, StarkNet and StarkWare, go-to-market strategy and much more!
@@ -221,7 +126,94 @@ video:
           00:57:31 Advantages of account abstraction
 
           01:01:26 Conclusion
-      defaultAudioLanguage: en-GB
+      description: >-
+        We were delighted to welcome Tom Brand for an AMA session on Tuesday,
+        14th June! 🚀
+
+
+        Tom is the Product Manager at StarkWare, and in the session, he talks about the beginnings of his career in web3, ZK proofs and ZK rollups, Cairo, StarkNet and StarkWare, go-to-market strategy and much more!
+
+
+        You can find the transcript and further details here: https://medium.com/encode-club/tom-brand-product-manager-at-starkware-ama-9fcca9e46a64?source=friends_link&sk=162fc802fcfeb9cb49b83b39e57b7ad4
+
+
+        About Tom
+
+        Tom Brand is the Product Manager & Blockchain Researcher at StarkWare with 5 years of experience in finding technological solutions to complex real-world problems. He is passionate about researching the consensus protocol and the security properties of Proof of Stake protocol. Tom has an M.Sc. in Computer Science at the Technion Israel Institute for Technology.
+
+
+        About StarkWare
+
+        StarkWare develops STARK-based solutions for the blockchain industry. Their products enable a secure, trustless, and scalable operating for blockchain applications. StarkWare develops StarkEx, a standalone permissioned Validity-Rollup, and StarkNet, a permissionless decentralized ZK-Rollup. More info here: https://starkware.co
+
+
+        Other Encode AMAs: https://www.encode.club/amas​
+
+
+        About Encode Club
+
+        Encode Club is an online blockchain education platform onboarding talented people into the crypto space. We work with leading companies, networks, communities, and universities. We educate people by way of events, workshops, courses hackathons, accelerators, and bootcamps. We also have a separate investment fund and recruitment arm. For more information visit our website: https://www.encode.club/​​​​
+
+
+        Join the Community
+
+        🐥 Encode Twitter: https://twitter.com/encodeclub 
+
+        🗣 Encode Discord: https://discord.gg/k32RTEptXc
+
+
+        Timestamps:
+
+        00:00:00 Introduction
+
+        00:02:47 Career ambitions
+
+        00:04:22 Getting to know web3
+
+        00:07:21 ZK proof and ZK rollups
+
+        00:11:30 StarkWare and Ethereum
+
+        00:13:03 Cairo language
+
+        00:20:03 Cairo development
+
+        00:24:29 StarkWare road map
+
+        00:27:20 Rollups, proofs and ZK in the future
+
+        00:30:15 A road map for the decentralization of provers
+
+        00:32:31 A helpful go-to-market strategy
+
+        00:36:54 A road map of the parallelization of transaction processing
+
+        00:42:26 Building on a higher-level language on Cairo
+
+        00:43:21 Blockchain reset
+
+        00:45:36 StarkNet's strengths
+
+        00:47:00 Whitelist for contracts
+
+        00:47:51 Resources about ZK proofs
+
+        00:49:00 Connection of dApps
+
+        00:49:36 High inflation & corruption and crypto
+
+        00:52:37 TEE confidentiality
+
+        00:53:48 Custom hardware
+
+        00:54:42 Migrating NFTs
+
+        00:56:34 StarkNet merch
+
+        00:57:31 Advantages of account abstraction
+
+        01:01:26 Conclusion
+      channelId: UC8MwfizU_2GYh_LugWJom6A
     contentDetails:
       duration: PT1H2M44S
       dimension: 2d
@@ -230,3 +222,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/interviews06.jpg
+category:
+  - ecosystem
+topic:
+  - cairo
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: Tom is the Product Manager at StarkWare, and in the session, he
+  talks about the beginnings of his career in web3, ZK proofs and ZK rollups,
+  Cairo, Starknet and StarkWare, go-to-market strategy and much more!
