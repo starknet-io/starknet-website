@@ -53,7 +53,9 @@ video:
 image: /assets/ts04.jpg
 category:
   - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
-  - starknet
+  - account-abstraction
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: |
   STARK SPACES | Starknet Regenesis
