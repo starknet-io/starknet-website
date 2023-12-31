@@ -38,7 +38,7 @@ blocks:
         description: " Owlto Finance is a decentralized cross-rollup bridge that focuses
           on L2."
         link_url: https://owlto.finance/bridge
-        website_url: https://owlto.finance/bridge
+        website_url: https://owlto.finance/bridge?from=Ethereum&to=Starknet
         twitter: https://twitter.com/Owlto_Finance
         image: /assets/owlto-finance-logo.jpeg
       - description: Lightning-fast secure bridge for seamless cross-chain transactions.
