@@ -10,49 +10,8 @@ video:
     etag: -OadNM-NocMtSEae4HACpNhxuco
     id: CZyEeoLUqds
     snippet:
-      publishedAt: 2023-05-05T04:54:44Z
-      channelId: UCGXWKlq1Oxr3ddEtmKhAkPg
-      title: How Layer-2s Can Unlock Web3 Gaming (StarkWare, Influence Game)
-      description: >-
-        Today’s episode is sponsored by Origin Dollar: With U.S. inflation still
-        at 5% and multiple CeFi lending platforms bankrupt, DeFi protocols that
-        earn interest on stablecoins are once again back on crypto investors'
-        minds. See here for more details: http://realvision.com/origindollar
-
-
-        Eli Ben-Sasson, co-founder and president of StarkWare, and Chris Lexmond, founder and CEO of Unstoppable Games, join Ash Bennington to talk about Unstoppable's new Web3 sci-fi game Influence and how it utilizes StarkWare's layer-2 Starknet to fly past Ethereum's limitations.
-
-
-        We want to hear from you, so send us your questions, feedback and suggestions.
-
-
-        #starkware #starknet #ethereum #web3 #web3gaming #blockchain #layer2 #ether #eth #influence #mmo #scifi #space #gaming #scaling #rollup 
-
-
-        About Real Vision™:
-
-        Real Vision™ is where you can understand the complex world of finance, business, and the global economy with real in-depth analysis from experts. 
-
-
-        Connect with Real Vision™ Online:
-
-        Real Vision Crypto: http://rvtv.io/CryptoRV
-
-        Twitter: https://rvtv.io/twitter
-
-        Instagram: https://rvtv.io/instagram
-
-        Facebook: https://rvtv.io/facebook
-
-        Linkedin: https://rvtv.io/linkedin
-
-
-        #Crypto #raoulpal #realvision #cryptotrading #cryptocurrency #cryptocurrencies #cryptonews #cryptocurrencynews #cryptonewstoday #cryptoanalysis
-
-
-        Disclaimer:
-
-        This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
+      publishedAt: 2023-05-05T04:54:44.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/CZyEeoLUqds/default.jpg
@@ -74,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/CZyEeoLUqds/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: Real Vision Crypto
+      title: How Layer-2s Can Unlock Web3 Gaming (StarkWare, Influence Game)
       tags:
         - Crypto Investing
         - Real Vision Crypto
@@ -112,9 +73,8 @@ video:
         - bitcoin proof of work
         - proof of stake
         - defi hack
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: How Layer-2s Can Unlock Web3 Gaming (StarkWare, Influence Game)
         description: >-
@@ -158,7 +118,47 @@ video:
           Disclaimer:
 
           This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
-      defaultAudioLanguage: en
+      description: >-
+        Today’s episode is sponsored by Origin Dollar: With U.S. inflation still
+        at 5% and multiple CeFi lending platforms bankrupt, DeFi protocols that
+        earn interest on stablecoins are once again back on crypto investors'
+        minds. See here for more details: http://realvision.com/origindollar
+
+
+        Eli Ben-Sasson, co-founder and president of StarkWare, and Chris Lexmond, founder and CEO of Unstoppable Games, join Ash Bennington to talk about Unstoppable's new Web3 sci-fi game Influence and how it utilizes StarkWare's layer-2 Starknet to fly past Ethereum's limitations.
+
+
+        We want to hear from you, so send us your questions, feedback and suggestions.
+
+
+        #starkware #starknet #ethereum #web3 #web3gaming #blockchain #layer2 #ether #eth #influence #mmo #scifi #space #gaming #scaling #rollup 
+
+
+        About Real Vision™:
+
+        Real Vision™ is where you can understand the complex world of finance, business, and the global economy with real in-depth analysis from experts. 
+
+
+        Connect with Real Vision™ Online:
+
+        Real Vision Crypto: http://rvtv.io/CryptoRV
+
+        Twitter: https://rvtv.io/twitter
+
+        Instagram: https://rvtv.io/instagram
+
+        Facebook: https://rvtv.io/facebook
+
+        Linkedin: https://rvtv.io/linkedin
+
+
+        #Crypto #raoulpal #realvision #cryptotrading #cryptocurrency #cryptocurrencies #cryptonews #cryptocurrencynews #cryptonewstoday #cryptoanalysis
+
+
+        Disclaimer:
+
+        This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
+      channelId: UCGXWKlq1Oxr3ddEtmKhAkPg
     contentDetails:
       duration: PT34M39S
       dimension: 2d
@@ -172,7 +172,6 @@ category:
   - ecosystem
 topic:
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
-  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: Eli Ben-Sasson, co-founder and president of StarkWare, and Chris
   Lexmond, founder and CEO of Unstoppable Games, join Ash Bennington to talk
