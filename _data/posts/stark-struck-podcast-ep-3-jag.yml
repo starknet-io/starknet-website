@@ -68,7 +68,8 @@ image: /assets/starkstruck04.jpg
 category:
   - ecosystem
   - stark-struck
-topic: []
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
   Empiric, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically.
