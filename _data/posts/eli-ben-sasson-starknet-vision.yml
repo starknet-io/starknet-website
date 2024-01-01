@@ -10,13 +10,8 @@ video:
     etag: JvtPTsVp0jseuZNabzx--axOlzQ
     id: 1FTWIJoSbLA
     snippet:
-      publishedAt: 2023-07-19T21:46:05Z
-      channelId: UCOka-g6iJEpQ9YSIoSn77uQ
-      title: Eli Ben-Sasson - Starknet Vision
-      description: "This talk will survey Starknet’s progress, next steps, and
-        mission: to empower individuals to implement and use any social
-        function, with the integrity that arises only from a maximally broad
-        social consensus"
+      publishedAt: 2023-07-19T21:46:05.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/1FTWIJoSbLA/default.jpg
@@ -39,14 +34,19 @@ video:
           width: 1280
           height: 720
       channelTitle: "[EthCC] Livestream 4"
+      title: Eli Ben-Sasson - Starknet Vision
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Eli Ben-Sasson - Starknet Vision
         description: "This talk will survey Starknet’s progress, next steps, and
           mission: to empower individuals to implement and use any social
           function, with the integrity that arises only from a maximally broad
           social consensus"
+      description: "This talk will survey Starknet’s progress, next steps, and
+        mission: to empower individuals to implement and use any social
+        function, with the integrity that arises only from a maximally broad
+        social consensus"
+      channelId: UCOka-g6iJEpQ9YSIoSn77uQ
     contentDetails:
       duration: PT24M21S
       dimension: 2d
@@ -58,6 +58,9 @@ video:
 image: /assets/ethcc-conference-video-image.jpeg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - defi
 short_desc: "This talk will survey Starknet’s progress, next steps, and mission:
   to empower individuals to implement and use any social function with the
   integrity that arises only from a maximally broad social consensus."
