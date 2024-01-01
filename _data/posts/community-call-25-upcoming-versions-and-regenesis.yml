@@ -2,13 +2,6 @@ id: 95a6bc42-ff78-425a-9c53-30d695f7c521
 post_type: video
 title: "Community Call #25 | Upcoming versions and Regenesis"
 published_date: 2022-10-18T11:50:52.325Z
-image: /assets/cc25.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: Today we will have Tom Brand from StarkWare talking about the
-  upcoming versions and Regenesis.
 video:
   url: https://youtu.be/0y5XIjXMkx4
   id: 0y5XIjXMkx4
@@ -17,13 +10,8 @@ video:
     etag: fHmhdKy2WgTASi5bREJImfl7K20
     id: 0y5XIjXMkx4
     snippet:
-      publishedAt: 2022-10-19T09:25:55Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #25 | Upcoming versions and Regenesis"
-      description: >-
-        Join us for StarkNet's community call.
-
-        Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
+      publishedAt: 2022-10-19T09:25:55.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/0y5XIjXMkx4/default.jpg
@@ -45,16 +33,21 @@ video:
           url: https://i.ytimg.com/vi/0y5XIjXMkx4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #25 | Upcoming versions and Regenesis"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #25 | Upcoming versions and Regenesis"
         description: >-
           Join us for StarkNet's community call.
 
           Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
-      defaultAudioLanguage: en-US
+      description: >-
+        Join us for StarkNet's community call.
+
+        Today we will have Tom Brand from StarkWare talking about the upcoming versions and Regenesis.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT55M25S
       dimension: 2d
@@ -63,3 +56,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc25.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - cairo
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+short_desc: Today we will have Tom Brand from StarkWare talking about the
+  upcoming versions and Regenesis.
