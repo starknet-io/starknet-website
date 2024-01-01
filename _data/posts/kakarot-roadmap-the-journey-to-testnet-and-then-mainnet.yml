@@ -55,11 +55,11 @@ video:
 image: /assets/youthumb_oi2xirgifco_maxres.png
 category:
   - community-and-events
-  - ecosystem
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
   - 8930f558-6756-4e54-93e6-349ca99c158e
   - cairo
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Danilo Kim, Co-founder and Ecosystem Leam of Kakarot, will update on
   their latest works, improvements, and how they are going towards the Testnet
   and Mainet release.
