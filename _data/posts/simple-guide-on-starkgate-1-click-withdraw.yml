@@ -8,9 +8,9 @@ image: /assets/artboard-40.png
 category:
   - ecosystem
   - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
-  - starknet
 short_desc: Have you ever found yourself forgetting to withdraw your assets from
   Mainnet after bridging them through Starkgate? Well, thanks to the incredible
   work of our developers, you can now say goodbye to that concern.
