@@ -2,14 +2,6 @@ id: 89be7861-ad2a-4a77-b5d8-8bd91cf7f714
 post_type: video
 title: Starknet House weekly session 2
 published_date: 2023-02-02T17:00:11.155Z
-image: /assets/sn_house03.jpg
-category:
-  - ecosystem
-topic:
-  - starknet
-short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of
-  Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As,
-  Co-Founder of Cartridge.
 video:
   url: https://youtu.be/s-tOVGlrnE0
   id: s-tOVGlrnE0
@@ -18,29 +10,8 @@ video:
     etag: QIYi7qaquCLc2b6VaLNXVoxu22I
     id: s-tOVGlrnE0
     snippet:
-      publishedAt: 2022-06-17T17:00:24Z
-      channelId: UCqbWfFjh7mlH1rjoRebHo-g
-      title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by
-        Julien, Yoav & Tarrance'
-      description: >-
-        Everything about StarkNet Wallets
-
-
-        Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge.
-
-
-        ---
-
-        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
-
-
-        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
-
-
-        All sessions will be live-streamed online and available wherever you are in the world!
-
-
-        Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      publishedAt: 2022-06-17T17:00:24.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/s-tOVGlrnE0/default.jpg
@@ -58,9 +29,11 @@ video:
           url: https://i.ytimg.com/vi/s-tOVGlrnE0/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en
       channelTitle: Topology
+      title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by
+        Julien, Yoav & Tarrance'
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: 'StarkNet House Weekly Session 2: "Everything about StarkNet Wallets" by
           Julien, Yoav & Tarrance'
@@ -83,7 +56,26 @@ video:
 
 
           Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
-      defaultAudioLanguage: en
+      description: >-
+        Everything about StarkNet Wallets
+
+
+        Let's explore StarkNet wallets with Julien Niset, Co-Founder of Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As, Co-Founder of Cartridge.
+
+
+        ---
+
+        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
+
+
+        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
+
+
+        All sessions will be live-streamed online and available wherever you are in the world!
+
+
+        Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      channelId: UCqbWfFjh7mlH1rjoRebHo-g
     contentDetails:
       duration: PT1H24M49S
       dimension: 2d
@@ -92,3 +84,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/sn_house03.jpg
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - defi
+short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of
+  Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As,
+  Co-Founder of Cartridge.
