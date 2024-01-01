@@ -98,11 +98,12 @@ video:
 image: /assets/communitycall-43-introducing-madara_-crafting-bespoke-starknet-appchains-youtube.png
 category:
   - community-calls
+  - ecosystem
 topic:
   - cairo
-  - decentralization
   - full_node
   - open_source
+  - 14642a28-1ac7-4b67-9e4e-d56d12f06bed
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: >-
   Built on the robust Substrate framework and fast, thanks to Rust, Madara
