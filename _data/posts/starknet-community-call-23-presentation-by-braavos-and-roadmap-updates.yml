@@ -10,13 +10,8 @@ video:
     etag: dFyXtXX2YR_0YdXmsfe8UqFzZ3o
     id: Nx9mycAXcBg
     snippet:
-      publishedAt: 2022-09-21T01:30:00Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
-        updates"
-      description: |-
-        Join us for StarkNet's community call.
-        We will have a presentation by Braavos and talk about roadmap updates.
+      publishedAt: 2022-09-21T01:30:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Nx9mycAXcBg/default.jpg
@@ -38,16 +33,21 @@ video:
           url: https://i.ytimg.com/vi/Nx9mycAXcBg/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
+        updates"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #23 | Presentation by Braavos and roadmap
           updates"
         description: |-
           Join us for StarkNet's community call.
           We will have a presentation by Braavos and talk about roadmap updates.
-      defaultAudioLanguage: en-US
+      description: |-
+        Join us for StarkNet's community call.
+        We will have a presentation by Braavos and talk about roadmap updates.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT54M41S
       dimension: 2d
@@ -59,8 +59,11 @@ video:
 image: /assets/cc23.jpg
 category:
   - community-calls
+  - ecosystem
+  - engineering
 topic:
   - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: |-
   Join us for Starknet's community call.
   We will have a presentation by Braavos and talk about roadmap updates.
