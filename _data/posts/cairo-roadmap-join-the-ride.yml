@@ -5,10 +5,10 @@ toc: true
 published_date: 2023-06-29T13:58:13.648Z
 image: /assets/cairo-roadmap-post-16-9-centered.jpg
 category:
-  - ecosystem
+  - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
 topic:
   - cairo
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
 short_desc:  Time to migrate from Cairo 0
 blocks:
   - type: markdown
