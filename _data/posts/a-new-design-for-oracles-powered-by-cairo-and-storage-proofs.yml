@@ -57,9 +57,8 @@ video:
 image: /assets/youthumb_hidpqjrcfsu_maxres.png
 category:
   - community-and-events
-  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - cairo
 short_desc: "In this talk, Matthias Hallgren, the CTO of Pragma, will dive into
   Pragma's design, zoom into the 3 main verticals of oracle design : Data
   Publishing / Aggregation / Relaying."
