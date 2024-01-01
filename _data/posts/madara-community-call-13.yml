@@ -10,10 +10,8 @@ video:
     etag: RDR8deP4nnRmiiUlzD5ioiYUnw0
     id: bV2vr715aNw
     snippet:
-      publishedAt: 2023-10-19T08:17:43Z
-      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
-      title: "Madara Community Call #13"
-      description: "Join us: https://github.com/keep-starknet-strange/madara"
+      publishedAt: 2023-10-19T08:17:43.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/bV2vr715aNw/default.jpg
@@ -36,11 +34,13 @@ video:
           width: 1280
           height: 720
       channelTitle: Keep Starknet Strange
+      title: "Madara Community Call #13"
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: "Madara Community Call #13"
         description: "Join us: https://github.com/keep-starknet-strange/madara"
+      description: "Join us: https://github.com/keep-starknet-strange/madara"
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
     contentDetails:
       duration: PT1H11M35S
       dimension: 2d
@@ -52,6 +52,7 @@ video:
 image: /assets/madara-community-call-13.png
 category:
   - community-and-events
+  - engineering
 topic:
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
   - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
