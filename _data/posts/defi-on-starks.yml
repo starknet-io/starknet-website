@@ -2,8 +2,75 @@ id: 4385806a-027b-46bc-b69a-73c0c370f29d
 post_type: video
 title: DeFi on Starks
 published_date: 2023-08-04T06:59:52.535Z
+video:
+  url: https://www.youtube.com/watch?v=lWCSPWdoV1I
+  id: lWCSPWdoV1I
+  data:
+    kind: youtube#video
+    etag: 3A9T3HW4u1_kJiQs2R64MxmDMwU
+    id: lWCSPWdoV1I
+    snippet:
+      publishedAt: 2023-08-04T16:00:40Z
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
+      title: DeFi on Starks - Soo Nahm - Brian Fu - Eduard Jubany-Tur - Swapnil Raj -
+        David Garai
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/lWCSPWdoV1I/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/lWCSPWdoV1I/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/lWCSPWdoV1I/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/lWCSPWdoV1I/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/lWCSPWdoV1I/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkNetCC
+      tags:
+        - crypto
+        - ethereum
+        - L2
+        - starknet
+        - starkware
+        - starknetCC
+        - zero-knowledge proof
+        - zkproof
+        - rollup
+      categoryId: "28"
+      liveBroadcastContent: none
+      defaultLanguage: en
+      localized:
+        title: DeFi on Starks - Soo Nahm - Brian Fu - Eduard Jubany-Tur - Swapnil Raj -
+          David Garai
+        description: |-
+          🔮 StarkNetCC : https://www.starknet.cc/
+          💠 Starkware : https://starkware.co/
+      defaultAudioLanguage: en
+    contentDetails:
+      duration: PT25M24S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
 image: /assets/defi-on-starks-soo-nahm-brian-fu-eduard-jubany-tur-swapnil-raj-david-garai.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
 topic:
   - defi
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
