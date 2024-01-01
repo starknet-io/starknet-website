@@ -4,11 +4,13 @@ title: Starknet’s new Sequencer
 published_date: 2023-01-30T00:00:00+00:00
 image: /assets/1_4gpnmtk-0jm5gppo1m77mq-1.png
 category:
-  - engineering
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
   - open_source
-  - starknet
-  - ethereum
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - full_node
 short_desc: We are happy to announce a new StarkNet Sequencer is in the works.
   As StarkNet’s tech stack moves towards open-source, followingCairo 1.0 and
   Papyrus Full Node, we now continue with Starknet’s new sequencer.
