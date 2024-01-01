@@ -10,12 +10,8 @@ video:
     etag: _OpIjXsyEbtZDCpmPLdk1MMgSLI
     id: 5BndqgugKOU
     snippet:
-      publishedAt: 2023-08-04T13:45:00Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: EVM Precompiles on Kakarot - Clément Walter
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T13:45:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/5BndqgugKOU/default.jpg
@@ -37,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/5BndqgugKOU/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: EVM Precompiles on Kakarot - Clément Walter
       tags:
         - crypto
         - ethereum
@@ -48,15 +46,17 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: EVM Precompiles on Kakarot - Clément Walter
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT18M34S
       dimension: 2d
@@ -68,3 +68,7 @@ video:
 image: /assets/evm-precompiles-on-kakarot.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - cairo
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
