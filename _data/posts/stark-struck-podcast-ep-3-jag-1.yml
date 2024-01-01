@@ -2,14 +2,6 @@ id: bdc63266-c5d1-4cc1-8c33-c28548cf03ca
 post_type: video
 title: STARK Struck Podcast | Ep 3 | Jag
 published_date: 2022-09-07T00:00:00+00:00
-image: /assets/starkstruck03.jpg
-category:
-  - stark-struck
-topic:
-  - starknet
-short_desc: Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
-  excited about technology in general, blockchain in particular, and validity
-  rollups specifically.
 video:
   url: https://youtu.be/fHO9e9OyIyc
   id: fHO9e9OyIyc
@@ -18,20 +10,8 @@ video:
     etag: hGHI3x3dBYBjXock3v7yuSHuiH8
     id: fHO9e9OyIyc
     snippet:
-      publishedAt: 2022-09-07T11:13:45Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 3 | Henri Lieutaud & Jag
-      description: >-
-        Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
-        excited about technology in general, blockchain in particular, and
-        validity rollups specifically.
-
-
-        Listen on Spotify!
-
-
-
-        Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
+      publishedAt: 2022-09-07T11:13:45.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/fHO9e9OyIyc/default.jpg
@@ -53,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/fHO9e9OyIyc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 3 | Henri Lieutaud & Jag
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 3 | Henri Lieutaud & Jag
         description: >-
@@ -69,7 +50,18 @@ video:
 
 
           Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
+        excited about technology in general, blockchain in particular, and
+        validity rollups specifically.
+
+
+        Listen on Spotify!
+
+
+
+        Twitter: @jag_lotus @henrlihenrli @Starknet_Intern
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H2M39S
       dimension: 2d
@@ -78,3 +70,14 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck03.jpg
+category:
+  - stark-struck
+  - ecosystem
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+short_desc: Join Henri Lieutaud from the StarkNet team & Jag, on what gets them
+  excited about technology in general, blockchain in particular, and validity
+  rollups specifically.
