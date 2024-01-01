@@ -64,8 +64,10 @@ video:
       projection: rectangular
 image: /assets/communitycall-40-ama-with-giza-tech-youtube.png
 category:
+  - ecosystem
   - community-calls
-topic: []
+topic:
+  - defi
 short_desc: Giza is a permissionless protocol in Starknet for deploying machine
   learning models on-chain, performing verifiable inferences, and enabling an
   open AI economy.
