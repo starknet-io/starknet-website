@@ -2,12 +2,6 @@ id: c5c3e6e6-4458-4045-9156-2c00b14807c7
 post_type: video
 title: "Community Call #5 | 2021 Wrap up, fee mechanism, Alpha versions"
 published_date: 2022-01-06T00:00:00+00:00
-image: /assets/cc05.jpg
-category:
-  - community-calls
-topic:
-  - starknet
-short_desc: 2021 wrap-up, fee mechanism, Alpha versions
 video:
   url: https://youtu.be/dGpL-SLZsX0
   id: dGpL-SLZsX0
@@ -16,52 +10,8 @@ video:
     etag: 7Uovd8YYGL46TmGUm_GMgjSuL6Q
     id: dGpL-SLZsX0
     snippet:
-      publishedAt: 2022-01-06T10:01:22Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #5 | 2021 Wrap up, fee mechanism, Alpha
-        versions"
-      description: >-
-        00:00:00 Introduction
-
-        00:05:15 Transaction costs in Availability Rollups
-
-        00:08:45 Fee formula for StarkNet
-
-        00:12:12 Charging for messages to L1
-
-        00:13:31 Fee estimation APIs
-
-        00:16:59 Paying fees with account contracts
-
-        00:22:00 Estimating fees API again
-
-        00:25:00 Fees for deploying contracts
-
-        00:27:10 Paying for fees in ETH, onboarding new users
-
-        00:30:45 StarkEx and StarkNex
-
-        00:31:45 Making performances better in StarkNet Alpha
-
-        00:32:45 Timeline for Alpha 5
-
-        00:33:30 Upcoming proxy pattern feature
-
-        00:34:51 More features (multi call, block timestamps, removing builtins...)
-
-        00:36:50 Timeline for 0.7.1: Rolling out fee mechanism
-
-        00:38:05 Running a node on StarkNet
-
-        00:44:40 Designing contracts and dapps for StarkNet
-
-        00:48:14 Decentralising StarkNet in 2022
-
-        00:53:44 StarkWare, StarkEx and StarkNet
-
-        00:58:00 StarkNet license
-
-        01:00:25 Testing StarkNet as a user
+      publishedAt: 2022-01-06T10:01:22.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/dGpL-SLZsX0/default.jpg
@@ -83,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/dGpL-SLZsX0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #5 | 2021 Wrap up, fee mechanism, Alpha
+        versions"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #5 | 2021 Wrap up, fee mechanism, Alpha
           versions"
@@ -131,7 +83,49 @@ video:
           00:58:00 StarkNet license
 
           01:00:25 Testing StarkNet as a user
-      defaultAudioLanguage: en-US
+      description: >-
+        00:00:00 Introduction
+
+        00:05:15 Transaction costs in Availability Rollups
+
+        00:08:45 Fee formula for StarkNet
+
+        00:12:12 Charging for messages to L1
+
+        00:13:31 Fee estimation APIs
+
+        00:16:59 Paying fees with account contracts
+
+        00:22:00 Estimating fees API again
+
+        00:25:00 Fees for deploying contracts
+
+        00:27:10 Paying for fees in ETH, onboarding new users
+
+        00:30:45 StarkEx and StarkNex
+
+        00:31:45 Making performances better in StarkNet Alpha
+
+        00:32:45 Timeline for Alpha 5
+
+        00:33:30 Upcoming proxy pattern feature
+
+        00:34:51 More features (multi call, block timestamps, removing builtins...)
+
+        00:36:50 Timeline for 0.7.1: Rolling out fee mechanism
+
+        00:38:05 Running a node on StarkNet
+
+        00:44:40 Designing contracts and dapps for StarkNet
+
+        00:48:14 Decentralising StarkNet in 2022
+
+        00:53:44 StarkWare, StarkEx and StarkNet
+
+        00:58:00 StarkNet license
+
+        01:00:25 Testing StarkNet as a user
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H3M52S
       dimension: 2d
@@ -140,3 +134,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc05.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+short_desc: 2021 wrap-up, fee mechanism, Alpha versions
