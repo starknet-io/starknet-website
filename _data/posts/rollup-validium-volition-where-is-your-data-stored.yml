@@ -6,12 +6,9 @@ image: /assets/rollup-validium-volition-where-is-your-data-stored.png
 category:
   - engineering
 topic:
-  - zk-proofs
-  - ethereum
-  - starknet
   - ef41aa70-6d30-4d4d-9543-10ffd53a1587
-  - 01511658-51f9-4f03-8d50-a2752a0f1588
   - c8cf00c8-69f5-464f-bf4d-5a0b28d12246
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: As of November 2022, StarkEx has settled over $750 billion of
   trading volume, and over 270m transactions on Ethereum. In the NFT space,
   powering apps such as ImmutableX and Sorare, StarkEx has minted over 85
