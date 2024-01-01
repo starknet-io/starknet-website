@@ -5,9 +5,10 @@ published_date: 2023-07-13T12:28:38.087Z
 image: /assets/dojo.png
 category:
   - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: >+
   Dojo is the world's first provable game engine and is made possible due to the
   availability of Starknet and Cairo. With provable gaming engines such as Dojo,
