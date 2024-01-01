@@ -58,7 +58,6 @@ category:
   - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
   - stark-math
 topic:
-  - starknet
-  - cryptography
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
 short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a
   cool trick at the end).
