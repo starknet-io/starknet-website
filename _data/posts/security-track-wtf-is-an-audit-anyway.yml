@@ -10,11 +10,8 @@ video:
     etag: cUWZx1P9glCtW0Sp76axTa-k2H8
     id: nUZX1ukVk7I
     snippet:
-      publishedAt: 2023-09-10T10:05:01Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Security track: Wtf is an audit anyway? | Sock"
-      description: How to think about securing your Starknet project so your audit is
-        actually an audit.
+      publishedAt: 2023-09-10T10:05:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/nUZX1ukVk7I/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/nUZX1ukVk7I/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Security track: Wtf is an audit anyway? | Sock"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Security track: Wtf is an audit anyway? | Sock"
         description: How to think about securing your Starknet project so your audit is
           actually an audit.
-      defaultAudioLanguage: en-US
+      description: How to think about securing your Starknet project so your audit is
+        actually an audit.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT26M30S
       dimension: 2d
@@ -55,7 +55,8 @@ video:
 image: /assets/youthumb_nuzx1ukvk7i_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - 266fa988-350c-4842-b74e-379068ddcf34
 short_desc: How to think about securing your Starknet project so your audit is
   actually an audit.
