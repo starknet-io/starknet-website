@@ -5,12 +5,12 @@ published_date: 2022-11-24T00:00:00+00:00
 image: /assets/1_rszxhxcej7j0c4bpew5lrq-1.png
 category:
   - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - 32c028d1-89c1-4bba-8015-f6a6a4cb70a0
 topic:
-  - starknet
   - cairo
-  - ethereum
   - open_source
-  - 4e28457a-74a1-4570-88ec-6ef5817be14f
 short_desc: In 2020, we released Cairo, a Turing-complete programming language
   supporting verifiable computation. Cairo started as an assembly language and
   gradually became more expressive.
