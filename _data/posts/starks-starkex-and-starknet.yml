@@ -9,7 +9,7 @@ category:
 topic:
   - getting-started
   - 8d0357ee-c235-4814-8f08-c8eadf232a34
-short_desc: TARKs (Scalable, Transparent ARgument of Knowledge) are a proof
+short_desc: STARKs (Scalable, Transparent ARgument of Knowledge) are a proof
   system that enables the proving and verification of computations. It allows
   processing a big computation, generating a proof for the computation’s
   correctness, and then verifying the proof in very few steps.
