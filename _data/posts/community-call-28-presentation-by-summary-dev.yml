@@ -10,13 +10,8 @@ video:
     etag: OIJy1H2m-DvsWhYg64fo5LD9vAs
     id: isqd0YknTJI
     snippet:
-      publishedAt: 2022-11-30T02:42:25Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #28 | Presentation by summary.dev"
-      description: >-
-        Join us for our #28 StarkNet community call.
-
-        Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
+      publishedAt: 2022-11-30T02:42:25.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/isqd0YknTJI/default.jpg
@@ -38,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/isqd0YknTJI/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #28 | Presentation by summary.dev"
       tags:
         - Cairo
         - StarkNet
@@ -48,14 +45,17 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #28 | Presentation by summary.dev"
         description: >-
           Join us for our #28 StarkNet community call.
 
           Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
-      defaultAudioLanguage: en-US
+      description: >-
+        Join us for our #28 StarkNet community call.
+
+        Presentation by summary.dev + Performance roadmap update with StarkNet Product Manager Ariel Elperin
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H4M30S
       dimension: 2d
@@ -67,7 +67,11 @@ video:
 image: /assets/cc28.jpg
 category:
   - community-calls
+  - ecosystem
+  - engineering
 topic:
-  - starknet
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: Presentation by summary.dev + Performance roadmap update with
   StarkNet Product Manager Ariel Elperin.
