@@ -98,7 +98,6 @@ category:
   - engineering
 topic:
   - cairo
-  - a294fed5-41b4-4a8a-bba0-c025cf179de1
 short_desc: In this talk, we’ll discuss the recent smart contract syntax changes
   that are part of the new Cairo 1 compiler release (v2.0.0). Expect a deep dive
   into the smart contract syntax - what exactly is different and what lead us to
