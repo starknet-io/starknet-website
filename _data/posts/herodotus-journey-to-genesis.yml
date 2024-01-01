@@ -57,8 +57,11 @@ video:
 image: /assets/youthumb_t2o1jxxbmzw_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
 short_desc: Storage proofs, Merkle Mountain Range Accumulators, STARKs, and the
   SHARP. A combination like no other. Join Herodotus and Starkware on this
   journey through time.
