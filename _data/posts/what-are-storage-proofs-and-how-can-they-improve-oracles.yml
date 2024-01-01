@@ -5,6 +5,9 @@ published_date: 2023-04-21T12:20:37.786Z
 image: /assets/what-are-storage-proofs-and-how-can-they-improve-oracles-blog-post-image-.png
 category:
   - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: Trustless Cross-Chain Information Access on Starknet
 blocks:
   - type: markdown
