@@ -4,12 +4,10 @@ title: Starknet Regenesis — The plan
 published_date: 2022-09-29T00:00:00+00:00
 image: /assets/1_bvk1npa6jejxqqnaczsgvg-1.png
 category:
-  - engineering
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
-  - starknet
-  - zk-proofs
-  - ethereum
-  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - cairo
 short_desc: Starknet Alpha is progressing towards Regenesis, an important step
   towards production. In this update we want to share more details on the main
   motivation for Regenesis — Cairo 1.0 — and to start explaining what it will
