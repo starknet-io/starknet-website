@@ -83,8 +83,8 @@ video:
 image: /assets/youthumb_rpz5iqtwbaa_maxres.png
 category:
   - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
   - open_source
 short_desc: "An introduction to the StarkWare open-source prover currently being
