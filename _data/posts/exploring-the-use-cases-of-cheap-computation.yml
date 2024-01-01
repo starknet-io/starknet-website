@@ -5,10 +5,11 @@ toc: true
 published_date: 2023-05-06T10:37:34.408Z
 image: /assets/exploring-the-use-cases-of-cheap-computation-image.png
 category:
-  - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+  - engineering
 topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
   - account-abstraction
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: What new use cases of cheap computation does Starknet enable, and
   how can devs take advantage?
 blocks:
