@@ -80,10 +80,9 @@ video:
       projection: rectangular
 image: /assets/communitycall-41-intro-to-sharp-verifier-sc-youtube.png
 category:
-  - community-calls
   - ecosystem
+  - community-calls
 topic:
-  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
 short_desc: |-
   In this session, we will cover:
