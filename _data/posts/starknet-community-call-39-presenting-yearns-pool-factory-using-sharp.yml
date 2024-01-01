@@ -10,15 +10,8 @@ video:
     etag: SaWost7dEdjd7JYVL3FgF63wLgI
     id: lNmXnOy2r_M
     snippet:
-      publishedAt: 2023-04-12T01:37:20Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #39 | Presenting Yearn's pool factory using
-        SHARP"
-      description: >-
-        Check the code here
-        https://github.com/0xSacha/debtAllocatorLendingVaultV3
-
-        Reach Sacha at https://t.me/SachaEth
+      publishedAt: 2023-04-12T01:37:20.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/lNmXnOy2r_M/default.jpg
@@ -40,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/lNmXnOy2r_M/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #39 | Presenting Yearn's pool factory using
+        SHARP"
       tags:
         - Cairo
         - StarkNet
@@ -50,7 +46,6 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #39 | Presenting Yearn's pool factory using
           SHARP"
@@ -59,7 +54,12 @@ video:
           https://github.com/0xSacha/debtAllocatorLendingVaultV3
 
           Reach Sacha at https://t.me/SachaEth
-      defaultAudioLanguage: en-US
+      description: >-
+        Check the code here
+        https://github.com/0xSacha/debtAllocatorLendingVaultV3
+
+        Reach Sacha at https://t.me/SachaEth
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT51M41S
       dimension: 2d
@@ -71,5 +71,7 @@ video:
 image: /assets/communitycall-39-presenting-yearn-s-pool-factory-using-sharp-youtube.png
 category:
   - community-calls
+  - ecosystem
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - defi
