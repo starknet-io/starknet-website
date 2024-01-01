@@ -61,6 +61,7 @@ video:
 image: /assets/community-calls-33-.jpg
 category:
   - community-calls
+  - ecosystem
 topic:
   - full_node
   - decentralization
