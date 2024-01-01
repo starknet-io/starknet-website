@@ -86,10 +86,11 @@ video:
       projection: rectangular
 image: /assets/sn_house03.jpg
 category:
-  - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - defi
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Let's explore Starknet wallets with Julien Niset, Co-Founder of
   Argent, Yoav Gaziel, Co-Founder of Braavos Wallet, and Tarrence van As,
   Co-Founder of Cartridge.
