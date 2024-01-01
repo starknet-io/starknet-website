@@ -10,13 +10,8 @@ video:
     etag: cnr0_0HGWHyp_3UdnI7NrfgJgh0
     id: iyPjr1K77e8
     snippet:
-      publishedAt: 2023-08-04T08:15:03Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Beyond Boundaries: StarkNet's Quantum Leap in the Gaming Realm - Nico
-        Rodriguez"
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T08:15:03.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/iyPjr1K77e8/default.jpg
@@ -38,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/iyPjr1K77e8/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Beyond Boundaries: StarkNet's Quantum Leap in the Gaming Realm - Nico
+        Rodriguez"
       tags:
         - crypto
         - ethereum
@@ -49,16 +47,18 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Beyond Boundaries: StarkNet's Quantum Leap in the Gaming Realm - Nico
           Rodriguez"
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT15M36S
       dimension: 2d
@@ -70,3 +70,6 @@ video:
 image: /assets/beyond-boundaries-starknet-s-quantum-leap-in-the-gaming-realm.jpg
 category:
   - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
