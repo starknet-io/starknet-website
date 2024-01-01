@@ -58,9 +58,9 @@ video:
 image: /assets/ethcc-conference-video-image.jpeg
 category:
   - community-and-events
-  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
 topic:
-  - defi
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - decentralization
 short_desc: "This talk will survey Starknet’s progress, next steps, and mission:
   to empower individuals to implement and use any social function with the
   integrity that arises only from a maximally broad social consensus."
