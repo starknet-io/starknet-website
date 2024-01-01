@@ -10,10 +10,8 @@ video:
     etag: P360dUgfEgOFE8Eftxn5s4kCrgQ
     id: Fxlzfs3opXo
     snippet:
-      publishedAt: 2023-09-04T04:04:26Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Braavos's new features with Starknet
-      description: Learn about Braavos's newest features on Starknet
+      publishedAt: 2023-09-04T04:04:26.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Fxlzfs3opXo/default.jpg
@@ -35,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/Fxlzfs3opXo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Braavos's new features with Starknet
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Braavos's new features with Starknet
         description: Learn about Braavos's newest features on Starknet
-      defaultAudioLanguage: en-US
+      description: Learn about Braavos's newest features on Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT31M27S
       dimension: 2d
@@ -53,4 +53,7 @@ video:
 image: /assets/youthumb_fxlzfs3opxo_maxres.png
 category:
   - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: Learn about Braavos's newest features on Starknet
