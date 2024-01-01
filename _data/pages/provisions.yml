@@ -60,6 +60,17 @@ blocks:
         description: Ekubo Protocol is a highly optimized AMM for Starknet, featuring
           concentrated liquidity and extensibility.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Hashstack
+        icon: /assets/hashstack-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        columns: "4"
     base: 1
     md: 2
     lg: 3
