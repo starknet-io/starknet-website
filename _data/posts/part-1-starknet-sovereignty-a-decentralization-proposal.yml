@@ -7,10 +7,7 @@ category:
   - governance
 topic:
   - decentralization
-  - starknet
   - 35a1b3d6-e07b-418d-8577-ed2429cd7932
-  - ba3700d2-675d-4264-a507-740f5e77f06f
-  - f9337f26-ae48-4f38-be86-8fe0c465ea13
 short_desc: Starknet is a permissionless decentralized Layer 2 (L2) validity
   rollup, built to allow Ethereum to scale via cryptographic protocols called
   STARKs, without compromising Ethereum’s core principles of decentralization,
