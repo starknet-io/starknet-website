@@ -76,12 +76,11 @@ video:
       projection: rectangular
 image: /assets/starkstruck02.jpg
 category:
-  - stark-struck
   - ecosystem
-  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - stark-struck
 topic:
-  - starknet
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot from
   briq, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically.
