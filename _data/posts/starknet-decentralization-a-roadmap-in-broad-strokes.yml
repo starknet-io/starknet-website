@@ -5,10 +5,11 @@ toc: true
 published_date: 2023-10-24T06:31:38.721Z
 image: /assets/decentralization-roadmap-post-v2-blog-image.webp
 category:
-  - engineering
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
   - decentralization
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
+  - open_source
 short_desc: >-
   StarkWare is progressing towards decentralization in two threads: planning and
   implementation.
