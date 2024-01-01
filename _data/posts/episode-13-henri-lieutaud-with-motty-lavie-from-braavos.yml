@@ -10,17 +10,8 @@ video:
     etag: Kjim3Bmwg7nS7Nghz75et-yKnOY
     id: 0wdfEAhhnqg
     snippet:
-      publishedAt: 2023-03-29T11:50:27Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 13 | Henri Lieutaud with Motty Lavie from
-        Braavos
-      description: >-
-        Join Henri Lieutaud from the Starknet team and Motty Lavie from Braavos,
-        on what gets them excited about technology in general, blockchain in
-        particular, and validity rollups specifically. 
-
-
-        Twitter: @mottylen @myBraavos @henrlihenrli @Starknet
+      publishedAt: 2023-03-29T11:50:27.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/0wdfEAhhnqg/default.jpg
@@ -42,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/0wdfEAhhnqg/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 13 | Henri Lieutaud with Motty Lavie from
+        Braavos
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 13 | Henri Lieutaud with Motty Lavie from
           Braavos
@@ -55,7 +48,14 @@ video:
 
 
           Twitter: @mottylen @myBraavos @henrlihenrli @Starknet
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the Starknet team and Motty Lavie from Braavos,
+        on what gets them excited about technology in general, blockchain in
+        particular, and validity rollups specifically. 
+
+
+        Twitter: @mottylen @myBraavos @henrlihenrli @Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT49M8S
       dimension: 2d
@@ -67,6 +67,9 @@ video:
 image: /assets/stark-struck-episode-13.jpg
 category:
   - stark-struck
+  - ecosystem
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: >-
   Join Henri Lieutaud from the Starknet team and Motty Lavie from Braavos, on
   what gets them excited about technology in general, blockchain in particular,
