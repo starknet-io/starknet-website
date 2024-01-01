@@ -61,6 +61,7 @@ category:
   - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
 topic:
   - cryptography
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
 short_desc: STARK-Powered VDFs (Verifiable Delay Functions) with special guest
   stars Jo Bonneau, Justin Drake, and StarkWare's VeeDo team members Kinneret
   Segal and Tom Brand.
