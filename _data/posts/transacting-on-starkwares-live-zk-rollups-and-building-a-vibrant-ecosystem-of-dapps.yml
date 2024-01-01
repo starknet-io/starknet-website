@@ -257,9 +257,10 @@ image: /assets/interviews04.png
 category:
   - engineering
   - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - ecosystem
 topic:
   - 8930f558-6756-4e54-93e6-349ca99c158e
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: Topics discussed include how StarkWare stacks up against other
   scaling solutions, achieving low transaction costs, developing a vibrant
-  StarkNet dApp ecosystem, and much more.
+  Starknet dApp ecosystem, and much more.
