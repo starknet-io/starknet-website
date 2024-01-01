@@ -70,6 +70,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: ""
+        description: Hashstack is a non-custodial Zk-native money market protocol
+          enabling secure under-collateralized loans.
         columns: "4"
     base: 1
     md: 2
