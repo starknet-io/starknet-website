@@ -66,11 +66,11 @@ video:
       projection: rectangular
 image: /assets/starkstruck09.jpg
 category:
-  - stark-struck
   - ecosystem
+  - stark-struck
 topic:
-  - starknet
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: "Join Henri Lieutaud from the StarkNet team and Scott Piriou from
   Snapshot, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically.   "
