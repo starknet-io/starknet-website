@@ -23,7 +23,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: ""
-        description: A DEX Aggregator of Starknet
+        description: AVNU is the Starknet Liquidity Infrastructure empowering traders,
+          dApps and wallets with Execution Swap.
         columns: "4"
       - size: large
         color: blue-default
@@ -35,7 +36,7 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: ""
-        description: A DEX Aggregator of Starknet
+        description: Fibrous gathers all AMMs of Starknet at one place.
         columns: "4"
       - size: large
         color: blue-default
@@ -45,7 +46,19 @@ blocks:
         title: OpenOcean
         icon: /assets/openocean-logo.webp
         type: image_icon_link_card
-        description: A DEX Aggregator of Starknet
+        description: OpenOcean is a leading DEX Aggregator, offering users swap return
+          for decentralized crypto trading.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Ekubo
+        icon: /assets/ekubo-logo.png
+        type: image_icon_link_card
+        description: Ekubo Protocol is a highly optimized AMM for Starknet, featuring
+          concentrated liquidity and extensibility.
         columns: "4"
     base: 1
     md: 2
