@@ -189,6 +189,27 @@ blocks:
         type: image_icon_link_card
         description: A crypto-native and strongly on-chain metagame powered by Starknet.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        icon: /assets/realms-logo.png
+        type: image_icon_link_card
+        link:
+          custom_title: Realms
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Phantom Spirit Arena
+        icon: /assets/phantom-spirit-arena-logo.jpg
+        type: image_icon_link_card
+        description: An exciting PVP game that combines blockchain technology and
+          fantasy elements on Starknet.
+        columns: "4"
     base: 11
     md: 2
     lg: 5
