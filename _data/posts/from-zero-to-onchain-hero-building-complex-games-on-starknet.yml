@@ -10,15 +10,8 @@ video:
     etag: nTvUbmYTC-BcpCepkXZ3m5nNwSs
     id: VQM5puaKcRA
     snippet:
-      publishedAt: 2023-11-19T12:39:57Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "STARK SPACES | From Zero to Onchain Hero: Building Complex Games on
-        Starknet"
-      description: Hear about game updates from the developers behind Loot Survivor
-        and Influence ahead of their first releases. In this Twitter Space, we
-        look at the features they’ve built and how the developers used the
-        technical advances of Starknet to build decentralized, onchain games
-        that would be nearly impossible to create on any other platform.
+      publishedAt: 2023-11-19T12:39:57.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/VQM5puaKcRA/default.jpg
@@ -40,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/VQM5puaKcRA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "STARK SPACES | From Zero to Onchain Hero: Building Complex Games on
+        Starknet"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "STARK SPACES | From Zero to Onchain Hero: Building Complex Games on
           Starknet"
@@ -51,7 +46,12 @@ video:
           look at the features they’ve built and how the developers used the
           technical advances of Starknet to build decentralized, onchain games
           that would be nearly impossible to create on any other platform.
-      defaultAudioLanguage: en-US
+      description: Hear about game updates from the developers behind Loot Survivor
+        and Influence ahead of their first releases. In this Twitter Space, we
+        look at the features they’ve built and how the developers used the
+        technical advances of Starknet to build decentralized, onchain games
+        that would be nearly impossible to create on any other platform.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H3M12S
       dimension: 2d
@@ -63,8 +63,12 @@ video:
 image: /assets/stark-spaces-gaming-on-starknet-premiere.jpg
 category:
   - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+  - engineering
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Hear about game updates from the developers behind Loot Survivor and
   Influence ahead of their first releases. In this Twitter Space, we look at the
   features they’ve built, and how the developers used the technical advances of
