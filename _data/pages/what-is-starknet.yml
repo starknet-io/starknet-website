@@ -5,8 +5,9 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: "What is Starknet? "
+    description: ""
   - type: markdown
-    body: >
+    body: >-
       Starknet is a Validity-Rollup (aka ZK-Rollup) Layer 2 network that
       operates on top of Ethereum, enabling dApps to massively scale without
       compromising on security.
@@ -61,6 +62,8 @@ blocks:
         The Core contract verifies the proof's authenticity and confirms receiving the State Diff, subsequently updating the Starknet state on the Ethereum blockchain. This updated state is then added to an Ethereum block, distributed across the node network for validation and voting. When the block accumulates sufficient votes, it achieves "finalized" status, cementing its place as an immutable part of Ethereum.
       title: Secure Settlement on Ethereum
       description: Chapter 4 explains how to secure settlement on Ethereum
+    chapterDescriptionFullWidth: true
+    playlistOnBottom: false
   - type: link_list
     heading: Further reading
     listSize: lg
