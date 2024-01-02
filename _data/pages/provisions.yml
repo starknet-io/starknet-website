@@ -65,6 +65,18 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
+        title: 10K Swap
+        icon: /assets/10k-swap-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: 10KSwap is a Layer 2 AMM protocol building on Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
         title: Hashstack
         icon: /assets/hashstack-logo.jpg
         type: image_icon_link_card
@@ -72,6 +84,17 @@ blocks:
           custom_title: ""
         description: Hashstack is a non-custodial Zk-native money market protocol
           enabling secure under-collateralized loans.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: "Carmine Options "
+        icon: /assets/carmine-options-logo.jpg
+        type: image_icon_link_card
+        description: Carmine Options is an Automated Market Maker enabling anyone to buy
+          and sell options at a fair price.
         columns: "4"
     base: 1
     md: 2
