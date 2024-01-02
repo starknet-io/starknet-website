@@ -114,3 +114,45 @@ blocks:
     lg: 3
     xl: 4
     heading: DeFi
+  - type: flex_layout
+    heading_variant: sm
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Loot Survivor
+        icon: /assets/loot-survivor-logo.png
+        type: image_icon_link_card
+        description: Loot Survivor, a fully onchain game where strategy meets adventure.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Influence
+        icon: /assets/influence-logo.png
+        type: image_icon_link_card
+        description: Influence is an open-economy, space strategy MMO in which players
+          own all of their content.
+        columns: "4"
+      - type: card_list
+        randomize: false
+        card_list_items:
+          - twitter: https://twitter.com/influenceth
+            title: Influence
+            description: Influence is an open-economy, space strategy MMO in which players
+              own all of their content.
+            image: /assets/influence-logo.png
+            website_url: https://t.co/t6vgeAFBQK
+            type_list: []
+            recap: []
+        title: Gaming
+        description: ""
+    base: 11
+    md: 2
+    lg: 5
+    xl: 4
+    heading: Gaming
