@@ -5,7 +5,6 @@
 
 import { Box, Image } from "@chakra-ui/react";
 import { Chapter } from "../constants";
-import { useOverflow } from "../hooks/useOverflow";
 import { useRef } from "react";
 
 /**
@@ -30,12 +29,10 @@ export default function BottomPlaylist({
   onChapterSelect
 }: BottomPlaylistProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { hasOverflowX } = useOverflow(ref);
 
   return (
     <Box
       borderColor="border.divider"
-      borderRightWidth={hasOverflowX ? "1px" : "0px"}
       borderStyle="solid"
       display="flex"
       flexDirection={{ base: "row", lg: 'row' }}
@@ -46,8 +43,7 @@ export default function BottomPlaylist({
       }}
       marginTop={'24px'}
       maxH={{ base: "auto", lg: 'auto' }}
-      overflow={'auto'}
-      paddingRight={hasOverflowX ? "sm" : undefined}
+      overflowX="auto"
       ref={ref}
       sx={{
         overflow: "auto",

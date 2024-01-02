@@ -109,6 +109,8 @@ export default function CustomControl(props: CustomControlProps) {
           bg: "rgba(0, 0, 0, .75)",
           backdropBlur: "sm",
           alignItems: "center",
+          borderBottomLeftRadius: "8px",
+          borderBottomRightRadius: "8px",
         }}
       >
         <PlayButton playingStatus={playingStatus} handlePlay={onPlayToggle} />

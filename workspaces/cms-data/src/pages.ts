@@ -158,6 +158,8 @@ export interface VideoSectionBlock {
   readonly sequencer: ChapterInfo;
   readonly prover: ChapterInfo;
   readonly 'eth-settlement': ChapterInfo;
+  readonly chapterDescriptionFullWidth: boolean;
+  readonly playlistOnBottom: boolean;
 }
 
 export interface NewsletterBlock {

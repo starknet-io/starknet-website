@@ -26,6 +26,7 @@ import { isFinalChapter } from "./utils";
 import "./player-overrides.css";
 import { FinalChapterLeftCTA } from "./chapter-cta/FinalChapterLeftCTA";
 import { FinalChapterRightCTA } from "./chapter-cta/FinalChapterRightCTA";
+import { Box } from "@chakra-ui/react";
 
 export type PlayerRef = React.MutableRefObject<Player | null>;
 
@@ -231,7 +232,15 @@ export function VideoPlayerCore({
     totalDuration - currentTime < 5;
 
   return (
-    <div style={videoWrapperStyle} ref={videoWrapperRef}>
+    <Box
+      sx={{
+        ".video-js, .video-js .vjs-tech, .vjs-poster img": {
+          borderRadius: "8px",
+        },
+      }} 
+      style={videoWrapperStyle} 
+      ref={videoWrapperRef}
+    >
       <div style={videoPositionStyle} onClick={onPlayToggle}>
         <VideoJS
           options={videojsOptions}
@@ -308,6 +317,6 @@ export function VideoPlayerCore({
           onShare={onShareModalOpen}
         />
       )}
-    </div>
+    </Box>
   );
 }
