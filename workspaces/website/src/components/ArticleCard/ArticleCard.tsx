@@ -60,8 +60,8 @@ const Image = ({ url, imageAlt, type = "grid" }: ImageProps) => {
         src={isProd ? cloudflareImage : url}
         alt={imageAlt}
         width="full"
-        height={type === "featured" ? "100%" : { base: "16rem", md: "12rem", lg: "10rem" }}
-        objectFit="cover"
+        height={type === "featured" ? "100%" : { base: "16rem", lg: "10rem" }}
+        objectFit={type === "featured" ? "contain" : { base: "contain", lg: "cover" }}
         {...type === "grid" && { borderTopRadius: 8}}
       />
     </Box>
