@@ -29,6 +29,12 @@ blocks:
         title: Papyrus
         description: Starknet full-node written in Rust by StarkWare
         image: /assets/logo_papyrus_80x80.png
+      - title: Deoxys
+        image: /assets/deoxys-logo.jpeg
+        twitter: https://twitter.com/kasarlabs
+        website_url: https://github.com/kasarlabs/deoxys
+        description: Deoxys is an easy-to-use, blazing-fast and powerful Starknet full
+          node client, written in Rust and powered by Substrate built by Kasar.
     randomize: true
   - type: card_list
     randomize: true
