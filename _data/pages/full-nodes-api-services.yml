@@ -34,7 +34,7 @@ blocks:
         twitter: https://twitter.com/kasarlabs
         website_url: https://github.com/kasarlabs/deoxys
         description: Deoxys is an easy-to-use, blazing-fast and powerful Starknet full
-          node client, written in Rust and powered by Substrate.
+          node client, written in Rust and powered by Substrate built by Kasar.
     randomize: true
   - type: card_list
     randomize: true
