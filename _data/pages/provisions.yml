@@ -96,6 +96,19 @@ blocks:
         description: Carmine Options is an Automated Market Maker enabling anyone to buy
           and sell options at a fair price.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: zkLend
+        icon: /assets/zklend-logo.png
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: zkLend is a money market protocol combining zk rollup scalability,
+          transaction speed with Ethereum's security.
+        columns: "4"
     base: 1
     md: 2
     lg: 3
