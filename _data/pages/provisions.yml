@@ -241,6 +241,16 @@ blocks:
         description: Lotus is a permissionless NFT raffle platform, creating new use
           cases for NFTs.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: StarkRocks
+        icon: /assets/starkrocks-logo.jpeg
+        type: image_icon_link_card
+        description: 444 OG Rocks of Starknet.
+        columns: "4"
     base: 1
     md: 62
     lg: 3
