@@ -179,6 +179,16 @@ blocks:
         description: Game of Life (also knows as "Life"), is a well known example of a
           cellular automaton.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: The Ninth
+        icon: /assets/the-ninth-logo.png
+        type: image_icon_link_card
+        description: A crypto-native and strongly on-chain metagame powered by Starknet.
+        columns: "4"
     base: 11
     md: 2
     lg: 5
