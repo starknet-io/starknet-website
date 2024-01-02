@@ -158,6 +158,27 @@ blocks:
         description: Tsubasa is an onchain game built with Dojo Engine, running on a
           Starknet.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Eykar
+        icon: /assets/eykar-logo.png
+        type: image_icon_link_card
+        description: Eykar is a decentralized strategy game powered by Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: GoL2
+        icon: /assets/gol2-logo.jpg
+        type: image_icon_link_card
+        description: Game of Life (also knows as "Life"), is a well known example of a
+          cellular automaton.
+        columns: "4"
     base: 11
     md: 2
     lg: 5
