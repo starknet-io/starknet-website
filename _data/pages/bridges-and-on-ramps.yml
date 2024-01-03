@@ -75,4 +75,11 @@ blocks:
         twitter: https://twitter.com/RampNetwork
         link_url: https://ramp.network
         website_url: https://ramp.network
+      - description: "Unlimit Crypto is backed by a battle-tested payments company and
+          introduces the most comprehensive collection of Fiat-to-Crypto On &
+          Off-Ramps for Defi, Gamefi & NFTs across the globe. "
+        title: Unlimit Crypto
+        image: /assets/unlimit-crypto-sign-violet.png
+        twitter: https://twitter.com/unlimit_crypto
+        website_url: https://www.crypto.unlimit.com/
     randomize: true
