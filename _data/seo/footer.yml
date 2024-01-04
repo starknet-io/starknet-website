@@ -1,1 +1,8 @@
 footerText: Built with ✨ by the Starknet community.
+footerDisclaimers:
+  - text: Privacy policy
+    link: /en/legal-disclaimers#toc-privacy-policy
+  - text: Terms & Conditions
+    link: /en/legal-disclaimers#toc-terms-and-conditions
+  - text: T﻿erms of Use
+    link: /en/legal-disclaimers#toc-terms-of-use
