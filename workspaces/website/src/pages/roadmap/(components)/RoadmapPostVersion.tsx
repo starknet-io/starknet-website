@@ -12,7 +12,7 @@ export default function RoadmapPostVersion({
       <Badge variant={roadmapVersion?.color}>
         {roadmapVersion?.version}
       </Badge>
-      <Badge variant={roadmapVersion?.color} sx={{textWrap: "wrap"}}>
+      <Badge variant={roadmapVersion?.color} sx={{ whiteSpace: "unset", textWrap: "wrap" }}>
         {roadmapVersion?.impact}
       </Badge>
     </Flex>

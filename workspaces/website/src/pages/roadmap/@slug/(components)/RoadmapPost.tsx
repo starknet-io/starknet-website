@@ -113,7 +113,7 @@ export default function RoadmapPost({
         roadmapPost?.gitlog?.date
       ).fromNow()}`}
       main={
-        <Container maxWidth="846px">
+        <Box maxWidth="846px">
           <Box mb={"2rem"}>
             <RoadmapPostVersion roadmapVersion={roadmapVersion} />
           </Box>
@@ -128,7 +128,7 @@ export default function RoadmapPost({
               </Heading>
               {roadmapPost?.state ? <Flex alignItems="center">{roadmapPost?.specific_info ? <Text variant="cardBody" ml="2">{roadmapPost?.specific_info}</Text> : null}</Flex> : null}
             </Flex>
-            <div>{roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}</div>
+            <div>{roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}</div>
           </Flex>
           <Divider mt="8px" mb="32px" />
 
@@ -146,7 +146,7 @@ export default function RoadmapPost({
           <MarkdownBlock body={psCopy as string} />
           <RoadmapSubscribeForm env={env} isOpen={isOpen} setIsOpen={setIsOpen} />
           <Divider mt="6" />
-        </Container>
+        </Box>
       }
     />
   );
