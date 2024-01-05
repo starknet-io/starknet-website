@@ -14,8 +14,8 @@ import { useRef } from "react";
 type BottomPlaylistProps = {
   height: number;
   chapters: Chapter[];
-  currentChapter: string;
-  onChapterSelect: (currentChapter: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
   playlistOnBottom?: boolean;
 };
 
@@ -26,7 +26,7 @@ type BottomPlaylistProps = {
 export default function BottomPlaylist({
   chapters,
   currentChapter,
-  onChapterSelect
+  onChapterChange
 }: BottomPlaylistProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -51,7 +51,7 @@ export default function BottomPlaylist({
       }}
     >
       {chapters.map((chapter) => {
-        const isActive = chapter.id === currentChapter;
+        const isActive = chapter.id === currentChapter.id;
         const textColor = isActive
           ? "heading-navy-fg"
           : "content.accent.disabled";
@@ -60,7 +60,7 @@ export default function BottomPlaylist({
           <Box
             key={chapter.id}
             id={chapter.id}
-            onClick={() => onChapterSelect(chapter.id)}
+            onClick={() => onChapterChange(chapter.id)}
             sx={{
               display: "flex",
               pointer: "cursor",

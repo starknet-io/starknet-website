@@ -53,7 +53,7 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
 
       <VideoPlayerWebsite
         chapters={normalizedPlaylist}
-        initialActiveChapter={normalizedPlaylist[0].id}
+        currentChapter={currentChapter}
         onChapterChange={(id) => 
           setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
         }
@@ -63,15 +63,14 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
       <Box marginTop={{ base: "32px", lg: !playlistOnBottom ? "64px" : "32px"  }}>
         <Show above="lg">   
           <CategoryTabs
-            activeItemId={currentChapter.id}
-            onTabClick={(id) => 
+            currentChapter={currentChapter}
+            onChapterChange={(id) => 
               setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
             }
             items={normalizedPlaylist.map((p) => ({
               id: p.id,
               label: p.subtitle,
             }))}
-            playlistOnBottom={playlistOnBottom}
           />
         </Show>
 

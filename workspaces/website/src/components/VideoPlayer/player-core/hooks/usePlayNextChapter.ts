@@ -8,12 +8,12 @@ export default function usePlayNextChapter({
   playingStatus,
   currentChapter,
   chapters,
-  setCurrentChapter,
+  onChapterChange,
 }: {
   playingStatus: SeekStatuses;
-  currentChapter: string;
+  currentChapter: { id: string };
   chapters: Chapter[];
-  setCurrentChapter: (chapterId: string) => void;
+  onChapterChange: (id: string) => void;
 }) {
   const [isPlayNextModalOpen, setPlayNextModalOpen] = useState(false);
 
@@ -48,8 +48,8 @@ export default function usePlayNextChapter({
   };
 
   const playNextChapter = () => {
-    const nextChapter = getNextChapter(chapters, currentChapter);
-    setCurrentChapter(nextChapter.id);
+    const nextChapter = getNextChapter(chapters, currentChapter.id);
+    onChapterChange(nextChapter.id);
   };
 
   return {

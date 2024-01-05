@@ -32,42 +32,39 @@ export type PlayerRef = React.MutableRefObject<Player | null>;
 
 type VideoPlayerCoreProps = {
   playerRef: PlayerRef;
-  currentChapter: string;
-  setCurrentChapter: (chapter: string) => void;
-  chapters: Chapter[];
-  initialActiveChapter: string;
-  onChapterChange?: (currentChapter: string) => void;
-  embedded?: boolean;
   videoWrapperStyle: CSSProperties;
   videoPositionStyle: CSSProperties;
+  chapters: Chapter[];
   onFullscreenChange?: (isFullscreen: boolean) => void;
   onContainerHeightChange?: (height: number, width: number) => void;
-  onPlayingStatusChange?: (playingStatus: SeekStatuses) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
   renderChapter: (options: {
     chapter: Chapter;
     episode: number;
     isVisible: boolean;
   }) => React.ReactNode;
+  embedded?: boolean;
+  onPlayingStatusChange?: (playingStatus: SeekStatuses) => void;
 };
 export function VideoPlayerCore({
   playerRef,
-  chapters,
-  currentChapter,
-  setCurrentChapter,
-  onChapterChange,
   videoWrapperStyle,
   videoPositionStyle,
-  embedded,
   onFullscreenChange,
   onContainerHeightChange,
-  onPlayingStatusChange,
+  currentChapter,
+  onChapterChange,
   renderChapter,
+  chapters,
+  embedded,
+  onPlayingStatusChange,
 }: VideoPlayerCoreProps) {
   const [bufferPercent, setBufferPercent] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
   const [videoContainerRef, { height, width }] = useMeasure<HTMLDivElement>();
   const [isBigPlayBtnVisible, setIsBigPlayBtnVisible] = useState(true);
-  const currentChapterRef = useRef(currentChapter);
+  const currentChapterRef = useRef(currentChapter.id);
 
   const {
     ref: videoWrapperRef,
@@ -121,7 +118,7 @@ export function VideoPlayerCore({
     chapters,
     currentChapter,
     playingStatus,
-    setCurrentChapter,
+    onChapterChange,
   });
 
   const videojsOptions = useVideoJSOptions({
@@ -132,9 +129,9 @@ export function VideoPlayerCore({
   usePreventDefaultHotkeys();
 
   useUpdateEffect(() => {
-    onChapterChange?.(currentChapter);
+    onChapterChange?.(currentChapter.id);
     playerRef.current?.play();
-    currentChapterRef.current = currentChapter;
+    currentChapterRef.current = currentChapter.id;
   }, [currentChapter]);
 
   useEffect(() => {
@@ -207,7 +204,7 @@ export function VideoPlayerCore({
 
     const volume = player.volume();
     setVolume(volume * 100);
-    setCurrentChapter(currentChapter);
+    onChapterChange?.(currentChapter.id);
     player.aspectRatio("16:9");
   };
 
