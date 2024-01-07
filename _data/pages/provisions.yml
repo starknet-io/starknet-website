@@ -298,3 +298,21 @@ blocks:
     lg: 3
     xl: 4
     heading: "Entertainment & Social "
+  - type: flex_layout
+    heading_variant: sm
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        icon: /assets/argent.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: Argent
+        columns: "4"
+    base: 1
+    md: 2
+    lg: 3
+    xl: 4
+    heading: Wallets
