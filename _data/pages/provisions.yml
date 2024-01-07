@@ -121,6 +121,19 @@ blocks:
           custom_external_link: https://www.orbiter.finance/?source=Ethereum&dest=Starknet
         description: "Orbiter allows users to send funda across multiple L2 networks. "
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Rhino.fi
+        icon: /assets/rhino.fi-logo.png
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=ETHEREUM
+        description: "Rhino.fi is a lightning-fast secure bridge for seamless
+          cross-chain transactions. "
+        columns: "4"
     base: 1
     md: 2
     lg: 3
