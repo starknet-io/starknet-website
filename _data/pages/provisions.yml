@@ -314,6 +314,17 @@ blocks:
         description: Argent is a simple and secure smart wallet for Starknet. Argent
           have a mobile app and Argent X, their browser wallet.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Braavos
+        icon: /assets/braavos-logo.png
+        type: image_icon_link_card
+        description: Braavos is a smart contract wallet for managing funds and NFTs, and
+          connecting to dApps on Starknet.
+        columns: "4"
     base: 1
     md: 2
     lg: 3
