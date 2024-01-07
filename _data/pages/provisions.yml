@@ -306,10 +306,13 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
+        title: Argent
         icon: /assets/argent.jpg
         type: image_icon_link_card
         link:
-          custom_title: Argent
+          custom_title: ""
+        description: Argent is a simple and secure smart wallet for Starknet. Argent
+          have a mobile app and Argent X, their browser wallet.
         columns: "4"
     base: 1
     md: 2
