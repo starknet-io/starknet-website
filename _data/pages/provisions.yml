@@ -283,6 +283,16 @@ blocks:
         type: image_icon_link_card
         description: "Handmade PFP collection of duuucks made from Briq by OutSmth. "
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Pxls
+        icon: /assets/pxls-logo.png
+        type: image_icon_link_card
+        description: "Pxls is an on-chain collaborative commissioned art experiment. "
+        columns: "4"
     base: 1
     md: 62
     lg: 3
