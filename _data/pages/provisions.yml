@@ -335,6 +335,16 @@ blocks:
         type: image_icon_link_card
         description: "OKX is a leading Web3 multi-chain wallet. "
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: MetaMask Snaps
+        icon: /assets/starkware-metamask.png
+        type: image_icon_link_card
+        description: "Manage your Starknet assets with MetaMask Snap. "
+        columns: "4"
     base: 1
     md: 2
     lg: 3
