@@ -256,11 +256,32 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
-        title: ARK Project
-        icon: /assets/ark-project-logo.jpg
+        title: Ark Project
+        icon: /assets/ark-project-logo-new.jpg
         type: image_icon_link_card
         description: Build the liquidity layer for digital assets uniting markets,
           empowering creators, bridging the gap to mass adoption.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Starknet.id
+        icon: /assets/starknet-id-logo.jpg
+        type: image_icon_link_card
+        description: Starknet.id is an identity and naming service for Starknet. Mint
+          your identity and choose your .stark domain now.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Ducks Everywhere
+        icon: /assets/ducks-everywhere-logo.jpeg
+        type: image_icon_link_card
+        description: "Handmade PFP collection of duuucks made from Briq by OutSmth. "
         columns: "4"
     base: 1
     md: 62
