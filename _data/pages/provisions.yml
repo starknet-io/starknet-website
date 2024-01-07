@@ -134,6 +134,19 @@ blocks:
         description: "Rhino.fi is a lightning-fast secure bridge for seamless
           cross-chain transactions. "
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Carbonable
+        icon: /assets/carbonable-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://t.co/k8BuwALPag
+        description: Carbonable allows users to fund high-quality nature regeneration
+          projects and get prime carbon credits.
+        columns: "4"
     base: 1
     md: 2
     lg: 3
