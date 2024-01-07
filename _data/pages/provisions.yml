@@ -147,6 +147,18 @@ blocks:
         description: Carbonable allows users to fund high-quality nature regeneration
           projects and get prime carbon credits.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Layerswap
+        icon: /assets/layerswap.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: Layerswap allows users to move crypto between exchanges and layer 2s.
+        columns: "4"
     base: 1
     md: 2
     lg: 3
