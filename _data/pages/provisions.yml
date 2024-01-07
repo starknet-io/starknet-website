@@ -325,6 +325,16 @@ blocks:
         description: Braavos is a smart contract wallet for managing funds and NFTs, and
           connecting to dApps on Starknet.
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: OKX
+        icon: /assets/okx-logo.jpg
+        type: image_icon_link_card
+        description: "OKX is a leading Web3 multi-chain wallet. "
+        columns: "4"
     base: 1
     md: 2
     lg: 3
