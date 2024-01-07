@@ -35,7 +35,7 @@ blocks:
       - description: Lightning-fast secure bridge for seamless cross-chain transactions.
         title: rhino.fi
         image: /assets/rhino.fi-logo.png
-        website_url: http://rhino.fi/
+        website_url: https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=ETHEREUM
         twitter: https://twitter.com/rhinofi
       - title: Owlto Finance
         description: " Owlto Finance is a decentralized cross-rollup bridge that focuses
