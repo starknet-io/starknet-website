@@ -12,14 +12,14 @@ import BottomPlaylist from "./BottomPlaylist";
 
 type VideoPlayerWebsiteProps = {
   chapters: Chapter[];
-  initialActiveChapter: string;
-  onChapterChange?: (currentChapter: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
   embeddable?: boolean;
   playlistOnBottom?: boolean;
 };
 export function VideoPlayerWebsite({
   chapters,
-  initialActiveChapter,
+  currentChapter,
   onChapterChange,
   playlistOnBottom,
 }: VideoPlayerWebsiteProps) {
@@ -27,16 +27,11 @@ export function VideoPlayerWebsite({
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerHeight, setVideoContainerHeightChange] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
   useUpdateEffect(() => {
-    onChapterChange?.(currentChapter);
+    onChapterChange(currentChapter.id);
     playerRef.current?.play();
   }, [currentChapter]);
-
-  const onChapterSelect = (ch: string) => {
-    setCurrentChapter(ch);
-  };
 
   const onFullscreenChange = useCallback(
     (b: boolean) => {
@@ -56,8 +51,8 @@ export function VideoPlayerWebsite({
     height: videoContainerHeight,
     chapters,
     currentChapter,
-    onChapterSelect,
-  }), [videoContainerHeight, chapters, currentChapter, onChapterSelect]);
+    onChapterChange,
+  }), [videoContainerHeight, chapters, currentChapter, onChapterChange]);
 
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
@@ -97,11 +92,10 @@ export function VideoPlayerWebsite({
         videoWrapperStyle={videoWrapperStyle}
         videoPositionStyle={videoPositionStyle}
         chapters={chapters}
-        initialActiveChapter={initialActiveChapter}
         onFullscreenChange={onFullscreenChange}
         onContainerHeightChange={onContainerHeightChange}
         currentChapter={currentChapter}
-        setCurrentChapter={setCurrentChapter}
+        onChapterChange={onChapterChange}
         renderChapter={({ chapter, episode, isVisible }) => (
           <ChapterTitle
             title={chapter?.title}

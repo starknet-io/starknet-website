@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 type ChapterTitleProps = {
   isVisible: boolean;
-  title: string;
+  title?: string;
   episode: number;
 };
 export default function ChapterTitle({
