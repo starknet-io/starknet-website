@@ -105,3 +105,11 @@ items:
     destination: /:locale/posts/developers/:path+
   - source: /building-on-starknet/audit-service-providers/
     destination: /en/ecosystem/security-and-audits
+  - source: /learn
+    destination: /en/learn/what-is-starknet
+  - source: /:locale/learn
+    destination: /:locale/learn/what-is-starknet
+  - source: /ecosystem
+    destination: /en/ecosystem/dapps
+  - source: /:locales/ecosystem
+    destination: /:locales/ecosystem/dapps
