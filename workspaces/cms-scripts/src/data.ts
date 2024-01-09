@@ -414,18 +414,27 @@ export async function getAnnouncements(): Promise<AnnouncementsPostsData> {
   const resourceName = "announcements";
   const filenameMap = new Map<string, AnnouncementsPost>();
   const idMap = new Map<string, AnnouncementsPost>();
-  const filenames = await scandir(`_data/${resourceName}`);
 
-  for (const locale of locales) {
-    for (const filename of filenames) {
-      const data = await fileToAnnouncementsPost(locale, filename);
+  try {
+    const filenames = await scandir(`_data/${resourceName}`);
 
-      idMap.set(`${locale}:${data.id}`, data);
-      filenameMap.set(`${locale}:${filename}`, data);
+    for (const locale of locales) {
+      for (const filename of filenames) {
+        const data = await fileToAnnouncementsPost(locale, filename);
+  
+        idMap.set(`${locale}:${data.id}`, data);
+        filenameMap.set(`${locale}:${filename}`, data);
+      }
     }
-  }
+  
+    return { filenameMap, filenames, idMap, resourceName };
+  } catch (error:any) {
+    if (error.code === "ENOENT" && error.path === "_data/announcements") {
+      return Promise.resolve({ filenameMap, filenames: [], idMap, resourceName });
+    }
 
-  return { filenameMap, filenames, idMap, resourceName };
+    throw error;
+  }
 }
 
 export async function getTutorials(): Promise<SimpleData<Meta>> {
