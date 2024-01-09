@@ -105,3 +105,11 @@ items:
     destination: /:locale/posts/developers/:path+
   - source: /building-on-starknet/audit-service-providers/
     destination: /en/ecosystem/security-and-audits
+  - source: /:locale/community/language-support
+    destination: /en/community
+  - source: /community/language-support
+    destination: /en/community
+  - source: /:locale/community/language-resources
+    destination: /en/community/online-communities
+  - source: /community/language-resources
+    destination: /en/community/online-communities
