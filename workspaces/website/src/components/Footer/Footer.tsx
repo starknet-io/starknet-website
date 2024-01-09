@@ -43,7 +43,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
           >
             <Stack
               spacing={{ base: "12", md: "8" }}
-              direction={{ base: "column-reverse", lg: "row" }}
+              direction={{ base: "column-reverse", xl: "row" }}
               py={{ base: "12", md: "16" }}
               justify="space-between"
               maxW="1200"
@@ -83,7 +83,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   justify={{ base: "space-between", sm: "start" }}
                   width={{ base: "full", sm: "auto" }}
                   spacing="0"
-                  order={{ base: 2, lg: 1 }}
+                  order={{ base: 2, xl: 1 }}
                 >
                   <Box pr="24px">
                     <StarknetLogo height="32" />
@@ -110,7 +110,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   </Text>
                 </HStack>
                 <ButtonGroup
-                  order={{ base: 1, lg: 2 }}
+                  order={{ base: 1, xl: 2 }}
                   paddingBottom={{ base: "36px", md: 0 }}
                 >
                   <IconButton
@@ -162,7 +162,7 @@ type ColumnProps = {
 
 const Column = ({ title, children, color }: ColumnProps) => {
   return (
-    <Stack bg={color} spacing="4" minW={{ lg: "40" }}>
+    <Stack bg={color} spacing="4" minW={{ xl: "40" }}>
       {/* <Text fontSize="sm" fontWeight="semibold" color="subtle">
         {title}
       </Text> */}
