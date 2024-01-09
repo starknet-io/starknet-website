@@ -111,5 +111,13 @@ items:
     destination: /:locale/learn/what-is-starknet
   - source: /ecosystem
     destination: /en/ecosystem/dapps
-  - source: /:locales/ecosystem
-    destination: /:locales/ecosystem/dapps
+  - source: /:locale/ecosystem
+    destination: /:locale/ecosystem/dapps
+  - source: /:locale/community/language-support
+    destination: /:locale/community
+  - source: /community/language-support
+    destination: /en/community
+  - source: /:locale/community/language-resources
+    destination: /:locale/community/online-communities
+  - source: /community/language-resources
+    destination: /en/community/online-communities
