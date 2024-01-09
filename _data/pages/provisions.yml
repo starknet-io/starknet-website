@@ -1,5 +1,5 @@
 id: 0d92334b-d365-40c5-a2b3-8b1109a3d825
-title: "Provisions "
+title: Starknet Ecosystem
 template: landing
 hideToc: false
 hidden_page: false
@@ -8,7 +8,7 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: dapps
-    title: "Provisions "
+    title: Starknet Ecosystem
     description: ""
   - type: flex_layout
     heading_variant: null
