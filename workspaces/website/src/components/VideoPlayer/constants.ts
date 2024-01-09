@@ -3,6 +3,7 @@ export type Chapter = {
   subtitle: string;
   poster: string;
   thumbnail: string;
+  title?: string;
   videoId: string;
   durationTime: string;
 };

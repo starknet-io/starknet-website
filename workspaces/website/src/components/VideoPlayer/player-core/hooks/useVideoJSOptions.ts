@@ -21,11 +21,11 @@ export default function useVideoJSOptions({
   currentChapter,
   chapters,
 }: {
-  currentChapter: string;
+  currentChapter: { id: string };
   chapters: Chapter[];
 }) {
   const videoJSOptions = useMemo(() => {
-    const chapter = getChapterById(chapters, currentChapter) || chapters[0];
+    const chapter = getChapterById(chapters, currentChapter.id) || chapters[0];
     return {
       ...videoJsBaseOptions,
       poster: chapter.thumbnail,

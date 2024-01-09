@@ -95,7 +95,9 @@ const parsePosts = async () => {
   const { filenameMap } = await getPosts();
   const categories: string[] = [];
 
-  filenameMap.forEach(({ locale, category, slug, published_date }) => {
+  filenameMap.forEach(({ locale, category: filenameCategory, slug, published_date }) => {
+    const category = filenameCategory === 'engineering' ? 'developers' : filenameCategory;
+
     if (!categories.includes(category)) {
       categories.push(category);
 

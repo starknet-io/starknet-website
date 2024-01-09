@@ -3,7 +3,7 @@ import { Chapter } from "../../constants";
 
 type UseGetCurrentChapterProps = {
   chapters: Chapter[];
-  currentChapter: string;
+  currentChapter: { id: string };
 };
 export default function useGetCurrentChapter({
   chapters,
@@ -11,7 +11,7 @@ export default function useGetCurrentChapter({
 }: UseGetCurrentChapterProps) {
   return useMemo(() => {
     const currentChapterIndex = chapters.findIndex(
-      (ch) => ch.id === currentChapter
+      (ch) => ch.id === currentChapter.id
     );
     if (currentChapterIndex === -1) {
       return { chapter: null, chapterIndex: -1 };

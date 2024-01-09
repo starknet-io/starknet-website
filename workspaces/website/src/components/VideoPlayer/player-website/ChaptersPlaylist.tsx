@@ -12,20 +12,20 @@ const ChaptersPlaylistWrapper = styled(Box)`
 type ChaptersPlaylistProps = {
   height: number;
   chapters: Chapter[];
-  currentChapter: string;
-  onChapterSelect: (currentChapter: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
 };
 
 export default function ChaptersPlaylist({
   height,
   chapters,
   currentChapter,
-  onChapterSelect,
+  onChapterChange,
 }: ChaptersPlaylistProps) {
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
   useUpdateEffect(() => {
-    const chapterElement = document.getElementById(currentChapter);
+    const chapterElement = document.getElementById(currentChapter.id);
     if (chapterElement) {
       chapterElement.scrollIntoView({
         behavior: "smooth",
@@ -50,7 +50,7 @@ export default function ChaptersPlaylist({
       flexWrap="nowrap"
     >
       {chapters.map((chapter) => {
-        const isActive = chapter.id === currentChapter;
+        const isActive = chapter.id === currentChapter.id;
         const textColor = isActive
           ? "heading-navy-fg"
           : "content.accent.disabled";
@@ -59,7 +59,7 @@ export default function ChaptersPlaylist({
           <Box
             key={chapter.id}
             id={chapter.id}
-            onClick={() => onChapterSelect(chapter.id)}
+            onClick={() => onChapterChange(chapter.id)}
             sx={{
               display: "flex",
               gap: "16px",
