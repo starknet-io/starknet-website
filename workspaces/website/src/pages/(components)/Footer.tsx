@@ -14,6 +14,10 @@ export interface Props {
   readonly mainMenu: MainMenu;
   readonly seo: {
     footerText: string;
+    footerDisclaimers: {
+      text: string;
+      link: string;
+    }[];
   };
 }
 

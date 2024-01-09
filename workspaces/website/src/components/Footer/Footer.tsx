@@ -3,13 +3,11 @@ import {
   BoxProps as ChakraBoxProps,
   ButtonGroup,
   Container,
-  HStack,
   Stack,
   Text,
   Icon,
   Link,
   Divider,
-  Center,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Heading } from "@ui/Typography/Heading";
@@ -23,6 +21,10 @@ type RootProps = {
 } & ChakraBoxProps & {
     seo: {
       footerText: string;
+      footerDisclaimers: {
+        text: string;
+        link: string;
+      }[];
     };
   };
 
@@ -43,8 +45,9 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
           >
             <Stack
               spacing={{ base: "12", md: "8" }}
-              direction={{ base: "column-reverse", xl: "row" }}
-              py={{ base: "12", md: "16" }}
+              direction={{ base: "column-reverse", lg: "row" }}
+              pt={{ base: "12", md: "16" }}
+              pb={{ base: "12", md: "0" }}
               justify="space-between"
               maxW="1200"
               px="30px"
@@ -58,60 +61,100 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
               )}
               marginBottom="0px"
               opacity="1"
+              display={{ base: "flex", md: "none" }}
+            />
+            <Stack 
+              pt="40px"
+              pb={{ base: "40px", md: "0px" }}
+              px="30px"
+              gap={{ base: "16px", md: "24px"}}
+              display={{ base: "flex", xl: "none" }}
+              direction={{ base: "column", md: "row" }}
+            >
+              {seo?.footerDisclaimers.map((disclaimer, index) => (
+                <Text
+                  as="a"
+                  href={disclaimer.link}
+                  key={disclaimer.text + index}
+                  fontSize="sm"
+                  color={useColorModeValue(
+                    "footer-link-fg",
+                    "footer-link-fg"
+                  )}
+                >
+                  {disclaimer.text}
+                </Text>
+              ))}
+            </Stack>
+            <Divider
+              borderColor={useColorModeValue(
+                "footer-divider-bg",
+                "footer-divider-bg"
+              )}
+              marginBottom="0px"
+              opacity="1"
+              display={{ base: "flex", md: "none" }}
             />
             <Box
-              background="bg.main"
-              _dark={{
-                background: "darkMode.bg2",
-              }}
               width="100%"
               display="flex"
               flexDirection="row"
               justifyContent="center"
             >
               <Stack
-                pb="38px"
-                pt="38px"
-                justify="space-between"
+                pb="60px"
+                pt={{ base: "40px", xl: "60px" }}
                 direction={{ base: "column", md: "row" }}
                 align={{ base: "start", md: "center" }}
                 maxW="1200"
                 width="100%"
                 px="30px"
+                justifyContent={{ md: "space-between"}}
               >
-                <HStack
-                  justify={{ base: "space-between", sm: "start" }}
-                  width={{ base: "full", sm: "auto" }}
-                  spacing="0"
-                  order={{ base: 2, xl: 1 }}
+                <Stack 
+                  gap={{ base: "24px", md: "0px" }} 
+                  direction={{ base: "column", md: "row" }} 
+                  align={{ base: "start", md: "center" }}
+                  height={{ base: "auto", md: "32px" }}
+                  spacing="16px"
                 >
-                  <Box pr="24px">
+                  <Box>
                     <StarknetLogo height="32" />
                   </Box>
-                  <Center height="32px">
-                    <Divider
-                      orientation="vertical"
-                      borderColor={useColorModeValue(
-                        "footer-divider-bg",
-                        "footer-divider-bg"
-                      )}
-                      opacity="1"
-                    />
-                  </Center>
+                  <Divider orientation="vertical" display={{ base: "none", md: "block" }}/>
                   <Text
                     fontSize="sm"
                     color={useColorModeValue(
                       "footer-link-fg",
                       "footer-link-fg"
                     )}
-                    paddingLeft="24px"
                   >
                     {seo?.footerText}
                   </Text>
-                </HStack>
+                </Stack>
+                <Stack 
+                  display={{ base: "none", xl: "flex" }}
+                  direction="row"
+                  gap="30px"
+                >
+                  {seo?.footerDisclaimers.map((disclaimer, index) => (
+                    <Text
+                      as="a"
+                      href={disclaimer.link}
+                      key={disclaimer.text + index}
+                      fontSize="sm"
+                      color={useColorModeValue(
+                        "footer-link-fg",
+                        "footer-link-fg"
+                      )}
+                    >
+                      {disclaimer.text}
+                    </Text>
+                  ))}
+                </Stack>
                 <ButtonGroup
-                  order={{ base: 1, xl: 2 }}
-                  paddingBottom={{ base: "36px", md: 0 }}
+                  order={{ base: 1, lg: 2 }}
+                  paddingTop={{ base: "40px", md: "0px" }}
                 >
                   <IconButton
                     as="a"

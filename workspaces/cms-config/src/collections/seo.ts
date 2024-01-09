@@ -31,6 +31,28 @@ export const SEOCollectionConfig = {
           widget: "string",
           crowdin: true,
         },
+        {
+          label: "Footer disclaimers",
+          name: "footerDisclaimers",
+          widget: "list",
+          required: false,
+          fields: [
+            {
+              label: "Disclaimer text",
+              name: "text",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+            {
+              label: "Disclaimer link",
+              name: "link",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+          ],
+        }
       ],
     },
     {
