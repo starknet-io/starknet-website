@@ -45,6 +45,12 @@ jobs:
 
       - name: Update dynamic data
         run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
+        env:
+          VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
+          VITE_ED_VIDEO_ID_1: ${{ secrets.VITE_ED_VIDEO_ID_1 }}
+          VITE_ED_VIDEO_ID_2: ${{ secrets.VITE_ED_VIDEO_ID_2 }}
+          VITE_ED_VIDEO_ID_3: ${{ secrets.VITE_ED_VIDEO_ID_3 }}
+          VITE_ED_VIDEO_ID_4: ${{ secrets.VITE_ED_VIDEO_ID_4 }}
 
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
