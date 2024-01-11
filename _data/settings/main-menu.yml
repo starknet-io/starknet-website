@@ -47,7 +47,8 @@ items:
                 custom_internal_link: ""
                 page: af68f1f8-b2a3-49e2-bec0-f36165cc331f
               - custom_external_link: https://status.starknet.io/
-                custom_icon: Starknet Status Page
+                custom_icon: ""
+                custom_title: Starknet Status Page
   - title: Community
     columns:
       - blocks:
