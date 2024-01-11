@@ -121,3 +121,11 @@ items:
     destination: /:locale/community/online-communities
   - source: /community/language-resources
     destination: /en/community/online-communities
+  - source: /:locale/roadmap/transaction-fee-reduction
+    destination: /:locale/roadmap/
+  - source: /roadmap/transaction-fee-reduction
+    destination: /en/roadmap/
+  - source: /:locale/roadmap/v3-transactions
+    destination: /:locale/roadmap/
+  - source: /roadmap/v3-transactions
+    destination: /en/roadmap/
