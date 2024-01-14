@@ -50,6 +50,11 @@ blocks:
         twitter: https://twitter.com/starkcompass
         image: /assets/stark-compass.jpg
         website_url: https://starkcompass.com/
+      - title: Starknet Status
+        description: Starknet status provides timely status information about the health
+          of Starknet sequencing.
+        image: /assets/sn-symbol-gradient.png
+        website_url: https://status.starknet.io/
     title: Block explorers
     randomize: true
   - type: card_list
