@@ -51,4 +51,7 @@ items:
     name: Steve Goodman
   - username: OfirEinhorn
     access:
-      - posts
+      - all
+  - username: tal5674
+    access:
+      - all
