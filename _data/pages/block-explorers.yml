@@ -11,6 +11,11 @@ blocks:
     description: Explore blocks, indexers, and other metrics of Starknet transactions.
   - type: card_list
     card_list_items:
+      - title: Starknet Status
+        description: Starknet status provides timely status information about the health
+          of Starknet sequencing.
+        image: /assets/sn-symbol-gradient.png
+        website_url: https://status.starknet.io/
       - title: Starkscan
         description: "Block explorer and analytics for Starknet. "
         link_url: https://starkscan.co
@@ -50,13 +55,8 @@ blocks:
         twitter: https://twitter.com/starkcompass
         image: /assets/stark-compass.jpg
         website_url: https://starkcompass.com/
-      - title: Starknet Status
-        description: Starknet status provides timely status information about the health
-          of Starknet sequencing.
-        image: /assets/sn-symbol-gradient.png
-        website_url: https://status.starknet.io/
     title: Block explorers
-    randomize: true
+    randomize: false
   - type: card_list
     randomize: true
     title: Indexers
