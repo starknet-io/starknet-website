@@ -93,6 +93,7 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability state",
       widget: "select",
       options: [
+        "On mainnet",
         "On testnet",
         "Testing now"
       ],
