@@ -38,7 +38,15 @@ export default function RoadmapPostCard({
           <Heading variant="h3" pb="2" color="heading-navy-fg" fontWeight={600} lineHeight="28px">{roadmapPost?.title}</Heading>
           <Flex direction="row" alignItems="center" justifyContent="space-between">
             <Text variant="cardBody" color="heading-navy-fg">{roadmapPost?.availability}</Text>
-            {roadmapPost?.state ? <Text display="flex" alignItems="center" variant="cardBody" color="roadmap-availability-state-fg" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">{roadmapPost?.state}<Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box></Text> : null}
+            {roadmapPost?.state 
+              ? (
+                <Box display="flex" alignItems="center" height="32px" borderRadius="5px" padding="4px 12px" borderWidth="1px" borderStyle="solid" borderColor="roadmap-card-border-color" bg="roadmap-card-tag-bg">
+                  <Text variant="cardBody" color="roadmap-availability-state-fg">{roadmapPost?.state}</Text>
+                  <Box display="inline-block" bg={roadmapPost?.state === "On testnet" ? "#00815C" : "#EF5600"} borderRadius="50%" width="14px" height="14px" ml="2"></Box>
+                </Box>
+              )
+              : null
+            }
           </Flex>
         </CardHeader>
         <CardBody padding="24px 16px 16px 16px">
