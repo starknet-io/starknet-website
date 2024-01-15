@@ -4818,7 +4818,7 @@ __metadata:
     react-countdown-circle-timer: ^3.2.1
     react-dom: ^18.2.0
     react-hotkeys-hook: ^4.4.0
-    react-icons: ^4.8.0
+    react-icons: ^5.0.1
     react-in-viewport: ^1.0.0-alpha.30
     react-instantsearch-dom: ^6.39.1
     react-instantsearch-hooks-web: ^6.43.0
@@ -15882,12 +15882,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.8.0":
-  version: 4.8.0
-  resolution: "react-icons@npm:4.8.0"
+"react-icons@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "react-icons@npm:5.0.1"
   peerDependencies:
     react: "*"
-  checksum: 4dbba7ad989c295b410e19b2a702722dae44368cb04b6515f9471353552f31ac80bd350f121d5bff79f81504b84039ede44d09e9f035f48bb1032e6eace126c4
+  checksum: e5df9c5e3bcdb8d68bd4c5e41650c26d2a3ceda61ded0e2abf7caa0e54c9fb712badcd06f0c240cfc645a5dd15a5dc1eb5dd55f60123d86860f516b1fc456474
   languageName: node
   linkType: hard
 
