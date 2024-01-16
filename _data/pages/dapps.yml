@@ -1,5 +1,5 @@
 id: 0dc3d102-0936-433e-9219-f46e3087e396
-title: Dapps
+title: dApps
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,7 +7,7 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: dapps
-    title: Dapps
+    title: dApps
     description: Discover apps in the Starknet ecosystem across NFTs, Gaming, Defi,
       DAOs and more.
   - type: card_list
