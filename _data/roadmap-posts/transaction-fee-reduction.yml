@@ -1,0 +1,20 @@
+id: 594d24ff-022b-424b-abb7-6605bb6940e3
+title: Transaction Fee Reduction
+availability: Q1 2024
+state: On mainnet
+version: 68080885-a1b0-492b-8d5b-181a2abbcd51
+stage: building-now
+blocks:
+  - type: markdown
+    body: >-
+      Starknet v0.13.0 will also include some transaction fee reductions:
+
+
+      1. Cairo step/builtin costs: 50% reduction
+
+      2. L1 data availability:
+
+         1. 10% across the board for DA
+         2. constant 240 gas discount per tx + 312 gas discount per every contract changed
+
+      Items (1) and (2.1) are possible due increasing block size in the near future (this is already being priced in). For the first item, larger blocks mean more steps per proof submitted to L1 (for more details, see the [documentation on the transaction fee mechanism 18](https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/fee-mechanism/#computation)). For the second, according to our estimates, a 2x increase from the current blocksize will cause more “batching” of storage updates, justifying a reduced cost from users. Item (2.2) is due to a more accurate pricing of transactions.

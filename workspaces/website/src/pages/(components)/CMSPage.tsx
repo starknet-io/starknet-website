@@ -14,20 +14,30 @@ import {
 } from "@chakra-ui/react";
 import '@ui/CodeHighlight/code-highlight-init'
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
+import NotFound from "@ui/NotFound/NotFound";
 
 type CMSPageProps = {
   data: PageType;
+  env: {
+    CLOUDFLARE_RECAPTCHA_KEY: string;
+  }
   locale: string;
 };
 export default function CMSPage({
   data,
+  env,
   locale,
 }: CMSPageProps) {
   const date = data?.gitlog?.date;
+
+  if (data?.hidden_page) {
+    return <NotFound type="page" />;
+  }
+
   return (
     <Box>
       <PageLayout
-        contentMaxW={data.template === "narrow content" ? "846px" : null}
+        contentMaxW={data.template === "narrow content" ? "846px" : undefined}
         breadcrumbs={
           <>
             {data.breadcrumbs &&
@@ -74,6 +84,7 @@ export default function CMSPage({
             {data.show_title ? <>
               <Box pb="6">
                 <Heading
+                  as="h1"
                   variant="h2"
                   color="heading-navy-fg"
                   fontWeight="extrabold"
@@ -86,6 +97,7 @@ export default function CMSPage({
             {data.blocks?.map((block, i) => {
               return (
                 <Block
+                  env={env}
                   key={i}
                   block={block}
                   locale={locale}
@@ -95,7 +107,7 @@ export default function CMSPage({
           </Flex>
         }
         rightAside={
-          data.template === "content" ? (
+          data.template === "content" && !data.hideToc ? (
             <TableOfContents headings={blocksToTOC(data.blocks, 1)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
           ) : null
         }

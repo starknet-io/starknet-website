@@ -33,6 +33,11 @@ export function blocksToTOC(blocks: readonly TopLevelBlock[] = [], level: number
         tableOfContents.push(headingData);
         blocksToTOC(block.blocks, level + 1, tableOfContents);
       }
+    } else if (block.type === 'video_section') {
+      tableOfContents.push({
+        title: block["scaling-eth"].title,
+        level
+      }); 
     } else if (block.type === "ordered_block") {
       const sortedBlocks = Array.from(block.blocks || []).sort((a, b) => {
         return a.title.localeCompare(b.title);

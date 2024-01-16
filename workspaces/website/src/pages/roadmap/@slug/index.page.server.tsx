@@ -1,4 +1,8 @@
-import { PageContextServer } from "src/renderer/types";
+/**
+ * Module dependencies.
+ */
+
+import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { getDefaultPageContext } from "src/renderer/helpers";
 import {
   getRoadmapPostBySlug,
@@ -6,6 +10,10 @@ import {
 } from "@starknet-io/cms-data/src/roadmap";
 import { RoadmapPostProps } from "./(components)/RoadmapPost";
 import { getRoadmapSettings } from "@starknet-io/cms-data/src/settings/roadmap";
+
+/**
+ * Export `onBeforeRender` function.
+ */
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -30,6 +38,9 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext: {
       ...defaultPageContext,
       pageProps,
+      documentProps: {
+        title: `Starknet Roadmap - ${roadmapPost.title}`,
+      } satisfies DocumentProps,
     },
   };
 }

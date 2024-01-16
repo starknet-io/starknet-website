@@ -31,6 +31,28 @@ export const SEOCollectionConfig = {
           widget: "string",
           crowdin: true,
         },
+        {
+          label: "Footer disclaimers",
+          name: "footerDisclaimers",
+          widget: "list",
+          required: false,
+          fields: [
+            {
+              label: "Disclaimer text",
+              name: "text",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+            {
+              label: "Disclaimer link",
+              name: "link",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+          ],
+        }
       ],
     },
     {
@@ -148,6 +170,31 @@ export const SEOCollectionConfig = {
           widget: "string",
           crowdin: true,
         },
+      ],
+    }, {
+      label: "Starknet newsletter",
+      name: "newsletter",
+      file: `_data/seo/newsletter.yml`,
+      crowdin: true,
+      fields: [
+        {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Sub Title",
+          name: "subtitle",
+          widget: "string",
+          crowdin: true,
+        },
+        {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          crowdin: true,
+        }
       ],
     },
   ],

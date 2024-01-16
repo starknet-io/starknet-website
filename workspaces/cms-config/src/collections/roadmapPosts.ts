@@ -15,7 +15,7 @@ export const roadmapStagesFields = [
     icon: BiBullseye
   },
   {
-    label: "Backlog",
+    label: "Details are WIP",
     value: "backlog",
     icon: AiOutlineAppstore
   },
@@ -74,7 +74,7 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability",
       widget: "select",
       options: [
-        "No time yet",
+        "TBD",
         "Q2 2023",
         "Q3 2023",
         "Q4 2023",
@@ -93,6 +93,7 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability state",
       widget: "select",
       options: [
+        "On mainnet",
         "On testnet",
         "Testing now"
       ],

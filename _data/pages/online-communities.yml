@@ -46,6 +46,10 @@ blocks:
           custom_external_link: https://t.me/sncorestars
       - link:
           hasIcon: true
+          custom_title: Starknet China
+          custom_external_link: https://t.me/starknet_zh
+      - link:
+          hasIcon: true
           custom_external_link: https://t.me/starknetna
           custom_title: Starknet Developers & Builders - North America
       - link:
@@ -102,6 +106,10 @@ blocks:
           custom_external_link: https://twitter.com/StarkNetAfrica
       - link:
           hasIcon: true
+          custom_title: Starknet Astro
+          custom_external_link: https://twitter.com/StarkNetAstroCN
+      - link:
+          hasIcon: true
           custom_title: Starknet China
           custom_external_link: https://twitter.com/StarkNet_ZH
       - link:
@@ -123,7 +131,7 @@ blocks:
       - link:
           hasIcon: true
           custom_title: Starknet India
-          custom_external_link: https://twitter.com/StarknetIndEco
+          custom_external_link: https://twitter.com/starknetin
       - link:
           hasIcon: true
           custom_title: Starknet Italy
@@ -136,6 +144,10 @@ blocks:
           hasIcon: true
           custom_title: "Starknet Netherlands "
           custom_external_link: https://twitter.com/StarknetNL
+      - link:
+          hasIcon: true
+          custom_title: Starknet Pakistan
+          custom_external_link: https://twitter.com/StarknetPk_
       - link:
           hasIcon: true
           custom_title: Starknet Portuguese-speaking
@@ -158,7 +170,31 @@ blocks:
     blocks:
       - link:
           hasIcon: true
-          custom_title: "Mirror "
+          custom_external_link: https://mirror.xyz/starknet-zh.eth
+          custom_title: Mirror - Chinese
+        subLabel:
+          label: Starknet China's collection of translated articles.
+      - link:
+          hasIcon: true
+          custom_title: Mirror - French
           custom_external_link: https://mirror.xyz/0x568B12eBBE85521D2cd8a2C9B7a8EF3f48aa2d66
         subLabel:
           label: Starknet France's collection of translated articles.
+      - link:
+          hasIcon: true
+          custom_external_link: https://mirror.xyz/0xb9e749FD3802D4A2162320ea7dB5AB8bf66a0AEA
+          custom_title: Mirror - Starknet Astro
+        subLabel:
+          label: "Chinese collection of Starknet articles, translated by Starknet Astro. "
+  - type: link_list
+    randomize: false
+    heading: Community Youtube Channels
+    blocks:
+      - link:
+          hasIcon: true
+          custom_external_link: https://www.youtube.com/channel/UC-QwzE3vJFdMvgbo4eUzYQg
+          custom_title: "Starknet Astro "
+      - link:
+          hasIcon: true
+          custom_title: Starknet China
+          custom_external_link: https://www.youtube.com/@starknetzh

@@ -1,0 +1,18 @@
+type: meetup
+name: Starknet Germany - Welcome Munich!
+description: Join us for the Starknet Germany kick-off event in Munich. Learn
+  about provable Rust-like language Cairo, powered by zk STARKs, the layer 2
+  validity rollup Starknet that scales Ethereum, account abstraction,
+  decentralized sequencers, provers and much more.  We're bringing together
+  developers, enthusiasts, and industry experts for an introduction to Starknet.
+  Join us if you want to stay on top of the strongest innovation in the
+  blockchain scaling space.
+url: https://www.meetup.com/starknet-germany/events/297255717/
+start_date: 2023-12-13T16:00:55.993Z
+month: December 2023
+end_date: 2023-12-13T20:00:56.007Z
+show_in_past_events: false
+image: /assets/frame-7-2.png
+location: europe
+city: Munich
+country: Germany

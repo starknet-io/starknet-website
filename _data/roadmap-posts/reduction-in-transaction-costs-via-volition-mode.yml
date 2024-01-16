@@ -1,33 +1,19 @@
 id: 2ec2ec7e-abd4-4916-8b57-b31f2c753402
-title: "A reduction in transaction costs via Volition mode "
-availability: Q2 2024
-version: 00b0fa3e-684d-4520-ba40-45c5f43cc7eb
-stage: building-next
+title: Reduced transaction costs via Volition mode
+availability: TBD
+version: 41c6e1ef-84d1-4535-96aa-e17f255e3b3b
+stage: backlog
 blocks:
   - type: markdown
     body: >-
       As part of its roadmap, Starknet aims to significantly reduce transaction
-      costs by introducing Volition mode. Currently, L1 (Ethereum) data cost
-      accounts for the majority (95%) of transaction costs on Starknet. To
-      address this, Volition mode will enable developers to build applications
-      with a hybrid Data Availability (DA) approach, incorporating both on-chain
-      and off-chain data.
+      costs by introducing Volition mode. 
 
 
-      By leveraging Volition mode, Starknet anticipates a dramatic reduction in the cost of data. 
+      Currently, L1 (Ethereum) data cost accounts for the majority (95%) of transaction costs on Starknet. To address this, Volition mode will enable developers to build applications with a hybrid Data Availability (DA) approach, incorporating both onchain and offchain data.
 
 
+      By leveraging Volition mode, Starknet anticipates a reduction in the cost of L1 data.
 
 
-      **This reduction is expected to be achieved through two key factors:** 
-
-
-      * The implementation of Ethereum's EIP-4844 (Shard Blob Transaction)
-
-      * The introduction of Volition itself. 
-
-
-      Volition will be officially released only once EIP-4844 has been deployed to the Ethereum mainnet.
-
-
-      The specifics of Volition's design and developer interfaces will be shared soon, providing further details on how it will contribute to lowering transaction costs.
+      The specifics of Volition's design and developer interfaces will be shared soon.

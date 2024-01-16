@@ -15,12 +15,14 @@ import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
 import { getComputedLinkData } from "src/utils/utils";
 import { CustomLink } from "@ui/Link/CustomLink";
 import { LinkData } from "@starknet-io/cms-data/src/settings/main-menu";
+import { Button } from "@ui/Button";
 
 type Props = {
   variant?: "image_icon_link_card" | "icon_link_card" | "dapp" | "large_card" | "community_card";
   title: string;
   link?: LinkData;
   icon?: string;
+  defaultIcon?: string;
   description?: string;
   locale: string,
   size?: "large" | "small",
@@ -36,7 +38,8 @@ type Props = {
   | "cyan"
   | "pink"
   | "grey",
-  orientation?: "left" | "right"
+  orientation?: "left" | "right" | "vertical"
+  onClick?: () => void;
 };
 
 type titleVariantType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -45,6 +48,7 @@ type descriptionVariantType = "body" | "cardBody" | "breadcrumbs" | "footerLink"
 
 export const ImageIconCard = ({
   title,
+  defaultIcon = "/assets/cards/user-group.svg",
   description,
   link,
   icon,
@@ -54,17 +58,19 @@ export const ImageIconCard = ({
   withIllustration = false,
   variant = "image_icon_link_card",
   columns = 4,
-  orientation = "left"
+  orientation = "left",
+  onClick
 }: Props) => {
-  const { href = 'test', label } = getComputedLinkData(locale, link ?? {
-      custom_title: 'dsa',
-      custom_internal_link: 'asd'
+  const { href , label } = getComputedLinkData(locale, link ?? {
+      custom_title: '',
+      custom_internal_link: ''
   });
   let titleVariant;
   let descriptionVariant;
   let linkVariant;
   let cardFooterPadding;
   let globalPadding;
+  let buttonVariant;
   switch (variant) {
     case "image_icon_link_card":
       titleVariant = size === "large" ? "h3" : "h4";
@@ -88,6 +94,7 @@ export const ImageIconCard = ({
       descriptionVariant = "body";
       cardFooterPadding = "24px 0 0 0";
       linkVariant = "cardLink";
+      buttonVariant = "gradient";
       break;
     case "community_card":
       titleVariant = "h4";
@@ -101,9 +108,11 @@ export const ImageIconCard = ({
       descriptionVariant = size === "large" ? "body" : "cardBody";
       linkVariant = size === "large" ? "cardLink" : "smallCardLink";
   }
+
   return (
     <LinkBox
       sx={{ textDecoration: "none!important" }}
+      onClick={onClick}
     >
       <CardGradientBorder
         padding="0"
@@ -123,11 +132,13 @@ export const ImageIconCard = ({
             base: variant === "community_card" ? "24px" : variant === "large_card" ? "24px" : "0",
             md: variant === "community_card" ? "16px" : variant === "large_card" ? "48px" : "0"
           }}
-          {...(orientation === "right" && variant === "large_card" && { justifyContent: "space-between" })}
-          alignItems={{ lg: variant === "large_card" ? "center" : "initial" }}
+          {...(orientation !== "vertical" && variant === "large_card" && {
+            justifyContent: "center"
+          })}
+          alignItems={{ base: 'center', lg: variant === "large_card" ? "center" : "initial" }}
           height="100%"
         >
-          <ImageIconBox title={title} variant={variant} color={color} size={size} icon={variant === "community_card" ? "/assets/cards/user-group.svg" : icon} withIllustration={withIllustration} />
+          <ImageIconBox title={title} variant={variant} color={color} size={size} icon={variant === "community_card" ? defaultIcon : icon} withIllustration={withIllustration} />
           <Box
             padding={{
               base: variant === "community_card" ? "24px 32px 0 0" : (size === "large" && icon && variant === "image_icon_link_card") ?
@@ -159,7 +170,10 @@ export const ImageIconCard = ({
           >
             <CardBody
               padding="0"
-              {...(variant === "large_card" && { flex: "inherit" })}
+              {...(variant === "large_card" && {
+                flex: "inherit",
+                maxWidth: '460px'
+              })}
             >
               <Stack spacing="3">
                 <Heading variant={titleVariant as titleVariantType} lineHeight="100%" {...(variant === "large_card" && { paddingBottom: "8px" })}>
@@ -174,7 +188,7 @@ export const ImageIconCard = ({
                     lineHeight="24px"
                   >
                     {description}{" "}
-                    {variant === "community_card" && (
+                    {variant === "community_card" && href !== '#' && (
                       <CustomLink
                         variant={linkVariant as linkVariantType}
                         color="selected.main"
@@ -189,7 +203,17 @@ export const ImageIconCard = ({
               </Stack>
             </CardBody>
 
-            {link && variant !== "dapp" && variant !== "community_card" && (
+            {link && variant === "large_card" && (
+              <CardFooter padding={cardFooterPadding}>
+                <ButtonGroup spacing="2">
+                  <Button href={href} variant={buttonVariant}>
+                    {label} &rarr;
+                  </Button>
+                </ButtonGroup>
+              </CardFooter>
+            )}
+
+            {link && variant !== "dapp" && variant !== "community_card" && variant !== "large_card" && (
               <CardFooter padding={cardFooterPadding}>
                 <ButtonGroup spacing="2">
                   <CustomLink

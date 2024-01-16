@@ -1,0 +1,56 @@
+id: 7dca2cc2-a154-46f3-b81a-8f96d79b4351
+post_type: video
+title: "Madara Community Call #13"
+published_date: 2023-12-03T14:51:42.010Z
+video:
+  url: https://www.youtube.com/watch?v=bV2vr715aNw
+  id: bV2vr715aNw
+  data:
+    kind: youtube#video
+    etag: RDR8deP4nnRmiiUlzD5ioiYUnw0
+    id: bV2vr715aNw
+    snippet:
+      publishedAt: 2023-10-19T08:17:43Z
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+      title: "Madara Community Call #13"
+      description: "Join us: https://github.com/keep-starknet-strange/madara"
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/bV2vr715aNw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/bV2vr715aNw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/bV2vr715aNw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/bV2vr715aNw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/bV2vr715aNw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: "Madara Community Call #13"
+        description: "Join us: https://github.com/keep-starknet-strange/madara"
+    contentDetails:
+      duration: PT1H11M35S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-call-13.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d

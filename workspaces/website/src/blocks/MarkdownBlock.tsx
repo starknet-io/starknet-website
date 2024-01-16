@@ -31,6 +31,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
                 id={`toc-${slugify(props.children.join(" "))}`}
               /> */}
               <Heading
+                as={"h1"}
                 id={`toc-${slugify(props.children.join(" "))}`}
                 color="heading-navy-fg"
                 variant="h2"

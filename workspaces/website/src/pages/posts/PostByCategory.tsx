@@ -93,6 +93,7 @@ export default function PostByCategory({
               borderRadius={"8px"}
               src={post.image}
               alt={post.title}
+              width={"100%"}
             />
           ) : null}
 
@@ -101,7 +102,7 @@ export default function PostByCategory({
               {post.post_type}
             </Badge>
           </Box>
-          <Heading variant="h2" color="heading-navy-fg" fontWeight="extrabold">
+          <Heading as="h1" variant="h2" color="heading-navy-fg" fontWeight="extrabold">
             {post.title}
           </Heading>
           <Flex mt="16px">

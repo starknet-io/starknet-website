@@ -49,7 +49,7 @@ export default function RoadmapPage({
 
         return (
           <Box key={stage.value} mb="5rem">
-            <Heading variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
+            <Heading as="h1" variant="h4" display="flex" alignItems="center" mb="2rem" color="heading-navy-fg">
               <Icon
                 boxSize="22px"
                 as={stage.icon}

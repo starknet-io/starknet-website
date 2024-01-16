@@ -17,10 +17,10 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: blue-default
-        title: Read the Docs
+        title: Read the Starknet Docs
         description: Read the official Starknet documentation to build your first
-          contracts and dapps.
-        icon: /assets/read_the_docs.svg
+          contracts and dApps.
+        icon: /assets/read-docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View
@@ -28,10 +28,9 @@ blocks:
       - type: image_icon_link_card
         color: blue-default
         title: Read the Starknet Book
-        description: Developed by the Starknet community, the Starknet book teaches
-          Cairo programming and Starknet development. Start reading and conquer
-          the Ethereum world.
-        icon: /assets/docs.svg
+        description: "Developed by the community, the Starknet book teaches how to build
+          on Starknet. "
+        icon: /assets/read-book.svg
         link:
           custom_external_link: https://book.starknet.io/
           custom_internal_link: ""
@@ -49,41 +48,126 @@ blocks:
         withIllustration: true
   - type: flex_layout
     heading_variant: h3
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Cairo Book
+        icon: /assets/cairo-book.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View
+          custom_external_link: https://book.cairo-lang.org/
+        description: Learn how to write code in Cairo, Starknet's native programming
+          language.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Cairo Docs
+        icon: /assets/cairo-docs.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View
+          custom_external_link: https://docs.cairo-lang.org/
+        description: Read the Cairo documentation to start building on Starknet with Cairo.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Starknet Basecamp
+        icon: /assets/starknet-basecamp.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View
+          custom_external_link: https://starknet.notion.site/starknet/Starknet-Basecamp-Hub-1541b3c1f49f439da872d3d71647d834
+        description: Sign-up to the next Basecamp or watch recordings to learn about
+          Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Tutorials
+        icon: /assets/tutorials-2.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View
+          custom_external_link: https://www.starknet.io/en/tutorials
+        description: Enhance your Starknet dev skills with hands-on video tutorials.
+        columns: "4"
     base: 1
     md: 2
     lg: 3
-    heading: Courses
+    heading: Learning Resources
+    xl: 4
+  - type: flex_layout
+    heading_variant: h3
     blocks:
-      - type: image_icon_link_card
-        color: purple
-        title: Learn Through Tutorials
-        description: "Learn from the Starknet's community of developers and technologies. "
-        icon: /assets/7.svg
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Roadmap
+        icon: /assets/roadmap.svg
+        type: image_icon_link_card
         link:
           custom_title: View
-          custom_internal_link: /tutorials/
+          custom_internal_link: /roadmap
+        description: Overview of upcoming Starknet features and upgrades.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
         withIllustration: true
-      - type: image_icon_link_card
-        color: peach
-        title: Starknet Basecamp
-        description: Sign up for the next basecamp and learn everything about Starknet -
-          from STARK mathematics to Cairo 1 smart contracts best practices.
-        icon: /assets/basecamp.svg
+        title: Tools & Resources
+        icon: /assets/tools-resources.svg
+        type: image_icon_link_card
         link:
-          custom_title: Sign-up
-          custom_internal_link: ""
-          custom_external_link: https://docs.google.com/forms/d/e/1FAIpQLSf2k9vjPpeymbUpJMRDuN3QqNcHtjWx8whX2wY4EbihF1EaPg/viewform
+          custom_internal_link: /developers/tools-and-resources
+          custom_title: View
+        description: All the tools and resources you need to build on Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
         withIllustration: true
-      - type: image_icon_link_card
-        color: cyan
-        title: "Starknet Edu "
-        description: Educational developer resources for Starknet and Cairo.
-        icon: /assets/starknet_edu.svg
+        title: Devs Newsletter
+        icon: /assets/devs-newsletter.svg
+        type: image_icon_link_card
+        link:
+          custom_internal_link: /subscribe-newsletter
+          custom_title: View
+        description: Sign up for the Devs Newsletter and keep up to date on version updates.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: true
+        title: Developers Blog
+        icon: /assets/developers-blog.svg
+        type: image_icon_link_card
         link:
           custom_title: View
-          custom_internal_link: /tutorials/starknet_edu
-        withIllustration: true
-  - type: community_events
+          custom_internal_link: /posts/developers
+        description: Top quality articles from the Starknet community.
+        columns: "4"
+    base: 1
+    md: 2
+    lg: 3
+    heading: Community and Insights
+    xl: 4
   - type: flex_layout
     heading_variant: h3
     base: 1
@@ -100,35 +184,32 @@ blocks:
               custom_external_link: https://docs.starknet.io/documentation/
           - link:
               custom_title: "Setting up a Starknet account "
-              custom_external_link: https://docs.starknet.io/documentation/getting_started/account_setup/
+              custom_external_link: https://docs.starknet.io/documentation/quick_start/set_up_an_account/
           - link:
               custom_title: Latest Starknet version
               custom_external_link: https://docs.starknet.io/documentation/starknet_versions/version_notes/
           - link:
               custom_title: Upcoming Starknet versions
               custom_external_link: https://docs.starknet.io/documentation/starknet_versions/upcoming_versions/
-          - link:
-              custom_title: "CLI commands "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
       - type: link_list
         heading: Architecture & concepts
         listSize: lg
         blocks:
           - link:
               custom_title: Block structure
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/header/
           - link:
               custom_title: "Transaction lifecycle "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transaction-life-cycle/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/transaction-life-cycle/
           - link:
               custom_title: "Transaction structure "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/transactions/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Network_Architecture/transactions/
           - link:
               custom_title: Contract ABI
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Contracts/contract-abi/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Smart_Contracts/contract-abi/
           - link:
               custom_title: "Account abstraction "
-              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Account_Abstraction/introduction/
+              custom_external_link: https://docs.starknet.io/documentation/architecture_and_concepts/Accounts/introduction/
       - type: link_list
         heading: "Tools & resources "
         listSize: lg
@@ -137,8 +218,5 @@ blocks:
               custom_title: Starknet block explorers
               custom_external_link: https://docs.starknet.io/documentation/tools/ref_block_explorers/
           - link:
-              custom_title: "Starknet CLI reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/commands/
-          - link:
-              custom_title: "Starknet compiler reference "
-              custom_external_link: https://docs.starknet.io/documentation/tools/CLI/starknet-compiler-options/
+              custom_title: StarkLi CLI
+              custom_external_link: https://docs.starknet.io/documentation/tools/devtools/#starkli

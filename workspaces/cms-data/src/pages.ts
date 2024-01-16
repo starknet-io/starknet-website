@@ -146,6 +146,28 @@ export interface OrderedBlock {
   readonly blocks: readonly OrderedItem[];
 }
 
+export interface ChapterInfo {
+  content: MarkdownBlock['body'];
+  subtitle: string;
+  title: string;
+};
+
+export interface VideoSectionBlock {
+  readonly type: "video_section";
+  readonly 'scaling-eth': ChapterInfo;
+  readonly sequencer: ChapterInfo;
+  readonly prover: ChapterInfo;
+  readonly 'eth-settlement': ChapterInfo;
+  readonly chapterDescriptionFullWidth: boolean;
+  readonly playlistOnBottom: boolean;
+}
+
+export interface NewsletterBlock {
+  readonly type: "newsletter_popup";
+  readonly title: string;
+  readonly description: string;
+}
+
 export type HeadingVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 export type Block =
@@ -160,7 +182,9 @@ export type Block =
   | AccordionBlock
   | OrderedBlock
   | ListCardItemsBlock
-  | AmbassadorsListBlock;
+  | AmbassadorsListBlock
+  | VideoSectionBlock
+  | NewsletterBlock;
 
 export interface Container {
   readonly type: "container";
@@ -196,9 +220,10 @@ export interface Page extends Meta {
   readonly link: string;
   readonly title: string;
   readonly show_title?: boolean;
-  readonly toc?: boolean;
+  readonly hideToc?: boolean;
   readonly template: "landing" | "content" | "narrow content";
   readonly tocCustomTitle?: string;
+  readonly hidden_page: boolean;
   readonly breadcrumbs: boolean;
   readonly breadcrumbs_data?: readonly Omit<Page, "blocks">[];
   readonly pageLastUpdated: boolean;

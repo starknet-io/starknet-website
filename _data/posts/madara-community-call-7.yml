@@ -1,0 +1,84 @@
+id: d6774e35-76d0-42f5-97cf-8fa13731aa5c
+post_type: video
+title: "Madara community call #7"
+published_date: 2023-12-03T14:25:59.590Z
+video:
+  url: https://www.youtube.com/watch?v=ct4U08D6Loc
+  id: ct4U08D6Loc
+  data:
+    kind: youtube#video
+    etag: 9PdaEq6glaLd-FNHtmVq01imAhA
+    id: ct4U08D6Loc
+    snippet:
+      publishedAt: 2023-06-09T16:04:03Z
+      channelId: UC1s9z2bIEAWDd-hoAYA5mHw
+      title: "Madara community call #7"
+      description: |-
+        Agenda
+        Presentation of Starknet by @LucasLvy
+        Sharingan Testnet update by @abdelhamidbakhta
+        Testing architecture of Madara by @ClementWalter
+        Testing campaign plan for Sharingan testnet by @greged93
+        Proving / Data availability plan @drspacemn
+        Creating Madara nodes out of thin air by @d-roak
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/ct4U08D6Loc/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/ct4U08D6Loc/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/ct4U08D6Loc/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/ct4U08D6Loc/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/ct4U08D6Loc/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: Keep Starknet Strange
+      tags:
+        - starknet
+        - cairo
+        - appchain
+        - ethereum
+      categoryId: "22"
+      liveBroadcastContent: none
+      localized:
+        title: "Madara community call #7"
+        description: |-
+          Agenda
+          Presentation of Starknet by @LucasLvy
+          Sharingan Testnet update by @abdelhamidbakhta
+          Testing architecture of Madara by @ClementWalter
+          Testing campaign plan for Sharingan testnet by @greged93
+          Proving / Data availability plan @drspacemn
+          Creating Madara nodes out of thin air by @d-roak
+    contentDetails:
+      duration: PT1H32M45S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/madara-community-call-7.png
+category: community-and-events
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+short_desc: |-
+  Agenda:
+  1. Presentation of Starknet by @LucasLvy
+  2. Sharingan Testnet update by @abdelhamidbakhta
+  3. Testing architecture of Madara by @ClementWalter
+  4. Testing campaign plan for Sharingan testnet by @greged93
+  5. Proving / Data availability plan @drspacemn
+  6. Creating Madara nodes out of thin air by @d-roak

@@ -13,7 +13,7 @@ blocks:
   - type: card_list
     card_list_items:
       - title: Starknet-ecosystem
-        description: Immerse yourself in the StarkNet Ecosystem by discovering projects,
+        description: Immerse yourself in the Starknet Ecosystem by discovering projects,
           jobs, metrics and learning resources.
         website_url: https://www.starknet-ecosystem.com
         twitter: https://twitter.com/StarkNetEco

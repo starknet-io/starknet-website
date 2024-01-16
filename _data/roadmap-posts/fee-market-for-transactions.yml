@@ -1,16 +1,16 @@
 id: f49c51fc-5b87-4f9e-9eaf-a0274ee0cacc
-title: Fee market for transactions
-availability: Q1 2024
+title: Transactions fee market
+availability: TBD
+state: null
 version: 9ed3a1c1-4dee-4f80-837f-341291f1f3d9
 stage: building-next
 blocks:
   - type: markdown
-    body: >-
-      In the roadmap for Starknet, one of the key areas of development is the
+    body: In the roadmap for Starknet, one of the key areas of development is the
       introduction of a fee market to improve user experience during network
       congestion. Currently, when congestion occurs, waiting times for
       transactions increase for everyone. To address this issue, Starknet plans
-      to introduce a fee market in version 0.14.0. 
-
-
-      This fee market will allow for an efficient allocation of Starknet's limited resources based on users' willingness to pay for a transaction, rather than simply following the order of transactions in line. By implementing a fee market, Starknet aims to provide a more predictable and seamless experience for users, even during periods of high network activity.
+      to introduce a fee market in version 0.14.0, which will enable users to
+      accelerate their transaction's finality time by applying a fee market.
+      This will provide users with a predictable and seamless experience,
+      including during periods of high network activity.

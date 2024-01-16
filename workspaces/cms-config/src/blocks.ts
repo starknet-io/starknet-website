@@ -249,6 +249,30 @@ export const cardListItem = [
   },
 ] satisfies CmsField[];
 
+const videoChapterFields = [
+  {
+    crowdin: true,
+    label: 'Title',
+    name: 'title',
+    required: true,
+    widget: 'string'
+  },
+  {
+    crowdin: true,
+    label: 'Description',
+    name: 'description',
+    required: true,
+    widget: 'string'
+  },
+  {
+    crowdin: true,
+    label: 'Content',
+    name: 'content',
+    required: true,
+    widget: 'markdown'
+  }
+] satisfies CmsField[];
+
 export const blocks = [
   {
     name: "markdown",
@@ -410,7 +434,7 @@ export const blocks = [
         widget: "select",
         default: "left",
         required: false,
-        options: ["left", "right"],
+        options: ["left", "right", "vertical"],
       }
     ],
   },
@@ -663,8 +687,73 @@ export const blocks = [
         ],
       },
     ],
-  },
-  {
+  }, {
+    name: "video_section",
+    label: "Education video section",
+    widget: "object",
+    fields: [
+      {
+        label: "Chapter description full width",
+        name: "chapterDescriptionFullWidth",
+        widget: "boolean",
+        default: false,
+        required: false,
+      },
+      {
+        label: "Chapters playlist on bottom of video desktop",
+        name: "playlistOnBottom",
+        widget: "boolean",
+        default: true,
+        required: false,
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 1',
+        name: 'scaling-eth',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 2',
+        name: 'sequencer',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 3',
+        name: 'prover',
+        widget: 'object',
+        fields: videoChapterFields
+      },
+      {
+        crowdin: true,
+        label: 'Chapter 4',
+        name: 'eth-settlement',
+        widget: 'object',
+        fields: videoChapterFields
+      }
+    ]
+  }, {
+    name: "newsletter_popup",
+    label: "Newsletter Popup",
+    widget: "object",
+    fields: [
+      {
+        crowdin: true,
+        label: 'Title',
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        crowdin: true,
+        label: 'Description',
+        name: 'description',
+        widget: 'string'
+      },
+    ]
+  }, {
     name: "ordered_block",
     label: "Ordered Block",
     widget: "object",
@@ -690,6 +779,54 @@ export const blocks = [
   },
 ] satisfies CmsFieldList["types"];
 
+const flexLayout = {
+  name: "flex_layout",
+  label: "Flex layout",
+  widget: "object" as "object",
+  fields: [
+    {
+      name: "base",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "md",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "lg",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "xl",
+      widget: "number",
+      required: false,
+    },
+    {
+      name: "heading",
+      required: false,
+      widget: "string",
+      crowdin: true
+    },
+    {
+      name: "heading_variant",
+      widget: "select",
+      options: ["h1", "h2", "h3", "h4", "h5", "h6"],
+      required: false,
+      default: "sm",
+    },
+    {
+      name: "blocks",
+      label: "Blocks",
+      widget: "list",
+      types: blocks,
+      default: [],
+    },
+  ],
+} satisfies CmsField; 
+
 export const topLevelBlocks = [
   {
     name: "group",
@@ -700,7 +837,7 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
@@ -719,7 +856,7 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
@@ -747,57 +884,11 @@ export const topLevelBlocks = [
         name: "blocks",
         label: "Blocks",
         widget: "list",
-        types: blocks,
+        types: [...blocks, flexLayout],
         default: [],
       },
     ],
   },
-  {
-    name: "flex_layout",
-    label: "Flex layout",
-    widget: "object",
-    fields: [
-      {
-        name: "base",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "md",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "lg",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "xl",
-        widget: "number",
-        required: false,
-      },
-      {
-        name: "heading",
-        required: false,
-        widget: "string",
-        crowdin: true
-      },
-      {
-        name: "heading_variant",
-        widget: "select",
-        options: ["h1", "h2", "h3", "h4", "h5", "h6"],
-        required: false,
-        default: "sm",
-      },
-      {
-        name: "blocks",
-        label: "Blocks",
-        widget: "list",
-        types: blocks,
-        default: [],
-      },
-    ],
-  },
+  flexLayout,
   ...blocks,
 ] satisfies CmsFieldList["types"];

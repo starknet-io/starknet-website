@@ -47,15 +47,15 @@ export const NavLayout = (props: NavLayoutProps) => {
           <a href={`/${locale}/`}>
             <StarknetLogo />
           </a>
-          <Box display={{ base: "none", lg: "block" }}>
-              <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
-                {props.items}
-              </ButtonGroup>
+          <Box display={{ base: "none", xl: "block" }}>
+            <ButtonGroup variant="link" spacing="18px" sx={{ pl: "34px" }}>
+              {props.items}
+            </ButtonGroup>
           </Box>
         </HStack>
         <HStack spacing={6}>
           {props.searchArea}
-          <Box display={{ base: "none", lg: "block" }} sx={{marginInlineStart: "12px !important"}}>
+          <Box display={{ base: "none", xl: "block" }} sx={{marginInlineStart: "12px !important"}}>
               <IconButton
                 icon={
                   colorMode === "light" ? (
@@ -70,25 +70,31 @@ export const NavLayout = (props: NavLayoutProps) => {
               />
             </Box>
 
-              <Box
-                w="1px"
-                bg="nav-footer-br"
-                h="30px"
-                position="relative"
-                marginInlineStart="12px !important"
-                display={{ base: "none", lg: "block" }}
-              />
-              <Box display={{ base: "none", lg: "block" }} marginInlineStart="0 !important">
-               {props.languageSwitcher}
-              </Box>
+            {!!props.languageSwitcher && (
+              <>
+                <Box
+                  w="1px"
+                  bg="nav-footer-br"
+                  h="30px"
+                  position="relative"
+                  marginInlineStart="12px !important"
+                  display={{ base: "none", xl: "block" }}
+                />
+                <Box display={{ base: "none", xl: "block" }} marginInlineStart="0 !important">
+                  {props.languageSwitcher}
+                </Box>
+              </>
+            )}
 
-            <Box display={{ base: "block", lg: "none" }}><IconButton
-              ref={menuButtonRef}
-              icon={<Icon as={MenuIcon} fontSize="2xl" />}
-              aria-label="Open Menu"
-              onClick={onClickMenu}
-              marginInlineStart="12px !important"
-            /></Box>
+            <Box display={{ base: "block", xl: "none" }} marginInlineStart="0px !important">
+              <IconButton
+                ref={menuButtonRef}
+                icon={<Icon as={MenuIcon} fontSize="2xl" />}
+                aria-label="Open Menu"
+                onClick={onClickMenu}
+                marginInlineStart={{ base: "0px !important", md: "12px !important" }}
+              />
+            </Box>
         </HStack>
       </HStack>
     </Container>

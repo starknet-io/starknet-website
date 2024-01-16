@@ -1,7 +1,6 @@
 
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
-import LocaleSwitcher from "./LocaleSwitcher";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
 import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
@@ -39,7 +38,6 @@ export default function Navbar({
   return (
     <NavbarContainer>
       <NavBar
-        languageSwitcher={<LocaleSwitcher seo={languageCenterSeo} />}
         search={
           <div>
             <MainSearch env={env} seo={searchSEO} />

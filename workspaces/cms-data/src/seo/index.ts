@@ -7,6 +7,10 @@ export interface SEOTexts {
   };
   footer: {
     footerText: string;
+    footerDisclaimers: {
+      text: string;
+      link: string;
+    }[]
   };
   tutorials: {
     title: string;
@@ -17,6 +21,11 @@ export interface SEOTexts {
     subtitle: string;
   };
   jobs: {
+    title: string;
+    subtitle: string;
+    description: string;
+  };
+  newsletter: {
     title: string;
     subtitle: string;
     description: string;

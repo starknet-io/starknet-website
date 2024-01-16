@@ -1,5 +1,5 @@
 id: 9308fd57-e090-4ca9-9581-d9aeb8a3187c
-title: Full-nodes & API services
+title: Full-nodes & RPC services
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,10 +7,10 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: nodes_and_services
-    title: Full-nodes & API services
+    title: Full-nodes & RPC services
     description: Use APIs to connect to other services, run full nodes and interact
       with on-chain data.
-    leftBoxMaxWidth: 600
+    leftBoxMaxWidth: 800
   - type: card_list
     title: Full-nodes
     card_list_items:
@@ -29,6 +29,12 @@ blocks:
         title: Papyrus
         description: Starknet full-node written in Rust by StarkWare
         image: /assets/logo_papyrus_80x80.png
+      - title: Deoxys
+        image: /assets/deoxys-logo.jpeg
+        twitter: https://twitter.com/kasarlabs
+        website_url: https://github.com/kasarlabs/deoxys
+        description: Deoxys is an easy-to-use, blazing-fast and powerful Starknet full
+          node client, written in Rust and powered by Substrate built by Kasar.
     randomize: true
   - type: card_list
     randomize: true
@@ -39,7 +45,7 @@ blocks:
         image: /assets/5olekvre_400x400.jpg
         twitter: https://twitter.com/BlastAPI
         description: High availability Starknet Public API designed for developers.
-      - website_url: http://starknetrpc.nethermind.io/
+      - website_url: https://data.voyager.online/
         title: Nethermind
         description: Nethermind's Starknet RPC service, now with open endpoints.
         image: /assets/nethermind_icon_1600_black-1-.png
@@ -51,7 +57,7 @@ blocks:
         description: An open Starknet RPC endpoint, backed by a distributed network of
           node providers.
   - type: card_list
-    title: API services
+    title: " RPC services"
     card_list_items:
       - link_url: https://www.infura.io/networks/ethereum/starknet
         website_url: https://www.infura.io/networks/ethereum/starknet
@@ -97,4 +103,11 @@ blocks:
         link_url: https://chainbase.com/chainNetwork/Starknet
         website_url: https://chainbase.com/chainNetwork/Starknet
         image: /assets/logo_icon_black_512.png
+      - title: DRPC
+        image: /assets/f9yrudg__400x400.jpg
+        twitter: https://twitter.com/drpcorg
+        website_url: https://drpc.org/public-endpoints/starknet
+        discord: https://drpc.org/discord
+        description: DRPC is a decentralized network of RPC endpoints with unlimited
+          scalability supporting 29+ chains.
     randomize: true

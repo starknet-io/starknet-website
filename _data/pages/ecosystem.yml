@@ -1,9 +1,9 @@
 id: /ecosystem/
 title: Ecosystem
 template: landing
+hidden_page: true
 breadcrumbs: true
 page_last_updated: false
 blocks:
   - type: markdown
-    body: >-
-      Ecosystem
+    body: Ecosystem

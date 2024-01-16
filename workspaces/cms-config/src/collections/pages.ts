@@ -60,11 +60,11 @@ export const pagesCollectionConfig = {
       default: "content",
     },
     {
-      name: "toc",
-      label: "Show table of contents",
+      name: "hideToc",
+      label: "Hide table of content",
       hint: "Applies only for the 'content' template type",
       widget: "boolean",
-      default: true,
+      default: false,
       required: false
     },
     {
@@ -84,6 +84,12 @@ export const pagesCollectionConfig = {
       search_fields: ["title"],
       value_field: "id",
       display_fields: ["title"],
+    },
+    {
+      name: "hidden_page",
+      label: "Omit page from navigation",
+      widget: "boolean",
+      default: false,
     },
     {
       name: "breadcrumbs",

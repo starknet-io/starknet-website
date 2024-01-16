@@ -1,5 +1,5 @@
 id: fd9c4d6e-aaee-42f0-abfc-ef5ffd3944ab
-title: Block explorers & indexers
+title: Block explorers, indexers & Enhanced API
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,10 +7,15 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: block_explorers
-    title: Block explorers & indexers
+    title: Block explorers, indexers & Enhanced API
     description: Explore blocks, indexers, and other metrics of Starknet transactions.
   - type: card_list
     card_list_items:
+      - title: Starknet Status
+        description: Starknet status provides timely status information about the health
+          of Starknet sequencing.
+        image: /assets/sn-symbol-gradient.png
+        website_url: https://status.starknet.io/
       - title: Starkscan
         description: "Block explorer and analytics for Starknet. "
         link_url: https://starkscan.co
@@ -39,8 +44,19 @@ blocks:
         image: /assets/oklink-logo.jpeg
         discord: ""
         twitter: https://twitter.com/OKLink
+      - description: Seamlessly explore any NFT data on the Starknet via Starknet NFTScan.
+        website_url: https://starknet.nftscan.com/
+        title: NFTScan - NFT explorer
+        image: /assets/400_400.png
+        twitter: https://twitter.com/nftscan_com
+        discord: discord.gg/nftscan
+      - title: Stark Compass
+        description: An open-source Starknet explorer.
+        twitter: https://twitter.com/starkcompass
+        image: /assets/stark-compass.jpg
+        website_url: https://starkcompass.com/
     title: Block explorers
-    randomize: true
+    randomize: false
   - type: card_list
     randomize: true
     title: Indexers
@@ -60,3 +76,27 @@ blocks:
         title: Token Flow
         image: /assets/token-flow-logo.jpg
         website_url: https://tokenflow.live/
+  - type: card_list
+    randomize: true
+    title: Enhanced API
+    card_list_items:
+      - website_url: https://starkscan.co/api-info
+        image: /assets/starkscan.jpg
+        title: Starkscan
+        description: Get Starknet data via the Starkscan REST API. Leverage the power of
+          a leading Starknet block explorer in your apps.
+        twitter: https://twitter.com/StarkscanCo
+      - website_url: https://docs.alchemy.com/reference/starknet-api-endpoints#nft-api
+        title: "Alchemy "
+        image: /assets/alchemy-mark-blue-gradient.png
+        description: Get all the Starknet data you need for transactions, token
+          information, and debugging, in fewer requests.
+        twitter: https://twitter.com/AlchemyPlatform
+      - title: NFTScan
+        description: Leverage NFTScan's feature-rich NFT APIs for your projects.
+        website_url: https://developer.nftscan.com/
+        discord: discord.gg/nftscan
+        image: /assets/400_400.png
+        twitter: https://twitter.com/nftscan_com
+    description: An enhanced API is a set of tools designed to simplify developers’
+      access to complex queries on Starknet data.

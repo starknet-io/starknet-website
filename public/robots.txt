@@ -1,2 +1,13 @@
+Sitemap: https://www.starknet.io/sitemap.xml
 User-agent: *
 Allow: /
+Disallow: /ar/*
+Disallow: /de/*
+Disallow: /es/*
+Disallow: /fr/*
+Disallow: /ja/*
+Disallow: /ko/*
+Disallow: /pt/*
+Disallow: /*/subscribe-newsletter
+Disallow: /subscribe-newsletter
+Disallow: /en/learn

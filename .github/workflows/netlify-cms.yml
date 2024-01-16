@@ -43,14 +43,23 @@ jobs:
         uses: rlespinasse/github-slug-action@v4
         with:
           slug-maxlength: 28
+          
+      - name: Set URLS
+        run: |
+          if [ "${{ env.GITHUB_REF_SLUG_URL }}" = "production" ]; then
+            echo "VITE_LIVE_PREVIEW_URL=https://www.starknet.io" >> $GITHUB_ENV
+            echo "VITE_API_BASE_URL=https://www.starknet.io/api" >> $GITHUB_ENV
+            echo "VITE_DATA_URL=https://www.starknet.io/data" >> $GITHUB_ENV
+          else
+            echo "VITE_LIVE_PREVIEW_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev" >> $GITHUB_ENV
+            echo "VITE_API_BASE_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/api" >> $GITHUB_ENV
+            echo "VITE_DATA_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/data" >> $GITHUB_ENV
+          fi
 
       - name: Build Netlify CMS
         run: yarn workspace @starknet-io/netlify-cms build
         env:
-          VITE_LIVE_PREVIEW_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev
           VITE_GIT_BRANCH_NAME: ${{ github.ref_name }}
-          VITE_API_BASE_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/api
-          VITE_DATA_URL: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev/data
           VITE_BACKEND_AUTH_URL: https://netlify-cms-auth.haim-6b2.workers.dev
 
       - name: Deploy Netlify CMS
@@ -61,4 +70,4 @@ jobs:
           projectName: starknet-netlify-cms
           directory: workspaces/netlify-cms/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}

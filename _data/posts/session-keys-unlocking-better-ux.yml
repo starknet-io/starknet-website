@@ -1,0 +1,74 @@
+id: 05356521-3474-4623-9668-ac04f29a8489
+post_type: article
+title: "Session Keys: Unlocking Better UX"
+toc: true
+published_date: 2023-11-15T15:39:21.509Z
+image: /assets/session-keys-account-abstraction-unlocking-better-ux-starknet-v2a-1-.jpg
+category: ecosystem
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - account-abstraction
+short_desc: " Session Keys by StarkWare: Improving user experience and bringing
+  scalability, security, and privacy to blockchain"
+seoFocusKeywords:
+  - Account
+  - abstraction
+seoCanonicalUrl: https://starkware.co/resource/session-keys-unlocking-better-ux/
+blocks:
+  - type: group
+    blocks:
+      - type: markdown
+        body: >-
+          ## Towards a Smoother Blockchain User Experience
+
+
+          Ethereum has revolutionized the world of decentralized applications (dApps), offering a secure and transparent way to interact online.  However, early blockchain networks like Ethereum, provide a basic account model which is unintuitive for most users, called [Externally Owned Accounts](https://ethereum.org/en/developers/docs/accounts/) (EOAs).
+
+
+          In a recent blog post about native account abstraction, we dived into the key challenges posed by EOAs:
+
+
+          * A subpar blockchain user experience.
+
+          * Security risks associated with complete control by the private key holder.
+
+          * The lack of flexibility due to EOA’s rigid ties with the Ethereum protocol.
+
+
+          To deal with these problems, account abstraction was introduced. Account abstraction redefines how accounts function, offering developers flexibility through customizable "account contracts." These contracts, acting as smart contracts, employ the three pillars of account abstraction: signature abstraction for custom permissions, fee abstraction for versatile payments, and nonce abstraction for enhanced convenience.
+
+
+          For a deeper understanding of the challenges associated with EOAs and how Starknet overcomes them, visit [Native Account Abstraction: Opening Blockchain to New Possibilities](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/).
+
+
+          ## Session Keys
+
+
+          A particularly promising application of account abstraction lies in the concept of "session keys." Traditionally, decentralized applications (dApps) require users to individually sign each transaction through their wallet, introducing friction, especially during multiple transactions in a session. Account abstraction introduces the innovation of generating "session keys," enabling a dApp to autonomously sign transactions on behalf of the user for a specified period and transaction parameters, such as limits on duration and value.
+
+
+          The implementation of session keys presents a significant opportunity for dApps to streamline user interactions. Users can tailor session keys to their specific needs, whether they engage in frequent trading or occasional purchases. This adaptability fosters a more inclusive user base for blockchain technology and markedly enhances user experience in two pivotal areas: decentralized finance (DeFi) and onchain gaming.
+
+
+          ### DeFi
+
+
+          In the DeFi realm, the current inconvenience of decentralized exchanges (DEXs) lies in the necessity to approve each transaction individually at various stages. However, with session keys, we can replicate the seamless experience of centralized exchanges (CEXs) without succumbing to their drawbacks. For instance, a user could create a session key valid for an hour, allowing trades of up to $7000 on a decentralized exchange without the need for individual confirmation of each transaction through their wallet. This not only simplifies the process but also contributes to a more user-friendly and efficient DeFi ecosystem. 
+
+
+          ![](/assets/sk.png)
+
+
+          ### Gaming
+
+
+          The current state of onchain gaming can be described as clunky at best. Rather than imposing the intricacies of managing gas fees or signing multiple transactions on users, session keys facilitate seamless UX, resembling the smooth experience of traditional games. This shift results in a more user-friendly onchain gaming environment, liberating gamers from the hassle of configurations and errors. Gamers can focus on gaming,  instead of having to focus more on the blockchain itself. 
+
+
+          ## Conclusion
+
+
+          Ethereum has transformed decentralized applications (dApps) but faces challenges with rigid account structures like Externally Owned Accounts (EOAs). The introduction of account abstraction addresses these issues, offering developers flexibility and enhancing user experience through customizable "account contracts."
+
+
+          Perhaps one of the most important applications of account abstraction is "session keys," which streamlines user interactions in DeFi and onchain gaming. In DeFi, session keys eliminate the need for individual transaction approvals on decentralized exchanges (DEXs), providing a user-friendly experience similar to centralized exchanges (CEXs). In onchain gaming, session keys simplify the user experience, freeing gamers from the complexities of gas fees and transaction signatures. Explore more special features enabled by using Starknet’s [Native Account Abstraction](https://starkware.co/resource/native-account-abstraction-opening-blockchain-to-new-possibilities/), and learn [Cairo](https://www.cairo-lang.org/) to try it out yourself.

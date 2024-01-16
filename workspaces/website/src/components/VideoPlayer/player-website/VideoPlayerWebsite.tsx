@@ -1,6 +1,6 @@
 
 import { Box } from "@chakra-ui/react";
-import React, { CSSProperties, useCallback, useState } from "react";
+import React, { CSSProperties, useCallback, useMemo, useState } from "react";
 import { useUpdateEffect } from "react-use";
 import Player from "video.js/dist/types/player";
 import { usePlayerPositionStyle } from "../hooks/usePlayerPositionStyle";
@@ -8,32 +8,30 @@ import ChaptersPlaylist from "./ChaptersPlaylist";
 import ChapterTitle from "./ChapterTitle";
 import { VideoPlayerCore } from "../player-core/VideoPlayerCore";
 import { Chapter } from "../constants";
+import BottomPlaylist from "./BottomPlaylist";
 
 type VideoPlayerWebsiteProps = {
   chapters: Chapter[];
-  initialActiveChapter: string;
-  onChapterChange?: (currentChapter: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
   embeddable?: boolean;
+  playlistOnBottom?: boolean;
 };
 export function VideoPlayerWebsite({
   chapters,
-  initialActiveChapter,
+  currentChapter,
   onChapterChange,
+  playlistOnBottom,
 }: VideoPlayerWebsiteProps) {
   const playerRef = React.useRef<Player | null>(null);
   const positionStyle = usePlayerPositionStyle();
   const [videoContainerHeight, setVideoContainerHeightChange] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [currentChapter, setCurrentChapter] = useState(initialActiveChapter);
 
   useUpdateEffect(() => {
-    onChapterChange?.(currentChapter);
+    onChapterChange(currentChapter.id);
     playerRef.current?.play();
   }, [currentChapter]);
-
-  const onChapterSelect = (ch: string) => {
-    setCurrentChapter(ch);
-  };
 
   const onFullscreenChange = useCallback(
     (b: boolean) => {
@@ -48,6 +46,13 @@ export function VideoPlayerWebsite({
     },
     [setVideoContainerHeightChange]
   );
+
+  const playlistProps = useMemo(() => ({
+    height: videoContainerHeight,
+    chapters,
+    currentChapter,
+    onChapterChange,
+  }), [videoContainerHeight, chapters, currentChapter, onChapterChange]);
 
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
@@ -74,12 +79,12 @@ export function VideoPlayerWebsite({
     <Box
       sx={{
         display: "grid",
-        gap: "23px",
         position: "relative",
       }}
+      gap="32px"
       gridTemplateColumns={{
         base: "1fr",
-        lg: "1fr auto",
+        lg: playlistOnBottom ? "1fr" : "2fr 1fr",
       }}
     >
       <VideoPlayerCore
@@ -87,11 +92,10 @@ export function VideoPlayerWebsite({
         videoWrapperStyle={videoWrapperStyle}
         videoPositionStyle={videoPositionStyle}
         chapters={chapters}
-        initialActiveChapter={initialActiveChapter}
         onFullscreenChange={onFullscreenChange}
         onContainerHeightChange={onContainerHeightChange}
         currentChapter={currentChapter}
-        setCurrentChapter={setCurrentChapter}
+        onChapterChange={onChapterChange}
         renderChapter={({ chapter, episode, isVisible }) => (
           <ChapterTitle
             title={chapter?.title}
@@ -100,12 +104,11 @@ export function VideoPlayerWebsite({
           />
         )}
       />
-      <ChaptersPlaylist
-        height={videoContainerHeight}
-        chapters={chapters}
-        currentChapter={currentChapter}
-        onChapterSelect={onChapterSelect}
-      />
+      {playlistOnBottom ? (
+        <BottomPlaylist {...playlistProps}/>
+      ) : (
+        <ChaptersPlaylist {...playlistProps}/>
+      )}
     </Box>
   );
 }

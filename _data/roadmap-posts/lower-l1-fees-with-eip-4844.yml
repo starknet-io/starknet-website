@@ -1,0 +1,16 @@
+id: f5fe0a0a-eb6a-453f-9c1e-fa0d10fd9573
+title: Reduced L1 costs with EIP-4844
+availability: TBD
+version: 563c2fc3-fd9c-4440-a067-8c2dc680ef74
+stage: building-next
+blocks:
+  - type: markdown
+    body: >-
+      As part of its roadmap, Starknet aims to significantly reduce transaction
+      costs. 
+
+
+      Currently, L1 (Ethereum) data accounts for the majority (95%) of transaction costs on Starknet. This EIP, together with the supporting changes in Starknet’s protocol, should result in a reduction in the cost of Starknet data storage on L1. Starknet L1 data will be sent as 4844 blobs, which are expected to be much cheaper than call data. 
+
+
+      For more information, see [EIP-4844: Shard Blob Transactions](https://eips.ethereum.org/EIPS/eip-4844) on the Ethereum Improvement Protocols site.

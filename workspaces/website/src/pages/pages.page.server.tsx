@@ -8,10 +8,16 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   const locale = pageContext.locale ?? defaultLocale;
   const slug = pageContext.routeParams["*"] || "home";
   const data = await getPageBySlug(slug, locale, pageContext.context);
+  const env = {
+    CLOUDFLARE_RECAPTCHA_KEY: import.meta.env.VITE_CLOUDFLARE_RECAPTCHA_KEY,
+  };
 
   return {
     pageContext: {
-      pageProps: { data } satisfies Props,
+      pageProps: {
+        data,
+        env
+      } satisfies Props,
       documentProps: {
         title: slug == "home" ? undefined : data.title,
       } satisfies DocumentProps,
