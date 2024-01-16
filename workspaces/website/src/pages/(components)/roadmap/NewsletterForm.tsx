@@ -4,6 +4,7 @@
  */
 
 import {
+  Box,
   Button,
   FormControl,
   FormLabel,
@@ -36,6 +37,7 @@ export interface Props {
 export function NewsletterForm({ env, hideHeader }: Props) {
   const toast = useToast();
   const [formState, setFormState] = useState<'submitting' | 'success' | null>(null);
+  const [captchaDone, setCaptchaDone] = useState<boolean>(false);
   const captchaRef = useRef<TurnstileInstance | undefined>(null);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -67,6 +69,8 @@ export function NewsletterForm({ env, hideHeader }: Props) {
           description: 'We\'re having trouble verifying you\'re a human. Please try again.',
           ...toastErrorConfig
         });
+
+        captchaRef.current?.reset();
 
         return;
       }
@@ -111,7 +115,7 @@ export function NewsletterForm({ env, hideHeader }: Props) {
 
       {formState !== 'success' ? (
         <form onSubmit={handleSubmit}>
-          <FormControl isRequired paddingBottom={'20px'}>
+          <FormControl isRequired paddingBottom={'16px'}>
             <FormLabel fontWeight={'700'}>
               Email
             </FormLabel>
@@ -124,16 +128,31 @@ export function NewsletterForm({ env, hideHeader }: Props) {
             />
           </FormControl>
 
-          <Turnstile
-            options={{
-              size: 'invisible'
-            }}
-            ref={captchaRef}
-            siteKey={env.CLOUDFLARE_RECAPTCHA_KEY}
-          />
+          <Box
+            sx={{ 
+              paddingBottom: '16px',
+              iframe: {
+                width: '100% !important'
+              }
+          }}
+          >
+            <Turnstile
+              onSuccess={() => setCaptchaDone(true)}
+              options={{
+                size: 'normal',
+                theme: 'light',
+              }}
+              ref={captchaRef}
+              siteKey={env.CLOUDFLARE_RECAPTCHA_KEY}
+              style={{
+                width: '100%',
+              }}
+            />
+          </Box>
 
           <Button
             fontSize={'14px'}
+            isDisabled={!captchaDone}
             isLoading={formState === 'submitting'}
             padding={'6px 16px'}
             type={'submit'}
