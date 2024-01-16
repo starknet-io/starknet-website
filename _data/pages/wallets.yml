@@ -30,7 +30,9 @@ blocks:
           - type: Android
             url: https://play.google.com/store/apps/details?id=app.braavos.wallet
       - title: Argent X
-        description: Starknet’s popular wallet. 7 out of 10 Starknet users choose Argent X.
+        description: Secure, open-source and easy to use. 7 out of 10 Starknet users
+          choose Argent X. Get multisig security, fraud protection, and
+          dedicated customer support.
         link_url: https://www.argent.xyz/argent-x/
         website_url: https://www.argent.xyz/argent-x/
         discord: https://discord.gg/8yVmtsgtgm
