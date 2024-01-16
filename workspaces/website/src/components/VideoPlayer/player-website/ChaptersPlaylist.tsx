@@ -1,7 +1,7 @@
-import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { Chapter } from "../constants";
-import { useUpdateEffect } from "react-use";
 import styled from "@emotion/styled";
+import { useEffect } from "react";
 
 const ChaptersPlaylistWrapper = styled(Box)`
   ::-webkit-scrollbar {
@@ -22,18 +22,16 @@ export default function ChaptersPlaylist({
   currentChapter,
   onChapterChange,
 }: ChaptersPlaylistProps) {
-  const isMobile = useBreakpointValue({ base: true, lg: false });
 
-  useUpdateEffect(() => {
+  useEffect(() => {
     const chapterElement = document.getElementById(currentChapter.id);
-    if (chapterElement) {
-      chapterElement.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: isMobile ? "center" : "nearest",
-      });
+    const parentElement = chapterElement?.parentElement;
+    if (chapterElement && parentElement) {
+      const { offsetTop, offsetLeft } = chapterElement;
+      parentElement.scrollLeft = offsetLeft;
+      parentElement.scrollTop = offsetTop;
     }
-  }, [currentChapter, isMobile]);
+  }, [currentChapter]);
 
   return (
     <ChaptersPlaylistWrapper
