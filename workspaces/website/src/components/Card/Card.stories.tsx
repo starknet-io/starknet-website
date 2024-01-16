@@ -846,7 +846,7 @@ color?:
           <ImageIconCard
             variant="image_icon_link_card"
             color="peach"
-            title="Starknet Dapps"
+            title="Starknet dApps"
             description="Get up and running developing on Starknet through this series of video tutorials."
             icon="/assets/5.svg"
             locale="en"

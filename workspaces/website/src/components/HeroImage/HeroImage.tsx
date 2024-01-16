@@ -125,7 +125,7 @@ const heroStyles: Record<string, HeroStyleObject> = {
 };
 
 export const HeroImage = ({
-  title = "Dapps",
+  title = "dApps",
   description = "Starknet sits on top of Ethereum as a layer 2 network. It uses technology called 'STARK Proofs'  of transactions.",
   variant = "dapps",
   buttonText,
