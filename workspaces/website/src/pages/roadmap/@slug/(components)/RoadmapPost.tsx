@@ -30,6 +30,7 @@ interface KeyValuePairs {
 }
 
 const stages: KeyValuePairs = {
+  "completed": "Completed",
   "building-now": "Building now",
   "building-next": "Building next",
   "backlog": "Details are WIP",

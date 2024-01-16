@@ -3,7 +3,7 @@ title: Transaction Fee Reduction
 availability: Q1 2024
 state: On mainnet
 version: 68080885-a1b0-492b-8d5b-181a2abbcd51
-stage: building-now
+stage: completed
 blocks:
   - type: markdown
     body: >-

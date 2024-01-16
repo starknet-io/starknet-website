@@ -78,7 +78,7 @@
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18.2.0",
     "react-hotkeys-hook": "^4.4.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "^5.0.1",
     "react-in-viewport": "^1.0.0-alpha.30",
     "react-instantsearch-dom": "^6.39.1",
     "react-instantsearch-hooks-web": "^6.43.0",

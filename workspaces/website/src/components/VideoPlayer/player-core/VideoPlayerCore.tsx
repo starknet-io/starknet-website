@@ -199,11 +199,11 @@ export function VideoPlayerCore({
     });
 
     player.on("play", () => {
+      const volume = player.volume();
+      setVolume(volume * 100);
       setPlayingStatus("playing");
     });
 
-    const volume = player.volume();
-    setVolume(volume * 100);
     onChapterChange?.(currentChapter.id);
     player.aspectRatio("16:9");
   };

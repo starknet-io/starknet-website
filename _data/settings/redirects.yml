@@ -121,3 +121,5 @@ items:
     destination: /:locale/community/online-communities
   - source: /community/language-resources
     destination: /en/community/online-communities
+  - source: /ar/community/governance/delegation-agreement
+    destination: /en/community
