@@ -49,3 +49,9 @@ items:
     access:
       - roadmap
     name: Steve Goodman
+  - username: OfirEinhorn
+    access:
+      - all
+  - username: tal5674
+    access:
+      - all

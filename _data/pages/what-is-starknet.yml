@@ -70,22 +70,34 @@ blocks:
     blocks:
       - type: link_list_item
         link:
-          custom_title: "Starknet primer "
-          custom_external_link: https://medium.com/starknet-edu/starknet-primer-8f98e52ef06b
+          custom_title: "The Starknet Stack "
+          custom_external_link: ""
+          custom_internal_link: https://www.starknet.io/en/posts/ecosystem/the-starknet-stacks-growth-spurt
+          post: ""
         subLabel:
-          label: drspaceman
-      - type: link_list_item
-        link:
-          custom_title: "The Starknet stack "
-          custom_external_link: https://medium.com/starknet-edu/the-starknet-stack-7b0d70a7e1d4
-        subLabel:
-          label: "drspaceman "
+          label: ""
       - type: link_list_item
         link:
           custom_title: "An introduction to Starknet, STARKs and Cairo "
           custom_external_link: https://www.youtube.com/watch?v=QPNp8w9rx7o
         subLabel:
           label: "Eli-Ben Sasson "
+      - link:
+          hasIcon: true
+          post: ""
+          custom_title: "Getting Started: Setting Up a Starknet Wallet"
+          custom_internal_link: https://www.starknet.io/en/posts/tutorials-and-guides/getting-started-using-starknet-setting-up-a-starknet-wallet
+      - link:
+          hasIcon: true
+          custom_title: "Starknet's Foundational Elements: Cairo VM, CASM, Cairo Zero,
+            Cairo, and Sierra"
+          post: ""
+          custom_internal_link: https://www.starknet.io/en/posts/developers/the-whats-what-of-the-cairo-world
+      - link:
+          hasIcon: true
+          custom_title: "Native Account Abstraction: Introduction"
+          post: cbc85861-5340-4036-b2ab-cf4aa29d8b95
+          custom_internal_link: https://www.starknet.io/en/posts/engineering/native-account-abstraction-opening-blockchain-to-new-possibilities
 toc: false
 city: Bangalore
 start_date: 2023-12-01T07:00:52.336Z

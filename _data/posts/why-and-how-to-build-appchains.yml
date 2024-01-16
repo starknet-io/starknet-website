@@ -1,0 +1,54 @@
+id: 612ac098-057f-4999-9c80-88a2fa9f1165
+post_type: video
+title: Why and How to Build Appchains
+published_date: 2023-12-26T16:05:12.991Z
+video:
+  url: https://www.youtube.com/watch?v=KjhjBF-0yjQ
+  id: KjhjBF-0yjQ
+  data:
+    kind: youtube#video
+    etag: v_5QHHlCKlTzTNWiG3SmaG-pNhs
+    id: KjhjBF-0yjQ
+    snippet:
+      publishedAt: 2023-12-20T15:06:11Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: STARK SPACES | Why and how to build appchains
+      description: Learn all about why and how to build appchains with guests from
+        Pragma, Avail, and Karnot.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/KjhjBF-0yjQ/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/KjhjBF-0yjQ/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/KjhjBF-0yjQ/hqdefault.jpg
+          width: 480
+          height: 360
+      channelTitle: StarkWare
+      categoryId: "26"
+      liveBroadcastContent: none
+      localized:
+        title: STARK SPACES | Why and how to build appchains
+        description: Learn all about why and how to build appchains with guests from
+          Pragma, Avail, and Karnot.
+    contentDetails:
+      duration: PT58M42S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/why-and-how-to-build-appchains.png
+category: ecosystem
+topic:
+  - account-abstraction
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+short_desc: >+
+  Learn why and how to build appchains with guests from Pragma, Avail, and
+  Karnot.
+

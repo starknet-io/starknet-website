@@ -29,6 +29,12 @@ blocks:
         title: Papyrus
         description: Starknet full-node written in Rust by StarkWare
         image: /assets/logo_papyrus_80x80.png
+      - title: Deoxys
+        image: /assets/deoxys-logo.jpeg
+        twitter: https://twitter.com/kasarlabs
+        website_url: https://github.com/kasarlabs/deoxys
+        description: Deoxys is an easy-to-use, blazing-fast and powerful Starknet full
+          node client, written in Rust and powered by Substrate built by Kasar.
     randomize: true
   - type: card_list
     randomize: true
@@ -97,4 +103,11 @@ blocks:
         link_url: https://chainbase.com/chainNetwork/Starknet
         website_url: https://chainbase.com/chainNetwork/Starknet
         image: /assets/logo_icon_black_512.png
+      - title: DRPC
+        image: /assets/f9yrudg__400x400.jpg
+        twitter: https://twitter.com/drpcorg
+        website_url: https://drpc.org/public-endpoints/starknet
+        discord: https://drpc.org/discord
+        description: DRPC is a decentralized network of RPC endpoints with unlimited
+          scalability supporting 29+ chains.
     randomize: true

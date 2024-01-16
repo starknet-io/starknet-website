@@ -1,0 +1,78 @@
+id: 49608aae-0627-47f0-af77-579171068c61
+post_type: video
+title: Fiat Onramps and Cross Rollup Bridges
+published_date: 2023-12-21T12:12:15.787Z
+video:
+  url: https://www.youtube.com/watch?v=m8vEArBfD_k
+  id: m8vEArBfD_k
+  data:
+    kind: youtube#video
+    etag: pKKdOLn2ii6tcvPuXOvrvJQM-50
+    id: m8vEArBfD_k
+    snippet:
+      publishedAt: 2023-12-21T11:41:10Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Fiat Onramps and Cross Rollup Bridges
+      description: >-
+        We're diving into the defi landscape on Starknet!
+
+
+        What are onramps and cross rollup bridges, and what do they do? That's precisely what we'll be looking at today. 
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/m8vEArBfD_k/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/m8vEArBfD_k/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/m8vEArBfD_k/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/m8vEArBfD_k/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/m8vEArBfD_k/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "26"
+      liveBroadcastContent: none
+      localized:
+        title: Fiat Onramps and Cross Rollup Bridges
+        description: >-
+          We're diving into the defi landscape on Starknet!
+
+
+          What are onramps and cross rollup bridges, and what do they do? That's precisely what we'll be looking at today. 
+
+
+          https://starkware.co/
+
+          https://www.starknet.io/en
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1M46S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/fiat-onramps-and-cross-rollup-bridges.png
+category: stark-math
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+  - getting-started
+short_desc: >
+  What are onramps and cross rollup bridges, and what do they do? That's
+  precisely what we'll be looking at today. 

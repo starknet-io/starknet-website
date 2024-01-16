@@ -1,5 +1,6 @@
 id: e27b992a-2ca3-4f78-8f11-ae755307f0dc
 title: Home
+seoTitle: "Starknet | Secure scaling technology bringing Ethereum’s benefits worldwide "
 template: landing
 breadcrumbs: false
 page_last_updated: false
@@ -18,7 +19,7 @@ blocks:
         icon: /assets/unlimited-scale.png
         type: image_icon_link_card
         link:
-          custom_title: Discover validity rollups
+          custom_title: How Starknet Works
           custom_internal_link: /learn/what-is-starknet
         description: Starknet utilizes the power of STARK technology to ensure
           computational integrity. By validating off-chain transactions with
@@ -39,7 +40,7 @@ blocks:
             icon: /assets/ux-superior.png
             type: image_icon_link_card
             link:
-              custom_title: Dive into native AA
+              custom_title: Dive into Native AA
               custom_internal_link: /posts/developers/native-account-abstraction-opening-blockchain-to-new-possibilities
             description: "Starknet offers efficient and user-friendly experiences by
               employing Native Account Abstraction. All accounts are smart
@@ -54,11 +55,11 @@ blocks:
             variant: large_card
             orientation: vertical
             withIllustration: false
-            title: Thriving ecosystem
-            icon: /assets/thriving-ecosystem.png
+            title: Thriving Ecosystem
+            icon: /assets/creativity-unleased.png
             type: image_icon_link_card
             link:
-              custom_title: The growing Starknet Stack
+              custom_title: The Growing Starknet Stack
               custom_internal_link: /posts/ecosystem/the-starknet-stacks-growth-spurt
             description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
               passionate community of developers, users, and partners. With the
@@ -75,7 +76,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Creativity Unleashed
-        icon: /assets/creativity-unleased.png
+        icon: /assets/thriving-ecosystem.png
         type: image_icon_link_card
         link:
           custom_title: Build with Cairo
@@ -83,7 +84,7 @@ blocks:
         description: Starknet devs are empowered to code solutions that make a
           difference. Cairo, Starknet’s native smart contract language, allows
           developers to push the boundaries of their applications by allowing
-          them to code any kind of business logic.   Building with Cairo,
+          them to code any kind of business logic. Building with Cairo,
           developers can let their vision reach its full potential on Starknet.
         columns: "4"
   - type: newsletter_popup
@@ -98,10 +99,10 @@ blocks:
     blocks:
       - type: image_icon_link_card
         color: blue-default
-        title: "Developer documentation "
+        title: Starknet Docs
         description: Read the official Starknet documentation to build your first
           contracts and dapps.
-        icon: /assets/docs.svg
+        icon: /assets/read-docs.svg
         link:
           custom_external_link: https://docs.starknet.io/
           custom_title: View docs

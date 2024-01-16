@@ -1,9 +1,9 @@
 id: 594d24ff-022b-424b-abb7-6605bb6940e3
 title: Transaction Fee Reduction
 availability: Q1 2024
-state: On testnet
+state: On mainnet
 version: 68080885-a1b0-492b-8d5b-181a2abbcd51
-stage: building-now
+stage: completed
 blocks:
   - type: markdown
     body: >-
