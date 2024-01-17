@@ -73,7 +73,7 @@ type ImageProps = {
 
 const Image = ({ url, imageAlt, type }: ImageProps) => {
   const size = useBreakpointValue({ base: '581', md: '430px', xl: '320px' });
-  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
+  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
   const isProd = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const renderImage = () => {
     switch (type) {

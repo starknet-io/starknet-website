@@ -9,7 +9,7 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: dapps
-    title: Dapps
+    title: dApps
     description: Discover apps in the Starknet ecosystem across NFTs, Gaming, Defi,
       DAOs and more.
   - type: card_list

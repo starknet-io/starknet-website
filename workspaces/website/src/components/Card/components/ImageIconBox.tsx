@@ -106,7 +106,7 @@ export const ImageIconBox = ({
 }: Props) => {
   let ComponentToRender;
   const featuredImageSize = useBreakpointValue({ base: '430px', sm: '464px' });
-  const cloudflareImage = `https://starknet.io/cdn-cgi/image/width=${featuredImageSize},height=auto,format=auto${icon}`;
+  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=${featuredImageSize},height=auto,format=auto${icon}`;
   const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const iconProps: CardIconProps = {
     gradientColor1: colors[color]?.iconGradientColor1,
