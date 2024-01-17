@@ -44,7 +44,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/why-and-how-to-build-appchains.png
-category: ecosystem
+category: 
+  - ecosystem
 topic:
   - account-abstraction
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854

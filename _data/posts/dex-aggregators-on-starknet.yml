@@ -10,21 +10,8 @@ video:
     etag: 0HZJto-MsFboW_hplBz4aRBQnG8
     id: R_Cy-DNVmeE
     snippet:
-      publishedAt: 2023-11-28T13:47:01Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: DEX Aggregators on Starknet
-      description: >-
-        Discover how DEX aggregators are transforming the way we trade
-        cryptocurrencies, offering enhanced efficiency, improved liquidity, and
-        reduced slippage.
-
-
-        Check out AVNU https://www.avnu.fi/ and Fibrous https://fibrous.finance/
-
-
-        https://starkware.co/
-
-        https://www.starknet.io/en
+      publishedAt: 2023-11-28T13:47:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/R_Cy-DNVmeE/default.jpg
@@ -46,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/R_Cy-DNVmeE/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: DEX Aggregators on Starknet
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: DEX Aggregators on Starknet
         description: >-
@@ -63,7 +51,19 @@ video:
           https://starkware.co/
 
           https://www.starknet.io/en
-      defaultAudioLanguage: en-US
+      description: >-
+        Discover how DEX aggregators are transforming the way we trade
+        cryptocurrencies, offering enhanced efficiency, improved liquidity, and
+        reduced slippage.
+
+
+        Check out AVNU https://www.avnu.fi/ and Fibrous https://fibrous.finance/
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M45S
       dimension: 2d
@@ -73,7 +73,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/dex-aggregators-on-starknet.png
-category: stark-math
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - defi
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5

@@ -75,9 +75,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome28.png
-category: community-and-events
-topic:
-  - starknet
+category:
+  - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
+topic: []
 short_desc: >-
   The Magic The Gathering (MTG) saga began long ago, when Dr. Richard Garfield
   created - while working on his PhD in Combinatorics - the very first trading

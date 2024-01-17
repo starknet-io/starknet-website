@@ -10,10 +10,8 @@ video:
     etag: KlgvQtPXVVn16rSQ1dR4dsEi-RM
     id: IDd8CBHVKUo
     snippet:
-      publishedAt: 2023-03-29T01:19:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #38 | Starknet Roadmap Updates"
-      description: ""
+      publishedAt: 2023-03-29T01:19:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/IDd8CBHVKUo/default.jpg
@@ -35,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/IDd8CBHVKUo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #38 | Starknet Roadmap Updates"
       tags:
         - Cairo
         - StarkNet
@@ -45,11 +45,11 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #38 | Starknet Roadmap Updates"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT39M21S
       dimension: 2d
@@ -59,9 +59,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/community-calls-38.jpg
-category: community-calls
+category:
+  - ecosystem
+  - community-calls
 topic:
   - cairo
-  - 3fc1282e-a54b-4932-b14e-a3b3d24a9a1f
+  - decentralization
 short_desc: "Join us for the 38th Community Call with Ariel Elperin from
   StarkWare, to learn about Starknet's recent updates! "

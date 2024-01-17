@@ -4,13 +4,12 @@ post_type: article
 title: Starknet Alpha is Coming to Mainnet
 published_date: 2021-10-05T00:00:00+00:00
 image: /assets/1_ycmwrz2-trxxptdqm4wbnw-1.png
-category: engineering
+category:
+  - engineering
 topic:
-  - starknet
-  - ethereum
   - 8930f558-6756-4e54-93e6-349ca99c158e
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 951d072d-3e2e-4915-9bb9-b1b50f62fb55
+  - 266fa988-350c-4842-b74e-379068ddcf34
 short_desc: "We announced our vision for Starknet at the beginning of the year:
   to bring massive scalability to Ethereum while preserving L1 security,
   permissionless interactions, and decentralization."

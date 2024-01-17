@@ -10,16 +10,8 @@ video:
     etag: YWGqJ15nne2m7dYiyTcW4js-XgA
     id: hZhaw8uBovg
     snippet:
-      publishedAt: 2023-05-31T13:46:34Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 15 | Henri Lieutaud with Fran Algaba from
-        Giza
-      description: >-
-        Join Henri Lieutaud from the Starknet team and Fran Algaba from Giza, on
-        what gets them excited about technology in general, blockchain in
-        particular, and validity rollups specifically.
-
-        Twitter: @franalgaba_ @gizatechxyz @henrlihenrli @Starknet
+      publishedAt: 2023-05-31T13:46:34.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/hZhaw8uBovg/default.jpg
@@ -41,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/hZhaw8uBovg/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 15 | Henri Lieutaud with Fran Algaba from
+        Giza
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 15 | Henri Lieutaud with Fran Algaba from
           Giza
@@ -53,7 +47,13 @@ video:
           particular, and validity rollups specifically.
 
           Twitter: @franalgaba_ @gizatechxyz @henrlihenrli @Starknet
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the Starknet team and Fran Algaba from Giza, on
+        what gets them excited about technology in general, blockchain in
+        particular, and validity rollups specifically.
+
+        Twitter: @franalgaba_ @gizatechxyz @henrlihenrli @Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT49M20S
       dimension: 2d
@@ -63,7 +63,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_hzhaw8ubovg_maxres.jpg
-category: stark-struck
+category:
+  - stark-struck
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: Join Henri Lieutaud from the Starknet team and Fran Algaba from
   Giza, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically.

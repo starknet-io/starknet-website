@@ -73,6 +73,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_pptsuub2vdc_maxres.png
-category: community-and-events
-topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+topic: []

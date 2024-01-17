@@ -2,12 +2,6 @@ id: 38dd3a71-77bf-4456-a8c7-eff79e381a4a
 post_type: video
 title: Crypto Gurkha | Walk the Talk SZN2 EP 4
 published_date: 2022-11-22T17:04:11.296Z
-image: /assets/sddefault-1.jpg
-category: ecosystem
-topic:
-  - starknet
-short_desc: |
-  Louthing, talks about on-chain gaming
 video:
   url: https://youtu.be/3p9gdwC2x88
   id: 3p9gdwC2x88
@@ -16,42 +10,8 @@ video:
     etag: mQQC5snzUlYN4MA_-bVUZJMk6wI
     id: 3p9gdwC2x88
     snippet:
-      publishedAt: 2022-11-22T15:31:40Z
-      channelId: UCg_ektsjUiRsiQAFEUv8ppw
-      title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4
-        #StarkNet #MatchboxDao"
-      description: >-
-        I met up with Louthing from #Matchboxdao and we had a fire
-        conversation on the topics of On-chain #gaming. Louthing is head
-        business development and has has great insights in this domain.
-
-
-        #Blockchain gaming is at the heart of Matchbox DAO's development and acceleration. 
-
-        In order to develop the next generation of games, Matchbox wants to build the next wave of infrastructure, as well as empowering developers, creators, and millions of users with composing games and #DApps.
-
-
-        https://www.matchboxdao.com/
-
-        https://twitter.com/matchbox_dao
-
-        https://mirror.xyz/matchboxdao.eth
-
-        https://discord.com/invite/jkgbSngcHV
-
-
-        Frens, Making content and traveling requires a lot of expenses, I would love to keep up this format & would need your support ! If you liked my content and want me to continue pls feel free to gib me a donation to work harder and push !
-
-
-
-
-        ETH or USDc 
-
-        0xD7B61F34fe07E4602173b264bcC5Df95F998a907
-
-
-
-        #ethereum #eth #crypto #defi #layer2 #layer1 #zkrollups #lending #moneymarket #blockchain #technology
+      publishedAt: 2022-11-22T15:31:40.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/3p9gdwC2x88/default.jpg
@@ -74,8 +34,9 @@ video:
           width: 1280
           height: 720
       channelTitle: Crypto Gurkha
+      title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4
+        #StarkNet #MatchboxDao"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Louthing, talks about on-chain gaming  - Walk the Talk SZN2 EP 4
           #StarkNet #MatchboxDao"
@@ -111,6 +72,39 @@ video:
 
 
           #ethereum #eth #crypto #defi #layer2 #layer1 #zkrollups #lending #moneymarket #blockchain #technology
+      description: >-
+        I met up with Louthing from #Matchboxdao and we had a fire conversation
+        on the topics of On-chain #gaming. Louthing is head business development
+        and has has great insights in this domain.
+
+
+        #Blockchain gaming is at the heart of Matchbox DAO's development and acceleration. 
+
+        In order to develop the next generation of games, Matchbox wants to build the next wave of infrastructure, as well as empowering developers, creators, and millions of users with composing games and #DApps.
+
+
+        https://www.matchboxdao.com/
+
+        https://twitter.com/matchbox_dao
+
+        https://mirror.xyz/matchboxdao.eth
+
+        https://discord.com/invite/jkgbSngcHV
+
+
+        Frens, Making content and traveling requires a lot of expenses, I would love to keep up this format & would need your support ! If you liked my content and want me to continue pls feel free to gib me a donation to work harder and push !
+
+
+
+
+        ETH or USDc 
+
+        0xD7B61F34fe07E4602173b264bcC5Df95F998a907
+
+
+
+        #ethereum #eth #crypto #defi #layer2 #layer1 #zkrollups #lending #moneymarket #blockchain #technology
+      channelId: UCg_ektsjUiRsiQAFEUv8ppw
     contentDetails:
       duration: PT16M46S
       dimension: 2d
@@ -119,3 +113,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/sddefault-1.jpg
+category:
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+short_desc: |
+  Louthing, talks about on-chain gaming

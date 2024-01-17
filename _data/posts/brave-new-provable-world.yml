@@ -10,12 +10,8 @@ video:
     etag: GFW2APzYSbJBUPer4vbea5gje7A
     id: e6JKLTsg8Zo
     snippet:
-      publishedAt: 2023-08-04T14:30:14Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Brave New Provable World - Sylve Chevet
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T14:30:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/e6JKLTsg8Zo/default.jpg
@@ -37,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/e6JKLTsg8Zo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Brave New Provable World - Sylve Chevet
       tags:
         - crypto
         - ethereum
@@ -48,15 +46,17 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Brave New Provable World - Sylve Chevet
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT14M24S
       dimension: 2d
@@ -66,4 +66,6 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/brave-new-provable-world.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c

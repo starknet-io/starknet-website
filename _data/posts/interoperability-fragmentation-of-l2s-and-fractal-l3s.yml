@@ -62,4 +62,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_thyplcms73k_standard.png
-category: community-and-events
+category:
+  - community-and-events
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - 14642a28-1ac7-4b67-9e4e-d56d12f06bed
+  - 8930f558-6756-4e54-93e6-349ca99c158e

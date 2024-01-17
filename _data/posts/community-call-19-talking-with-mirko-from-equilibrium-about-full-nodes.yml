@@ -2,12 +2,6 @@ id: a96401fa-d7b2-4947-aed4-d2bdc7bc993f
 post_type: video
 title: "Community Call #19 | Talking with Mirko from Equilibrium about full-nodes"
 published_date: 2022-07-26T10:59:41.168Z
-image: /assets/cc19.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Join us for our 19th Community call. Today we are hosting Mirko from
-  Equilibrium and talking about full-nodes
 video:
   url: https://youtu.be/OzYbVm536vo
   id: OzYbVm536vo
@@ -16,12 +10,8 @@ video:
     etag: YN820MZFdwpeG4AWakv3D61sYEc
     id: OzYbVm536vo
     snippet:
-      publishedAt: 2022-07-27T01:26:50Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
-        full-nodes"
-      description: Join us for our 19th Community call. Today we are hosting Mirko
-        from Equilibrium and talking about full-nodes
+      publishedAt: 2022-07-27T01:26:50.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/OzYbVm536vo/default.jpg
@@ -43,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/OzYbVm536vo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
+        full-nodes"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community call #19 | Talking with Mirko from Equilibrium about
           full-nodes"
         description: Join us for our 19th Community call. Today we are hosting Mirko
           from Equilibrium and talking about full-nodes
-      defaultAudioLanguage: en-US
+      description: Join us for our 19th Community call. Today we are hosting Mirko
+        from Equilibrium and talking about full-nodes
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT51M31S
       dimension: 2d
@@ -60,3 +54,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc19.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - starknet
+  - full_node
+short_desc: Join us for our 19th Community call. Today we are hosting Mirko from
+  Equilibrium and talking about full-nodes

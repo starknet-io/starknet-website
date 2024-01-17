@@ -3,13 +3,13 @@ post_type: article
 title: "Papyrus: An open-source Starknet full node"
 published_date: 2023-01-11T01:00:00.000Z
 image: /assets/papyrus-an-open-source-starknet-full-node.png
-category: engineering
+category:
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
 topic:
   - decentralization
   - full_node
   - open_source
-  - starknet
-  - ethereum
 short_desc: Today we are introducing Papyrus, a Rust implementation of a
   Starknet full node, which will help pave the way to mass use of Starknet.
 blocks:

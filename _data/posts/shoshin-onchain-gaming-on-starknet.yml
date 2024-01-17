@@ -71,10 +71,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/shoshin-onchain-gaming-on-starknet.png
-category: stark-math
+category:
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - engineering
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
-  - getting-started
 short_desc: Let's dive into Shoshin - an onchain game on Starknet! Learn how
   this asynchronous and TPS agnostic strategy crypto game allows you to train
   fighters to win epic battles. The game runs smoothly and quickly in your

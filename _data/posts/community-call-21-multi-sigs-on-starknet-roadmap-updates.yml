@@ -2,11 +2,6 @@ id: e8d3ec71-a9f5-47a9-b00e-3e98ba164954
 post_type: video
 title: "Community Call #21 | Multi sigs on Starknet, roadmap updates"
 published_date: 2022-08-23T11:03:27.485Z
-image: /assets/cc21.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Multi sigs on Starknet, roadmap updates.
 video:
   url: https://youtu.be/Nze82XYVLbQ
   id: Nze82XYVLbQ
@@ -15,10 +10,8 @@ video:
     etag: 82CONJXOu7NdEjxJML7nMXl8r7M
     id: Nze82XYVLbQ
     snippet:
-      publishedAt: 2022-08-24T01:23:14Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #21 | Multi sigs on StarkNet, roadmap updates"
-      description: Multi sigs on StarkNet, roadmap updates
+      publishedAt: 2022-08-24T01:23:14.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Nze82XYVLbQ/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/Nze82XYVLbQ/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #21 | Multi sigs on StarkNet, roadmap updates"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #21 | Multi sigs on StarkNet, roadmap updates"
         description: Multi sigs on StarkNet, roadmap updates
-      defaultAudioLanguage: en-US
+      description: Multi sigs on StarkNet, roadmap updates
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT49M6S
       dimension: 2d
@@ -55,3 +50,10 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc21.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - 266fa988-350c-4842-b74e-379068ddcf34
+short_desc: Multi sigs on Starknet, roadmap updates.

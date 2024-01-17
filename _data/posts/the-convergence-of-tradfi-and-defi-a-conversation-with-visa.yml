@@ -85,9 +85,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_ctt3mnucowe_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - defi
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: Blockchain backends will become ubiquitous within the next decade,
   prominently so in financial services. Visa will provide an in-depth look into
   their blockchain strategy, what tech developments they are most excited about,

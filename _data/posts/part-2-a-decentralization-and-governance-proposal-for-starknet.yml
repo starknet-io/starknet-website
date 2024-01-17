@@ -3,13 +3,12 @@ post_type: article
 title: "Part 2: A Decentralization and governance proposal for Starknet"
 published_date: 2022-07-13T00:00:00+00:00
 image: /assets/1_mrdbx-inf3bcska9lmnoya-1.png
-category: governance
+category:
+  - governance
 topic:
   - decentralization
-  - starknet
   - open_source
   - 35a1b3d6-e07b-418d-8577-ed2429cd7932
-  - ba3700d2-675d-4264-a507-740f5e77f06f
 short_desc: "Our previous post explained what StarkNet is, how it is
   progressively being decentralized, and provided a summary of its two
   decentralization mechanisms. "

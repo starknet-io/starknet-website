@@ -69,7 +69,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/fiat-onramps-and-cross-rollup-bridges.png
-category: stark-math
+category: 
+  - stark-math
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
   - getting-started

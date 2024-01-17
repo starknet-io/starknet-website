@@ -2,12 +2,6 @@ id: 43140235-4638-42b9-9a8c-34b54af8c6e2
 post_type: video
 title: "Community Call #22 | Presentation by Frens Lands & roadmap updates"
 published_date: 2022-09-06T11:05:02.904Z
-image: /assets/cc22.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Join our 22nd community call for a presentation by Frens Lands and
-  roadmap updates.
 video:
   url: https://youtu.be/khXAXAl-tvc
   id: khXAXAl-tvc
@@ -16,12 +10,8 @@ video:
     etag: F10kxZNaAdjscVlLiyrVM9WL3Wg
     id: khXAXAl-tvc
     snippet:
-      publishedAt: 2022-09-07T01:08:52Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
-        updates"
-      description: Join our 22nd community call for a presentation by Frens Lands and
-        roadmap updates.
+      publishedAt: 2022-09-07T01:08:52.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/khXAXAl-tvc/default.jpg
@@ -43,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/khXAXAl-tvc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
+        updates"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #22 | Presentation by Frens Lands & roadmap
           updates"
         description: Join our 22nd community call for a presentation by Frens Lands and
           roadmap updates.
-      defaultAudioLanguage: en-US
+      description: Join our 22nd community call for a presentation by Frens Lands and
+        roadmap updates.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT34M
       dimension: 2d
@@ -60,3 +54,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc22.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - starknet
+short_desc: Join our 22nd community call for a presentation by Frens Lands and
+  roadmap updates.

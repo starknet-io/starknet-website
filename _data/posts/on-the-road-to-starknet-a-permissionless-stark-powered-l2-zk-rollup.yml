@@ -3,12 +3,11 @@ post_type: article
 title: "On the Road to Starknet: A Permissionless STARK-Powered L2 ZK-Rollup"
 published_date: 2021-01-26T00:00:00+00:00
 image: /assets/ontheroad_01-1.png
-category: engineering
+category:
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
-  - ethereum
-  - starknet
-  - zk-proofs
-  - decentralization
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: StarkWare is building Starknet, a decentralized, permissionless and
   censorship-resistant STARK-powered L2 ZK-Rollup that supports

@@ -127,9 +127,11 @@ post_type: article
 title: Starknet Goals and Roadmap 2023
 published_date: 2023-04-24T14:18:24.983Z
 image: /assets/blog-post-image-starknet-goals-.png
-category: engineering
+category:
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: >
   This post will address Starknet’s roadmap for 2023 and provide color on the
   considerations driving it. The roadmap focuses on performance and UX.

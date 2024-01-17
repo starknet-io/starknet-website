@@ -67,9 +67,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_lss5jyp5lww_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - cairo
 short_desc: Justin is a blockchain security engineer at Trail of Bits. His
   expertise includes Ethereum, Defi, Bridges, Starknet, and zero-knowledge
   proofs. At Trail of Bits, he contributes to security and tool development. He

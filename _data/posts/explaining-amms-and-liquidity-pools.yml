@@ -77,7 +77,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/explaining-amms-and-liquidity-pools.png
-category: stark-math
+category: 
+  - stark-math
 topic:
   - defi
   - getting-started

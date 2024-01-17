@@ -4,10 +4,13 @@ title: Starknet Builders’ Council Modus Operandi
 toc: true
 published_date: 2023-11-22T07:58:45.407Z
 image: /assets/builders-council.jpg
-category: governance
+category:
+  - governance
+  - 757155c6-ce07-49f1-af21-907b7e0b1cb1
 topic:
   - f9337f26-ae48-4f38-be86-8fe0c465ea13
   - 36d7bb3d-99ff-45e5-aefb-329bceb17365
+  - starknet
 blocks:
   - type: group
     blocks:
@@ -15,7 +18,7 @@ blocks:
         body: >-
           
 
-          Starknet’s Builders’ Council was established on December 5th, 2022, as an integral component of the [1st Phase of Starknet Governance](https://www.starknet.io/en/posts/governance/starknets-governance-first-phase). It stands as an assembly of Starknet builders deeply committed to making well-informed technical decisions that will support and maintain Starknet and its ecosystem.
+          Starknet’s Builders’ Council was established on December 5th, 2022, as an integral component of the [1st Phase of Starknet Governance](https://www.starknet.io/en/content/starknets-governance-first-phase). It stands as an assembly of Starknet builders deeply committed to making well-informed technical decisions that will support and maintain Starknet and its ecosystem.
 
 
           As of August 29th, 2023, the Builders Council has been entrusted with a voting power delegation amounting to 1.2 billion tokens. This delegation represents a substantial 23.3% of the total voting power within the 1st Phase of Governance. This allocation underscores the Council's crucial role in shaping the future direction of the Starknet ecosystem.
@@ -87,7 +90,7 @@ blocks:
           ### Appointing Members
 
 
-          Currently, members of the Builders’ Council are appointed by the Starknet Foundation or its authorized representative, in accordance with the recommendations or proposals put forth by the [Governance Committee](https://www.starknet.io/en/posts/foundation-and-governance/the-starknet-foundation-meet-the-committees).
+          Currently, members of the Builders’ Council are appointed by the Starknet Foundation or its authorized representative, in accordance with the recommendations or proposals put forth by the [Governance Committee](https://www.starknet.io/en/content/the-starknet-foundation-meet-the-committees).
 
 
           As of the present, the Builders’ Council comprises 16 members, with plans for future expansion to a maximum membership cap of 20 members. Further details regarding the nomination and appointment procedures will be communicated in the near future.

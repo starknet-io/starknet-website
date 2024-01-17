@@ -3,14 +3,14 @@ post_type: article
 title: "Part 3: Starknet Token Design"
 published_date: 2022-07-13T00:00:00+00:00
 image: /assets/1_q2xrcmsqkvhje9rai3noeq-1.png
-category: governance
+category:
+  - governance
 topic:
   - decentralization
   - open_source
-  - starknet
-  - 35a1b3d6-e07b-418d-8577-ed2429cd7932
   - ba3700d2-675d-4264-a507-740f5e77f06f
   - f9337f26-ae48-4f38-be86-8fe0c465ea13
+  - 35a1b3d6-e07b-418d-8577-ed2429cd7932
 short_desc: >
   The design of the StarkNet Token is shaped by the need to power a network that
   is composed of (i) Users of StarkNet, (ii) Operators — people providing the

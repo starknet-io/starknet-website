@@ -2,13 +2,6 @@ id: be4ad71a-f37f-47ee-8ac0-90803e2327b6
 post_type: video
 title: STARK Struck Podcast | Ep 10 | Tarrence from Cartridge
 published_date: 2023-01-26T00:00:00+00:00
-image: /assets/starkstruck10.jpg
-category: stark-struck
-topic:
-  - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Tarrence from
-  Cartridge, on what gets them excited about technology in general, blockchain
-  in particular, and validity rollups specifically. "
 video:
   url: https://youtu.be/xslN-kj5jZA
   id: xslN-kj5jZA
@@ -17,17 +10,8 @@ video:
     etag: Ka1YASbeZQGj2s7q2th5rBIUpBs
     id: xslN-kj5jZA
     snippet:
-      publishedAt: 2023-01-25T15:08:46Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 10 | Henri Lieutaud with Tarrence from
-        Cartridge
-      description: >-
-        Join Henri Lieutaud from the StarkNet team and Tarrence from
-        Cartridge, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.    
-
-
-        Twitter: @tarrenceva @cartridge_gg @henrlihenrli @Starknet
+      publishedAt: 2023-01-25T15:08:46.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/xslN-kj5jZA/default.jpg
@@ -49,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/xslN-kj5jZA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 10 | Henri Lieutaud with Tarrence from
+        Cartridge
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 10 | Henri Lieutaud with Tarrence from
           Cartridge
@@ -62,7 +48,14 @@ video:
 
 
           Twitter: @tarrenceva @cartridge_gg @henrlihenrli @Starknet
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and Tarrence from Cartridge,
+        on what gets them excited about technology in general, blockchain in
+        particular, and validity rollups specifically.    
+
+
+        Twitter: @tarrenceva @cartridge_gg @henrlihenrli @Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT58M57S
       dimension: 2d
@@ -71,3 +64,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck10.jpg
+category:
+  - stark-struck
+  - ecosystem
+topic:
+  - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: "Join Henri Lieutaud from the StarkNet team and Tarrence from
+  Cartridge, on what gets them excited about technology in general, blockchain
+  in particular, and validity rollups specifically. "
