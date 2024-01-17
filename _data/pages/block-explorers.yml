@@ -55,6 +55,11 @@ blocks:
         twitter: https://twitter.com/starkcompass
         image: /assets/stark-compass.jpg
         website_url: https://starkcompass.com/
+      - title: Starknet Monitor
+        website_url: https://www.starknet-monitor.com/
+        image: /assets/logo-square.png
+        description: Starknet Monitor shows vital statistics about Starknet and core
+          infrastructure.
     title: Block explorers
     randomize: false
   - type: card_list
