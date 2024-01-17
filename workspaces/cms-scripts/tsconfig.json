@@ -4,5 +4,5 @@
     "outDir": ".types"
   },
   "include": ["src/**/*"],
-  "references": [{"path": "../cms-utils"}, {"path": "../cms-config"}, {"path": "../cms-data"}]
+  "references": [{"path": "../cms-utils"}, {"path": "../cms-config"}, {"path": "../cms-data"}, {"path": "../website"}]
 }

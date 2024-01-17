@@ -4796,7 +4796,7 @@ __metadata:
     browser-lang: 0.1.0
     classnames: ^2.3.2
     cors: ^2.8.5
-    date-fns: ^2.30.0
+    date-fns: ^3.2.0
     eslint: ^8.39.0
     eslint-plugin-storybook: ^0.6.11
     framer-motion: ^10.12.4
@@ -8807,6 +8807,13 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.21.0
   checksum: f7be01523282e9bb06c0cd2693d34f245247a29098527d4420628966a2d9aad154bd0e90a6b1cf66d37adcb769cd108cf8a7bd49d76db0fb119af5cdd13644f4
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "date-fns@npm:3.2.0"
+  checksum: ff5dab139f40170c4ba5472bab9bc887dd3940f7661bd8322f074faadbd422513c7195296541b5237fc450a0333a4b1c5659f887c7c14b1bfa2902998ac7582e
   languageName: node
   linkType: hard
 
