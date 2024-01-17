@@ -87,9 +87,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc30.jpg
-category: community-calls
+category:
+  - ecosystem
+  - community-calls
+  - governance
 topic:
-  - starknet
+  - decentralization
 short_desc: >-
   Today we will have Sylve Chevet from Briq, Deven Mathews from Nethermind, and
   Manor Bareli from StarkWare, talking about Starknet Governance.

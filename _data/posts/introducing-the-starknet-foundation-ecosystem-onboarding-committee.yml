@@ -3,12 +3,13 @@ post_type: article
 title: "Introducing: The Starknet Foundation Ecosystem Onboarding Committee"
 published_date: 2023-08-15T06:35:53.516Z
 image: /assets/starknet-fnd-onboarding-committee-post-v2.png
-category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
+category:
+  - 757155c6-ce07-49f1-af21-907b7e0b1cb1
 blocks:
   - type: markdown
     body: >-
       In March, the Starknet Foundation
-      [announced](https://www.starknet.io/en/posts/foundation/the-starknet-foundation-meet-the-committees)
+      [announced](https://www.starknet.io/en/content/the-starknet-foundation-meet-the-committees)
       the appointment of five committees, each entrusted with a specific mandate
       that aligns with Starknet’s mission and priorities. 
 

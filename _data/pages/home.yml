@@ -41,7 +41,7 @@ blocks:
             type: image_icon_link_card
             link:
               custom_title: Dive into Native AA
-              custom_internal_link: /posts/developers/native-account-abstraction-opening-blockchain-to-new-possibilities
+              custom_internal_link: /content/native-account-abstraction-opening-blockchain-to-new-possibilities
             description: "Starknet offers efficient and user-friendly experiences by
               employing Native Account Abstraction. All accounts are smart
               accounts: their behavior is determined by their developers rather
@@ -60,7 +60,7 @@ blocks:
             type: image_icon_link_card
             link:
               custom_title: The Growing Starknet Stack
-              custom_internal_link: /posts/ecosystem/the-starknet-stacks-growth-spurt
+              custom_internal_link: /content/the-starknet-stacks-growth-spurt
             description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
               passionate community of developers, users, and partners. With the
               Starknet Stack evolving at an astounding pace, this vibrant

@@ -10,12 +10,8 @@ video:
     etag: oshvVHtxu0v5yzI0yeQVMiN2OT8
     id: TAo2JG9SUOQ
     snippet:
-      publishedAt: 2023-08-04T16:45:01Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: '"L2 DAI Allows Stealing": a technical explainer - Pietro Carta'
-      description: |-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T16:45:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/TAo2JG9SUOQ/default.jpg
@@ -37,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/TAo2JG9SUOQ/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: '"L2 DAI Allows Stealing": a technical explainer - Pietro Carta'
       tags:
         - crypto
         - ethereum
@@ -48,15 +46,17 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: '"L2 DAI Allows Stealing": a technical explainer - Pietro Carta'
         description: |-
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT16M43S
       dimension: 2d
@@ -66,4 +66,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/l2-dai-allows-stealing-a-technical-explainer.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4

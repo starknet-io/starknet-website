@@ -3,13 +3,6 @@ post_type: video
 title: Transacting on Starkware's Live ZK-Rollups and Building a Vibrant
   Ecosystem of dApps
 published_date: 2021-10-29T15:46:35.198Z
-image: /assets/interviews04.png
-category: ecosystem
-topic:
-  - starknet
-short_desc: Topics discussed include how StarkWare stacks up against other
-  scaling solutions, achieving low transaction costs, developing a vibrant
-  StarkNet dApp ecosystem, and much more.
 video:
   url: https://youtu.be/dz_TSqiljHE
   id: dz_TSqiljHE
@@ -18,111 +11,8 @@ video:
     etag: oNc6LEk536i2bRMFvrCQyt6ICns
     id: dz_TSqiljHE
     snippet:
-      publishedAt: 2021-10-29T13:00:15Z
-      channelId: UC9Yy99ZlQIX9-PdG_xHj43Q
-      title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a
-        Vibrant Ecosystem of dApps"
-      description: >-
-        The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy
-        and Delphi’s Head of Research, Medio Demarco, are joined by Eli
-        Ben-Sasson, and Uri Kolodny, Co-Founders of StarkWare, a suite of
-        validity-based blockchain scaling and privacy solutions. Topics
-        discussed include how StarkWare stacks up against other scaling
-        solutions, achieving low transaction costs, developing a vibrant
-        StarkNet dApp ecosystem, and much more.
-
-
-        We would like to thank our sponsors for making this podcast possible.
-
-
-        Kava: Kava connects the world's largest cryptocurrencies on DeFi’s most trusted platform. Mint stablecoins, lend, borrow, earn and swap safely across the top crypto assets with a simple user experience and the confidence of institutional-grade security. To learn more visit http://kava.io/delphi
-
-
-        Celo: Celo is a mobile-first platform that makes financial dApps and crypto payments accessible to anyone with a mobile phone. Celo supports over 1000 projects who are everyday building applications and issuing digital currencies from 100+ countries around the world. Learn more at https://celo.org/?utm_source=delphi&utm_medium=podcast&utm_campaign=sponcon&utm_content=ep1
-
-
-        Every Delphi Podcast is dropped first as a video interview for Delphi Digital Subscribers. Our members also have access to full interview transcripts. Join today to get our interviews, first.
-
-
-        Show Notes:
-
-        (00:00:00) – Introduction.
-
-        (00:00:44) – Guests’ backgrounds.
-
-        (00:01:39) – Overview of StarkWare.
-
-        (00:05:03) – Coding with Cairo on StarkWare. 
-
-        (00:08:14) – Deploying game logic on top of Starknet.
-
-        (00:09:48) – The low cost of transactions. 
-
-        (00:14:34) – Implementation speed for integrating dApps. 
-
-        (00:17:44) – How StarkWare compares to optimistic rollups. 
-
-        (00:22:42) – Platforms building on top of StarkWare.
-
-        (00:25:39) – What success for StarkWare looks like. 
-
-        (00:26:52) – Data availability, sharding, and Validium.
-
-        (00:31:08) – Transaction costs on Validium vs. ZK. 
-
-        (00:34:19) – Addressing critiques of StarkWare. 
-
-        (00:41:30) – Being ahead of schedule.
-
-        (00:43:28) – Building a community without a token. 
-
-        (00:44:34) – Game-changing applications on Starknet. 
-
-        (00:48:07) – Attracting traditional gaming franchises. 
-
-        (00:51:06) – Best advice from Eli and Uri
-
-        (00:55:44) – How to get involved with StarkWare.
-
-
-        Social links:
-
-        Eli’s Twitter: @EliBenSasson
-
-        Eli’s Linkedin: https://www.linkedin.com/in/eli-ben-sasson-9b7959/ 
-
-        Eli’s Twitter: @ukolodny
-
-        Eli’s Linkedin: https://www.linkedin.com/in/urikolodny/ 
-
-        StarkWare Twitter: @StarkWareLtd
-
-        StarkNet Discord: https://discord.gg/uJ9HZTUk2Y 
-
-
-        Resources: 
-
-        Delphi Podcast Summaries: https://delphi.link/PodcastSummaries 
-
-        StarkWare Website: https://starkware.co/  
-
-        StarkWare Blog: https://medium.com/starkware 
-
-        STARK @ Home: https://starkware.co/resources-category/stark-home/ 
-
-        StarkNet Website: https://starkware.co/product/starknet/ 
-
-
-        More
-
-        💬 Follow Delphi Podcast on Twitter: https://delphi.link/PodcastDelphi 
-
-        ✅ Follow Delphi Digital on Twitter: https://delphi.link/twitter  
-
-        🧠 Access Delphi's Research: https://delphidigital.io/pricing
-
-
-        Disclosures: This podcast is strictly informational and educational and is not investment advice or a solicitation to buy or sell any tokens or securities or to make any financial decisions. Do not trade or invest in any project, tokens, or securities based upon this podcast episode. The host may personally own tokens that are mentioned on the podcast. Our current show features paid sponsorships which may be featured at the start, middle, and/or the end of the episode. These sponsorships are for informational purposes only and are not a solicitation to use any product, service or token. Delphi’s transparency page can be viewed at https://delphidigital.io/transparency.
+      publishedAt: 2021-10-29T13:00:15.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/dz_TSqiljHE/default.jpg
@@ -144,15 +34,17 @@ video:
           url: https://i.ytimg.com/vi/dz_TSqiljHE/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: Delphi Digital
+      title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a
+        Vibrant Ecosystem of dApps"
       categoryId: "24"
-      liveBroadcastContent: none
       localized:
         title: "Starkware: Transacting on Starkware's Live ZK-Rollups and Building a
           Vibrant Ecosystem of dApps"
         description: >-
-          The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy
-          and Delphi’s Head of Research, Medio Demarco, are joined by Eli
+          The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy and
+          Delphi’s Head of Research, Medio Demarco, are joined by Eli
           Ben-Sasson, and Uri Kolodny, Co-Founders of StarkWare, a suite of
           validity-based blockchain scaling and privacy solutions. Topics
           discussed include how StarkWare stacks up against other scaling
@@ -251,7 +143,108 @@ video:
 
 
           Disclosures: This podcast is strictly informational and educational and is not investment advice or a solicitation to buy or sell any tokens or securities or to make any financial decisions. Do not trade or invest in any project, tokens, or securities based upon this podcast episode. The host may personally own tokens that are mentioned on the podcast. Our current show features paid sponsorships which may be featured at the start, middle, and/or the end of the episode. These sponsorships are for informational purposes only and are not a solicitation to use any product, service or token. Delphi’s transparency page can be viewed at https://delphidigital.io/transparency.
-      defaultAudioLanguage: en-US
+      description: >-
+        The Delphi Podcast Host and GP of Delphi Ventures Tom Shaughnessy and
+        Delphi’s Head of Research, Medio Demarco, are joined by Eli Ben-Sasson,
+        and Uri Kolodny, Co-Founders of StarkWare, a suite of validity-based
+        blockchain scaling and privacy solutions. Topics discussed include how
+        StarkWare stacks up against other scaling solutions, achieving low
+        transaction costs, developing a vibrant StarkNet dApp ecosystem, and
+        much more.
+
+
+        We would like to thank our sponsors for making this podcast possible.
+
+
+        Kava: Kava connects the world's largest cryptocurrencies on DeFi’s most trusted platform. Mint stablecoins, lend, borrow, earn and swap safely across the top crypto assets with a simple user experience and the confidence of institutional-grade security. To learn more visit http://kava.io/delphi
+
+
+        Celo: Celo is a mobile-first platform that makes financial dApps and crypto payments accessible to anyone with a mobile phone. Celo supports over 1000 projects who are everyday building applications and issuing digital currencies from 100+ countries around the world. Learn more at https://celo.org/?utm_source=delphi&utm_medium=podcast&utm_campaign=sponcon&utm_content=ep1
+
+
+        Every Delphi Podcast is dropped first as a video interview for Delphi Digital Subscribers. Our members also have access to full interview transcripts. Join today to get our interviews, first.
+
+
+        Show Notes:
+
+        (00:00:00) – Introduction.
+
+        (00:00:44) – Guests’ backgrounds.
+
+        (00:01:39) – Overview of StarkWare.
+
+        (00:05:03) – Coding with Cairo on StarkWare. 
+
+        (00:08:14) – Deploying game logic on top of Starknet.
+
+        (00:09:48) – The low cost of transactions. 
+
+        (00:14:34) – Implementation speed for integrating dApps. 
+
+        (00:17:44) – How StarkWare compares to optimistic rollups. 
+
+        (00:22:42) – Platforms building on top of StarkWare.
+
+        (00:25:39) – What success for StarkWare looks like. 
+
+        (00:26:52) – Data availability, sharding, and Validium.
+
+        (00:31:08) – Transaction costs on Validium vs. ZK. 
+
+        (00:34:19) – Addressing critiques of StarkWare. 
+
+        (00:41:30) – Being ahead of schedule.
+
+        (00:43:28) – Building a community without a token. 
+
+        (00:44:34) – Game-changing applications on Starknet. 
+
+        (00:48:07) – Attracting traditional gaming franchises. 
+
+        (00:51:06) – Best advice from Eli and Uri
+
+        (00:55:44) – How to get involved with StarkWare.
+
+
+        Social links:
+
+        Eli’s Twitter: @EliBenSasson
+
+        Eli’s Linkedin: https://www.linkedin.com/in/eli-ben-sasson-9b7959/ 
+
+        Eli’s Twitter: @ukolodny
+
+        Eli’s Linkedin: https://www.linkedin.com/in/urikolodny/ 
+
+        StarkWare Twitter: @StarkWareLtd
+
+        StarkNet Discord: https://discord.gg/uJ9HZTUk2Y 
+
+
+        Resources: 
+
+        Delphi Podcast Summaries: https://delphi.link/PodcastSummaries 
+
+        StarkWare Website: https://starkware.co/  
+
+        StarkWare Blog: https://medium.com/starkware 
+
+        STARK @ Home: https://starkware.co/resources-category/stark-home/ 
+
+        StarkNet Website: https://starkware.co/product/starknet/ 
+
+
+        More
+
+        💬 Follow Delphi Podcast on Twitter: https://delphi.link/PodcastDelphi 
+
+        ✅ Follow Delphi Digital on Twitter: https://delphi.link/twitter  
+
+        🧠 Access Delphi's Research: https://delphidigital.io/pricing
+
+
+        Disclosures: This podcast is strictly informational and educational and is not investment advice or a solicitation to buy or sell any tokens or securities or to make any financial decisions. Do not trade or invest in any project, tokens, or securities based upon this podcast episode. The host may personally own tokens that are mentioned on the podcast. Our current show features paid sponsorships which may be featured at the start, middle, and/or the end of the episode. These sponsorships are for informational purposes only and are not a solicitation to use any product, service or token. Delphi’s transparency page can be viewed at https://delphidigital.io/transparency.
+      channelId: UC9Yy99ZlQIX9-PdG_xHj43Q
     contentDetails:
       duration: PT56M49S
       dimension: 2d
@@ -260,3 +253,14 @@ video:
       licensedContent: true
       contentRating: {}
       projection: rectangular
+image: /assets/interviews04.png
+category:
+  - engineering
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - ecosystem
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: Topics discussed include how StarkWare stacks up against other
+  scaling solutions, achieving low transaction costs, developing a vibrant
+  Starknet dApp ecosystem, and much more.

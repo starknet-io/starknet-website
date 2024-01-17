@@ -3,7 +3,11 @@ post_type: article
 title: "The Starknet Foundation: Meet the Committees"
 published_date: 2023-03-20T06:23:34.701Z
 image: /assets/starknet-fnd-meet-the-committees-post-v4-3x.png
-category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
+category:
+  - 757155c6-ce07-49f1-af21-907b7e0b1cb1
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+topic:
+  - decentralization
 short_desc: The Foundation is excited to publicly announce the appointment of
   five committees, each entrusted with a specific mandate that aligns with
   Starknet’s mission and priorities. Each committee’s mandate is not set in
@@ -101,11 +105,10 @@ blocks:
 
       The committee has already launched the [first phase of Starknet’s governance](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820). For any enquiries related to the first vote, please contact: [firstvote@starknetfoundation.org](mailto:firstvote@starknetfoundation.org).
 
-
       The Governance Committee can also be contacted at: [governance@starknetfoundation.org](mailto:governance@starknetfoundation.org). 
 
 
-      To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/posts/governance).
+      To learn more about the governance committee’s work and roadmap, please refer to [this page](https://www.starknet.io/en/content/governance).
 
 
       ### Ecosystem Onboarding Committee
@@ -134,10 +137,10 @@ blocks:
 
       * the [First Governance Vote](https://community.starknet.io/t/starknet-foundation-delegation-for-the-first-vote/11820) will take place on 21 March 2023;
 
-      * the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) on 21 March 2023.
+      * the EAG Committee’s first announcement and details for the first round of applications will be published on the StarkNet Foundation's [blog](https://www.starknet.io/en/content/foundation) on 21 March 2023.
 
 
-      Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/posts/foundation) and social media channels for the latest updates and opportunities.
+      Keep an eye on the StarkNet Foundation's [blog](https://www.starknet.io/en/content/foundation) and social media channels for the latest updates and opportunities.
 
 
       **\

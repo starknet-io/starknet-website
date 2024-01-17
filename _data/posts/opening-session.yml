@@ -1,6 +1,6 @@
 id: b17c5511-0c93-498f-8296-d9e2eda67499
 post_type: video
-title: Opening Session
+title: Opening Session - Starknet Summit 2023
 published_date: 2023-09-01T10:53:57.266Z
 video:
   url: https://youtu.be/WiY4Kt_4ulQ
@@ -65,6 +65,7 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_WiY4Kt_4ulQ_maxres.png
-category: community-and-events
-topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+topic: []

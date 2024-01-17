@@ -10,11 +10,8 @@ video:
     etag: UFJ-KCUiXWA0jItzJLQiSS5gwtg
     id: dVjQj5DVl-c
     snippet:
-      publishedAt: 2023-10-30T16:29:27Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | Madara all stars
-      description: Hear from the superstars of Madara about what they are building and
-        what's in store for this epic community project.
+      publishedAt: 2023-10-30T16:29:27.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/dVjQj5DVl-c/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/dVjQj5DVl-c/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | Madara all stars
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | Madara all stars
         description: Hear from the superstars of Madara about what they are building and
           what's in store for this epic community project.
-      defaultAudioLanguage: en-US
+      description: Hear from the superstars of Madara about what they are building and
+        what's in store for this epic community project.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT58M51S
       dimension: 2d
@@ -53,8 +53,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-full-nodes-on-starknet.png
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
-  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Hear from the superstars of Madara about what they are building and
   what's in store for this epic community project.

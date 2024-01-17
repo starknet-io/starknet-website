@@ -55,8 +55,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome03.png
-category: community-and-events
+category:
+  - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
 topic:
-  - starknet
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: This week Eli Ben-Sasson explains the pretty properties of
   polynomials that make them useful in succinct ZK proofs.

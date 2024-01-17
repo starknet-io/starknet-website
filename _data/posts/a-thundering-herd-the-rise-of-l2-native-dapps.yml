@@ -3,7 +3,8 @@ post_type: article
 title: "A Thundering Herd: The Rise of L2-Native dApps"
 published_date: 2022-01-11T00:00:00+00:00
 image: /assets/1_ix4gs7ne9unaf9eu2zmq_w-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

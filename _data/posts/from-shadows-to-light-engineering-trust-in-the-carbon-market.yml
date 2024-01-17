@@ -65,9 +65,13 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_xtoedcv4tcs_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - 7a538f38-cebc-4e85-9434-0f8840e01d6c
 short_desc: The voluntary carbon market has long been plagued by integrity and
   transparency issues. But what if technology could forge a new path forward? In
   this conference, we delve into the revolutionary potential of blockchain and

@@ -43,7 +43,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome16.png
-category: community-and-events
+category:
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - 217311b0-fc55-4192-9257-aa82004ddb73
+  - community-and-events
 topic:
-  - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - cryptography
 short_desc: Recursive STARKs.

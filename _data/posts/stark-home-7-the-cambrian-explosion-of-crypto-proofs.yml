@@ -60,9 +60,14 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome07.png
-category: community-and-events
+category:
+  - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
 topic:
-  - starknet
+  - zk-proofs
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
 short_desc: We are in the midst of a Cambrian Explosion in the field of
   cryptographic proofs of computational integrity (CI). While a couple of years
   ago there were about 1–3 new systems a year, the rate has picked up so much

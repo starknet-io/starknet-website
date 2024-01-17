@@ -10,11 +10,8 @@ video:
     etag: zYqU2qMsJMT8Icol-Uo39Ai9Nxw
     id: AgM7oGnhV8M
     snippet:
-      publishedAt: 2023-09-03T21:07:42Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES | What is StarkExpress
-      description: Learn all about StarkExpress, which allows developers to create
-        applications and integrate StarkExpress APIs.
+      publishedAt: 2023-09-03T21:07:42.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/AgM7oGnhV8M/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/AgM7oGnhV8M/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES | What is StarkExpress
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES | What is StarkExpress
         description: Learn all about StarkExpress, which allows developers to create
           applications and integrate StarkExpress APIs.
-      defaultAudioLanguage: en-US
+      description: Learn all about StarkExpress, which allows developers to create
+        applications and integrate StarkExpress APIs.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT28M46S
       dimension: 2d
@@ -53,6 +53,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_agm7ognhv8m_maxres.png
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: Learn all about StarkExpress, which allows developers to create
   applications and integrate StarkExpress APIs.

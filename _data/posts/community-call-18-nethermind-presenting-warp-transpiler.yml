@@ -10,10 +10,8 @@ video:
     etag: i4LgWUApMplfgn_kN6aP7gvphNQ
     id: kmUjbDXScyc
     snippet:
-      publishedAt: 2022-07-06T01:23:22Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
-      description: ""
+      publishedAt: 2022-07-06T01:23:22.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/kmUjbDXScyc/default.jpg
@@ -35,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/kmUjbDXScyc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #18 | Nethermind presenting Warp transpiler"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT48M45S
       dimension: 2d
@@ -51,7 +51,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/cc18.jpg
-category: community-calls
+category:
+  - community-calls
+  - ecosystem
 topic:
   - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: Nethermind presenting Warp transpiler.

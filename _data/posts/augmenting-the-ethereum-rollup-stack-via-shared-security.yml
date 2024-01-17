@@ -63,9 +63,14 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_bdmshzoxhrq_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+  - ecosystem
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+  - decentralization
 short_desc: This talk highlights how re-staking and shared security can play a
   vital role in augmenting the rollup stack. It showcases how EigenLayer can be
   used to build a variety of solutions that complement the Ethereum rollup

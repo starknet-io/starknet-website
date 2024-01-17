@@ -4,7 +4,8 @@ title: Building Complex, Fully Onchain Games with Starknet
 toc: true
 published_date: 2023-11-07T06:43:49.732Z
 image: /assets/on-chain-gaming-realms-influence-c.jpg
-category: engineering
+category:
+  - engineering
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
   - account-abstraction

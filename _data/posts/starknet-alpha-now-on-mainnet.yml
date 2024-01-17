@@ -3,7 +3,8 @@ post_type: article
 title: Starknet Alpha, Now on Mainnet!
 published_date: 2021-11-29T00:00:00+00:00
 image: /assets/1_imedppuciwsh3t9zvsro5q-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

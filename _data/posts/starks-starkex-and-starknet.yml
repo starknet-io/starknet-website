@@ -3,14 +3,13 @@ post_type: article
 title: STARKs, StarkEx, and Starknet
 published_date: 2022-06-02T00:00:00+00:00
 image: /assets/1_pphtx1txwzgvcr4wnnw7dg-1.png
-category: engineering
+category:
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
 topic:
-  - starknet
-  - ethereum
-  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 4e28457a-74a1-4570-88ec-6ef5817be14f
-  - 9209a571-c351-4a00-92d3-a0139d55cdd3
-short_desc: TARKs (Scalable, Transparent ARgument of Knowledge) are a proof
+  - getting-started
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
+short_desc: STARKs (Scalable, Transparent ARgument of Knowledge) are a proof
   system that enables the proving and verification of computations. It allows
   processing a big computation, generating a proof for the computation’s
   correctness, and then verifying the proof in very few steps.
