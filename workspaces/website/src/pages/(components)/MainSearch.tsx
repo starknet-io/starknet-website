@@ -202,7 +202,7 @@ export function MainSearch({ env, seo }: Props): JSX.Element | null {
             {
               sourceId: "posts",
               getItemUrl({ item }) {
-                return `/${locale}/posts/${item.category}/${item.slug}`;
+                return `/${locale}/content/${item.slug}`;
               },
               getItems() {
                 return getAlgoliaResults({
@@ -379,7 +379,7 @@ export function PostItem({
 }: ItemProps<Post>) {
   return (
     <a
-      href={`/${hit.locale}/posts/${hit.category}/${hit.slug}`}
+      href={`/${hit.locale}/content/${hit.slug}`}
       className="aa-ItemLink"
     >
       <div className="aa-ItemContent">

@@ -3,12 +3,6 @@ post_type: video
 title: "Community Call #4 | Argent X presentation, and bridging and messaging on
   Starknet"
 published_date: 2021-12-15T00:00:00+00:00
-image: /assets/cc04.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Argent X presentation, roadmap, transactions stages update and
-  bridging and messaging on Starknet
 video:
   url: https://youtu.be/_dRMZnYTsc4
   id: _dRMZnYTsc4
@@ -17,44 +11,8 @@ video:
     etag: AftdrD6-XaGBzT0X2kwOeidtOEY
     id: _dRMZnYTsc4
     snippet:
-      publishedAt: 2021-12-15T15:00:11Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #4 | Argent X presentation, and bridging and
-        messaging on StarkNet"
-      description: >-
-        00:00:00 Introduction
-
-        00:01:53 Argent X presentation
-
-        00:05:11 How Ethereum & StarkNet account differ
-
-        00:06:34 How Argent X works & integrating it
-
-        00:09:34 Next steps for Argent X
-
-        00:12:50 Fraud monitoring on Argent X
-
-        00:16:13 Conclusion, contributing and downloading
-
-        00:17:23 Q&A
-
-        00:31:50 StarkNet Q&A with Tom
-
-        00:32:50 Cairo 0.6.2 update: What's in it? Transaction status updates
-
-        00:38:50 How safe is it to assume a transaction is valid once it moves to pending?
-
-        00:41:10 New StarkNet discord rules
-
-        00:46:40 StarkNet roadmap: Timeline + features (blocknumbers, fees, proxy pattern, events (maybe))
-
-        00:56:15 Formatting in the compiled contract json & its impact on the compiler
-
-        00:59:00 Wen bridge, composability and messaging, 
-
-        01:06:05 Defi pooling
-
-        01:11:01 Upcoming events & conclusion
+      publishedAt: 2021-12-15T15:00:11.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/_dRMZnYTsc4/default.jpg
@@ -76,9 +34,11 @@ video:
           url: https://i.ytimg.com/vi/_dRMZnYTsc4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #4 | Argent X presentation, and bridging and
+        messaging on StarkNet"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #4 | Argent X presentation, and bridging and
           messaging on StarkNet"
@@ -116,7 +76,41 @@ video:
           01:06:05 Defi pooling
 
           01:11:01 Upcoming events & conclusion
-      defaultAudioLanguage: en-US
+      description: >-
+        00:00:00 Introduction
+
+        00:01:53 Argent X presentation
+
+        00:05:11 How Ethereum & StarkNet account differ
+
+        00:06:34 How Argent X works & integrating it
+
+        00:09:34 Next steps for Argent X
+
+        00:12:50 Fraud monitoring on Argent X
+
+        00:16:13 Conclusion, contributing and downloading
+
+        00:17:23 Q&A
+
+        00:31:50 StarkNet Q&A with Tom
+
+        00:32:50 Cairo 0.6.2 update: What's in it? Transaction status updates
+
+        00:38:50 How safe is it to assume a transaction is valid once it moves to pending?
+
+        00:41:10 New StarkNet discord rules
+
+        00:46:40 StarkNet roadmap: Timeline + features (blocknumbers, fees, proxy pattern, events (maybe))
+
+        00:56:15 Formatting in the compiled contract json & its impact on the compiler
+
+        00:59:00 Wen bridge, composability and messaging, 
+
+        01:06:05 Defi pooling
+
+        01:11:01 Upcoming events & conclusion
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H13M59S
       dimension: 2d
@@ -125,3 +119,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc04.jpg
+category:
+  - ecosystem
+  - community-calls
+topic:
+  - defi
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+short_desc: Argent X presentation, roadmap, transactions stages update and
+  bridging and messaging on Starknet

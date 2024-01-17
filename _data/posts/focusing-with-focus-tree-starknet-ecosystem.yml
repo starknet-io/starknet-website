@@ -10,21 +10,8 @@ video:
     etag: Nq9XdpK5gtOErGtyQUEHURlTpV4
     id: m4Dxu4W3CJw
     snippet:
-      publishedAt: 2023-11-29T12:43:37Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Focusing with Focus Tree - Starknet Ecosystem
-      description: >-
-        Join us in discovering Focus Tree, the gamified solution designed to
-        improve your focus. See how building gardens and earning Tiles can help
-        you maintain concentration in a digital world. 
-
-        Ready for a healthier tech relationship? 
-
-
-        Download here: https://www.focustree.app/
-
-
-        Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      publishedAt: 2023-11-29T12:43:37.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/m4Dxu4W3CJw/default.jpg
@@ -46,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/m4Dxu4W3CJw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Focusing with Focus Tree - Starknet Ecosystem
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Focusing with Focus Tree - Starknet Ecosystem
         description: >-
@@ -63,7 +51,19 @@ video:
 
 
           Visit us at https://starkware.co/ and https://www.starknet.io/en/
-      defaultAudioLanguage: en-US
+      description: >-
+        Join us in discovering Focus Tree, the gamified solution designed to
+        improve your focus. See how building gardens and earning Tiles can help
+        you maintain concentration in a digital world. 
+
+        Ready for a healthier tech relationship? 
+
+
+        Download here: https://www.focustree.app/
+
+
+        Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M8S
       dimension: 2d
@@ -73,9 +73,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/focusing-with-focus-tree-starknet-ecosystem.png
-category: stark-math
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: >-
   Join us in discovering Focus Tree, the gamified solution designed to improve
   your focus. See how building gardens and earning Tiles can help you maintain

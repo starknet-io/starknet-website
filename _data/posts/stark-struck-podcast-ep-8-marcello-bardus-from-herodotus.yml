@@ -2,13 +2,6 @@ id: 6598ed57-1e91-4e14-b734-005c96b27d21
 post_type: video
 title: STARK Struck Podcast | Ep 8 | Marcello Bardus from Herodotus
 published_date: 2022-12-15T00:00:00+00:00
-image: /assets/starkstruck08.jpg
-category: stark-struck
-topic:
-  - starknet
-short_desc: "Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
-  Herodotus, on what gets them excited about technology in general, blockchain
-  in particular, and validity rollups specifically.  "
 video:
   url: https://youtu.be/ozt6JDaFUbQ
   id: ozt6JDaFUbQ
@@ -17,17 +10,8 @@ video:
     etag: UYw3hzzNvJNa39KOPWd-227bNIo
     id: ozt6JDaFUbQ
     snippet:
-      publishedAt: 2022-12-15T07:25:30Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus
-        from Herodotus
-      description: >-
-        Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
-        Herodotus, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.  
-
-
-        Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
+      publishedAt: 2022-12-15T07:25:30.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/ozt6JDaFUbQ/default.jpg
@@ -49,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/ozt6JDaFUbQ/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus
+        from Herodotus
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 8 | Henri Lieutaud with Marcello Bardus
           from Herodotus
@@ -62,7 +48,14 @@ video:
 
 
           Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
+        Herodotus, on what gets them excited about technology in general,
+        blockchain in particular, and validity rollups specifically.  
+
+
+        Twitter: @0xmarcello @HerodotusDev @henrlihenrli @Starknet_Edu
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT41M13S
       dimension: 2d
@@ -71,3 +64,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck08.jpg
+category:
+  - stark-struck
+  - ecosystem
+topic:
+  - starknet
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: "Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
+  Herodotus, on what gets them excited about technology in general, blockchain
+  in particular, and validity rollups specifically.  "

@@ -132,14 +132,14 @@ const parsePosts = async () => {
       categories.push(category);
 
       sitemapUrls.push({
-        url: `/${locale}/posts/${category}`,
+        url: `/${locale}/content/category/${category}`,
         changefreq: 'weekly',
         priority: 0.8 
       });
     }
 
     let sitemapEntry: SitemapUrl = {
-      url: `/${locale}/posts/${category}/${slug}`,
+      url: `/${locale}/content/${slug}`,
       changefreq: 'monthly',
       priority: 0.6,
       lastmod: published_date?.split('T')?.[0],

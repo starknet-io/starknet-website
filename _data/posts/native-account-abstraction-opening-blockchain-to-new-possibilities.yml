@@ -3,7 +3,11 @@ post_type: article
 title: "Native Account Abstraction: Opening Blockchain to New Possibilities "
 published_date: 2023-07-25T12:47:55.978Z
 image: /assets/aa-post-shaked.jpg
-category: engineering
+category:
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
   - account-abstraction
 short_desc: Starknet's native Account Abstraction (AA) is revolutionizing

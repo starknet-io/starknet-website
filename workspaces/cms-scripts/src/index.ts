@@ -276,8 +276,12 @@ for (const locale of locales) {
 }
 
 const redirects = await yaml("_data/settings/redirects.yml");
-
 await write(`workspaces/website/redirects.json`, redirects);
+
+await fs.mkdir("public/data/featured-sections", { recursive: true });
+const featuredSections = await yaml("_data/settings/featured-sections.yml");
+await write(`public/data/featured-sections/featured-sections.json`, featuredSections);
+
 await createRoadmapDetails()
 await createAnnouncementDetails()
 await createSharedData()

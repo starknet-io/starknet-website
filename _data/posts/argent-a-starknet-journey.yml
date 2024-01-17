@@ -10,14 +10,8 @@ video:
     etag: VKUQYRK_GA1Sx7r8LGW17Xh4py0
     id: 1YjUsir58Lc
     snippet:
-      publishedAt: 2023-08-04T16:15:00Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: "Argent : A Starknet journey - Julien Niset"
-      description: |-
-        Argent : https://www.argent.xyz/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T16:15:00.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/1YjUsir58Lc/default.jpg
@@ -39,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/1YjUsir58Lc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: "Argent : A Starknet journey - Julien Niset"
       tags:
         - crypto
         - ethereum
@@ -50,9 +46,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "Argent : A Starknet journey - Julien Niset"
         description: |-
@@ -60,7 +55,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Argent : https://www.argent.xyz/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT13M13S
       dimension: 2d
@@ -70,4 +70,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/argent-a-starknet-journey-julien-niset.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5

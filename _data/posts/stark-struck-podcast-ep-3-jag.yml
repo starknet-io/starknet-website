@@ -2,13 +2,6 @@ id: 6355cbbf-9495-4d7f-8c65-6de8f84b7f08
 post_type: video
 title: STARK Struck Podcast | Ep 4 | Oskar & Jonas from Empiric
 published_date: 2022-09-22T00:00:00+00:00
-image: /assets/starkstruck04.jpg
-category: stark-struck
-topic:
-  - starknet
-short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
-  Empiric, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically.
 video:
   url: https://youtu.be/xkzX04wzBUw
   id: xkzX04wzBUw
@@ -17,17 +10,8 @@ video:
     etag: TeurQED3A-RLhImGESnREStMQnU
     id: xkzX04wzBUw
     snippet:
-      publishedAt: 2022-09-22T10:31:28Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
-        Empiric
-      description: >-
-        Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
-        Empiric, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.
-
-
-        Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
+      publishedAt: 2022-09-22T10:31:28.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/xkzX04wzBUw/default.jpg
@@ -49,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/xkzX04wzBUw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
+        Empiric
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 4 | Henri Lieutaud with Oskar & Jonas from
           Empiric
@@ -62,7 +48,14 @@ video:
 
 
           Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
+        Empiric, on what gets them excited about technology in general,
+        blockchain in particular, and validity rollups specifically.
+
+
+        Twitter: @jonas_nelle @oskarlso @EmpiricNetwork @henrlihenrli @Starknet_Intern
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT50M55S
       dimension: 2d
@@ -71,3 +64,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck04.jpg
+category:
+  - ecosystem
+  - stark-struck
+topic:
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+short_desc: Join Henri Lieutaud from the StarkNet team and Oskar & Jonas from
+  Empiric, on what gets them excited about technology in general, blockchain in
+  particular, and validity rollups specifically.

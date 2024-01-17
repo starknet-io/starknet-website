@@ -26,7 +26,7 @@ items:
               - page: 4c40a102-df5b-4f39-98fb-774d6841da9e
                 custom_title: Tools & resources
               - custom_title: Developers blog
-                custom_internal_link: /posts/developers
+                custom_internal_link: /content/category/developers
               - custom_title: Starknet Devs Newsletter
                 custom_internal_link: /subscribe-newsletter
                 custom_external_link: ""
@@ -90,38 +90,10 @@ items:
   - title: Resources
     columns:
       - blocks:
-          - title: Content
+          - title: ""
             items:
-              - custom_internal_link: /posts/
+              - custom_internal_link: /content/
                 custom_title: All content
-              - custom_title: Community & events
-                custom_internal_link: /posts/events-and-webinars
-                hide_from_footer: true
-              - custom_title: Community calls
-                custom_internal_link: /posts/community-calls
-                hide_from_footer: true
-              - custom_title: Ecosystem
-                hide_from_footer: true
-                custom_internal_link: /posts/ecosystem
-              - custom_title: Developers
-                custom_internal_link: /posts/developers
-                hide_from_footer: true
-              - custom_title: Foundation
-                custom_internal_link: /posts/foundation
-                hide_from_footer: true
-              - custom_title: Governance
-                custom_internal_link: ""
-                hide_from_footer: true
-                custom_external_link: https://governance.starknet.io/
-              - custom_title: Tutorials & guides
-                custom_internal_link: /posts/tutorials-and-guides
-                hide_from_footer: true
-              - custom_title: STARK Struck Podcast
-                custom_internal_link: /posts/stark-struck-podcast
-                hide_from_footer: true
-      - blocks:
-          - title: OTHER
-            items:
               - custom_title: Media kit
                 page: 575c22e7-477f-4a7e-9b90-7406b802176f
               - custom_title: Starknet EDU newsletter
@@ -131,3 +103,4 @@ items:
               - custom_title: Starknet Edu Blog
                 custom_external_link: https://medium.com/starknet-edu
                 hide_from_footer: true
+              

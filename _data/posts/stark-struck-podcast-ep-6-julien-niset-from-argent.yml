@@ -63,9 +63,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkstruck06.jpg
-category: stark-struck
+category:
+  - ecosystem
+  - stark-struck
 topic:
-  - starknet
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: "Join Henri Lieutaud from the StarkNet team and Julien Niset from
   Argent, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically. "

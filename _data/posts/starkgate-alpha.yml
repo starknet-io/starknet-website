@@ -3,13 +3,13 @@ post_type: article
 title: StarkGate Alpha
 published_date: 2022-04-04T00:00:00+00:00
 image: /assets/1_4hilekoqgikvff5xq7vfcg-1.png
-category: engineering
+category:
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - starknet
-  - ethereum
-  - 8930f558-6756-4e54-93e6-349ca99c158e
-  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
 short_desc: Excitement! We are thrilled to release StarkGate Alpha, the first
   version of StarkNet’s Bridge, now live on Goerli testnet, with Mainnet
   deployment to follow soon.

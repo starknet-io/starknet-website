@@ -3,7 +3,8 @@ post_type: article
 title: "Starknet Alpha 2 – New Phase: Composability"
 published_date: 2021-09-21T00:00:00+00:00
 image: /assets/1_som5ekoo6z5jzbr4uc9reg-1.png
-category: engineering
+category:
+  - engineering
 topic:
   - ethereum
   - starknet

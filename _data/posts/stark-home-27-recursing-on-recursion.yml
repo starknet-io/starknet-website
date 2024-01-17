@@ -91,8 +91,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome27.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
 topic:
-  - starknet
+  - 23d02918-cb8c-4484-a45b-0788d9da3995
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
 short_desc: "Recursive STARKs are now used daily to scale Ethereum, on StarkEx
-  and StarkNet. "
+  and Starknet. "

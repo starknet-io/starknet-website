@@ -3,11 +3,18 @@ post_type: article
 title: The Starknet Stack’s Growth Spurt
 published_date: 2023-07-19T06:45:50.950Z
 image: /assets/starknet-stack.png
-category: ecosystem
+category:
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
 topic:
   - decentralization
   - open_source
-  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - cairo
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: The Starknet Stack is in the midst of a remarkable growth spurt. We
   expect it to dominate the Appchain space due to its performance, security, and
   expressiveness. The thriving Starknet developer ecosystem, which has been
@@ -132,7 +139,7 @@ blocks:
 
           | Sequencer        | [LC Sequencer](https://github.com/lambdaclass/starknet_tendermint_sequencer)                            | LambdaClass   | In development     | Yes         |
 
-          | Prover           | [Stone](https://www.starknet.io/en/posts/engineering/opensourcing-the-battletested-stoneprover)         | StarkWare     | In production      | Yes         |
+          | Prover           | [Stone](https://www.starknet.io/en/content/opensourcing-the-battletested-stoneprover)         | StarkWare     | In production      | Yes         |
 
           | Prover           | [Platinum](https://github.com/lambdaclass/starknet_stack_prover_lambdaworks/tree/main)﻿                 | LambdaClass   | In development     | Yes         |
 

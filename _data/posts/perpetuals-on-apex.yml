@@ -10,16 +10,8 @@ video:
     etag: 8k3YoJls08iL5UHpSNHlspGI4yg
     id: PJhk5x75Qgw
     snippet:
-      publishedAt: 2023-12-03T13:47:38Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK SPACES   Perpetuals on Apex
-      description: >-
-        ApeX Pro is a perpetual trading platform that leverages StarkEx's
-        scalability engine to offer users seamless and high-performing trades
-        with its new order book model.
-
-
-        Hear from Mariam of ApeX in conversation with Liron from StarkWare on the advantages of perpetual trading with StarkEx.
+      publishedAt: 2023-12-03T13:47:38.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/PJhk5x75Qgw/default.jpg
@@ -41,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/PJhk5x75Qgw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK SPACES   Perpetuals on Apex
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK SPACES   Perpetuals on Apex
         description: >-
@@ -53,7 +46,14 @@ video:
 
 
           Hear from Mariam of ApeX in conversation with Liron from StarkWare on the advantages of perpetual trading with StarkEx.
-      defaultAudioLanguage: en-US
+      description: >-
+        ApeX Pro is a perpetual trading platform that leverages StarkEx's
+        scalability engine to offer users seamless and high-performing trades
+        with its new order book model.
+
+
+        Hear from Mariam of ApeX in conversation with Liron from StarkWare on the advantages of perpetual trading with StarkEx.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT47M13S
       dimension: 2d
@@ -63,7 +63,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-perpetuals-on-apex.jpg
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
   - defi
 short_desc: >-

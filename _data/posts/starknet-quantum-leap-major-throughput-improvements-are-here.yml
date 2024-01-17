@@ -4,12 +4,16 @@ title: "Starknet Quantum Leap: Major Throughput Improvements are Here!"
 toc: false
 published_date: 2023-07-05T16:00:10.445Z
 image: /assets/frame-17.png
-category: ecosystem
+category:
+  - engineering
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
+  - ecosystem
 topic:
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
   - cairo
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: >
   Starknet Alpha V0.12.0 focuses on enhancing performance and user experience.
   The new version introduces a Rust-based implementation of the Sequencer,
@@ -53,7 +57,7 @@ blocks:
           ## Performance - Throughput is Here!
 
 
-          This version focuses on performance, and specifically on improved throughput, resulting in a significant 10X increase. The throughput has surged from an average of 30K Cairo steps per second (CSPS) on v0.11.0, to an impressive 220K CSPS in this latest version. This remarkable achievement results from targeted optimizations that underpin the efficiency of the Starknet Sequencer, as previously shared in our [performance roadmap](https://www.starknet.io/en/posts/engineering/starknet-performance-roadmap). Three key ingredients have contributed to this improvement in Starknet's performance: Cairo-rs, Blockifier, and Papyrus, and they all benefit from the power of Rust.
+          This version focuses on performance, and specifically on improved throughput, resulting in a significant 10X increase. The throughput has surged from an average of 30K Cairo steps per second (CSPS) on v0.11.0, to an impressive 220K CSPS in this latest version. This remarkable achievement results from targeted optimizations that underpin the efficiency of the Starknet Sequencer, as previously shared in our [performance roadmap](https://www.starknet.io/en/content/starknet-performance-roadmap). Three key ingredients have contributed to this improvement in Starknet's performance: Cairo-rs, Blockifier, and Papyrus, and they all benefit from the power of Rust.
 
 
           The first improvement to the Sequencer is the integration of **[Cairo-rs](https://github.com/lambdaclass/cairo-vm)**, a highly efficient Cairo runner written in Rust and developed by **LambdaClass**. By leveraging the power of Rust, Cairo-rs has enhanced the execution of Cairo contracts, resulting in a more streamlined experience for users.
@@ -77,7 +81,7 @@ blocks:
           #### Parallelization
 
 
-          Starknet's previous Pythonic Sequencer introduced the [parallelization of transactions](https://www.starknet.io/en/posts/engineering/starknet-performance-roadmap), which significantly improved its performance. However, it's important to note that the Sequencer initial implementation in Rust, included in the V0.12.0 release, does not yet include parallelization. The ongoing development efforts are focused on parallelizing transaction execution within the block, in the spirit of [block-STM](https://malkhi.com/posts/2022/04/block-stm/). Drawing from the successful demonstrations in the Pythonic implementation, this optimization will further enhance the throughput of Starknet, enabling it to efficiently handle increased transaction volumes.
+          Starknet's previous Pythonic Sequencer introduced the [parallelization of transactions](https://www.starknet.io/en/content/starknet-performance-roadmap), which significantly improved its performance. However, it's important to note that the Sequencer initial implementation in Rust, included in the V0.12.0 release, does not yet include parallelization. The ongoing development efforts are focused on parallelizing transaction execution within the block, in the spirit of [block-STM](https://malkhi.com/posts/2022/04/block-stm/). Drawing from the successful demonstrations in the Pythonic implementation, this optimization will further enhance the throughput of Starknet, enabling it to efficiently handle increased transaction volumes.
 
 
           ## No More Pending Transactions
@@ -98,13 +102,13 @@ blocks:
           To implement this change, the operating system will write, at the beginning of every block, a mapping under \`address = 0x1\` with \`current_block - 10\` as the key and its corresponding hash as the value.
 
 
-          With the \`get_block_hash\` syscall, developers can conveniently retrieve block hashes, which are essential components for constructing and validating [storage proofs](https://www.starknet.io/en/posts/developers/what-are-storage-proofs-and-how-can-they-improve-oracles). These proofs enable efficient cross-chain data access and enhance the trustworthiness of blockchain data even without the need for reliance on third-party oracles. By obtaining the block hash through this syscall, developers can accurately reference a specific block's state, transactions or any other information committed in the [block header](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/#block_header)
+          With the \`get_block_hash\` syscall, developers can conveniently retrieve block hashes, which are essential components for constructing and validating [storage proofs](https://www.starknet.io/en/content/what-are-storage-proofs-and-how-can-they-improve-oracles). These proofs enable efficient cross-chain data access and enhance the trustworthiness of blockchain data even without the need for reliance on third-party oracles. By obtaining the block hash through this syscall, developers can accurately reference a specific block's state, transactions or any other information committed in the [block header](https://docs.starknet.io/documentation/architecture_and_concepts/Blocks/header/#block_header)
 
 
           ## Cairo - Improved Contract Syntax
 
 
-          In this version we’re introducing significant improvements to the smart contract syntax. The new syntax focuses on safety and lays the foundations for extensibility. Safety in this context means being more explicit on the external-facing components of the contract (interface/storage/events), which gives developers a better idea of what to expect when interacting with the contract. Extensibility, which will be finalized in a later version, allows contracts to use components from external libraries. This is a key feature of any smart contract language and will address a significant issue in the Starknet dev community. For an exhaustive treatment of the motivation and changes, see the [Cairo Roadmap blog post](https://www.starknet.io/en/posts/ecosystem/cairo-roadmap-join-the-ride) and the [community forum post](https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794).
+          In this version we’re introducing significant improvements to the smart contract syntax. The new syntax focuses on safety and lays the foundations for extensibility. Safety in this context means being more explicit on the external-facing components of the contract (interface/storage/events), which gives developers a better idea of what to expect when interacting with the contract. Extensibility, which will be finalized in a later version, allows contracts to use components from external libraries. This is a key feature of any smart contract language and will address a significant issue in the Starknet dev community. For an exhaustive treatment of the motivation and changes, see the [Cairo Roadmap blog post](https://www.starknet.io/en/content/cairo-roadmap-join-the-ride) and the [community forum post](https://community.starknet.io/t/cairo-1-contract-syntax-is-evolving/94794).
 
 
           While the [new compiler version](https://github.com/starkware-libs/cairo/releases/tag/v2.0.0-rc0) includes breaking changes, **you can keep using the older compiler version (v1.1.0) and deploy the resulting contracts on Starknet for the next six months**. This reflects our new compiler upgrade protocol for breaking changes: following new compiler versions, contracts compiled by the old compiler version will continue to be accepted for at least six months, in order to allow the community to adjust. Of course, once a Cairo contract (not Cairo 0) is declared on Starknet, it will remain available for deployment and interaction indefinitely.

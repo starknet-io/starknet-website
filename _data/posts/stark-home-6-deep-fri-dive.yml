@@ -52,8 +52,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome06.png
-category: community-and-events
+category:
+  - community-and-events
+  - 217311b0-fc55-4192-9257-aa82004ddb73
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
 topic:
-  - starknet
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
 short_desc: Diving deep into FRI - Fast Reed-Solomon Interactive protocol (and a
   cool trick at the end).

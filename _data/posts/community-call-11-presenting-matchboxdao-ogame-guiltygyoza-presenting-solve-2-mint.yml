@@ -3,11 +3,6 @@ post_type: video
 title: "Community Call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
   presenting Solve 2 Mint"
 published_date: 2022-03-29T14:02:42.065Z
-image: /assets/cc11.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Presenting MatchboxDAO, OGame, Guiltygyoza presenting Solve 2 Mint
 video:
   url: https://youtu.be/lKgII-UtYP4
   id: lKgII-UtYP4
@@ -16,11 +11,8 @@ video:
     etag: HzqyFk12E4kqkp3-ET12ApvT1RU
     id: lKgII-UtYP4
     snippet:
-      publishedAt: 2022-03-30T01:33:53Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
-        presenting Solve 2 Mint"
-      description: ""
+      publishedAt: 2022-03-30T01:33:53.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/lKgII-UtYP4/default.jpg
@@ -42,14 +34,17 @@ video:
           url: https://i.ytimg.com/vi/lKgII-UtYP4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
+        presenting Solve 2 Mint"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #11 | Presenting MatchboxDAO, OGame, Guiltygyoza
           presenting Solve 2 Mint"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT58M20S
       dimension: 2d
@@ -58,3 +53,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc11.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - starknet
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+short_desc: Presenting MatchboxDAO, OGame, Guiltygyoza presenting Solve 2 Mint

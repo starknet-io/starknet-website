@@ -59,7 +59,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/community-calls-33-.jpg
-category: community-calls
+category:
+  - community-calls
+  - ecosystem
 topic:
   - full_node
   - decentralization

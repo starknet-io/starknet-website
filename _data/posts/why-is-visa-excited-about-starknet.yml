@@ -2,15 +2,6 @@ id: 2ae587d2-5c71-4ad8-bb81-9523b2a5df86
 post_type: video
 title: Why is Visa excited about Starknet?
 published_date: 2022-12-20T16:54:47.934Z
-image: /assets/interviews09.jpg
-category: ecosystem
-topic:
-  - starknet
-  - defi
-short_desc: "Visa has signalled its long-term bullishness on the potential of
-  the Ethereum blockchain with a paper that explores how to make auto-payments
-  possible for self-custody wallets with Starknet, a Layer 2 blockchain built on
-  top of Ethereum. "
 video:
   url: https://www.youtube.com/live/nNdY0NFjE7o?feature=share
   id: nNdY0NFjE7o
@@ -19,53 +10,8 @@ video:
     etag: dCvaVOhHv4xjIXiZ4QsS0iymIbo
     id: nNdY0NFjE7o
     snippet:
-      publishedAt: 2022-12-21T05:51:53Z
-      channelId: UCGXWKlq1Oxr3ddEtmKhAkPg
-      title: Visa Explores Crypto Auto-payments on Ethereum + Binance, BlockFi Updates
-      description: >-
-        Visa has signaled its long-term bullishness on the potential of the
-        Ethereum blockchain with a paper that explores how to make auto-payments
-        possible for self-custody wallets with StarkNet, a Layer 2 blockchain
-        built on top of Ethereum. Jeremy Varlow and Ash Bennington speak with
-        StarkWare president and co-founder Eli Ben-Sasson about the solution.
-        Plus, Jeremy and Ash discuss Binance.US buying Voyager Digital assets,
-        Reuters looking into Binance’s finances, BlockFi hoping to resume some
-        customer withdrawals, and why a Genesis bankruptcy would bring an
-        immediate cost to its parent company Digital Currency Group. We’ll also
-        hear from WendyO, host of The O Show, on the power of self-sovereignty
-        and why NFTs can revolutionize music.
-
-
-        We want to hear from you - send us your questions, comments, and suggestions!
-
-
-        #ethereum #starknet #starkware #binance #blockfi #cz #dcg #genesis #voyager #cryptowendyo #visa 
-
-
-        About Real Vision™:
-
-        Real Vision™ is where you can understand the complex world of finance, business, and the global economy with real in-depth analysis from experts. 
-
-
-        Connect with Real Vision™ Online:
-
-        Real Vision Crypto: http://rvtv.io/CryptoRV​​​​​​​​​
-
-        Twitter: https://rvtv.io/twitter​​​​​​​​​​​​​​​​
-
-        Instagram: https://rvtv.io/instagram​​​​​​​​​​​​​​​
-
-        Facebook: https://rvtv.io/facebook​​​​​​​​​​​​​​​
-
-        Linkedin: https://rvtv.io/linkedin​​​​​​​​​​​​​​​​
-
-
-        #Crypto #Blockchain #web3 #raoulpal #realvision #cryptonews #cryptotrading #cryptocurrency #cryptoanalysis #cryptocurrencies 
-
-
-        Disclaimer:
-
-        This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
+      publishedAt: 2022-12-21T05:51:53.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/nNdY0NFjE7o/default.jpg
@@ -87,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/nNdY0NFjE7o/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: Real Vision Crypto
+      title: Visa Explores Crypto Auto-payments on Ethereum + Binance, BlockFi Updates
       tags:
         - Crypto Investing
         - Real Vision Crypto
@@ -125,9 +73,8 @@ video:
         - bitcoin proof of work
         - proof of stake
         - defi hack
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Visa Explores Crypto Auto-payments on Ethereum + Binance, BlockFi Updates
         description: >-
@@ -175,7 +122,51 @@ video:
           Disclaimer:
 
           This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
-      defaultAudioLanguage: en
+      description: >-
+        Visa has signaled its long-term bullishness on the potential of the
+        Ethereum blockchain with a paper that explores how to make auto-payments
+        possible for self-custody wallets with StarkNet, a Layer 2 blockchain
+        built on top of Ethereum. Jeremy Varlow and Ash Bennington speak with
+        StarkWare president and co-founder Eli Ben-Sasson about the solution.
+        Plus, Jeremy and Ash discuss Binance.US buying Voyager Digital assets,
+        Reuters looking into Binance’s finances, BlockFi hoping to resume some
+        customer withdrawals, and why a Genesis bankruptcy would bring an
+        immediate cost to its parent company Digital Currency Group. We’ll also
+        hear from WendyO, host of The O Show, on the power of self-sovereignty
+        and why NFTs can revolutionize music.
+
+
+        We want to hear from you - send us your questions, comments, and suggestions!
+
+
+        #ethereum #starknet #starkware #binance #blockfi #cz #dcg #genesis #voyager #cryptowendyo #visa 
+
+
+        About Real Vision™:
+
+        Real Vision™ is where you can understand the complex world of finance, business, and the global economy with real in-depth analysis from experts. 
+
+
+        Connect with Real Vision™ Online:
+
+        Real Vision Crypto: http://rvtv.io/CryptoRV​​​​​​​​​
+
+        Twitter: https://rvtv.io/twitter​​​​​​​​​​​​​​​​
+
+        Instagram: https://rvtv.io/instagram​​​​​​​​​​​​​​​
+
+        Facebook: https://rvtv.io/facebook​​​​​​​​​​​​​​​
+
+        Linkedin: https://rvtv.io/linkedin​​​​​​​​​​​​​​​​
+
+
+        #Crypto #Blockchain #web3 #raoulpal #realvision #cryptonews #cryptotrading #cryptocurrency #cryptoanalysis #cryptocurrencies 
+
+
+        Disclaimer:
+
+        This is pretty obvious, but we should probably say it anyway so that there is absolutely no confusion…The material in REAL VISION GROUP video programs and publications {collectively referred to as “RV RELEASES”} is provided for informational purposes only and is NOT investment advice. The information in RV RELEASES has been obtained from sources believed to be reliable, but Real Vision and its contributors, distributors and/or publisher, licensors, and their respective employees, contractors, agents, suppliers, and vendors { collectively, “Affiliated Parties”} make no representation or warranty as to the accuracy, timeliness or completeness of the content in RV RELEASES. Any data included in RV RELEASES are illustrative only and not for investment purposes. Any opinion or recommendation expressed in RV RELEASES is subject to change without notice. RV Releases do not recommend, explicitly or implicitly, or suggest any investment strategy. Real Vision Group and its Affiliated Parties disclaim all liability for any loss that may arise (whether direct indirect, consequential, incidental, punitive or otherwise) from any use of the information in RV RELEASES. Real Vision Group and its Affiliated Parties do not have regard for any individual’s, group of individuals’, or entity’s specific investment objectives, financial situation, or circumstance. RV RELEASES do not express any opinion on the future value of any security, currency, or other investment instruments. You should seek expert financial and other advice regarding the appropriateness of the material discussed or recommended in RV RELEASES and should note that investment values may fall, you may receive less back than originally invested and past performances are not necessarily reflective of future performances. Well, that was pretty intense! We hope you got all of that – now stop reading the small print and go and enjoy Real Vision.
+      channelId: UCGXWKlq1Oxr3ddEtmKhAkPg
     contentDetails:
       duration: PT41M12S
       dimension: 2d
@@ -184,3 +175,14 @@ video:
       licensedContent: true
       contentRating: {}
       projection: rectangular
+image: /assets/interviews09.jpg
+category:
+  - ecosystem
+  - community-and-events
+topic:
+  - starknet
+  - defi
+short_desc: "Visa has signalled its long-term bullishness on the potential of
+  the Ethereum blockchain with a paper that explores how to make auto-payments
+  possible for self-custody wallets with Starknet, a Layer 2 blockchain built on
+  top of Ethereum. "
