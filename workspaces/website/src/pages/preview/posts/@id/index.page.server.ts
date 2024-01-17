@@ -10,8 +10,8 @@ export async function render(pageContext: PageContextServer) {
 
   return {
     pageContext: {
-      redirectTo: `/${data?.locale}/posts/${
-        data?.category ? `${data?.category}/` : ""
+      redirectTo: `/${data?.locale}/content/${
+        data?.category ? `category/${data?.category}/` : ""
       }${data?.slug}`,
     },
   };
