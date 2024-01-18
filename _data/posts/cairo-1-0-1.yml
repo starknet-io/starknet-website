@@ -7,7 +7,6 @@ category:
   - engineering
 topic:
   - cairo
-  - zk-proofs
 short_desc: In 2020 we released Cairo, a Turing-complete programming language,
   and took a big step towards supporting verifiable computation using STARKs.
   Today, we announce Cairo 1.0, the biggest advancement of Cairo to date.

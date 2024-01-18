@@ -1,5 +1,5 @@
 id: 0cc45698-3caa-4a56-b371-58fc29f645eb
-post_type: video
+post_type: audio
 title: Episode 11 | Liron Hayman with David Lavecky & Tim Moddel from Canvas
 published_date: 2023-02-16T12:51:50.554Z
 video:
@@ -85,7 +85,6 @@ category:
   - stark-struck
   - ecosystem
 topic:
-  - ethereum
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: >-
   In this special STARK Struck episode, Join Liron Hayman from StarkWare and

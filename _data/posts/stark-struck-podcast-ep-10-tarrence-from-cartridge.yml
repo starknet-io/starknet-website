@@ -1,5 +1,5 @@
 id: be4ad71a-f37f-47ee-8ac0-90803e2327b6
-post_type: video
+post_type: audio
 title: STARK Struck Podcast | Ep 10 | Tarrence from Cartridge
 published_date: 2023-01-26T00:00:00+00:00
 video:
@@ -69,7 +69,6 @@ category:
   - stark-struck
   - ecosystem
 topic:
-  - starknet
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: "Join Henri Lieutaud from the StarkNet team and Tarrence from
   Cartridge, on what gets them excited about technology in general, blockchain

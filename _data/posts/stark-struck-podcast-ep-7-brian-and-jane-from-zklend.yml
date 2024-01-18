@@ -1,5 +1,5 @@
 id: 35669d5b-9890-410d-80d9-8eb1c6cddbd5
-post_type: video
+post_type: audio
 title: STARK Struck Podcast | Ep 7 | Brian and Jane from ZKLend
 published_date: 2022-12-01T00:00:00+00:00
 video:
@@ -64,10 +64,8 @@ category:
   - stark-struck
   - ecosystem
 topic:
-  - starknet
   - defi
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
-  - ethereum
 short_desc: "Join Henri Lieutaud from the StarkNet team and Brian & Jane from
   ZKLend, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically. "

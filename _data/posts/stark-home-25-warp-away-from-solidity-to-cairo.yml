@@ -86,9 +86,7 @@ category:
   - 3fe387e2-1fb6-41b9-bb74-96d6df394f42
   - stark-math
 topic:
-  - starknet
   - cairo
-  - ethereum
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: >
   Starknet is up and running on Mainnet. But is it EVM compatible? Can you

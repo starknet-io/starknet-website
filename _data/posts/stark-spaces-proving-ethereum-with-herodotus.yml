@@ -1,5 +1,5 @@
 id: 1a05ed41-43b8-4eae-815c-53eb4c0247d3
-post_type: video
+post_type: audio
 title: STARK SPACES | Proving Ethereum with Herodotus
 published_date: 2023-11-02T16:02:09.626Z
 video:
@@ -68,7 +68,6 @@ category:
   - ecosystem
   - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
-  - e76017df-d92d-49a5-b996-1275f91844c2
 short_desc: >-
   The Herodotus Accumulator project gives users and developers easy access to
   reliable data, all the way from Ethereum’s genesis block until today, with
