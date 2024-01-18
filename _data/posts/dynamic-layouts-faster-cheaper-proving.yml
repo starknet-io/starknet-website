@@ -79,7 +79,6 @@ category:
   - ecosystem
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
-  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
 short_desc: In this talk, we will discuss dynamic layouts and how Starknet
   benefits from them.
 blocks:

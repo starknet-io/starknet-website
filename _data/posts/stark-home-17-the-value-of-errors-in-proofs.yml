@@ -57,7 +57,5 @@ category:
   - 217311b0-fc55-4192-9257-aa82004ddb73
   - stark-math
 topic:
-  - cryptography
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
-  - zk-proofs
 short_desc: The value of errors in proofs.
