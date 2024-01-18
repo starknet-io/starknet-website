@@ -45,7 +45,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
       pageProps,
       documentProps: {
         title: post.seoTitle ?? post.title,
-        description: post.short_desc,
+        description: post.seo_desc ?? post.short_desc,
         image: `${import.meta.env.VITE_SITE_URL}${post.image}`,
       } satisfies DocumentProps,
     },

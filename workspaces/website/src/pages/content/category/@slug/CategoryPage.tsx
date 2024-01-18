@@ -90,6 +90,31 @@ export function CategoryPage({
   } : undefined) as NormalizedCategory;
 
   const hasChildren = (category?.children?.length ?? 0) > 0;
+  const sortedChildren = useMemo(() => {
+    const bubbleUp = ['Starknet Projects', 'Roadmap']
+    const bubbleDown = ['Decentralization']
+
+    return category?.children?.sort(({ name: a }, { name: b }) => {
+      if (bubbleUp.includes(a) && bubbleUp.includes(b)) {
+        return bubbleUp.indexOf(a) - bubbleUp.indexOf(b);
+      }
+
+      if (bubbleDown.includes(a) && bubbleDown.includes(b)) {
+        return bubbleDown.indexOf(a) - bubbleDown.indexOf(b);
+      }
+
+      if (bubbleUp.includes(a) || bubbleDown.includes(b)) {
+        return -1;
+      }
+
+      if (bubbleDown.includes(a) || bubbleUp.includes(b)) {
+        return 1;
+      }
+
+      return a.localeCompare(b);
+    })
+  }, [category?.children]);
+
   const hasFilters = (query.topicFilters ?? []).length > 0 || query.postType;
   const isMobile = useBreakpointValue({ base: true, lg: false })
 
@@ -181,14 +206,14 @@ export function CategoryPage({
               flexDirection={'column'}
               rowGap={'96px'}
             >
-              {category.children.map(category => (
+              {sortedChildren.map(category => (
                 <InstantSearch
                   key={category.id}
                   searchClient={searchClient}
                   indexName={`web_posts_${env.ALGOLIA_INDEX}`}
                 >
                   <Configure
-                    hitsPerPage={3}
+                    hitsPerPage={6}
                     facetsRefinements={{
                       ...category.id !== 'all' && {
                         category: [category.id]
@@ -220,7 +245,7 @@ export function CategoryPage({
                   indexName={`web_posts_${env.ALGOLIA_INDEX}`}
                 >
                   <Configure
-                    hitsPerPage={3}
+                    hitsPerPage={6}
                     facetsRefinements={{
                       ...category.id !== 'all' && {
                         category: [category.id]

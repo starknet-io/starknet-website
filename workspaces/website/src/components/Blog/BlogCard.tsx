@@ -98,6 +98,25 @@ export const BlogCard = ({ isFeatured, onClickPlay, post, topics, ...rest }: Pro
             placeItems={'center'}
             overflow={"hidden"}
           >
+            {isMobile && <Image
+              url={post.image}
+              width={'100%'}
+              aspectRatio={16/9}
+              position={'absolute'}
+              sx={{
+                img: {
+                  aspectRatio: 16/9,
+                  filter: 'blur(6px)',
+                  objectFit: 'cover !important',
+                  transform: 'scale(1.05)',
+                  transition: 'transform 0.4s ease-in-out',
+                  width: '100%',
+                  minWidth: '100%',
+                  zIndex: -1
+                }
+              }}  
+            />}
+              
             <Image
               url={post.image}
               height={'100%'}
@@ -105,8 +124,9 @@ export const BlogCard = ({ isFeatured, onClickPlay, post, topics, ...rest }: Pro
                 base: 'unset',
                 md: '100%'
               }}
+              zIndex={1}
             >
-              {(post.post_type === 'video' || post.post_type == 'audio') && (
+              {(post.post_type === 'video' || post.post_type === 'audio') && (
                 <Grid
                   placeItems={'center'}
                   position={'absolute'}
@@ -127,7 +147,7 @@ export const BlogCard = ({ isFeatured, onClickPlay, post, topics, ...rest }: Pro
           </Grid>
         )}
 
-        {post.post_type === 'video' && showVideo && (
+        {post.post_type !== 'article' && showVideo && (
           <Box>
             <YoutubePlayer
               opts={{
@@ -170,7 +190,7 @@ export const BlogCard = ({ isFeatured, onClickPlay, post, topics, ...rest }: Pro
           )}
           
           <Content
-            excerpt={post.post_desc ?? ""}
+            excerpt={post.short_desc ?? ""}
             noTopics={topicNames.length === 0}
             title={post.title}
           />

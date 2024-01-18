@@ -324,14 +324,14 @@ export function PostPage(props: Props): JSX.Element {
         indexName={`web_posts_${env?.ALGOLIA_INDEX}`}
       >
         <Configure
-          hitsPerPage={4}
+          hitsPerPage={5}
           facetsRefinements={{
-            category: postCategories.map((c) => c.id).slice(0,1),
+            topic: post.topic[0] ? [post.topic[0]] : [],
             locale: [locale]
           }}
         />
 
-        <RelatedSection topics={topics}/>
+        <RelatedSection post={post} topics={topics}/>
       </InstantSearch>
     </Container>
   )
@@ -341,8 +341,9 @@ export function PostPage(props: Props): JSX.Element {
  * `RelatedSection` component.
  */
 
-function RelatedSection({ topics }: Pick<Props,'topics'>) {
+function RelatedSection({ post, topics }: Pick<Props,'post' | 'topics'>) {
   const { hits } = useHits<BlogHit>();
+  const normalizedHits = hits.filter((hit) => hit.id !== post.id).slice(0,4);
 
   return (
     <Grid
@@ -352,7 +353,7 @@ function RelatedSection({ topics }: Pick<Props,'topics'>) {
       maxWidth={'100%'}
       overflowX={'auto'}
     >
-      {hits.map((hit, index) => (
+      {normalizedHits.map((hit, index) => (
         <BlogCard
           key={index}
           post={hit}

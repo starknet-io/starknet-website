@@ -67,7 +67,9 @@ export const CategoryList = ({ categories, params }: Props) => {
                 if (currentCat.slug === params.category) return;
                 setOpenCategory(category.slug);
 
-                navigate(`/${params.locale}/content/category/${currentCat.slug}`)
+                navigate(`/${params.locale}/content/category/${currentCat.slug}${
+                  currentCat.default_filter ? `?postType=${currentCat.default_filter}` : ''
+                }`)
               }}
               openCategory={openCategory}
               setOpenCategory={setOpenCategory}

@@ -99,7 +99,7 @@ const FeaturedSectionContent = ({ topics }: Pick<Props,'topics'>) => {
       }}
       overflowX={{
         base: 'visible',
-        md: 'hidden'
+        sm: 'hidden'
       }}
       position={'relative'}
       sx={!isMobile ? {

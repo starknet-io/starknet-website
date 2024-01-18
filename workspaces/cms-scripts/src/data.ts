@@ -27,6 +27,7 @@ export interface Post extends Meta {
   readonly topic: string[];
   readonly short_desc: string;
   readonly post_desc: string;
+  readonly seo_desc: string;
   readonly post_type: string;
   readonly post_date: string;
   readonly published_date: string;
@@ -122,6 +123,10 @@ export async function fileToPost(
     timeToConsume = `${formatDuration(
       data.video?.data?.contentDetails?.duration || ""
     )} ${data.video?.data?.contentDetails?.duration ? "watch" : ""}`;
+  } else if (data.post_type === "audio") {
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} ${data.video?.data?.contentDetails?.duration ? "listen" : ""}`;
   } else {
     timeToConsume = `${calculateReadingTime(fullText)} read`;
   }
@@ -133,6 +138,7 @@ export async function fileToPost(
     category: data.category,
     post_type: data.post_type,
     post_date: data.post_date,
+    seo_desc: data.seo_desc,
     published_date: data.published_date,
     toc: data.toc,
     video: data.video,
