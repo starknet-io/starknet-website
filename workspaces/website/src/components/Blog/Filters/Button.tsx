@@ -54,6 +54,7 @@ export const FilterButton = ({ categories, params, topics, ...props}: Props) => 
       width={'100%'}
       transition={'transform 0.6s cubic-bezier(.08,.52,.52,1)'}
       transform={scrollDirection === 'up' ? 'translateY(200px)' : 'translateY(0)'}
+      zIndex={10}
     >
       <FilterDrawer
         topics={topics}

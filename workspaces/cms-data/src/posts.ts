@@ -20,6 +20,7 @@ export interface Post extends Meta {
   readonly topic: string[];
   readonly short_desc: string;
   readonly post_desc: string;
+  readonly seo_desc: string;
   readonly post_type: string;
   readonly post_date: string;
   readonly toc: boolean;

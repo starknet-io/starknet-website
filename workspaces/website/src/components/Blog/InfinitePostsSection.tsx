@@ -49,7 +49,7 @@ export const InfinitePostsSection = (props: Props) => {
             lg: '600px'
           }}
         >
-          {hits.map((hit, index) => (
+          {hits.map((hit) => (
             <BlogCard
               key={hit.id}
               post={hit}

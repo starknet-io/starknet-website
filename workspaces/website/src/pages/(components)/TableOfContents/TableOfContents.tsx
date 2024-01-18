@@ -77,7 +77,7 @@ export function TableOfContents(props: Props) {
       </Heading>
       {props.headings.map((h, i) => (
         <Toc.Item key={i} isActive={`toc-${slugify(h.title)}` === activeId} pl={`${h.level * 16}px`}>
-          <a href={`#toc-${slugify(h.title)}`}>{h.title}</a>
+          <a style={{ lineHeight: '1.7em' }} href={`#toc-${slugify(h.title)}`}>{h.title}</a>
         </Toc.Item>
       ))}
     </Toc.Root>

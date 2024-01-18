@@ -50,5 +50,25 @@ export const categoriesCollectionConfig = {
       display_fields: ["title"],
       options_length: 300
     },
+    {
+      name: 'default_filter',
+      label: 'Default filter',
+      widget: 'select',
+      options: [
+        {
+          label: 'Article',
+          value: 'article'
+        },
+        {
+          label: 'Video',
+          value: 'video'
+        },
+        {
+          label: 'Audio',
+          value: 'audio'
+        }
+      ],
+      required: false
+    }
   ],
 } satisfies CmsCollection;

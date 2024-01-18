@@ -107,10 +107,7 @@ export const Carousel: React.FunctionComponent<CarouselProps> = ({
         })}
       </motion.div>
 
-      <Box position={'relative'} marginLeft={{
-        base: '-24px',
-        sm: 'auto'
-      }}>
+      <Box position={'relative'}>
         {!isMobile && (
           <Flex
             gap={'12px'}

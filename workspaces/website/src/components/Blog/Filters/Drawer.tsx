@@ -126,6 +126,10 @@ export const FilterDrawer = ({ categories, params, topics, ...props }: Props) =>
                           if (currentCat.slug === params.category) return;
 
                           setCurrentCategory(currentCat.slug);
+                          
+                          if(currentCat.default_filter) {
+                            setCurrentPostType(currentCat.default_filter);
+                          }
                         }}
                         openCategory={openCategory}
                         setOpenCategory={setOpenCategory}

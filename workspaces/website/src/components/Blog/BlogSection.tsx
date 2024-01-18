@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-import { Box, Grid, Icon, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Grid, Icon } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { useHits } from "react-instantsearch-hooks-web";
@@ -32,11 +32,26 @@ export type Props = {
 export const BlogSection = (props: Props) => {
   const { hideEmptySection, title, topics, url } = props;
   const { hits } = useHits<BlogHit>();
-  const isMobile = useBreakpointValue({ base: true, md: false })
+  const { videos, articles } = useMemo(() => {
+    const videos = hits.filter(({ post_type }) => post_type === 'video' || post_type === 'audio')
+    const articles = hits.filter(({ post_type }) => post_type === 'article')
+    return { videos, articles }
+  }, [hits])
+
   const posts = useMemo(() => {
-    const sectionSize = (hits.some(({ post_type }) => post_type !== 'video' && post_type !== 'audio') || isMobile) ? 3 : 2
-    const paddedHits = hits.concat(Array(sectionSize).fill(undefined))
-    return paddedHits.slice(0, sectionSize)
+    if (articles.length >= 3) {
+      return articles.slice(0, 3);
+    }
+
+    if (videos.length >= 2) {
+      return videos.slice(0, 2);
+    }
+
+    if (articles.length > 0) {
+      return articles.concat(Array(3 - articles.length).fill(undefined))
+    }
+
+    return videos.concat(Array(2 - videos.length).fill(undefined))
   }, [hits])
   
   return (
@@ -89,11 +104,11 @@ export const BlogSection = (props: Props) => {
                 gridTemplateColumns={`repeat(${posts.length}, 1fr)`}
                 minWidth={'600px'}
               >
-                {posts.map((hit, index) => {
+                {posts.map((hit) => {
                   if(hit) {
                     return (
                       <BlogCard
-                        key={index}
+                        key={hit.id}
                         post={hit}
                         topics={topics}
                       />

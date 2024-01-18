@@ -77,7 +77,7 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
           ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
           li: (props) => <ListItem lineHeight="32px" {...props} />,
-          img: (props) => <Img my="40px" borderRadius="8px" {...props} />,
+          img: (props) => <Img my="40px" borderRadius="8px" _dark={{ background: 'white' }} {...props} />,
           a: (props) => <Link variant="standard" {...props} />,
           pre: (props) => {
             // @ts-ignore
@@ -97,7 +97,22 @@ export function MarkdownBlock({ body }: Props): JSX.Element {
             }else {
               return <pre {...props}>{props.children}</pre>
             }
-          }
+          },
+          table: (props) => (
+            <Box 
+              overflowX={'auto'}
+              _dark={{ 
+                th: {
+                  borderColor: 'fg-default'
+                },
+                td: {
+                  borderColor: 'fg-default'
+                }
+              }}
+            >
+              <table  {...props}>{props.children}</table>
+            </Box>
+          ),
         }}
       >
         {body}
