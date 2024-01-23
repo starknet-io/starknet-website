@@ -30,7 +30,7 @@ blocks:
           security tooling for smart contract developers, auditors and web3
           protocols.
       - title: Nethermind Security
-        website_url: https://nethermind.io/smart-contracts-audits/
+        website_url: https://www.nethermind.io/smart-contract-audits
         image: /assets/nethermind_security_ico.png
         description: Nethermind Security is the security arm of Nethermind, providing
           services related to Smart Contract Audits, Formal Verification, and
