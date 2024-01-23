@@ -6,9 +6,6 @@ image: /assets/1_som5ekoo6z5jzbr4uc9reg-1.png
 category:
   - engineering
 topic:
-  - ethereum
-  - starknet
-  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
   - cairo
 short_desc: Starknet is a permissionless decentralized Validity-Rollup (aka a
   “ZK-Rollup”). We announced its roadmap at the beginning of the year. The

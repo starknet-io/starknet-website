@@ -771,11 +771,12 @@ const categoryVertical = defineStyle({
   borderRadius: 0,
   fontWeight: "medium",
   fontSize: "14px",
-  lineHeight: "14px",
-  padding: "26px 12px",
+  lineHeight: "20px",
+  padding: "15px 12px",
   color: "tabs-fg",
   borderLeftWidth: "1px",
   borderColor: "tabs-border-bg",
+  height: 'max-content',
 
   bg: "tabs-bg",
   _hover: {

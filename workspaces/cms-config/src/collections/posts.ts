@@ -144,13 +144,22 @@ export const postsCollectionConfig = {
     },
     {
       name: "short_desc",
-      label: "Seo Description",
+      label: "Short Description",
       widget: "text",
     },
     {
       name: "post_desc",
-      label: "Post Description",
+      label: "Intro one liner",
       widget: "text",
+      required: false,
+    },
+    {
+      name: "seo_desc",
+      label: "Seo Description",
+      hint: "If left empty, the short description will be used",
+      widget: "text",
+      crowdin: true,
+      required: false,
     },
     {
       required: false,

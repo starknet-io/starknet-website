@@ -153,7 +153,7 @@ export function PostsPage({
                 indexName={`web_posts_${env.ALGOLIA_INDEX}`}
               >
                 <Configure
-                  hitsPerPage={3}
+                  hitsPerPage={6}
                   facetsRefinements={{
                     category: [category.id],
                     locale: [params.locale]

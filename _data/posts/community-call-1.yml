@@ -6,7 +6,6 @@ image: /assets/cc01.jpg
 category:
   - community-calls
 topic:
-  - starknet
 short_desc: "Starknet's community call #1"
 video:
   url: https://youtu.be/gHoaoRxdJ_4

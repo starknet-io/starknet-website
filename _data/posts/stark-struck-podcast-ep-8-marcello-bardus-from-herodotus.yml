@@ -1,5 +1,5 @@
 id: 6598ed57-1e91-4e14-b734-005c96b27d21
-post_type: video
+post_type: audio
 title: STARK Struck Podcast | Ep 8 | Marcello Bardus from Herodotus
 published_date: 2022-12-15T00:00:00+00:00
 video:
@@ -69,7 +69,6 @@ category:
   - stark-struck
   - ecosystem
 topic:
-  - starknet
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: "Join Henri Lieutaud from the StarkNet team and Marcello Bardus from
   Herodotus, on what gets them excited about technology in general, blockchain

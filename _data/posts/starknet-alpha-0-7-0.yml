@@ -6,7 +6,6 @@ image: /assets/1_zxn9fv5sk8ygouddwfry8q-1.png
 category:
   - engineering
 topic:
-  - starknet
   - 3fc1282e-a54b-4932-b14e-a3b3d24a9a1f
   - fce5e543-fa05-4356-9ff9-bf83196b299f
 short_desc: We are happy to release Alpha 0.7.0, a version packed with new

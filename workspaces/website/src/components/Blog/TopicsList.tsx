@@ -141,8 +141,8 @@ export const TopicList = (props: Props) => {
           '&::-webkit-scrollbar': {
             display: 'none'
           },
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
         }}
       >
         {topics.map((topic, index) => (

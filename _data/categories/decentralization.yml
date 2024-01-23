@@ -2,3 +2,4 @@ id: 910bb83e-5337-46f0-a144-4640e8a11ec6
 name: Decentralization
 parentCategory: a6270a0b-ff84-4a7a-bd07-5183e0f2e857
 show_custom_featured_post: true
+default_filter: article
