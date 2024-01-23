@@ -27,4 +27,9 @@ blocks:
         website_url: https://www.dappland.com
         twitter: https://twitter.com/argentHQ
         image: /assets/dappland.jpg
+      - website_url: https://www.ethereum-ecosystem.com/blockchains/starknet
+        title: Ethereum Ecosystem
+        description: Discover the best of Ethereum and its layer 2s. All in one place.
+        image: /assets/logo.webp
+        twitter: https://twitter.com/web3xplore
     randomize: true
