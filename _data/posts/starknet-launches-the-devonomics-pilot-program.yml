@@ -15,13 +15,11 @@ short_desc: In accordance with its vision of decentralized governance, the
   of all Starknet fees accrued from November 2021 until November 30, 2023. The
   distribution will be done via a novel mechanism, unique to the Ethereum L2
   landscape, that aims for fairness, inclusivity, and transparency.
+post_desc: Moving towards decentralization by supporting and empowering Starknet
+  developers
 blocks:
   - type: markdown
     body: >-
-      #### Moving towards decentralization by supporting and empowering Starknet
-      developers
-
-
       ## TL;DR
 
 
@@ -91,8 +89,6 @@ blocks:
       This sum will be distributed by the Starknet Foundation to two cohorts of developers, (a) dApp Developers and (b) Core Developers, as follows:
 
 
-
-
       #### Fee allocation for dApp Developers
 
 
@@ -107,8 +103,6 @@ blocks:
       \
 
       A description of the fee allocation algorithm and the list of recipient Starknet accounts can be found [here](https://starkware.notion.site/starkware/Devonomics-Pilot-Program-4d75aad22a8b437bb1032dc9ad6e1adb).
-
-
 
 
       #### Fee allocation for Core Developers
