@@ -10,6 +10,10 @@ blocks:
     variant: dapps
     title: Explore Starknet
     description: ""
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: test
   - type: flex_layout
     heading_variant: null
     blocks:
