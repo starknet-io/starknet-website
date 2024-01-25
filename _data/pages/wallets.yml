@@ -17,6 +17,25 @@ blocks:
         description: Secure, open-source and easy to use. 7 out of 10 Starknet users
           choose Argent X. Get multisig security, fraud protection, and
           dedicated customer support.
+        type_list:
+          - type: Browser Extension
+        image: /assets/argent.jpg
+        website_url: https://www.argent.xyz/argent-x/
+      - title: Bravvos
+        description: " Braavos Smart Wallet offers an unparalleled UX and advance
+          security via its Hardware Signer 2-factor authentication and
+          multi-signer 3-factor authentication capabilities."
+        image: /assets/braavos.jpg
+        type_list:
+          - type: Browser Extension
+        website_url: https://braavos.app
+  - type: card_list
+    randomize: false
+    card_list_items:
+      - title: Argent X
+        description: Secure, open-source and easy to use. 7 out of 10 Starknet users
+          choose Argent X. Get multisig security, fraud protection, and
+          dedicated customer support.
         link_url: https://www.argent.xyz/argent-x/
         website_url: https://www.argent.xyz/argent-x/
         discord: https://discord.gg/8yVmtsgtgm
