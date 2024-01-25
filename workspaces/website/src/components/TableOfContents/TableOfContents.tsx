@@ -19,7 +19,7 @@ const Item = ({ children, subItem, isActive, ...rest }: ItemProps) => {
       pl="16px"
       {...rest}
       lineHeight="1em"
-      py="11px"
+      paddingBottom="11px"
       fontSize="14px"
       color={isActive ? "listLink-fg" : "fg-muted"}
       ml={subItem ? "32px" : "0"}
@@ -29,7 +29,7 @@ const Item = ({ children, subItem, isActive, ...rest }: ItemProps) => {
         content: "''",
         position: "absolute",
         left: "-6px",
-        top: "11px",
+        top: "5px",
         width: "5px",
         height: "14px",
         borderRadius: "1px",
