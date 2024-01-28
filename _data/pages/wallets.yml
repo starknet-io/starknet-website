@@ -13,7 +13,7 @@ blocks:
   - type: card_list
     randomize: true
     card_list_items:
-      - title: Argent X
+      - title: Argent
         description: Secure, open-source and easy to use. 7 out of 10 Starknet users
           choose Argent X. Get multisig security, fraud protection, and
           dedicated customer support.
