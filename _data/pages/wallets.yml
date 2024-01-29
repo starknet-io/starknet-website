@@ -11,53 +11,54 @@ blocks:
     description: "Explore the wallets that allow you to interact with and build in
       the Starknet ecosystem. "
   - type: card_list
-    randomize: false
+    randomize: true
     card_list_items:
-      - image: /assets/braavos.jpg
-        title: Braavos
-        link_url: https://braavos.app
-        description: " Braavos Smart Wallet offers an unparalleled UX and advance
-          security via its Hardware Signer 2-factor authentication and
-          multi-signer 3-factor authentication capabilities."
-        website_url: https://braavos.app
-        twitter: https://twitter.com/myBraavos
-        discord: https://discord.com/invite/bFvwjYhuqp
-        type_list:
-          - type: Browser Extension
-            url: https://chrome.google.com/webstore/detail/braavos-smart-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma
-          - type: ios
-            url: https://apps.apple.com/us/app/braavos-wallet/id1636013523
-          - type: Android
-            url: https://play.google.com/store/apps/details?id=app.braavos.wallet
-      - title: Argent X
+      - title: Argent
         description: Secure, open-source and easy to use. 7 out of 10 Starknet users
           choose Argent X. Get multisig security, fraud protection, and
           dedicated customer support.
-        link_url: https://www.argent.xyz/argent-x/
-        website_url: https://www.argent.xyz/argent-x/
-        discord: https://discord.gg/8yVmtsgtgm
-        twitter: https://twitter.com/argentHQ
-        image: /assets/argent.jpg
         type_list:
-          - type: Browser Extension
+          - type: Download Browser Extension
             url: https://chrome.google.com/webstore/detail/argent-x/dlcobpjiigpikoobohmabehhmhfoodbb
-          - type: ios
-            url: https://apps.apple.com/us/app/argent-defi-in-a-tap/id1358741926
-          - type: Android
+          - url: https://apps.apple.com/us/app/argent-defi-in-a-tap/id1358741926
+            type: Download iOS
+          - type: Download Android
             url: https://play.google.com/store/apps/details?id=im.argent.contractwalletclient
-          - type: SDK
+          - type: Download SDK
             url: https://www.argent.xyz/web-wallet-sdk
+        image: /assets/argent.jpg
+        website_url: https://www.argent.xyz/argent-x/
+        twitter: https://twitter.com/argentHQ
+        discord: https://discord.gg/8yVmtsgtgm
+      - title: Braavos
+        description: " Braavos Smart Wallet offers an unparalleled UX and advance
+          security via its Hardware Signer 2-factor authentication and
+          multi-signer 3-factor authentication capabilities."
+        image: /assets/braavos.jpg
+        type_list:
+          - type: Download Browser Extension
+            url: https://chrome.google.com/webstore/detail/braavos-smart-wallet/jnlgamecbpmbajjfhmmmlhejkemejdma
+          - url: https://apps.apple.com/us/app/braavos-wallet/id1636013523
+            type: Download iOS
+          - type: Download Android
+            url: https://play.google.com/store/apps/details?id=app.braavos.wallet
+        website_url: https://braavos.app
+        twitter: https://twitter.com/myBraavos
+        discord: https://discord.com/invite/bFvwjYhuqp
+  - type: card_list
+    randomize: false
+    card_list_items:
       - title: OKX
         description: World's leading Web3 multi-chain wallet.
         website_url: https://www.okx.com/web3
         discord: https://discord.com/invite/okx
         twitter: https://twitter.com/okxweb3
         type_list:
-          - type: Browser Extension
+          - type: Download Browser Extension
             url: https://chrome.google.com/webstore/detail/okx-wallet/mcohilncbfahbmgdjkbpemcciiolgcge
-          - type: ios
+          - type: Download iOS
             url: https://apps.apple.com/us/app/okx-buy-bitcoin-eth-crypto/id1327268470
-          - type: Android
+          - type: Download Android
             url: https://play.google.com/store/apps/details?id=com.okinc.okex.gp
         image: /assets/unnamed.jpg
       - title: MetaMask Snaps
