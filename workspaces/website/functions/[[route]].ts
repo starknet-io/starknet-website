@@ -22,6 +22,35 @@ redirects.items.forEach(({ source, destination }) => {
   );
 });
 
+/**
+ * Redirects for old posts.
+ */
+
+router.get(
+  '/:locale?/posts/:category',
+  (req: IRequest, _context: EventContext<{}, any, Record<string, unknown>>) => {
+    return Response.redirect(
+      new URL(
+        `${req.params.locale ? `/${req.params.locale}` : ``}/content/category/${req.params.category}`,
+        req.url
+      ), 
+      301);
+  }
+);
+
+router.get(
+  '/:locale?/posts/:cat/:slug',
+  (req: IRequest, _context: EventContext<{}, any, Record<string, unknown>>) => {
+    return Response.redirect(
+      new URL(
+        `${req.params.locale ? `/${req.params.locale}` : ``}/content/${req.params.slug}`,
+        req.url
+      ),
+    301);
+  }
+);
+
+
 async function ittyAssetshandler(
   req: IRequest,
   context: EventContext<{}, any, Record<string, unknown>>
