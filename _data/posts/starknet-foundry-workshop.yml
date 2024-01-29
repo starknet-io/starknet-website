@@ -61,9 +61,12 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_zjsoscxyn08_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - open_source
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Do you want to contribute to Starknet open-source project? Or are
   you a seasoned contributor looking for new areas to get involved in? During
   this workshop, we will introduce you to Starknet Foundry, a blazingly fast

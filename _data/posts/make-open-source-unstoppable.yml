@@ -66,4 +66,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_nkwniqtbg8e_standard.png
-category: community-and-events
+category:
+  - community-and-events
+  - 32c028d1-89c1-4bba-8015-f6a6a4cb70a0
+  - ecosystem
+topic:
+  - decentralization
+  - open_source

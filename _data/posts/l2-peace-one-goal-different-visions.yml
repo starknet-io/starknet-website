@@ -1,5 +1,5 @@
 id: 53e965fd-374d-465e-8c06-3b5f2d1984a9
-post_type: video
+post_type: audio
 title: STARK Space | L2 Peace - One Goal, Different Visions
 published_date: 2023-04-20T16:00:06.566Z
 video:
@@ -67,7 +67,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/l2-peace-one-goal-different-visions.png
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
 short_desc: >-

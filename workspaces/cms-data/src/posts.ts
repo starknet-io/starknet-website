@@ -14,10 +14,13 @@ export interface Post extends Meta {
   readonly id: string;
   readonly slug: string;
   readonly title: string;
+  readonly seoTitle: string;
   readonly image: string;
   readonly category: string;
   readonly topic: string[];
   readonly short_desc: string;
+  readonly post_desc: string;
+  readonly seo_desc: string;
   readonly post_type: string;
   readonly post_date: string;
   readonly toc: boolean;

@@ -66,4 +66,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/after-3-weeks-of-hacking-onboarding-benjamin-flores.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - engineering
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
+topic:
+  - getting-started

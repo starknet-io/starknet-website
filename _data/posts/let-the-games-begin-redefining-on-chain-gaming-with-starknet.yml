@@ -4,9 +4,13 @@ title: "Let the Games Begin: Redefining On-Chain Gaming with Starknet"
 toc: true
 published_date: 2023-08-03T12:41:17.072Z
 image: /assets/onchain-gaming-copy-3.png
-category: ecosystem
+category:
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - decentralization
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - cairo
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: Starknet is changing the gaming world by enabling fast and cheap
   transactions while providing Ethereum's security. Two of these games are
   Realms and Influence. We’ll explore what the games are all about, which
@@ -131,7 +135,7 @@ blocks:
 
           3. Enhanced control of game assets: players can buy, sell, and trade assets freely without restrictions from a central authority.
 
-          4. Dojo Power: For Realms creators building the game with [Dojo,](https://www.starknet.io/en/posts/developers/dojo-on-starknet-game-on) the world's first provable game engine, has made the work of the game’s developers much easier( Read more about Dojo [here](https://medium.com/starkware/dojo-on-starknet-game-on-f75ad441d869).)  
+          4. Dojo Power: For Realms creators building the game with [Dojo,](https://www.starknet.io/en/content/dojo-on-starknet-game-on) the world's first provable game engine, has made the work of the game’s developers much easier( Read more about Dojo [here](https://medium.com/starkware/dojo-on-starknet-game-on-f75ad441d869).)  
 
           5. Cairo as a bridge: As apparent on Realms [codebase,](https://github.com/BibliothecaDAO) the game was written in Cairo. As the gaming industry moves from Web2 to web3, the fact that Cairo is a Rust-like language can play a crucial role in the gaming landscape on Starknet: Game developers familiar with Rust-like languages can transition into blockchain game development. In this context, Cairo can serve as a bridge. 
 
@@ -149,4 +153,4 @@ blocks:
           Onchain games empower players and are leading to a new era in gaming. This approach, grounded in decentralization, cultivates a player-driven economy and fosters vibrant in-game communities. Moreover, it encourages innovative gameplay, leading to a dynamic, evolving ecosystem. 
 
 
-          Utilizing Cairo, the native language of Starknet only enhances onchain game's ability to succeed as they can process massive computational data, have ultra-efficient verification, and create seamless UX thanks to account abstraction. Additionally, as enhancements such as Volition and [Native Account Abstraction](https://www.starknet.io/en/posts/engineering/native-account-abstraction-opening-blockchain-to-new-possibilities) are integrated into Starknet, the cost of transactions is set to decrease much further. With continuous improvements in the Starknet sequencer, the transaction speed will only increase. Amidst this progressive scenario, the outlook for the gaming industry, and Starknet, has never been more promising.
+          Utilizing Cairo, the native language of Starknet only enhances onchain game's ability to succeed as they can process massive computational data, have ultra-efficient verification, and create seamless UX thanks to account abstraction. Additionally, as enhancements such as Volition and [Native Account Abstraction](https://www.starknet.io/en/content/native-account-abstraction-opening-blockchain-to-new-possibilities) are integrated into Starknet, the cost of transactions is set to decrease much further. With continuous improvements in the Starknet sequencer, the transaction speed will only increase. Amidst this progressive scenario, the outlook for the gaming industry, and Starknet, has never been more promising.

@@ -3,9 +3,9 @@ post_type: video
 title: "Community call #8"
 published_date: 2022-02-15T00:00:00+00:00
 image: /assets/cc08.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
-  - starknet
 short_desc: Hosting Guiltygyoza and Kunho Kim
 video:
   url: https://youtu.be/s1Ja3EmJPt4

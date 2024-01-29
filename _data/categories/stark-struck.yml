@@ -1,2 +1,4 @@
 id: stark-struck
 name: STARK Struck Podcast
+parentCategory: ecosystem
+default_filter: audio

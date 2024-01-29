@@ -3,11 +3,9 @@ post_type: article
 title: Starknet Alpha 0.9.0
 published_date: 2022-06-06T00:00:00+00:00
 image: /assets/1_a3lwzdhzga49vhuvgxtfow-1.png
-category: engineering
+category:
+  - engineering
 topic:
-  - starknet
-  - ethereum
-  - zk-proofs
   - 8930f558-6756-4e54-93e6-349ca99c158e
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: We are happy to introduce Starknet Alpha 0.9.0! This is an important

@@ -4,9 +4,12 @@ title: Trailblazing the Way to Building New Worlds
 toc: true
 published_date: 2023-10-18T06:14:30.425Z
 image: /assets/shoshin-onchain-game-blog-image.jpg
-category: ecosystem
+category:
+  - ecosystem
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: >-
   Starknet has positioned itself as the natural choice for those who spearhead
   the creation of Autonomous Worlds - the convergence of tech, gaming,
@@ -164,10 +167,10 @@ blocks:
       ### **Autonomous Worlds in Action—Shoshin**
 
 
-      In a [previous article](https://www.starknet.io/en/posts/ecosystem/let-the-games-begin-redefining-onchain-gaming-with-starknet), we looked at some of the largest gaming projects built on Starknet — from space colonization strategy games to ‘immutable arcade machines’ enabled by ZK circuits. We reviewed games that can be shaped and continue to evolve with the guidance of their player, even if their creators will not operate them.
+      In a [previous article](https://www.starknet.io/en/content/let-the-games-begin-redefining-onchain-gaming-with-starknet), we looked at some of the largest gaming projects built on Starknet — from space colonization strategy games to ‘immutable arcade machines’ enabled by ZK circuits. We reviewed games that can be shaped and continue to evolve with the guidance of their player, even if their creators will not operate them.
 
 
-      One additional example is [Shoshin](https://twitter.com/Shoshin_gg)—which has implemented a novel way of [onchain gaming](https://www.starknet.io/en/posts/ecosystem/let-the-games-begin-redefining-onchain-gaming-with-starknet) where the *user* programs their character and the actions they take. Once this programmed logic is in place, players can battle with other players’ characters. 
+      One additional example is [Shoshin](https://twitter.com/Shoshin_gg)—which has implemented a novel way of [onchain gaming](https://www.starknet.io/en/content/let-the-games-begin-redefining-onchain-gaming-with-starknet) where the *user* programs their character and the actions they take. Once this programmed logic is in place, players can battle with other players’ characters. 
 
 
       All in-game mechanics are executed within the Cairo virtual machine. Shoshin even had a recent in-person tournament in Palo Alto for pioneer gamers. To try out the game, log in to [shoshin.gg](https://shoshin.gg/), and show off your fighting skills by programming a character no one can beat!

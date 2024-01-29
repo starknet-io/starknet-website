@@ -7,7 +7,10 @@ video:
   id: FWvP5bh0yIM
   data: null
 image: /assets/communitycall-48-starkli-the-new-cli-client-for-starknet-written-in-rust-youtube-thumbnail.png
-category: community-calls
+category:
+  - community-calls
+  - ecosystem
+  - engineering
 topic:
   - open_source
 short_desc: Henrli hosts Jonathan Lei, CTO at zkLend, and creator of Starknet-rs

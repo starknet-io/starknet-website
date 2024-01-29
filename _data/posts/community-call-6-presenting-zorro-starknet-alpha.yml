@@ -2,11 +2,6 @@ id: 5b39ff42-6cd9-4b91-8eba-0320494345c2
 post_type: video
 title: "Community Call #6 | Presenting Zorro, Starknet Alpha"
 published_date: 2022-01-18T00:00:00+00:00
-image: /assets/cc06.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Presenting Zorro, Starknet Alpha
 video:
   url: https://youtu.be/UoL4KGP_KVA
   id: UoL4KGP_KVA
@@ -15,61 +10,8 @@ video:
     etag: aN0OhRdy4mKYcZwDtfx8WsCDGBs
     id: UoL4KGP_KVA
     snippet:
-      publishedAt: 2022-01-18T18:01:41Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #6 | Presenting Zorro, StarkNet Alpha"
-      description: >-
-        00:00:00 Introduction
-
-        00:01:06 Presenting Zorro https://zorro.xyz/
-
-        00:09:23 Why StarkNet
-
-        00:11:57 Lessons learned from building on StarkNet
-
-        00:18:45 How will user experience change on StarkNet rom Ethereum?
-
-        00:21:58 Kleros and Zorro
-
-        00:22:56 How does Zorro works
-
-        00:25:46 Will Zorro have an ambassador program?
-
-        00:28:02 Building an L2 app secured by L1, how to use the messaging bridge
-
-        00:35:16 StarkNet Alpha Update: announcing Apha 0.7.0
-
-        00:39:02 New feature: Contract upgreadability
-
-        00:41:42 New feature: Block timestamp and block number
-
-        00:42:25 New feature: Events
-
-        00:43:30 New feature: Removing builtins directive
-
-        00:45:15  New feature: Multi call in account contract ( arrays of structs in external function)
-
-        00:46:30 StarkNet CLI improvements
-
-        00:50:15 Various questions
-
-        00:52:15 What's coming in the next versions?
-
-        00:54:50 Recursive proofs and their impact on Starknet (cost and delay)
-
-        00:59:20 Block times in StarkNet, and finality
-
-        01:02:01 Discord moderation announcement
-
-        01:02:45 Can I get paid to develop Cairo?
-
-        01:03:15 Should I start with Cairo or Solidity?
-
-        01:04:10 What is the futur of StarkEx
-
-        01:05:20 Contract hash in contract json
-
-        01:07:25 Closing thoughts, upcoming community calls
+      publishedAt: 2022-01-18T18:01:41.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/UoL4KGP_KVA/default.jpg
@@ -91,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/UoL4KGP_KVA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #6 | Presenting Zorro, StarkNet Alpha"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #6 | Presenting Zorro, StarkNet Alpha"
         description: >-
@@ -148,7 +91,59 @@ video:
           01:05:20 Contract hash in contract json
 
           01:07:25 Closing thoughts, upcoming community calls
-      defaultAudioLanguage: en-US
+      description: >-
+        00:00:00 Introduction
+
+        00:01:06 Presenting Zorro https://zorro.xyz/
+
+        00:09:23 Why StarkNet
+
+        00:11:57 Lessons learned from building on StarkNet
+
+        00:18:45 How will user experience change on StarkNet rom Ethereum?
+
+        00:21:58 Kleros and Zorro
+
+        00:22:56 How does Zorro works
+
+        00:25:46 Will Zorro have an ambassador program?
+
+        00:28:02 Building an L2 app secured by L1, how to use the messaging bridge
+
+        00:35:16 StarkNet Alpha Update: announcing Apha 0.7.0
+
+        00:39:02 New feature: Contract upgreadability
+
+        00:41:42 New feature: Block timestamp and block number
+
+        00:42:25 New feature: Events
+
+        00:43:30 New feature: Removing builtins directive
+
+        00:45:15  New feature: Multi call in account contract ( arrays of structs in external function)
+
+        00:46:30 StarkNet CLI improvements
+
+        00:50:15 Various questions
+
+        00:52:15 What's coming in the next versions?
+
+        00:54:50 Recursive proofs and their impact on Starknet (cost and delay)
+
+        00:59:20 Block times in StarkNet, and finality
+
+        01:02:01 Discord moderation announcement
+
+        01:02:45 Can I get paid to develop Cairo?
+
+        01:03:15 Should I start with Cairo or Solidity?
+
+        01:04:10 What is the futur of StarkEx
+
+        01:05:20 Contract hash in contract json
+
+        01:07:25 Closing thoughts, upcoming community calls
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H10M26S
       dimension: 2d
@@ -157,3 +152,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc06.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - 266fa988-350c-4842-b74e-379068ddcf34
+  - decentralization
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+short_desc: Presenting Zorro, Starknet Alpha

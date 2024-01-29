@@ -66,7 +66,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/vid_events01.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
 topic:
-  - starknet
+  - decentralization
 short_desc: "A folk history of Starknet - Sylve Chevet "

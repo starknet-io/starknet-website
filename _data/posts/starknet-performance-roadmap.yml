@@ -3,14 +3,15 @@ post_type: article
 title: Starknet Performance Roadmap
 published_date: 2022-11-29T00:00:00+00:00
 image: /assets/1_gg6iwjzw-bdthpym2n4fcw-1.png
-category: engineering
+category:
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
-  - starknet
   - cairo
-  - ethereum
-  - f9337f26-ae48-4f38-be86-8fe0c465ea13
   - open_source
   - decentralization
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - 1cdb8d7b-46c5-4508-8d55-a07d20bf962d
 short_desc: Starknet launched on Mainnet almost a year ago. We started building
   Starknet by focusing on functionality. Now, we shift the focus to improving
   performance with a series of steps that will help enhance the Starknet

@@ -68,6 +68,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/defi-on-starks-soo-nahm-brian-fu-eduard-jubany-tur-swapnil-raj-david-garai.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 61bb96eb-6401-42ee-8a2c-601e0ef4484c
 topic:
   - defi
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34

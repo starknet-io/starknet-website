@@ -1,14 +1,7 @@
 id: 41fe84d0-475f-47ab-adae-54213fd45099
-post_type: video
+post_type: audio
 title: STARK Struck Podcast | Ep 2 |  Sylve & Lancelot from briq
 published_date: 2022-08-22T00:00:00+00:00
-image: /assets/starkstruck02.jpg
-category: stark-struck
-topic:
-  - starknet
-short_desc: Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot from
-  briq, on what gets them excited about technology in general, blockchain in
-  particular, and validity rollups specifically.
 video:
   url: https://youtu.be/_Z9nIoAKQQE
   id: _Z9nIoAKQQE
@@ -17,22 +10,8 @@ video:
     etag: t8PEfnNlY7M9sjGtsMc9bcigidg
     id: _Z9nIoAKQQE
     snippet:
-      publishedAt: 2022-08-22T07:58:15Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: STARK Struck Podcast | Episode 2 | Henri Lieutaud with Sylve & Lancelot
-        from briq
-      description: >-
-        Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot
-        from briq, on what gets them excited about technology in general,
-        blockchain in particular, and validity rollups specifically.
-
-
-        Listen on Spotify!
-
-        https://open.spotify.com/episode/3cNel3yyvAU4c0RZs5Mjvm?si=w1kyJLl6SRWJhNmAA5iaxA
-
-
-        Twitter: @sylvechv @wraitii @henrlihenrli @Starknet_Intern
+      publishedAt: 2022-08-22T07:58:15.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/_Z9nIoAKQQE/default.jpg
@@ -54,15 +33,17 @@ video:
           url: https://i.ytimg.com/vi/_Z9nIoAKQQE/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: STARK Struck Podcast | Episode 2 | Henri Lieutaud with Sylve & Lancelot
+        from briq
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: STARK Struck Podcast | Episode 2 | Henri Lieutaud with Sylve & Lancelot
           from briq
         description: >-
-          Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot
-          from briq, on what gets them excited about technology in general,
+          Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot from
+          briq, on what gets them excited about technology in general,
           blockchain in particular, and validity rollups specifically.
 
 
@@ -72,7 +53,19 @@ video:
 
 
           Twitter: @sylvechv @wraitii @henrlihenrli @Starknet_Intern
-      defaultAudioLanguage: en-US
+      description: >-
+        Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot from
+        briq, on what gets them excited about technology in general, blockchain
+        in particular, and validity rollups specifically.
+
+
+        Listen on Spotify!
+
+        https://open.spotify.com/episode/3cNel3yyvAU4c0RZs5Mjvm?si=w1kyJLl6SRWJhNmAA5iaxA
+
+
+        Twitter: @sylvechv @wraitii @henrlihenrli @Starknet_Intern
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT54M22S
       dimension: 2d
@@ -81,3 +74,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/starkstruck02.jpg
+category:
+  - ecosystem
+  - stark-struck
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: Join Henri Lieutaud from the StarkNet team and Sylve & Lancelot from
+  briq, on what gets them excited about technology in general, blockchain in
+  particular, and validity rollups specifically.

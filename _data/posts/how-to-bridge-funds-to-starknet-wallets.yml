@@ -80,7 +80,8 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/how-to-bridge-funds-to-starknet-wallets.png
-category: stark-math
+category:
+  - stark-math
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
   - getting-started

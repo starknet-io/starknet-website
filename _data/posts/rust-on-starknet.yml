@@ -55,9 +55,14 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_5byzskxvagg_maxres.png
-category: community-and-events
+category:
+  - community-and-events
+  - 67da7f3a-f26c-430c-92e1-95d58ed5b597
+  - engineering
+  - 7ba4608d-fdbd-4385-b56f-40ec1db13859
 topic:
-  - 043289e7-3b15-4840-9172-534d12593089
+  - cairo
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: >+
   In this talk, Georgios Konstantopoulos, CTO of Paradigm, will go over how the
   Rust programming language unlocked performance and developer experience

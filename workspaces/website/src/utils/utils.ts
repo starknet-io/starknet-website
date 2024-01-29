@@ -25,7 +25,7 @@ export function getComputedLinkData(
   } else if (link.page_data) {
     href = link.page_data.link;
   } else if (link.post_data) {
-    href = `/${locale}/posts/${link.post_data.category}/${link.post_data.slug}`;
+    href = `/${locale}/content/${link.post_data.slug}`;
   }
 
   if(!href){

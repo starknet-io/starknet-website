@@ -4,7 +4,9 @@ import { getFirst, getJSON } from "@starknet-io/cms-utils/src/index";
 export interface Category {
   readonly id: string;
   readonly slug: string;
+  readonly parentCategory?: string;
   readonly name: string;
+  readonly default_filter?: string;
   readonly show_custom_featured_post?: boolean;
   readonly custom_featured_post?: string;
 }

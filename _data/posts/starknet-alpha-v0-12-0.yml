@@ -7,7 +7,11 @@ video:
   id: ORTCn29ze6U
   data: null
 image: /assets/communitycall-47-starknet-alpha-v0.12.0-web.png
-category: community-calls
+category:
+  - ecosystem
+  - community-calls
+  - governance
+topic: []
 short_desc: >-
   StarkWare and Lambda Class will present to the builders council and delegates
   Starknet new version in preparation for the upcoming vote.

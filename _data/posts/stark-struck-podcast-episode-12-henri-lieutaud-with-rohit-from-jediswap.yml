@@ -1,5 +1,5 @@
 id: d9e5e378-2a09-4a95-85b5-8fa12e00afbf
-post_type: video
+post_type: audio
 title: Episode 12 | Henri Lieutaud with Rohit from Jediswap
 published_date: 2023-03-19T12:56:37.715Z
 video:
@@ -65,7 +65,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-struck-episode-12.jpg
-category: stark-struck
+category:
+  - ecosystem
+  - stark-struck
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: >
   Join Henri Lieutaud from the Starknet team and Rohit from Jediswap on what
   gets them excited about technology in general, blockchain in particular, and

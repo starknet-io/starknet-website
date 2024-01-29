@@ -3,12 +3,11 @@ post_type: article
 title: Cairo 1.0-Alpha.2 — New release is coming
 published_date: 2023-01-26T00:00:00+00:00
 image: /assets/cairo_1_alpha.png
-category: engineering
+category:
+  - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
 topic:
   - cairo
-  - ethereum
-  - starknet
-  - open_source
 short_desc: Cairo 1.0 is continuing its fast improvement pace. Today’s release
   introduces, among other things, all the necessary features to write an ERC-20
   contract.

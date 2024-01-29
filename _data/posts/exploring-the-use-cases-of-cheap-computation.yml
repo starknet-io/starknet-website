@@ -4,12 +4,12 @@ title: Exploring the Use Cases of Cheap Computation
 toc: true
 published_date: 2023-05-06T10:37:34.408Z
 image: /assets/exploring-the-use-cases-of-cheap-computation-image.png
-category: ecosystem
+category:
+  - engineering
 topic:
-  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
-  - 2a495711-4f06-4d7a-8d6a-539f0ad7ac24
-  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - account-abstraction
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: What new use cases of cheap computation does Starknet enable, and
   how can devs take advantage?
 blocks:
@@ -168,7 +168,7 @@ blocks:
       ## Conclusion
 
 
-      With the intensive research around the “modular blockchain” space, the “bringing one billion users” goal is getting closer and closer. And with Starknet, cheap computation is here, [and it’s only getting cheaper](https://www.starknet.io/de/posts/engineering/starknet-performance-roadmap).
+      With the intensive research around the “modular blockchain” space, the “bringing one billion users” goal is getting closer and closer. And with Starknet, cheap computation is here, [and it’s only getting cheaper](https://www.starknet.io/en/content/starknet-performance-roadmap).
 
 
       The growing [Starknet book](https://book.starknet.io/chapter_2/index.html) offers an excellent starting point for developers embarking on their Cairo journey for Starknet, with chapters 0 to 2 providing an introduction to various topics.

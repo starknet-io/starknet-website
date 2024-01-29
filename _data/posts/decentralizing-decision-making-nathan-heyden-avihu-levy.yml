@@ -2,11 +2,6 @@ id: 64edc726-d180-41be-91b7-5008aab8b83d
 post_type: video
 title: Decentralizing Decision Making- Nathan Heyden & Avihu Levy
 published_date: 2021-10-26T15:44:45.500Z
-image: /assets/interviews03.jpg
-category: ecosystem
-topic:
-  - starknet
-short_desc: Presented @ Village Underground, Lisbon 2021
 video:
   url: https://www.youtube.com/watch?v=jh6PSiY1-xo
   id: jh6PSiY1-xo
@@ -15,14 +10,8 @@ video:
     etag: CHd9Bvv5iBzIQiipFQzBWKRWmxU
     id: jh6PSiY1-xo
     snippet:
-      publishedAt: 2021-10-26T17:38:01Z
-      channelId: UCSm6Gic3HQHoFd7k3x8LNkQ
-      title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden &
-        Avihu Levy @ The DAOist Lisbon"
-      description: |-
-        Presented @ Village Underground, Lisbon 2021
-
-        *Apologies for the low quality of the recording.
+      publishedAt: 2021-10-26T17:38:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/jh6PSiY1-xo/default.jpg
@@ -45,8 +34,9 @@ video:
           width: 1280
           height: 720
       channelTitle: The DAOist
+      title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden &
+        Avihu Levy @ The DAOist Lisbon"
       categoryId: "24"
-      liveBroadcastContent: none
       localized:
         title: "Snapshot & StarkWare: Decentralizing Decision Making- Nathan Heyden &
           Avihu Levy @ The DAOist Lisbon"
@@ -54,6 +44,11 @@ video:
           Presented @ Village Underground, Lisbon 2021
 
           *Apologies for the low quality of the recording.
+      description: |-
+        Presented @ Village Underground, Lisbon 2021
+
+        *Apologies for the low quality of the recording.
+      channelId: UCSm6Gic3HQHoFd7k3x8LNkQ
     contentDetails:
       duration: PT22M22S
       dimension: 2d
@@ -62,3 +57,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/interviews03.jpg
+category:
+  - ecosystem
+topic:
+  - decentralization
+short_desc: Presented @ Village Underground, Lisbon 2021

@@ -59,7 +59,7 @@
     "cors": "^2.8.5",
     "date-fns": "^3.2.0",
     "eslint": "^8.39.0",
-    "framer-motion": "^10.12.4",
+    "framer-motion": "^10.16.16",
     "fsevents": "^2.3.2",
     "highlight.js": "^11.8.0",
     "highlightjs-cairo": "^0.2.0",

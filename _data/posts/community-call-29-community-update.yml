@@ -2,13 +2,6 @@ id: 635a2044-f216-49a6-ae15-c4907beb09f6
 post_type: video
 title: "Community Call #29 | Community Update"
 published_date: 2022-12-13T12:57:36.219Z
-image: /assets/cc29.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: "Join us for our #29 Starknet community call with @OhadBarta and
-  Ariel (@FeedTheFed)! Ohad will be talking about AAVE Starknet deployment, and
-  Ariel will be giving an in-depth look at Sierra."
 video:
   url: https://youtu.be/5FiioicgnDo
   id: 5FiioicgnDo
@@ -17,12 +10,8 @@ video:
     etag: 2fQwLvo8O4LORW9wU_3OXYdDKuM
     id: 5FiioicgnDo
     snippet:
-      publishedAt: 2022-12-14T02:32:51Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #29 | Community Update"
-      description: "Join us for our #29 StarkNet community call with @OhadBarta and
-        Ariel (@FeedTheFed)! Ohad will be talking about AAVE StarkNet
-        deployment, and Ariel will be giving an in-depth look at Sierra."
+      publishedAt: 2022-12-14T02:32:51.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/5FiioicgnDo/default.jpg
@@ -44,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/5FiioicgnDo/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #29 | Community Update"
       tags:
         - Cairo
         - StarkNet
@@ -54,13 +45,15 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #29 | Community Update"
         description: "Join us for our #29 StarkNet community call with @OhadBarta and
           Ariel (@FeedTheFed)! Ohad will be talking about AAVE StarkNet
           deployment, and Ariel will be giving an in-depth look at Sierra."
-      defaultAudioLanguage: en-US
+      description: "Join us for our #29 StarkNet community call with @OhadBarta and
+        Ariel (@FeedTheFed)! Ohad will be talking about AAVE StarkNet
+        deployment, and Ariel will be giving an in-depth look at Sierra."
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT58M1S
       dimension: 2d
@@ -69,3 +62,13 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc29.jpg
+category:
+  - ecosystem
+  - community-calls
+topic:
+  - decentralization
+  - defi
+short_desc: "Join us for our #29 Starknet community call with @OhadBarta and
+  Ariel (@FeedTheFed)! Ohad will be talking about AAVE Starknet deployment, and
+  Ariel will be giving an in-depth look at Sierra."

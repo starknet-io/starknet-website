@@ -10,17 +10,8 @@ video:
     etag: UIBPje_UugPEr4Oq_t97n2k8Byw
     id: ee3S83TaKM4
     snippet:
-      publishedAt: 2023-06-07T01:24:55Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #45 | Dynamic layouts: faster, cheaper proving"
-      description: >-
-        In this talk, we will discuss what dynamic layouts are and how Starknet
-        benefits from them.
-
-
-        For further elaboration:
-
-        https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
+      publishedAt: 2023-06-07T01:24:55.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/ee3S83TaKM4/default.jpg
@@ -42,7 +33,9 @@ video:
           url: https://i.ytimg.com/vi/ee3S83TaKM4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #45 | Dynamic layouts: faster, cheaper proving"
       tags:
         - Cairo
         - Starknet
@@ -53,7 +46,6 @@ video:
         - permissionless
         - layer 2
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #45 | Dynamic layouts: faster, cheaper proving"
         description: >-
@@ -64,7 +56,15 @@ video:
           For further elaboration:
 
           https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
-      defaultAudioLanguage: en-US
+      description: >-
+        In this talk, we will discuss what dynamic layouts are and how Starknet
+        benefits from them.
+
+
+        For further elaboration:
+
+        https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT41M16S
       dimension: 2d
@@ -74,10 +74,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-45-dynamic-layouts_-faster-cheaper-proving-youtube-web.png
-category: community-calls
+category:
+  - community-calls
+  - ecosystem
 topic:
   - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
-  - b2d50af7-aea1-44e6-a81e-626a35bdb68c
 short_desc: In this talk, we will discuss dynamic layouts and how Starknet
   benefits from them.
 blocks:

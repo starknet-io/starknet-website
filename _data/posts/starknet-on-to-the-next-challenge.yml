@@ -3,10 +3,9 @@ post_type: article
 title: "Starknet: On to the Next Challenge"
 published_date: 2022-02-09T00:00:00+00:00
 image: /assets/1_hcc7wxgymohcplclwucdya-1.png
-category: engineering
+category:
+  - engineering
 topic:
-  - ethereum
-  - starknet
   - 951d072d-3e2e-4915-9bb9-b1b50f62fb55
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4

@@ -6,6 +6,7 @@ type props = {
   variant:
     | "solid"
     | "outline"
+    | "outlineFull"
     | "outlineLight"
     | "outlineRounded"
     | "ghost"
@@ -14,7 +15,10 @@ type props = {
     | "switch"
     | "filter"
     | "filterActive"
+    | "smallFilter"
+    | "smallFilterActive"
     | "category"
+    | "categoryVertical"
     | "icon"
     | "gradient";
   children: React.ReactNode;

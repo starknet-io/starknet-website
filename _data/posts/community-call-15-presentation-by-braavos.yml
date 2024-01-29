@@ -2,11 +2,6 @@ id: c02eaf96-e99e-4cc4-94df-d1eab7166397
 post_type: video
 title: "Community Call #15 | Presentation by Braavos"
 published_date: 2022-05-24T14:07:30.249Z
-image: /assets/cc15.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Join us for our 15th community call - Presentation by Braavos
 video:
   url: https://youtu.be/rnjkUexnJHw
   id: rnjkUexnJHw
@@ -15,10 +10,8 @@ video:
     etag: 9TkQCQTAtNDqi7QsOA4-Hj6jVUU
     id: rnjkUexnJHw
     snippet:
-      publishedAt: 2022-05-25T01:18:27Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #15 | Presentation by Braavos"
-      description: Join us for our 15th community call - Presentation by Braavos
+      publishedAt: 2022-05-25T01:18:27.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/rnjkUexnJHw/default.jpg
@@ -40,13 +33,15 @@ video:
           url: https://i.ytimg.com/vi/rnjkUexnJHw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #15 | Presentation by Braavos"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #15 | Presentation by Braavos"
         description: Join us for our 15th community call - Presentation by Braavos
-      defaultAudioLanguage: en-US
+      description: Join us for our 15th community call - Presentation by Braavos
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT39M35S
       dimension: 2d
@@ -55,3 +50,9 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc15.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+short_desc: Join us for our 15th community call - Presentation by Braavos
