@@ -123,3 +123,7 @@ items:
     destination: /en/community/online-communities
   - source: /ar/community/governance/delegation-agreement
     destination: /en/community
+  - source: /:locale/posts
+    destination: /:locale/content
+  - source: /posts
+    destination: /en/content
