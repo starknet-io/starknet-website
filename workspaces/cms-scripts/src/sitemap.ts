@@ -125,17 +125,17 @@ const parsePosts = async () => {
   const { filenameMap } = await getPosts();
   const categories: string[] = [];
 
-  filenameMap.forEach(({ locale, category: filenameCategory, slug, published_date, post_type, video }) => {
-    const category = filenameCategory === 'engineering' ? 'developers' : filenameCategory;
+  filenameMap.forEach(({ locale, category: fileCategories, slug, published_date, post_type, video }) => {
+    for (const category of fileCategories) {
+      if (!categories.includes(category)) {
+        categories.push(category);
 
-    if (!categories.includes(category)) {
-      categories.push(category);
-
-      sitemapUrls.push({
-        url: `/${locale}/content/category/${category}`,
-        changefreq: 'weekly',
-        priority: 0.8 
-      });
+        sitemapUrls.push({
+          url: `/${locale}/content/category/${category}`,
+          changefreq: 'weekly',
+          priority: 0.8 
+        });
+      }
     }
 
     let sitemapEntry: SitemapUrl = {
