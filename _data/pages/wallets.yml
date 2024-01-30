@@ -62,9 +62,16 @@ blocks:
             url: https://play.google.com/store/apps/details?id=com.okinc.okex.gp
         image: /assets/unnamed.jpg
       - title: MetaMask Snaps
-        description: Manage your Starknet assets with MetaMask
+        description: Manage your Starknet assets with MetaMask.
         link_url: https://snaps.consensys.io/starknet
         image: /assets/starkware-metamask.png
         website_url: https://snaps.consensys.io/starknet
         twitter: https://twitter.com/MetaMask
         discord: https://discord.com/invite/consensys
+      - title: Bitget
+        description: "Multi-Chain, Non-custodial Trading wallet trusted by 15 million
+          users globally. "
+        image: /assets/512.png
+        website_url: https://web3.bitget.com/
+        twitter: https://x.com/bitgetwallet
+        discord: https://discord.com/invite/bitgetwallet
