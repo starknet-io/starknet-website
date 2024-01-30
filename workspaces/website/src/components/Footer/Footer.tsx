@@ -156,37 +156,50 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   order={{ base: 1, lg: 2 }}
                   paddingTop={{ base: "40px", md: "0px" }}
                 >
-                  <IconButton
-                    as="a"
-                    href="https://starknet.io/discord"
-                    aria-label="Discord"
-                    icon={<SiDiscord fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
+                  <Link href="https://starknet.io/discord" isExternal>
+                    <IconButton
+                      as="a"
+                      aria-label="Discord"
+                      icon={<SiDiscord fontSize="1.25rem" />}
+                      size="small"
+                      marginRight="16px"
+                    />
+                  </Link>
+                  <Link
                     href="https://github.com/starknet-io/starknet-website"
-                    aria-label="GitHub"
-                    icon={<SiGithub fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
+                    isExternal
+                  >
+                    <IconButton
+                      as="a"
+                      href="https://github.com/starknet-io/starknet-website"
+                      aria-label="GitHub"
+                      icon={<SiGithub fontSize="1.25rem" />}
+                      size="small"
+                      marginRight="16px"
+                    />
+                  </Link>
+                  <Link
                     href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
-                    aria-label="YouTube"
-                    icon={<SiYoutube fontSize="1.25rem" />}
-                    size="small"
-                    marginRight="16px"
-                  />
-                  <IconButton
-                    as="a"
-                    href="https://twitter.com/Starknet"
-                    aria-label="Twitter"
-                    icon={<SiTwitter fontSize="1.25rem" />}
-                    size="small"
-                  />
+                    isExternal
+                  >
+                    <IconButton
+                      as="a"
+                      href="https://www.youtube.com/channel/UCnDWguR8mE2oDBsjhQkgbvg"
+                      aria-label="YouTube"
+                      icon={<SiYoutube fontSize="1.25rem" />}
+                      size="small"
+                      marginRight="16px"
+                    />
+                  </Link>
+                  <Link href="https://twitter.com/Starknet" isExternal>
+                    <IconButton
+                      as="a"
+                      aria-label="Twitter"
+                      icon={<SiTwitter fontSize="1.25rem" />}
+                      size="small"
+                    />
+                  </Link>
+
                 </ButtonGroup>
               </Stack>
             </Box>
