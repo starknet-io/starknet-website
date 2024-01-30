@@ -158,7 +158,7 @@ blocks:
           ecosystem.
         icon: /assets/deposit-withdraw.svg
         link:
-          custom_title: View options
+          custom_title: View Bridges & on-ramps
           page: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
         withIllustration: true
   - type: community_events
