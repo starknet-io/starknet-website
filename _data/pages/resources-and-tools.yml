@@ -50,21 +50,6 @@ blocks:
         subLabel:
           label: Cairo library to build ZKML programs
   - type: link_list
-    heading: Development frameworks - Cairo 0
-    listSize: lg
-    randomize: true
-    blocks:
-      - link:
-          custom_title: "Protostar "
-          custom_external_link: https://github.com/software-mansion/protostar
-        subLabel:
-          label: Starknet smart contract development toolchain
-      - link:
-          custom_title: Nile
-          custom_external_link: https://github.com/OpenZeppelin/nile
-        subLabel:
-          label: CLI tool for interacting with Starknet projects
-  - type: link_list
     randomize: true
     heading: Development frameworks - Cairo
     blocks:
@@ -229,3 +214,19 @@ blocks:
           custom_external_link: https://github.com/dethcrypto/TypeChain
         subLabel:
           label: TypeScript bindings generator for Cairo
+  - type: link_list
+    heading: "[Deprecated] Development frameworks - Cairo 0"
+    listSize: lg
+    randomize: true
+    blocks:
+      - link:
+          custom_title: "Protostar "
+          custom_external_link: https://github.com/software-mansion/protostar
+        subLabel:
+          label: Starknet smart contract development toolchain
+      - link:
+          custom_title: Nile
+          custom_external_link: https://github.com/OpenZeppelin/nile
+          hasIcon: false
+        subLabel:
+          label: CLI tool for interacting with Starknet projects
