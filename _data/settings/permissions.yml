@@ -2,10 +2,6 @@ items:
   - username: lorcan-codes
     access:
       - all
-  - username: milosyuki
-    name: Miloš Leković
-    access:
-      - all
   - username: thecotne
     name: Tsotne
     access:
