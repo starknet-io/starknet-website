@@ -1,0 +1,68 @@
+id: 34c933d7-9283-43f1-affc-d42e916e3208
+post_type: video
+title: Ethereum and Starknet in 2024
+published_date: 2024-01-31T09:08:04.875Z
+video:
+  url: "https://youtube.com/live/cn0-3522Lbw "
+  id: cn0-3522Lbw
+  data:
+    kind: youtube#video
+    etag: gilyzU-q43S_1s9zkY6ilBPGFNM
+    id: cn0-3522Lbw
+    snippet:
+      publishedAt: 2024-01-31T04:31:54Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Ethereum and Starknet in 2024
+      description: Let’s discuss Starknet, Ethereum, and the road ahead for 2024! Join
+        Eric Wall for a special discussion with Eli Ben Sasson, Avihu Levy, and
+        Liron Hayman to discuss Starknet being unaligned, what’s next for Cairo,
+        and which milestones will shape 2024.
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/cn0-3522Lbw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/cn0-3522Lbw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/cn0-3522Lbw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/cn0-3522Lbw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/cn0-3522Lbw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "26"
+      liveBroadcastContent: none
+      localized:
+        title: Ethereum and Starknet in 2024
+        description: Let’s discuss Starknet, Ethereum, and the road ahead for 2024! Join
+          Eric Wall for a special discussion with Eli Ben Sasson, Avihu Levy,
+          and Liron Hayman to discuss Starknet being unaligned, what’s next for
+          Cairo, and which milestones will shape 2024.
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT59M23S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/ethereum-and-starknet-in-2024-premiere.jpg
+category:
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic:
+  - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
+  - cairo
+short_desc: Let’s discuss Starknet, Ethereum, and the road ahead for 2024! Join
+  Eric Wall for a special discussion with Eli Ben Sasson, Avihu Levy, and Liron
+  Hayman to discuss Starknet being unaligned, what’s next for Cairo, and which
+  milestones will shape 2024.
