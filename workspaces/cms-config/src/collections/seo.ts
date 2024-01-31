@@ -2,7 +2,7 @@ import { CmsCollection } from "../types";
 
 export const SEOCollectionConfig = {
   crowdin: true,
-  label: "SEO",
+  label: "Main Header",
   name: "seo",
   files: [
     {
