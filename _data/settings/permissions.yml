@@ -17,10 +17,6 @@ items:
   - username: robwalsh21
     access:
       - all
-  - username: AmalyStark
-    name: Amalya
-    access:
-      - all
   - username: Tal-wagner
     access:
       - all
