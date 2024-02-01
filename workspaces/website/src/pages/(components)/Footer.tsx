@@ -86,6 +86,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
                             <FooterComponent.FooterLink
                               isExternal={item.custom_external_link != null}
                               href={href}
+                              target="_blank"
                               key={itemIndex}
                             >
                               {label}
