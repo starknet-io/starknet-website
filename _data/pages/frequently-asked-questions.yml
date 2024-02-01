@@ -115,7 +115,7 @@ blocks:
           state (although you can access those, as explained below). 
 
 
-          Starknet contracts, on the other hand, live in the Starknet VM, which has a persistent state that smart contracts can access and modify. These smart contracts can store variables, communicate with other contracts, and send/receive messages to/from L1 ([read more](https://www.cairo-lang.org/docs/hello_starknet/index.html)).
+          Starknet contracts, on the other hand, live in the Starknet VM, which has a persistent state that smart contracts can access and modify. These smart contracts can store variables, communicate with other contracts, and send/receive messages to/from L1 ([read more](https://docs.starknet.io/documentation/tools/starknet-book/)).
       - type: accordion_item
         label: Do I have to write my contract in Cairo to deploy on Starknet?
         body: >-
