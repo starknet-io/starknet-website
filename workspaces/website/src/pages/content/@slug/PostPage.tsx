@@ -236,6 +236,7 @@ export function PostPage(props: Props): JSX.Element {
               <Flex direction="column" gap="32px" marginBottom={'96px'}>
                 {post.blocks?.map((block, i) => (
                   <Block
+                    disallowH1
                     key={i}
                     block={block}
                     locale={locale}

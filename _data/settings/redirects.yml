@@ -127,3 +127,20 @@ items:
     destination: /:locale/content
   - source: /posts
     destination: /en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1
+    destination: https://www.starknet.io/en/content
+  - source: /en/announcements
+    destination: https://www.starknet.io/en/content
+  - source: /en/announcements/product-update-april-2023
+    destination: https://www.starknet.io/en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1/introducing-the-starknet-foundation
+    destination: https://www.starknet.io/en/content/introducing-the-starknet-foundation
+  - source: /en/announcements
+    destination: https://www.starknet.io/en/content  
+  - source: /en/home
+    destination: https://www.starknet.io/en
+  - source: /en/announcements/product-update-april-2023
+    destination: https://www.starknet.io/en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1
+    destination: https://www.starknet.io/en/content
+      

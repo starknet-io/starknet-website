@@ -22,6 +22,7 @@ import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
 
 interface Props {
+  disallowH1?: boolean;
   readonly block: TopLevelBlock;
   env: {
     CLOUDFLARE_RECAPTCHA_KEY: string;
@@ -29,7 +30,7 @@ interface Props {
   readonly locale: string;
 }
 
-export function Block({ block, env, locale }: Props): JSX.Element | null {
+export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | null {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "container") {
@@ -50,7 +51,7 @@ export function Block({ block, env, locale }: Props): JSX.Element | null {
   } else if (block.type === "newsletter_popup") {
     return <NewsletterCard {...block} env={env} locale={locale} />;
   } else if (block.type === "markdown") {
-    return <MarkdownBlock body={block.body} /> ;
+    return <MarkdownBlock disallowH1={disallowH1} body={block.body} /> ;
   } else if (block.type === "ambassadors_list") {
     return <AmbassadorsList {...block} />;
   } else if (block.type === "community_events") {
@@ -88,7 +89,7 @@ export function Block({ block, env, locale }: Props): JSX.Element | null {
       <AccordionRoot heading={block.heading}>
         {block.blocks?.map((block, i) => (
           <AccordionItem key={i} label={block.label}>
-            <MarkdownBlock body={block.body} />
+            <MarkdownBlock disallowH1={disallowH1} body={block.body} />
           </AccordionItem>
         ))}
       </AccordionRoot>
@@ -103,7 +104,7 @@ export function Block({ block, env, locale }: Props): JSX.Element | null {
         {blocks.map((block: any, i: number) => {
           return (
             <OrderedBlockItem key={i} title={block.title}>
-              <MarkdownBlock body={block.body} />
+              <MarkdownBlock disallowH1={disallowH1} body={block.body} />
             </OrderedBlockItem>
           );
         })}

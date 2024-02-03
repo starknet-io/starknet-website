@@ -1,6 +1,6 @@
 id: 7fe45680-e38f-4f11-a30c-8a6380881566
 post_type: video
-title: L2 Peace - Twitter Space
+title: L2 Peace - Scaling Ethereum with Vitalik Buterin and L2 Leaders
 published_date: 2024-01-25T16:14:00.406Z
 video:
   url: https://www.youtube.com/watch?v=zqXXGjyMkIQ
@@ -10,15 +10,8 @@ video:
     etag: Mxvs1n03eNGrWqn4gkdS4bnHt_s
     id: zqXXGjyMkIQ
     snippet:
-      publishedAt: 2024-01-18T15:58:35Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: L2 peace
-      description: "Bringing together - once again - all the L2s to discuss the many
-        ways to scale Ethereum, the challenges and milestones ahead, and why
-        we’re all gonna make it (!!).\r
-
-        With Arbitrum, Polygon, Starknet, Scroll, zkSync, RISC Zero and
-        Linea"
+      publishedAt: 2024-01-18T15:58:35.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/zqXXGjyMkIQ/default_live.jpg
@@ -40,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/zqXXGjyMkIQ/maxresdefault_live.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: L2 peace
       categoryId: "26"
-      liveBroadcastContent: none
       localized:
         title: L2 peace
         description: "Bringing together - once again - all the L2s to discuss the many
@@ -51,7 +45,13 @@ video:
 
           With Arbitrum, Polygon, Starknet, Scroll, zkSync, RISC Zero
           and Linea"
-      defaultAudioLanguage: en-US
+      description: "Bringing together - once again - all the L2s to discuss the many
+        ways to scale Ethereum, the challenges and milestones ahead, and why
+        we’re all gonna make it (!!).\r
+
+        With Arbitrum, Polygon, Starknet, Scroll, zkSync, RISC Zero and
+        Linea"
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1H2M30S
       dimension: 2d
