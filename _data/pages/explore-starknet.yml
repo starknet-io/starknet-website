@@ -42,7 +42,16 @@ blocks:
             color: blue-default
             columns: "4"
             orientation: left
-            title: More wallets
+            title: OKX
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: MetaMask Snaps
+            icon: /assets/starkware-metamask.png
+            type: image_icon_link_card
+            columns: "4"
           - type: image_icon_link_card
             variant: image_icon_link_card
             size: large
@@ -50,7 +59,8 @@ blocks:
             color: blue-default
             columns: "4"
             orientation: left
-            title: More wallets
+            link:
+              custom_title: Bitget
         base: 4
         heading: ""
         md: 4
