@@ -62,6 +62,9 @@ blocks:
             title: MetaMask Snaps
             icon: /assets/starkware-metamask.png
             type: image_icon_link_card
+            link:
+              custom_title: Install MetaMask Snaps
+              custom_external_link: https://snaps.consensys.io/starknet
             columns: "4"
           - size: large
             color: blue-default
@@ -69,9 +72,11 @@ blocks:
             orientation: left
             withIllustration: false
             title: Bitget
+            icon: /assets/512.png
             type: image_icon_link_card
             link:
               custom_title: Install Bitget
+              custom_external_link: https://web3.bitget.com/
             columns: "4"
         base: 4
         heading: ""
