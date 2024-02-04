@@ -153,3 +153,59 @@ blocks:
         md: 3
         lg: 3
     heading: Learn. Connect. Stay up-to-date
+  - type: heading_container
+    heading_variant: h2
+    blocks:
+      - type: flex_layout
+        heading_variant: sm
+        blocks:
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Developers hub
+            icon: /assets/developers.svg
+            type: image_icon_link_card
+            link:
+              custom_title: Developers hub
+              custom_internal_link: https://www.starknet.io/en/developers
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Starknet Book
+            icon: /assets/read-book.svg
+            type: image_icon_link_card
+            link:
+              custom_title: Starknet Book
+              custom_external_link: https://book.starknet.io/
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Starklings Tutorial
+            type: image_icon_link_card
+            link:
+              custom_external_link: https://github.com/shramee/starklings-cairo1
+              custom_title: Starklings Tutorial
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Node Guardians tutorials
+            type: image_icon_link_card
+            link:
+              custom_title: Node Guardians tutorial
+              custom_external_link: https://nodeguardians.io/dev-hub?s=devhub-campaigns&sc=cairo-thinking
+            columns: "4"
+        base: 4
+        md: 4
+        lg: 4
+    heading: Start Building
