@@ -1,5 +1,6 @@
 id: 9f037d68-bb1a-4cd9-80f4-693bfc107702
 title: Explore Starknet
+show_title: false
 template: landing
 hideToc: false
 hidden_page: false
@@ -135,6 +136,18 @@ blocks:
               custom_title: Check out our upcoming events
               custom_internal_link: https://www.starknet.io/en/events
               page: ""
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Glossary
+            icon: /assets/orange.svg
+            type: image_icon_link_card
+            link:
+              custom_internal_link: https://www.starknet.io/en/learn/glossary
+              custom_title: Glossary
             columns: "4"
         base: 4
         md: 4
