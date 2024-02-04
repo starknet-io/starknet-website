@@ -89,15 +89,54 @@ blocks:
       - type: flex_layout
         heading_variant: sm
         blocks:
-          - type: image_icon_link_card
+          - size: large
+            color: blue-default
             variant: image_icon_link_card
-            size: large
-            withIllustration: false
-            color: pink
-            columns: "4"
             orientation: left
+            withIllustration: false
             title: Starknet Ecosystem
+            icon: /assets/sn-ecosystem.jpg
+            type: image_icon_link_card
+            link:
+              custom_external_link: https://www.starknet-ecosystem.com/
+              custom_title: Explore the Starknet Ecosystem
+            columns: "4"
         base: 4
         md: 4
         lg: 4
     heading: Explore Starknet
+  - type: heading_container
+    heading_variant: h2
+    blocks:
+      - type: flex_layout
+        heading_variant: sm
+        blocks:
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: What is Starknet?
+            icon: /assets/starknet_edu.svg
+            type: image_icon_link_card
+            link:
+              custom_title: Understand Starknet and how it works
+              custom_internal_link: https://www.starknet.io/en/learn/what-is-starknet
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Upcoming events
+            icon: /assets/community-events.svg
+            type: image_icon_link_card
+            link:
+              custom_title: Check out our upcoming events
+              custom_internal_link: https://www.starknet.io/en/events
+              page: ""
+            columns: "4"
+        base: 4
+        md: 4
+        lg: 4
+    heading: Learn. Connect. Stay up-to-date
