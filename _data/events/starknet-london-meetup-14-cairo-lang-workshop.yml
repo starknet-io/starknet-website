@@ -1,0 +1,25 @@
+type: meetup
+name: "Starknet London Meetup #14: Cairo Lang Workshop"
+description: "Electric Capital's latest crypto developer report reveals Starknet
+  as the fastest-growing ecosystem by overall monthly devs 🚀 Join our London
+  Cairo community and find out why so many of us are head down building on
+  Starknet!  In the February edition, we welcome back Robert Kodra, Starknet
+  Foundation's developer advocate, as our guest speaker!  He'll introduce us to
+  the theory and resources needed to build smart contracts on Starknet 🔐  The
+  workshop will cover:  the anatomy of a smart contract key concepts such as the
+  constructor, the storage of the contract, and exposing functions
+  cross-contract interaction and using external dependencies such as
+  OpenZeppelin Deploying smart contracts on testnet with the Starkli CLI ➕ An
+  interactive coding session! Open to all skill levels.  Food & drinks will be
+  served as usual!🍕🍻 📣 Location update: 2nd floor, 8-10 Nile Street, N1
+  7RF  As always, remember to bring your laptop! Secure your spot by registering
+  ✨💅✨ For a more tailored experience, fill out our brief survey."
+url: https://www.meetup.com/starknet-london/events/298859896
+start_date: 2024-02-15T16:30:54.307Z
+month: February 2024
+end_date: 2024-02-15T18:30:54.315Z
+show_in_past_events: false
+image: /assets/600_511316115.jpeg
+location: europe
+city: London
+country: United Kingdom
