@@ -1,0 +1,17 @@
+id: 9f037d68-bb1a-4cd9-80f4-693bfc107702
+title: Explore Starknet
+template: landing
+hideToc: false
+hidden_page: false
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: dapps
+    title: Explore Starknet
+    description: ""
+    leftBoxMaxWidth: -1
+  - type: heading_container
+    heading_variant: h2
+    blocks: []
+    heading: Istall your Starknet Account
