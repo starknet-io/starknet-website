@@ -96,7 +96,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Starknet Ecosystem
-            icon: ""
+            icon: /assets/dapps.svg
             type: image_icon_link_card
             link:
               custom_external_link: https://www.starknet-ecosystem.com/
@@ -129,6 +129,18 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
+            title: FAQs
+            icon: /assets/online-communities.svg
+            type: image_icon_link_card
+            link:
+              custom_internal_link: https://www.starknet.io/en/learn/frequently-asked-questions
+              custom_title: Get answers for your questions
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
             title: Upcoming events
             icon: /assets/community-events.svg
             type: image_icon_link_card
@@ -137,19 +149,7 @@ blocks:
               custom_internal_link: https://www.starknet.io/en/events
               page: ""
             columns: "4"
-          - size: large
-            color: blue-default
-            variant: image_icon_link_card
-            orientation: left
-            withIllustration: false
-            title: Glossary
-            icon: /assets/orange.svg
-            type: image_icon_link_card
-            link:
-              custom_internal_link: https://www.starknet.io/en/learn/glossary
-              custom_title: Glossary
-            columns: "4"
-        base: 4
-        md: 4
-        lg: 4
+        base: 3
+        md: 3
+        lg: 3
     heading: Learn. Connect. Stay up-to-date
