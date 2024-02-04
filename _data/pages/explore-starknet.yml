@@ -25,6 +25,10 @@ blocks:
             title: Argent
             icon: /assets/argent.jpg
             type: image_icon_link_card
+            link:
+              custom_internal_link: ""
+              custom_title: Argent
+              custom_external_link: https://www.argent.xyz/argent-x/
             columns: "4"
           - size: large
             color: blue-default
@@ -65,4 +69,22 @@ blocks:
         heading: ""
         md: 4
         lg: 4
-    heading: Istall your Starknet Account
+    heading: Install your Starknet Account
+  - type: heading_container
+    heading_variant: h2
+    blocks:
+      - type: flex_layout
+        heading_variant: sm
+        blocks:
+          - type: image_icon_link_card
+            variant: image_icon_link_card
+            size: large
+            withIllustration: false
+            color: pink
+            columns: "4"
+            orientation: left
+            title: Starknet Ecosystem
+        base: 4
+        md: 4
+        lg: 4
+    heading: Explore Starknet
