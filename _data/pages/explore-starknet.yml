@@ -23,11 +23,11 @@ blocks:
             orientation: left
             withIllustration: false
             title: Argent
-            icon: /assets/argent.jpg
+            icon: /assets/hito-orange.png
             type: image_icon_link_card
             link:
               custom_internal_link: ""
-              custom_title: Argent
+              custom_title: Install Argent
               custom_external_link: https://www.argent.xyz/argent-x/
             columns: "4"
           - size: large
@@ -36,17 +36,24 @@ blocks:
             orientation: left
             withIllustration: false
             title: Braavos
-            icon: /assets/braavos.jpg
+            icon: /assets/logo-golden.png
             type: image_icon_link_card
+            link:
+              custom_title: Install Braavos
+              custom_external_link: https://braavos.app/
             columns: "4"
-          - type: image_icon_link_card
-            variant: image_icon_link_card
-            size: large
-            withIllustration: false
+          - size: large
             color: blue-default
-            columns: "4"
+            variant: image_icon_link_card
             orientation: left
+            withIllustration: false
             title: OKX
+            icon: /assets/okx-logo-black-and-white.png
+            type: image_icon_link_card
+            link:
+              custom_title: Install OKX
+              custom_external_link: https://www.okx.com/web3
+            columns: "4"
           - size: large
             color: blue-default
             variant: image_icon_link_card
@@ -56,15 +63,16 @@ blocks:
             icon: /assets/starkware-metamask.png
             type: image_icon_link_card
             columns: "4"
-          - type: image_icon_link_card
-            variant: image_icon_link_card
-            size: large
-            withIllustration: false
+          - size: large
             color: blue-default
-            columns: "4"
+            variant: image_icon_link_card
             orientation: left
+            withIllustration: false
+            title: Bitget
+            type: image_icon_link_card
             link:
-              custom_title: Bitget
+              custom_title: Install Bitget
+            columns: "4"
         base: 4
         heading: ""
         md: 4
