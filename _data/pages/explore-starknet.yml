@@ -82,7 +82,7 @@ blocks:
         base: 5
         heading: ""
         md: 5
-        lg: 6
+        lg: 5
     heading: Install your Starknet Account
   - type: heading_container
     heading_variant: h2
