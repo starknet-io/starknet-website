@@ -13,5 +13,46 @@ blocks:
     leftBoxMaxWidth: -1
   - type: heading_container
     heading_variant: h2
-    blocks: []
+    blocks:
+      - type: flex_layout
+        heading_variant: sm
+        blocks:
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Argent
+            icon: /assets/argent.jpg
+            type: image_icon_link_card
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Braavos
+            icon: /assets/braavos.jpg
+            type: image_icon_link_card
+            columns: "4"
+          - type: image_icon_link_card
+            variant: image_icon_link_card
+            size: large
+            withIllustration: false
+            color: blue-default
+            columns: "4"
+            orientation: left
+            title: More wallets
+          - type: image_icon_link_card
+            variant: image_icon_link_card
+            size: large
+            withIllustration: false
+            color: blue-default
+            columns: "4"
+            orientation: left
+            title: More wallets
+        base: 4
+        heading: ""
+        md: 4
+        lg: 4
     heading: Istall your Starknet Account
