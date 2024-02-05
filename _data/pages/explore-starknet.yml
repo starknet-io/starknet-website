@@ -189,6 +189,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Starklings Tutorial
+            icon: ""
             type: image_icon_link_card
             link:
               custom_external_link: https://github.com/shramee/starklings-cairo1
