@@ -188,24 +188,24 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: Starklings Tutorial
-            icon: /assets/artboard.png
-            type: image_icon_link_card
-            link:
-              custom_external_link: https://github.com/shramee/starklings-cairo1
-              custom_title: Starklings Tutorial
-            columns: "4"
-          - size: large
-            color: blue-default
-            variant: image_icon_link_card
-            orientation: left
-            withIllustration: false
             title: Node Guardians tutorials
             icon: /assets/artboard-2.png
             type: image_icon_link_card
             link:
               custom_title: Node Guardians tutorial
               custom_external_link: https://nodeguardians.io/dev-hub?s=devhub-campaigns&sc=cairo-thinking
+            columns: "4"
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Starklings Tutorial
+            icon: /assets/artboard.png
+            type: image_icon_link_card
+            link:
+              custom_external_link: https://github.com/shramee/starklings-cairo1
+              custom_title: Starklings Tutorial
             columns: "4"
         base: 4
         md: 4
