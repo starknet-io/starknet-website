@@ -60,11 +60,11 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: MetaMask Snaps
+            title: MetaMask
             icon: /assets/starkware-metamask.png
             type: image_icon_link_card
             link:
-              custom_title: Install MetaMask Snaps
+              custom_title: Install MetaMask
               custom_external_link: https://snaps.consensys.io/starknet
             columns: "4"
           - size: large
@@ -103,8 +103,8 @@ blocks:
               custom_title: Explore the Starknet Ecosystem
             columns: "4"
         base: 1
-        md: 1
-        lg: 1
+        md: 2
+        lg: 2
     heading: Explore Starknet
   - type: heading_container
     heading_variant: h2
