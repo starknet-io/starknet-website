@@ -51,3 +51,7 @@ items:
     name: Nitzan Grossman
     access:
       - all
+  - username: "@dmill123"
+    name: Devorah Miller
+    access:
+      - all
