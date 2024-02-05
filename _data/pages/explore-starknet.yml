@@ -90,7 +90,7 @@ blocks:
       - type: flex_layout
         heading_variant: sm
         blocks:
-          - size: small
+          - size: large
             color: blue-default
             variant: image_icon_link_card
             orientation: left
@@ -102,9 +102,10 @@ blocks:
               custom_external_link: https://www.starknet-ecosystem.com/
               custom_title: Explore the Starknet Ecosystem
             columns: "4"
-        base: 1
+        base: 2
         md: 2
         lg: 2
+        xl: 0
     heading: Explore Starknet
   - type: heading_container
     heading_variant: h2
