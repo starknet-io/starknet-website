@@ -189,7 +189,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Starklings Tutorial
-            icon: ""
+            icon: /assets/artboard.png
             type: image_icon_link_card
             link:
               custom_external_link: https://github.com/shramee/starklings-cairo1
@@ -201,6 +201,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Node Guardians tutorials
+            icon: /assets/artboard-2.png
             type: image_icon_link_card
             link:
               custom_title: Node Guardians tutorial
