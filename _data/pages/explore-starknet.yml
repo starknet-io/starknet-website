@@ -153,7 +153,7 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: Node Guardians tutorials
+            title: Node Guardians
             icon: /assets/artboard-2.png
             type: image_icon_link_card
             link:
