@@ -28,7 +28,7 @@ blocks:
             type: image_icon_link_card
             link:
               custom_internal_link: ""
-              custom_title: Install Argent
+              custom_title: Install
               custom_external_link: https://www.argent.xyz/argent-x/
             columns: "4"
           - size: large
@@ -40,7 +40,7 @@ blocks:
             icon: /assets/logo-golden.png
             type: image_icon_link_card
             link:
-              custom_title: Install Braavos
+              custom_title: Install
               custom_external_link: https://braavos.app/
             columns: "4"
           - size: large
@@ -52,7 +52,7 @@ blocks:
             icon: /assets/okx-logo-black-and-white.png
             type: image_icon_link_card
             link:
-              custom_title: Install OKX
+              custom_title: Install
               custom_external_link: https://www.okx.com/web3
             columns: "4"
           - size: large
@@ -64,7 +64,7 @@ blocks:
             icon: /assets/starkware-metamask.png
             type: image_icon_link_card
             link:
-              custom_title: Install MetaMask
+              custom_title: Install
               custom_external_link: https://snaps.consensys.io/starknet
             columns: "4"
           - size: large
@@ -76,7 +76,7 @@ blocks:
             icon: /assets/512.png
             type: image_icon_link_card
             link:
-              custom_title: Install Bitget
+              custom_title: Install
               custom_external_link: https://web3.bitget.com/
             columns: "4"
         base: 5
