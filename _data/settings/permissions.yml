@@ -2,10 +2,6 @@ items:
   - username: lorcan-codes
     access:
       - all
-  - username: milosyuki
-    name: Miloš Leković
-    access:
-      - all
   - username: thecotne
     name: Tsotne
     access:
@@ -15,13 +11,6 @@ items:
     access:
       - all
   - username: robwalsh21
-    access:
-      - all
-  - username: AmalyStark
-    name: Amalya
-    access:
-      - all
-  - username: Tal-wagner
     access:
       - all
   - username: JameStark
@@ -55,15 +44,10 @@ items:
   - username: tal5674
     access:
       - all
-  - username: Mrericsumner
+  - username: noab-starkware
     access:
-      - posts
-  - username: OfirEinhorn
+      - all
+  - username: NitzanGrossman
+    name: Nitzan Grossman
     access:
-      - posts
-  - username: Poley7
-    access:
-      - posts
-  - username: dmill123
-    access:
-      - posts
+      - all
