@@ -121,7 +121,7 @@ blocks:
             icon: /assets/developers.svg
             type: image_icon_link_card
             link:
-              custom_title: Developers hub
+              custom_title: Explore the hub
               custom_internal_link: https://www.starknet.io/en/developers
             columns: "4"
           - size: large
@@ -133,7 +133,7 @@ blocks:
             icon: /assets/read-book.svg
             type: image_icon_link_card
             link:
-              custom_title: Starknet Book
+              custom_title: Read the book
               custom_external_link: https://book.starknet.io/
             columns: "4"
           - size: large
