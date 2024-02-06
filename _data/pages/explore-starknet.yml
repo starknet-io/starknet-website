@@ -53,7 +53,8 @@ blocks:
             type: image_icon_link_card
             link:
               custom_title: View all Starknet wallets
-              page: d202009a-3541-4366-b664-36ef2e492aa3
+              page: ""
+              custom_internal_link: https://www.starknet.io/en/ecosystem/wallets
             columns: "4"
         base: 3
         heading: ""
