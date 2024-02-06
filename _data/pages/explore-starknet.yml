@@ -50,6 +50,7 @@ blocks:
             color: blue-default
             columns: "4"
             orientation: left
+            icon: /assets/wallet.svg
         base: 3
         heading: ""
         md: 3
