@@ -28,7 +28,7 @@ blocks:
             type: image_icon_link_card
             link:
               custom_internal_link: ""
-              custom_title: Install
+              custom_title: Install Argent
               custom_external_link: https://www.argent.xyz/argent-x/
             columns: "4"
           - size: large
@@ -40,7 +40,7 @@ blocks:
             icon: /assets/gradient-logo-1.png
             type: image_icon_link_card
             link:
-              custom_title: Install
+              custom_title: Install Braavos
               custom_external_link: https://braavos.app/
             columns: "4"
           - size: large
@@ -60,7 +60,7 @@ blocks:
         heading: ""
         md: 3
         lg: 3
-    heading: Install your Starknet account
+    heading: Open your Starknet account
   - type: heading_container
     heading_variant: h2
     blocks:
