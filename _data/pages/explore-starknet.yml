@@ -24,7 +24,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Argent
-            icon: /assets/hito-orange.png
+            icon: /assets/hito-orange-1-1.png
             type: image_icon_link_card
             link:
               custom_internal_link: ""
@@ -37,20 +37,24 @@ blocks:
             orientation: left
             withIllustration: false
             title: Braavos
-            icon: /assets/logo-golden.png
+            icon: /assets/gradient-logo-1.png
             type: image_icon_link_card
             link:
               custom_title: Install
               custom_external_link: https://braavos.app/
             columns: "4"
-          - type: image_icon_link_card
-            variant: image_icon_link_card
-            size: large
-            withIllustration: false
+          - size: large
             color: blue-default
-            columns: "4"
+            variant: image_icon_link_card
             orientation: left
+            withIllustration: false
+            title: More wallets
             icon: /assets/wallet.svg
+            type: image_icon_link_card
+            link:
+              custom_title: View all Starknet wallets
+              page: d202009a-3541-4366-b664-36ef2e492aa3
+            columns: "4"
         base: 3
         heading: ""
         md: 3
