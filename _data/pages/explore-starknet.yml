@@ -60,7 +60,7 @@ blocks:
         heading: ""
         md: 3
         lg: 3
-    heading: Install your Starknet Account
+    heading: Install your Starknet account
   - type: heading_container
     heading_variant: h2
     blocks:
