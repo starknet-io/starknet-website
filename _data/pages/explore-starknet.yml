@@ -43,46 +43,17 @@ blocks:
               custom_title: Install
               custom_external_link: https://braavos.app/
             columns: "4"
-          - size: large
-            color: blue-default
+          - type: image_icon_link_card
             variant: image_icon_link_card
-            orientation: left
+            size: large
             withIllustration: false
-            title: OKX
-            icon: /assets/okx-logo-black-and-white.png
-            type: image_icon_link_card
-            link:
-              custom_title: Install
-              custom_external_link: https://www.okx.com/web3
-            columns: "4"
-          - size: large
             color: blue-default
-            variant: image_icon_link_card
-            orientation: left
-            withIllustration: false
-            title: MetaMask
-            icon: /assets/starkware-metamask.png
-            type: image_icon_link_card
-            link:
-              custom_title: Install
-              custom_external_link: https://snaps.consensys.io/starknet
             columns: "4"
-          - size: large
-            color: blue-default
-            variant: image_icon_link_card
             orientation: left
-            withIllustration: false
-            title: Bitget
-            icon: /assets/512.png
-            type: image_icon_link_card
-            link:
-              custom_title: Install
-              custom_external_link: https://web3.bitget.com/
-            columns: "4"
-        base: 5
+        base: 3
         heading: ""
-        md: 5
-        lg: 5
+        md: 3
+        lg: 3
     heading: Install your Starknet Account
   - type: heading_container
     heading_variant: h2
@@ -96,7 +67,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Starknet Ecosystem
-            icon: /assets/block_explorer.svg
+            icon: /assets/block_explorer-2-.svg
             type: image_icon_link_card
             link:
               custom_external_link: https://www.starknet-ecosystem.com/
