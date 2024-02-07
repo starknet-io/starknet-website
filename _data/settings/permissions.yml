@@ -32,3 +32,7 @@ items:
     name: Devorah Miller
     access:
       - all
+  - username: tal5674
+    name: Tal Levin
+    access:
+      - all
