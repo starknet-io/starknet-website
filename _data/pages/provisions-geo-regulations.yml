@@ -1,0 +1,24 @@
+id: 0f3711d7-0c82-4235-87b3-2c4ab1a8c671
+title: provisions geo regulations
+show_title: false
+template: content
+hideToc: false
+hidden_page: false
+breadcrumbs: false
+page_last_updated: false
+blocks:
+  - type: markdown
+    body: >-
+      **Can’t reach the Starknet Provisions Program portal?**\
+
+      Note that due to regulatory constraints Please note that the Starknet Provisions portal is not presently available in several regions due to regulatory restrictions concerning the follow persons or entities::
+
+
+      * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the US Treasury’s Office of Foreign Assets Control (OFAC).
+
+      * Any person or entity on the UK Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI). 
+
+      * Any person or entity in the US, and any countries designated by the US or the UK as sanctioned jurisdictions.
+
+
+      For more information on the Starknet Provisions Program, please read this blog post.
