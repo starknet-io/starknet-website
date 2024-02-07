@@ -1,21 +1,4 @@
 items:
-  - username: lorcan-codes
-    access:
-      - all
-  - username: thecotne
-    name: Tsotne
-    access:
-      - all
-  - username: thorville
-    name: Keith Tormey
-    access:
-      - all
-  - username: robwalsh21
-    access:
-      - all
-  - username: JameStark
-    access:
-      - roadmap
   - username: LiranRich
     access:
       - events
@@ -29,9 +12,6 @@ items:
     access:
       - jobs
   - username: Igal Steklov
-    access:
-      - all
-  - username: Penguinseo
     access:
       - all
   - username: stoobie
