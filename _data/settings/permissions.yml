@@ -11,9 +11,10 @@ items:
   - username: " thedamooo"
     access:
       - jobs
-  - username: Igal Steklov
+  - username: igalst
     access:
       - all
+    name: Igal Steklov
   - username: stoobie
     access:
       - roadmap
