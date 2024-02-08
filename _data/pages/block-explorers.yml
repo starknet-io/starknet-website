@@ -107,5 +107,11 @@ blocks:
         discord: discord.gg/nftscan
         image: /assets/400_400.png
         twitter: https://twitter.com/nftscan_com
+      - title: ArkProject
+        description: "Crosschain Infrastructure for Digital Assets Exchange: Appchain
+          Orderbook, Starknet NFT API, NFT Indexer, Starknet NFT Bridge."
+        twitter: https://twitter.com/ArkProjectNFTs
+        website_url: https://www.arkproject.dev/
+        image: /assets/arkproject_square.png
     description: An enhanced API is a set of tools designed to simplify developers’
       access to complex queries on Starknet data.
