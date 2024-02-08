@@ -84,20 +84,20 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: "DeFi Quest! Coming soon "
-            icon: /assets/full_nodes_and_api_services.svg
+            title: Bridge
             type: image_icon_link_card
+            link:
+              custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
+              custom_external_link: https://starkgate.starknet.io/
             columns: "4"
           - size: large
             color: blue-default
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: Bridge
+            title: "DeFi Quest! Coming soon "
+            icon: /assets/full_nodes_and_api_services.svg
             type: image_icon_link_card
-            link:
-              custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
-              custom_external_link: https://starkgate.starknet.io/
             columns: "4"
         base: 3
         md: 3
