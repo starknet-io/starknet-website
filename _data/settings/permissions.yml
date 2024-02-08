@@ -21,6 +21,7 @@ items:
   - username: OfirEinhorn
     access:
       - all
+      - settings
   - username: noab-starkware
     access:
       - all
