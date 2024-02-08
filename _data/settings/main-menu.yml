@@ -82,7 +82,7 @@ items:
                 custom_external_link: https://starknet.io/discord
               - custom_title: GitHub
                 custom_icon: SiGithub
-                custom_external_link: https://github.com/keep-starknet-strange/awesome-starknet
+                custom_external_link: https://github.com/keep-starknet-strange/awesome-
               - custom_title: Twitter
                 custom_icon: SiTwitter
                 custom_internal_link: ""
