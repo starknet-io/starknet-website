@@ -10,11 +10,8 @@ video:
     etag: EBZVuvt07ohH-yB0QQlMQG_Gz6I
     id: a2F7-liHZzM
     snippet:
-      publishedAt: 2024-02-08T04:15:23Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Data Availability with Avail
-      description: Join Abdel from StarkWare in conversation with Anurag, co-founder
-        of Avail, and Apoorv from Karnot about Data Availability and Starknet!
+      publishedAt: 2024-02-08T04:15:23.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/a2F7-liHZzM/default.jpg
@@ -36,14 +33,17 @@ video:
           url: https://i.ytimg.com/vi/a2F7-liHZzM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Data Availability with Avail
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Data Availability with Avail
         description: Join Abdel from StarkWare in conversation with Anurag, co-founder
           of Avail, and Apoorv from Karnot about Data Availability and Starknet!
-      defaultAudioLanguage: en-US
+      description: Join Abdel from StarkWare in conversation with Anurag, co-founder
+        of Avail, and Apoorv from Karnot about Data Availability and Starknet!
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT56M25S
       dimension: 2d
@@ -57,3 +57,6 @@ category:
   - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
   - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+post_desc: >
+  Join Abdel from StarkWare in conversation with Anurag, co-founder of Avail,
+  and Apoorv from Karnot about Data Availability and Starknet!
