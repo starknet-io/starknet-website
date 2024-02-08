@@ -84,13 +84,24 @@ blocks:
             variant: image_icon_link_card
             orientation: left
             withIllustration: false
-            title: DeFi Quest! More details soon
+            title: "DeFi Quest! Coming soon "
             icon: /assets/full_nodes_and_api_services.svg
             type: image_icon_link_card
             columns: "4"
-        base: 2
-        md: 2
-        lg: 2
+          - size: large
+            color: blue-default
+            variant: image_icon_link_card
+            orientation: left
+            withIllustration: false
+            title: Bridge
+            type: image_icon_link_card
+            link:
+              custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
+              custom_external_link: https://starkgate.starknet.io/
+            columns: "4"
+        base: 3
+        md: 3
+        lg: 3
         xl: 0
     heading: Explore Starknet
   - type: heading_container
@@ -108,7 +119,7 @@ blocks:
             icon: /assets/developers.svg
             type: image_icon_link_card
             link:
-              custom_title: Explore the hub
+              custom_title: Explore developer resources
               custom_internal_link: https://www.starknet.io/en/developers
             columns: "4"
           - size: large
@@ -120,7 +131,7 @@ blocks:
             icon: /assets/read-book.svg
             type: image_icon_link_card
             link:
-              custom_title: Read the book
+              custom_title: Develop on Starknet
               custom_external_link: https://book.starknet.io/
             columns: "4"
           - size: large
@@ -133,7 +144,7 @@ blocks:
             type: image_icon_link_card
             link:
               custom_external_link: https://github.com/shramee/starklings-cairo1
-              custom_title: Starklings tutorial
+              custom_title: Follow the tutorial
             columns: "4"
           - size: large
             color: blue-default
@@ -144,7 +155,7 @@ blocks:
             icon: /assets/developers-blog.svg
             type: image_icon_link_card
             link:
-              custom_title: Node Guardians tutorial
+              custom_title: "Join the quests "
               custom_external_link: https://nodeguardians.io/dev-hub?s=devhub-campaigns&sc=cairo-thinking
             columns: "4"
         base: 4
