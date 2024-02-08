@@ -85,6 +85,7 @@ blocks:
             orientation: left
             withIllustration: false
             title: Bridge
+            icon: /assets/onramp.svg
             type: image_icon_link_card
             link:
               custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
