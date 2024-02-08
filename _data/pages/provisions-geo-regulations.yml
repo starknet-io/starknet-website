@@ -2,7 +2,7 @@ id: 0f3711d7-0c82-4235-87b3-2c4ab1a8c671
 title: provisions geo regulations
 show_title: false
 template: content
-hideToc: false
+hideToc: true
 hidden_page: false
 breadcrumbs: false
 page_last_updated: false
