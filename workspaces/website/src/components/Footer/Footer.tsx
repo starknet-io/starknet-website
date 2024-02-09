@@ -63,7 +63,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
               opacity="1"
               display={{ base: "flex", md: "none" }}
             />
-            <Stack 
+            <Stack
               pt="40px"
               pb={{ base: "40px", md: "0px" }}
               px="30px"
@@ -111,9 +111,9 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                 px="30px"
                 justifyContent={{ md: "space-between"}}
               >
-                <Stack 
-                  gap={{ base: "24px", md: "0px" }} 
-                  direction={{ base: "column", md: "row" }} 
+                <Stack
+                  gap={{ base: "24px", md: "0px" }}
+                  direction={{ base: "column", md: "row" }}
                   align={{ base: "start", md: "center" }}
                   height={{ base: "auto", md: "32px" }}
                   spacing="16px"
@@ -132,7 +132,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     {seo?.footerText}
                   </Text>
                 </Stack>
-                <Stack 
+                <Stack
                   display={{ base: "none", xl: "flex" }}
                   direction="row"
                   gap="30px"
@@ -166,7 +166,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   />
                   <IconButton
                     as="a"
-                    href="https://github.com/starknet-io/starknet-website"
+                    href="https://github.com/keep-starknet-strange/awesome-starknet"
                     aria-label="GitHub"
                     icon={<SiGithub fontSize="1.25rem" />}
                     size="small"
