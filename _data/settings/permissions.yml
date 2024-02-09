@@ -67,3 +67,7 @@ items:
   - username: dmill123
     access:
       - posts
+  - username: igalst
+    name: Igal Steklov
+    access:
+      - all
