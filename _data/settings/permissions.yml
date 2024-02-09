@@ -39,9 +39,6 @@ items:
   - username: " thedamooo"
     access:
       - jobs
-  - username: Igal Steklov
-    access:
-      - all
   - username: Penguinseo
     access:
       - all
