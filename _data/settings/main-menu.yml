@@ -86,7 +86,7 @@ items:
               - custom_title: Twitter
                 custom_icon: SiTwitter
                 custom_internal_link: ""
-                custom_external_link: https://twitter.com/Starknet2
+                custom_external_link: https://twitter.com/Starknet
   - title: Resources
     columns:
       - blocks:
@@ -99,8 +99,8 @@ items:
               - custom_title: Starknet EDU newsletter
                 custom_external_link: https://starknet.substack.com/
               - custom_title: Starknet research hub
-                custom_external_link: https://starknet-research.beehiiv.com/2
-              - custom_title: Starknet Edu Blog1
+                custom_external_link: https://starknet-research.beehiiv.com/
+              - custom_title: Starknet Edu Blog
                 custom_external_link: https://medium.com/starknet-edu
                 hide_from_footer: true
 
