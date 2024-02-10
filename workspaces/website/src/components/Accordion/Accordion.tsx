@@ -24,8 +24,8 @@ const navigation = definePartsStyle({
     },
 
     _expanded: {
-      bg: "nav-accordian-expanded-bg",
-      color: "nav-accordian-expanded-fg",
+      bg: "nav-accordion-expanded-bg",
+      color: "nav-accordion-expanded-fg",
     },
   },
 });
@@ -75,7 +75,7 @@ const page = definePartsStyle({
 
     _expanded: {
       color: "heading-navy-fg",
-      // bg: "nav-accordian-expanded-bg",
+      // bg: "nav-accordion-expanded-bg",
     },
   },
 });

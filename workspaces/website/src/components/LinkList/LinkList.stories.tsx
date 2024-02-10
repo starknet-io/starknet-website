@@ -41,7 +41,7 @@ export const Basic = () => (
   </ThemeProvider>
 );
 
-export const Seperated = () => {
+export const Separated = () => {
   const [size, setSize] = useState<ListSize>("md");
 
   return (
@@ -58,7 +58,7 @@ export const Seperated = () => {
         </Stack>
       </RadioGroup>
       <HStack>
-        <Root heading="List with seperated items" listGap={size}>
+        <Root heading="List with separated items" listGap={size}>
           <Item
             link={{
               custom_title: "Documentation 2",

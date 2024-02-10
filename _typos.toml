@@ -1,0 +1,14 @@
+[default]
+check-filename = false
+
+[default.extend-words]
+# Don't correct the abbreviation for Haskell.
+Hask = "Hask"
+AGS = "AGS"
+
+[type.po]
+extend-glob = ["*.po", "*.css"]
+check-file = false
+
+[files]
+extend-exclude = ["po/*.po", "_data/*", "./public/assets/*"]

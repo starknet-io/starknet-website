@@ -48,7 +48,7 @@ export const NavBar = ({
     onClose();
   }, [onClose, pathname]);
 
-  const toogleTheme = () => {
+  const toggleTheme = () => {
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
@@ -106,7 +106,7 @@ export const NavBar = ({
                 }
                 flex="1"
                 height="100%"
-                onClick={toogleTheme}
+                onClick={toggleTheme}
                 size="lg"
               >
                 {colorMode === "light" ? "Dark" : "Light"} mode

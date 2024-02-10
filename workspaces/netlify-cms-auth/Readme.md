@@ -6,7 +6,7 @@ the CMS auth has a [url callback whitelist](src/callback.ts?plain=63) and is dep
 | Name          | netlify-cms-auth  |
 | usage model   | Unbound           |
 
-### enviroment variables and secrets
+### environment variables and secrets
 #### in cloudflare
 | Name                       | Type    | Description                                     |
 |----------------------------|---------|-------------------------------------------------|

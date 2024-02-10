@@ -8,10 +8,10 @@ import { ArrowUpIcon } from "./ArrowUpIcon";
 
 export type ListSize = "sm" | "md" | "lg";
 
-const ListContext = createContext<{ listSize: ListSize; isSeperated: boolean }>(
+const ListContext = createContext<{ listSize: ListSize; isSeparated: boolean }>(
   {
     listSize: "md",
-    isSeperated: false,
+    isSeparated: false,
   }
 );
 type RootProps = {
@@ -51,7 +51,7 @@ const Root = (props: RootProps) => {
         gap={gap[listGap as ListSize] || "0px"}
       >
         <ListContext.Provider
-          value={{ listSize: listSize || "md", isSeperated: !!listGap }}
+          value={{ listSize: listSize || "md", isSeparated: !!listGap }}
         >
           {children}
         </ListContext.Provider>
@@ -88,7 +88,7 @@ const getLinkIcon = (iconName?: string) => {
   return HiOutlineArrowRightCircle;
 };
 const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
-  const { listSize, isSeperated } = useContext(ListContext);
+  const { listSize, isSeparated } = useContext(ListContext);
   const isLinkisExternal = !!link?.custom_external_link;
 
   const height = {
@@ -107,12 +107,12 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
       alignItems="center"
       px="24px"
       py={{ base: "24px", md: "0px" }}
-      borderTopWidth={isSeperated ? "1px" : "0px"}
+      borderTopWidth={isSeparated ? "1px" : "0px"}
       borderBottomWidth="1px!important"
       borderColor="card-br!important"
       backgroundColor="card-bg"
       _hover={{ textDecoration: "none" }}
-      _last={{ borderBottomWidth: isSeperated ? "1px" : "0px" }}
+      _last={{ borderBottomWidth: isSeparated ? "1px" : "0px" }}
     >
       <Flex
         direction={{ base: "column", md: "row" }}

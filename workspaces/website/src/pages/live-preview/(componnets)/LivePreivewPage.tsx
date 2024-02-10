@@ -19,7 +19,7 @@ export interface Props {
   readonly roadmapVersions: readonly RoadmapVersion[] 
 }
 
-export default function LivePreivewPage({
+export default function LivePreviewPage({
   topics,
   categories,
   roadmapVersions
