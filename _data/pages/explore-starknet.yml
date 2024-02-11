@@ -66,6 +66,13 @@ blocks:
         icon: /assets/block_explorer-3-.svg
         type: image_icon_link_card
         columns: "4"
+      - type: image_icon_link_card
+        variant: image_icon_link_card
+        size: large
+        withIllustration: false
+        color: blue-default
+        columns: "4"
+        orientation: left
     heading: Explore Starknet
     base: 1
     md: 1
