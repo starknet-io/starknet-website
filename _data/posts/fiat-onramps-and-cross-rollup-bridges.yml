@@ -10,19 +10,8 @@ video:
     etag: pKKdOLn2ii6tcvPuXOvrvJQM-50
     id: m8vEArBfD_k
     snippet:
-      publishedAt: 2023-12-21T11:41:10Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Fiat Onramps and Cross Rollup Bridges
-      description: >-
-        We're diving into the defi landscape on Starknet!
-
-
-        What are onramps and cross rollup bridges, and what do they do? That's precisely what we'll be looking at today. 
-
-
-        https://starkware.co/
-
-        https://www.starknet.io/en
+      publishedAt: 2023-12-21T11:41:10.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/m8vEArBfD_k/default.jpg
@@ -44,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/m8vEArBfD_k/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Fiat Onramps and Cross Rollup Bridges
       categoryId: "26"
-      liveBroadcastContent: none
       localized:
         title: Fiat Onramps and Cross Rollup Bridges
         description: >-
@@ -59,7 +49,17 @@ video:
           https://starkware.co/
 
           https://www.starknet.io/en
-      defaultAudioLanguage: en-US
+      description: >-
+        We're diving into the defi landscape on Starknet!
+
+
+        What are onramps and cross rollup bridges, and what do they do? That's precisely what we'll be looking at today. 
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M46S
       dimension: 2d
@@ -69,8 +69,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/fiat-onramps-and-cross-rollup-bridges.png
-category: 
+category:
   - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
   - getting-started
