@@ -63,7 +63,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Starknet Ecosystem
-        icon: /assets/block_explorer-3-.svg
+        icon: /assets/block_explorer-4-.svg
         type: image_icon_link_card
         link:
           custom_title: Explore the Starknet Ecosystem
