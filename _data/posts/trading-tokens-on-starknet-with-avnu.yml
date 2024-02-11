@@ -1,0 +1,71 @@
+id: d21dcf92-782b-4678-8f98-2d89647dae89
+post_type: video
+title: Trading Tokens on Starknet with AVNU
+seoTitle: Trading Tokens on Starknet with AVNU
+published_date: 2024-02-11T13:08:32.338Z
+video:
+  url: https://www.youtube.com/watch?v=GeUTJDFnRNE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=7
+  id: GeUTJDFnRNE
+  data:
+    kind: youtube#video
+    etag: 4o3xGzp8BXcFMylOscF39eWmsOg
+    id: GeUTJDFnRNE
+    snippet:
+      publishedAt: 2024-02-04T13:33:46Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Trading Tokens on Starknet with AVNU
+      description: |-
+        Learn how to trade any token on Starknet with AVNU
+
+        Discover AVNU:
+        https://www.avnu.fi/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/GeUTJDFnRNE/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/GeUTJDFnRNE/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/GeUTJDFnRNE/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/GeUTJDFnRNE/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/GeUTJDFnRNE/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Trading Tokens on Starknet with AVNU
+        description: |-
+          Learn how to trade any token on Starknet with AVNU
+
+          Discover AVNU:
+          https://www.avnu.fi/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1M44S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: https://www.youtube.com/watch?v=GeUTJDFnRNE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=7
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - 35a1b3d6-e07b-418d-8577-ed2429cd7932
+short_desc: |
+  Learn how to trade any token on Starknet with AVNU
+seo_desc: |
+  Learn how to trade any token on Starknet with AVNU
