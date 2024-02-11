@@ -47,7 +47,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: View all Starknet wallets
-          custom_internal_link: https://www.starknet.io/en/ecosystem/wallets
+          custom_internal_link: ""
+          custom_external_link: https://www.starknet.io/en/ecosystem/wallets
         columns: "4"
     base: 1
     md: 1
