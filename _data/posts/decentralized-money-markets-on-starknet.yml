@@ -1,0 +1,83 @@
+id: 0e47f5a4-efac-4d79-b1ea-2eeb67b38f41
+post_type: video
+title: Decentralized Money Markets on Starknet
+seoTitle: Decentralized Money Markets on Starknet
+published_date: 2024-02-11T13:19:30.239Z
+video:
+  url: https://www.youtube.com/watch?v=7uj3LdqYsiw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=23
+  id: 7uj3LdqYsiw
+  data:
+    kind: youtube#video
+    etag: 2RTuof-GT-IlFx9v_kXyXb5uyAo
+    id: 7uj3LdqYsiw
+    snippet:
+      publishedAt: 2024-02-05T15:48:26Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Decentralized Money Markets on Starknet
+      description: >-
+        Exploring decentralized money markets on Starknet: Learn how they work,
+        their benefits, and their impact on DeFi in the crypto-verse.
+
+
+        but remember, DYOR!
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+
+        https://twitter.com/Starknet
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/7uj3LdqYsiw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/7uj3LdqYsiw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/7uj3LdqYsiw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/7uj3LdqYsiw/sddefault.jpg
+          width: 640
+          height: 480
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Decentralized Money Markets on Starknet
+        description: >-
+          Exploring decentralized money markets on Starknet: Learn how they
+          work, their benefits, and their impact on DeFi in the crypto-verse.
+
+
+          but remember, DYOR!
+
+
+          https://starkware.co/
+
+          https://www.starknet.io/en
+
+          https://twitter.com/Starknet
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT3M55S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: https://www.youtube.com/watch?v=7uj3LdqYsiw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=23
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+short_desc: >
+  Exploring decentralized money markets on Starknet: Learn how they work, their
+  benefits, and their impact on DeFi in the crypto-verse.
+seo_desc: >
+  Exploring decentralized money markets on Starknet: Learn how they work, their
+  benefits, and their impact on DeFi in the crypto-verse.
