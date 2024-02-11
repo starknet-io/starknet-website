@@ -1,32 +1,4 @@
 items:
-  - username: lorcan-codes
-    access:
-      - all
-  - username: milosyuki
-    name: Miloš Leković
-    access:
-      - all
-  - username: thecotne
-    name: Tsotne
-    access:
-      - all
-  - username: thorville
-    name: Keith Tormey
-    access:
-      - all
-  - username: robwalsh21
-    access:
-      - all
-  - username: AmalyStark
-    name: Amalya
-    access:
-      - all
-  - username: Tal-wagner
-    access:
-      - all
-  - username: JameStark
-    access:
-      - roadmap
   - username: LiranRich
     access:
       - events
@@ -39,7 +11,7 @@ items:
   - username: " thedamooo"
     access:
       - jobs
-  - username: Penguinseo
+  - username: Igal Steklov
     access:
       - all
   - username: stoobie
@@ -49,21 +21,21 @@ items:
   - username: OfirEinhorn
     access:
       - all
-  - username: tal5674
+  - username: noab-starkware
     access:
       - all
-  - username: Mrericsumner
+  - username: NitzanGrossman
+    name: Nitzan Grossman
     access:
-      - posts
-  - username: OfirEinhorn
+      - all
+  - username: "@dmill123"
+    name: Devorah Miller
     access:
-      - posts
-  - username: Poley7
+      - all
+  - username: tal5674
+    name: Tal Levin
     access:
-      - posts
-  - username: dmill123
-    access:
-      - posts
+      - all
   - username: igalst
     name: Igal Steklov
     access:
