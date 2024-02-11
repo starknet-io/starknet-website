@@ -11,12 +11,8 @@ video:
     etag: 5JeKPsP03a3jBCkcDZ6dAcxhfXY
     id: eenFZXlbccI
     snippet:
-      publishedAt: 2024-02-08T08:00:19Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Discover DeFi with ZKLEnd
-      description: With multicall support, innovative assets like wstETH, and solid
-        security audits, zkLend cements itself as a leading DeFi protocol on
-        Starknet
+      publishedAt: 2024-02-08T08:00:19.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/eenFZXlbccI/default.jpg
@@ -38,15 +34,19 @@ video:
           url: https://i.ytimg.com/vi/eenFZXlbccI/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Discover DeFi with ZKLEnd
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Discover DeFi with ZKLEnd
         description: With multicall support, innovative assets like wstETH, and solid
           security audits, zkLend cements itself as a leading DeFi protocol on
           Starknet
-      defaultAudioLanguage: en-US
+      description: With multicall support, innovative assets like wstETH, and solid
+        security audits, zkLend cements itself as a leading DeFi protocol on
+        Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT2M28S
       dimension: 2d
@@ -58,7 +58,6 @@ video:
 image: https://www.youtube.com/watch?v=eenFZXlbccI&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=8
 category:
   - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - defi
 short_desc: >
