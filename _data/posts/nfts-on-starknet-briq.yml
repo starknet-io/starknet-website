@@ -1,0 +1,81 @@
+id: 0c972c45-6c32-46c0-9778-f49218f00d9f
+post_type: video
+title: "NFTs on Starknet: Briq"
+published_date: 2024-02-11T13:00:40.627Z
+video:
+  url: https://www.youtube.com/watch?v=l8bKLQUS4z4&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
+  id: l8bKLQUS4z4
+  data:
+    kind: youtube#video
+    etag: S5EF0zo6kxx4DqirqCwlIN-G6i4
+    id: l8bKLQUS4z4
+    snippet:
+      publishedAt: 2023-12-04T13:24:21Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "NFTs on Starknet: Briq"
+      description: >-
+        Briq is an NFT building protocol that allows users to build NFTs out of
+        tiny cubes stored on the blockchain called briqs. You can disassemble
+        anything built out of briqs to get them back and build something else.
+        It’s a vessel for creativity where anyone can express themselves in a
+        playful and decentralized way.
+
+        https://briq.construction/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/l8bKLQUS4z4/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/l8bKLQUS4z4/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/l8bKLQUS4z4/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/l8bKLQUS4z4/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/l8bKLQUS4z4/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "NFTs on Starknet: Briq"
+        description: >-
+          Briq is an NFT building protocol that allows users to build NFTs out
+          of tiny cubes stored on the blockchain called briqs. You can
+          disassemble anything built out of briqs to get them back and build
+          something else. It’s a vessel for creativity where anyone can express
+          themselves in a playful and decentralized way.
+
+          https://briq.construction/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1M21S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: https://www.youtube.com/watch?v=l8bKLQUS4z4&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: >
+  Briq is an NFT building protocol that allows users to build NFTs out of tiny
+  cubes stored on the blockchain called briqs. You can disassemble anything
+  built out of briqs to get them back and build something else. It’s a vessel
+  for creativity where anyone can express themselves in a playful and
+  decentralized way.
+seo_desc: "Briq: The NFT building protocol transforming creativity on the
+  blockchain. Use briqs to construct, disassemble, and recreate in a
+  decentralized, playful space."
