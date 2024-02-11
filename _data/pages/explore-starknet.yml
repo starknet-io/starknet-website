@@ -101,13 +101,18 @@ blocks:
   - type: flex_layout
     heading_variant: h2
     blocks:
-      - type: image_icon_link_card
-        variant: image_icon_link_card
-        size: large
-        withIllustration: false
+      - size: large
         color: blue-default
-        columns: "4"
+        variant: image_icon_link_card
         orientation: left
+        withIllustration: false
+        title: Developers hub
+        icon: /assets/developers.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Explore the hub
+          custom_internal_link: https://www.starknet.io/en/developers
+        columns: "4"
     heading: "Start Building "
     lg: 4
     md: 1
