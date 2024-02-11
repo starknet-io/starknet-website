@@ -1,0 +1,58 @@
+id: 186916c3-0c7c-48a6-b717-e43d3a7377f4
+title: Explore Starknet
+template: landing
+hideToc: false
+hidden_page: false
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: dapps
+    title: Explore Starknet
+    description: ""
+  - type: flex_layout
+    heading_variant: h2
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Argent
+        icon: /assets/hito-orange-1-.png
+        type: image_icon_link_card
+        link:
+          custom_title: Install
+          custom_external_link: https://www.argent.xyz/argent-x/
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Braavos
+        icon: /assets/logo-golden.png
+        type: image_icon_link_card
+        link:
+          custom_title: Install
+          custom_external_link: https://braavos.app/
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: More wallets
+        icon: /assets/2.svg
+        type: image_icon_link_card
+        link:
+          custom_title: View all Starknet wallets
+          custom_internal_link: https://www.starknet.io/en/ecosystem/wallets
+        columns: "4"
+    base: 3
+    md: 3
+    lg: 3
+    heading: Install your Starknet Account
+  - type: flex_layout
+    heading_variant: sm
+    blocks: []
