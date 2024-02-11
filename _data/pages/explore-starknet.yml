@@ -81,13 +81,18 @@ blocks:
           custom_title: Discover dApps on Starknet
           custom_external_link: https://www.dappland.com/
         columns: "4"
-      - type: image_icon_link_card
-        variant: image_icon_link_card
-        size: large
-        withIllustration: false
+      - size: large
         color: blue-default
-        columns: "4"
+        variant: image_icon_link_card
         orientation: left
+        withIllustration: false
+        title: Bridge
+        icon: /assets/onramp.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
+          custom_external_link: https://starkgate.starknet.io/
+        columns: "4"
     heading: Explore Starknet
     base: 1
     md: 1
