@@ -10,23 +10,8 @@ video:
     etag: epc8dyWYVs96-AjYpYgQzYiYwhQ
     id: SsSJon8UTrE
     snippet:
-      publishedAt: 2023-12-17T10:20:46Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Explaining AMMs and Liquidity Pools
-      description: >-
-        Check out how Automated Market Makers (AMMs) work and how standard
-        liquidity Pools differ from Pools with concentrated liquidity. 
-
-
-        Find us here: 
-
-        https://x.com/StarkWareLtd?s=20
-
-        https://x.com/Starknet?s=20
-
-        https://starkware.co/
-
-        https://www.starknet.io/en
+      publishedAt: 2023-12-17T10:20:46.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/SsSJon8UTrE/default.jpg
@@ -48,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/SsSJon8UTrE/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Explaining AMMs and Liquidity Pools
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Explaining AMMs and Liquidity Pools
         description: >-
@@ -67,7 +53,21 @@ video:
           https://starkware.co/
 
           https://www.starknet.io/en
-      defaultAudioLanguage: en-US
+      description: >-
+        Check out how Automated Market Makers (AMMs) work and how standard
+        liquidity Pools differ from Pools with concentrated liquidity. 
+
+
+        Find us here: 
+
+        https://x.com/StarkWareLtd?s=20
+
+        https://x.com/Starknet?s=20
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT3M29S
       dimension: 2d
@@ -77,8 +77,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/explaining-amms-and-liquidity-pools.png
-category: 
+category:
   - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - defi
   - getting-started
