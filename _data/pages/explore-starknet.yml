@@ -65,6 +65,21 @@ blocks:
         title: Starknet Ecosystem
         icon: /assets/block_explorer-3-.svg
         type: image_icon_link_card
+        link:
+          custom_title: Explore the Starknet Ecosystem
+          custom_external_link: https://www.starknet-ecosystem.com/
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Dappland
+        icon: /assets/5.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Discover dApps on Starknet
+          custom_external_link: https://www.dappland.com/
         columns: "4"
       - type: image_icon_link_card
         variant: image_icon_link_card
@@ -76,5 +91,5 @@ blocks:
     heading: Explore Starknet
     base: 1
     md: 1
-    lg: 2
-    xl: 2
+    lg: 3
+    xl: 3
