@@ -62,7 +62,7 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
-        title: Starknet Ecosystme
+        title: Starknet Ecosystem
         icon: /assets/block_explorer-3-.svg
         type: image_icon_link_card
         columns: "4"
