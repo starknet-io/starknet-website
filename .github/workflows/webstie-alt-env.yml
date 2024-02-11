@@ -82,7 +82,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN_ALT }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_ALT }}
-          projectName: starknet-websites
+          projectName: alt-starknet-website
           directory: dist/client
           workingDirectory: workspaces/website
           wranglerVersion: '3'
