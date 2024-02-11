@@ -53,7 +53,7 @@ blocks:
     md: 1
     lg: 3
     heading: Install your Starknet Account
-    xl: 2
+    xl: 3
   - type: flex_layout
     heading_variant: h2
     blocks:
