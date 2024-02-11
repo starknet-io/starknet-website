@@ -135,6 +135,7 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Follow the tutorial
+          custom_external_link: https://github.com/shramee/starklings-cairo1?tab=readme-ov-file
         columns: "4"
     heading: "Start Building "
     lg: 4
