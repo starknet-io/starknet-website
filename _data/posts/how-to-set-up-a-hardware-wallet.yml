@@ -1,0 +1,95 @@
+id: 65d5f232-cf61-4c8b-ada8-dd377ffeb143
+post_type: video
+title: How to Set Up a Hardware Wallet
+published_date: 2024-02-11T12:54:49.154Z
+video:
+  url: https://www.youtube.com/watch?v=vXX2S3czkAw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=2
+  id: vXX2S3czkAw
+  data:
+    kind: youtube#video
+    etag: goT5YcXpY627ZofTSza5c3kc2r4
+    id: vXX2S3czkAw
+    snippet:
+      publishedAt: 2023-12-12T14:34:02Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: How to Set Up a Hardware Wallet
+      description: >-
+        Securing your digital assets is a top priority when entering the
+        cryptocurrency world. This is especially true on Ethereum's L1, where
+        robust smart wallet security features like two-factor authentication are
+        non-existent.
+
+
+        Fortunately, hardware wallets, known as cold wallets, provide a solution. 
+
+        Follow along to set up your hardware wallet and discover why they are considered one of the safest ways to store crypto.
+
+
+        https://www.ledger.com/
+
+        https://www.starknet.io/en/
+
+        https://starkware.co/
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/vXX2S3czkAw/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/vXX2S3czkAw/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/vXX2S3czkAw/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/vXX2S3czkAw/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/vXX2S3czkAw/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: How to Set Up a Hardware Wallet
+        description: >-
+          Securing your digital assets is a top priority when entering the
+          cryptocurrency world. This is especially true on Ethereum's L1, where
+          robust smart wallet security features like two-factor authentication
+          are non-existent.
+
+
+          Fortunately, hardware wallets, known as cold wallets, provide a solution. 
+
+          Follow along to set up your hardware wallet and discover why they are considered one of the safest ways to store crypto.
+
+
+          https://www.ledger.com/
+
+          https://www.starknet.io/en/
+
+          https://starkware.co/
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT2M42S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: https://www.youtube.com/watch?v=vXX2S3czkAw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=2
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - getting-started
+short_desc: >
+  Securing your digital assets is a top priority when entering the
+  cryptocurrency world. This is especially true on Ethereum's L1, where robust
+  smart wallet security features like two-factor authentication are
+  non-existent.
