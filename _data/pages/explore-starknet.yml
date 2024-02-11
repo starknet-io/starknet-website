@@ -180,6 +180,18 @@ blocks:
           custom_title: Get answers for your questions
           custom_internal_link: https://www.starknet.io/en/learn/frequently-asked-questions
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Upcoming events
+        icon: /assets/community-events.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Check out our upcoming events
+          custom_internal_link: https://www.starknet.io/en/events
+        columns: "4"
     heading: Learn. Connect. Stay up-to-date
     base: 1
     md: 1
