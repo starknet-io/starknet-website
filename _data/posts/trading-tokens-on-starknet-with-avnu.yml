@@ -11,14 +11,8 @@ video:
     etag: 4o3xGzp8BXcFMylOscF39eWmsOg
     id: GeUTJDFnRNE
     snippet:
-      publishedAt: 2024-02-04T13:33:46Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Trading Tokens on Starknet with AVNU
-      description: |-
-        Learn how to trade any token on Starknet with AVNU
-
-        Discover AVNU:
-        https://www.avnu.fi/
+      publishedAt: 2024-02-04T13:33:46.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/GeUTJDFnRNE/default.jpg
@@ -40,9 +34,10 @@ video:
           url: https://i.ytimg.com/vi/GeUTJDFnRNE/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Trading Tokens on Starknet with AVNU
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Trading Tokens on Starknet with AVNU
         description: |-
@@ -50,7 +45,12 @@ video:
 
           Discover AVNU:
           https://www.avnu.fi/
-      defaultAudioLanguage: en-US
+      description: |-
+        Learn how to trade any token on Starknet with AVNU
+
+        Discover AVNU:
+        https://www.avnu.fi/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M44S
       dimension: 2d
@@ -62,7 +62,6 @@ video:
 image: https://www.youtube.com/watch?v=GeUTJDFnRNE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=7
 category:
   - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - 35a1b3d6-e07b-418d-8577-ed2429cd7932
 short_desc: |
