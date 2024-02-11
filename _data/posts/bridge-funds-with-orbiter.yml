@@ -1,0 +1,63 @@
+id: 78b9c993-1785-4707-9ff6-3088a15a5949
+post_type: video
+title: Bridge Funds with Orbiter
+seoTitle: Bridge Funds with Orbiter
+published_date: 2024-02-11T13:13:16.318Z
+video:
+  url: https://www.youtube.com/watch?v=13eMamgs0eA&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=9
+  id: 13eMamgs0eA
+  data:
+    kind: youtube#video
+    etag: 5QFSOnBiMnRYf90QqK4hwH6nXfg
+    id: 13eMamgs0eA
+    snippet:
+      publishedAt: 2024-02-06T08:00:00Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: Bridge Funds with Orbiter
+      description: Bridge funds with Orbiter Finance, a cross rollup bridge on Ethereum
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/13eMamgs0eA/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/13eMamgs0eA/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/13eMamgs0eA/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/13eMamgs0eA/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/13eMamgs0eA/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: Bridge Funds with Orbiter
+        description: Bridge funds with Orbiter Finance, a cross rollup bridge on Ethereum
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT2M1S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: https://www.youtube.com/watch?v=13eMamgs0eA&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=9
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+short_desc: |
+  Bridge funds with Orbiter Finance, a cross rollup bridge on Ethereum
+seo_desc: |
+  Bridge funds with Orbiter Finance, a cross rollup bridge on Ethereum
