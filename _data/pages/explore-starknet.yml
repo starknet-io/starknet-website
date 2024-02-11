@@ -112,7 +112,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Explore the hub
-          custom_internal_link: https://www.starknet.io/en/developers
+          custom_internal_link: ""
+          custom_external_link: https://www.starknet.io/en/developers
         columns: "4"
       - size: large
         color: blue-default
@@ -167,7 +168,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Understand Starknet & how it works
-          custom_internal_link: https://www.starknet.io/en/learn/what-is-starknet
+          custom_internal_link: ""
+          custom_external_link: https://www.starknet.io/en/learn/what-is-starknet
         columns: "4"
       - size: large
         color: blue-default
@@ -179,7 +181,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Get answers for your questions
-          custom_internal_link: https://www.starknet.io/en/learn/frequently-asked-questions
+          custom_internal_link: ""
+          custom_external_link: https://www.starknet.io/en/learn/frequently-asked-questions
         columns: "4"
       - size: large
         color: blue-default
@@ -191,7 +194,8 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Check out our upcoming events
-          custom_internal_link: https://www.starknet.io/en/events
+          custom_internal_link: ""
+          custom_external_link: https://www.starknet.io/en/events
         columns: "4"
     heading: Learn. Connect. Stay up-to-date
     base: 1
