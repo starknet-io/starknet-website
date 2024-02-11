@@ -125,6 +125,17 @@ blocks:
           custom_title: Develop on Starknet
           custom_external_link: https://book.starknet.io/
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Starklings
+        icon: /assets/cairo-docs.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Follow the tutorial
+        columns: "4"
     heading: "Start Building "
     lg: 4
     md: 1
