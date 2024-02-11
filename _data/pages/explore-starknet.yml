@@ -162,10 +162,23 @@ blocks:
         orientation: left
         withIllustration: false
         title: What is Starknet
+        icon: /assets/starknet_edu.svg
         type: image_icon_link_card
         link:
           custom_title: Understand Starknet & how it works
           custom_internal_link: https://www.starknet.io/en/learn/what-is-starknet
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: FAQs
+        icon: /assets/online-communities.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Get answers for your questions
+          custom_internal_link: https://www.starknet.io/en/learn/frequently-asked-questions
         columns: "4"
     heading: Learn. Connect. Stay up-to-date
     base: 1
