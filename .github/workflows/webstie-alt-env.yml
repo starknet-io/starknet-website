@@ -1,4 +1,4 @@
-name: Build and Deploy Starknet Website (Altternative environment)
+name: Build and Deploy Starknet Website (Alternative environment)
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     name: Build and Deploy
     environment:
       name: Starknet Website ${{ github.ref_name }}
-      url: https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev
+      url: https://${{ env.GITHUB_REF_SLUG_URL }}.alt-starknet-website.pages.dev
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -61,7 +61,7 @@ jobs:
           if [ "${{ env.GITHUB_REF_SLUG_URL }}" = "production" ]; then
             echo "VITE_SITE_URL=https://www.starknet.io" >> $GITHUB_ENV
           else
-            echo "VITE_SITE_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.starknet-websites.pages.dev" >> $GITHUB_ENV
+            echo "VITE_SITE_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.alt-starknet-website.pages.dev" >> $GITHUB_ENV
           fi
 
       - name: Build project
