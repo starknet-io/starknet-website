@@ -19,7 +19,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Argent
-        icon: /assets/hito-orange-1-.png
+        icon: /assets/hito-orange-1-1.svg
         type: image_icon_link_card
         link:
           custom_title: Install
@@ -31,7 +31,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Braavos
-        icon: /assets/logo-golden.png
+        icon: /assets/gradient-logo-1.svg
         type: image_icon_link_card
         link:
           custom_title: Install
