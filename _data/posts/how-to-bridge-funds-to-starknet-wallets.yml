@@ -10,24 +10,8 @@ video:
     etag: wBnOLSG9KFPvOwlIMCWsrWP_bMw
     id: NKu3VSwCAAw
     snippet:
-      publishedAt: 2023-12-04T13:51:32Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: How to bridge funds to Starknet - Wallets
-      description: >-
-        Welcome to our tutorial on getting started with Starknet! In this video,
-        we'll guide you through the essentials of Starknet, a permissionless
-        decentralized rollup focused on bringing scale to Ethereum. 
-
-
-        For more details, visit this blog post: https://starkware.co/resource/getting-started-using-starknet-setting-up-a-starknet-wallet/
-
-
-        https://starkgate.starknet.io/
-
-
-        https://www.starknet.io/en
-
-        https://starkware.co/
+      publishedAt: 2023-12-04T13:51:32.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/NKu3VSwCAAw/default.jpg
@@ -49,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/NKu3VSwCAAw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: How to bridge funds to Starknet - Wallets
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: How to bridge funds to Starknet - Wallets
         description: >-
@@ -70,7 +55,22 @@ video:
           https://www.starknet.io/en
 
           https://starkware.co/
-      defaultAudioLanguage: en-US
+      description: >-
+        Welcome to our tutorial on getting started with Starknet! In this video,
+        we'll guide you through the essentials of Starknet, a permissionless
+        decentralized rollup focused on bringing scale to Ethereum. 
+
+
+        For more details, visit this blog post: https://starkware.co/resource/getting-started-using-starknet-setting-up-a-starknet-wallet/
+
+
+        https://starkgate.starknet.io/
+
+
+        https://www.starknet.io/en
+
+        https://starkware.co/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT2M34S
       dimension: 2d
@@ -82,6 +82,7 @@ video:
 image: /assets/how-to-bridge-funds-to-starknet-wallets.png
 category:
   - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
   - getting-started
