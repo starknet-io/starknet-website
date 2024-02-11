@@ -52,7 +52,7 @@ blocks:
     base: 1
     md: 1
     lg: 3
-    heading: Install your Starknet Account
+    heading: Open your Starknet Account
     xl: 0
   - type: flex_layout
     heading_variant: h2
@@ -113,6 +113,14 @@ blocks:
           custom_title: Explore the hub
           custom_internal_link: https://www.starknet.io/en/developers
         columns: "4"
+      - type: image_icon_link_card
+        variant: image_icon_link_card
+        size: large
+        withIllustration: false
+        color: blue-default
+        columns: "4"
+        orientation: left
+        title: Starknet Book
     heading: "Start Building "
     lg: 4
     md: 1
