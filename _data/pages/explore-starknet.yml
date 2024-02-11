@@ -49,10 +49,24 @@ blocks:
           custom_title: View all Starknet wallets
           custom_internal_link: https://www.starknet.io/en/ecosystem/wallets
         columns: "4"
-    base: 3
-    md: 3
+    base: 1
+    md: 1
     lg: 3
     heading: Install your Starknet Account
+    xl: 2
   - type: flex_layout
-    heading_variant: sm
-    blocks: []
+    heading_variant: h2
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Starknet Ecosystme
+        icon: /assets/block_explorer-3-.svg
+        type: image_icon_link_card
+        columns: "4"
+    heading: Explore Starknet
+    base: 2
+    md: 2
+    lg: 2
