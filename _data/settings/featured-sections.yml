@@ -1,8 +1,8 @@
 items:
-  - category: community-and-events
-  - category: community-calls
   - category: ecosystem
   - category: engineering
+  - category: community-and-events
+  - category: community-calls
   - category: 757155c6-ce07-49f1-af21-907b7e0b1cb1
   - category: governance
   - category: stark-math
