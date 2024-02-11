@@ -11,15 +11,8 @@ video:
     etag: Zt3gynVlSEmz1TgM_Ca1o8grPec
     id: 1ncMiPC2AKI
     snippet:
-      publishedAt: 2024-02-07T08:00:01Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Unlock Onchain Gaming with Realms
-      description: >-
-        The Loot Realms universe is a world of fully onchain games, ruled by
-        $LORDS, enabling true interoperability.
-
-
-        Check out one of Realm's most popular games, Loot Survivor.
+      publishedAt: 2024-02-07T08:00:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/1ncMiPC2AKI/default.jpg
@@ -41,9 +34,10 @@ video:
           url: https://i.ytimg.com/vi/1ncMiPC2AKI/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Unlock Onchain Gaming with Realms
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Unlock Onchain Gaming with Realms
         description: >-
@@ -52,7 +46,13 @@ video:
 
 
           Check out one of Realm's most popular games, Loot Survivor.
-      defaultAudioLanguage: en-US
+      description: >-
+        The Loot Realms universe is a world of fully onchain games, ruled by
+        $LORDS, enabling true interoperability.
+
+
+        Check out one of Realm's most popular games, Loot Survivor.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT2M31S
       dimension: 2d
@@ -64,7 +64,6 @@ video:
 image: https://www.youtube.com/watch?v=1ncMiPC2AKI&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=6
 category:
   - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: >-
