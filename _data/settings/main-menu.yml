@@ -82,7 +82,7 @@ items:
                 custom_external_link: https://starknet.io/discord
               - custom_title: GitHub
                 custom_icon: SiGithub
-                custom_external_link: https://github.com/starknet-io/starknet-website
+                custom_external_link: https://github.com/keep-starknet-strange/awesome-starknet
               - custom_title: Twitter
                 custom_icon: SiTwitter
                 custom_internal_link: ""
@@ -103,4 +103,4 @@ items:
               - custom_title: Starknet Edu Blog
                 custom_external_link: https://medium.com/starknet-edu
                 hide_from_footer: true
-              
+
