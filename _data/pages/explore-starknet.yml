@@ -3,8 +3,8 @@ title: Explore Starknet
 template: landing
 hideToc: false
 hidden_page: false
-breadcrumbs: true
-page_last_updated: true
+breadcrumbs: false
+page_last_updated: false
 blocks:
   - type: hero
     variant: dapps
