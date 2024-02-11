@@ -1,0 +1,85 @@
+id: d5c6abf1-3129-45b7-a0fb-e2866079d4c2
+post_type: video
+title: How To Enable Braavos' Hardware Signer
+published_date: 2024-02-11T07:47:23.385Z
+video:
+  url: https://youtu.be/RZNipaCmKas
+  id: RZNipaCmKas
+  data:
+    kind: youtube#video
+    etag: kb5-TZkR20nW9K06b6fwAI4S3Qo
+    id: RZNipaCmKas
+    snippet:
+      publishedAt: 2024-01-28T11:42:38.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/RZNipaCmKas/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/RZNipaCmKas/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/RZNipaCmKas/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/RZNipaCmKas/sddefault.jpg
+          width: 640
+          height: 480
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: How To Enable Braavos' Hardware Signer
+      categoryId: "26"
+      localized:
+        title: How To Enable Braavos' Hardware Signer
+        description: >-
+          What do castles and Braavos' Hardware signer have in common? 
+
+
+          Braavos is a Starknet native smart wallet that allows you to store your crypto in an intuitive and safe way. Find out how to enable the hardware signer to add an additional layer of protection. 
+
+
+          Find us here:
+
+          https://starkware.co/
+
+          https://www.starknet.io/en
+
+          https://twitter.com/Starknet
+      description: >-
+        What do castles and Braavos' Hardware signer have in common? 
+
+
+        Braavos is a Starknet native smart wallet that allows you to store your crypto in an intuitive and safe way. Find out how to enable the hardware signer to add an additional layer of protection. 
+
+
+        Find us here:
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+
+        https://twitter.com/Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT2M43S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/rznipacmkas-mq.jpg
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: >-
+  What do castles and Braavos' Hardware signer have in common? 
+
+
+  Braavos is a Starknet native smart wallet that allows you to store your crypto in an intuitive and safe way. Find out how to enable the hardware signer to add an additional layer of protection. 
