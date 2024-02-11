@@ -137,7 +137,22 @@ blocks:
           custom_title: Follow the tutorial
           custom_external_link: https://github.com/shramee/starklings-cairo1?tab=readme-ov-file
         columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Node Guardians
+        icon: /assets/developer-blog.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Join the quests
+          custom_external_link: https://nodeguardians.io/dev-hub
+        columns: "4"
     heading: "Start Building "
     lg: 4
     md: 1
     base: 1
+  - type: flex_layout
+    heading_variant: sm
+    blocks: []
