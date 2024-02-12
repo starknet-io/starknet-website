@@ -42,10 +42,6 @@ blocks:
     blocks:
       - link:
           hasIcon: true
-          custom_title: Starknet Cairo Core Stars - Pharaohs
-          custom_external_link: https://t.me/sncorestars
-      - link:
-          hasIcon: true
           custom_title: Starknet China
           custom_external_link: https://t.me/starknet_zh
       - link:
