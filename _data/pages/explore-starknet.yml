@@ -10,7 +10,7 @@ breadcrumbs: false
 page_last_updated: false
 blocks:
   - type: hero
-    variant: dapps
+    variant: block_explorers
     title: Explore Starknet
     description: ""
   - type: flex_layout
@@ -67,7 +67,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Starknet Ecosystem
-        icon: /assets/block_explorer-4-.svg
+        icon: /assets/dapps.svg
         type: image_icon_link_card
         link:
           custom_title: Explore the Starknet Ecosystem
@@ -90,7 +90,7 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
-        title: Bridge
+        title: StarkGate
         icon: /assets/onramp.svg
         type: image_icon_link_card
         link:
