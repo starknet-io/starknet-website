@@ -11,22 +11,8 @@ video:
     etag: HTFAwj2MgVhafPlVyL81ZsH_JFA
     id: H5CfRJeFiJY
     snippet:
-      publishedAt: 2024-01-29T08:39:55Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: How to Enable Argent Shield
-      description: >-
-        With Argent Shield, an additional layer of protection is added to your
-        smart wallet. But how does that work? And how do you opt in?
-
-
-        Let's dive in.
-
-
-        https://starkware.co/
-
-        https://www.starknet.io/en
-
-        https://twitter.com/Starknet
+      publishedAt: 2024-01-29T08:39:55.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/H5CfRJeFiJY/default.jpg
@@ -44,9 +30,10 @@ video:
           url: https://i.ytimg.com/vi/H5CfRJeFiJY/sddefault.jpg
           width: 640
           height: 480
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: How to Enable Argent Shield
       categoryId: "26"
-      liveBroadcastContent: none
       localized:
         title: How to Enable Argent Shield
         description: >-
@@ -62,7 +49,20 @@ video:
           https://www.starknet.io/en
 
           https://twitter.com/Starknet
-      defaultAudioLanguage: en-US
+      description: >-
+        With Argent Shield, an additional layer of protection is added to your
+        smart wallet. But how does that work? And how do you opt in?
+
+
+        Let's dive in.
+
+
+        https://starkware.co/
+
+        https://www.starknet.io/en
+
+        https://twitter.com/Starknet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M20S
       dimension: 2d
@@ -75,6 +75,8 @@ image: https://www.youtube.com/watch?v=H5CfRJeFiJY&list=PLcIyXLwiPilVncUsobfoswH
 category:
   - stark-math
   - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: >
   With Argent Shield, an additional layer of protection is added to your smart
   wallet. But how does that work? And how do you opt in?
