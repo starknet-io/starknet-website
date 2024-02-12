@@ -1,7 +1,7 @@
 id: 186916c3-0c7c-48a6-b717-e43d3a7377f4
 title: Explore Starknet
 seoTitle: Discover Starknet and its dApps, Wallets, and Tutorials
-seoDescription: Make your fist steps in the Starknet ecosystem - Explore dApps
+seoDescription: Make your first steps in the Starknet ecosystem - Explore dApps
   and wallets, follow tutorials and learn more about the Starknet ecosystem
 template: landing
 hideToc: false
@@ -10,7 +10,7 @@ breadcrumbs: false
 page_last_updated: false
 blocks:
   - type: hero
-    variant: dapps
+    variant: block_explorers
     title: Explore Starknet
     description: ""
   - type: flex_layout
@@ -67,7 +67,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: Starknet Ecosystem
-        icon: /assets/block_explorer-4-.svg
+        icon: /assets/dapps.svg
         type: image_icon_link_card
         link:
           custom_title: Explore the Starknet Ecosystem
@@ -90,11 +90,11 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
-        title: Bridge
+        title: StarkGate
         icon: /assets/onramp.svg
         type: image_icon_link_card
         link:
-          custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
+          custom_title: Transfer assets between Ethereum and Starknet
           custom_external_link: https://starkgate.starknet.io/
         columns: "4"
     heading: Explore Starknet
@@ -114,7 +114,7 @@ blocks:
         icon: /assets/developers.svg
         type: image_icon_link_card
         link:
-          custom_title: Explore the hub
+          custom_title: Find the resources you need
           custom_internal_link: ""
           custom_external_link: https://www.starknet.io/en/developers
         columns: "4"
@@ -127,7 +127,7 @@ blocks:
         icon: /assets/read-book.svg
         type: image_icon_link_card
         link:
-          custom_title: Develop on Starknet
+          custom_title: From zero to hero
           custom_external_link: https://book.starknet.io/
         columns: "4"
       - size: large
@@ -151,7 +151,7 @@ blocks:
         icon: /assets/developer-blog.svg
         type: image_icon_link_card
         link:
-          custom_title: Join the quests
+          custom_title: Try a challenge
           custom_external_link: https://nodeguardians.io/dev-hub
         columns: "4"
     heading: "Start Building "
