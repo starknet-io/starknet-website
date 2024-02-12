@@ -126,7 +126,7 @@ export const HomepageHero = ({ seo }: Props) => {
               <Button
                 size="lg"
                 variant="secondaryHero"
-                href="/en/what-is-starknet"
+                href="/en/explore-starknet"
               >
                 Explore Starknet
               </Button>
