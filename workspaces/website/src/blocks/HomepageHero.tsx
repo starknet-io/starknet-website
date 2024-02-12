@@ -9,7 +9,6 @@ type Props = {
   };
 };
 import { Intro } from "./Intro";
-import { navigate } from "vite-plugin-ssr/client/router";
 
 export const HomepageHero = ({ seo }: Props) => {
   return (
@@ -117,7 +116,7 @@ export const HomepageHero = ({ seo }: Props) => {
               zIndex={4}
             >
               <Button
-                onClick={() => navigate("/en/developers")}
+                href="/en/developers"
                 size="lg"
                 minW="210px"
                 variant="primaryHero"
@@ -127,7 +126,7 @@ export const HomepageHero = ({ seo }: Props) => {
               <Button
                 size="lg"
                 variant="secondaryHero"
-                onClick={() => navigate("/en/what-is-starknet")}
+                href="/en/what-is-starknet"
               >
                 Explore Starknet
               </Button>
