@@ -10,17 +10,8 @@ video:
     etag: S5EF0zo6kxx4DqirqCwlIN-G6i4
     id: l8bKLQUS4z4
     snippet:
-      publishedAt: 2023-12-04T13:24:21Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "NFTs on Starknet: Briq"
-      description: >-
-        Briq is an NFT building protocol that allows users to build NFTs out of
-        tiny cubes stored on the blockchain called briqs. You can disassemble
-        anything built out of briqs to get them back and build something else.
-        It’s a vessel for creativity where anyone can express themselves in a
-        playful and decentralized way.
-
-        https://briq.construction/
+      publishedAt: 2023-12-04T13:24:21.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/l8bKLQUS4z4/default.jpg
@@ -42,9 +33,10 @@ video:
           url: https://i.ytimg.com/vi/l8bKLQUS4z4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "NFTs on Starknet: Briq"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "NFTs on Starknet: Briq"
         description: >-
@@ -55,7 +47,15 @@ video:
           themselves in a playful and decentralized way.
 
           https://briq.construction/
-      defaultAudioLanguage: en-US
+      description: >-
+        Briq is an NFT building protocol that allows users to build NFTs out of
+        tiny cubes stored on the blockchain called briqs. You can disassemble
+        anything built out of briqs to get them back and build something else.
+        It’s a vessel for creativity where anyone can express themselves in a
+        playful and decentralized way.
+
+        https://briq.construction/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT1M21S
       dimension: 2d
@@ -66,8 +66,7 @@ video:
       projection: rectangular
 image: https://www.youtube.com/watch?v=l8bKLQUS4z4&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
 category:
-  - stark-math
-  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+  - engineering
 topic:
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: >
