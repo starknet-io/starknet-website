@@ -114,7 +114,7 @@ blocks:
         icon: /assets/developers.svg
         type: image_icon_link_card
         link:
-          custom_title: Explore the hub
+          custom_title: Find the resources you need
           custom_internal_link: ""
           custom_external_link: https://www.starknet.io/en/developers
         columns: "4"
@@ -127,7 +127,7 @@ blocks:
         icon: /assets/read-book.svg
         type: image_icon_link_card
         link:
-          custom_title: Develop on Starknet
+          custom_title: From zero to hero
           custom_external_link: https://book.starknet.io/
         columns: "4"
       - size: large
@@ -151,7 +151,7 @@ blocks:
         icon: /assets/developer-blog.svg
         type: image_icon_link_card
         link:
-          custom_title: Join the quests
+          custom_title: Try a challenge
           custom_external_link: https://nodeguardians.io/dev-hub
         columns: "4"
     heading: "Start Building "
