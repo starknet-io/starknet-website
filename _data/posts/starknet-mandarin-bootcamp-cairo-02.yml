@@ -10,29 +10,8 @@ video:
     etag: cF-4ercivxZ2vVgQvNa0H-c88Yc
     id: QsJG9qsey74
     snippet:
-      publishedAt: 2023-11-24T15:23:47Z
-      channelId: UC25f24G5Zb4aQ4hLr1poitw
-      title: 【Starknet中文训练营】02 Cairo
-      description: |-
-        #starknet 
-
-        🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
-
-        👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
-
-        💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
-
-        ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
-
-        💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
-
-        💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
-
-        本期视频为第二讲 - Cairo
-        主讲人 - 0xNezha
-
-        【Starknet中文训练营】播放列表
-        https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      publishedAt: 2023-11-24T15:23:47.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/QsJG9qsey74/default.jpg
@@ -55,8 +34,8 @@ video:
           width: 1280
           height: 720
       channelTitle: WTF Academy
+      title: 【Starknet中文训练营】02 Cairo
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: 【Starknet中文训练营】02 Cairo
         description: >-
@@ -89,6 +68,27 @@ video:
           【Starknet中文训练营】播放列表
 
           https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      description: |-
+        #starknet 
+
+        🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
+
+        👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
+
+        💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
+
+        ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
+
+        💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
+
+        💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
+
+        本期视频为第二讲 - Cairo
+        主讲人 - 0xNezha
+
+        【Starknet中文训练营】播放列表
+        https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      channelId: UC25f24G5Zb4aQ4hLr1poitw
     contentDetails:
       duration: PT1H16M37S
       dimension: 2d
@@ -98,7 +98,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/maxresdefault-11.jpg
-category: stark-math
+category:
+  - stark-math
+  - 3fe387e2-1fb6-41b9-bb74-96d6df394f42
 topic:
   - cairo
   - getting-started
