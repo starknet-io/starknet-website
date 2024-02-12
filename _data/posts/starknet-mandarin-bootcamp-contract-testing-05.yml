@@ -1,0 +1,117 @@
+id: 63112047-bc6b-4c43-87aa-e25ea2573c5b
+post_type: video
+title: Starknet Mandarin Bootcamp - Contract Testing 05
+published_date: 2024-02-12T09:49:34.866Z
+video:
+  url: https://www.youtube.com/watch?v=sP6ljJHLcOU&list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7&index=5
+  id: sP6ljJHLcOU
+  data:
+    kind: youtube#video
+    etag: 8e2droH1QfFnuAs8eb10Jr085gA
+    id: sP6ljJHLcOU
+    snippet:
+      publishedAt: 2023-12-13T16:02:41Z
+      channelId: UC25f24G5Zb4aQ4hLr1poitw
+      title: 【Starknet中文训练营】05 合约测试
+      description: |-
+        #starknet 
+
+        🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
+
+        👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
+
+        💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
+
+        ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
+
+        💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
+
+        💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
+
+        本期视频为第五讲 - 合约测试
+        主讲人 - 0xKrisss
+
+        【Starknet中文训练营】播放列表
+        https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/sP6ljJHLcOU/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/sP6ljJHLcOU/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/sP6ljJHLcOU/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/sP6ljJHLcOU/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/sP6ljJHLcOU/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: WTF Academy
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: 【Starknet中文训练营】05 合约测试
+        description: >-
+          #starknet 
+
+
+          🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
+
+
+          👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
+
+
+          💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
+
+
+          ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
+
+
+          💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
+
+
+          💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
+
+
+          本期视频为第五讲 - 合约测试
+
+          主讲人 - 0xKrisss
+
+
+          【Starknet中文训练营】播放列表
+
+          https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+    contentDetails:
+      duration: PT51M20S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/maxresdefault-14.jpg
+category: stark-math
+topic:
+  - getting-started
+short_desc: >-
+  Starknet Chinese Training Camp: A 7-week online training program specially
+  designed for developers.
+
+
+  It aims to support developers in developing applications on Ethereum Layer2 Starknet.
+
+
+  This event is organized by WTF Academy in collaboration with the Starknet Chinese Community and supported by the Starknet Foundation.
+
+
+  This session's video is the fifth lecture - Contract Testing.
+
+  Speaker - 0xKrisss
