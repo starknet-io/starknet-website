@@ -11,10 +11,8 @@ video:
     etag: UOFnXHVAKJpmesIdZjRALysdptk
     id: yk6lQM5TiVY
     snippet:
-      publishedAt: 2023-12-27T14:38:43Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Let's get started on Starknet  #crypto #starknet #cryptocurrency"
-      description: ""
+      publishedAt: 2023-12-27T14:38:43.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/yk6lQM5TiVY/default.jpg
@@ -36,13 +34,15 @@ video:
           url: https://i.ytimg.com/vi/yk6lQM5TiVY/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Let's get started on Starknet  #crypto #starknet #cryptocurrency"
       categoryId: "26"
-      liveBroadcastContent: none
       localized:
         title: "Let's get started on Starknet  #crypto #starknet #cryptocurrency"
         description: ""
-      defaultAudioLanguage: en-US
+      description: ""
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT59S
       dimension: 2d
@@ -51,7 +51,7 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-image: https://www.youtube.com/watch?v=yk6lQM5TiVY&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=20
+image: /assets/yk6lqm5tivy-hd.jpg
 category:
   - stark-math
   - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
