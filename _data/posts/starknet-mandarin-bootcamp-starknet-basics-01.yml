@@ -1,0 +1,119 @@
+id: 7f4eac6b-0a1d-4d45-a7ae-c8b08419d397
+post_type: video
+title: Starknet Mandarin Bootcamp - Starknet Basics 01
+published_date: 2024-02-12T09:32:43.618Z
+video:
+  url: https://www.youtube.com/watch?v=FydcWcSsyRo&t=516s
+  id: FydcWcSsyRo
+  data:
+    kind: youtube#video
+    etag: euV6Y_R2oBH3B4I23S52mpXhXew
+    id: FydcWcSsyRo
+    snippet:
+      publishedAt: 2023-11-23T22:19:32.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/FydcWcSsyRo/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/FydcWcSsyRo/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/FydcWcSsyRo/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/FydcWcSsyRo/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/FydcWcSsyRo/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: WTF Academy
+      title: 【Starknet中文训练营】01 Starknet基础
+      categoryId: "28"
+      localized:
+        title: 【Starknet中文训练营】01 Starknet基础
+        description: >-
+          #starknet 
+
+
+          🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
+
+
+          👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
+
+
+          💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
+
+
+          ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
+
+
+          💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
+
+
+          💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
+
+
+          本期视频为第一讲 - Starknet基础
+
+          主讲人 - Zelig
+
+
+          【Starknet中文训练营】播放列表
+
+          https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      description: |-
+        #starknet 
+
+        🦄 Starknet中文训练营：一场为期7周的在线培训项目，专为开发者而设。
+
+        👑 旨在帮助开发者在以太坊Layer2 Starknet上开发应用🎫
+
+        💎 本活动由 WTF Academy 主办，Starknet中文社区 协办，Starknet基金会支持。
+
+        ⏰ 日期： 2023年11月12日至12月22日，每周五晚8点，线上举行
+
+        💻 为了提高教学质量，本次训练营限制100人参与，报名截止日期：11月11日
+
+        💰 完成课程的学员将获得链上证书；优秀学员将获得奖学金，并且我们将协助申请Starknet早期社区成员计划（ECMP）
+
+        本期视频为第一讲 - Starknet基础
+        主讲人 - Zelig
+
+        【Starknet中文训练营】播放列表
+        https://www.youtube.com/playlist?list=PLsWAMtU54z7s12-kdLwubwupCg2F3Ckq7
+      channelId: UC25f24G5Zb4aQ4hLr1poitw
+    contentDetails:
+      duration: PT1H19M28S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/maxresdefault-10.jpg
+category:
+  - stark-math
+  - 3fe387e2-1fb6-41b9-bb74-96d6df394f42
+topic:
+  - getting-started
+short_desc: >-
+  Starknet Chinese Training Camp: A 7-week online training program designed
+  specifically for developers.
+
+
+  Aimed at helping developers develop applications on Ethereum Layer2 Starknet.
+
+
+  This event is organized by WTF Academy, co-organized by the Starknet Chinese Community, and supported by the Starknet Foundation.
+
+
+  This video is the first lecture - Basics of Starknet.
+
+  Speaker - Zelig
