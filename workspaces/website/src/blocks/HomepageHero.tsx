@@ -129,7 +129,7 @@ export const HomepageHero = ({ seo }: Props) => {
                 variant="secondaryHero"
                 onClick={() => navigate("/en/what-is-starknet")}
               >
-                Learn the basics
+                Explore Starknet
               </Button>
             </Stack>
           </Box>
