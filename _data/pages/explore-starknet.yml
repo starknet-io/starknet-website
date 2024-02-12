@@ -94,7 +94,7 @@ blocks:
         icon: /assets/onramp.svg
         type: image_icon_link_card
         link:
-          custom_title: Transfer ERC-20 tokens between Ethereum and Starknet
+          custom_title: Transfer assets between Ethereum and Starknet
           custom_external_link: https://starkgate.starknet.io/
         columns: "4"
     heading: Explore Starknet
