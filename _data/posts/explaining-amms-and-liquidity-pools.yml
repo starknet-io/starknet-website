@@ -1,7 +1,9 @@
 id: 1e2116e8-8fba-46d1-9c94-405ee8dfb0ac
 post_type: video
+isFeatured: true
 title: Explaining AMMs and Liquidity Pools
-published_date: 2023-12-18T13:23:17.769Z
+seoTitle: Explaining AMMs and Liquidity Pools
+published_date: 2024-02-13T14:33:36.833Z
 video:
   url: https://www.youtube.com/watch?v=SsSJon8UTrE
   id: SsSJon8UTrE
@@ -87,3 +89,6 @@ short_desc: >+
   Check out how Automated Market Makers (AMMs) work and how standard liquidity
   Pools differ from Pools with concentrated liquidity. 
 
+seo_desc: >
+  Check out how Automated Market Makers (AMMs) work and how standard liquidity
+  Pools differ from Pools with concentrated liquidity. 
