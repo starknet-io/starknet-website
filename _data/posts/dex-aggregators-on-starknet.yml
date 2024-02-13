@@ -1,8 +1,9 @@
 id: 2519fa53-5701-48b3-b84d-f9c1c450b83f
 post_type: video
+isFeatured: true
 title: DEX Aggregators on Starknet
 seoTitle: DEX Aggregators on Starknet
-published_date: 2024-02-13T14:35:31.644Z
+published_date: 2024-02-13T14:56:42.148Z
 video:
   url: https://www.youtube.com/watch?v=R_Cy-DNVmeE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
   id: R_Cy-DNVmeE
