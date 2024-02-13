@@ -1,7 +1,9 @@
 id: 1699b694-b9d4-4099-8478-8c695d62d229
 post_type: video
+isFeatured: true
 title: Focusing with Focus Tree - Starknet Ecosystem
-published_date: 2024-02-13T14:20:45.327Z
+seoTitle: Focusing with Focus Tree - Starknet Ecosystem
+published_date: 2024-02-13T14:42:15.985Z
 video:
   url: https://www.youtube.com/watch?v=m4Dxu4W3CJw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=4
   id: m4Dxu4W3CJw
@@ -88,5 +90,7 @@ short_desc: >-
 
 
   Download here: https://www.focustree.app/
-seoFocusKeywords:
-  - On-chain Gaming
+seo_desc: Explore Focus Tree, a gamified solution enhancing focus through garden
+  building and earning Tiles. Dive into a healthier tech relationship. Ready to
+  start?
+seoFocusKeywords: []
