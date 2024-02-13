@@ -1,7 +1,8 @@
 id: 2519fa53-5701-48b3-b84d-f9c1c450b83f
 post_type: video
 title: DEX Aggregators on Starknet
-published_date: 2023-11-29T13:38:38.513Z
+seoTitle: DEX Aggregators on Starknet
+published_date: 2024-02-13T14:35:31.644Z
 video:
   url: https://www.youtube.com/watch?v=R_Cy-DNVmeE&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=5
   id: R_Cy-DNVmeE
@@ -83,6 +84,8 @@ short_desc: >
   Discover how DEX aggregators are transforming the way we trade
   cryptocurrencies, offering enhanced efficiency, improved liquidity, and
   reduced slippage.
-seoFocusKeywords:
-  - DEX Aggregators
-  - DeFi
+seo_desc: >
+  Discover how DEX aggregators are transforming the way we trade
+  cryptocurrencies, offering enhanced efficiency, improved liquidity, and
+  reduced slippage.
+seoFocusKeywords: []
