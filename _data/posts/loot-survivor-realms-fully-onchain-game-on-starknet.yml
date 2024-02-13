@@ -1,7 +1,8 @@
 id: 9a456c32-571d-42b7-8da8-19d6382486fb
 post_type: video
 title: Loot Survivor (Realms) - Fully Onchain Game on Starknet
-published_date: 2023-11-29T13:31:46.492Z
+seoTitle: Loot Survivor (Realms) - Fully Onchain Game on Starknet
+published_date: 2024-02-13T14:40:04.177Z
 video:
   url: https://www.youtube.com/watch?v=dq1q67t2rJw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=3
   id: dq1q67t2rJw
@@ -10,25 +11,8 @@ video:
     etag: V6ciDNdY6dNgVmoPLmSMNUDjb78
     id: dq1q67t2rJw
     snippet:
-      publishedAt: 2023-11-29T12:59:47Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: Loot Survivor (Realms) - Fully Onchain Game on Starknet
-      description: >-
-        In this video, we'll guide you through Loot Survivor, a fully onchain
-        game where strategy meets adventure. Learn how to select the right
-        equipment and traits, like charisma and strength, to defeat various
-        monsters. It's game on!
-
-
-        ***UPDATE: Loot Survivor is now playable on Mainnet***
-
-
-        Play here: https://survivor.realms.world/
-
-        Discover more about Realms: https://realms.world/
-
-
-        Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      publishedAt: 2023-11-29T12:59:47.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/dq1q67t2rJw/default.jpg
@@ -50,9 +34,10 @@ video:
           url: https://i.ytimg.com/vi/dq1q67t2rJw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: Loot Survivor (Realms) - Fully Onchain Game on Starknet
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Loot Survivor (Realms) - Fully Onchain Game on Starknet
         description: >-
@@ -71,7 +56,23 @@ video:
 
 
           Visit us at https://starkware.co/ and https://www.starknet.io/en/
-      defaultAudioLanguage: en-US
+      description: >-
+        In this video, we'll guide you through Loot Survivor, a fully onchain
+        game where strategy meets adventure. Learn how to select the right
+        equipment and traits, like charisma and strength, to defeat various
+        monsters. It's game on!
+
+
+        ***UPDATE: Loot Survivor is now playable on Mainnet***
+
+
+        Play here: https://survivor.realms.world/
+
+        Discover more about Realms: https://realms.world/
+
+
+        Visit us at https://starkware.co/ and https://www.starknet.io/en/
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT2M2S
       dimension: 2d
@@ -83,6 +84,7 @@ video:
 image: /assets/loot-survivor-realms-fully-onchain-game-on-starknet.png
 category:
   - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - 8b8348d4-4efa-4fa3-8c70-41ae6ef338cb
 short_desc: >
@@ -92,5 +94,7 @@ short_desc: >
 
 
   **UPDATE: Loot Survivor is now playable on Mainnet**
-seoFocusKeywords:
-  - On-chain Gaming
+seo_desc: Guide to Loot Survivor, a fully on-chain game blending strategy with
+  adventure. Learn to choose equipment and traits to conquer monsters. It's game
+  on!
+seoFocusKeywords: []
