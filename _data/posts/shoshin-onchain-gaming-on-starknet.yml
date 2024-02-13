@@ -1,7 +1,9 @@
 id: cffdb4a3-badb-48d3-ba4f-7abebeb47526
 post_type: video
+isFeatured: true
 title: Shoshin - Onchain Gaming on Starknet
-published_date: 2023-11-28T13:16:54.133Z
+seoTitle: Shoshin - Onchain Gaming on Starknet
+published_date: 2024-02-13T14:36:36.333Z
 video:
   url: https://www.youtube.com/watch?v=8NE1_Sw9MxM&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=1&pp=iAQB
   id: 8NE1_Sw9MxM
@@ -84,5 +86,7 @@ short_desc: Let's dive into Shoshin - an onchain game on Starknet! Learn how
   fighters to win epic battles. The game runs smoothly and quickly in your
   browser through the Cairo VM, with your score validated by Starknet without
   additional computations.
-seoFocusKeywords:
-  - On-chain Gaming
+seo_desc: Explore Shoshin, an on-chain strategy game on Starknet. Train
+  fighters, win battles, and enjoy seamless gameplay through Cairo VM, validated
+  by Starknet.
+seoFocusKeywords: []
