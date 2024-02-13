@@ -11,7 +11,8 @@ image: /assets/12334.jpg
 category:
   - community-and-events
   - 50109cf1-58ca-4d67-9786-504c01b41588
-topic: []
+topic:
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: >
   Let’s discuss Starknet, Ethereum, and the road ahead for 2024! Join Eric Wall
   for a special discussion with Eli Ben Sasson, Avihu Levy, and Liron Hayman to
