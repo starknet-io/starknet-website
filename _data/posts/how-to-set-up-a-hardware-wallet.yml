@@ -1,0 +1,28 @@
+id: 815ccd92-606a-4e94-ad9e-0f9e545e02f5
+post_type: video
+isFeatured: true
+title: How to Set Up a Hardware Wallet
+seoTitle: How to Set Up a Hardware Wallet
+published_date: 2024-02-13T14:26:22.402Z
+video:
+  url: https://www.youtube.com/watch?v=vXX2S3czkAw&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=2
+  id: vXX2S3czkAw
+  data: null
+image: /assets/vxx2s3czkaw-mq.jpg
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
+topic:
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
+short_desc: >
+  Securing your digital assets is a top priority when entering the
+  cryptocurrency world. This is especially true on Ethereum's L1, where robust
+  smart wallet security features like two-factor authentication are
+  non-existent.
+
+  Fortunately, hardware wallets, known as cold wallets, provide a solution. 
+
+  Follow along to set up your hardware wallet and discover why they are considered one of the safest ways to store crypto.
+seo_desc: Learn how to secure your digital assets with a hardware wallet, the
+  safest method for storing cryptocurrency, especially on Ethereum's L1. A
+  step-by-step guide.
