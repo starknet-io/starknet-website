@@ -1,7 +1,9 @@
 id: d5c6abf1-3129-45b7-a0fb-e2866079d4c2
 post_type: video
+isFeatured: true
 title: How To Enable Braavos' Hardware Signer
-published_date: 2024-02-11T07:47:23.385Z
+seoTitle: How To Enable Braavos' Hardware Signer
+published_date: 2024-02-13T14:57:50.582Z
 video:
   url: https://youtu.be/RZNipaCmKas
   id: RZNipaCmKas
@@ -83,3 +85,6 @@ short_desc: >-
 
 
   Braavos is a Starknet native smart wallet that allows you to store your crypto in an intuitive and safe way. Find out how to enable the hardware signer to add an additional layer of protection. 
+seo_desc: "Braavos is a Starknet native smart wallet that allows you to store
+  your crypto in an intuitive and safe way. Find out how to enable the hardware
+  signer to add an additional layer of protection. "
