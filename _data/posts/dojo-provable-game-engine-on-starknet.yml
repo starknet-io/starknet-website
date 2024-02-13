@@ -1,7 +1,9 @@
 id: 680fc434-b3a8-4e81-ab61-84fb0778b769
 post_type: video
+isFeatured: true
 title: Dojo - Provable Game Engine on Starknet
-published_date: 2023-11-28T13:28:47.308Z
+seoTitle: Dojo - Provable Game Engine on Starknet
+published_date: 2024-02-13T14:38:14.610Z
 video:
   url: https://www.youtube.com/watch?v=lclg7FmIkLQ&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=2
   id: lclg7FmIkLQ
@@ -76,5 +78,7 @@ topic:
 short_desc: Discover how Dojo is revolutionizing the gaming experience with its
   unique features and cutting-edge technology. Whether you're a gamer,
   developer, or crypto-enthusiast, Dojo offers something for everyone.
-seoFocusKeywords:
-  - On-chain Gaming
+seo_desc: Discover Dojo's revolution in gaming with unique features and advanced
+  technology. A thrilling experience for gamers, developers, and
+  crypto-enthusiasts alike.
+seoFocusKeywords: []
