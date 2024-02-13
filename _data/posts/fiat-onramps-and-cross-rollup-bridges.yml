@@ -1,7 +1,8 @@
 id: 49608aae-0627-47f0-af77-579171068c61
 post_type: video
 title: Fiat Onramps and Cross Rollup Bridges
-published_date: 2023-12-21T12:12:15.787Z
+seoTitle: Fiat Onramps and Cross Rollup Bridges
+published_date: 2024-02-13T14:31:09.160Z
 video:
   url: https://www.youtube.com/watch?v=m8vEArBfD_k
   id: m8vEArBfD_k
@@ -78,3 +79,5 @@ topic:
 short_desc: >
   What are onramps and cross rollup bridges, and what do they do? That's
   precisely what we'll be looking at today. 
+seo_desc: "What are onramps and cross rollup bridges, and what do they do?
+  That's precisely what we'll be looking at today. "
