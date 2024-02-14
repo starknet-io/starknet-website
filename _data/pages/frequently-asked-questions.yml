@@ -396,6 +396,80 @@ blocks:
 
 
           For more information on ECMP criteria, click [here](https://community.starknet.io/t/announcing-the-early-community-member-program/102092).
+      - label: How can someone claim STRK via Provisions?
+        body: >-
+          
+
+          * Provisions can be claimed via the Provisions portal. Recipients who have an eligible Starknet or Ethereum address can also claim by interacting directly with the Provisions smart contract if they choose. Note: The Starknet Foundation will only cover fees for those claiming via the Provisions portal.
+
+          * Eligible ETH stakers who staked via liquidity pools need to contact their liquidity pools and claim their provisions through them.
+
+          * Recipients will need to claim their Provisions allocations no later than four months (until June 20th, 2024) after Provisions launches on Mainnet. 
+
+          * Recipients claiming through the Provisions portal will need to claim with their [Starknet wallet](https://www.starknet.io/en/ecosystem/wallets). **Make sure your Starknet wallet is up to date with its latest version.** 
+
+          * Beware of scams and make sure you follow only the official communication channels and interact with the official Provisions portal, as found in the Starknet [Foundation’s official Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program) and [X (formerly Twitter) announcement](https://twitter.com/StarknetFndn/status/1757676598730342761). Here are the official Starknet communication channels:
+
+            * Starknet on X (formerly Twitter): <https://twitter.com/Starknet>
+            * Starknet Hub: <https://www.starknet.io/>
+            * Starknet Foundation on X:  [https://twitter.com/StarknetFndn](https://twitter.com/Starknetfndn)
+            * Provisions portal:<https://provisions.starknet.io>
+      - label: What is the starting date for the distribution of Provisions?
+        body: STRK will become available for claiming on Starknet Mainnet starting at
+          12pm (UTC) on February 20, 2024.
+      - label: What is the last date for claiming STRK via Provisions?
+        body: Those eligible for Provisions may claim them within four months of the
+          date on which claiming is enabled (until June 20th, 2024). Tokens not
+          claimed in this first phase will be reallocated via the Starknet
+          Foundation for future distribution rounds.
+      - label: If I staked on Ethereum through a liquidity pool, how do I claim STRK via
+          Provisions?
+        body: Those who used liquid-staking mechanisms or centralized exchanges to stake
+          on Ethereum may receive distribution from the relevant pools and
+          exchanges. Validators operated by pools and exchanges—as determined by
+          the Starknet Foundation via data from [Rated
+          Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all)—are
+          eligible to claim 360 STRK to be distributed among their pre-Merge
+          stakers. Please contact your staking service for more information.
+      - label: Are there any fees associated with claiming STRK via Provisions?
+        body: No. Fees for Provisions-related transactions claimed via the Provisions
+          portal, including the transaction for claiming STRK and depositing it
+          in the Starknet wallet, are paid by the Starknet Foundation.
+      - label: What happens to Provisions allocations that are not claimed?
+        body: Allocations that are not claimed during the four-month claiming period of
+          this round of Provisions will be reclaimed to the pool and distributed
+          in future rounds and/or programs.
+      - label: Are there any jurisdictional restrictions for receiving Provisions?
+        body: >-
+          Yes. Due to regulatory constraints and/or an uncertain regulatory
+          environment, Provisions and STRK will not be available to:
+
+
+          * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, Lebanon, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+
+          * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI). 
+
+          * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
+
+
+          For more information about the restrictions applicable to Provisions, please refer to the [terms of use](http://starknet.io/en/provisions-terms-of-use).
+      - label: Are there any tax implications for receiving Provisions?
+        body: There may be tax implications for the recipients of Provisions, which may
+          vary by jurisdiction. It is your sole responsibility to determine
+          whether, and to what extent, any taxes apply to any transactions you
+          conduct in connection with your use of the service, and to withhold,
+          collect, report and remit the correct amounts of taxes to the
+          appropriate tax authorities. Please consult a tax advisor in your
+          country.
+      - label: Why do different staking categories receive different allocations?
+        body: >-
+          Solo stakers are allocated more per validator compared with stakers
+          that used a CEX or staking pool. This is especially true for solo
+          stakers before Genesis. Why? 
+
+
+          We appreciate the risk all stakers took upon themselves, and solo stakers that couldn’t cash out in any form took a much larger leap of faith with Ethereum compared to their counterparts on staking pools or CEXes. Solo stakers do, however, have a cap per deposit address, while CEXes do not. That’s because we want to limit the allocation a single entity receives, especially since the classification provided by [rated.network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all) is heuristic and might contain false positives. There were also validators that are not solo stakers, yet their identity is unknown. These validators may claim through the Provisions portal but receive the same allocation as staking pools of CEXes (while also adhering to the solo-staker category’s cap).
+      - label: "I’m unable to claim through the Provisions portal because:"
   - type: accordion
     heading: Starknet Foundation
     blocks:
