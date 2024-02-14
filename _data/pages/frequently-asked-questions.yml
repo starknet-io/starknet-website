@@ -547,6 +547,76 @@ blocks:
           investors will be released from lockup according to the schedule that
           appears in the [STRK tokenomics
           document](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
+      - label: "What are the expected plans for minting new coins of STRK and what will
+          be the inflation mechanism? "
+        body: >-
+          Starknet is on the path to decentralization and a proof-of-stake (PoS)
+          model that will reward stakers for participating in the network’s
+          governance, security, and overall maintenance. Like any PoS model,
+          Starknet will need to control the issuing of new tokens to encourage
+          participation in network maintenance and manage inflation. 
+
+
+          StarkWare has proposed a minting curve that aims to strike a balance between the needs of rewarding stakers and setting inflation expectations on Starknet. Like all changes affecting the Starknet protocol, this is merely a proposal. If adopted it will need to pass community and governance approval. For more information on StarkWare’s minting proposal, read [here](https://starkware.co/resource/a-token-minting-proposal-to-manage-inflation/).
+      - label: "Will there be another round of Provisions? If so, who will be eligible?
+          "
+        body: >-
+          The initial round of the Provisions program distributes 726 million of
+          the 900 million STRK allocated for the wider Provisions program
+          mentioned in the [original STRK allocation
+          post](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6).
+          Unclaimed tokens after the four-month distribution period of the first
+          round of Provisions will be redistributed in the future. 
+
+
+          It is yet to be decided how and when the remainder of the amount allocated for the wider Provisions program will be distributed. The Starknet Foundation will decide and may announce further plans around Provisions in due course.
+      - label: What other programs will there be for token allocation to the community?
+        body: >-
+          The Starknet Foundation has allocated a total of 1.8 billion STRK (18%
+          of the total STRK supply) to distribute to the community. During the
+          first round of Provisions, the Starknet Foundation will distribute
+          more than 700 million out of 900 million STRK set aside for the
+          Provisions program. Tokens that aren't claimed during this period will
+          be distributed to the community in the future.
+
+
+          Future plans for STRK distribution to the community also include rebates, initiatives of various special community committees dedicated to DeFi, gaming, and more. 
+
+
+          More details for future distribution will be shared at a later date.
+      - label: What measures are in place to prevent fraud or abuse?
+        body: >-
+          The Provisions program was carefully developed with security in mind,
+          utilizing secure software development life cycle methodologies. 
+
+
+          Additionally, the systems and smart contracts related to Provisions underwent extensive code auditing and penetration-testing procedures, both internally and externally (by Trail of Bits and Zellic). Furthermore, the systems are monitored to detect any malicious attempts or bugs, with prevention and recovery mechanisms in place for various scenarios. 
+
+
+          We are aware of the fact that there may be scam attempts by creating fake websites and/or social media profiles. We have been and still are taking measures to proactively identify such activities. Users are advised to stay alert and beware of scam attempts.
+
+
+          If you have encountered any suspicious activity or bugs, please report them to the community managers on the [Starknet Discord server](https://starknet.io/discord/).
+      - label: What should I do if I have additional questions or feedback?
+        body: Please contact the community managers on the [Starknet Discord
+          server](https://starknet.io/discord/) or reach out to us at
+          provisionsupport@starknet.org.
+      - label: How does the Starknet Foundation plan to communicate updates about
+          Provisions?
+        body: All future communications will come from the official
+          [Starknet](https://twitter.com/Starknet) and [Starknet
+          Foundation](https://twitter.com/StarknetFndn)’s X (formerly Twitter)
+          accounts.
+      - label: How can I get involved?
+        body: >-
+          We invite everyone to join and be involved in the Starknet community. 
+
+
+          * Engage with the community on [X](https://twitter.com/starknet?lang=en) and the [Starknet Discord server](http://starknet.io/discord/), or join the [Starknet Community Support Telegram Group](https://t.me/+efDitGbILOFmMDNk).
+
+          * [Start building on Starknet](https://www.starknet.io/en/developers)
+
+          * [Join a Starknet event](https://www.starknet.io/en/events)
   - type: accordion
     heading: Starknet Foundation
     blocks:
