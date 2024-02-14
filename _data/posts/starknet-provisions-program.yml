@@ -8,14 +8,14 @@ published_date: 2024-02-14T07:48:22.727Z
 image: /assets/final-1-.jpg
 category:
   - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
-  - 910bb83e-5337-46f0-a144-4640e8a11ec6
 topic:
   - decentralization
 short_desc: >
   The Starknet Provisions Program marks the first distribution of Starknet’s
   native token (STRK) to the dedicated community building and using the dApps
   that will become commonplace tomorrow.
-post_desc: It’s here! Or The first distribution of STRK is here!
+post_desc: |
+  Starknet’s next phase of decentralization
 seo_desc: >
   The Starknet Foundation introduces the first round of the Starknet Provisions
   Program, meaning allocation of Starknet Token (STRK) to the community.
@@ -120,12 +120,9 @@ blocks:
 
       * Please note that due to regulatory constraints, Provisions and STRK will not be available to:
 
-      * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any other applicable sanctioned country, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
-
-      * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI).
-
-      * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
-
+        * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any other applicable sanctioned country, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+        * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI).
+        * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
 
       ### Guiding principles of allocation
 
@@ -159,7 +156,7 @@ blocks:
       Here are the groups that can claim STRK via Provisions:
 
 
-      ![](/assets/most-updated-pie-provisions-.jpeg)
+      ![](/assets/provisions-allocations-pie-final.jpeg)
 
 
       Starknet stack & ecosystem contributors
