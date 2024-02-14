@@ -56,7 +56,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
               // width={mainMenuItem.title === "Learn" ? "350px" : "auto"}
               >
                 {mainMenuItem.columns?.map((column, columnIndex) => (
-                  <Box key={columnIndex}>
+                  <Stack key={columnIndex} spacing="4">
                     {column.blocks?.map((block, blockIndex) => (
                       <Stack key={blockIndex} spacing="4">
                         {block.items?.map((item, itemIndex) => {
@@ -94,7 +94,7 @@ export const Footer = ({ mainMenu, seo }: Props) => {
                         })}
                       </Stack>
                     ))}
-                  </Box>
+                  </Stack>
                 ))}
               </Box>
             )}
