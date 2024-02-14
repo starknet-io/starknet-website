@@ -1,0 +1,321 @@
+id: 96c92de7-03ae-4213-982a-c829015038b0
+post_type: article
+isFeatured: true
+title: Starknet Provisions Program
+seoTitle: " Introducing the first round of Starknet Provisions"
+toc: true
+published_date: 2024-02-14T07:48:22.727Z
+category:
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+topic:
+  - decentralization
+short_desc: >
+  The Starknet Provisions Program marks the first distribution of Starknet’s
+  native token (STRK) to the dedicated community building and using the dApps
+  that will become commonplace tomorrow.
+post_desc: It’s here! Or The first distribution of STRK is here!
+seo_desc: >
+  The Starknet Foundation introduces the first round of the Starknet Provisions
+  Program, meaning allocation of Starknet Token (STRK) to the community.
+blocks:
+  - type: markdown
+    body: >-
+      ### TL;DR
+
+
+      * The Starknet Foundation will soon launch the first round of the Starknet Provisions Program, meaning allocation of Starknet Token (STRK) to the community.
+
+      * During this round of the program, the Starknet Foundation will distribute more than 700 million STRK to nearly 1.3 million addresses. This is a portion of the 900 million STRK dedicated to the Provisions program (out of 1.8 billion STRK dedicated to the community in total).
+
+      * STRK will become available for claiming on Starknet Mainnet starting at 12pm (UTC) on February 20th, 2024. Already today, anyone can check eligibility on the Provisions portal at <https://provisions.starknet.io>. Claiming will be possible for 4 months after the launch of the program. Tokens that are not claimed during this period will be reclaimed to the pool and distributed in future rounds and/or programs.
+
+      * STRK will be used for paying transaction fees, staking, and shaping the long-term evolution of the Starknet protocol through participation in governance votes.
+
+      * STRK will be distributed to individuals and groups that have helped to lay down the roots of Starknet. This includes **Starknet** users, developers, and community contributors; **StarkEx** users; **Ethereum** protocol contributors and stakers; and developers of select **non-crypto open-source projects**.
+
+
+      ### How to check eligibility and claim STRK
+
+
+      The Starknet Foundation is proud to announce the Starknet Provisions Program! Here are the important things you need to know:
+
+
+      * Checking your eligibility for Provisions, as well as claiming STRK through the program, will be made possible through the Provisions portal at <https://provisions.starknet.io>. Make sure you follow the correct URL, and beware of scams.
+
+      * STRK will become available for claiming through the Provisions program on Starknet Mainnet starting at 12pm (UTC) on February 20th, 2024.
+
+      * Note that you will need a Starknet wallet to claim your STRK through the Provisions portal. If you have a Starknet wallet, **make sure you have the latest version installed and that your account is up to date.**
+
+      * **Important:** Upon the launch of Provisions on February 20th, 2024, all fees for claiming STRK **via the Provisions** **portal** will be covered by the Starknet Foundation. This is true for claiming via the official Provisions portal only.
+
+
+      ### Introducing Provisions
+
+
+      Today, the Starknet Foundation is proud to introduce the Starknet Provisions Program, the first distribution of Starknet’s native token — Starknet Token (STRK) — to the dedicated community building and using the dApps that will become commonplace tomorrow. STRK is set to play an important role in several aspects of the Starknet network, including paying network fees, staking, and participating in governance votes.
+
+
+      In the first phase of Provisions, the Starknet Foundation will allocate STRK to nearly 1.3 million addresses, the widest distribution base for such a program.
+
+
+      The Starknet Foundation sees the importance of engaging the Starknet community to the fullest, and Starknet will become the first Layer 2 network to cover the gas fees associated with claiming tokens. The gas fees will be covered throughout the claiming process when done via the official Provisions portal.
+
+
+      This blog post outlines Provisions: The purpose of the program, the guiding principles that lie behind token allocation, and the groups that will be eligible to claim.
+
+
+      ### The vision behind Provisions
+
+
+      Starknet is a permissionless L2 Validity Rollup that unleashes the potential of Ethereum by bringing unlimited scalability through cryptographic protocols called STARKs. The network inherits Ethereum’s security, as well as its core principles of decentralization, transparency, and inclusivity.
+
+
+      Starknet trailblazes blockchain innovation by making it economically feasible to build any dApp, no matter the complexity or computing power required. The network’s native programming language, Cairo, offers developers a friendly experience and unmatched flexibility in writing smart contracts, and Starknet’s native Account Abstraction design enables frictionless transaction signing. The result is a rapidly growing ecosystem of dApps with intuitive usability on top of fast, low-cost transactions.
+
+
+      All of that is made possible with the help of the dedicated Starknet community. Starknet is on the road toward decentralization, and part of that journey includes distributing the network’s native STRK token to the community.
+
+
+      Provisions will allocate STRK to individuals who have demonstrated a track record of support for Starknet’s values, either by using the network and its base technology or by building and maintaining Starknet itself. STRK will also be allocated to those who contributed to securing Ethereum, Starknet’s base layer that provides its security. In addition, STRK will be distributed to those who helped to develop the larger ecosystem of open-source software and infrastructure, as their work has become a public good and contributed to the emergence of a more open and inclusive web.
+
+
+      ### Using STRK
+
+
+      STRK will be used for several functions crucial to Starknet’s journey toward decentralization:
+
+
+      * **Paying network fees**: Starting with Provisions, users will be able to pay transaction fees using STRK. Fees on Starknet are currently paid in ETH, and following Provisions, users will have the choice of paying fees in ETH or STRK. Note: While end users will be able to pay fees in STRK, the Starknet protocol continues to use ETH to pay fees on Ethereum to secure the network and its data.
+
+      * **Governance**: Following Provisions, recipients of STRK will be able to participate in governance over various issues that will shape Starknet’s future. More information on Starknet’s governance can be found in the [Starknet Governance Hub](https://governance.starknet.io/).
+
+      * **Staking**: In the future, STRK will be used for staking within a proof-of-stake (PoS) model to choose among a decentralized network of sequencers, thus ensuring Starknet’s decentralized operation.
+
+
+      For more information about plans for Starknet’s economics and the STRK token, read [here](https://docs.starknet.io/documentation/architecture_and_concepts/economics/why_are_economic_relevant).
+
+
+      ### Future plans
+
+
+      This first round of Provisions will distribute more than 700 million out of 900 million STRK set aside for this program. More broadly, the Starknet Foundation has allocated a total of 1.8 billion STRK (18% of the total STRK supply) to distribute to the community.
+
+
+      Future plans for STRK distribution to the community include rebates and initiatives of various special community committees dedicated to DeFi, gaming, and more. More details on future distributions will be shared in due course.
+
+
+      ### How recipients can claim
+
+
+      The Starknet Foundation aims to distribute STRK to contributors and has gone to great lengths to verify significant past contributions, both within and outside the Starknet ecosystem. Provisions are *not* intended as payment for any past or future work.
+
+
+      * Recipients will be able to claim Provisions allocations through the Provisions portal at <https://provisions.starknet.io> starting 12pm (UTC) on February 20th, 2024, and no later than June 20th, 2024.
+
+      * All fees for claiming STRK via the Provisions portal will be covered by the Starknet Foundation.
+
+      * Recipients will need to claim their Provisions allocations with a** [Starknet wallet](https://www.starknet.io/en/ecosystem/wallets). If you already have a Starknet wallet, please make sure your wallet and your accounts are updated with the latest version** (your wallet will prompt you to update, if required).
+
+      * Please note that due to regulatory constraints, Provisions and STRK will not be available to:
+
+      * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any other applicable sanctioned country, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+
+      * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI).
+
+      * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
+
+
+      ### Guiding principles of allocation
+
+
+      STRK allocation to the community is determined by the following values and principles:
+
+
+      * **Contribution**: Allocation is aimed at those who have substantially contributed to the advancement of Starknet, STARK-tech infrastructure, Ethereum, and select non-crypto open-source software projects. All these groups played an important role in advancing Starknet to where it is today.
+
+      * **Broad distribution:** The Starknet Foundation aims to distribute STRK to the largest number and widest variety of community members who have had an impact on Starknet through their substantial contributions. For this reason, the Foundation will allocate STRK to nearly 1.3 million addresses, with Starknet users receiving more than 50% of the STRK dedicated to this round of Provisions.
+
+      * **Transparency**: Criteria for distribution will be shared with the community in this blog post, and [the resulting recipients](https://github.com/starknet-io/provisions-data/) and their token allocations will be made public.
+
+      * **Expanding Ethereum adoption**: Allocation aims to expand Ethereum and blockchain to new audiences, including those outside the blockchain ecosystem. This aligns with Starknet’s vision of facilitating the mass adoption of Ethereum and decentralized protocols more broadly.
+
+
+      In addition, different types of contributions received different allocations in order to reflect their impact on Starknet:
+
+
+      * A contribution that required continuous effort was allocated more than a contribution that can be done quickly and easily (for example, contributing code to Starknet requires considerable time and expertise).
+
+      * A contribution to Starknet was allocated more Provisions than contributions to Ethereum and non-crypto projects.
+
+
+      For more details on the method that was used, please see [here](https://www.starknet.io/en/learn/frequently-asked-questions#toc-starknet-token).
+
+
+      ### Who is eligible
+
+
+      Here are the groups that can claim STRK via Provisions:
+
+
+      ![](/assets/starknet-provisions-allocation-pie-final.jpeg)
+
+
+      Starknet stack & ecosystem contributors
+
+
+      We want to recognize individuals or groups that have developed, engaged with, and battle-tested the Starknet network and stack. Contributors from the following groups are included among those eligible to claim STRK via Provisions:
+
+
+      **Starknet users**
+
+
+      Early users of Starknet who have tested and used applications built on the network will be eligible to claim STRK via Provisions. Invaluable to the network’s development, early users have hardened the network by providing feedback on Mainnet prototypes and helped bring Starknet to its current maturity stage. Early users of Starknet have played, and still are playing, a crucial role in the network’s advancement.\
+
+      **Criteria**: Users who performed more than five transactions in total up to November 15th, 2023, were active for three months or more, transacted with $100 volume or more, and had 0.005 ETH or more in their account on November 15th, 2023, are eligible for Provisions. Note that the program is aimed at excludingSybil behavior (on which we will expand on further below).
+
+
+      **Starknet early community members**
+
+
+      Starknet’s ecosystem members play a vital role in the network’s growth and success. They include early code contributors, Starknet event organizers, community managers, and those who have helped expand Starknet’s reach and enhance its developer education. Through their continuing efforts, they have contributed code, educated, raised awareness, and expanded Starknet to new audiences. The [Starknet Early Community Member Program](https://community.starknet.io/t/announcing-the-early-community-member-program/102092) (ECMP), which is part of Provisions, was created to address these contributors.\
+
+      **Criteria**: All community members approved as part of the [Starknet Early Community Member Program](https://community.starknet.io/t/announcing-the-early-community-member-program/102092) are eligible for Provisions.
+
+
+      **Starknet developers**
+
+
+      Provisions can be claimed by developers who made a substantial contribution to the Starknet ecosystem GitHub repositories. Their commitment to Starknet and the code they wrote have contributed to Starknet’s advancement. Provisions allocation to Starknet developers comes on the heels of the launch of [Devonomics](https://www.starknet.io/en/posts/developers/starknet-launches-the-devonomics-pilot-program), the program that rewards developers with a portion of fees collected on Starknet.\
+
+      **Criteria**: Provisions allocations are available to all developers who contributed at least three commits before November 15th, 2023, with at least one commit between January 1st, 2018, and November 15th, 2023, to a GitHub repository recognized as belonging to the Starknet ecosystem, and their GitHub profiles can be extracted from their email through the GitHub API.
+
+
+      #### StarkEx users
+
+
+      Past users of [StarkEx](https://starkware.co/starkex/) will also be given Provisions due to their interaction with STARK technology in its early stages. The users of StarkEx-powered dApps contributed to testing the robustness of certain components that are part of the Starknet stack, including the STARK proof system and [Cairo](https://www.cairo-lang.org/), Starknet’s native programming language. Their interactions with early-stage STARK technology helped to fortify the foundations of Starknet.
+
+
+      **Criteria**: All StarkEx users who performed at least eight transactions before June 1st, 2022, are eligible for Provisions.
+
+
+      #### Ethereum contributors
+
+
+      Starknet relies on Ethereum’s decentralization and security for settlement and data availability. Without the pioneering work of Ethereum’s developer community, Starknet and its Ethereum-grade security would not be possible. The people and projects maintaining the network are critical to Starknet, and therefore contributors from the following groups are eligible to claim STRK via Provisions:
+
+
+      **Ethereum Protocol Guild members**
+
+
+      A collective of Ethereum contributors, the [Ethereum Protocol Guild](https://protocol-guild.readthedocs.io/en/latest/) represents developers who have been contributing to the development and security of the Ethereum protocol and, in turn, to Starknet. \
+
+      **Criteria**: All Protocol Guild members, as of November 15, 2023, are eligible for Provisions. In addition to this, 6 million STRK will be sent to Protocol Guild’s vesting contract to be distributed to the evolving membership over time.
+
+
+      **Ethereum developers**
+
+
+      Provisions can be claimed by significant contributors to Ethereum ecosystem GitHub repositories. Their expertise and dedication have been instrumental in the evolution of Ethereum, enabling L2 innovations like Starknet to come to fruition. \
+
+      **Criteria**: All developers who contributed at least three commits before November 15th, 2023, with at least one commit between January 1st, 2018, and November 15th, 2023, to a GitHub repository recognized as belonging to the Ethereum ecosystem by [Electric Capital’s Blockchain Developer Report](https://github.com/electric-capital/crypto-ecosystems/blob/5a06c884adc79f193b3eb85f60550dfd265276c1/data/ecosystems/e/ethereum.toml), and their GitHub profiles can be extracted from their email through the GitHub API, are eligible for Provisions.
+
+
+      **EIP Authors**
+
+
+      Authors and co-authors of [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIPs), including ERCs, are eligible for Provisions. The contributions of EIP authors strengthen Ethereum, which, in turn, strengthens Starknet. In addition, Starknet’s Governance will focus heavily on Starknet protocol improvements, a process that could benefit from the experience of EIP Authors. \
+
+      **Criteria**: Provisions are available to authors and co-authors of EIPs (including ERCs) who published the proposals using their GitHub handle before November 15th, 2023, and their GitHub profiles can be extracted from their email through the GitHub API.
+
+
+      **ETH stakers**
+
+
+      Ethereum stakers contributed to Ethereum’s security and supported its transition to a proof-of-stake (PoS) consensus by helping secure the network. As noted above, Ethereum’s security is the basis of Starknet’s security, and as such, we recognize the importance of those who contributed to it via staking. There are three sub-groups of stakers, and the Starknet Foundation partnered with [Rated Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all) in order to distinguish between the different sub-groups and to determine the Provisions allocation to each validator:
+
+
+      **Solo stakers**: Solo stakers will receive a higher number of tokens compared with those who used liquid-staking mechanisms or centralized exchanges, as they took on greater risk. This is doubly so for pre-genesis solo stakers, i.e. those who deposited ETH in the deposit contract before Ethereum’s Beacon Chain went live. The amount will be proportional to the number of validators, up to a cap of 12 per address.
+
+
+      **Labeled pooled or custodial stakers**: Those who used liquid-staking mechanisms or centralized exchanges to stake on Ethereum will be eligible for Provisions.
+
+
+      Staking providers will need to claim these tokens on behalf of stakers and are required to distribute these tokens to the pool’s pre-Merge stakers. Staking providers claiming less than 1 million STRK will be able to claim tokens on behalf of stakers via the Provisions website.
+
+
+      Staking providers with an eligibility of more than 1 million STRK will receive tokens from the Starknet Foundation after committing to distribute them to the pool’s stakers and in accordance with applicable laws.
+
+
+      **Unlabeled pooled or custodial stakers:** This group includes stakers who didn’t use a liquid staking mechanism or centralized exchange, but aren’t considered solo stakers according to [Rated Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all). Unlabeled stakers will be able to claim tokens through the Provisions portal and are restricted to a cap of 12 validators.
+
+
+      **Criteria**: All those who staked ETH with Ethereum’s proof-of-stake (PoS) model up until the Merge (September 15th, 2022) are eligible for Provisions.
+
+
+      #### Open-source developers
+
+
+      As mentioned before, blockchain infrastructure, including Ethereum and Starknet, emerged as a result of previous science and engineering advances of what are now, in many cases, open-source public goods.
+
+
+      In order to acknowledge the contribution of the developers who worked on these projects, and in order to encourage more developers outside of blockchain to participate in the blockchain space, some of these developers will be able to claim tokens.\
+
+      **Criteria**: Developers who committed at least three times before November 15th, 2023, and with at least one commit between January 1st, 2018, and November 15th, 2023, to one of the [top 5,000 GitHub projects](https://gitstar-ranking.com/repositories) (ranked by GitHub stars), and their GitHub profiles can be extracted from their email through the GitHub API, are eligible for Provisions.
+
+
+      ### Measuring contribution
+
+
+      As Provisions distributions result in influence over the network, it is in the best interests of the network that they are allocated fairly, according to their substantial contribution.
+
+
+      #### Verifying contribution
+
+
+      The contributions made by different developers and Ethereum stakers are verified based on specific details that are readily available in various databases (e.g. GitHub).
+
+
+      Contributions made by users are verified based on criteria that include those who used applications in unique and unexplored ways, and provided feedback that was used to harden the network. User criteria exclude Sybil and bot activity, as they tend to repeat the same operations over and over again, and therefore do not provide the benefit of testing the network in a unique manner.
+
+
+      #### Sybil resistance and avoiding gamification
+
+
+      As stated above, the Provisions program will empower its recipients with the ability to shape Starknet’s future through governance votes, and it is important that the influence and voting power given will not be disproportionate to the contribution made to the network. The Provisions criteria, therefore, aim to include substantial contribution, and exclude Sybil activity and bots.
+
+
+      For Starknet users, the Starknet Foundation has partnered with [Trusta Labs](https://www.trustalabs.ai/) to provide Sybil-resistant lists of users.
+
+
+      For StarkEx users, the StarkWare team has provided the Starknet Foundation with a usage snapshot it took prior to the announcement of the Starknet tokens. The cut-off date for StarkEx users is June 1st, 2022, as stated in the Starknet Decentralization series ([Part 1](https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal), [Part 2](https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet), and [Part 3](https://www.starknet.io/en/posts/governance/part-3-starknet-token-design)).
+
+
+      For more information on Sybil resistance detection, click [here](https://github.com/starknet-io/provisions-data/).
+
+
+      ### Summary
+
+
+      The logic of Provisions is clear. A fair, open, and censorship-resistant network can only succeed if multiple parties compete to contribute and perform actions that power it. In accordance with its roadmap and goal of transitioning into a fully decentralized, proof-of-stake (PoS) Layer 2, Starknet requires the distribution of its native token. This distribution focuses on individuals who will participate in governance processes, staking, and payment of network fees. Provisions is expected to inject even greater energy into the thriving Starknet ecosystem, promoting a new wave of building and engagement, which will ultimately benefit all who care, and will come to care, about blockchain in the coming years.
+
+
+      ### Stay connected
+
+
+      We invite everyone to join and be involved in the Starknet community.
+
+
+      * Engage with the community on [X](https://twitter.com/starknet?lang=en) and the [Discord](http://starknet.io/discord/), or join the [Starknet Community Support Telegram Group](https://t.me/+efDitGbILOFmMDNk)
+
+      * [Explore Starknet](https://www.starknet.io/en/explore-starknet)
+
+      * Learn more about [Starknet](https://www.starknet.io/en/learn/what-is-starknet)
+
+      * [Start building on Starknet](https://www.starknet.io/en/developers)
+
+
+      ### Beware of scams
+
+
+      Final words of caution: Be alert for scams around token claims and Provisions, including fake links and accounts impersonating Starknet. There is no public sale of Starknet tokens by the Starknet Foundation or any other entity. Make sure to follow the information in our official channels only: the [Starknet](https://twitter.com/Starknet) and [Starknet Foundation](https://twitter.com/Starknetfndn) accounts on X, and the [Starknet Hub](https://starknet.io/). For more information on the terms and conditions underpinning the provisions program, please refer to the [terms and conditions](http://starknet.io/provisions-terms-and-conditions).
