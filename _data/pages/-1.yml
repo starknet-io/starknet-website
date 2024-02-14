@@ -1,10 +1,10 @@
 id: 61424c75-bccc-4046-9304-8d9b8fd9bed8
 title: provisions geo regulations
 template: content
-hideToc: false
+hideToc: true
 hidden_page: false
-breadcrumbs: true
-page_last_updated: true
+breadcrumbs: false
+page_last_updated: false
 blocks:
   - type: markdown
     body: >-
