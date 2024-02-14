@@ -1,4 +1,5 @@
 id: 61424c75-bccc-4046-9304-8d9b8fd9bed8
+title: provisions geo regulations
 template: content
 hideToc: false
 hidden_page: false
@@ -7,7 +8,7 @@ page_last_updated: true
 blocks:
   - type: markdown
     body: >-
-      Can’t reach the Starknet Provisions Program portal?
+      **Can’t reach the Starknet Provisions Program portal?**
 
 
       Note that due to regulatory constraints Please note that the Starknet Provisions portal is not presently available in several regions due to regulatory restrictions concerning the follow persons or entities:
@@ -20,8 +21,6 @@ blocks:
 
 
       Any person or entity in the US, and any countries designated by the US or the UK as sanctioned jurisdictions.
-
-
 
 
       For more information on the Starknet Provisions Program, please read [this blog post](https://www.starknet.io/en/content/starknet-provisions-program).
