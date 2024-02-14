@@ -534,6 +534,19 @@ blocks:
 
 
           vSTRK tokens on Starknet, and STRK tokens on Ethereum, can be delegated to others for governance purposes. This means a recipient can let someone else use the voting power of the tokens they received in order to participate in governance votes on their behalf.
+      - body: >-
+          Starknet will have a unique token for governance processes (vSTRK),
+          which will be used for voting. Anyone with STRK on Starknet can lock
+          it in the vSTRK contract at a 1:1 ratio of STRK to vSTRK to
+          participate in governance votes. vSTRK can also be converted back to
+          STRK. For more information on vSTRK, please [read this
+          overview](https://governance.starknet.io/learn/vstrk_overview) and
+          about [why vSTRK is
+          necessary](https://governance.starknet.io/learn/why_is_vstrk_necessary).
+
+
+          More information on Starknet’s governance can be found in [Starknet Governance Hub](https://governance.starknet.io/).
+        label: What is vSTRK?
       - label: Can I stake STRK?
         body: Not yet. Updates about staking STRK on Starknet after the network
           transitions to a proof-of-stake (PoS) model will be shared in due
