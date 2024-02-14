@@ -2,7 +2,7 @@ id: 1ea0a24a-d4fa-41c4-a331-98012dec68a8
 title: Provisions Privacy Policy
 show_title: true
 template: content
-hideToc: false
+hideToc: true
 hidden_page: false
 breadcrumbs: false
 page_last_updated: false
