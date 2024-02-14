@@ -56,6 +56,10 @@ items:
             items:
               - custom_title: Community Hub
                 page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+          - title: Provisions Program
+            items:
+              - custom_title: Starknet Provisions
+                custom_external_link: https://provisions.starknet.io/
           - title: GET INVOLVED
             items:
               - custom_internal_link: /events
@@ -103,4 +107,3 @@ items:
               - custom_title: Starknet Edu Blog
                 custom_external_link: https://medium.com/starknet-edu
                 hide_from_footer: true
-
