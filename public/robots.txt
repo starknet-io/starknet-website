@@ -10,4 +10,3 @@ Disallow: /ko/*
 Disallow: /pt/*
 Disallow: /*/subscribe-newsletter
 Disallow: /subscribe-newsletter
-Disallow: /en/learn
