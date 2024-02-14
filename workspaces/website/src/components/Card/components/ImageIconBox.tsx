@@ -1,5 +1,5 @@
 import {
-  Box, useBreakpointValue
+  Box//, useBreakpointValue
 } from "@chakra-ui/react";
 import "../style.css";
 import {
@@ -105,8 +105,8 @@ export const ImageIconBox = ({
   title
 }: Props) => {
   let ComponentToRender;
-  const featuredImageSize = useBreakpointValue({ base: '430px', sm: '464px' });
-  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=${featuredImageSize},height=auto,format=auto${icon}`;
+  // const featuredImageSize = useBreakpointValue({ base: '430px', sm: '464px' });
+  const cloudflareImage = icon; //`https://www.starknet.io/cdn-cgi/image/width=${featuredImageSize},height=auto,format=auto${icon}`;
   const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const iconProps: CardIconProps = {
     gradientColor1: colors[color]?.iconGradientColor1,
