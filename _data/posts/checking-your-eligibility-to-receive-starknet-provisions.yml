@@ -13,18 +13,23 @@ topic:
 blocks:
   - type: markdown
     body: >-
+      Checking your eligibility for Provisions is possible by using the
+      Provisions portal at <https://provisions.starknet.io>. Make sure you
+      follow the correct URL, and beware of scams.
+
+
       ## Prerequisites
 
 
       * You need a Starknet wallet to claim your STRK through the Provisions portal. If you have a Starknet wallet, make sure you have the latest version installed and that your account is up to date.
 
-      * Starknet users/ECMP/developers: Your Starknet wallet is installed and set up in your browser.
+      * **Starknet users/ECMP/developers:** Your Starknet wallet is installed and set up in your browser.
 
-      * StarkEx-powered app users: You have the credentials for connecting to your account for the StarkEx-powered app.
+      * **StarkEx-powered app users:** You have the credentials for connecting to your account for the StarkEx-powered app.
 
-      * Ethereum stakers/Protocol Guild members: Your Ethereum wallet is installed and set up.
+      * **Ethereum stakers/Protocol Guild members:** Your Ethereum wallet is installed and set up.
 
-      * Ethereum developers, GitHub developers other than Ethereum developers, and EIP authors: You have your GitHub username.
+      * **Ethereum developers, GitHub developers other than Ethereum developers, and EIP authors:** You have your GitHub username.
 
       * Please note that due to regulatory constraints, Provisions and STRK will not be available to:
 
@@ -35,31 +40,18 @@ blocks:
         ## Procedure
 
         1. Go to the Starknet Provisions portal at <https://provisions.starknet.io/>.
-        2. Scroll to Are you eligible for STRK tokens? Check if you match any eligibility criteria.
-        3. If you do, scroll to Check your eligibility.
-        4. Select one of the eligibility types, according to your eligibility criteria: Starknet: 
+        2. Scroll to **Are you eligible for STRK tokens?** Check if you match any eligibility criteria.
+        3. If you do, scroll to **Check your eligibility**.
+        4. Select one of the eligibility types, according to your eligibility criteria: 
 
-           1. A Starknet user, ECMP recipient, or a Starknet developer
-           2. StarkEx: A user of a StarkEx-based app
-           3. Ethereum: An Ethereum staker or an Ethereum Protocol Guild member
-           4. GitHub: An Ethereum developer, an EIP author, or a GitHub developer 
+           1. **Starknet**: A Starknet user, ECMP recipient, or a Starknet developer 
+           2. **StarkEx**: A user of a StarkEx-based app
+           3. **Ethereum**: An Ethereum staker or an Ethereum Protocol Guild member
+           4. **GitHub**: An Ethereum developer, an EIP author, or a GitHub developer 
 
-          The sign-in screen appears. 
+          The connect screen appears. 
 
-      ### What’s next:
-
-
-      Checking eligibility for:
-
-
-      * Starknet users, ECMP participants, and developers
-
-      * StarkEx users
-
-      * Ethereum stakers, and Ethereum Protocol Guild members
-
-      * GitHub developers
-
+         Continue the process by going to the section of this post that is relevant for you. You can use the links in the table of contents.   
 
       ### Checking eligibility for Starknet users, ECMP recipients, and developers
 
@@ -79,8 +71,6 @@ blocks:
          A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
 
          ![](/assets/4_allocation_starknet.png)
-
-
 
       You can disconnect at any time. Explore the portal to learn more about using and building on Starknet.
 
