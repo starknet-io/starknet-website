@@ -66,6 +66,18 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
+        title: Starknet Provisions Program
+        icon: /assets/horizontal-strk-logo.png
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://provisions.starknet.io/
+          custom_title: Allocating STRK Tokens to the Community
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
         title: Starknet Ecosystem
         icon: /assets/dapps.svg
         type: image_icon_link_card
