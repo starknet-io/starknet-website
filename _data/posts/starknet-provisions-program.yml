@@ -231,7 +231,7 @@ blocks:
       **ETH stakers**
 
 
-      Ethereum stakers contributed to Ethereum’s security and supported its transition to a proof-of-stake (PoS) consensus by helping secure the network. As noted above, Ethereum’s security is the basis of Starknet’s security, and as such, we recognize the importance of those who contributed to it via staking. There are three sub-groups of stakers, and the Starknet Foundation partnered with [Rated Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all) in order to distinguish between the different sub-groups and to determine the Provisions allocation to each validator:
+      Ethereum stakers contributed to Ethereum’s security and supported its transition to a proof-of-stake (PoS) consensus by helping secure the network. As noted above, Ethereum’s security is the basis of Starknet’s security, and as such, we recognize the importance of those who contributed to it via staking. There are three sub-groups of stakers, and the Starknet Foundation partnered with [Rated ](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all)in order to distinguish between the different sub-groups and to determine the Provisions allocation to each validator:
 
 
       **Solo stakers**: Solo stakers will receive a higher number of tokens compared with those who used liquid-staking mechanisms or centralized exchanges, as they took on greater risk. This is doubly so for pre-genesis solo stakers, i.e. those who deposited ETH in the deposit contract before Ethereum’s Beacon Chain went live. The amount will be proportional to the number of validators, up to a cap of 12 per address.
