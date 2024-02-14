@@ -7,7 +7,7 @@ import {
   Icon,
   Flex,
   ChakraProps,
-  useBreakpointValue,
+  // useBreakpointValue,
   BoxProps,
   FlexProps
 } from "@chakra-ui/react";
@@ -28,7 +28,7 @@ type RootProps = {
 const Root = ({ children, href, type = "grid", sx }: RootProps) => {
   return (
     <CardGradientBorder padding="0" borderRadius={{ base: "8px" }} overflow="hidden" sx={sx}>
-      <Box 
+      <Box
         draggable={false}
         as={!!href ? 'a' : undefined}
         href={href}
@@ -60,9 +60,9 @@ type ImageProps = BoxProps & {
 };
 
 const Image = ({ children, url, imageAlt, type = "grid", ...rest }: ImageProps) => {
-  const size = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', xl: '320px' });
-  const featuredImageSize = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', lg: '550px', xl: '606px' });
-  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=${type === "featured" ? featuredImageSize : size},height=auto,format=auto${url}`;
+  // const size = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', xl: '320px' });
+  // const featuredImageSize = useBreakpointValue({ base: '581px', sm: '350px', md: '430px', lg: '550px', xl: '606px' });
+  const cloudflareImage = url; //`https://www.starknet.io/cdn-cgi/image/width=${type === "featured" ? featuredImageSize : size},height=auto,format=auto${url}`;
   const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   return (
     <Box
@@ -79,7 +79,7 @@ const Image = ({ children, url, imageAlt, type = "grid", ...rest }: ImageProps) 
         {...type === "grid" && { borderTopRadius: 8}}
       />
 
-      {children}      
+      {children}
     </Box>
   );
 };
@@ -148,8 +148,8 @@ const Content = (props: ContentProps) => {
   }, [headingRef.current])
 
   return (
-    <Flex 
-      gap="3" 
+    <Flex
+      gap="3"
       direction="column"
       {...rest}
     >
@@ -204,8 +204,8 @@ const Footer = ({
     }
   };
   return (
-    <Flex 
-      p={type === "featured" ? "14px 0" : 6} 
+    <Flex
+      p={type === "featured" ? "14px 0" : 6}
       {...rest}
     >
       <HStack>

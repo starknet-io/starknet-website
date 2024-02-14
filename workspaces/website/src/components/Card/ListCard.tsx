@@ -46,9 +46,9 @@ type Props = {
 } & BoxProps;
 
 export const ListCard = (props: Props) => {
-  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=80px,height=auto,format=auto${props.image}`;
+  const cloudflareImage = props.image; //`https://www.starknet.io/cdn-cgi/image/width=80px,height=auto,format=auto${props.image}`;
   const isProd  = import.meta.env.VITE_ALGOLIA_INDEX === "production";
-  
+
   return (
     <Box maxW="5xl">
       <LinkBox
@@ -149,9 +149,9 @@ export const ListCard = (props: Props) => {
                   </HStack>
                 </Stack>
 
-                <LinkOverlay 
-                  pb="12px" 
-                  fontSize="sm" 
+                <LinkOverlay
+                  pb="12px"
+                  fontSize="sm"
                   color="list-card-lg-desc-fg"
                   href={props.href!}
                   target="_blank"

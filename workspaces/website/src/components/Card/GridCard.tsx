@@ -1,4 +1,4 @@
-import { ResponsiveValue } from '@chakra-ui/styled-system';
+// import { ResponsiveValue } from '@chakra-ui/styled-system';
 import { useRef, useEffect, useState, ReactNode, forwardRef } from "react";
 // toDo rebuild this card in to a generalized grid card
 import {
@@ -10,7 +10,7 @@ import {
   Icon,
   Flex,
   Link,
-  useBreakpointValue
+  // useBreakpointValue
 } from "@chakra-ui/react";
 import { Tag } from "@ui/Tag/Tag";
 import { HiArrowUpRight } from "react-icons/hi2";
@@ -72,8 +72,8 @@ type ImageProps = {
 };
 
 const Image = ({ url, imageAlt, type }: ImageProps) => {
-  const size = useBreakpointValue({ base: '581', md: '430px', xl: '320px' });
-  const cloudflareImage = `https://www.starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
+  // const size = useBreakpointValue({ base: '581', md: '430px', xl: '320px' });
+  const cloudflareImage = url; //`https://www.starknet.io/cdn-cgi/image/width=${size},height=auto,format=auto${url}`;
   const isProd = import.meta.env.VITE_ALGOLIA_INDEX === "production";
   const renderImage = () => {
     switch (type) {
