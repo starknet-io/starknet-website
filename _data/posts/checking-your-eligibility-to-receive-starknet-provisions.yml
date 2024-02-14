@@ -42,7 +42,9 @@ blocks:
            1. A Starknet user, ECMP recipient, or a Starknet developer
            2. StarkEx: A user of a StarkEx-based app
            3. Ethereum: An Ethereum staker or an Ethereum Protocol Guild member
-           4. GitHub: An Ethereum developer, an EIP author, or a GitHub developer
+           4. GitHub: An Ethereum developer, an EIP author, or a GitHub developer 
+
+          The sign-in screen appears. 
 
       ### What’s next:
 
@@ -62,15 +64,15 @@ blocks:
       ### Checking eligibility for Starknet users, ECMP recipients, and developers
 
 
-      1. Connect your Starknet wallet by clicking Connect your Starknet wallet or by pasting your Starknet wallet address and clicking Go.
+      1. Connect your Starknet wallet by clicking **Connect your Starknet wallet** or by pasting your Starknet wallet address and clicking **Go**.
 
          ![](/assets/1_connect_sn_wallet.png)
-      2. If you clicked Connect your Starknet wallet, select your wallet and follow the onscreen instructions to complete the connection.
+      2. If you clicked **Connect your Starknet wallet**, select your wallet and follow the onscreen instructions to complete the connection.
 
          ![](/assets/2_select_wallet.png)
 
          You should see a message letting you know if you are eligible to receive STRK.
-      3. If you’re eligible, you can see your allocation of STRK by clicking See your allocation.
+      3. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
          ![](/assets/3_congrats_starknet.png)
 
@@ -78,22 +80,24 @@ blocks:
 
          ![](/assets/4_allocation_starknet.png)
 
+
+
       You can disconnect at any time. Explore the portal to learn more about using and building on Starknet.
 
 
       ### Checking eligibility for StarkEx users
 
 
-      1. Click StarkEx, and then select a StarkEx-powered application for which you have an account.
+      1. Click **StarkEx**, and then select a StarkEx-powered application for which you have an account.
 
          ![](/assets/5_connect_starkex_wallet.png)
       2. Click to sign in or connect to your account. Signing in with Sorare or Rhino.Fi takes you to the respective app’s site, where you can complete the connection process.
 
       3. Follow the onscreen instructions to complete the connection.
 
-      4. Click  Check eligibility. You should see a message letting you know if you are eligible to receive STRK.
+      4. Click **Check eligibility**. You should see a message letting you know if you are eligible to receive STRK.
 
-      5. If you’re eligible, you can see your allocation of STRK by clicking See your allocation.
+      5. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
          ![](/assets/6_congrats_starkex.png)
 
@@ -107,10 +111,10 @@ blocks:
       ### Checking eligibility for Ethereum stakers, and Ethereum Protocol Guild members
 
 
-      1. Click Connect your Ethereum wallet and follow the onscreen instructions to connect, or paste your Ethereum wallet address in the text field.
+      1. Click **Connect your Ethereum wallet** and follow the onscreen instructions to connect, or paste your Ethereum wallet address in the text field.
 
          ![](/assets/8_connect_ethereum_wallet.png)
-      2. After successfully connecting, a screen appears letting you know if you are eligible to receive STRK. If you’re eligible, you can see your allocation of STRK by clicking See your allocation.
+      2. After successfully connecting, a screen appears letting you know if you are eligible to receive STRK. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
          ![](/assets/9_congrats_ethereum.png)
 
@@ -121,12 +125,12 @@ blocks:
       ### Checking eligibility for GitHub developers
 
 
-      1. Click Sign in to sign into GitHub with your email address, or enter you GitHub username and click Go.
+      1. Click **Sign in** to sign into GitHub with your email address, or enter you GitHub username and click **Go**.
 
          ![](/assets/11_connect_github_wallet.png)
-      2. If you’re eligible, you can see your allocation of STRK by clicking See your allocation.
+      2. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
          ![](/assets/12_congrats_github.png)
-      3. Click See your allocation. A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
+      3. A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation. You can explore the site, and when you're ready to disconnect, click **Disconnect**.
 
          ![](/assets/13_allocation_github.png)
