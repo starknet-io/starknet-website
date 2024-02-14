@@ -45,13 +45,19 @@ export async function render(pageContext: PageContextServer) {
   const documentProps =
     pageContext.documentProps ?? pageContext.exports.documentProps
 
-  const title = documentProps?.title ?? pageSeo?.seoTitle
-    ? `${documentProps?.title ?? pageSeo?.seoTitle} - Starknet`
-    : "Starknet";
+  // @ts-ignore
+  const isGeoRegulationsPage = pageProps?.data?.slug === 'provisions-geo-regulations';
 
-  const description =
-    documentProps?.description ?? pageSeo?.seoDescription as string ??
-    "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
+  const title = isGeoRegulationsPage ? pageSeo?.seoTitle as string : (
+    documentProps?.title ?? pageSeo?.seoTitle
+      ? `${documentProps?.title ?? pageSeo?.seoTitle} - Starknet`
+      : "Starknet"
+  );
+
+  const description = isGeoRegulationsPage ? pageSeo?.seoDescription as string : (
+      documentProps?.description ?? pageSeo?.seoDescription as string ??
+      "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world."
+  );
 
   const image =
     documentProps?.image ??
