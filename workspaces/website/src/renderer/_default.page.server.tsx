@@ -59,7 +59,7 @@ export async function render(pageContext: PageContextServer) {
       "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world."
   );
 
-  const image = isGeoRegulationsPage ? `${import.meta.env.VITE_SITE_URL}/assets/provisions.png` :
+  const image = isGeoRegulationsPage ? `${import.meta.env.VITE_SITE_URL}/assets/provisions.png?v2` :
     documentProps?.image ??
     `${import.meta.env.VITE_SITE_URL}/assets/share/generic_landing.png`;
 
