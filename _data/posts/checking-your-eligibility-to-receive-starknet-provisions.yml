@@ -1,0 +1,136 @@
+id: c7f0f358-52ad-4233-820b-58dc6893d525
+post_type: article
+title: Checking your eligibility to receive Starknet Provisions
+seoTitle: Checking your eligibility to receive Starknet Provisions
+toc: true
+published_date: 2024-02-14T08:44:22.041Z
+image: /assets/guide-image-1-.jpg
+category:
+  - stark-math
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+topic:
+  - decentralization
+blocks:
+  - type: markdown
+    body: >-
+      ## Prerequisites
+
+
+      * You need a Starknet wallet to claim your STRK through the Provisions portal. If you have a Starknet wallet, make sure you have the latest version installed and that your account is up to date.
+
+      * Starknet users/ECMP/developers: Your Starknet wallet is installed and set up in your browser.
+
+      * StarkEx-powered app users: You have the credentials for connecting to your account for the StarkEx-powered app.
+
+      * Ethereum stakers/Protocol Guild members: Your Ethereum wallet is installed and set up.
+
+      * Ethereum developers, GitHub developers other than Ethereum developers, and EIP authors: You have your GitHub username.
+
+      * Please note that due to regulatory constraints, Provisions and STRK will not be available to:
+
+        * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any other applicable sanctioned country, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+        * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI).
+        * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
+
+        ## Procedure
+
+        1. Go to the Starknet Provisions portal at <https://provisions.starknet.io/>.
+        2. Scroll to Are you eligible for STRK tokens? Check if you match any eligibility criteria.
+        3. If you do, scroll to Check your eligibility.
+        4. Select one of the eligibility types, according to your eligibility criteria: Starknet: 
+
+           1. A Starknet user, ECMP recipient, or a Starknet developer
+           2. StarkEx: A user of a StarkEx-based app
+           3. Ethereum: An Ethereum staker or an Ethereum Protocol Guild member
+           4. GitHub: An Ethereum developer, an EIP author, or a GitHub developer 
+
+          The sign-in screen appears. 
+
+      ### What’s next:
+
+
+      Checking eligibility for:
+
+
+      * Starknet users, ECMP participants, and developers
+
+      * StarkEx users
+
+      * Ethereum stakers, and Ethereum Protocol Guild members
+
+      * GitHub developers
+
+
+      ### Checking eligibility for Starknet users, ECMP recipients, and developers
+
+
+      1. Connect your Starknet wallet by clicking **Connect your Starknet wallet** or by pasting your Starknet wallet address and clicking **Go**.
+
+         ![](/assets/1_connect_sn_wallet.png)
+      2. If you clicked **Connect your Starknet wallet**, select your wallet and follow the onscreen instructions to complete the connection.
+
+         ![](/assets/2_select_wallet.png)
+
+         You should see a message letting you know if you are eligible to receive STRK.
+      3. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
+
+         ![](/assets/3_congrats_starknet.png)
+
+         A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
+
+         ![](/assets/4_allocation_starknet.png)
+
+
+
+      You can disconnect at any time. Explore the portal to learn more about using and building on Starknet.
+
+
+      ### Checking eligibility for StarkEx users
+
+
+      1. Click **StarkEx**, and then select a StarkEx-powered application for which you have an account.
+
+         ![](/assets/5_connect_starkex_wallet.png)
+      2. Click to sign in or connect to your account. Signing in with Sorare or Rhino.Fi takes you to the respective app’s site, where you can complete the connection process.
+
+      3. Follow the onscreen instructions to complete the connection.
+
+      4. Click **Check eligibility**. You should see a message letting you know if you are eligible to receive STRK.
+
+      5. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
+
+         ![](/assets/6_congrats_starkex.png)
+
+         A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
+
+         ![](/assets/7_allocation_starkex.png)
+
+      You can disconnect at any time. Explore the portal to learn more about Starknet.
+
+
+      ### Checking eligibility for Ethereum stakers, and Ethereum Protocol Guild members
+
+
+      1. Click **Connect your Ethereum wallet** and follow the onscreen instructions to connect, or paste your Ethereum wallet address in the text field.
+
+         ![](/assets/8_connect_ethereum_wallet.png)
+      2. After successfully connecting, a screen appears letting you know if you are eligible to receive STRK. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
+
+         ![](/assets/9_congrats_ethereum.png)
+
+         A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
+
+         ![](/assets/10_allocation_ethereum.png)
+
+      ### Checking eligibility for GitHub developers
+
+
+      1. Click **Sign in** to sign into GitHub with your email address, or enter you GitHub username and click **Go**.
+
+         ![](/assets/11_connect_github_wallet.png)
+      2. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
+
+         ![](/assets/12_congrats_github.png)
+      3. A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation. You can explore the site, and when you're ready to disconnect, click **Disconnect**.
+
+         ![](/assets/13_allocation_github.png)
