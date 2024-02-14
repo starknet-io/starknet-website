@@ -66,7 +66,7 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
-        title: Starknet Provisions Program
+        title: Starknet Provisions
         icon: /assets/horizontal-strk-logo.png
         type: image_icon_link_card
         link:
