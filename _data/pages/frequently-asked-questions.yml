@@ -372,6 +372,30 @@ blocks:
 
 
           ![](/assets/screen-shot-2024-02-14-at-10.54.09.png)
+
+
+          Then, each address gets allocation according to the following mapping:
+
+
+          ![](/assets/screen-shot-2024-02-14-at-10.56.39.png)
+      - label: What are the guidelines for the different tiers in the allocation to the
+          Early Community Member Program (ECMP) recipients?
+        body: >-
+          The evaluation committee evaluated individuals and projects for the
+          Early Community Member Program (ECMP) based on four essential
+          criteria:
+
+
+          * **Reach/impact:** Refers to the extent to which the contributor’s work has spread throughout the community. It may encompass things like the number of people using or relying on their code, engaging with their content, or following their thought leadership.
+
+          * **Importance:** Evaluates the significance of a contributor’s work within the community or a specific project. This means focusing on how essential a contributor’s work is to the success of a project or how influential they are in shaping the direction and development of the ecosystem.
+
+          * **Effort:** Assesses the amount of time and energy a contributor has put into their contributions. This is not limited to coding. It may also include community support, mentoring, and engaging with others to share knowledge.
+
+          * **Originality:** Looks at how unique or innovative a contributor’s work is. This can include creating new algorithms, methods, or tools that haven’t been seen before, or approaching existing problems in a novel way.
+
+
+          For more information on ECMP criteria, click [here](https://community.starknet.io/t/announcing-the-early-community-member-program/102092).
   - type: accordion
     heading: Starknet Foundation
     blocks:
