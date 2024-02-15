@@ -20,6 +20,7 @@ import { usePageContext } from "src/renderer/PageContextProvider";
 import { HeadingContainer } from "./HeadingContainer";
 import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
+import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 
 interface Props {
   disallowH1?: boolean;
@@ -48,6 +49,8 @@ export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | 
     );
   } else if (block.type === "image_icon_link_card") {
     return <ImageIconCard {...block} locale={locale} />;
+  } else if (block.type === "youtube") {
+    return <YoutubePlayer videoId={block.videoId} />
   } else if (block.type === "newsletter_popup") {
     return <NewsletterCard {...block} env={env} locale={locale} />;
   } else if (block.type === "markdown") {

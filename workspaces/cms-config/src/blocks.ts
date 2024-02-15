@@ -439,6 +439,18 @@ export const blocks = [
     ],
   },
   {
+    name: "youtube",
+    label: "Youtube",
+    widget: "object",
+    fields: [
+      {
+        name: "videoId",
+        widget: "string",
+        crowdin: true
+      }
+    ]
+  },
+  {
     name: "ambassadors_list",
     label: "Ambassadors list",
     widget: "object",
@@ -825,7 +837,7 @@ const flexLayout = {
       default: [],
     },
   ],
-} satisfies CmsField; 
+} satisfies CmsField;
 
 export const topLevelBlocks = [
   {
