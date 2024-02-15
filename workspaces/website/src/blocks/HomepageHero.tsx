@@ -2,24 +2,19 @@ import { Box, Flex, Img, Stack } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
+import { Intro } from "./Intro";
+import ProvisionsPopup from "@ui/ProvisionsPopup/ProvisionsPopup";
 
 type Props = {
   readonly seo: {
     heroText: string;
   };
 };
-import { Intro } from "./Intro";
-import PopUp from "@ui/PopUp/PopUp";
-import { useState } from "react";
 
 export const HomepageHero = ({ seo }: Props) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-  const toggleModal = () => {
-    setIsOpen((prevState) => !prevState);
-  };
   return (
     <>
-      <PopUp toggleModal={toggleModal} isOpen={isOpen} />
+      <ProvisionsPopup />
       <Box
         as="section"
         pt="46px"
