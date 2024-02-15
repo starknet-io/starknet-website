@@ -544,6 +544,84 @@ blocks:
 
 
           For more information on Sybil-resistance detection, click [here](https://github.com/starknet-io/provisions-data/).
+  - type: accordion
+    heading: Governance
+    blocks:
+      - label: Can Provisions recipients participate in Starknet governance votes?
+        body: "**Yes. Following Provisions, recipients will also be able to participate
+          in voting on various issues that will shape Starknet’s future.**"
+      - label: Can STRK tokens obtained as part of Provisions be delegated or
+          transferred to others?
+        body: >-
+          To use STRK on Starknet for governance, token holders must wrap their
+          STRK to vSTRK, a unique token solely dedicated to governance
+          processes.
+
+
+          vSTRK tokens on Starknet, and STRK tokens on Ethereum, can be delegated to others for governance purposes. This means a recipient can let someone else use the voting power of the tokens they received in order to participate in governance votes on their behalf.
+      - label: What is vSTRK?
+        body: >-
+          Starknet will have a unique token for governance processes (vSTRK),
+          which will be used for voting. Anyone with STRK on Starknet can lock
+          it in the vSTRK contract at a 1:1 ratio of STRK to vSTRK to
+          participate in governance votes. vSTRK can also be converted back to
+          STRK. For more information on vSTRK, please [read this
+          overview](https://governance.starknet.io/learn/vstrk_overview) and
+          about [why vSTRK is
+          necessary](https://governance.starknet.io/learn/why_is_vstrk_necessary).
+
+
+          More information on Starknet’s governance can be found in [Starknet Governance Hub](https://governance.starknet.io/).
+      - label: Can I stake STRK?
+        body: Not yet. Updates about staking STRK on Starknet after the network
+          transitions to a proof-of-stake (PoS) model will be shared in due
+          course.
+      - label: Will any major lockup periods for StarkWare employees and investors or
+          the Starknet Foundation end soon?
+        body: To align the long-term incentives of the core contributors and investors
+          of StarkWare with the interests of the Starknet community, and
+          following common practice in decentralized ecosystems, all tokens
+          allocated in previous allocation plans to core contributors and
+          investors will be released from lockup according to the schedule that
+          appears in the [STRK tokenomics
+          document](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
+      - label: "What are the expected plans for minting new coins of STRK and what will
+          be the inflation mechanism? "
+        body: >-
+          Starknet is on the path to decentralization and a proof-of-stake (PoS)
+          model that will reward stakers for participating in the network’s
+          governance, security, and overall maintenance. Like any PoS model,
+          Starknet will need to control the issuing of new tokens to encourage
+          participation in network maintenance and manage inflation. 
+
+
+          StarkWare has proposed a minting curve that aims to strike a balance between the needs of rewarding stakers and setting inflation expectations on Starknet. Like all changes affecting the Starknet protocol, this is merely a proposal. If adopted it will need to pass community and governance approval. For more information on StarkWare’s minting proposal, read [here](https://starkware.co/resource/a-token-minting-proposal-to-manage-inflation/).
+      - label: "Will there be another round of Provisions? If so, who will be eligible?
+          "
+        body: >-
+          The initial round of the Provisions program distributes 726 million of
+          the 900 million STRK allocated for the wider Provisions program
+          mentioned in the [original STRK allocation
+          post](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6).
+          Unclaimed tokens after the four-month distribution period of the first
+          round of Provisions will be redistributed in the future. 
+
+
+          It is yet to be decided how and when the remainder of the amount allocated for the wider Provisions program will be distributed. The Starknet Foundation will decide and may announce further plans around Provisions in due course.
+      - label: What other programs will there be for token allocation to the community?
+        body: >-
+          The Starknet Foundation has allocated a total of 1.8 billion STRK (18%
+          of the total STRK supply) to distribute to the community. During the
+          first round of Provisions, the Starknet Foundation will distribute
+          more than 700 million out of 900 million STRK set aside for the
+          Provisions program. Tokens that aren't claimed during this period will
+          be distributed to the community in the future.
+
+
+          Future plans for STRK distribution to the community also include rebates, initiatives of various special community committees dedicated to DeFi, gaming, and more. 
+
+
+          More details for future distribution will be shared at a later date.
   - type: heading_container
     heading_variant: h3
     blocks: []
