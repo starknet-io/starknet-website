@@ -451,7 +451,99 @@ blocks:
           Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all)—are
           eligible to claim 360 STRK to be distributed among their pre-Merge
           stakers. Please contact your staking service for more information.
-      - {}
+      - label: Are there any fees associated with claiming STRK via Provisions?
+        body: No. Fees for Provisions-related transactions claimed via the Provisions
+          portal, including the transaction for claiming STRK and depositing it
+          in the Starknet wallet, are paid by the Starknet Foundation.
+      - label: What happens to Provisions allocations that are not claimed?
+        body: Allocations that are not claimed during the four-month claiming period of
+          this round of Provisions will be reclaimed to the pool and distributed
+          in future rounds and/or programs.
+      - label: Are there any jurisdictional restrictions for receiving Provisions?
+        body: >-
+          Yes. Due to regulatory constraints and/or an uncertain regulatory
+          environment, Provisions and STRK will not be available to:
+
+
+          * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, Lebanon, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+
+          * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI). 
+
+          * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
+
+
+          For more information about the restrictions applicable to Provisions, please refer to the [terms of use](http://starknet.io/en/provisions-terms-of-use).
+      - label: Are there any tax implications for receiving Provisions?
+        body: There may be tax implications for the recipients of Provisions, which may
+          vary by jurisdiction. It is your sole responsibility to determine
+          whether, and to what extent, any taxes apply to any transactions you
+          conduct in connection with your use of the service, and to withhold,
+          collect, report and remit the correct amounts of taxes to the
+          appropriate tax authorities. Please consult a tax advisor in your
+          country.
+      - label: Why do different staking categories receive different allocations?
+        body: >-
+          Solo stakers are allocated more per validator compared with stakers
+          that used a CEX or staking pool. This is especially true for solo
+          stakers before Genesis. Why? 
+
+
+          We appreciate the risk all stakers took upon themselves, and solo stakers that couldn’t cash out in any form took a much larger leap of faith with Ethereum compared to their counterparts on staking pools or CEXes. Solo stakers do, however, have a cap per deposit address, while CEXes do not. That’s because we want to limit the allocation a single entity receives, especially since the classification provided by [rated.network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all) is heuristic and might contain false positives. There were also validators that are not solo stakers, yet their identity is unknown. These validators may claim through the Provisions portal but receive the same allocation as staking pools of CEXes (while also adhering to the solo-staker category’s cap).
+      - label: "I’m unable to claim through the Provisions portal because:"
+        body: >-
+          I’m receiving a prompt that says “your wallet is not up to date” or
+          “your account is not up to date.” 
+
+
+          * In this case, try the following:
+
+            * Make sure you’ve installed the latest versions of Chrome and all relevant extensions.
+
+              * If your wallet extension has been reset and you receive this message, your wallet should ask you to upgrade your account. Follow the wallet’s instructions.
+          * If the above doesn’t work, please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+
+
+          The portal doesn’t offer my Ethereum wallet as a connection option.
+
+
+          * A guide on how to claim Provisions allocations directly from your Ethereum wallet will be published soon after claim opens.
+
+
+          ArgentX Wallet displays: “Account is deprecated - reach out for support.”
+
+
+          * Reach out to ArgentX for support at <https://support.argent.xyz/hc/en-us/requests/new>
+
+
+          The portal doesn’t offer my Starknet wallet as a connection option.
+
+
+          Please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+      - label: "What is the reason for implementing Sybil-resistance mechanisms in the
+          Provisions allocation? "
+        body: >-
+          The Provisions program aims to empower those who contributed to the
+          advancement and achievements of Starknet. Such contributions may have
+          been made by users, developers, community members, and others.
+          Inauthentic interaction with the network, including the use of bots,
+          is not seen as a genuine contribution as it repeats the same action
+          multiple times, and not in a unique and natural manner. Such
+          interaction does not yield insights that will improve the network for
+          those who will later on interact with it in a genuine manner. 
+
+
+          Given that the STRK token will be used in governance votes, allocation needs to be based on genuine contribution, which includes authentic interaction with the network. The Provisions criteria, therefore, aim to exclude non-genuine interaction.
+      - label: What has been done to ensure Sybil resistance?
+        body: >-
+          For Starknet users, the Starknet Foundation has partnered with [Trusta
+          Labs](https://www.trustalabs.ai/) to provide Sybil-resistant lists of
+          users. 
+
+
+          For StarkEx users, the StarkWare team has provided the Starknet Foundation with a usage snapshot it took prior to the announcement of the Starknet tokens. The cut-off date for StarkEx users was June 1st, 2022, as stated in the Starknet Decentralization series ([Part 1](https://www.starknet.io/en/posts/governance/part-1-starknet-sovereignty-a-decentralization-proposal), [Part 2](https://www.starknet.io/en/posts/governance/part-2-a-decentralization-and-governance-proposal-for-starknet), and [Part 3](https://www.starknet.io/en/posts/governance/part-3-starknet-token-design)).
+
+
+          For more information on Sybil-resistance detection, click [here](https://github.com/starknet-io/provisions-data/).
   - type: heading_container
     heading_variant: h3
     blocks: []
