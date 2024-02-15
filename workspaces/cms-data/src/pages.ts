@@ -40,6 +40,11 @@ export interface ImageIconLinkCardBlock {
     | "grey";
 }
 
+export interface YoutubeBlock {
+  readonly type: "youtube";
+  readonly videoId: string;
+}
+
 export interface ListCardItems {
   title: string;
   description: string;
@@ -175,6 +180,7 @@ export type Block =
   | CommunityEventsBlock
   | BasicCardBlock
   | ImageIconLinkCardBlock
+  | YoutubeBlock
   | HeroBlock
   | HomeHeroBlock
   | LinkListBlock
