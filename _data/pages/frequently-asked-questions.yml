@@ -281,6 +281,69 @@ blocks:
           tokens received?
         body: Yes, you can find it
           [here](https://github.com/starknet-io/provisions-data/).
+      - label: "How many tokens are distributed to each eligible recipient? "
+        body: >-
+          The number of tokens allocated to each eligible recipient varies
+          between 111.1 STRK and 200,000 STRK, depending on the category. 
+
+
+          The size of the Provisions allocation is determined by the effort exerted by the category’s members to contribute to the network’s robustness (e.g. contributing code to the infrastructure of the network requires significant effort and skill). The number allocated is tied to the impact of the contribution on Starknet, as well as the resources spent to make it. Contribution to Starknet is rewarded with more tokens than a contribution to Ethereum, which is rewarded with more tokens than a contribution to non-crypto projects.
+      - label: What proportion of the total allocation is distributed to each eligible
+          category?
+        body: |-
+          See the below diagram for the breakdown of each category’s allocation.
+
+          ![](/assets/provisions-allocations-pie-final.jpeg)
+      - label: How can I check my eligibility for Provisions?
+        body: Recipients can check their eligibility for Provisions in the Provisions
+          portal at <https://provisions.starknet.io>.
+      - label: What were the guiding principles for determining the eligibility and
+          levels of allocation?
+        body: >-
+          The guiding principles for the allocation of Provisions were as
+          follows:
+
+
+          * **Contribution:** Allocation is aimed at those who have contributed substantially to the advancement of Starknet, STARK-tech infrastructure, Ethereum, and some non-crypto open-source software projects.
+
+          * **Broad distribution:** The Starknet Foundation aims to distribute Provisions to the largest possible number and variety of individuals who have had an impact, directly or indirectly, on Starknet. The Foundation will allocate STRK to nearly 1.3 million addresses, with Starknet users receiving more than 50% of the STRK dedicated to this round of Provisions.
+
+          * **Transparency:** Criteria for distribution can be found in the [Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program), and the resulting recipients and their token allocation will be [made public](https://github.com/starknet-io/provisions-data/).
+
+          * **Expanding Ethereum adoption:** Allocation will aim to expand Ethereum and blockchain to new audiences, including those outside the blockchain ecosystem. This aligns with Starknet’s vision of facilitating the mass adoption of Ethereum and decentralized protocols more broadly.
+
+          * **Sybil resistance:** The Provisions program aims, as much as possible, to avoid rewarding gamification and achieve Sybil resistance. The objective of this is to ensure the influence that comes with STRK governance votes correlates with the contribution of individuals and projects.
+      - label: "Which groups are considered to have made contributions to Starknet and
+          are eligible to claim STRK via Provisions? Why were those groups
+          chosen? "
+        body: >-
+          Provisions allocations are available to groups and individuals who
+          have made genuine contributions to Starknet, by enhancing the quality
+          and features of the Starknet stack and ecosystem, of Ethereum, and of
+          select open-source software projects. 
+
+
+          Below are the groups of those who are considered to have made meaningful contributions:
+
+
+          * **Starknet stack & ecosystem contributors** - The Starknet Foundation is committed to recognizing individuals or groups who have engaged with and battle-tested the Starknet stack. For this reason, the following groups are eligible for Provisions:
+
+            * Starknet Users
+            * Starknet Ecosystem Contributors (approved members of the [ECMP](https://community.starknet.io/t/announcing-the-early-community-member-program/102092) plan)
+            * Starknet Developers
+          * **StarkEx users** - The users of StarkEx-powered dApps contributed to testing the robustness of certain components that are part of the Starknet stack, including the STARK proof system and Cairo, Starknet’s native programming language. Their interactions with early-stage STARK technology helped to fortify the foundations of Starknet.
+
+          * **Ethereum developers and stakers** - In an industry first, the Starknet Provisions program will distribute tokens to Ethereum stakers—solo stakers and those who staked through liquidity pools—for their contribution to Ethereum’s security. Starknet uses Ethereum for settlement and data availability thanks to the decentralization and security it provides. Starknet and its Ethereum-level security are possible thanks to the pioneering work of Ethereum's community. For this reason, members of the following groups are eligible for Provisions:
+
+            * Ethereum Protocol Guild members
+            * Ethereum PoS stakers: Solo stakers & those who staked through liquidity pools
+            * Ethereum developers
+            * Authors of Ethereum Improvement Proposals (including ERCs)
+          * **Open-source developers** - Blockchain infrastructure, including Ethereum and Starknet, emerged as a result of previous science and engineering advances that were built by developers of projects that are now public goods. For this reason, the following group is eligible.
+
+
+          A more detailed review of the groups mentioned above and the criteria that qualify members of these groups to be eligible for Provisions can be found in the [Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program).
+      - {}
   - type: heading_container
     heading_variant: h3
     blocks: []
