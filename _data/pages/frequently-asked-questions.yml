@@ -18,14 +18,31 @@ blocks:
   - type: accordion
     heading: ""
     blocks:
-      - type: accordion_item
-        label: What will the Starknet tokens be used for?
-        body: The Starknet token will be used for paying transaction fees, participation
-          in the Starknet protocol, and participation in governance. The
-          rationale for each of these utilities is presented in our
-          [decentralization
-          proposal](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
-          in the section titled “What will the tokens be used for?”
+      - body: >-
+          The Starknet Provisions Program (“Provisions”) is the distribution of
+          Starknet's native token (STRK) to eligible users, builders, and
+          community members who have contributed to Starknet. Making Starknet’s
+          native token available for the community will enable the community to
+          pay fees in STRK, and engage in the decentralization of the network by
+          participating in governance votes and in the decentralized
+          proof-of-stake (PoS) model that will be implemented in later stages. 
+
+
+          The [Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program) details the purpose of Provisions, the guiding principles for its distribution, and the criteria for its allocation.
+        label: What are the goals of the Starknet Provisions Program?
+      - label: What is the purpose of STRK? What will it be used for?
+        body: >-
+          STRK will be used for several functions:
+
+
+          * **Network fees:** Starting with Provisions, users will be able to pay transaction fees using STRK. Fees on Starknet are currently paid in ETH, and following Provisions, users will have the choice of paying fees in ETH or STRK.
+
+          * **Governance:** Following Provisions, recipients of STRK will be able to participate in governance related to a range of matters that will shape Starknet’s future. More information on Starknet’s governance can be found in the [Starknet Governance Hub](https://governance.starknet.io/).
+
+          * **Staking:** In the future, STRK will be used for staking within a proof-of-stake (PoS) model that will enable stakers to choose among a decentralized network of sequencers, ensuring Starknet’s decentralized operation.
+
+
+          You can find more information in the [Starknet Token Announcement post](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
       - type: accordion_item
         label: Where can I monitor Starknet’s transactions?
         body: "There are several block explorers you can use:
