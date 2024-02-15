@@ -11,17 +11,38 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Frequently asked questions
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Common questions
+  - type: accordion
+    heading: ""
     blocks:
-      - type: accordion_item
-        label: What will the Starknet tokens be used for?
-        body: The Starknet token will be used for paying transaction fees, participation
-          in the Starknet protocol, and participation in governance. The
-          rationale for each of these utilities is presented in our
-          [decentralization
-          proposal](https://medium.com/starkware/part-2-a-decentralization-and-governance-proposal-for-starknet-23e335645778),
-          in the section titled “What will the tokens be used for?”
+      - body: >-
+          The Starknet Provisions Program (“Provisions”) is the distribution of
+          Starknet's native token (STRK) to eligible users, builders, and
+          community members who have contributed to Starknet. Making Starknet’s
+          native token available for the community will enable the community to
+          pay fees in STRK, and engage in the decentralization of the network by
+          participating in governance votes and in the decentralized
+          proof-of-stake (PoS) model that will be implemented in later stages. 
+
+
+          The [Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program) details the purpose of Provisions, the guiding principles for its distribution, and the criteria for its allocation.
+        label: What are the goals of the Starknet Provisions Program?
+      - label: What is the purpose of STRK? What will it be used for?
+        body: >-
+          STRK will be used for several functions:
+
+
+          * **Network fees:** Starting with Provisions, users will be able to pay transaction fees using STRK. Fees on Starknet are currently paid in ETH, and following Provisions, users will have the choice of paying fees in ETH or STRK.
+
+          * **Governance:** Following Provisions, recipients of STRK will be able to participate in governance related to a range of matters that will shape Starknet’s future. More information on Starknet’s governance can be found in the [Starknet Governance Hub](https://governance.starknet.io/).
+
+          * **Staking:** In the future, STRK will be used for staking within a proof-of-stake (PoS) model that will enable stakers to choose among a decentralized network of sequencers, ensuring Starknet’s decentralized operation.
+
+
+          You can find more information in the [Starknet Token Announcement post](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
       - type: accordion_item
         label: Where can I monitor Starknet’s transactions?
         body: "There are several block explorers you can use:
@@ -88,8 +109,12 @@ blocks:
 
 
           It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: Cairo
   - type: accordion
-    heading: "Cairo "
+    heading: ""
     blocks:
       - type: accordion_item
         label: What is Cairo?
@@ -128,8 +153,12 @@ blocks:
 
 
           Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Operating on Starknet
+  - type: accordion
+    heading: ""
     blocks:
       - label: Who will be able to participate in Starknet?
         body: >-
@@ -174,8 +203,12 @@ blocks:
 
 
           Starknet does not natively support EVM.
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Starknet and StarkEx
+  - type: accordion
+    heading: ""
     blocks:
       - label: What is the difference between StarkEx and Starknet?
         body: >-
@@ -189,8 +222,12 @@ blocks:
       - label: What will happen to StarkEx dapps? Will they migrate to Starknet?
         body: Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so
           choose.
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: Starknet Token - STRK
   - type: accordion
-    heading: Starknet Token
+    heading: Vision
     blocks:
       - label: What are the goals of the Starknet Provisions Program?
         body: >-
@@ -242,38 +279,6 @@ blocks:
 
 
           For more information about the entire allocation plan of the STRK token, see [here](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
-      - label: What is the total amount of STRK tokens distributed?
-        body: The initial phase of the Provisions program will distribute 726 million
-          STRK out of 900 million designated for the Provisions program as a
-          whole. Tokens not claimed within 4 months (until June 20th, 2024) of
-          this first phase will be reallocated for future distribution rounds.
-          Zooming out, the amount designated for Provisions is part of a total
-          of 1.8 billion STRK dedicated to the community overall.
-      - label: How many recipients are eligible for the first round of Provisions?
-        body: A total of 1,297,738 addresses are eligible for Provisions. In addition to
-          recipients who are eligible to claim STRK directly to their accounts
-          via Provisions, Ethereum stakers who staked through liquidity pools
-          will be able to receive their allocations through those pools.
-      - label: Will there be a public list of recipient addresses and the number of
-          tokens received?
-        body: Yes, you can find it
-          [here](https://github.com/starknet-io/provisions-data/).
-      - label: "How many tokens are distributed to each eligible recipient? "
-        body: >-
-          The number of tokens allocated to each eligible recipient varies
-          between 111.1 STRK and 200,000 STRK, depending on the category. 
-
-
-          The size of the Provisions allocation is determined by the effort exerted by the category’s members to contribute to the network’s robustness (e.g. contributing code to the infrastructure of the network requires significant effort and skill). The number allocated is tied to the impact of the contribution on Starknet, as well as the resources spent to make it. Contribution to Starknet is rewarded with more tokens than a contribution to Ethereum, which is rewarded with more tokens than a contribution to non-crypto projects.
-      - label: What proportion of the total allocation is distributed to each eligible
-          category?
-        body: |-
-          See the below diagram for the breakdown of each category’s allocation.
-
-          ![](/assets/provisions-allocations-pie-final.jpeg)
-      - label: How can I check my eligibility for Provisions?
-        body: Recipients can check their eligibility for Provisions in the Provisions
-          portal at <https://provisions.starknet.io>.
       - label: What were the guiding principles for determining the eligibility and
           levels of allocation?
         body: >-
@@ -332,35 +337,19 @@ blocks:
           open-source projects that have become the public goods of cyberspace.
           It is not only fair, but also critical to the open-source ecosystem,
           that the individuals behind these projects are supported.
-      - label: When was the snapshot of recipients’ addresses taken for Provisions?
-        body: >-
-          The snapshot date differs between categories:
-
-
-          * For Ethereum stakers, the snapshot date is the date of the Merge (September 15th, 2022). The Merge was a turning point in Ethereum’s maturity, and stakers that staked prior to the Merge showed significantly more faith in Ethereum compared with stakers that began staking only when the protocol was mature.
-
-          * For Starknet users, the snapshot date is in the recent past: November 15th, 2023.
-
-
-          For StarkEx users, the snapshot date is June 1st, 2022, as was determined and communicated in [part 3](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) of the Starknet Decentralization Roadmap.
-      - label: "Can one person be eligible for Provisions in more than one category? "
-        body: Recipients who are eligible for Provisions in more than one category can
-          receive tokens for each category in which they qualify.
       - label: What are the guidelines for the different tiers in the allocation to
           Starknet users?
         body: >-
-          Allocation to Starknet users comes in different tiers, all aimed at
-          rewarding users whose feedback helped to harden Starknet going
-          forward. Those tiers were determined by their level of activity on the
-          network. The Starknet Foundation checked three metrics for eligible
-          users:
+          
+
+          Allocation to Starknet users comes in different tiers, all aimed at rewarding users whose feedback helped to harden Starknet going forward. Those tiers were determined by their level of activity on the network. The Starknet Foundation checked three metrics for eligible users:
 
 
-          * Months of use - Users who engaged with Starknet actively participated in improving the network by providing vital feedback during its early stages. 
+          * **Months of use** - Users who engaged with Starknet actively participated in improving the network by providing vital feedback during its early stages. 
 
-          * Contract interactions - Users who interacted with a greater number of contracts can provide a wider breadth of feedback.
+          * **Contract interactions** - Users who interacted with a greater number of contracts can provide a wider breadth of feedback.
 
-          * Cumulative transaction volume - Users who transacted at higher volumes show greater commitment to the network.
+          * **Cumulative transaction volume** - Users who transacted at higher volumes show greater commitment to the network.
 
 
           More concretely we use the the following points system:
@@ -386,16 +375,64 @@ blocks:
           criteria:
 
 
-          * **Reach/impact:** Refers to the extent to which the contributor’s work has spread throughout the community. It may encompass things like the number of people using or relying on their code, engaging with their content, or following their thought leadership.
+          * Reach/impact: Refers to the extent to which the contributor’s work has spread throughout the community. It may encompass things like the number of people using or relying on their code, engaging with their content, or following their thought leadership.
 
-          * **Importance:** Evaluates the significance of a contributor’s work within the community or a specific project. This means focusing on how essential a contributor’s work is to the success of a project or how influential they are in shaping the direction and development of the ecosystem.
+          * Importance: Evaluates the significance of a contributor’s work within the community or a specific project. This means focusing on how essential a contributor’s work is to the success of a project or how influential they are in shaping the direction and development of the ecosystem.
 
-          * **Effort:** Assesses the amount of time and energy a contributor has put into their contributions. This is not limited to coding. It may also include community support, mentoring, and engaging with others to share knowledge.
+          * Effort: Assesses the amount of time and energy a contributor has put into their contributions. This is not limited to coding. It may also include community support, mentoring, and engaging with others to share knowledge.
 
-          * **Originality:** Looks at how unique or innovative a contributor’s work is. This can include creating new algorithms, methods, or tools that haven’t been seen before, or approaching existing problems in a novel way.
+          * Originality: Looks at how unique or innovative a contributor’s work is. This can include creating new algorithms, methods, or tools that haven’t been seen before, or approaching existing problems in a novel way.
 
 
           For more information on ECMP criteria, click [here](https://community.starknet.io/t/announcing-the-early-community-member-program/102092).
+  - type: accordion
+    heading: Distribution and Eligibility
+    blocks:
+      - label: What is the total amount of STRK tokens distributed?
+        body: The initial phase of the Provisions program will distribute 726 million
+          STRK out of 900 million designated for the Provisions program as a
+          whole. Tokens not claimed within 4 months (until June 20th, 2024) of
+          this first phase will be reallocated for future distribution rounds.
+          Zooming out, the amount designated for Provisions is part of a total
+          of 1.8 billion STRK dedicated to the community overall.
+      - label: How many recipients are eligible for the first round of Provisions?
+        body: A total of 1,297,738 addresses are eligible for Provisions. In addition to
+          recipients who are eligible to claim STRK directly to their accounts
+          via Provisions, Ethereum stakers who staked through liquidity pools
+          will be able to receive their allocations through those pools.
+      - label: Will there be a public list of recipient addresses and the number of
+          tokens received?
+        body: Yes, you can find it
+          [here](https://github.com/starknet-io/provisions-data/).
+      - label: "How many tokens are distributed to each eligible recipient? "
+        body: >-
+          The number of tokens allocated to each eligible recipient varies
+          between 111.1 STRK and 200,000 STRK, depending on the category. 
+
+
+          The size of the Provisions allocation is determined by the effort exerted by the category’s members to contribute to the network’s robustness (e.g. contributing code to the infrastructure of the network requires significant effort and skill). The number allocated is tied to the impact of the contribution on Starknet, as well as the resources spent to make it. Contribution to Starknet is rewarded with more tokens than a contribution to Ethereum, which is rewarded with more tokens than a contribution to non-crypto projects.
+      - label: What proportion of the total allocation is distributed to each eligible
+          category?
+        body: |-
+          See the below diagram for the breakdown of each category’s allocation.
+
+          ![](/assets/provisions-allocations-pie-final.jpeg)
+      - label: How can I check my eligibility for Provisions?
+        body: Recipients can check their eligibility for Provisions in the Provisions
+          portal at <https://provisions.starknet.io>.
+      - label: When was the snapshot of recipients’ addresses taken for Provisions?
+        body: >-
+          The snapshot date differs between categories:
+
+
+          * For Ethereum stakers, the snapshot date is the date of the Merge (September 15th, 2022). The Merge was a turning point in Ethereum’s maturity, and stakers that staked prior to the Merge showed significantly more faith in Ethereum compared with stakers that began staking only when the protocol was mature.
+
+          * For Starknet users, the snapshot date is in the recent past: November 15th, 2023.
+
+          * For StarkEx users, the snapshot date is June 1st, 2022, as was determined and communicated in [part 3](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) of the Starknet Decentralization Roadmap.
+      - label: "Can one person be eligible for Provisions in more than one category? "
+        body: Recipients who are eligible for Provisions in more than one category can
+          receive tokens for each category in which they qualify.
       - label: How can someone claim STRK via Provisions?
         body: >-
           
@@ -413,7 +450,7 @@ blocks:
             * Starknet on X (formerly Twitter): <https://twitter.com/Starknet>
             * Starknet Hub: <https://www.starknet.io/>
             * Starknet Foundation on X:  [https://twitter.com/StarknetFndn](https://twitter.com/Starknetfndn)
-            * Provisions portal:<https://provisions.starknet.io>
+            * Provisions portal: <https://provisions.starknet.io>
       - label: What is the starting date for the distribution of Provisions?
         body: STRK will become available for claiming on Starknet Mainnet starting at
           12pm (UTC) on February 20, 2024.
@@ -478,8 +515,10 @@ blocks:
           * In this case, try the following:
 
             * Make sure you’ve installed the latest versions of Chrome and all relevant extensions.
-            * If your wallet extension has been reset and you receive this message, your wallet should ask you to upgrade your account. Follow the wallet’s instructions.
-            * If the above doesn’t work, please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+
+              * If your wallet extension has been reset and you receive this message, your wallet should ask you to upgrade your account. Follow the wallet’s instructions.
+          * If the above doesn’t work, please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+
 
           The portal doesn’t offer my Ethereum wallet as a connection option.
 
@@ -496,7 +535,7 @@ blocks:
           The portal doesn’t offer my Starknet wallet as a connection option.
 
 
-          * Please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+          Please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
       - label: "What is the reason for implementing Sybil-resistance mechanisms in the
           Provisions allocation? "
         body: >-
@@ -522,9 +561,12 @@ blocks:
 
 
           For more information on Sybil-resistance detection, click [here](https://github.com/starknet-io/provisions-data/).
+  - type: accordion
+    heading: Governance
+    blocks:
       - label: Can Provisions recipients participate in Starknet governance votes?
-        body: Yes. Following Provisions, recipients will also be able to participate in
-          voting on various issues that will shape Starknet’s future.
+        body: "**Yes. Following Provisions, recipients will also be able to participate
+          in voting on various issues that will shape Starknet’s future.**"
       - label: Can STRK tokens obtained as part of Provisions be delegated or
           transferred to others?
         body: >-
@@ -534,7 +576,8 @@ blocks:
 
 
           vSTRK tokens on Starknet, and STRK tokens on Ethereum, can be delegated to others for governance purposes. This means a recipient can let someone else use the voting power of the tokens they received in order to participate in governance votes on their behalf.
-      - body: >-
+      - label: What is vSTRK?
+        body: >-
           Starknet will have a unique token for governance processes (vSTRK),
           which will be used for voting. Anyone with STRK on Starknet can lock
           it in the vSTRK contract at a 1:1 ratio of STRK to vSTRK to
@@ -546,7 +589,6 @@ blocks:
 
 
           More information on Starknet’s governance can be found in [Starknet Governance Hub](https://governance.starknet.io/).
-        label: What is vSTRK?
       - label: Can I stake STRK?
         body: Not yet. Updates about staking STRK on Starknet after the network
           transitions to a proof-of-stake (PoS) model will be shared in due
@@ -610,6 +652,9 @@ blocks:
 
 
           If you have encountered any suspicious activity or bugs, please report them to the community managers on the [Starknet Discord server](https://starknet.io/discord/).
+  - type: accordion
+    heading: Communication and Feedback
+    blocks:
       - label: What should I do if I have additional questions or feedback?
         body: Please contact the community managers on the [Starknet Discord
           server](https://starknet.io/discord/) or reach out to us at
@@ -622,6 +667,8 @@ blocks:
           accounts.
       - label: How can I get involved?
         body: >-
+          
+
           We invite everyone to join and be involved in the Starknet community. 
 
 
@@ -630,8 +677,12 @@ blocks:
           * [Start building on Starknet](https://www.starknet.io/en/developers)
 
           * [Join a Starknet event](https://www.starknet.io/en/events)
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Starknet Foundation
+  - type: accordion
+    heading: ""
     blocks:
       - label: What is the Starknet Foundation?
         body: >-
@@ -648,8 +699,12 @@ blocks:
 
 
           For more information on the Foundation’s mission, first steps, and board, see the Foundation’s [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) and [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: General information
+  - type: accordion
+    heading: ""
     blocks:
       - label: I want to get involved in the Starknet community. How do I do that?
         body: If you are excited about StarkNet and its decentralization and wish to
