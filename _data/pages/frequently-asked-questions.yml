@@ -622,6 +622,19 @@ blocks:
 
 
           More details for future distribution will be shared at a later date.
+      - label: What measures are in place to prevent fraud or abuse?
+        body: >-
+          The Provisions program was carefully developed with security in mind,
+          utilizing secure software development life cycle methodologies. 
+
+
+          Additionally, the systems and smart contracts related to Provisions underwent extensive code auditing and penetration-testing procedures, both internally and externally (by Trail of Bits and Zellic). Furthermore, the systems are monitored to detect any malicious attempts or bugs, with prevention and recovery mechanisms in place for various scenarios. 
+
+
+          We are aware of the fact that there may be scam attempts by creating fake websites and/or social media profiles. We have been and still are taking measures to proactively identify such activities. Users are advised to stay alert and beware of scam attempts.
+
+
+          If you have encountered any suspicious activity or bugs, please report them to the community managers on the [Starknet Discord server](https://starknet.io/discord/).
   - type: heading_container
     heading_variant: h3
     blocks: []
