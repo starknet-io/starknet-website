@@ -11,8 +11,12 @@ page_last_updated: true
 blocks:
   - type: page_header
     title: Frequently asked questions
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Common questions
+  - type: accordion
+    heading: ""
     blocks:
       - type: accordion_item
         label: What will the Starknet tokens be used for?
@@ -88,8 +92,12 @@ blocks:
 
 
           It is possible to deploy various privacy protocols on Starknet, which will offer full privacy from all network participants. Since those protocols usually require a lot of computation, they will benefit greatly from Starknet scalability.
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: Cairo
   - type: accordion
-    heading: "Cairo "
+    heading: ""
     blocks:
       - type: accordion_item
         label: What is Cairo?
@@ -128,8 +136,12 @@ blocks:
 
 
           Cairo is the native language for a Starknet contract, which most fully realizes the scaling potential of Starknet. On the other hand, several teams are developing transpilers from other programming languages (notably Solidity) to Cairo. Such transpilers facilitate quick deployment of existing contracts on Starknet.**[See our latest development tooling](/developers/tools-resources).**
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Operating on Starknet
+  - type: accordion
+    heading: ""
     blocks:
       - label: Who will be able to participate in Starknet?
         body: >-
@@ -174,8 +186,12 @@ blocks:
 
 
           Starknet does not natively support EVM.
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Starknet and StarkEx
+  - type: accordion
+    heading: ""
     blocks:
       - label: What is the difference between StarkEx and Starknet?
         body: >-
@@ -189,8 +205,12 @@ blocks:
       - label: What will happen to StarkEx dapps? Will they migrate to Starknet?
         body: Once Starknet is ready, StarkEx apps may migrate to StarkNet if they so
           choose.
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: Starknet Token - STRK
   - type: accordion
-    heading: Starknet Token
+    heading: ""
     blocks:
       - label: What are the goals of the Starknet Provisions Program?
         body: >-
@@ -630,8 +650,13 @@ blocks:
           * [Start building on Starknet](https://www.starknet.io/en/developers)
 
           * [Join a Starknet event](https://www.starknet.io/en/events)
-  - type: accordion
+      - {}
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: Starknet Foundation
+  - type: accordion
+    heading: ""
     blocks:
       - label: What is the Starknet Foundation?
         body: >-
@@ -648,8 +673,12 @@ blocks:
 
 
           For more information on the Foundation’s mission, first steps, and board, see the Foundation’s [“Hello World” post](https://medium.com/@StarkNet_Foundation/welcome-to-the-world-starknet-foundation-7bd55d5dbc59) and [StarkWare’s complementary post](https://medium.com/starkware/introducing-the-starknet-foundation-bd4b4379fbb).
-  - type: accordion
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
     heading: General information
+  - type: accordion
+    heading: ""
     blocks:
       - label: I want to get involved in the Starknet community. How do I do that?
         body: If you are excited about StarkNet and its decentralization and wish to
