@@ -635,6 +635,31 @@ blocks:
 
 
           If you have encountered any suspicious activity or bugs, please report them to the community managers on the [Starknet Discord server](https://starknet.io/discord/).
+  - type: accordion
+    heading: Communication and Feedback
+    blocks:
+      - label: What should I do if I have additional questions or feedback?
+        body: Please contact the community managers on the [Starknet Discord
+          server](https://starknet.io/discord/) or reach out to us at
+          provisionsupport@starknet.org.
+      - label: How does the Starknet Foundation plan to communicate updates about
+          Provisions?
+        body: All future communications will come from the official
+          [Starknet](https://twitter.com/Starknet) and [Starknet
+          Foundation](https://twitter.com/StarknetFndn)’s X (formerly Twitter)
+          accounts.
+      - label: How can I get involved?
+        body: >-
+          
+
+          We invite everyone to join and be involved in the Starknet community. 
+
+
+          * Engage with the community on [X](https://twitter.com/starknet?lang=en) and the [Starknet Discord server](http://starknet.io/discord/), or join the [Starknet Community Support Telegram Group](https://t.me/+efDitGbILOFmMDNk).
+
+          * [Start building on Starknet](https://www.starknet.io/en/developers)
+
+          * [Join a Starknet event](https://www.starknet.io/en/events)
   - type: heading_container
     heading_variant: h3
     blocks: []
