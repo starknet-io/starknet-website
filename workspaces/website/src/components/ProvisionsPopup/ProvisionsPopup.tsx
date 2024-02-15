@@ -1,9 +1,10 @@
-import { Box, Button, Image, Icon, Link, Fade } from "@chakra-ui/react";
+import { Box, Image, Icon, Fade, IconButton } from "@chakra-ui/react";
 import Background from "./popup-background.png";
 import Logo from "./popup-text.svg";
 import { useState } from "react";
 import CloseIcon from "./CloseIcon/CloseIcon";
 import ArrowRight from "./ArrowRight/ArrowRight";
+import { Button } from "@ui/Button";
 
 const ProvisionsPopup = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
@@ -37,9 +38,12 @@ const ProvisionsPopup = () => {
           bgColor="white"
           w={["calc(100% - 2px * 2)", "calc(100% - 2px * 2)", 332, 332]}
           h={["calc(100% - 2px * 2 )", "calc(100% - 2px * 2 )", 354, 354]}
-          borderRadius="6px"
+          borderRadius="8px"
         >
-          <Icon
+          <IconButton
+            aria-label="Close"
+            bgColor="transparent"
+            border="0"
             position="absolute"
             right="10px"
             top="10px"
@@ -51,7 +55,7 @@ const ProvisionsPopup = () => {
             }}
           >
             <CloseIcon />
-          </Icon>
+          </IconButton>
           <Image
             src={Background}
             alt=""
@@ -72,36 +76,34 @@ const ProvisionsPopup = () => {
             }}
             borderRadius="6px"
           />
-          <Link href="https://www.starknet.io/en/content/starknet-provisions-program">
-            <Button
-              bgColor="white"
-              position="absolute"
-              bottom="40px"
-              left="50%"
-              transform="translateX(-50%)"
-              borderRadius="8px"
-              mr="px"
-              width="288px"
-              height="48px"
-              color="black"
-              cursor="pointer"
+          <Button
+            variant="solid"
+            bgColor="white"
+            position="absolute"
+            bottom="40px"
+            left="50%"
+            transform="translateX(-50%)"
+            borderRadius="8px"
+            mr="px"
+            width="288px"
+            height="48px"
+            color="black"
+            cursor="pointer"
+            href="https://www.starknet.io/en/content/starknet-provisions-program"
+            _hover={{ color: "#8FBCFF"}}
+            onClick={gtmEventClickReadMore}
+          >
+            Read more
+            <Icon
+              mt="1px"
+              ml="4px"
               _hover={{
                 color: "#8FBCFF",
               }}
-              onClick={gtmEventClickReadMore}
             >
-              Read more
-              <Icon
-                mt="1px"
-                ml="4px"
-                _hover={{
-                  color: "#8FBCFF",
-                }}
-              >
-                <ArrowRight />
-              </Icon>
-            </Button>
-          </Link>
+              <ArrowRight />
+            </Icon>
+          </Button>
         </Box>
       </Box>
     </Fade>
