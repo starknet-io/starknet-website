@@ -343,7 +343,81 @@ blocks:
 
 
           A more detailed review of the groups mentioned above and the criteria that qualify members of these groups to be eligible for Provisions can be found in the [Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program).
-      - {}
+      - label: Why was it decided to allocate Provisions to Ethereum stakers?
+        body: Ethereum stakers are the reason Ethereum, and by extension Starknet, are
+          as secure as they are today. Those who staked before the Merge took a
+          considerable risk and leap of faith in the Ethereum network, as the
+          successful launch of Ethereum 2.0 was not yet a certainty. This risk
+          was even more substantial for solo stakers.
+      - label: Why was it decided to allocate Provisions to developers of non-crypto
+          open-source projects?
+        body: Starknet stands on the shoulders of giants, among them a myriad of
+          open-source projects that have become the public goods of cyberspace.
+          It is not only fair, but also critical to the open-source ecosystem,
+          that the individuals behind these projects are supported.
+      - label: When was the snapshot of recipients’ addresses taken for Provisions?
+        body: >-
+          The snapshot date differs between categories:
+
+
+          * For Ethereum stakers, the snapshot date is the date of the Merge (September 15th, 2022). The Merge was a turning point in Ethereum’s maturity, and stakers that staked prior to the Merge showed significantly more faith in Ethereum compared with stakers that began staking only when the protocol was mature.
+
+          * For Starknet users, the snapshot date is in the recent past: November 15th, 2023.
+
+          * For StarkEx users, the snapshot date is June 1st, 2022, as was determined and communicated in [part 3](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) of the Starknet Decentralization Roadmap.
+      - label: "Can one person be eligible for Provisions in more than one category? "
+        body: Recipients who are eligible for Provisions in more than one category can
+          receive tokens for each category in which they qualify.
+      - label: What are the guidelines for the different tiers in the allocation to
+          Starknet users?
+        body: >-
+          Allocation to Starknet users comes in different tiers, all aimed at
+          rewarding users whose feedback helped to harden Starknet going
+          forward. Those tiers were determined by their level of activity on the
+          network. The Starknet Foundation checked three metrics for eligible
+          users:
+
+
+          * **Months of use** - Users who engaged with Starknet actively participated in improving the network by providing vital feedback during its early stages. 
+
+          * **Contract interactions** - Users who interacted with a greater number of contracts can provide a wider breadth of feedback.
+
+          * **Cumulative transaction volume** - Users who transacted at higher volumes show greater commitment to the network.
+
+
+          More concretely we use the the following points system:
+
+
+          * All eligible addresses get one point. 
+
+          * Further points are allocated as follows:
+
+
+          ![](/assets/screen-shot-2024-02-14-at-10.54.09.png)
+
+
+          Then, each address gets allocation according to the following mapping:
+
+
+          ![](/assets/screen-shot-2024-02-14-at-10.56.39.png)
+      - label: What are the guidelines for the different tiers in the allocation to the
+          Early Community Member Program (ECMP) recipients?
+        body: >-
+          The evaluation committee evaluated individuals and projects for the
+          Early Community Member Program (ECMP) based on four essential
+          criteria:
+
+
+          * Reach/impact: Refers to the extent to which the contributor’s work has spread throughout the community. It may encompass things like the number of people using or relying on their code, engaging with their content, or following their thought leadership.
+
+          * Importance: Evaluates the significance of a contributor’s work within the community or a specific project. This means focusing on how essential a contributor’s work is to the success of a project or how influential they are in shaping the direction and development of the ecosystem.
+
+          * Effort: Assesses the amount of time and energy a contributor has put into their contributions. This is not limited to coding. It may also include community support, mentoring, and engaging with others to share knowledge.
+
+          * Originality: Looks at how unique or innovative a contributor’s work is. This can include creating new algorithms, methods, or tools that haven’t been seen before, or approaching existing problems in a novel way.
+
+
+          For more information on ECMP criteria, click [here](https://community.starknet.io/t/announcing-the-early-community-member-program/102092).
   - type: heading_container
     heading_variant: h3
     blocks: []
