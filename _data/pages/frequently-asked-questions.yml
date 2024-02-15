@@ -416,6 +416,42 @@ blocks:
       - label: "Can one person be eligible for Provisions in more than one category? "
         body: Recipients who are eligible for Provisions in more than one category can
           receive tokens for each category in which they qualify.
+      - label: How can someone claim STRK via Provisions?
+        body: >-
+          
+
+          * Provisions can be claimed via the Provisions portal. Recipients who have an eligible Starknet or Ethereum address can also claim by interacting directly with the Provisions smart contract if they choose. Note: The Starknet Foundation will only cover fees for those claiming via the Provisions portal.
+
+          * Eligible ETH stakers who staked via liquidity pools need to contact their liquidity pools and claim their provisions through them.
+
+          * Recipients will need to claim their Provisions allocations no later than four months (until June 20th, 2024) after Provisions launches on Mainnet. 
+
+          * Recipients claiming through the Provisions portal will need to claim with their [Starknet wallet](https://www.starknet.io/en/ecosystem/wallets). **Make sure your Starknet wallet is up to date with its latest version.** 
+
+          * Beware of scams and make sure you follow only the official communication channels and interact with the official Provisions portal, as found in the Starknet [Foundation’s official Provisions blog post](https://www.starknet.io/en/content/starknet-provisions-program) and [X (formerly Twitter) announcement](https://twitter.com/StarknetFndn/status/1757676598730342761). Here are the official Starknet communication channels:
+
+            * Starknet on X (formerly Twitter): <https://twitter.com/Starknet>
+            * Starknet Hub: <https://www.starknet.io/>
+            * Starknet Foundation on X:  [https://twitter.com/StarknetFndn](https://twitter.com/Starknetfndn)
+            * Provisions portal: <https://provisions.starknet.io>
+      - label: What is the starting date for the distribution of Provisions?
+        body: STRK will become available for claiming on Starknet Mainnet starting at
+          12pm (UTC) on February 20, 2024.
+      - label: What is the last date for claiming STRK via Provisions?
+        body: Those eligible for Provisions may claim them within four months of the
+          date on which claiming is enabled (until June 20th, 2024). Tokens not
+          claimed in this first phase will be reallocated via the Starknet
+          Foundation for future distribution rounds.
+      - label: If I staked on Ethereum through a liquidity pool, how do I claim STRK via
+          Provisions?
+        body: Those who used liquid-staking mechanisms or centralized exchanges to stake
+          on Ethereum may receive distribution from the relevant pools and
+          exchanges. Validators operated by pools and exchanges—as determined by
+          the Starknet Foundation via data from [Rated
+          Network](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all)—are
+          eligible to claim 360 STRK to be distributed among their pre-Merge
+          stakers. Please contact your staking service for more information.
+      - {}
   - type: heading_container
     heading_variant: h3
     blocks: []
