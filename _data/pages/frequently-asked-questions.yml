@@ -262,41 +262,6 @@ blocks:
 
 
           For more information about the entire allocation plan of the STRK token, see [here](https://docs.starknet.io/documentation/architecture_and_concepts/Economics-of-Starknet).
-  - type: accordion
-    heading: Distribution and Eligibility
-    blocks:
-      - label: What is the total amount of STRK tokens distributed?
-        body: The initial phase of the Provisions program will distribute 726 million
-          STRK out of 900 million designated for the Provisions program as a
-          whole. Tokens not claimed within 4 months (until June 20th, 2024) of
-          this first phase will be reallocated for future distribution rounds.
-          Zooming out, the amount designated for Provisions is part of a total
-          of 1.8 billion STRK dedicated to the community overall.
-      - label: How many recipients are eligible for the first round of Provisions?
-        body: A total of 1,297,738 addresses are eligible for Provisions. In addition to
-          recipients who are eligible to claim STRK directly to their accounts
-          via Provisions, Ethereum stakers who staked through liquidity pools
-          will be able to receive their allocations through those pools.
-      - label: Will there be a public list of recipient addresses and the number of
-          tokens received?
-        body: Yes, you can find it
-          [here](https://github.com/starknet-io/provisions-data/).
-      - label: "How many tokens are distributed to each eligible recipient? "
-        body: >-
-          The number of tokens allocated to each eligible recipient varies
-          between 111.1 STRK and 200,000 STRK, depending on the category. 
-
-
-          The size of the Provisions allocation is determined by the effort exerted by the category’s members to contribute to the network’s robustness (e.g. contributing code to the infrastructure of the network requires significant effort and skill). The number allocated is tied to the impact of the contribution on Starknet, as well as the resources spent to make it. Contribution to Starknet is rewarded with more tokens than a contribution to Ethereum, which is rewarded with more tokens than a contribution to non-crypto projects.
-      - label: What proportion of the total allocation is distributed to each eligible
-          category?
-        body: |-
-          See the below diagram for the breakdown of each category’s allocation.
-
-          ![](/assets/provisions-allocations-pie-final.jpeg)
-      - label: How can I check my eligibility for Provisions?
-        body: Recipients can check their eligibility for Provisions in the Provisions
-          portal at <https://provisions.starknet.io>.
       - label: What were the guiding principles for determining the eligibility and
           levels of allocation?
         body: >-
@@ -355,27 +320,12 @@ blocks:
           open-source projects that have become the public goods of cyberspace.
           It is not only fair, but also critical to the open-source ecosystem,
           that the individuals behind these projects are supported.
-      - label: When was the snapshot of recipients’ addresses taken for Provisions?
-        body: >-
-          The snapshot date differs between categories:
-
-
-          * For Ethereum stakers, the snapshot date is the date of the Merge (September 15th, 2022). The Merge was a turning point in Ethereum’s maturity, and stakers that staked prior to the Merge showed significantly more faith in Ethereum compared with stakers that began staking only when the protocol was mature.
-
-          * For Starknet users, the snapshot date is in the recent past: November 15th, 2023.
-
-          * For StarkEx users, the snapshot date is June 1st, 2022, as was determined and communicated in [part 3](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) of the Starknet Decentralization Roadmap.
-      - label: "Can one person be eligible for Provisions in more than one category? "
-        body: Recipients who are eligible for Provisions in more than one category can
-          receive tokens for each category in which they qualify.
       - label: What are the guidelines for the different tiers in the allocation to
           Starknet users?
         body: >-
-          Allocation to Starknet users comes in different tiers, all aimed at
-          rewarding users whose feedback helped to harden Starknet going
-          forward. Those tiers were determined by their level of activity on the
-          network. The Starknet Foundation checked three metrics for eligible
-          users:
+          
+
+          Allocation to Starknet users comes in different tiers, all aimed at rewarding users whose feedback helped to harden Starknet going forward. Those tiers were determined by their level of activity on the network. The Starknet Foundation checked three metrics for eligible users:
 
 
           * **Months of use** - Users who engaged with Starknet actively participated in improving the network by providing vital feedback during its early stages. 
@@ -418,6 +368,54 @@ blocks:
 
 
           For more information on ECMP criteria, click [here](https://community.starknet.io/t/announcing-the-early-community-member-program/102092).
+  - type: accordion
+    heading: Distribution and Eligibility
+    blocks:
+      - label: What is the total amount of STRK tokens distributed?
+        body: The initial phase of the Provisions program will distribute 726 million
+          STRK out of 900 million designated for the Provisions program as a
+          whole. Tokens not claimed within 4 months (until June 20th, 2024) of
+          this first phase will be reallocated for future distribution rounds.
+          Zooming out, the amount designated for Provisions is part of a total
+          of 1.8 billion STRK dedicated to the community overall.
+      - label: How many recipients are eligible for the first round of Provisions?
+        body: A total of 1,297,738 addresses are eligible for Provisions. In addition to
+          recipients who are eligible to claim STRK directly to their accounts
+          via Provisions, Ethereum stakers who staked through liquidity pools
+          will be able to receive their allocations through those pools.
+      - label: Will there be a public list of recipient addresses and the number of
+          tokens received?
+        body: Yes, you can find it
+          [here](https://github.com/starknet-io/provisions-data/).
+      - label: "How many tokens are distributed to each eligible recipient? "
+        body: >-
+          The number of tokens allocated to each eligible recipient varies
+          between 111.1 STRK and 200,000 STRK, depending on the category. 
+
+
+          The size of the Provisions allocation is determined by the effort exerted by the category’s members to contribute to the network’s robustness (e.g. contributing code to the infrastructure of the network requires significant effort and skill). The number allocated is tied to the impact of the contribution on Starknet, as well as the resources spent to make it. Contribution to Starknet is rewarded with more tokens than a contribution to Ethereum, which is rewarded with more tokens than a contribution to non-crypto projects.
+      - label: What proportion of the total allocation is distributed to each eligible
+          category?
+        body: |-
+          See the below diagram for the breakdown of each category’s allocation.
+
+          ![](/assets/provisions-allocations-pie-final.jpeg)
+      - label: How can I check my eligibility for Provisions?
+        body: Recipients can check their eligibility for Provisions in the Provisions
+          portal at <https://provisions.starknet.io>.
+      - label: When was the snapshot of recipients’ addresses taken for Provisions?
+        body: >-
+          The snapshot date differs between categories:
+
+
+          * For Ethereum stakers, the snapshot date is the date of the Merge (September 15th, 2022). The Merge was a turning point in Ethereum’s maturity, and stakers that staked prior to the Merge showed significantly more faith in Ethereum compared with stakers that began staking only when the protocol was mature.
+
+          * For Starknet users, the snapshot date is in the recent past: November 15th, 2023.
+
+          * For StarkEx users, the snapshot date is June 1st, 2022, as was determined and communicated in [part 3](https://medium.com/starkware/part-3-starknet-token-design-5cc17af066c6) of the Starknet Decentralization Roadmap.
+      - label: "Can one person be eligible for Provisions in more than one category? "
+        body: Recipients who are eligible for Provisions in more than one category can
+          receive tokens for each category in which they qualify.
   - type: heading_container
     heading_variant: h3
     blocks: []
