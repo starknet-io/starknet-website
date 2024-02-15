@@ -13,6 +13,8 @@ category:
 topic:
   - decentralization
 blocks:
+  - type: youtube
+    videoId: yBsfkA4Tvrg
   - type: markdown
     body: >-
       Checking your eligibility for Provisions is possible by using the
