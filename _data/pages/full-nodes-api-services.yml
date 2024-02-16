@@ -94,7 +94,7 @@ blocks:
         description: Nethermind provides fast and reliable Starknet RPC service built
           for developers.
         image: /assets/nethermind_icon_1600_black-1-.png
-        website_url: http://starknetrpc.nethermind.io/
+        website_url: https://data.voyager.online/
         link_url: http://starknetrpc.nethermind.io/
         twitter: https://twitter.com/NethermindEth
       - description: Chainbase is an open Web3 data infrastructure for accessing,
