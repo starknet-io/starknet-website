@@ -32,8 +32,7 @@ const ProvisionsPopup = () => {
         bottom="0"
         right="0"
         left="0"
-        backgroundColor="rgba(0,0,0,0.3)"
-        backdropFilter="blur(2px)"
+        backgroundColor="rgba(0,0,0,0.7)"
         onClick={onClose}
       >
         <Box
