@@ -15,7 +15,8 @@ const ProvisionsPopup = () => {
   const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
   const gtmEventClickClose = () => gtmEvent("Provisions popup close");
 
-  const onClose = () => {
+  const onClose = (event: React.MouseEvent) => {
+    event.stopPropagation();
     gtmEventClickClose();
     toggleModal();
   };
@@ -33,7 +34,7 @@ const ProvisionsPopup = () => {
         right="0"
         left="0"
         backgroundColor="rgba(0,0,0,0.7)"
-        onClick={onClose}
+        onClick={(e) => onClose(e)}
       >
         <Box
           pos="fixed"
@@ -63,10 +64,7 @@ const ProvisionsPopup = () => {
               width="28px"
               height="28px"
               style={{ backgroundColor: "transparent" }}
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
+              onClick={(e) => onClose(e)}
             >
               <CloseIcon />
             </IconButton>
