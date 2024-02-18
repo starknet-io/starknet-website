@@ -15,6 +15,12 @@ const ProvisionsPopup = () => {
   const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
   const gtmEventClickClose = () => gtmEvent("Provisions popup close");
 
+  const onClose = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    gtmEventClickClose();
+    toggleModal();
+  };
+
   return (
     <Fade
       in={isOpen}
@@ -22,88 +28,94 @@ const ProvisionsPopup = () => {
       transition={{ enter: { duration: 0.5 } }}
     >
       <Box
-        pos="fixed"
-        top="85px"
-        left="5px"
-        w={["calc(100% - 5px * 2)", "calc(100% - 5px * 2)", 336, 336]}
-        h={["calc(100% - 100px)", "calc(100% - 100px)", 358, 358]}
-        borderRadius="8px"
-        bgGradient="linear(to-l, #0C0C4F, #3F8CFF)"
-        cursor="pointer"
-        display={!isOpen ? "none" : "block"}
+        position="fixed"
+        top="0"
+        bottom="0"
+        right="0"
+        left="0"
+        backgroundColor="rgba(0,0,0,0.7)"
+        onClick={onClose}
       >
         <Box
-          mt="2px"
-          ml="2px"
-          bgColor="white"
-          w={["calc(100% - 2px * 2)", "calc(100% - 2px * 2)", 332, 332]}
-          h={["calc(100% - 2px * 2 )", "calc(100% - 2px * 2 )", 354, 354]}
+          pos="fixed"
+          left="50%"
+          top="50%"
+          transform="translate(-50% ,-50%)"
+          w={[336]}
+          h={[358]}
           borderRadius="8px"
+          bgGradient="linear(to-l, #0C0C4F, #3F8CFF)"
+          display={!isOpen ? "none" : "block"}
         >
-          <IconButton
-            aria-label="Close"
-            border="0"
-            position="absolute"
-            right="10px"
-            top="10px"
-            width="28px"
-            height="28px"
-            style={{ backgroundColor: "transparent" }}
-            onClick={() => {
-              gtmEventClickClose();
-              toggleModal();
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          <Image
-            src={Background}
-            alt=""
-            width="100%"
-            height="100%"
-            borderRadius="6px"
-            objectFit="cover"
-          />
-          <Image
-            src={Logo}
-            alt="STRK Starknet Provisions"
-            position="absolute"
-            bottom={{ base: "50%", md: "171px" }}
-            left="50%"
-            transform={{
-              base: "translate(-50%, -50%)",
-              md: "translateX(-50%)",
-            }}
-            borderRadius="6px"
-          />
-          <Button
-            variant="solid"
+          <Box
+            mt="2px"
+            ml="2px"
             bgColor="white"
-            position="absolute"
-            bottom="40px"
-            left="50%"
-            transform="translateX(-50%)"
+            w={[332]}
+            h={[354]}
             borderRadius="8px"
-            mr="px"
-            width="288px"
-            height="48px"
-            color="black"
-            cursor="pointer"
-            href="https://www.starknet.io/en/content/starknet-provisions-program"
-            _hover={{ color: "#8FBCFF" }}
-            onClick={gtmEventClickReadMore}
           >
-            Read more
-            <Icon
-              mt="1px"
-              ml="4px"
+            <IconButton
+              aria-label="Close"
+              border="0"
+              position="absolute"
+              right="10px"
+              top="10px"
+              width="28px"
+              height="28px"
+              style={{ backgroundColor: "transparent" }}
+              onClick={onClose}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Image
+              src={Background}
+              alt=""
+              width="100%"
+              height="100%"
+              borderRadius="6px"
+              objectFit="cover"
+            />
+            <Image
+              src={Logo}
+              alt="STRK Starknet Provisions"
+              position="absolute"
+              top="91px"
+              left="50%"
+              transform="translateX(-50%)"
+              borderRadius="6px"
+            />
+            <Button
+              variant="solid"
+              bgColor="white"
+              position="absolute"
+              bottom="40px"
+              left="50%"
+              transform="translateX(-50%)"
+              borderRadius="8px"
+              mr="px"
+              width="288px"
+              height="48px"
+              color="black"
+              cursor="pointer"
+              href="https://www.starknet.io/en/content/starknet-provisions-program"
               _hover={{
                 color: "#8FBCFF",
               }}
+              onClick={gtmEventClickReadMore}
             >
-              <ArrowRight />
-            </Icon>
-          </Button>
+              Read more
+              <Icon
+                mt="1px"
+                ml="4px"
+                _hover={{
+                  color: "#8FBCFF",
+                }}
+              >
+                <ArrowRight />
+              </Icon>
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Fade>
