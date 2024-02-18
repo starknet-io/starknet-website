@@ -60,8 +60,6 @@ items:
             items:
               - custom_title: Provisions Portal
                 custom_external_link: https://provisions.starknet.io/
-              - custom_title: Provisions Program Plan
-                custom_external_link: https://www.starknet.io/en/content/starknet-provisions-program
           - title: GET INVOLVED
             items:
               - custom_internal_link: /events
