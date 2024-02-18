@@ -42,13 +42,13 @@ const ProvisionsPopup = () => {
         >
           <IconButton
             aria-label="Close"
-            bgColor="transparent"
             border="0"
             position="absolute"
             right="10px"
             top="10px"
             width="28px"
             height="28px"
+            style={{ backgroundColor: "transparent" }}
             onClick={() => {
               gtmEventClickClose();
               toggleModal();
@@ -90,7 +90,7 @@ const ProvisionsPopup = () => {
             color="black"
             cursor="pointer"
             href="https://www.starknet.io/en/content/starknet-provisions-program"
-            _hover={{ color: "#8FBCFF"}}
+            _hover={{ color: "#8FBCFF" }}
             onClick={gtmEventClickReadMore}
           >
             Read more
