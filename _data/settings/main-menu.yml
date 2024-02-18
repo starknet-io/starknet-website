@@ -62,7 +62,8 @@ items:
                 custom_external_link: https://provisions.starknet.io/
               - custom_title: Provisions Program Plan
                 custom_external_link: ""
-                custom_internal_link: /content/starknet-provisions-program
+                custom_internal_link: ""
+                post: 96c92de7-03ae-4213-982a-c829015038b0
           - title: GET INVOLVED
             items:
               - custom_internal_link: /events
