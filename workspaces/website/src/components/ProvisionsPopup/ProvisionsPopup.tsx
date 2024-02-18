@@ -34,7 +34,7 @@ const ProvisionsPopup = () => {
         right="0"
         left="0"
         backgroundColor="rgba(0,0,0,0.7)"
-        onClick={(e) => onClose(e)}
+        onClick={onClose}
       >
         <Box
           pos="fixed"
@@ -64,7 +64,7 @@ const ProvisionsPopup = () => {
               width="28px"
               height="28px"
               style={{ backgroundColor: "transparent" }}
-              onClick={(e) => onClose(e)}
+              onClick={onClose}
             >
               <CloseIcon />
             </IconButton>
