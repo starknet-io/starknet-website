@@ -64,7 +64,10 @@ const ProvisionsPopup = () => {
               width="28px"
               height="28px"
               style={{ backgroundColor: "transparent" }}
-              onClick={onClose}
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose();
+              }}
             >
               <CloseIcon />
             </IconButton>
