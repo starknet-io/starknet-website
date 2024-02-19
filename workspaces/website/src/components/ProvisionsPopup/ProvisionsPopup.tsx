@@ -1,7 +1,7 @@
 import { Box, Image, Icon, Fade, IconButton } from "@chakra-ui/react";
 import Background from "./popup-background.png";
 import Logo from "./popup-text.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from "./CloseIcon/CloseIcon";
 import ArrowRight from "./ArrowRight/ArrowRight";
 import { Button } from "@ui/Button";
@@ -15,10 +15,16 @@ const ProvisionsPopup = () => {
   const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
   const gtmEventClickClose = () => gtmEvent("Provisions popup close");
 
+  useEffect(() => {
+    const popupState = window.localStorage.getItem("ProvisionsPopup state");
+    if (popupState === "true") setIsOpen(false);
+  }, []);
+
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
     gtmEventClickClose();
     toggleModal();
+    window.localStorage.setItem("ProvisionsPopup state", "true");
   };
 
   return (
@@ -33,6 +39,7 @@ const ProvisionsPopup = () => {
         bottom="0"
         right="0"
         left="0"
+        display={isOpen ? "" : "none"}
         backgroundColor="rgba(0,0,0,0.7)"
         onClick={onClose}
       >
