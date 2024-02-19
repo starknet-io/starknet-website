@@ -78,6 +78,17 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
+        title: DeFi Spring
+        icon: /assets/defi-spring-logo-01.png
+        type: image_icon_link_card
+        link:
+          custom_title: Use your STRK in the upcoming Starknet DeFi Spring!
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
         title: Starknet Ecosystem
         icon: /assets/dapps.svg
         type: image_icon_link_card
