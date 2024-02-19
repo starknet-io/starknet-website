@@ -17,7 +17,7 @@ const ProvisionsPopup = () => {
 
   useEffect(() => {
     const popupState = window.localStorage.getItem("ProvisionsPopup state");
-    if (popupState === "false") setIsOpen(true);
+    if (!popupState || popupState === "false") setIsOpen(true);
   }, []);
 
   const onClose = (event: React.MouseEvent) => {
@@ -39,7 +39,7 @@ const ProvisionsPopup = () => {
         bottom="0"
         right="0"
         left="0"
-        display={isOpen ? "" : "none"}
+        display={isOpen ? "block" : "none"}
         backgroundColor="rgba(0,0,0,0.7)"
         onClick={onClose}
       >
