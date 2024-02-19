@@ -7,7 +7,7 @@ import ArrowRight from "./ArrowRight/ArrowRight";
 import { Button } from "@ui/Button";
 
 const ProvisionsPopup = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleModal = () => setIsOpen((prevState) => !prevState);
 
@@ -17,7 +17,7 @@ const ProvisionsPopup = () => {
 
   useEffect(() => {
     const popupState = window.localStorage.getItem("ProvisionsPopup state");
-    if (popupState === "true") setIsOpen(false);
+    if (popupState === "false") setIsOpen(true);
   }, []);
 
   const onClose = (event: React.MouseEvent) => {
