@@ -1,15 +1,18 @@
 import { Box, Image, Icon, Fade, IconButton } from "@chakra-ui/react";
 import Background from "./popup-background.png";
 import Logo from "./popup-text.svg";
-import { useState } from "react";
 import CloseIcon from "./CloseIcon/CloseIcon";
 import ArrowRight from "./ArrowRight/ArrowRight";
 import { Button } from "@ui/Button";
+import { useLocalStorage } from "usehooks-ts";
 
 const ProvisionsPopup = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isProvisionsPopupOpen, setIsProvisionsPopupOpen] = useLocalStorage(
+    "isProvisionsPopupOpen",
+    true
+  );
 
-  const toggleModal = () => setIsOpen((prevState) => !prevState);
+  const toggleModal = () => setIsProvisionsPopupOpen((prevState) => !prevState);
 
   const gtmEvent = (event: string) => window?.dataLayer.push({ event });
   const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
@@ -19,11 +22,12 @@ const ProvisionsPopup = () => {
     event.stopPropagation();
     gtmEventClickClose();
     toggleModal();
+    setIsProvisionsPopupOpen(false);
   };
 
   return (
     <Fade
-      in={isOpen}
+      in={isProvisionsPopupOpen}
       style={{ zIndex: "9999" }}
       transition={{ enter: { duration: 0.5 } }}
     >
@@ -33,6 +37,7 @@ const ProvisionsPopup = () => {
         bottom="0"
         right="0"
         left="0"
+        display={isProvisionsPopupOpen ? "unset" : "none"}
         backgroundColor="rgba(0,0,0,0.7)"
         onClick={onClose}
       >
@@ -45,7 +50,7 @@ const ProvisionsPopup = () => {
           h={[358]}
           borderRadius="8px"
           bgGradient="linear(to-l, #0C0C4F, #3F8CFF)"
-          display={!isOpen ? "none" : "block"}
+          display={!isProvisionsPopupOpen ? "none" : "block"}
         >
           <Box
             mt="2px"

@@ -4836,6 +4836,7 @@ __metadata:
     unified: ^10.1.2
     unist-util-index: ^3.0.2
     use-scramble: ^2.2.12
+    usehooks-ts: ^2.14.0
     video.js: ^8.3.0
     vite: ^4.3.9
     vite-tsconfig-paths: ^4.2.0
@@ -19281,6 +19282,17 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 5c639e0f8da3521d605f59ce5be9e094ca772bd44a4ce7322b055a6f58eeed8dda3c94cabd90c7a41fb6fa852210092008afe48f7038792fd47501f33299116a
+  languageName: node
+  linkType: hard
+
+"usehooks-ts@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "usehooks-ts@npm:2.14.0"
+  dependencies:
+    lodash.debounce: ^4.0.8
+  peerDependencies:
+    react: ^16.8.0  || ^17 || ^18
+  checksum: 12cfb95de2624aa9005f35ac4b924b3f64c95e1f09fa0b20cb16cf1c47f811d454a30fe492e1f40b6b93a32c3772c6c16d26a381f6a28f26c06b6724ca0d0960
   languageName: node
   linkType: hard
 
