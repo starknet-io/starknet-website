@@ -83,7 +83,7 @@ blocks:
         type: image_icon_link_card
         link:
           custom_title: Use your STRK in the upcoming Starknet DeFi Spring!
-          custom_external_link: http://defispring.starknet.io/
+          custom_external_link: https://www.starknet.io/en/content/starknet-foundation-introduces-the-start-of-defi-spring
         columns: "4"
       - size: large
         color: blue-default
