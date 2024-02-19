@@ -39,7 +39,7 @@ const ProvisionsPopup = () => {
         bottom="0"
         right="0"
         left="0"
-        display={isOpen ? "block" : "none"}
+        display={isOpen ? "unset" : "none"}
         backgroundColor="rgba(0,0,0,0.7)"
         onClick={onClose}
       >
