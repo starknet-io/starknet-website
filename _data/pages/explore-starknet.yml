@@ -78,6 +78,30 @@ blocks:
         variant: image_icon_link_card
         orientation: left
         withIllustration: false
+        title: DeFi Spring
+        icon: /assets/defi-spring-group-6.png
+        type: image_icon_link_card
+        link:
+          custom_title: Use your STRK in the upcoming Starknet DeFi Spring!
+          custom_external_link: https://www.starknet.io/en/content/starknet-foundation-introduces-the-start-of-defi-spring
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: StarkGate
+        icon: /assets/onramp.svg
+        type: image_icon_link_card
+        link:
+          custom_title: Transfer assets between Ethereum and Starknet
+          custom_external_link: https://starkgate.starknet.io/
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
         title: Starknet Ecosystem
         icon: /assets/dapps.svg
         type: image_icon_link_card
@@ -97,23 +121,11 @@ blocks:
           custom_title: Discover dApps on Starknet
           custom_external_link: https://www.dappland.com/
         columns: "4"
-      - size: large
-        color: blue-default
-        variant: image_icon_link_card
-        orientation: left
-        withIllustration: false
-        title: StarkGate
-        icon: /assets/onramp.svg
-        type: image_icon_link_card
-        link:
-          custom_title: Transfer assets between Ethereum and Starknet
-          custom_external_link: https://starkgate.starknet.io/
-        columns: "4"
     heading: Explore Starknet
     base: 1
     md: 1
-    lg: 4
-    xl: 4
+    lg: 3
+    xl: 3
   - type: flex_layout
     heading_variant: h2
     blocks:
