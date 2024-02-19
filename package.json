@@ -96,6 +96,7 @@
     "unified": "^10.1.2",
     "unist-util-index": "^3.0.2",
     "use-scramble": "^2.2.12",
+    "usehooks-ts": "^2.14.0",
     "video.js": "^8.3.0",
     "vite": "^4.3.9",
     "vite-tsconfig-paths": "^4.2.0",
