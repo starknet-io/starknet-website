@@ -79,7 +79,7 @@ blocks:
         orientation: left
         withIllustration: false
         title: DeFi Spring
-        icon: /assets/defi-spring-logo-01.png
+        icon: /assets/defi-spring-group-6-01.svg
         type: image_icon_link_card
         link:
           custom_title: Use your STRK in the upcoming Starknet DeFi Spring!
