@@ -7,6 +7,8 @@ import { Button } from "@ui/Button";
 import { useLocalStorage } from "usehooks-ts";
 
 const ProvisionsPopup = () => {
+  return null;
+
   const [isProvisionsPopupOpen, setIsProvisionsPopupOpen] = useLocalStorage(
     "isProvisionsPopupOpen",
     true
