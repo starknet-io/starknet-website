@@ -50,11 +50,14 @@ blocks:
          ![](/assets/2_confirm-not-us-person.png)
       4. You are prompted to connect a Starknet wallet.
 
-         ![](/assets/3_select_wallet.png)
-      5. **IMPORTANT**: If you’re eligible because you are a Starknet user or ECMP recipient, make sure that you connect with a Starknet address that is eligible to receive STRK.\
-         Make sure that your wallet is updated to the latest version.\
-         \
-         Select your wallet and follow the onscreen instructions to complete the connection.
+           ![](/assets/3_select_wallet.png)
+         If you’re eligible because you are a Starknet user or ECMP recipient, make sure that you connect with a Starknet address that is eligible to receive STRK, and make sure that your wallet is updated to the latest version.
+
+           **IMPORTANT:** If you get an error message that your wallet is not up to date, make sure that your browser is up to date. You might need to restart it.On Google Chrome, you can check if there are pending updates by opening the browser menu going to **Help > About Google Chrome**.
+
+      Once your wallet is updated, you might see a message in the wallet that you need to update your account. If you do, follow the onscreen instructions to update your account.Select your wallet and follow the onscreen instructions to complete the connection.
+
+
       6. After your Starknet wallet is connected, continue the connection process. The process is slightly different for each type of eligibility.
 
 
@@ -103,7 +106,7 @@ blocks:
       1. Click **Ethereum** and then click **Connect your Ethereum wallet**.
 
          ![](/assets/4c_sign_in_eth.png)
-      2. Select your Ethereum wallet from the list.
+      2. Select your Ethereum wallet from the list. If you’re wallet doesn’t appear, see [Claiming STRK outside the Provisions portal](https://github.com/starknet-io/provisions-data?tab=readme-ov-file#claiming-strk-outside-the-provisions-portal) at the Starknet provisons-data GitHub repository.
 
          ![](/assets/4c.1_connect_eth_wallet.png)
 
@@ -160,14 +163,11 @@ blocks:
 
          ![](/assets/9.1_delegate_votes.png)
 
-
-
          Set the amount of STRK that you want to use for voting.
 
          **NOTE**: vSTRK is Starknet’s voting token. You need to designate the amount of STRK you want to use for voting by wrapping that amount STRK to vSTRK.
 
          See the exact amount of vSTRK you’ll receive under **Voting power received**. Click the **Delegate** button, and approve the transaction in your wallet when prompted.
-
       6. After the delegation transaction completes, the **Claim your tokens** screen shows how much STRK and vSTRK you are now eligible to claim. Notice that the amount of vSTRK you are eligible to claim is the amount of STRK you chose to delegate. If you change your mind about the number of tokens you want to delegate, you can click back, or if you decide that you don’t want to delegate any, you can click **Delete delegation**.
 
          ![](/assets/10_claim_your_tokens.png)
@@ -177,9 +177,8 @@ blocks:
          ![](/assets/10.1_claim_tokens_no_delegation.png)
       7. When you’re satisfied with your delegation choice, click the **Complete claiming tokens** button.
 
-         If you’re connected with an Ethereum wallet, you need to approve the transaction.\
-      After the final screen appears saying that your tokens are on the way, you should see them appear in your wallet. You can click **Disconnect** at any time.
-
+            If you’re connected with an Ethereum wallet, you need to approve the transaction.\
+         After the final screen appears saying that your tokens are on the way, you should see them appear in your wallet. You can click **Disconnect** at any time.
 
       ![](/assets/11_strk_on_the_way.png)
 
