@@ -52,10 +52,10 @@ items:
   - title: Community
     columns:
       - blocks:
-          - title: START HERE
+          - title: ""
             items:
-              - custom_title: Community Hub
-                page: 683db5f6-c625-4fe0-a2af-3c5b6af8c2c9
+              - custom_title: Explore Starknet
+                page: 186916c3-0c7c-48a6-b717-e43d3a7377f4
           - title: Provisions Program
             items:
               - custom_title: Provisions Portal
