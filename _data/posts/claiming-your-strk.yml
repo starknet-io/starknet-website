@@ -1,0 +1,179 @@
+id: 18254fba-b007-4581-bd24-f5527b960b6e
+post_type: article
+title: Claiming your STRK
+toc: true
+published_date: 2024-02-20T10:25:02.039Z
+image: /assets/guide-image-2-.jpg
+category:
+  - stark-math
+topic:
+  - decentralization
+blocks:
+  - type: markdown
+    body: >-
+      So you’re eligible to receive STRK tokens as part of the Starknet
+      Provisions Program! This post walks you through the process of claiming
+      your tokens.
+
+
+      ## Prerequisites
+
+
+      * You’re eligible to receive STRK tokens as part of the Starknet Provisions Program. If you’re not sure, see [Checking your eligibility to receive Starknet Provisions](https://www.starknet.io/en/content/checking-your-eligibility-to-receive-starknet-provisions#toc-checking-eligibility-for-github-developers) for information on checking your eligibility.
+
+      * You need a Starknet wallet to claim your STRK through the Provisions portal. If you have a Starknet wallet, make sure you have the latest version installed and that your account is up to date.
+
+      * **Starknet users/ECMP/developers:** Your Starknet wallet is installed and set up in your browser.
+
+      * **StarkEx-powered app users:** You have the credentials for connecting to your account for the StarkEx-powered app.
+
+      * **Ethereum stakers/Protocol Guild members**: Your Ethereum wallet is installed and set up.
+
+      * **Ethereum developers, GitHub developers other than Ethereum developers, and EIP authors**: You have your GitHub credentials.
+
+      * Please note that due to regulatory constraints, Provisions and STRK will not be available to:
+
+        * Any person or entity in Russia, Cuba, Iran, North Korea, Syria, or any other applicable sanctioned country, or any person or entity on the Specifically Designated Nationals and Blocked Persons List maintained by the U.S. Treasury’s Office of Foreign Assets Control (OFAC).
+        * Any person or entity on the U.K. Sanctions List maintained by His Majesty’s Treasury Office or Office of Financial Sanctions Implementation (OFSI).
+        * At this time, Provisions are also unavailable to U.S. Persons, including U.S. citizens, U.S. residents (tax or otherwise), green card holders, and corporate entities with a majority of U.S. ownership or a principal place of business or registered office in the United States of America.
+
+      ## Connect to the Starknet Provisions portal
+
+
+      1. Go to the Starknet Provisions portal at <https://provisions.starknet.io/>.
+
+      2. Scroll to **Claim STRK** and click the **Claim STRK** button.
+
+         ![](/assets/1_claim_strk.png)
+      3. Accept the terms of use and the privacy policy after reading them, and confirm that you are not a U.S. person.
+
+         ![](/assets/2_confirm-not-us-person.png)
+      4. You are prompted to connect a Starknet wallet.
+
+         ![](/assets/3_select_wallet.png)
+      5. **IMPORTANT**: If you’re eligible because you are a Starknet user or ECMP recipient, make sure that you connect with a Starknet address that is eligible to receive STRK.\
+         Make sure that your wallet is updated to the latest version.\
+         Select your wallet and follow the onscreen instructions to complete the connection.
+      6. After your Starknet wallet is connected, continue the connection process. The process is slightly different for each type of eligibility.
+
+
+      ## Connect your eligible account to the Provisions portal
+
+
+      ### Starknet users and ECMP recipients
+
+
+      Click **Starknet** and connect your Starknet wallet by clicking **Use my connected wallet.** This is the same wallet with which you connected in the previous step.
+
+
+      ![](/assets/4a_use_connected_wallet.png)
+
+
+      After connecting, you should see a message letting you know that you are eligible to receive STRK.
+
+
+      ![](/assets/5a_congrats_starknet.png)
+
+
+      ### StarkEx users
+
+
+      1. Click **StarkEx**, and then select a StarkEx-powered application for which you have an account.
+
+         ![](/assets/4b_sign_in_w_starkex.png)
+      2. Click to sign in or connect to your account. Signing in with Sorare or Rhino.Fi takes you to the respective app’s site, where you can complete the connection process.
+
+      3. Follow the onscreen instructions to complete the connection. When you finish connecting, you should be connected with both your StarkEx wallet and your Starknet wallet, and you should see a message letting you know that you are eligible to receive STRK.
+
+         ![](/assets/5b_congrats_se.png)
+
+      Continue the claiming process.
+
+
+      ### Ethereum Stakers and Protocol Guild members
+
+
+      1. Click **Ethereum** and then click **Connect your Ethereum wallet**.
+
+         ![](/assets/4c_sign_in_eth.png)
+      2. Select your Ethereum wallet from the list.
+
+         ![](/assets/4c.1_connect_eth_wallet.png)
+
+      After your wallet is connected, you should see a message letting you know that you are eligible to receive STRK.
+
+
+      ![](/assets/5c_congrats_eth.png)
+
+
+      ### GitHub connect for Starknet developers, Ethereum developers, and open-source contributors
+
+
+      Before you begin, make sure that you are signed in to GitHub with an account that is eligible to receive STRK.
+
+
+      1. Click **GitHub** and then click **Sign in**.
+
+         ![](/assets/4d_sign_in_gh.png)
+      2. Complete the authorization process for your GitHub account.
+
+         ![](/assets/4d.1_oauth_gh.png)
+
+      After your wallet is connected, you should see a message letting you know that you are eligible to receive STRK.
+
+
+      ![](/assets/5d_congrats_gh.png)
+
+
+      ## The finishing steps
+
+
+      1. Proceed by clicking the See your allocation button.
+
+         ![](/assets/5.1_button_see_your_allocation.png)
+
+         A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
+
+         ![](/assets/6_allocation_starknet.png)
+      2. Click **Claim your tokens**. A welcome screen appears, customized according to your type of eligibility.
+
+         ![](/assets/7a_gm_starkling.png)
+      3. Click **Next**, and the next two screens prompt you to answer a couple of optional questions to help you get familiar with Starknet. You can answer each question and click **Submit answer** to quiz yourself, or you can click **Skip** to move forward to **Voting and delegation**.
+
+      4. On the **Voting and delegation** screen, you can delegate the voting power that your STRK gives you. This step is not mandatory in order to claim your STRK, but the transaction is subsidized if you do it now, as part of the claim process.\
+         For information on voting, delegation, and Starknet Governance, see [the Starknet Governance Hub](https://governance.starknet.io/learn/vstrk_overview). (Don’t worry, if you take some time to read about Governance now, you can always come back later to claim your STRK.)
+
+         ![](/assets/9_voting_and_delegation.png)
+
+         You can click **Skip** and use the Starknet Governance Hub to delegate your votes at another time, however, the transaction fees for delegating will not be subsidized.
+      5. After you click one of the Delegate buttons, the **Delegate votes** dialog opens.
+
+         ![](/assets/9.1_delegate_votes.png)
+
+      Set the amount of STRK that you want to use for voting.\
+
+      **NOTE**: vSTRK is Starknet’s voting token. You need to designate the amount of STRK you want to use for voting by wrapping that amount STRK to vSTRK.
+
+
+      See the exact amount of vSTRK you’ll receive under **Voting power received**. Click the **Delegate** button, and approve the transaction in your wallet when prompted.
+
+
+      6. After the delegation transaction completes, the **Claim your tokens** screen shows how much STRK and vSTRK you are now eligible to claim. Notice that the amount of vSTRK you are eligible to claim is the amount of STRK you chose to delegate. If you change your mind about the number of tokens you want to delegate, you can click back, or if you decide that you don’t want to delegate any, you can click **Delete delegation**.
+
+         ![](/assets/10_claim_your_tokens.png)
+
+         Here’s what you see if you don’t delegate any STRK:
+
+         ![](/assets/10.1_claim_tokens_no_delegation.png)
+      7. When you’re satisfied with your delegation choice, click the **Complete claiming tokens** button.
+
+
+      If you’re connected with an Ethereum wallet, you need to approve the transaction.\
+
+      After the final screen appears saying that your tokens are on the way, you should see them appear in your wallet. You can click **Disconnect** at any time.
+
+
+      ![](/assets/11_strk_on_the_way.png)
+
+
+      That’s it! Soon, you should see your STRK and vSTRK in your Starknet wallet. The exact amount of time it takes depends on several factors, so don’t worry if you don’t see them immediately.
