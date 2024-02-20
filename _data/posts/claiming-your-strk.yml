@@ -138,10 +138,9 @@ blocks:
       ## **Continuing with the claim process**
 
 
-      Proceed by clicking the See your allocation button.
+      1. Proceed by clicking the **See your allocation** button.
 
-
-      1.   ![](/assets/5.1_button_see_your_allocation.png)
+         ![](/assets/5.1_button_see_your_allocation.png)
 
          A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
 
@@ -161,13 +160,13 @@ blocks:
 
          ![](/assets/9.1_delegate_votes.png)
 
-      Set the amount of STRK that you want to use for voting.\
-
-      **NOTE**: vSTRK is Starknet’s voting token. You need to designate the amount of STRK you want to use for voting by wrapping that amount STRK to vSTRK.
 
 
-      See the exact amount of vSTRK you’ll receive under **Voting power received**. Click the **Delegate** button, and approve the transaction in your wallet when prompted.
+         Set the amount of STRK that you want to use for voting.
 
+         **NOTE**: vSTRK is Starknet’s voting token. You need to designate the amount of STRK you want to use for voting by wrapping that amount STRK to vSTRK.
+
+         See the exact amount of vSTRK you’ll receive under **Voting power received**. Click the **Delegate** button, and approve the transaction in your wallet when prompted.
 
       6. After the delegation transaction completes, the **Claim your tokens** screen shows how much STRK and vSTRK you are now eligible to claim. Notice that the amount of vSTRK you are eligible to claim is the amount of STRK you chose to delegate. If you change your mind about the number of tokens you want to delegate, you can click back, or if you decide that you don’t want to delegate any, you can click **Delete delegation**.
 
@@ -178,13 +177,10 @@ blocks:
          ![](/assets/10.1_claim_tokens_no_delegation.png)
       7. When you’re satisfied with your delegation choice, click the **Complete claiming tokens** button.
 
-
-      If you’re connected with an Ethereum wallet, you need to approve the transaction.\
-
+         If you’re connected with an Ethereum wallet, you need to approve the transaction.\
       After the final screen appears saying that your tokens are on the way, you should see them appear in your wallet. You can click **Disconnect** at any time.
 
 
       ![](/assets/11_strk_on_the_way.png)
 
-
-      That’s it! Soon, you should see your STRK and vSTRK in your Starknet wallet. The exact amount of time it takes depends on several factors, so don’t worry if you don’t see them immediately.
+         That’s it! Soon, you should see your STRK and vSTRK in your Starknet wallet. The exact amount of time it takes depends on several factors, so don’t worry if you don’t see them immediately.
