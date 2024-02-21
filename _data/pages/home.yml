@@ -179,10 +179,10 @@ blocks:
         size: large
         withIllustration: false
         color: null
-        title: What is STARK?
+        title: What is STRK?
         link:
           custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
+          custom_internal_link: /learn/starknet-frequently-asked-questions#toc-starknet-token-strk
       - type: image_icon_link_card
         variant: icon_link_card
         size: large
@@ -191,7 +191,7 @@ blocks:
         title: What is Cairo?
         link:
           custom_title: View
-          custom_internal_link: /learn/frequently-asked-questions#toc-cairo
+          custom_internal_link: /learn/starknet-frequently-asked-questions#toc-cairo
       - type: image_icon_link_card
         variant: icon_link_card
         size: large
