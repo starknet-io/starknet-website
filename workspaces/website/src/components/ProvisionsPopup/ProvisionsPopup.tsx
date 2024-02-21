@@ -106,7 +106,7 @@ const ProvisionsPopup = () => {
             transform="translateX(-50%)"
             borderRadius="8px"
             mr="px"
-            width="288px"
+            width="176px"
             height="48px"
             color="black"
             cursor="pointer"
