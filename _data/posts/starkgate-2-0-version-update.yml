@@ -40,9 +40,7 @@ blocks:
       In May 2022, StarkWare launched [StarkGate](https://starkgate.starknet.io/) to serve as the native bridge between Starknet and Ethereum. Since then, deposits through StarkGate have surpassed the $1 billion mark, with an average of more than 100,000 monthly transactions.
 
 
-
-
-      StarkGate’s new version, written in (the new) Cairo, is now deployed on mainnet. It includes new features for developers and improved user experience. So It's time to catch up - are you using all that StarkGate has to offer?
+      StarkGate’s new version, written in (the new) Cairo, is now deployed on mainnet. It includes new features for developers and improved user experience. So, It's time to catch up - are you using all that StarkGate has to offer?
 
 
       ## More than just a bridge 
@@ -72,22 +70,16 @@ blocks:
       Fast withdrawals give users the ability to obtain their funds immediately on Ethereum instead of waiting for L1 finalization to complete the process, which can take a few hours. This is achieved by integrating a fast withdrawal portal into StarkGate. The portal guides users to choose from several trusted fast withdrawal services and a trustless solution developed by SpaceShard.
 
 
-
-
       ### Permissionless bridging (Live on Starknet mainnet)
 
 
       Many protocols on Starknet, for example, AMMs, require permissionless addition of tokens. So far, StarkGate supported only a subset of pre-configured tokens, which created an issue for these protocols. StarkGate’s new version supports permissionless ERC-20 token addition. 
 
 
-
-
       When asked to bridge a new token, StarkGate will first confirm the token hasn't been previously bridged, and then deploy an ERC-20 contract on Starknet, creating a bridge between the two. 
 
 
       Although you can use a block explorer to access the newly created bridge, the addition of tokens to StarkGate’s UI is not automated. This is in order to prevent loss of funds due to the possibility of incorrect or malicious bridging of tokens.
-
-
 
 
       We note that adding a token that requires a customized bridging mechanism or a non-standard token contract on L2 is still possible, only in a permissioned way.
@@ -97,8 +89,6 @@ blocks:
 
 
       Smart deposit, when implemented by apps, allows users to deposit from Ethereum directly to a Starknet app’s ERC-20 balance, making Starknet apps more accessible to the entire Ethereum community. Previously, Ethereum users had to first set up a Starknet account and bridge their assets into this account to access Starknet apps. The smart deposit feature makes the first interaction between Ethereum users and Starknet apps seamless.
-
-
 
 
       Smart deposits on StarkGate can activate a dedicated function hook on the recipient Starknet contract. This lets users deposit directly from Ethereum to the app’s ERC-20 balance. The function hook, which is called automatically after the deposit, clarifies to the app the source of the new funds and registers them under the user's name in the app's balance sheet—all within a single transaction. Users of apps enabling this feature could send tokens from Ethereum to their preferred DeFi app and trade without worrying about which chain the app is on.
@@ -113,8 +103,6 @@ blocks:
       We invite you to explore all that StarkGate has to offer and join us in shaping its future.
 
 
-
-
       For more details on the features and their implementation, we welcome you to read the [documentation](https://docs.starknet.io/documentation/tools/starkgate-bridge/), the [source code](https://github.com/starknet-io/starkgate-contracts/tree/cairo-1), and the [release notes](https://github.com/starknet-io/starkgate-contracts/releases).
 
 
@@ -124,4 +112,4 @@ blocks:
       We're currently designing the next version of StarkGate, making it an ideal time for 
 
 
-      **suggestions and feedback. Contact us at [Support@StarknetCommunity.io](mailto:Support@StarknetCommunity.io).**
+      suggestions and feedback. Contact us at** [Support@StarknetCommunity.io](mailto:Support@StarknetCommunity.io).**
