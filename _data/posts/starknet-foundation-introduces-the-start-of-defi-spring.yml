@@ -26,7 +26,19 @@ seoFocusKeywords:
 blocks:
   - type: markdown
     body: >-
-      ## Introduction
+      ## Resources
+
+
+      * A list of participating protocols can be found [here](https://starknet.notion.site/Public-DeFi-Spring-Participating-Protocols-8df40d18b4a6483b9126c294308a41eb?pvs=4). 
+
+      * See the first live quest here: <https://www.intract.io/starknet>
+
+      * Starknet Foundation tweet of a list of all live programs here: <https://twitter.com/StarknetFndn/status/1759567375370772507>
+
+
+      ## \
+
+      Introduction
 
 
       On 9 November 2023, the Starknet Foundation announced the [appointment of its DeFi Committee](https://www.starknet.io/en/content/defi-committee-launch-advancing-starknets-defi-progress) tasked with the mandate of growing DeFi on Starknet. 
@@ -38,13 +50,13 @@ blocks:
       In connection with [OpenBlock Labs](https://www.openblocklabs.com/), the Starknet Foundation is excited to announce the launch of Starknet DeFi Spring – a six to eight month program where 40M STRK will be distributed to participating DeFi protocols on Starknet.  
 
 
-      This is the first in a series of next steps by the DeFi Committee towards scaling DeFi on Starknet. 
+      This is the first in a series of next steps by the DeFi Committee towards scaling DeFi on Starknet. This first program focuses on liquidity provisioning.
 
 
       ## Part I: STRK Distribution 
 
 
-      The DeFi Committee plans to distribute 40M STRK tokens every two weeks across six to eight months to participating DeFi protocols on Starknet. 
+      The DeFi Committee plans to distribute 40M STRK tokens every two weeks across six to eight months to participating DeFi protocols on Starknet. An additional 10M STRK (at least) has been reserved for future programs that focus on volume, transactions, grants, incubation programs and more!
 
 
       To execute on this plan, the Starknet Foundation has partnered with [OpenBlock Labs](https://www.openblocklabs.com/) to design a program for the fair & equitable distribution of STRK tokens to participating DeFi protocols.
@@ -107,61 +119,61 @@ blocks:
       ## Part III: What’s to come? 
 
 
-      The DeFi Committee has reserved 10M STRK in its budget for new initiatives later in Q2 or Q3 of 2024.  It is currently considering programs such as DeFi hackathons, new project grant programs and short term incentive programs.  Stay tuned for more updates! 
+      The DeFi Committee has reserved at least another10M STRK in its budget for new initiatives later in Q2 or Q3 of 2024.  It is currently considering programs such as DeFi hackathons, new project grant programs and short term incentive programs.  Stay tuned for more updates! 
 
 
       ## FAQ
 
 
-      > **How will STRK distribution work?** 
+      > How will STRK distribution work? 
 
       >
 
-      > The Starknet Foundation will work with OpenBlock Labs to determine STRK allocations to participating protocols every two weeks.  The protocols will then in turn be responsible for distribution to their users.
+      > * The Starknet Foundation will work with OpenBlock Labs to determine STRK allocations to participating protocols every two weeks.  The protocols will then in turn be responsible for distribution to their users.
 
       >
 
-      > **I am a protocol, how can I take part in Starknet DeFi Spring?** 
+      > I am a protocol, how can I take part in Starknet DeFi Spring? 
 
       >
 
-      > If you’re a protocol and would like to take part in Starknet DeFi Spring, reach out to the DeFi Committee at [defi@starknet.org](mailto:defi@starknet.org). 
+      > * If you’re a protocol and would like to take part in Starknet DeFi Spring, reach out to the DeFi Committee at [defi@starknet.org](mailto:defi@starknet.org). 
 
       >
 
-      > **I am a user, how can I earn STRK as part of Starknet DeFi Spring?** 
+      > I am a user, how can I earn STRK as part of Starknet DeFi Spring? 
 
       >
 
-      > If you’re an individual and you would like to earn STRK during Starknet DeFi Spring, you will need to explore the individual participating protocols and their terms of use to see how you can earn STRK through their programs.  
+      > * If you’re an individual and you would like to earn STRK during Starknet DeFi Spring, you will need to explore the individual participating protocols and their terms of use to see how you can earn STRK through their programs.  
 
       >
 
-      > **I am a user, how do I know if a project is a participating protocol in Starknet DeFi Spring and will be distributing STRK rewards?** 
+      > I am a user, how do I know if a project is a participating protocol in Starknet DeFi Spring and will be distributing STRK rewards? 
 
       >
 
-      > A list of all active participating protocols can be found [here](https://starknet.notion.site/Public-DeFi-Spring-Participating-Protocols-8df40d18b4a6483b9126c294308a41eb?pvs=4). 
+      > * A list of all active participating protocols can be found [here](https://starknet.notion.site/Public-DeFi-Spring-Participating-Protocols-8df40d18b4a6483b9126c294308a41eb?pvs=4). 
 
       >
 
-      > **I am a user, how do I participate in the Quests?** 
+      > I am a user, how do I participate in the Quests? 
 
       >
 
-      > You can complete Quests on Intract’s platform: [intract.io/starknet](http://intract.io/starknet)
+      > * You can complete Quests on Intract’s platform: [intract.io/starknet](http://intract.io/starknet)
 
       >
 
-      > **What date will Users be able to claim their first STRK rewards?** 
+      > What date will Users be able to claim their first STRK rewards? 
 
       >
 
-      > Users will be able to claim their first STRK rewards on Thursday, 7 March 2024 directly via participating protocols. 
+      > * Users will be able to claim their first STRK rewards on Thursday, 7 March 2024 directly via participating protocols. 
 
       >
 
-      > **Which protocols are participating in this Program?** 
+      > Which protocols are participating in this Program? 
 
       >
 
@@ -173,7 +185,49 @@ blocks:
 
       > * Starting 14 March, Options & Perps protocols are eligible to participate. 
 
+      >
 
+      > What happens if I don't claim my STRK?
+
+      >
+
+      > * You will be able to claim STRK natively within each participating protocol.  Any unclaimed STRK at the end of Starknet DeFi Spring will be returned back to the Foundation. 
+
+      >
+
+      > Are the Quests / DeFi Spring linked to the DeFi Incentives?
+
+      >
+
+      > * Starknet DeFi Spring is the entire six to eight month period where incentives will be live.
+
+      > * Quests on [Intract](http://intract.io/starknet) are a separate initiative designed to guide the user to explore where incentives are live during Starknet DeFi Spring.
+
+      > * The Starknet Foundation has worked with [IMCMPLX](https://twitter.com/trueIMCMPLX), the creative artist behind [0n1Force](https://twitter.com/trueIMCMPLX), to design four unique artworks as an NFT reward for users that complete Quests.
+
+      >
+
+      > Which pairs will incentives apply to? 
+
+      >
+
+      > * Incentives are determined by participating protocols, please visit their individual programs to see which pairs have incentives live.
+
+      > * On a per protocol basis, the total amount of incentives allocated is calculated based on the protocol’s depth of liquidity for the following pairs:
+
+      > * * STRK/USDC
+
+      >   * ETH/USDC
+
+      >   * ETH/STRK
+
+      >   * USDC/USDT
+
+      >   * more pairs will be added in the weeks to come
+
+      >
+
+      > The protocols themselves determine through their own programs how these incentives will be allocated to their users.
 
 
       ## About the Starknet Foundation DeFi Committee
