@@ -1,0 +1,115 @@
+id: 48faeb80-3c4b-4dd8-894f-1376d4d631b3
+post_type: article
+title: StarkGate 2.0 Version Update
+seoTitle: "StarkGate 2.0 Version Update: Enhanced Features & Security for Developers"
+toc: true
+published_date: 2024-02-22T10:29:41.293Z
+image: /assets/sg.jpeg
+category:
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+topic:
+  - ca272092-827b-4603-a3a6-b0fdbbc624ad
+short_desc: >
+  StarkGate 2.0 enhances the connection between Starknet and Ethereum, offering
+  upgraded security and improved usability. This new version introduces
+  functionalities such as one-click withdrawals, permissionless token additions,
+  and smart deposits to facilitate easier transactions. The community is invited
+  to provide its input to contribute to StarkGate's continuous improvement,
+  further enhancing blockchain integration with these new features.
+post_desc: |
+  New features unlocked, security and UX enhanced 
+seo_desc: >
+  Explore StarkGate 2.0's version update with improved security, UX and new
+  features for seamless Starknet-Ethereum integration. Unlock now.
+blocks:
+  - type: markdown
+    body: >-
+      ## TL;DR
+
+
+      * The new version of StarkGate, written in Cairo, is live on mainnet.
+
+      * Check yourself - do you take advantage of ALL of StarkGate’s features? 
+
+      * We want to hear your feedback and suggestions! Take an active role in shaping StarkGate’s future.
+
+
+      ## Introduction
+
+
+      In May 2022, StarkWare launched [StarkGate](https://starkgate.starknet.io/) to serve as the native bridge between Starknet and Ethereum. Since then, deposits through StarkGate have surpassed the $1 billion mark, with an average of more than 100,000 monthly transactions.
+
+
+      StarkGate’s new version, written in (the new) Cairo, is now deployed on mainnet. It includes new features for developers and improved user experience. So, It's time to catch up - are you using all that StarkGate has to offer?
+
+
+      ## More than just a bridge 
+
+
+      While StarkGate’s main functionality is to bridge funds between Ethereum and Starknet (here’s a [step-by-step tutorial](https://starkware.co/resource/getting-started-using-starknet-setting-up-a-starknet-wallet/) to guide you on how), there are more things that you can do with StarkGate. Let’s see exactly what features it offers devs and users. 
+
+
+      ### One-click withdrawals (Live on Starknet mainnet)
+
+
+      With one-click withdrawals, users can seamlessly retrieve their bridged assets to Ethereum mainnet. In the past, for users to withdraw funds to Ethereum, they had to navigate a two-step procedure: sending a withdrawal transaction on Starknet, followed by sending another transaction on Ethereum once the withdrawal was finalized, which usually takes a few hours.
+
+
+      This service, developed by [SpaceShard](https://www.spaceshard.io/), eliminates the need for an additional transaction and provides users with a smooth one-click withdrawal process.
+
+
+      ### Withdrawal limits (Live on Starknet mainnet)
+
+
+      As StarkGate’s Total Value Locked (TVL) continues to grow, it is important to ensure enhanced security mechanisms are in place. That's why, in case a critical bug is found, a limit on withdrawals will be imposed. The strategy employed combines manual and automatic detection techniques to freeze withdrawals in case of bugs. This approach ensures that a designated team can thoroughly investigate and fix the issue with minimal loss of user funds. The authority to lift the freeze on withdrawals will be vested in a security admin quorum comprised of members from the Starknet Foundation, contributors to the Starknet ecosystem, and representatives from StarkWare. This composition ensures the representation of the diverse interests within the Starknet community.
+
+
+      ### Fast withdrawals (Coming in Q2 2024)
+
+
+      Fast withdrawals give users the ability to obtain their funds immediately on Ethereum instead of waiting for L1 finalization to complete the process, which can take a few hours. This is achieved by integrating a fast withdrawal portal into StarkGate. The portal guides users to choose from several trusted fast withdrawal services and a trustless solution developed by SpaceShard.
+
+
+      ### Permissionless bridging (Live on Starknet mainnet)
+
+
+      Many protocols on Starknet, for example, AMMs, require permissionless addition of tokens. So far, StarkGate supported only a subset of pre-configured tokens, which created an issue for these protocols. StarkGate’s new version supports permissionless ERC-20 token addition. 
+
+
+      When asked to bridge a new token, StarkGate will first confirm the token hasn't been previously bridged, and then deploy an ERC-20 contract on Starknet, creating a bridge between the two. 
+
+
+      Although you can use a block explorer to access the newly created bridge, the addition of tokens to StarkGate’s UI is not automated. This is in order to prevent loss of funds due to the possibility of incorrect or malicious bridging of tokens.
+
+
+      We note that adding a token that requires a customized bridging mechanism or a non-standard token contract on L2 is still possible, only in a permissioned way.
+
+
+      ### Smart deposit (Live on Starknet mainnet)
+
+
+      Smart deposit, when implemented by apps, allows users to deposit from Ethereum directly to a Starknet app’s ERC-20 balance, making Starknet apps more accessible to the entire Ethereum community. Previously, Ethereum users had to first set up a Starknet account and bridge their assets into this account to access Starknet apps. The smart deposit feature makes the first interaction between Ethereum users and Starknet apps seamless.
+
+
+      Smart deposits on StarkGate can activate a dedicated function hook on the recipient Starknet contract. This lets users deposit directly from Ethereum to the app’s ERC-20 balance. The function hook, which is called automatically after the deposit, clarifies to the app the source of the new funds and registers them under the user's name in the app's balance sheet—all within a single transaction. Users of apps enabling this feature could send tokens from Ethereum to their preferred DeFi app and trade without worrying about which chain the app is on.
+
+
+      ## Summary
+
+
+      StarkGate 2.0 is now live, bringing several new features alongside enhanced user experience. 
+
+
+      We invite you to explore all that StarkGate has to offer and join us in shaping its future.
+
+
+      For more details on the features and their implementation, we welcome you to read the [documentation](https://docs.starknet.io/documentation/tools/starkgate-bridge/), the [source code](https://github.com/starknet-io/starkgate-contracts/tree/cairo-1), and the [release notes](https://github.com/starknet-io/starkgate-contracts/releases).
+
+
+      ## What’s next?
+
+
+      We're currently designing the next version of StarkGate, making it an ideal time for 
+
+
+      suggestions and feedback. Contact us at** [Support@StarknetCommunity.io](mailto:Support@StarknetCommunity.io).**
