@@ -1,6 +1,7 @@
 id: 18254fba-b007-4581-bd24-f5527b960b6e
 post_type: article
 title: Claiming your STRK
+seoTitle: "Claim Your STRK Tokens: Starknet Provisions Program Guide"
 toc: true
 published_date: 2024-02-20T10:25:02.039Z
 image: /assets/guide-image-3-.jpg
@@ -8,6 +9,12 @@ category:
   - stark-math
 topic:
   - decentralization
+short_desc: Eligible for STRK tokens through Starknet Provisions? Follow this
+  step-by-step guide to claim your tokens and understand eligibility,
+  prerequisites, and more.
+seo_desc: Eligible for STRK tokens through Starknet Provisions? Follow this
+  step-by-step guide to claim your tokens and understand eligibility,
+  prerequisites, and more.
 blocks:
   - type: markdown
     body: >-
