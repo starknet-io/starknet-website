@@ -55,7 +55,7 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-image: https://www.youtube.com/watch?v=eenFZXlbccI&list=PLcIyXLwiPilVncUsobfoswHE_-GoiNglo&index=8
+image: /assets/eenfzxlbcci-hq.jpg
 category:
   - stark-math
 topic:
@@ -63,6 +63,9 @@ topic:
 short_desc: >
   With multicall support, innovative assets like wstETH, and solid security
   audits, zkLend cements itself as a leading DeFi protocol on Starknet
+post_desc: >
+  With multicall support, innovative assets like wstETH, and solid security
+  audits, zkLend cements itself as a leading DeFi protocol on Starknet.
 seo_desc: >
   With multicall support, innovative assets like wstETH, and solid security
   audits, zkLend cements itself as a leading DeFi protocol on Starknet
