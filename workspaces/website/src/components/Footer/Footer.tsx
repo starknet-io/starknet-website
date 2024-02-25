@@ -162,6 +162,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     aria-label="Discord"
                     icon={<SiDiscord fontSize="1.25rem" />}
                     size="small"
+                    target="_blank"
                     marginRight="16px"
                   />
                   <IconButton
@@ -170,6 +171,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     aria-label="GitHub"
                     icon={<SiGithub fontSize="1.25rem" />}
                     size="small"
+                    target="_blank"
                     marginRight="16px"
                   />
                   <IconButton
@@ -178,6 +180,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     aria-label="YouTube"
                     icon={<SiYoutube fontSize="1.25rem" />}
                     size="small"
+                    target="_blank"
                     marginRight="16px"
                   />
                   <IconButton
@@ -185,6 +188,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                     href="https://twitter.com/Starknet"
                     aria-label="Twitter"
                     icon={<SiTwitter fontSize="1.25rem" />}
+                    target="_blank"
                     size="small"
                   />
                 </ButtonGroup>
