@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/CeWvgrzeSO4
 image: /assets/ec01.jpeg
 title: "Launch event "
+seoDescription: Starting with Starknet? This tutorial covers the basics, making
+  it perfect for newcomers eager to learn.
 authors:
   - author: "Encode "
 published_at: 2022-10-09T00:00:00+00:00
