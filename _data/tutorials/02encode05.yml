@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/C-6SBaDi5_c
 image: /assets/ecc04.jpeg
 title: "L1-L2 messaging workshop "
+seoDescription: Mastering Starknet's advanced features with this tutorial.
+  Discover new strategies for sophisticated DApps.
 authors:
   - author: "Encode "
 published_at: 2022-02-01T00:00:00.000Z
