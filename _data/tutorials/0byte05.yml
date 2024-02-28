@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/X0Z3aPcq2Dc
 image: /assets/byte05.jpeg
 title: "Fundamentals of contract writing "
+seoDescription: Unlock the power of Starknet smart contracts. This tutorial
+  walks you through the creation and deployment process.
 authors:
   - author: ByteSized
 published_at: 2021-12-05T00:00:00.000Z
