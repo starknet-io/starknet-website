@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/PJWIgIoj5kw
 image: /assets/ecc03.jpeg
 title: ERC20 + ERC721
+seoDescription: Explore Starknet's unique capabilities in this tutorial. Gain
+  insights into creating more efficient smart contracts.
 authors:
   - author: "Encode "
 published_at: 2022-02-03T00:00:00.000Z
