@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/ej9rX5yN3jE
 image: /assets/ec09.jpeg
 title: "Starkx Pitch "
+seoDescription: Explore intermediate Starknet development strategies. Enhance
+  your DApp creations with this expert tutorial.
 authors:
   - author: "Encode "
 published_at: 2022-10-23T00:00:00+00:00
