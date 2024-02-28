@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/oYfVZ1nsCsI
 image: /assets/cairo05.jpeg
 title: "Contract deployment (demo) "
+seoDescription: Deep dive into Cairo programming with the 0cairo series. Elevate
+  your Starknet development with these tutorials.
 authors:
   - author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
