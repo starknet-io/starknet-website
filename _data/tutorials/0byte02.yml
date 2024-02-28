@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/TxIwS6WxmkY
 image: /assets/byte02.jpeg
 title: Account contracts
+seoDescription: Beginner's guide to Starknet development. Learn the fundamentals
+  with this engaging tutorial video. Start your journey here.
 authors:
   - author: ByteSized
 published_at: 2021-12-02T00:00:00.000Z
