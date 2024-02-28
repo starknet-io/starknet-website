@@ -44,3 +44,9 @@ items:
     access:
       - all
     username: thdamooo
+  - username: Penguinseo
+    access:
+      - posts
+      - seo
+      - pages
+      - tutorials
