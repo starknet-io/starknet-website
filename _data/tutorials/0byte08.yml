@@ -3,6 +3,9 @@ type: youtube
 url: https://youtu.be/sRKn1bavbLo
 image: /assets/byte08.jpeg
 title: Layer 1 to Layer 2 interaction (demo)
+seoTitle: ""
+seoDescription: Dive deeper into Starknet's functionalities. This tutorial
+  covers critical techniques for optimizing your DApps.
 authors:
   - author: ByteSized
 published_at: 2021-12-08T00:00:00.000Z
