@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/DvuLlZFAi5c
 image: /assets/maxresdefault-1-.jpg
 title: Running a Starknet indexer
+seoDescription: Master Cairo's intricacies with tutorial 6. A deep dive into
+  Starknet's powerful programming language.
 authors:
   - author: StarkWare
 published_at: 2022-10-11T00:00:00+00:00
