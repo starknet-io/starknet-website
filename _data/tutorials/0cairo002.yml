@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/ugP3zq1YlBc
 image: /assets/cairo02.jpeg
 title: State alignment
+seoDescription: Starknet is the secure scaling technology bringing Ethereum’s
+  benefits to the world.
 authors:
   - author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
