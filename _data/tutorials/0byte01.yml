@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/Mtq8IMSIIwU
 image: /assets/byte01.jpeg
 title: "Introduction "
+seoDescription: "Introduction to Starknet: A must-watch for all new developers.
+  Learn the basics of Starknet's ecosystem and technology."
 authors:
   - author: "ByteSized "
 published_at: 2021-12-01T00:00:00.000Z
