@@ -50,3 +50,10 @@ items:
       - seo
       - pages
       - tutorials
+  - username: dor-eydan
+    name: "Dor Penguin "
+    access:
+      - pages
+      - posts
+      - tutorials
+      - seo
