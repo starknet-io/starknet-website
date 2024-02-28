@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/G8jn8QP_JdA
 image: /assets/maxresdefault-2-.jpg
 title: Fundamentals of contract writing (demo)
+seoDescription: Master Starknet's unique features. This video tutorial
+  introduces advanced tools and practices for developers.
 authors:
   - author: ByteSized
 published_at: 2021-12-06T00:00:00.000Z
