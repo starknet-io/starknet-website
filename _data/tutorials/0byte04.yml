@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/0LXG1lLdJhQ
 image: /assets/sddefault.jpeg
 title: Compile, deploy and interact
+seoDescription: Get to grips with Starknet's architecture. This tutorial
+  provides a comprehensive overview for intermediate developers.
 authors:
   - author: ByteSized
 published_at: 2021-12-04T00:00:00.000Z
