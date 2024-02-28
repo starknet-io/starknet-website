@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/h0PO9tas2q0
 image: /assets/cairows04.jpeg
 title: "Remote controlled accounts "
+seoDescription: Dive into Cairo's nuances with the 0cairows tutorial series.
+  From beginner to advanced topics, enhance your Starknet development.
 authors:
   - author: StarkWare
 published_at: 2022-08-13T00:00:00+00:00
