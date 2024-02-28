@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/RW6-cLiVSvI
 image: /assets/ec02.jpeg
 title: "Wallet integration for dapps "
+seoDescription: Begin your Starknet development journey. This tutorial covers
+  the essentials every new developer should know.
 authors:
   - author: "Encode "
 published_at: 2022-10-07T00:00:00+00:00
