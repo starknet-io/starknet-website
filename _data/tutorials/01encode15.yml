@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/EwkfeRzrXyw
 image: /assets/ec09.jpeg
 title: "Teresa Pitch "
+seoDescription: Unlock the secrets of efficient Starknet coding. This tutorial
+  guides you through optimization practices for developers.
 authors:
   - author: "Encode "
 published_at: 2022-10-23T00:00:00+00:00
