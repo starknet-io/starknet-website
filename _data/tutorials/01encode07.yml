@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/lgNvQCM_4jA
 image: /assets/ec07.jpeg
 title: "Bridging on Starknet "
+seoDescription: Elevate your Starknet development with this tutorial focusing on
+  efficient coding techniques and best practices.
 authors:
   - author: "Encode "
 published_at: 2022-10-14T00:00:00+00:00
