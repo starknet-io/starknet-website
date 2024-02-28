@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/3atDoL0M7T0
 image: /assets/ec03.jpeg
 title: "Introduction to Cairo "
+seoDescription: Streamline your Starknet projects. Discover tools and tips for
+  efficient development in this practical tutorial.
 authors:
   - author: "Encode "
 published_at: 2022-10-10T00:00:00+00:00
