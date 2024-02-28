@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/Th7pGv42900
 image: /assets/ec09.jpeg
 title: "Aira Pitch "
+seoDescription: Advanced Starknet functionalities uncovered. Learn to leverage
+  Starknet's full potential in your DApps.
 authors:
   - author: "Encode "
 published_at: 2022-10-16T00:00:00+00:00
