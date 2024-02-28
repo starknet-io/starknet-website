@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/7sDOTuMjSjw
 image: /assets/cairows10.jpeg
 title: "Beerus light client overview "
+seoDescription: "Tutorial 10: Integrating Cairo with Starknet's ecosystem.
+  Bridge traditional and blockchain tech with ease."
 authors:
   - author: StarkWare
 published_at: 2022-12-20T00:00:00+00:00
