@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/DrBJ9LWvsOQ
 image: /assets/cairo001.jpeg
 title: "Starknet 101 workshop "
+seoDescription: Starknet is the secure scaling technology bringing Ethereum’s
+  benefits to the world.
 authors:
   - author: StarkWare
     author_link: https://twitter.com/StarkWareLtd
