@@ -3,8 +3,10 @@ type: youtube
 url: https://youtu.be/dRNfmn3Pcxw
 image: /assets/ec08.jpeg
 title: AAVE Ethereum Starknet Bridge
+seoDescription: Deepen your Starknet skills with this tutorial on advanced
+  coding practices. Push your projects further.
 authors:
-  - author: "Encode"
+  - author: Encode
 published_at: 2022-10-27T00:00:00+00:00
 difficulty: intermediate
 course: hackathon_oct_22
