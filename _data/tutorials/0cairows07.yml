@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/ZeGESHsYFNQ
 image: /assets/cairows07.jpeg
 title: "Contributing to Kakarot (Cairo ZK-EVM) "
+seoDescription: "Tutorial 7: Tackling complex Cairo challenges. Elevate your
+  Starknet projects with expert strategies."
 authors:
   - author: StarkWare
 published_at: 2022-11-08T00:00:00+00:00
