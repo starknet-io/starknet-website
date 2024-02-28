@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/gqj0ENOE0EE
 image: /assets/ecc04.jpeg
 title: "Starknet JS workshop "
+seoDescription: Push the limits of blockchain development with Starknet. This
+  tutorial covers cutting-edge techniques for developers.
 authors:
   - author: "Encode "
 published_at: 2022-02-02T00:00:00.000Z
