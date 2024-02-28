@@ -3,6 +3,8 @@ type: youtube
 url: https://www.youtube.com/watch?v=NPmHWeH2ytA
 image: /assets/ec04.jpeg
 title: "NFTs on Starknet  "
+seoDescription: Advanced coding techniques on Starknet. Push the boundaries of
+  what you can build with this in-depth tutorial.
 authors:
   - author: "Encode "
 published_at: 2022-10-12T00:00:00+00:00
