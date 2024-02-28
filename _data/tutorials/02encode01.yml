@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/Vgd41wf7-bE
 image: /assets/ecc02.jpeg
 title: "Wallets, accounts & syntax "
+seoDescription: Intermediate tutorial on Starknet development. Build your skills
+  further with practical coding exercises.
 authors:
   - author: "Encode "
 published_at: 2022-02-04T00:00:00.000Z
