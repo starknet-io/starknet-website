@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/zdcVo7a35mI
 image: /assets/cairows09.jpeg
 title: "Counterfactual deployment "
+seoDescription: Wrap up the Cairo series with tutorial 9. Perfecting your
+  Starknet development with expert tips.
 authors:
   - author: StarkWare
 published_at: 2022-12-06T00:00:00+00:00
