@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/w5vXARtSPSo
 image: /assets/cairo04.jpeg
 title: Starknet ERC721
+seoDescription: Starknet is the secure scaling technology bringing Ethereum’s
+  benefits to the world.
 authors:
   - author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
