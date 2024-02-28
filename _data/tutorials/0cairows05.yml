@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/3duFa_5Zq6A
 image: /assets/maxresdefault.jpg
 title: Unit testing with Protostar
+seoDescription: "Tutorial 5: Advanced Cairo development. Learn to optimize and
+  secure your Starknet applications."
 authors:
   - author: StarkWare
 published_at: 2022-09-27T00:00:00.000Z
