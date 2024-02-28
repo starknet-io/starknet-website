@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/JhsGgYS9Kds
 image: /assets/cairows08.jpeg
 title: Setting up a dev environment with Docker
+seoDescription: Discover cutting-edge Cairo applications in tutorial 8. Push the
+  boundaries of blockchain development.
 authors:
   - author: StarkWare
 published_at: 2022-11-22T00:00:00+00:00
