@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/bF1afkVle2M
 image: /assets/ec09.jpeg
 title: "Ciriverse Pitch "
+seoDescription: Introduction to Starknet development. Start your journey with
+  foundational concepts in this engaging tutorial.
 authors:
   - author: "Encode "
 published_at: 2022-10-23T00:00:00+00:00
