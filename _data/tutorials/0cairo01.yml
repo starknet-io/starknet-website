@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/qFCAxNaOEQQ
 image: /assets/cairo01.jpeg
 title: Building a Vue.js frontend for Starknet
+seoDescription: Kickstart your journey in Cairo programming. This tutorial lays
+  the groundwork for building on Starknet.
 authors:
   - author: StarkWare
 published_at: 2023-01-31T00:00:00+00:00
