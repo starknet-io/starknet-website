@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/51Qb3TLpNro
 image: /assets/cairows02.jpeg
 title: "Starknet Workshop #1 - Account Abstraction"
+seoDescription: "Tutorial 2 in the Cairo series: Building the basics. A
+  step-by-step guide to Starknet development."
 authors:
   - author: StarkWare
 published_at: 2022-08-15T23:00:00.000Z
