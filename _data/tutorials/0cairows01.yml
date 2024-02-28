@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/mRaPuxLKcFg
 image: /assets/cairows01.jpeg
 title: "Solve to mint workshop "
+seoDescription: Start your Cairo journey with tutorial 1. Introduction to
+  programming on Starknet for beginners.
 authors:
   - author: StarkWare
 published_at: 2022-06-13T23:00:00.000Z
