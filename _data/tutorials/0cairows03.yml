@@ -3,6 +3,8 @@ type: youtube
 url: https://youtu.be/SA28R690pTA
 image: /assets/cairows03.jpeg
 title: "Diving into Cairo "
+seoDescription: Progress your Cairo programming with tutorial 3. Learn advanced
+  techniques for efficient DApps on Starknet.
 authors:
   - author: StarkWare
 published_at: 2022-08-29T23:00:00.000Z
