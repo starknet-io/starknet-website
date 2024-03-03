@@ -17,6 +17,7 @@ items:
   - username: stoobie
     access:
       - roadmap
+      - all
     name: Steve Goodman
   - username: OfirEinhorn
     access:
