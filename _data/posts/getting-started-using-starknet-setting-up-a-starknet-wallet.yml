@@ -13,11 +13,10 @@ topic:
 short_desc: >
   A gentle hand-holding guide for your first steps using Starknet and learning
   how to set up a Starknet wallet and transfer funds from an Ethereum wallet.  
+post_desc: A gentle hand-holding guide for your first steps using Starknet
 blocks:
   - type: group
     blocks:
-      - type: markdown
-        body: "##### A gentle hand-holding guide for your first steps using Starknet"
       - type: markdown
         body: >-
           ## Background
@@ -205,24 +204,13 @@ blocks:
 
           6. After reading everything on this page, click **Install**.![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_Install_Snap-165x300.png)
 
-          7. Click **Confirm** to proceed with caution.![](https://starkware.co/wp-content/uploads/2023/08/MetMask_proceed_with_caution-240x300.png)
+          7. Click **Confirm** to proceed with caution.![](https://starkware.co/wp-content/uploads/2023/08/MetMask_proceed_with_caution-240x300.png) After the installation finishes, this message appears: **Installation completed successfully**.
 
 
-          After the installation finishes, this message appears: **Installation completed successfully**.
+          8. Click the URL to open the Snap.![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_installation_complete-300x255.png)A message prompts you to connect your wallet.
 
 
-          8. Click the URL to open the Snap.
-
-
-          ![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_installation_complete-300x255.png)\
-
-          A message prompts you to connect your wallet.
-
-
-          9. Click **Connect**. A screen appears showing your new Starknet account address and your wallet balance.
-
-
-          ![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_acct_balance-300x216.png)
+          9. Click **Connect**. A screen appears showing your new Starknet account address and your wallet balance.![](https://starkware.co/wp-content/uploads/2023/08/MetaMask_acct_balance-300x216.png)
 
 
           Now you need to fund your wallet. StarkGate should have support soon, but at the moment, to fund your wallet, you must receive L2 funds from another Starknet wallet or use the onramp service [Ramp](https://ramp.network/buy) with a credit card, to fund it.
@@ -253,20 +241,17 @@ blocks:
 
              ![Add STRK token support to MetaMask Starknet snap](/assets/4_add_this_token.png)
 
-          11. Approve the request in MetaMask. 
+          5. Approve the request in MetaMask. 
 
                  
-          12. You should now see the Starknet token STRK in the list of tokens in the Snap.
+          6. You should now see the Starknet token STRK in the list of tokens in the Snap.![STRK is added to MetaMask Starknet snap](/assets/6_strk_is_added.png)
 
-              ![STRK is added to MetaMask Starknet snap](/assets/6_strk_is_added.png)
-          13. Currently, you can pay fees in STRK with the MetaMask Snap. You need to first transfer a small amount of ETH to the Snap’s wallet to pay for deploying the account and sending the STRK. You can send ETH to the wallet even before you have deployed it.
+          7. Currently, you can pay fees in STRK with the MetaMask Snap. You need to first transfer a small amount of ETH to the Snap’s wallet to pay for deploying the account and sending the STRK. You can send ETH to the wallet even before you have deployed it.
 
               ![ETH balance in Starknet wallet](/assets/7_eth_balance.png)
-          14. Once you have some ETH, you can send the STRK from the account. 
+          8. Once you have some ETH, you can send the STRK from the account. 
 
-
-          **NOTE:** There might be a bug in Snaps where after transferring ETH to the account, the balance of the STRK tokens appears 0 instead of the actual amount. In this case, redo the steps to add the STRK token as described above.
-
+             **NOTE:** There might be a bug in Snaps where after transferring ETH to the account, the balance of the STRK tokens appears 0 instead of the actual amount. In this case, redo the steps to add the STRK token as described above.
 
           ## What now?
 
