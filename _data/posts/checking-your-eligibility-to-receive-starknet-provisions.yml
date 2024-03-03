@@ -62,19 +62,19 @@ blocks:
 
       1. Connect your Starknet wallet by clicking **Connect your Starknet wallet** or by pasting your Starknet wallet address and clicking **Go**.
 
-         ![](/assets/1_connect_sn_wallet.png)
+         ![Connect your Starknet wallet](/assets/1_connect-sn-wallet.png)
       2. If you clicked **Connect your Starknet wallet**, select your wallet and follow the onscreen instructions to complete the connection.
 
-         ![](/assets/2_select_wallet.png)
+         ![Select your wallet](/assets/2_select-wallet.png)
 
          You should see a message letting you know if you are eligible to receive STRK.
       3. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
-         ![](/assets/3_congrats_starknet.png)
+         ![Congratulations! This Starknet wallet is eligible for Provisions](/assets/3_congrats-starknet.png)
 
          A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
 
-         ![](/assets/4_allocation_starknet.png)
+         ![Starknet wallet: Allocation amount of STRK](/assets/4_allocation-starknet.png)
 
       You can disconnect at any time. Explore the portal to learn more about using and building on Starknet.
 
@@ -84,7 +84,7 @@ blocks:
 
       1. Click **StarkEx**, and then select a StarkEx-powered application for which you have an account.
 
-         ![](/assets/5_connect_starkex_wallet.png)
+         ![Connect your StarkEx wallet](/assets/5_connect-starkex-wallet.png)
       2. Click to sign in or connect to your account. Signing in with Sorare or Rhino.Fi takes you to the respective app’s site, where you can complete the connection process.
 
       3. Follow the onscreen instructions to complete the connection.
@@ -93,11 +93,11 @@ blocks:
 
       5. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
-         ![](/assets/6_congrats_starkex.png)
+         ![Congratulations! This StarkEx wallet is eligible for Provisions](/assets/6_congrats-starkex.png)
 
          A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
 
-         ![](/assets/7_allocation_starkex.png)
+         ![StarkEx: Allocation amount of STRK](/assets/7_allocation_starkex.png)
 
       You can disconnect at any time. Explore the portal to learn more about Starknet.
 
@@ -107,24 +107,24 @@ blocks:
 
       1. Click **Connect your Ethereum wallet** and follow the onscreen instructions to connect, or paste your Ethereum wallet address in the text field.
 
-         ![](/assets/8_connect_ethereum_wallet.png)
+         ![Connect your Ethereum wallet](/assets/8_connect-ethereum-wallet.png)
       2. After successfully connecting, a screen appears letting you know if you are eligible to receive STRK. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
-         ![](/assets/9_congrats_ethereum.png)
+         ![Congratulations! This Ethereum wallet is eligible for Provisions](/assets/9_congrats-ethereum.png)
 
          A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation.
 
-         ![](/assets/10_allocation_ethereum.png)
+         ![Ethereum wallet: Allocation amount of STRK](/assets/10_allocation-ethereum.png)
 
       ### Checking eligibility for GitHub developers
 
 
       1. Click **Sign in** to sign into GitHub with your email address, or enter your GitHub username and click **Go**.
 
-         ![](/assets/11_connect_github_wallet.png)
+         ![Sign in with GitHub](/assets/11_connect-github-wallet.png)
       2. If you’re eligible, you can see your allocation of STRK by clicking **See your allocation**.
 
-         ![](/assets/12_congrats_github.png)
+         ![Congratulations! This GitHub account is eligible for Provisions](/assets/12_congrats-github.png)
       3. A screen appears showing your allocation of STRK, along with the start and end dates within which you can claim your allocation. You can explore the site, and when you're ready to disconnect, click **Disconnect**.
 
-         ![](/assets/13_allocation_github.png)
+         ![GitHub account: Allocation amount of STRK](/assets/13_allocation-github.png)
