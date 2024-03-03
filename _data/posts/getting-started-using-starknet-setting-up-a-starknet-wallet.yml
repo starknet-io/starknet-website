@@ -246,24 +246,23 @@ blocks:
 
              ![Snap before adding STRK token](/assets/3_snap_before_adding.png)
           4. Fill in the following details:\
-                     **ContractAddress:** `0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d`
-                     **Name:** `Starknet Token`\
-                     **Symbol:** `STRK`
+                     **ContractAddress:** `0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d`\
+                     **Name:**`Starknet Token`\
+                     **Symbol:** `STRK`\
                      **Decimal:** `18`
 
              ![Add STRK token support to MetaMask Starknet snap](/assets/4_add_this_token.png)
-          5. Approve the request in MetaMask. 
 
-             ![Approve adding token](/assets/5_approve_adding_token.png)
+          11. Approve the request in MetaMask. 
 
-             \    
-          6. You should now see the Starknet token STRK in the list of tokens in the Snap.
+                 
+          12. You should now see the Starknet token STRK in the list of tokens in the Snap.
 
-             ![STRK is added to MetaMask Starknet snap](/assets/6_strk_is_added.png)
-          7. Currently, you can pay fees in STRK with the MetaMask Snap. You need to first transfer a small amount of ETH to the Snap’s wallet to pay for deploying the account and sending the STRK. You can send ETH to the wallet even before you have deployed it.
+              ![STRK is added to MetaMask Starknet snap](/assets/6_strk_is_added.png)
+          13. Currently, you can pay fees in STRK with the MetaMask Snap. You need to first transfer a small amount of ETH to the Snap’s wallet to pay for deploying the account and sending the STRK. You can send ETH to the wallet even before you have deployed it.
 
-             ![ETH balance in Starknet wallet](/assets/7_eth_balance.png)
-          8. Once you have some ETH, you can send the STRK from the account. 
+              ![ETH balance in Starknet wallet](/assets/7_eth_balance.png)
+          14. Once you have some ETH, you can send the STRK from the account. 
 
 
           **NOTE:** There might be a bug in Snaps where after transferring ETH to the account, the balance of the STRK tokens appears 0 instead of the actual amount. In this case, redo the steps to add the STRK token as described above.
