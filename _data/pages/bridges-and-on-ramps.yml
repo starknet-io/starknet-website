@@ -1,5 +1,5 @@
 id: 5ddb6717-0d91-4d20-a18e-5bc487d54b57
-title: Bridges & on-ramps
+title: Bridges, on-ramps & faucets
 template: landing
 parent_page: /ecosystem/
 breadcrumbs: false
@@ -7,7 +7,7 @@ page_last_updated: true
 blocks:
   - type: hero
     variant: bridges
-    title: Bridges & on-ramps
+    title: Bridges, on-ramps & faucets
     description: Bridge tokens between Starknet and other chains or exchanges, or
       exchange tokens with fiat through on-ramp services.
   - type: card_list
