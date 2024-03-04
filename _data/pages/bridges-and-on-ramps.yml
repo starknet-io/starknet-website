@@ -11,7 +11,7 @@ blocks:
     description: Bridge tokens between Starknet and other chains or exchanges, or
       exchange tokens with fiat through on-ramp services.
   - type: card_list
-    title: What are bridges?
+    title: Bridges
     description: Bridges allow users to move assets between crypto ecosystems, such
       as blockchains or exchanges.
     card_list_items:
@@ -59,7 +59,7 @@ blocks:
         twitter: https://twitter.com/layerswap
     randomize: false
   - type: card_list
-    title: What are fiat on-ramps?
+    title: On-ramps
     description: Fiat on-ramps are service providers that allows for the exchange of
       fiat currencies for cryptocurrencies.
     card_list_items:
@@ -83,3 +83,25 @@ blocks:
         twitter: https://twitter.com/unlimit_crypto
         website_url: https://www.crypto.unlimit.com/
     randomize: true
+  - type: card_list
+    randomize: false
+    title: Sepolia Faucets
+    card_list_items:
+      - description: Get test tokens through the Blast Starknet Sepolia Faucet.
+        title: Blast
+        image: /assets/blast-icon-color.svg
+        type_list:
+          - type: STRK faucet
+            url: https://blastapi.io/faucets/starknet-sepolia-strk
+          - type: ETH faucet
+            url: https://blastapi.io/faucets/starknet-sepolia-eth
+        twitter: https://twitter.com/BlastAPI
+        website_url: https://blastapi.io/faucets/starknet-sepolia-strk
+      - title: Starknet Foundation faucet
+        website_url: https://starknet-faucet.vercel.app/
+        image: /assets/sn-symbol-gradient.png
+        description: Send small amounts of L2 Sepolia ETH/STRK to an account address on
+          Starknet Sepolia.
+        twitter: https://twitter.com/StarknetFndn
+    description: A faucet sends small amounts of L2 Sepolia ETH/STRK to an account
+      address on Starknet Sepolia.
