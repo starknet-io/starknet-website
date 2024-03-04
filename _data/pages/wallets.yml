@@ -75,3 +75,10 @@ blocks:
         website_url: https://web3.bitget.com/
         twitter: https://x.com/bitgetwallet
         discord: https://discord.com/invite/bitgetwallet
+      - title: Dfns
+        description: The most secure wallets-as-a-service platform in web3. Create,
+          embed and manage programmable wallets at scale using state-of-the-art
+          MPC technology.
+        website_url: https://www.dfns.co/
+        twitter: https://twitter.com/dfnsHQ
+        image: /assets/logotype-isolated-positive.png
