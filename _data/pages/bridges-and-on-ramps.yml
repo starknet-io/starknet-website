@@ -103,3 +103,5 @@ blocks:
         description: Send small amounts of L2 Sepolia ETH/STRK to an account address on
           Starknet Sepolia.
         twitter: https://twitter.com/StarknetFndn
+    description: A faucet sends small amounts of L2 Sepolia ETH/STRK to an account
+      address on Starknet Sepolia.
