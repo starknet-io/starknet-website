@@ -110,4 +110,17 @@ blocks:
         discord: https://drpc.org/discord
         description: DRPC is a decentralized network of RPC endpoints with unlimited
           scalability supporting 29+ chains.
+      - title: NowNodes
+        image: /assets/nownodes_listing_logo_1.png
+        description: Starknet RPC Full Node API with zero RPS limits.
+        website_url: https://nownodes.io/starknet
+        twitter: https://twitter.com/NOWNodes
+        discord: https://discord.gg/dYNSCUQVDx
+      - title: GetBlock
+        description: GetBlock provides access to blockchain RPC nodes, supporting over
+          50 blockchain protocols, including Starknet.
+        website_url: https://getblock.io/nodes/strk/
+        twitter: https://twitter.com/getblockio
+        discord: https://discord.gg/Hxw3BQ53
+        image: /assets/logotype1.png
     randomize: true
