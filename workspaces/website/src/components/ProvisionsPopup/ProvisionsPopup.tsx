@@ -15,8 +15,8 @@ const ProvisionsPopup = () => {
   );
 
   const gtmEvent = (event: string) => window?.dataLayer.push({ event });
-  const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
-  const gtmEventClickClose = () => gtmEvent("Provisions popup close");
+  const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
+  const gtmEventClickClose = () => gtmEvent("Provisions_popup_close");
 
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
