@@ -13,26 +13,21 @@ const ProvisionsPopup = () => {
     "isProvisionsPopupOpen",
     !isSsr
   );
-  const pageView = (target: string) =>
+  const gtmEvent = (target: string) =>
     window.gtag("event", target, {
       event_category: "engagement",
     });
 
-  const gtmEvent = (event: string) => window?.dataLayer.push({ event });
-  const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
-  const gtmEventClickClose = () => gtmEvent("Provisions_popup_close");
-
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEventClickClose();
-    pageView("Provisions_popup_close");
+    gtmEvent("Provisions_popup_close");
     setIsOpenStorage(false);
   };
 
   const onReadMore = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEventClickReadMore();
-    pageView("Provisions_popup_click");
+    gtmEvent("Provisions_popup_click");
+    gtmEvent("sample_event");
     setIsOpenStorage(false);
   };
 
