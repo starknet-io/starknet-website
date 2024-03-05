@@ -14,7 +14,7 @@ const ProvisionsPopup = () => {
     !isSsr
   );
 
-  const gtmEvent = (event: string) => window.gtag?.(event);
+  const gtmEvent = (event: string) => window?.dataLayer.push({ event });
   const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
   const gtmEventClickClose = () => gtmEvent("Provisions_popup_close");
 
