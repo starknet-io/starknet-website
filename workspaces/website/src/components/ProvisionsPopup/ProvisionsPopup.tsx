@@ -14,7 +14,9 @@ const ProvisionsPopup = () => {
     !isSsr
   );
   const pageView = (target: string) =>
-    window?.dataLayer.push({ event: "page_view", target });
+    window.gtag("event", target, {
+      event_category: "engagement",
+    });
 
   const gtmEvent = (event: string) => window?.dataLayer.push({ event });
   const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
