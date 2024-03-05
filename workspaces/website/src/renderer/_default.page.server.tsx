@@ -21,6 +21,7 @@ declare global {
   interface Window {
     dataLayer: {
       event: string;
+      [k: string]: string;
     }[];
   }
 }

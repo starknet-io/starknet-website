@@ -14,9 +14,14 @@ const ProvisionsPopup = () => {
     !isSsr
   );
 
-  const gtmEvent = (event: string) => window?.dataLayer.push({ event });
-  const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
-  const gtmEventClickClose = () => gtmEvent("Provisions_popup_close");
+  const gtmEvent = (event: string) =>
+    window?.dataLayer.push({
+      event: "click",
+      popup: "provisions",
+      interaction: event,
+    });
+  const gtmEventClickReadMore = () => gtmEvent("Read_More");
+  const gtmEventClickClose = () => gtmEvent("Dismiss");
 
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
