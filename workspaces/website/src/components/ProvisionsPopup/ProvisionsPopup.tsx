@@ -14,19 +14,20 @@ const ProvisionsPopup = () => {
     !isSsr
   );
 
-  const gtmEvent = (event: string) => window?.dataLayer.push({ event });
-  const gtmEventClickReadMore = () => gtmEvent("Provisions popup click");
-  const gtmEventClickClose = () => gtmEvent("Provisions popup close");
+  const gtmEvent = (target: string) =>
+    window.gtag("event", target, {
+      event_category: "engagement",
+    });
 
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEventClickClose();
+    gtmEvent("Provisions popup click");
     setIsOpenStorage(false);
   };
 
   const onReadMore = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEventClickReadMore();
+    gtmEvent("Provisions popup close");
     setIsOpenStorage(false);
   };
 
