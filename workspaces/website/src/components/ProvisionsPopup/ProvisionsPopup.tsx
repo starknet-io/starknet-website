@@ -13,8 +13,8 @@ const ProvisionsPopup = () => {
     "isProvisionsPopupOpen",
     !isSsr
   );
-  const click = (target: string) =>
-    window?.dataLayer.push({ event: "click", target });
+  const pageView = (target: string) =>
+    window?.dataLayer.push({ event: "page_view", target });
 
   const gtmEvent = (event: string) => window?.dataLayer.push({ event });
   const gtmEventClickReadMore = () => gtmEvent("Provisions_popup_click");
@@ -23,14 +23,14 @@ const ProvisionsPopup = () => {
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
     gtmEventClickClose();
-    click("Provisions_popup_close");
+    pageView("Provisions_popup_close");
     setIsOpenStorage(false);
   };
 
   const onReadMore = (event: React.MouseEvent) => {
     event.stopPropagation();
     gtmEventClickReadMore();
-    click("Provisions_popup_click");
+    pageView("Provisions_popup_click");
     setIsOpenStorage(false);
   };
 
