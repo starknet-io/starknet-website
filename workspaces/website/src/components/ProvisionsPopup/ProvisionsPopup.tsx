@@ -21,13 +21,13 @@ const ProvisionsPopup = () => {
 
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEvent("Provisions popup click");
+    gtmEvent("Provisions_popup_close");
     setIsOpenStorage(false);
   };
 
   const onReadMore = (event: React.MouseEvent) => {
     event.stopPropagation();
-    gtmEvent("Provisions popup close");
+    gtmEvent("Provisions_popup_click");
     setIsOpenStorage(false);
   };
 
