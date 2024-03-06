@@ -15,9 +15,7 @@ const ProvisionsPopup = () => {
   );
 
   const gtmEvent = (target: string) =>
-    window.gtag("event", target, {
-      event_category: "engagement",
-    });
+    window.gtag?.("event", target, { event_category: "engagement" });
 
   const onClose = (event: React.MouseEvent) => {
     event.stopPropagation();
