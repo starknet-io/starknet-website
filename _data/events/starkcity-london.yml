@@ -1,0 +1,15 @@
+type: conference
+name: StarkCity London
+description: Welcome to StarkCity London!🇬🇧  A one-day Starknet Foundation
+  event in London, co-hosted by Argent and Voyager. Engage in panels and
+  presentations spanning core development, gaming, DeFi, L3s and learn about the
+  latest Starknet tooling.
+url: https://lu.ma/starkcitylondon
+start_date: 2024-03-13T07:00:26.729Z
+month: March 2024
+end_date: 2024-03-13T18:00:26.742Z
+show_in_past_events: false
+image: /assets/screenshot-2024-03-11-at-9.21.36.png
+location: europe
+city: London
+country: UK
