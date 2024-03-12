@@ -1,0 +1,114 @@
+id: 46dfb8bb-6ce0-4fbc-b883-c0d090b282e1
+post_type: article
+title: Starknet’s game plan for slashing fees in 2024
+toc: true
+published_date: 2024-03-12T12:22:16.495Z
+image: /assets/final-.jpeg
+category:
+  - ecosystem
+topic:
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: Starknet is slashing transaction fees with a multi-faceted strategy,
+  including early support for Ethereum’s EIP-4844, the introduction of Volition
+  for data storage options, and significant cost reductions with Starknet
+  v0.13.0. Further optimizations with the SHARP system and an early
+  fee-reduction initiative by the Starknet Foundation underscore a commitment to
+  affordability. These efforts aim to drastically lower fees, reinforcing
+  Starknet’s position as a leader in Layer 2 solutions with a growing developer
+  community.
+blocks:
+  - type: markdown
+    body: >-
+      ## TL;DR
+
+
+      * Starknet has a flurry of imminent cost-cutting mechanisms to bring transaction fees as close to zero as possible for users (and developers). 
+
+      * These measures—some of which take effect immediately—tackle fee reduction from every angle, ranging from Data Availability (DA) to proving optimizations, and will even expedite the implementation of anticipated lower fees in future network upgrades.
+
+      * On the DA-cost front, Starknet is ready to support Ethereum’s EIP-4844 from day one. Later, Starknet will also feature Volition, offering additional fee reduction options by allowing devs and users to choose between L1 and L2 data availability.
+
+      * On the heels of recursive proving, the SHARP system’s next optimizations are already live on mainnet, bringing proving efficiency to new levels.
+
+
+      ## Introduction:
+
+
+      Starknet is the Layer 2 (L2) Validity Rollup that makes it economically feasible to build any dApp with any business logic, no matter the complexity. Boasting the [fastest-growing](https://www.developerreport.com/) developer community among all L2s, Starknet’s edge is the ceaseless exploration to discover and design new optimizations for reducing fees. These efforts drive broader adoption and benefit users of Starknet dApps. 
+
+
+      The blueprint for drastically reducing costs on the network includes fee-cutting mechanisms, with a few of them going into effect immediately. Composed of multiple steps, some of which are being implemented concurrently, which will tackle fees from every angle.
+
+
+      Part of the plan rests on leveraging Ethereum’s Dencun upgrade, which includes the long-awaited EIP-4844. Starknet will support Dencun from day one in addition to the slew of other fee-cutting mechanisms in the works. In addition, an initiative from the Starknet Foundation aims to bring lower transaction fees even sooner (yay!). 
+
+
+      In this post, we explore the exciting ways in which fees will be reduced on Starknet in 2024. 
+
+
+      ## Play 1: Starknet is 4844-ready
+
+
+      EIP-4844, one of the most highly-anticipated changes to Ethereum and part of the Dencun upgrade, is designed to drastically lower the operating costs of rollups. Starknet will especially benefit from this optimization, because 4844 will affect a very large fraction of its operation costs.
+
+
+      The EIP-4844 upgrade is intended to help L2s scale Ethereum by reducing their Data Availability (DA) costs. It does this by introducing a new “blob” resource, separate from gas, and a new type of “blob transaction” that uses it. Blobs have a narrower function than calldata, restricting their utility for non-DA uses. The separation from gas means users interacting directly with Ethereum will not compete with rollups for the same resource. Think of blobs as a sort of highway for L2s. 
+
+
+      Starknet has already implemented support for EIP-4844 to reflect the cost reduction to Starknet’s users once it becomes available in Ethereum on March 13th, 2024. 
+
+
+      ## Play 2: Volition - Hybrid L1 and L2 Data Availability
+
+
+      Currently, Ethereum data costs account for the vast majority (approx. 80-90%) of transaction fees on Starknet, which currently supports only Layer 1 (L1) DA. The introduction of EIP-4844 is expected to reduce the cost of L1 DA, but the extent of that cost reduction will still be determined by factors related to L1: the demand of various L2s, and the blob limits imposed on Ethereum blocks. 
+
+
+      Enter [Volition](https://starkware.co/resource/volition-on-starknet-your-data-your-choice/). Volition is a feature that facilitates hybrid DA that will enable users to pay even lower fees by opting out of any L1 footprint for their transactions and choosing to store their data on Starknet L2. 
+
+
+      ## Play 3: Starknet v0.13.0 slashes transaction costs by up to 50%
+
+
+      As a precursor to EIP-4844, Starknet [v0.13.0](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608) went live in January 2024, featuring [substantial reductions](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608/3) of 50% in computation and up to 25% in DA.
+
+
+      ## Play 4: Dynamic Layouts - No resource left behind
+
+
+      In addition to EIP-4844 and Volition, [SHARP](https://starkware.co/resource/joining-forces-sharp/) is about to get even more efficient. 
+
+
+      SHARP (SHARed Prover) processes batches of transactions from different dApps offchain, and validates the proof of their computation onchain, amortizing the cost of that single proof between all transactions. The result is enhanced throughput, reduced latency, and drastically lower costs. 
+
+
+      But SHARP just optimized its resource utilization further. Up until now, the prover reserved resources for dedicated operations (builtins) regardless of whether they are used. These translated to actual memory computation. Think of it like the post office mailing a large box with only one book inside. 
+
+
+      Enter [Dynamic Layouts](https://starkware.medium.com/builtins-and-dynamic-layouts-e419a73e29e), already live on mainnet! Dynamic Layouts improve resource utilization and reduce the pesky part of the transaction fees, namely the portion covering resource consumption not associated with any user operations. With Dynamic Layouts, we’re filling the box more efficiently, and you’re only paying for the space your “book” used.
+
+
+      ## Play 5: The Starknet Foundation’s early fee-reduction initiative
+
+
+      Every Starknet network upgrade progressively reduces transaction fees, anticipating the minimal fees expected once decentralization is achieved and the network stabilizes as a proof-of-stake (POS) model. At that stage, almost all of the fixed costs associated with operating the Starknet network will be covered by staking rewards, and will therefore not be paid by users. 
+
+
+      To reduce user fees even earlier, the Starknet Foundation is introducing its early fee-reduction initiative. This effort aims to implement anticipated cost-cutting performance upgrades even before they take effect. As part of the program, the Foundation will allocate funds to adjust transaction fees in line with conservative estimates of future network fees once decentralization is achieved.
+
+
+      This exciting initiative aligns closely with Starknet’s roadmap and focuses on sustainability. It ensures fee reductions correspond with conservative estimates of the cost-cutting effects of future upgrades. Stay tuned. 
+
+
+      ## Final words:
+
+
+      Starknet’s game plan tackles fee reduction on the network with a comprehensive 5-pronged approach, including leveraging Ethereum’s EIP-4844 upgrade, optimizing proving mechanisms, and introducing additional cost-cutting steps alongside it.
+
+
+      Starknet’s commitment to constantly finding new, innovative ways to scale Ethereum and reduce transaction costs for users plays a vital role in maintaining its position as the leading L2 with the fastest-growing developer community. 
+
+
+      Stay tuned for further updates on enabling cost reductions by following [Starknet](https://x.com/Starknet?s=20) on X.
