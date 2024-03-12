@@ -69,7 +69,7 @@ blocks:
       Enter [Volition](https://starkware.co/resource/volition-on-starknet-your-data-your-choice/). Volition is a feature that facilitates hybrid DA that will enable users to pay even lower fees by opting out of any L1 footprint for their transactions and choosing to store their data on Starknet L2. 
 
 
-      ## Play 3: Starknet v0.13.0 slashes transaction costs by up to 50%
+      ## Play 3: Starknet v0.13.0 
 
 
       As a precursor to EIP-4844, Starknet [v0.13.0](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608) went live in January 2024, featuring [substantial reductions](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608/3) of 50% in computation and up to 25% in DA.
