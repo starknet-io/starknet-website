@@ -45,17 +45,3 @@ items:
     access:
       - all
     username: thdamooo
-  - username: Penguinseo
-    access:
-      - posts
-      - seo
-      - pages
-      - tutorials
-  - username: dor-eydan
-    name: "Dor Penguin "
-    access:
-      - pages
-      - posts
-      - tutorials
-      - seo
-      - roadmap
