@@ -45,3 +45,19 @@ items:
     access:
       - all
     username: thdamooo
+  - username: shadowfaxxxx
+    name: Marijke van Engelenburg
+    access:
+      - pages
+      - posts
+      - tutorials
+      - seo
+      - events
+  - username: starkience
+    name: Victor Sizaret
+    access:
+      - pages
+      - posts
+      - tutorials
+      - seo
+      - events
