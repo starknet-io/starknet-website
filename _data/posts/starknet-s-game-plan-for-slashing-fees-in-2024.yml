@@ -46,7 +46,7 @@ blocks:
       Starknet is the Layer 2 (L2) Validity Rollup that makes it economically feasible to build any dApp with any business logic, no matter the complexity. Boasting the [fastest-growing](https://www.developerreport.com/) developer community among all L2s, Starknet’s edge is the ceaseless exploration to discover and design new optimizations for reducing fees. These efforts drive broader adoption and benefit users of Starknet dApps. 
 
 
-      The blueprint for drastically reducing costs on the network includes fee-cutting mechanisms, with a few of them going into effect immediately. Composed of multiple steps, some of which are being implemented concurrently, which will tackle fees from every angle.
+      The blueprint for drastically reducing costs on the network includes fee-cutting mechanisms, with a few of them going into effect immediately. Composed of multiple steps, some of which are being implemented concurrently, this blueprint will tackle fees from every angle.
 
 
       Part of the plan rests on leveraging Ethereum’s Dencun upgrade, which includes the long-awaited EIP-4844. Starknet will support Dencun from day one in addition to the slew of other fee-cutting mechanisms in the works. In addition, an initiative from the Starknet Foundation aims to bring lower transaction fees even sooner (yay!). 
@@ -76,7 +76,7 @@ blocks:
       Enter [Volition](https://starkware.co/resource/volition-on-starknet-your-data-your-choice/). Volition is a feature that facilitates hybrid DA that will enable users to pay even lower fees by opting out of any L1 footprint for their transactions and choosing to store their data on Starknet L2. 
 
 
-      ## Play 3: Starknet v0.13.0 
+      ## Play 3: Starknet v0.13.0
 
 
       As a precursor to EIP-4844, Starknet [v0.13.0](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608) went live in January 2024, featuring [substantial reductions](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608/3) of 50% in computation and up to 25% in DA.
