@@ -41,14 +41,14 @@ function RoadmapSubscribeForm({
     <Modal isOpen={isOpen} onClose={handleClose}>
       <ModalOverlay />
       <ModalContent
-        height={'342px'}
+        height={'max-content'}
         maxWidth={'410px'}
         overflow={'auto'}
       >
         <ModalCloseButton />
 
         <Container 
-          padding={'60px 40px 40px'}
+          padding={'60px 32px 32px'}
         >
           <NewsletterForm env={env} />
         </Container>

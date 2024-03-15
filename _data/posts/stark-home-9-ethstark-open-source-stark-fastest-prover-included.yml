@@ -58,9 +58,17 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome09.png
-category: community-and-events
+category:
+  - community-and-events
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
+  - 217311b0-fc55-4192-9257-aa82004ddb73
 topic:
-  - starknet
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
+  - open_source
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
 short_desc: "We are releasing our open-source ethSTARK library and had special
   guest stars to help us announce it: Vitalk Buterin who needs no introduction,
   and David Levitt-Gurevich who leads the ethSTARK effort at StarkWare"

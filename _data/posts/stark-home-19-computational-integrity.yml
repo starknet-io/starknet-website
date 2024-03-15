@@ -51,7 +51,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome19.png
-category: community-and-events
-topic:
-  - starknet
+category:
+  - community-and-events
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - 217311b0-fc55-4192-9257-aa82004ddb73
+  - stark-math
+topic: []
 short_desc: Computational integrity.

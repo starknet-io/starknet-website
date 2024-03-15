@@ -1,2 +1,4 @@
 id: community-calls
 name: Community Calls
+parentCategory: ecosystem
+default_filter: video

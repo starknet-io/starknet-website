@@ -1,5 +1,5 @@
 id: c968733e-503b-41f1-8bd8-8a152dadcdc6
-post_type: video
+post_type: audio
 title: STARK SPACES | Kakarot ZK-EVM in Cairo
 published_date: 2022-10-27T12:51:40.280Z
 video:
@@ -53,8 +53,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/stark-spaces-kakarot-zk-evm-in-cairo.png
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
   - cairo
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: Find out what Vitalik Buterin, Eli Ben-Sasson, Shahar Papini, and
   Abdel Bakhta have to say about Kakarot, a ZK-EVM written in Cairo.

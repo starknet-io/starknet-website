@@ -140,6 +140,7 @@ const theme = extendTheme(proTheme, {
     "heading6": "1.063rem",
   },
   breakpoints: {
+    xs: "24em",
     sm: "30em",
     md: "48em",
     lg: "62em",

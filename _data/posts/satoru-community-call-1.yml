@@ -62,7 +62,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/satoru-community-call-1.png
-category: community-and-events
+category:
+  - community-and-events
+  - b6d791c2-9fe4-43c0-8757-9d8966035d56
 topic:
   - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
 short_desc: |

@@ -10,6 +10,20 @@ blocks:
     title: Block explorers, indexers & Enhanced API
     description: Explore blocks, indexers, and other metrics of Starknet transactions.
   - type: card_list
+    randomize: false
+    title: Monitoring Tools
+    card_list_items:
+      - title: Starknet Status
+        description: Starknet status provides timely status information about the health
+          of Starknet sequencing.
+        image: /assets/sn-symbol-gradient.png
+        website_url: https://status.starknet.io/
+      - title: Starknet Monitor
+        description: Starknet Monitor shows vital statistics about Starknet and core
+          infrastructure.
+        image: /assets/logo-square.png
+        website_url: https://www.starknet-monitor.com/
+  - type: card_list
     card_list_items:
       - title: Starkscan
         description: "Block explorer and analytics for Starknet. "
@@ -45,8 +59,13 @@ blocks:
         image: /assets/400_400.png
         twitter: https://twitter.com/nftscan_com
         discord: discord.gg/nftscan
+      - title: Stark Compass
+        description: An open-source Starknet explorer.
+        twitter: https://twitter.com/starkcompass
+        image: /assets/stark-compass.jpg
+        website_url: https://starkcompass.com/
     title: Block explorers
-    randomize: true
+    randomize: false
   - type: card_list
     randomize: true
     title: Indexers
@@ -88,4 +107,5 @@ blocks:
         discord: discord.gg/nftscan
         image: /assets/400_400.png
         twitter: https://twitter.com/nftscan_com
-    description: ""
+    description: An enhanced API is a set of tools designed to simplify developers’
+      access to complex queries on Starknet data.

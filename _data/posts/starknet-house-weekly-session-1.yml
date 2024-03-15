@@ -2,12 +2,6 @@ id: e9553909-28a6-4a05-a2eb-c87435c7abc2
 post_type: video
 title: Starknet House weekly session 1
 published_date: 2022-06-10T15:58:53.559Z
-image: /assets/sn_house02.jpg
-category: ecosystem
-topic:
-  - starknet
-short_desc: Lucas Levy, Developer Advocate at StarkWare shows you how to start
-  building on Starknet.
 video:
   url: https://youtu.be/Vv1WTwWylp0
   id: Vv1WTwWylp0
@@ -16,29 +10,8 @@ video:
     etag: GifCHOSI-GOML3hIE28PIkiLBn0
     id: Vv1WTwWylp0
     snippet:
-      publishedAt: 2022-06-10T16:28:36Z
-      channelId: UCqbWfFjh7mlH1rjoRebHo-g
-      title: 'StarkNet House Weekly Session 1: "Let’s build on StarkNet - Cairo 101"
-        by Lucas Levy'
-      description: >-
-        Let’s build on StarkNet - Cairo 101
-
-
-        Lucas Levy, Developer Advocate at StarkWare shows you how to start building on StarkNet.
-
-
-        ---
-
-        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
-
-
-        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
-
-
-        All sessions will be live-streamed online and available wherever you are in the world!
-
-
-        Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      publishedAt: 2022-06-10T16:28:36.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Vv1WTwWylp0/default.jpg
@@ -60,9 +33,11 @@ video:
           url: https://i.ytimg.com/vi/Vv1WTwWylp0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: Topology
+      title: 'StarkNet House Weekly Session 1: "Let’s build on StarkNet - Cairo 101"
+        by Lucas Levy'
       categoryId: "22"
-      liveBroadcastContent: none
       localized:
         title: 'StarkNet House Weekly Session 1: "Let’s build on StarkNet - Cairo 101"
           by Lucas Levy'
@@ -85,7 +60,26 @@ video:
 
 
           Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
-      defaultAudioLanguage: en
+      description: >-
+        Let’s build on StarkNet - Cairo 101
+
+
+        Lucas Levy, Developer Advocate at StarkWare shows you how to start building on StarkNet.
+
+
+        ---
+
+        StarkNet House is a virtual educational summer program presented by Topology in collaboration with StarkWare and pioneers in the StarkNet ecosystem.
+
+
+        StarkNet House kicks off on June 1, 2022, and consists of 11 weekly sessions in which you will learn how to thoughtfully design, develop, test, and deploy Cairo smart contracts and start building on StarkNet.
+
+
+        All sessions will be live-streamed online and available wherever you are in the world!
+
+
+        Please join StarkNet House Discord channel to get access to live sessions: https://discord.gg/CFgf2PQmar
+      channelId: UCqbWfFjh7mlH1rjoRebHo-g
     contentDetails:
       duration: PT1H6M30S
       dimension: 2d
@@ -94,3 +88,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/sn_house02.jpg
+category:
+  - community-and-events
+  - stark-math
+  - 3fe387e2-1fb6-41b9-bb74-96d6df394f42
+topic: []
+short_desc: Lucas Levy, Developer Advocate at StarkWare shows you how to start
+  building on Starknet.

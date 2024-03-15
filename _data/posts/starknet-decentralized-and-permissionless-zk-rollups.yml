@@ -1,18 +1,8 @@
+"": 16 min watch
 id: 2aba7aa4-3f12-4850-9d07-eb739e69c21e
 post_type: video
 title: "Starknet: Decentralized and Permissionless ZK-Rollups"
 published_date: 2021-08-17T15:41:28.024Z
-: 16 min watch
-image: /assets/interviews01.jpg
-category: ecosystem
-topic:
-  - zk-proofs
-  - starknet
-short_desc: "In this SmartCon presentation and live demo, StarkWare’s Tom Brand
-  and Alon Shtaierman introduce Starknet—a decentralized and permissionless
-  ZK-Rollup—that allows smart contract developers to deploy contracts for
-  arbitrary computation in a permissionless manner as well as send transactions
-  to the network. "
 video:
   url: https://youtu.be/SxlgpmRsxsM
   id: SxlgpmRsxsM
@@ -21,42 +11,8 @@ video:
     etag: Vu9owzdbUosubOpRBUYkty_uaRc
     id: SxlgpmRsxsM
     snippet:
-      publishedAt: 2021-08-17T13:24:18Z
-      channelId: UCnjkrlqaWEBSnKZQ71gdyFA
-      title: "StarkNet: Decentralized and Permissionless ZK-Rollups"
-      description: >-
-        In this SmartCon presentation and live demo, StarkWare’s Tom Brand
-        and Alon Shtaierman introduce StarkNet—a decentralized and
-        permissionless ZK-Rollup—that allows smart contract developers to deploy
-        contracts for arbitrary computation in a permissionless manner as well
-        as send transactions to the network. 
-
-
-        Learn more about StarkWare: https://starkware.co 
-
-
-        Check out other presentations from our complete Smart Contract Summit #1 playlist:  https://youtube.com/playlist?list=PLVP9aGDn-X0RO9JXbc8ayQtIp_DyhlA9s   
-
-
-        Chainlink is the industry standard oracle network for powering hybrid smart contracts. Chainlink Decentralized Oracle Networks provide developers with the largest collection of high-quality data sources and secure off-chain computations to expand the capabilities of smart contracts on any blockchain.
-
-
-        Learn more about Chainlink:
-
-
-        Website: https://chain.link 
-
-        Docs: https://docs.chain.link 
-
-        Twitter: https://twitter.com/chainlink 
-
-        Discord: https://discordapp.com/invite/aSK4zew 
-
-        Newsletter: https://chn.lk/newsletter 
-
-        Telegram: https://t.me/chainlinkofficial 
-
-        Talk to an expert: http://chn.lk/contact
+      publishedAt: 2021-08-17T13:24:18.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/SxlgpmRsxsM/default.jpg
@@ -78,18 +34,19 @@ video:
           url: https://i.ytimg.com/vi/SxlgpmRsxsM/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: Chainlink
-      categoryId: "28"
-      liveBroadcastContent: none
+      title: "StarkNet: Decentralized and Permissionless ZK-Rollups"
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: "StarkNet: Decentralized and Permissionless ZK-Rollups"
         description: >-
-          In this SmartCon presentation and live demo, StarkWare’s Tom Brand
-          and Alon Shtaierman introduce StarkNet—a decentralized and
-          permissionless ZK-Rollup—that allows smart contract developers to
-          deploy contracts for arbitrary computation in a permissionless manner
-          as well as send transactions to the network. 
+          In this SmartCon presentation and live demo, StarkWare’s Tom Brand and
+          Alon Shtaierman introduce StarkNet—a decentralized and permissionless
+          ZK-Rollup—that allows smart contract developers to deploy contracts
+          for arbitrary computation in a permissionless manner as well as send
+          transactions to the network. 
 
 
           Learn more about StarkWare: https://starkware.co 
@@ -117,7 +74,40 @@ video:
           Telegram: https://t.me/chainlinkofficial 
 
           Talk to an expert: http://chn.lk/contact
-      defaultAudioLanguage: en-US
+      description: >-
+        In this SmartCon presentation and live demo, StarkWare’s Tom Brand and
+        Alon Shtaierman introduce StarkNet—a decentralized and permissionless
+        ZK-Rollup—that allows smart contract developers to deploy contracts for
+        arbitrary computation in a permissionless manner as well as send
+        transactions to the network. 
+
+
+        Learn more about StarkWare: https://starkware.co 
+
+
+        Check out other presentations from our complete Smart Contract Summit #1 playlist:  https://youtube.com/playlist?list=PLVP9aGDn-X0RO9JXbc8ayQtIp_DyhlA9s   
+
+
+        Chainlink is the industry standard oracle network for powering hybrid smart contracts. Chainlink Decentralized Oracle Networks provide developers with the largest collection of high-quality data sources and secure off-chain computations to expand the capabilities of smart contracts on any blockchain.
+
+
+        Learn more about Chainlink:
+
+
+        Website: https://chain.link 
+
+        Docs: https://docs.chain.link 
+
+        Twitter: https://twitter.com/chainlink 
+
+        Discord: https://discordapp.com/invite/aSK4zew 
+
+        Newsletter: https://chn.lk/newsletter 
+
+        Telegram: https://t.me/chainlinkofficial 
+
+        Talk to an expert: http://chn.lk/contact
+      channelId: UCnjkrlqaWEBSnKZQ71gdyFA
     contentDetails:
       duration: PT16M28S
       dimension: 2d
@@ -126,3 +116,14 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/interviews01.jpg
+category:
+  - community-and-events
+topic:
+  - decentralization
+  - 8930f558-6756-4e54-93e6-349ca99c158e
+short_desc: "In this SmartCon presentation and live demo, StarkWare’s Tom Brand
+  and Alon Shtaierman introduce Starknet—a decentralized and permissionless
+  ZK-Rollup—that allows smart contract developers to deploy contracts for
+  arbitrary computation in a permissionless manner as well as send transactions
+  to the network. "

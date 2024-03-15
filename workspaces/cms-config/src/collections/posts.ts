@@ -83,9 +83,22 @@ export const postsCollectionConfig = {
       default: "article",
     },
     {
+      name: "isFeatured",
+      label: "Is featured post",
+      widget: "boolean",
+    },
+    {
       name: "title",
       label: "Post Title",
       widget: "string",
+      crowdin: true
+    },
+    {
+      hint: "If left empty, the post title will be used",
+      name: "seoTitle",
+      label: "Seo Title",
+      widget: "string",
+      required: false,
       crowdin: true
     },
     {
@@ -113,10 +126,11 @@ export const postsCollectionConfig = {
       name: "category",
       label: "Category",
       widget: "relation",
+      multiple: true,
       collection: "categories",
       search_fields: ["name"],
       value_field: "id",
-      display_fields: ["name"],
+      display_fields:(["name", "({{parentCategory}})"]),
     },
     {
       name: "topic",
@@ -132,6 +146,20 @@ export const postsCollectionConfig = {
       name: "short_desc",
       label: "Short Description",
       widget: "text",
+    },
+    {
+      name: "post_desc",
+      label: "Intro one liner",
+      widget: "text",
+      required: false,
+    },
+    {
+      name: "seo_desc",
+      label: "Seo Description",
+      hint: "If left empty, the short description will be used",
+      widget: "text",
+      crowdin: true,
+      required: false,
     },
     {
       required: false,

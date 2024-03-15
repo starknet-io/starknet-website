@@ -4,7 +4,11 @@ title: Open-Sourcing the Battle-Tested Stone Prover
 toc: true
 published_date: 2023-08-22T15:24:24.253Z
 image: /assets/prover-os.png
-category: engineering
+category:
+  - engineering
+  - eb0cb8d1-cd55-4e6a-b155-a979c1ece777
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - 32c028d1-89c1-4bba-8015-f6a6a4cb70a0
 topic:
   - decentralization
   - open_source

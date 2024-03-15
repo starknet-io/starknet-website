@@ -563,7 +563,7 @@ export default class API {
           environment: `Starknet Website ${branch}`,
         }
       });
-      
+
     if (!(shaPreviewDeployments?.length > 0)) {
       throw new EditorialWorkflowError(
         "No preview deployment found for this commit",
@@ -1183,7 +1183,7 @@ export default class API {
 
     const user = await this.user()
     const permissions = await res.json();
-    const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username = user.login)
+    const userPermissions: {username: string, access: Array<string>} = permissions.find(p => p.username === user.login)
     if(!userPermissions){
       throw new Error(`No permissions found in CMS for user "${user.login}"`)
     }

@@ -30,7 +30,7 @@ blocks:
           security tooling for smart contract developers, auditors and web3
           protocols.
       - title: Nethermind Security
-        website_url: https://nethermind.io/smart-contracts-audits/
+        website_url: https://www.nethermind.io/smart-contract-audits
         image: /assets/nethermind_security_ico.png
         description: Nethermind Security is the security arm of Nethermind, providing
           services related to Smart Contract Audits, Formal Verification, and
@@ -55,6 +55,28 @@ blocks:
           Web3 / ZKP companies.
         link_url: https://security.extropy.io/
         image: /assets/extropy-logoi.jpeg
+      - description: Beosin provides one-stop blockchain security solutions for projects
+          on Starknet including security audit, on-chain risk monitoring and
+          alert.
+        title: Beosin
+        image: /assets/beosin-logo.jpg
+        website_url: https://beosin.com/
+        twitter: https://x.com/Beosin_com
+        discord: https://discord.com/invite/DBBcJN4atM
+      - title: OtterSec
+        website_url: https://osec.io/
+        twitter: https://twitter.com/osec_io
+        description: OtterSec is a blockchain security company with a holistic and
+          collaborative approach to identifying and patching critical exploits
+          for clients before they go to market.
+        image: /assets/ottersec-logo.jpg
+      - description: Zellic is a security research firm with deep expertise in
+          blockchain security and cryptography, led by the best hackers in the
+          world.
+        title: Zellic
+        image: /assets/zellic_telegram-badge_hexagon-1.png
+        twitter: https://twitter.com/zellic_io
+        website_url: https://www.zellic.io/
   - type: card_list
     randomize: true
     title: Bug Bounty Program

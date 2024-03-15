@@ -1,0 +1,18 @@
+id: 5141b37f-5fcb-4f9e-92ca-55c25dcd1657
+published_at: 2023-11-07T07:51:14.078Z
+status: active
+archive_after: 3
+contact:
+  name: Nethermind
+  logo: /assets/nethermind_icon_1600_black-1-.png
+job:
+  title: Smart Contract Auditor (Rust)
+  description: We’re seeking auditors with smart contract auditing experience to
+    join our team. You'll work on projects written in Rust and Solidity.
+    Knowledge of GoLang is a plus. We are seeking someone who understands the
+    Rust smart contract ecosystem. You’ll get the opportunity to work at the
+    bleeding edge of Blockchain technology and interact with different teams
+    working in every aspect of Web3 security.
+  type: full_time
+  location: remote
+  apply_url: https://boards.eu.greenhouse.io/nethermind/jobs/4194288101?gh_src=f8923032teu

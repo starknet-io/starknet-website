@@ -1,0 +1,66 @@
+id: 881e7cd1-5d2f-469c-96a9-22c42974d900
+post_type: video
+title: "The Art of Clarity: Simplifying Complex Information Beyond Bullets"
+published_date: 2023-09-19T12:35:15.716Z
+video:
+  url: https://www.youtube.com/watch?v=Zb7qsxlD2E8&list=PLcIyXLwiPilWpAItJqnBgq1cu180i9dPd&index=1
+  id: Zb7qsxlD2E8
+  data:
+    kind: youtube#video
+    etag: YqFUIXXIDrmIg_xcrAOtIKf-2cM
+    id: Zb7qsxlD2E8
+    snippet:
+      publishedAt: 2023-09-20T00:23:40Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "Starknet Community Call #49 | The Art of Clarity: Simplifying Complex
+        Information Beyond Bullets"
+      description: Presented by Steve Goodman, Principal Technical Writer, StarkWare
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/Zb7qsxlD2E8/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/Zb7qsxlD2E8/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/Zb7qsxlD2E8/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/Zb7qsxlD2E8/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/Zb7qsxlD2E8/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      tags:
+        - Cairo
+        - Starknet
+        - StarkWare
+        - blockchain
+        - decentralized
+        - decentralization
+        - permissionless
+        - layer 2
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "Starknet Community Call #49 | The Art of Clarity: Simplifying Complex
+          Information Beyond Bullets"
+        description: Presented by Steve Goodman, Principal Technical Writer, StarkWare
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H15M16S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/community-calls-49.png
+category: 
+  - community-calls

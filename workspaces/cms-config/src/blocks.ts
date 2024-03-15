@@ -439,6 +439,18 @@ export const blocks = [
     ],
   },
   {
+    name: "youtube",
+    label: "Youtube",
+    widget: "object",
+    fields: [
+      {
+        name: "videoId",
+        widget: "string",
+        crowdin: true
+      }
+    ]
+  },
+  {
     name: "ambassadors_list",
     label: "Ambassadors list",
     widget: "object",
@@ -693,6 +705,20 @@ export const blocks = [
     widget: "object",
     fields: [
       {
+        label: "Chapter description full width",
+        name: "chapterDescriptionFullWidth",
+        widget: "boolean",
+        default: false,
+        required: false,
+      },
+      {
+        label: "Chapters playlist on bottom of video desktop",
+        name: "playlistOnBottom",
+        widget: "boolean",
+        default: true,
+        required: false,
+      },
+      {
         crowdin: true,
         label: 'Chapter 1',
         name: 'scaling-eth',
@@ -811,7 +837,7 @@ const flexLayout = {
       default: [],
     },
   ],
-} satisfies CmsField; 
+} satisfies CmsField;
 
 export const topLevelBlocks = [
   {

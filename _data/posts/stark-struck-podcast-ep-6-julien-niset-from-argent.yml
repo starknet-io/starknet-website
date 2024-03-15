@@ -1,5 +1,5 @@
 id: 495055e8-48fd-4474-b551-c29bacf4d8de
-post_type: video
+post_type: audio
 title: STARK Struck Podcast | Ep 6 | Julien Niset from Argent
 published_date: 2022-11-16T00:00:00+00:00
 video:
@@ -63,9 +63,11 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkstruck06.jpg
-category: stark-struck
+category:
+  - ecosystem
+  - stark-struck
 topic:
-  - starknet
+  - 8930f558-6756-4e54-93e6-349ca99c158e
 short_desc: "Join Henri Lieutaud from the StarkNet team and Julien Niset from
   Argent, on what gets them excited about technology in general, blockchain in
   particular, and validity rollups specifically. "

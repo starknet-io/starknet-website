@@ -1,5 +1,5 @@
 id: 52162761-ebc2-4f03-9035-a8a0f77e05f6
-post_type: video
+post_type: audio
 title: STARK SPACE | The Future of Starknet with Kakarot and Omni
 published_date: 2023-05-17T07:32:59.332Z
 video:
@@ -51,5 +51,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/twitter-space-the-future-of-starknet-with-kakarot-and-omni-0.5-hub.png
-category: ecosystem
-topic: []
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854
+  - cairo

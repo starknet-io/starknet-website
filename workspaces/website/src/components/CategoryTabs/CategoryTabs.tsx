@@ -22,8 +22,8 @@ export type CategoryTabItem = {
 
 export type CategoryTabsProps = {
   items: CategoryTabItem[];
-  activeItemId: string;
-  onTabClick?: (id: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
 };
 
 /**
@@ -32,9 +32,10 @@ export type CategoryTabsProps = {
 
 export const CategoryTabs = ({
   items,
-  activeItemId,
-  onTabClick,
+  currentChapter,
+  onChapterChange,
 }: CategoryTabsProps) => {
+
   return (
     <Box
       borderTopWidth="1px"
@@ -49,14 +50,14 @@ export const CategoryTabs = ({
         width="100%"
         padding={'0 24px'}
       >
-        {items.map((item) => {
+        {items.map((item, index) => {
           return (
-            <Box>
+            <Box key={item.label + index}>
               <Button
                 as={item.link ? "a" : "button"}
                 href={item.link}
-                isActive={item.id === activeItemId}
-                onClick={() => onTabClick?.(item.id)}
+                isActive={item.id === currentChapter.id}
+                onClick={() => onChapterChange(item.id)}
                 variant="category"
                 padding={'24px 12px'}
               >

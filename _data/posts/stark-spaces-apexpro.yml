@@ -1,5 +1,5 @@
 id: 16e58112-4f0e-4190-8207-b6e45294c508
-post_type: video
+post_type: audio
 title: STARK SPACES | ApeXPro
 published_date: 2022-11-17T13:53:02.656Z
 video:
@@ -51,7 +51,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/ts03.jpg
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
 topic:
-  - starknet
+  - decentralization
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
 short_desc: STARK SPACES | ApeXPro

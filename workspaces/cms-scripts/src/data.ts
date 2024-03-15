@@ -26,6 +26,8 @@ export interface Post extends Meta {
   readonly category: string;
   readonly topic: string[];
   readonly short_desc: string;
+  readonly post_desc: string;
+  readonly seo_desc: string;
   readonly post_type: string;
   readonly post_date: string;
   readonly published_date: string;
@@ -121,22 +123,28 @@ export async function fileToPost(
     timeToConsume = `${formatDuration(
       data.video?.data?.contentDetails?.duration || ""
     )} ${data.video?.data?.contentDetails?.duration ? "watch" : ""}`;
+  } else if (data.post_type === "audio") {
+    timeToConsume = `${formatDuration(
+      data.video?.data?.contentDetails?.duration || ""
+    )} ${data.video?.data?.contentDetails?.duration ? "listen" : ""}`;
   } else {
     timeToConsume = `${calculateReadingTime(fullText)} read`;
   }
 
   return {
     id: data.id,
-    slug,
+    slug: (data.post_type === "video" || data.post_type === 'audio') ? `${slug}-video` : slug,
     title: data.title,
     category: data.category,
     post_type: data.post_type,
     post_date: data.post_date,
+    seo_desc: data.seo_desc,
     published_date: data.published_date,
     toc: data.toc,
     video: data.video,
     topic: data.topic ?? [],
     short_desc: data.short_desc,
+    post_desc: data.post_desc,
     image: data.image,
     blocks: data.blocks ?? [],
     locale,
@@ -414,18 +422,27 @@ export async function getAnnouncements(): Promise<AnnouncementsPostsData> {
   const resourceName = "announcements";
   const filenameMap = new Map<string, AnnouncementsPost>();
   const idMap = new Map<string, AnnouncementsPost>();
-  const filenames = await scandir(`_data/${resourceName}`);
 
-  for (const locale of locales) {
-    for (const filename of filenames) {
-      const data = await fileToAnnouncementsPost(locale, filename);
+  try {
+    const filenames = await scandir(`_data/${resourceName}`);
 
-      idMap.set(`${locale}:${data.id}`, data);
-      filenameMap.set(`${locale}:${filename}`, data);
+    for (const locale of locales) {
+      for (const filename of filenames) {
+        const data = await fileToAnnouncementsPost(locale, filename);
+  
+        idMap.set(`${locale}:${data.id}`, data);
+        filenameMap.set(`${locale}:${filename}`, data);
+      }
     }
-  }
+  
+    return { filenameMap, filenames, idMap, resourceName };
+  } catch (error:any) {
+    if (error.code === "ENOENT" && error.path === "_data/announcements") {
+      return Promise.resolve({ filenameMap, filenames: [], idMap, resourceName });
+    }
 
-  return { filenameMap, filenames, idMap, resourceName };
+    throw error;
+  }
 }
 
 export async function getTutorials(): Promise<SimpleData<Meta>> {
@@ -450,6 +467,7 @@ export async function getSimpleData<T = {}>(
 ): Promise<SimpleData<T & Meta>> {
   const filenameMap = new Map<string, T & Meta>();
   const filenames = await scandir(`_data/${resourceName}`);
+  const slugsInUse = new Set<string>();
 
   for (const locale of locales) {
     for (const filename of filenames) {
@@ -457,8 +475,21 @@ export async function getSimpleData<T = {}>(
       const sourceData = await yaml(sourceFilepath);
       const data = await translateFile(locale, resourceName, filename);
       const defaultLocaleTitle = sourceData.title ?? sourceData.name;
+      let slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
 
-      const slug = defaultLocaleTitle ? slugify(defaultLocaleTitle) : undefined;
+      if (slugsInUse.has(slug ?? '')) {
+        let number = 1;
+
+        while (slugsInUse.has(`${slug}-${number}`)) {
+          number++;
+        }
+
+        slug = `${slug}-${number}`;
+      }
+  
+      if (slug) {
+        slugsInUse.add(slug);
+      }
 
       const dates: { [key: string]: number } = {};
 

@@ -56,13 +56,13 @@ items:
   - source: /building-on-starknet/developer-tools
     destination: /en/developers/tools-and-resources
   - source: /recorded-talks
-    destination: /en/posts/stark-math
+    destination: /en/content/category/stark-math
   - source: /building-on-starknet/versions-release-notes
     destination: https://docs.starknet.io/documentation/starknet_versions/version_notes
   - source: /governance/starknet-governance-posts
-    destination: /en/posts/governance
+    destination: /en/content/category/governance
   - source: /what-is-starknet/stark-struck-podcast
-    destination: /en/posts/stark-struck
+    destination: /en/content/category/stark-struck
   - source: /community/events
     destination: /en/events
   - source: /building-on-starknet
@@ -72,11 +72,11 @@ items:
   - source: /building-on-starknet/workshops
     destination: /en/tutorials
   - source: /what-is-starknet/blog-posts
-    destination: /en/posts
+    destination: /en/content
   - source: /latest-updates
     destination: https://docs.starknet.io
   - source: /community/events/community-calls
-    destination: /en/posts/community-calls
+    destination: /en/content/category/community-calls
   - source: /faq/:path*
     destination: /en/learn/frequently-asked-questions
   - source: /blog-posts/:path*
@@ -100,8 +100,47 @@ items:
   - source: /governance
     destination: https://starknet.karmahq.xyz
   - source: /:locale/posts/engineering
-    destination: /:locale/posts/developers
+    destination: /:locale/content/category/developers
   - source: /:locale/posts/engineering/:path+
-    destination: /:locale/posts/developers/:path+
+    destination: /:locale/content/:path+
   - source: /building-on-starknet/audit-service-providers/
     destination: /en/ecosystem/security-and-audits
+  - source: /learn
+    destination: /en/learn/what-is-starknet
+  - source: /:locale/learn
+    destination: /:locale/learn/what-is-starknet
+  - source: /ecosystem
+    destination: /en/ecosystem/dapps
+  - source: /:locale/ecosystem
+    destination: /:locale/ecosystem/dapps
+  - source: /:locale/community/language-support
+    destination: /:locale/community
+  - source: /community/language-support
+    destination: /en/community
+  - source: /:locale/community/language-resources
+    destination: /:locale/community/online-communities
+  - source: /community/language-resources
+    destination: /en/community/online-communities
+  - source: /ar/community/governance/delegation-agreement
+    destination: /en/community
+  - source: /:locale/posts
+    destination: /:locale/content
+  - source: /posts
+    destination: /en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1
+    destination: https://www.starknet.io/en/content
+  - source: /en/announcements
+    destination: https://www.starknet.io/en/content
+  - source: /en/announcements/product-update-april-2023
+    destination: https://www.starknet.io/en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1/introducing-the-starknet-foundation
+    destination: https://www.starknet.io/en/content/introducing-the-starknet-foundation
+  - source: /en/announcements
+    destination: https://www.starknet.io/en/content  
+  - source: /en/home
+    destination: https://www.starknet.io/en
+  - source: /en/announcements/product-update-april-2023
+    destination: https://www.starknet.io/en/content
+  - source: /en/posts/757155c6-ce07-49f1-af21-907b7e0b1cb1
+    destination: https://www.starknet.io/en/content
+      

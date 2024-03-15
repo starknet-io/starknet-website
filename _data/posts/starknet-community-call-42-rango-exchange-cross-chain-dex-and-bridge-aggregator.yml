@@ -10,13 +10,8 @@ video:
     etag: kMUNQWRFefQb_0oFPMjq5a-sPrc
     id: NL-skz5VW_0
     snippet:
-      publishedAt: 2023-05-10T01:04:02Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
-        aggregator"
-      description: Rango Exchange is a cross-chain DEX and bridge aggregator. They
-        have enabled interoperability between Starknet and other blockchains
-        like Cosmos-based, Solana, UTXOs, EVMs.
+      publishedAt: 2023-05-10T01:04:02.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/NL-skz5VW_0/default.jpg
@@ -38,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/NL-skz5VW_0/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
+        aggregator"
       tags:
         - Cairo
         - StarkNet
@@ -48,14 +46,16 @@ video:
         - decentralization
         - permissionless
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community Call #42 | Rango Exchange cross-chain DEX and Bridge
           aggregator"
         description: Rango Exchange is a cross-chain DEX and bridge aggregator. They
           have enabled interoperability between Starknet and other blockchains
           like Cosmos-based, Solana, UTXOs, EVMs.
-      defaultAudioLanguage: en-US
+      description: Rango Exchange is a cross-chain DEX and bridge aggregator. They
+        have enabled interoperability between Starknet and other blockchains
+        like Cosmos-based, Solana, UTXOs, EVMs.
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT18M16S
       dimension: 2d
@@ -65,7 +65,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/communitycall-42-rango-exchange-multi-chain-dex-aggregator-youtube.jpg
-category: community-calls
+category:
+  - community-calls
+  - ecosystem
 topic:
   - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
   - defi

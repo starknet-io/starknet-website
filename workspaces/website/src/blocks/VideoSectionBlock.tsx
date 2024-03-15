@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-import { Box } from "@chakra-ui/react";
+import { Box, Show } from "@chakra-ui/react";
 import {
   VideoSectionBlock as VideoSectionProps,
   ChapterInfo
@@ -26,6 +26,8 @@ type ChapterType = Chapter & ChapterInfo;
  */
 
 export default function VideoSectionBlock(props: VideoSectionProps) {
+  const { playlistOnBottom, chapterDescriptionFullWidth } = props;
+
   const normalizedPlaylist = useMemo(() => {
     return playlist.map((chapter) => {
       const chapterInfo = props[chapter.id as keyof VideoSectionProps] as ChapterInfo;
@@ -51,27 +53,29 @@ export default function VideoSectionBlock(props: VideoSectionProps) {
 
       <VideoPlayerWebsite
         chapters={normalizedPlaylist}
-        initialActiveChapter={normalizedPlaylist[0].id}
+        currentChapter={currentChapter}
         onChapterChange={(id) => 
           setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
         }
-        playlistOnBottom
+        playlistOnBottom={playlistOnBottom}
       />
 
-      <Box mt="md">
-        <CategoryTabs
-          activeItemId={currentChapter.id}
-          onTabClick={(id) => 
-            setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
-          }
-          items={normalizedPlaylist.map((p) => ({
-            id: p.id,
-            label: p.subtitle,
-          }))}
-        />
+      <Box marginTop={{ base: "32px", lg: !playlistOnBottom ? "64px" : "32px"  }}>
+        <Show above="lg">   
+          <CategoryTabs
+            currentChapter={currentChapter}
+            onChapterChange={(id) => 
+              setCurrentChapter(normalizedPlaylist.find((p) => p.id === id) ?? normalizedPlaylist[0])
+            }
+            items={normalizedPlaylist.map((p) => ({
+              id: p.id,
+              label: p.subtitle,
+            }))}
+          />
+        </Show>
 
         <Box
-          maxW="656px"
+          maxW={chapterDescriptionFullWidth ? "100%" : "656px"}
           marginInline="auto"
           marginTop={'32px'}
         >

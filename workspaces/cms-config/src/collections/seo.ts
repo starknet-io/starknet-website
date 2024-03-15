@@ -2,7 +2,7 @@ import { CmsCollection } from "../types";
 
 export const SEOCollectionConfig = {
   crowdin: true,
-  label: "SEO",
+  label: "Main Header",
   name: "seo",
   files: [
     {
@@ -31,6 +31,28 @@ export const SEOCollectionConfig = {
           widget: "string",
           crowdin: true,
         },
+        {
+          label: "Footer disclaimers",
+          name: "footerDisclaimers",
+          widget: "list",
+          required: false,
+          fields: [
+            {
+              label: "Disclaimer text",
+              name: "text",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+            {
+              label: "Disclaimer link",
+              name: "link",
+              widget: "string",
+              crowdin: true,
+              required: true,
+            },
+          ],
+        }
       ],
     },
     {

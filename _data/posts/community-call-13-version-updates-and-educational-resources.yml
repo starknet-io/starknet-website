@@ -2,13 +2,6 @@ id: 28af3fed-4b39-4278-9fd8-c3ff4dd68db9
 post_type: video
 title: "Community Call #13 | Version updates and educational resources"
 published_date: 2022-05-10T14:06:18.594Z
-image: /assets/cc13.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Join us for our 13th community call – Presenting New version of
-  Starknet Alpha, upcoming feature on version 0.9, and discussing educational
-  resources for Starknet
 video:
   url: https://youtu.be/csgPYUpjDR4
   id: csgPYUpjDR4
@@ -17,12 +10,8 @@ video:
     etag: oIFJqqRVxfIExGlaqv8PhS6GqPE
     id: csgPYUpjDR4
     snippet:
-      publishedAt: 2022-05-11T01:34:32Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #13 | Version updates and educational resources"
-      description: Join us for our 13th community call – Presenting New version of
-        StarkNet Alpha, upcoming feature on version 0.9, and discussing
-        educational resources for StarkNet
+      publishedAt: 2022-05-11T01:34:32.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/csgPYUpjDR4/default.jpg
@@ -44,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/csgPYUpjDR4/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #13 | Version updates and educational resources"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #13 | Version updates and educational resources"
         description: Join us for our 13th community call – Presenting New version of
           StarkNet Alpha, upcoming feature on version 0.9, and discussing
           educational resources for StarkNet
-      defaultAudioLanguage: en-US
+      description: Join us for our 13th community call – Presenting New version of
+        StarkNet Alpha, upcoming feature on version 0.9, and discussing
+        educational resources for StarkNet
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT59M50S
       dimension: 2d
@@ -61,3 +54,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc13.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: Join us for our 13th community call – Presenting New version of
+  Starknet Alpha, upcoming feature on version 0.9, and discussing educational
+  resources for Starknet

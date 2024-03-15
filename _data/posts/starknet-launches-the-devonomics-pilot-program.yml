@@ -4,10 +4,10 @@ title: Starknet Launches the ‘Devonomics’ Pilot Program
 toc: true
 published_date: 2023-12-12T13:35:44.308Z
 image: /assets/devonomics.jpeg
-category: engineering
+category:
+  - engineering
 topic:
   - decentralization
-  - f9337f26-ae48-4f38-be86-8fe0c465ea13
 short_desc: In accordance with its vision of decentralized governance, the
   Starknet Foundation, in collaboration with StarkWare, is launching the
   Devonomics Pilot Program which will distribute over 1,600 ETH (over $3,500,000

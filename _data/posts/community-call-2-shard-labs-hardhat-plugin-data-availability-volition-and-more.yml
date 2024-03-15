@@ -3,12 +3,6 @@ post_type: video
 title: "Community Call #2 | Shard Labs, HardHat plugin, Data availability,
   Volition and more"
 published_date: 2021-11-22T00:00:00+00:00
-image: /assets/cc02.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: "Presenting Shard Labs, HardHat plugin, Data availability, Volition,
-  Full nodes and more\t"
 video:
   url: https://youtu.be/LyvNiQd3oLY
   id: LyvNiQd3oLY
@@ -17,22 +11,8 @@ video:
     etag: 1WTsTH3tHguEdUri9f0VcDQQUD4
     id: LyvNiQd3oLY
     snippet:
-      publishedAt: 2021-11-29T12:48:51Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "StarkNet Community Call #2 | Shard Labs, HardHat plugin, Data
-        availability, Volition and more"
-      description: |-
-        00:00:00 Presenting Shard Labs
-        00:02:00 StarkNet Hardhat plugin
-        00:16:40 Shard labs Q&A
-        00:24:17 StarkNet AMA
-        00:25:35 Data availability on StarkNet
-        00:35:30 Volition
-        00:34:35 Decentralisation on StarkNet
-        00:41:20 StarkNet full nodes
-        00:44:30 Decentralisation and Polaris licenses
-        00:49:50 Getting involved as a non technical person
-        00:52:00 Conclusion
+      publishedAt: 2021-11-29T12:48:51.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/LyvNiQd3oLY/default.jpg
@@ -54,9 +34,11 @@ video:
           url: https://i.ytimg.com/vi/LyvNiQd3oLY/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "StarkNet Community Call #2 | Shard Labs, HardHat plugin, Data
+        availability, Volition and more"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "StarkNet Community Call #2 | Shard Labs, HardHat plugin, Data
           availability, Volition and more"
@@ -72,7 +54,19 @@ video:
           00:44:30 Decentralisation and Polaris licenses
           00:49:50 Getting involved as a non technical person
           00:52:00 Conclusion
-      defaultAudioLanguage: en-US
+      description: |-
+        00:00:00 Presenting Shard Labs
+        00:02:00 StarkNet Hardhat plugin
+        00:16:40 Shard labs Q&A
+        00:24:17 StarkNet AMA
+        00:25:35 Data availability on StarkNet
+        00:35:30 Volition
+        00:34:35 Decentralisation on StarkNet
+        00:41:20 StarkNet full nodes
+        00:44:30 Decentralisation and Polaris licenses
+        00:49:50 Getting involved as a non technical person
+        00:52:00 Conclusion
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT55M5S
       dimension: 2d
@@ -81,3 +75,12 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc02.jpg
+category:
+  - ecosystem
+  - community-calls
+topic:
+  - ef41aa70-6d30-4d4d-9543-10ffd53a1587
+  - c8cf00c8-69f5-464f-bf4d-5a0b28d12246
+short_desc: "Presenting Shard Labs, HardHat plugin, Data availability, Volition,
+  Full nodes and more\t"

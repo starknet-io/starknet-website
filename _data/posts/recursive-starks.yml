@@ -3,13 +3,14 @@ post_type: article
 title: Recursive STARKs
 published_date: 2022-08-11T00:00:00+00:00
 image: /assets/1_ydtct9p1meoeitb6r5zndg-1.png
-category: engineering
+category:
+  - engineering
+  - af0d4cb3-afed-4b17-b9df-f47cc32dc742
 topic:
-  - starknet
   - 23d02918-cb8c-4484-a45b-0788d9da3995
-  - 9209a571-c351-4a00-92d3-a0139d55cdd3
   - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
-  - 4e28457a-74a1-4570-88ec-6ef5817be14f
+  - 8d0357ee-c235-4814-8f08-c8eadf232a34
+  - 617acc8c-2fd7-4aeb-b16c-8603ac665cd4
 short_desc: Recursive proofs — powered by Cairo’s general computation — are now
   in production. This marks a major boost to the power of L2 scaling with
   STARKs. It will quickly deliver a multifold increase in the number of

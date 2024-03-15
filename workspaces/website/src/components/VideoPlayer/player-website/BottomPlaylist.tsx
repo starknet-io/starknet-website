@@ -5,7 +5,6 @@
 
 import { Box, Image } from "@chakra-ui/react";
 import { Chapter } from "../constants";
-import { useOverflow } from "../hooks/useOverflow";
 import { useRef } from "react";
 
 /**
@@ -15,8 +14,8 @@ import { useRef } from "react";
 type BottomPlaylistProps = {
   height: number;
   chapters: Chapter[];
-  currentChapter: string;
-  onChapterSelect: (currentChapter: string) => void;
+  currentChapter: { id: string };
+  onChapterChange: (id: string) => void;
   playlistOnBottom?: boolean;
 };
 
@@ -27,15 +26,13 @@ type BottomPlaylistProps = {
 export default function BottomPlaylist({
   chapters,
   currentChapter,
-  onChapterSelect
+  onChapterChange
 }: BottomPlaylistProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { hasOverflowX } = useOverflow(ref);
 
   return (
     <Box
       borderColor="border.divider"
-      borderRightWidth={hasOverflowX ? "1px" : "0px"}
       borderStyle="solid"
       display="flex"
       flexDirection={{ base: "row", lg: 'row' }}
@@ -46,8 +43,7 @@ export default function BottomPlaylist({
       }}
       marginTop={'24px'}
       maxH={{ base: "auto", lg: 'auto' }}
-      overflow={'auto'}
-      paddingRight={hasOverflowX ? "sm" : undefined}
+      overflowX="auto"
       ref={ref}
       sx={{
         overflow: "auto",
@@ -55,7 +51,7 @@ export default function BottomPlaylist({
       }}
     >
       {chapters.map((chapter) => {
-        const isActive = chapter.id === currentChapter;
+        const isActive = chapter.id === currentChapter.id;
         const textColor = isActive
           ? "heading-navy-fg"
           : "content.accent.disabled";
@@ -64,7 +60,7 @@ export default function BottomPlaylist({
           <Box
             key={chapter.id}
             id={chapter.id}
-            onClick={() => onChapterSelect(chapter.id)}
+            onClick={() => onChapterChange(chapter.id)}
             sx={{
               display: "flex",
               pointer: "cursor",

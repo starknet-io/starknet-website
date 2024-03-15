@@ -1,0 +1,74 @@
+id: 7fe45680-e38f-4f11-a30c-8a6380881566
+post_type: video
+title: L2 Peace - Scaling Ethereum with Vitalik Buterin and L2 Leaders
+published_date: 2024-01-25T16:14:00.406Z
+video:
+  url: https://www.youtube.com/watch?v=zqXXGjyMkIQ
+  id: zqXXGjyMkIQ
+  data:
+    kind: youtube#video
+    etag: Mxvs1n03eNGrWqn4gkdS4bnHt_s
+    id: zqXXGjyMkIQ
+    snippet:
+      publishedAt: 2024-01-18T15:58:35.000Z
+      liveBroadcastContent: none
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/zqXXGjyMkIQ/default_live.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/zqXXGjyMkIQ/mqdefault_live.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/zqXXGjyMkIQ/hqdefault_live.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/zqXXGjyMkIQ/sddefault_live.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/zqXXGjyMkIQ/maxresdefault_live.jpg
+          width: 1280
+          height: 720
+      defaultAudioLanguage: en-US
+      channelTitle: StarkWare
+      title: L2 peace
+      categoryId: "26"
+      localized:
+        title: L2 peace
+        description: "Bringing together - once again - all the L2s to discuss the many
+          ways to scale Ethereum, the challenges and milestones ahead, and why
+          we’re all gonna make it (!!).\r
+
+          With Arbitrum, Polygon, Starknet, Scroll, zkSync, RISC Zero
+          and Linea"
+      description: "Bringing together - once again - all the L2s to discuss the many
+        ways to scale Ethereum, the challenges and milestones ahead, and why
+        we’re all gonna make it (!!).\r
+
+        With Arbitrum, Polygon, Starknet, Scroll, zkSync, RISC Zero and
+        Linea"
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+    contentDetails:
+      duration: PT1H2M30S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
+image: /assets/l2-peace.png
+category:
+  - ecosystem
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+  - ethereum
+  - decentralization
+short_desc: >-
+  Watch the L2 gang to discuss all the ways to scale, the challenges and
+  milestones ahead for Ethereum and L2s, and why we’re all gonna make it!   
+
+  Join, learn, scale on.

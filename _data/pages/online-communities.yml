@@ -146,6 +146,10 @@ blocks:
           custom_external_link: https://twitter.com/StarknetNL
       - link:
           hasIcon: true
+          custom_title: Starknet Pakistan
+          custom_external_link: https://twitter.com/StarknetPk_
+      - link:
+          hasIcon: true
           custom_title: Starknet Portuguese-speaking
           custom_external_link: https://twitter.com/StarknetPt
       - link:

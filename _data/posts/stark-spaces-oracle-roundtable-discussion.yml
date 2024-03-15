@@ -1,5 +1,5 @@
 id: 2bc70e41-14fb-478d-9c61-f1bc095fe9b9
-post_type: video
+post_type: audio
 title: STARK SPACES | Oracle Roundtable Discussion
 published_date: 2023-09-04T11:45:49.798Z
 video:
@@ -55,7 +55,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_qcsbj49ybba_maxres.png
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic: []
 short_desc: Deep dive into the world of Oracles on Starknet and their mystical
   powers with a special roundtable discussion featuring Redstone, Switchboard,
   Stork, and Pragma.

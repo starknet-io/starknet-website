@@ -4,12 +4,12 @@ title: "Starknet Alpha v0.11.0: The Transition to Cairo 1.0 Begins"
 toc: true
 published_date: 2023-03-21T17:00:11.141Z
 image: /assets/new-land.png
-category: engineering
+category:
+  - engineering
+  - a6270a0b-ff84-4a7a-bd07-5183e0f2e857
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
 topic:
   - cairo
-  - starknet
-  - 63d577bc-fbb2-432c-8d43-ce4472c82338
-  - 7c52b28e-f718-4982-872d-e05bbc220677
 short_desc: Live on Testnet, soon on Mainnet!
 blocks:
   - type: markdown
@@ -95,7 +95,7 @@ blocks:
 
       * [Snapshot space](https://snapshot.org/#/starknet.eth/proposal/0x00889bc468509610e516e8602f00b21ca8c32466dd4f0140eca38becb7f40bef)
 
-      * [Delegation discovery page](https://delegate.starknet.io/)
+      * [Starknet Governance Hub: Delegates page](https://governance.starknet.io/delegates)
 
       * Starknet alpha v0.11.0 discussion thread on the [Community forum](https://community.starknet.io/t/proposal-starknet-alpha-v0-11-0/50334)
 

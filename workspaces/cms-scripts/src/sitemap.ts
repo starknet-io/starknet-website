@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 /**
  * Module dependencies.
  */
@@ -7,12 +9,14 @@ import path from 'path';
 
 /**
  * Change directory to project root.
- */
+*/
 
 process.chdir(path.resolve(__dirname, '../../..'));
 
 import { locales } from '@starknet-io/cms-data/src/i18n/config';
 import { getPosts } from './data';
+import { playlist } from '../../website/src/components/VideoPlayer/constants';
+import { escapeXml, formatDate } from './utils';
 
 /**
  * Config constants.
@@ -24,6 +28,18 @@ const priorityByDepth = [1, 0.8, 0.6, 0.4];
 const customPages = ['announcements', 'events', 'jobs', 'posts', 'roadmap', 'tutorials'];
 
 /**
+ * `Video` type.
+ */
+
+type Video = {
+  thumbnail?: string;
+  title?: string;
+  description?: string;
+  publishedAt?: string;
+  url?: string;
+}
+
+/**
  * `SitemapUrl` type.
  */
 
@@ -32,6 +48,7 @@ type SitemapUrl = {
   lastmod?: string;
   priority: number;
   url: string;
+  videos?: Video[]
 };
 
 /**
@@ -74,11 +91,24 @@ const parsePageDirectory = async (dir: string, depth = 0) => {
         const { hidden_page, link } = JSON.parse(page);
 
         if (!hidden_page && link) {
-          sitemapUrls.push({
+          let sitemapEntry: SitemapUrl = {
             url: link,
             changefreq: changefreqByDepth[depth],
             priority: priorityByDepth[depth]
-          });
+          }
+
+          if (link === '/en/learn/what-is-starknet') {
+            const videos: Video[] = playlist.map(chapter => ({
+              thumbnail: `${domain}${chapter?.thumbnail}`,
+              title: chapter?.title,
+              description: chapter?.description,
+              url: `${import.meta.env.VITE_CF_STREAM_URL}/${chapter?.videoId}/watch`
+            }));
+          
+            sitemapEntry.videos = videos;
+          }
+
+          sitemapUrls.push(sitemapEntry);
         }
       } catch {
         console.error('Error parsing page', file);
@@ -95,23 +125,36 @@ const parsePosts = async () => {
   const { filenameMap } = await getPosts();
   const categories: string[] = [];
 
-  filenameMap.forEach(({ locale, category, slug, published_date }) => {
-    if (!categories.includes(category)) {
-      categories.push(category);
+  filenameMap.forEach(({ locale, category: fileCategories, slug, published_date, post_type, video }) => {
+    for (const category of fileCategories) {
+      if (!categories.includes(category)) {
+        categories.push(category);
 
-      sitemapUrls.push({
-        url: `/${locale}/posts/${category}`,
-        changefreq: 'weekly',
-        priority: 0.8
-      });
+        sitemapUrls.push({
+          url: `/${locale}/content/category/${category}`,
+          changefreq: 'weekly',
+          priority: 0.8 
+        });
+      }
     }
 
-    sitemapUrls.push({
-      url: `/${locale}/posts/${category}/${slug}`,
+    let sitemapEntry: SitemapUrl = {
+      url: `/${locale}/content/${slug}`,
       changefreq: 'monthly',
       priority: 0.6,
-      lastmod: published_date?.split('T')?.[0]
-    });
+      lastmod: published_date?.split('T')?.[0],
+      ...(post_type === 'video' && video && {
+        videos: [{
+          thumbnail: video?.data?.snippet?.thumbnails?.default?.url,
+          title: video?.data?.snippet?.title,
+          description: video?.data?.snippet?.description,
+          publishedAt: video?.data?.snippet?.publishedAt,
+          url: video?.url
+        }]
+      })
+    }
+
+    sitemapUrls.push(sitemapEntry);
   });
 };
 
@@ -128,7 +171,14 @@ const parseTutorialsFile = async (locale: string, filename: string) => {
       sitemapUrls.push({
         url: `/${locale}/tutorials/video/${tutorial.id}`,
         changefreq: 'monthly',
-        priority: 0.6
+        priority: 0.6,
+        videos: [{
+          thumbnail: `${domain}${tutorial?.image}`,
+          title: tutorial?.title,
+          description: tutorial?.description,
+          publishedAt: tutorial?.published_at,
+          url: tutorial?.url
+        }]
       });
     }
   } catch {
@@ -186,18 +236,33 @@ await parseDetails('roadmap');
 await parseTutorials();
 
 let sitemap = `<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-sitemapUrls.forEach(({ url, changefreq, priority, lastmod }) => {
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">`;
+      
+sitemapUrls.forEach(({ url, changefreq, priority, lastmod, videos }) => {
   sitemap += `
   <url>
     <loc>${domain}${url}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>${lastmod ? `
-    <lastmod>${lastmod}</lastmod>` : ''}
+    <lastmod>${lastmod}</lastmod>` : ''}`;
+
+  videos?.forEach(video => {
+    if (video.thumbnail && video.title && video.description && video.url) {
+    sitemap += `
+    <video:video>
+      <video:thumbnail_loc>${escapeXml(video.thumbnail)}</video:thumbnail_loc>
+      <video:title>${escapeXml(video.title)}</video:title>
+      <video:description>${escapeXml(video.description)}</video:description>${video.publishedAt ? `
+      <video:publication_date>${formatDate(video.publishedAt)}</video:publication_date>` : ''}
+      <video:player_loc>${escapeXml(video.url)}</video:player_loc>
+    </video:video>`;
+    }
+  });
+
+  sitemap += `
   </url>`;
 });
-
 sitemap += `
 </urlset>`;
 

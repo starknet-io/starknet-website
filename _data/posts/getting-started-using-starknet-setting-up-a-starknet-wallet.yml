@@ -4,9 +4,12 @@ title: "Getting Started Using Starknet: Setting Up a Starknet Wallet"
 toc: true
 published_date: 2023-08-17T06:57:33.268Z
 image: /assets/getting-started.png
-category: stark-math
+category:
+  - stark-math
+  - 7eadf561-7b7b-483c-bdaf-39f59a6ad42d
 topic:
   - ca272092-827b-4603-a3a6-b0fdbbc624ad
+  - e0c85dbe-08f9-4a19-a8b0-e99852c84cb5
 short_desc: >
   A gentle hand-holding guide for your first steps using Starknet and learning
   how to set up a Starknet wallet and transfer funds from an Ethereum wallet.  
@@ -78,7 +81,7 @@ blocks:
           Once you have an Ethereum wallet with some ETH, you can install and set up a Starknet wallet.
 
 
-          See the up-to-date list of available [Starknet wallets](https://www.starknet.io/en/ecosystem/wallets) on the Starknet site. For more information on a specific wallet, including installation instructions, see that wallet’s site*.* Whichever one you choose, *make sure that you install it as a browser extension*. 
+          See the up-to-date list of available [Starknet wallets](https://www.starknet.io/en/ecosystem/wallets) on the Starknet site. For more information on a specific wallet, including installation instructions, see that wallet’s site. Whichever one you choose,  *make sure that you install it as a browser extension*. 
 
 
           In this blog post, I used wallets by [Braavos](https://braavos.app/) and [Argent](https://www.argent.xyz/argent-x/).
@@ -124,14 +127,9 @@ blocks:
 
           7. StarkGate lets you select from several different types of tokens. This example uses the default token, ETH. Check that the available balance in your Ethereum wallet is enough to transfer funds and pay for the gas required to transfer the funds.
 
-
           8. Enter the amount of ETH you want to transfer.\
-
-          Your Ethereum wallet prompts you to confirm the transfer. Your wallet might also show you the estimated transaction cost. For example, MetaMask shows approximately how much gas is required to execute the transfer, as well as the cost of the required gas in ETH and USD.
-
-
+             Your Ethereum wallet prompts you to confirm the transfer. Your wallet might also show you the estimated transaction cost. For example, MetaMask shows approximately how much gas is required to execute the transfer, as well as the cost of the required gas in ETH and USD.
           9. Confirm the transfer in your Ethereum wallet.
-
 
           10. StarkGate confirms the transaction and displays its status, including links to Etherscan and StarkScan, so you can view the transaction on both Ethereum and Starknet:
 
@@ -212,29 +210,23 @@ blocks:
 
           1. Go to JediSwap at <https://app.jediswap.xyz>.
 
-
           2. Connect your wallet by clicking **Connect Wallet** and then selecting your Starknet wallet.
 
 
-          ![](https://starkware.co/wp-content/uploads/2023/08/10-JediSwap_Connect_button-300x58.png) 
+          ![](https://starkware.co/wp-content/uploads/2023/08/10-JediSwap_Connect_button-300x58.png)
 
 
           3. When your wallet prompts you to approve the connection, click **Approve**.\
-
-          Once JediSwap connects to your wallet, it shows your balance in each token that it supports. For example, my wallet has about 0.05 ETH.
-
+             Once JediSwap connects to your wallet, it shows your balance in each token that it supports. For example, my wallet has about 0.05 ETH.
 
           ![](https://starkware.co/wp-content/uploads/2023/08/11-JediSwap_ETH_balance-300x85.png)
 
 
           4. Select the tokens that you want to swap in **Swap From** and **Swap To (est.)**, and click **Swap**. I swapped 0.025 ETH for WBTC.
 
-
           5. Your wallet prompts you to sign the transaction by clicking **Sign**. Clicking **Sign** submits the transaction
 
-
           6. JediSwap shows Transaction Submitted. Click **Open in browser** to view the transaction on StarkScan.
-
 
           7. Open your wallet to see your balance and the assets that you own. For example, this is my Braavos wallet after the swap:
 

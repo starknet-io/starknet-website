@@ -1,5 +1,5 @@
 id: 21e7711f-2535-4db3-b2fe-aa760eecc26b
-post_type: video
+post_type: audio
 title: Uniswap Foundation STARK SPACE | Deploying Uniswap v3 on Starknet
 published_date: 2023-02-12T07:57:06.947Z
 video:
@@ -50,4 +50,8 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
-category: ecosystem
+category:
+  - ecosystem
+  - 8c023bca-b758-4382-9016-dd24c7504ed9
+topic:
+  - 25c0a1fa-dd14-4179-98e6-7f4a98b66854

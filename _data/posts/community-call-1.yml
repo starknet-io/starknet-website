@@ -3,9 +3,9 @@ post_type: video
 title: "Community Call #1"
 published_date: 2021-11-08T00:00:00+00:00
 image: /assets/cc01.jpg
-category: community-calls
+category:
+  - community-calls
 topic:
-  - starknet
 short_desc: "Starknet's community call #1"
 video:
   url: https://youtu.be/gHoaoRxdJ_4

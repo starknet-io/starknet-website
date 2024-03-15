@@ -66,6 +66,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/youthumb_eq-kwv3kzlo_standard.png
-category: community-and-events
+category:
+  - community-and-events
+  - ecosystem
+  - stark-math
 topic:
   - account-abstraction

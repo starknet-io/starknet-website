@@ -2,12 +2,6 @@ id: a9fd7f71-4803-492b-9769-363cbbeebc8c
 post_type: video
 title: "Community Call #16 | Discussing Starknet and Snapshot partnership"
 published_date: 2022-06-09T10:55:00.240Z
-image: /assets/cc16.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: Hosting Nathan and Orlando from Snapshot and discussing StarkNet and
-  Snapshot partnership
 video:
   url: https://youtu.be/G6e_wI9zIVA
   id: G6e_wI9zIVA
@@ -16,12 +10,8 @@ video:
     etag: lWkyKDtoIrMHNfUU39TUoJKLLAo
     id: G6e_wI9zIVA
     snippet:
-      publishedAt: 2022-06-10T01:36:31Z
-      channelId: UCnDWguR8mE2oDBsjhQkgbvg
-      title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
-        partnership"
-      description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
-        and Snapshot partnership
+      publishedAt: 2022-06-10T01:36:31.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/G6e_wI9zIVA/default.jpg
@@ -43,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/G6e_wI9zIVA/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en-US
       channelTitle: StarkWare
+      title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
+        partnership"
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: "Starknet Community call #16 | Discussing StarkNet and Snapshot
           partnership"
         description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
           and Snapshot partnership
-      defaultAudioLanguage: en-US
+      description: Hosting Nathan and Orlando from Snapshot and discussing StarkNet
+        and Snapshot partnership
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
     contentDetails:
       duration: PT58M6S
       dimension: 2d
@@ -60,3 +54,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/cc16.jpg
+category:
+  - community-calls
+  - ecosystem
+topic:
+  - decentralization
+short_desc: Hosting Nathan and Orlando from Snapshot and discussing StarkNet and
+  Snapshot partnership

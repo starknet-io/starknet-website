@@ -1,0 +1,90 @@
+name: Build and Deploy Starknet Website (Alternative environment)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and Deploy
+    environment:
+      name: Starknet Website ${{ github.ref_name }}
+      url: https://${{ env.GITHUB_REF_SLUG_URL }}.alt-starknet-website.pages.dev
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            .yarn/install-state.gz
+            .eslintcache
+            **/tsconfig.tsbuildinfo
+            **/.types/**
+            **/.types-*/**
+          key: build-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            build-cache-
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Restore Crowdin Cache
+        uses: actions/cache/restore@v3
+        with:
+          path: _crowdin
+          key: crowdin-cache-dev
+
+      - name: Update dynamic data
+        run: yarn workspace @starknet-io/cms-scripts update-dynamic-data
+        env:
+          VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
+          VITE_ED_VIDEO_ID_1: ${{ secrets.VITE_ED_VIDEO_ID_1 }}
+          VITE_ED_VIDEO_ID_2: ${{ secrets.VITE_ED_VIDEO_ID_2 }}
+          VITE_ED_VIDEO_ID_3: ${{ secrets.VITE_ED_VIDEO_ID_3 }}
+          VITE_ED_VIDEO_ID_4: ${{ secrets.VITE_ED_VIDEO_ID_4 }}
+
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v4
+        with:
+          slug-maxlength: 28
+
+      - name: Set VITE_SITE_URL
+        run: |
+          if [ "${{ env.GITHUB_REF_SLUG_URL }}" = "production" ]; then
+            echo "VITE_SITE_URL=https://www.starknet.io" >> $GITHUB_ENV
+          else
+            echo "VITE_SITE_URL=https://${{ env.GITHUB_REF_SLUG_URL }}.alt-starknet-website.pages.dev" >> $GITHUB_ENV
+          fi
+
+      - name: Build project
+        run: yarn workspace @starknet-io/website build
+        env:
+          VITE_ALGOLIA_INDEX: ${{ github.ref_name == 'production' && 'production' || 'dev' }}
+          VITE_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          VITE_ALGOLIA_SEARCH_API_KEY: ${{ secrets.ALGOLIA_SEARCH_API_KEY }}
+          VITE_CLOUDFLARE_RECAPTCHA_KEY: ${{ secrets.CLOUDFLARE_RECAPTCHA_KEY }}
+          VITE_CF_STREAM_URL: ${{ secrets.CF_STREAM_URL }}
+          VITE_ED_VIDEO_ID_1: ${{ secrets.VITE_ED_VIDEO_ID_1 }}
+          VITE_ED_VIDEO_ID_2: ${{ secrets.VITE_ED_VIDEO_ID_2 }}
+          VITE_ED_VIDEO_ID_3: ${{ secrets.VITE_ED_VIDEO_ID_3 }}
+          VITE_ED_VIDEO_ID_4: ${{ secrets.VITE_ED_VIDEO_ID_4 }}
+
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN_ALT }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID_ALT }}
+          projectName: alt-starknet-website
+          directory: dist/client
+          workingDirectory: workspaces/website
+          wranglerVersion: '3'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name == 'production' && 'main' || github.ref_name }}

@@ -51,7 +51,10 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/starkhome13.png
-category: community-and-events
+category:
+  - community-and-events
+  - deecd65b-5f16-4455-a0db-b9cd2ce35fd0
+  - stark-math
+  - 217311b0-fc55-4192-9257-aa82004ddb73
 topic:
-  - starknet
 short_desc: Dark forest escape route

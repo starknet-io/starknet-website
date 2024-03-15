@@ -2,8 +2,14 @@ import { topLevelBlocks } from "../blocks";
 import { CmsCollection } from "../types";
 import { BiBullseye, BiWrench } from "react-icons/bi";
 import { AiOutlineAppstore } from "react-icons/ai";
+import { LuBadgeCheck } from "react-icons/lu";
 
 export const roadmapStagesFields = [
+  {
+    label: "Completed",
+    value: "completed",
+    icon: LuBadgeCheck
+  },
   {
     label: "Building now",
     value: "building-now",
@@ -93,6 +99,7 @@ export const roadmapPostsCollectionConfig = {
       label: "Availability state",
       widget: "select",
       options: [
+        "On mainnet",
         "On testnet",
         "Testing now"
       ],

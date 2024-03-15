@@ -2,12 +2,6 @@ id: ebd73eba-a04a-4088-b879-890a7bdf36ff
 post_type: video
 title: "ETHCC (5): Stark Recursion - Avihu Levy "
 published_date: 2022-07-20T12:27:33.521Z
-image: /assets/vid_events04.jpg
-category: community-calls
-topic:
-  - starknet
-short_desc: STARK Recursion is just around the corner! What does it mean? what
-  new capabilities will it unlock? which new peaks will we conquer using it?
 video:
   url: https://youtu.be/mBYF5r-J1aw
   id: mBYF5r-J1aw
@@ -16,12 +10,8 @@ video:
     etag: VClTnGmeyWRNKSZslmsPBs5YKMM
     id: mBYF5r-J1aw
     snippet:
-      publishedAt: 2022-07-20T22:10:16Z
-      channelId: UCVgsFxDu5lTqHmpirw5Q69Q
-      title: Avihu Levy - Stark Recursion
-      description: STARK Recursion is just around the corner! What does it mean? what
-        new capabilities will it unlock? which new peaks will we conquer using
-        it?
+      publishedAt: 2022-07-20T22:10:16.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/mBYF5r-J1aw/default.jpg
@@ -43,15 +33,19 @@ video:
           url: https://i.ytimg.com/vi/mBYF5r-J1aw/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: zh-Hans
       channelTitle: Amphi Monge
+      title: Avihu Levy - Stark Recursion
       categoryId: "28"
-      liveBroadcastContent: none
       localized:
         title: Avihu Levy - Stark Recursion
         description: STARK Recursion is just around the corner! What does it mean? what
           new capabilities will it unlock? which new peaks will we conquer using
           it?
-      defaultAudioLanguage: zh-Hans
+      description: STARK Recursion is just around the corner! What does it mean? what
+        new capabilities will it unlock? which new peaks will we conquer using
+        it?
+      channelId: UCVgsFxDu5lTqHmpirw5Q69Q
     contentDetails:
       duration: PT24M29S
       dimension: 2d
@@ -60,3 +54,11 @@ video:
       licensedContent: false
       contentRating: {}
       projection: rectangular
+image: /assets/vid_events04.jpg
+category:
+  - community-and-events
+  - ecosystem
+topic:
+  - 47ef120d-7b74-40a3-acb2-0ff2af28ecf4
+short_desc: STARK Recursion is just around the corner! What does it mean? what
+  new capabilities will it unlock? which new peaks will we conquer using it?

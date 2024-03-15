@@ -43,6 +43,10 @@ export const announcementsCollectionConfig = {
       widget: "select",
       options: [
         {
+          label: "Completed",
+          value: "completed",
+        },
+        {
           label: "Building now",
           value: "building-now",
         },

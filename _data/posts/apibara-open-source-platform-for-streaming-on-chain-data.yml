@@ -10,15 +10,8 @@ video:
     etag: g6MlhS0xLp5zlDLTWV2Wc6WRl5A
     id: Hyz3XxZzoHc
     snippet:
-      publishedAt: 2023-08-04T07:45:01Z
-      channelId: UCDfGGzbc8EMr7okaErqcRIw
-      title: Apibara - open-source platform for streaming on-chain data - Francesco
-        Ceccon
-      description: |-
-        Apibara : https://www.apibara.com/
-
-        🔮 StarkNetCC : https://www.starknet.cc/
-        💠 Starkware : https://starkware.co/
+      publishedAt: 2023-08-04T07:45:01.000Z
+      liveBroadcastContent: none
       thumbnails:
         default:
           url: https://i.ytimg.com/vi/Hyz3XxZzoHc/default.jpg
@@ -40,7 +33,10 @@ video:
           url: https://i.ytimg.com/vi/Hyz3XxZzoHc/maxresdefault.jpg
           width: 1280
           height: 720
+      defaultAudioLanguage: en
       channelTitle: StarkNetCC
+      title: Apibara - open-source platform for streaming on-chain data - Francesco
+        Ceccon
       tags:
         - crypto
         - ethereum
@@ -51,9 +47,8 @@ video:
         - zero-knowledge proof
         - zkproof
         - rollup
-      categoryId: "28"
-      liveBroadcastContent: none
       defaultLanguage: en
+      categoryId: "28"
       localized:
         title: Apibara - open-source platform for streaming on-chain data - Francesco
           Ceccon
@@ -62,7 +57,12 @@ video:
 
           🔮 StarkNetCC : https://www.starknet.cc/
           💠 Starkware : https://starkware.co/
-      defaultAudioLanguage: en
+      description: |-
+        Apibara : https://www.apibara.com/
+
+        🔮 StarkNetCC : https://www.starknet.cc/
+        💠 Starkware : https://starkware.co/
+      channelId: UCDfGGzbc8EMr7okaErqcRIw
     contentDetails:
       duration: PT13M45S
       dimension: 2d
@@ -72,4 +72,9 @@ video:
       contentRating: {}
       projection: rectangular
 image: /assets/apibara-open-source-platform-for-streaming-on-chain-data.jpg
-category: community-and-events
+category:
+  - community-and-events
+  - 32c028d1-89c1-4bba-8015-f6a6a4cb70a0
+topic:
+  - open_source
+  - decentralization
