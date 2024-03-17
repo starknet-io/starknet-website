@@ -1,4 +1,3 @@
-
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
@@ -15,6 +14,7 @@ import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import Tabs from "@chakra-ui/pro-theme/src/components/tabs";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -23,8 +23,8 @@ export interface Props {
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
   };
-  readonly searchSEO: SEOTexts['search'];
-  readonly languageCenterSeo: SEOTexts['language'];
+  readonly searchSEO: SEOTexts["search"];
+  readonly languageCenterSeo: SEOTexts["language"];
 }
 
 export default function Navbar({
@@ -88,7 +88,9 @@ export default function Navbar({
                                   ) : item.custom_icon === "SiTwitter" ? (
                                     <SiTwitter fontSize="1.25rem" />
                                   ) : item.custom_icon === "SiYoutube" ? (
-                                    <Box ml="-16px"><SiYoutube fontSize="1.25rem" /></Box>
+                                    <Box ml="-16px">
+                                      <SiYoutube fontSize="1.25rem" />
+                                    </Box>
                                   ) : (
                                     <React.Fragment />
                                   )
