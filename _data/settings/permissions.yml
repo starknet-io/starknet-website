@@ -1,7 +1,4 @@
 items:
-  - username: LiranRich
-    access:
-      - events
   - username: Karinbd1
     access:
       - events
@@ -61,3 +58,7 @@ items:
       - tutorials
       - seo
       - events
+  - username: GalShapira2529
+    name: Gal Shapira
+    access:
+      - all
