@@ -1,7 +1,4 @@
 items:
-  - username: LiranRich
-    access:
-      - events
   - username: Karinbd1
     access:
       - events
