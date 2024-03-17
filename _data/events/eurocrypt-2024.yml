@@ -1,0 +1,16 @@
+type: conference
+name: Eurocrypt 2024
+description: Eurocrypt 2024, the 43rd Annual International Conference on the
+  Theory and Applications of Cryptographic Techniques, will take place at
+  Kongresshaus in Zurich, Switzerland on May 26-30, 2024. Eurocrypt 2024 is
+  organized by the International Association for Cryptologic Research (IACR).
+  The affiliated events will take place at ETH Zurich on May 25-26, 2024.
+url: https://eurocrypt.iacr.org/2024/
+start_date: 2024-05-26T08:15:57.078Z
+month: May 2024
+end_date: 2024-05-30T08:15:57.083Z
+show_in_past_events: false
+image: /assets/screenshot-2024-03-17-at-11.16.33.png
+location: europe
+city: Zurich
+country: Switzerland
