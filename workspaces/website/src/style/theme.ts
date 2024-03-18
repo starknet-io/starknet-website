@@ -31,16 +31,16 @@ const theme = extendTheme(proTheme, {
       100: "#80DCDA",
       200: "#6DDAF5",
       300: "#4B9EDA",
-      400: "#261F63"
+      400: "#261F63",
     },
     orange: {
       sunfade: "#FF7E6D",
-      fanta: "#FF6450"
+      fanta: "#FF6450",
     },
     yellowSunfade: "#FFCD9A",
     bg: {
       main: "#F6F6F6",
-      200: "#FBFBFB"
+      200: "#FBFBFB",
     },
     grey: {
       morning: "#CCCCCC",
@@ -49,41 +49,42 @@ const theme = extendTheme(proTheme, {
       coolerText: "#6B7280",
       coolText: "#6B7280",
       darkText: "#363636",
-      lineOnDark: "#313131"
+      lineOnDark: "#313131",
     },
     darkMode: {
       card: "#1B1B1B",
       bg2: "#0B0B0B",
-      navGrey: "#121212"
+      navGrey: "#121212",
     },
     snNavy: "#0C0C4F",
     selected: {
       main: "#5C94FF",
       100: "#AFCAFF",
       200: "#9EBFFF",
-      300: "#B2CDFF"
+      300: "#B2CDFF",
     },
     notify: {
       dark: "#172726",
       green1: "#EFFBFA",
-      green2: "#C4E2E0"
+      green2: "#C4E2E0",
     },
     note: {
       dark: "#171C27",
       main: "#4B9EDA",
       100: "#EBF2FF",
-      200: "#DEE3ED"
+      200: "#DEE3ED",
     },
     important: {
       dark: "#231F1A",
       100: "#FFF5EB",
-      200: "#E9E1DA"
+      200: "#E9E1DA",
     },
     warning: {
       dark: "#231B1A",
       100: "#FFEDEB",
-      200: "#E7D5D4"
-    }
+      200: "#E7D5D4",
+    },
+    accent: "#A4A4EA",
   },
   components: {
     Accordion: accordionTheme,
@@ -110,34 +111,35 @@ const theme = extendTheme(proTheme, {
     Link: linkTheme,
     Heading: {
       baseStyle: {
-        fontWeight: "300"
+        fontWeight: "300",
       },
       variants: {
-        ...headingTheme
+        ...headingTheme,
       },
-      sizes: null},
+      sizes: null,
+    },
     Text: textTheme,
-    Alert: alertTheme
+    Alert: alertTheme,
   },
   fonts: {
     heading: "Inter, sans-serif",
   },
   fontSizes: {
-    "h1": "5rem",
-    "h2": "3rem",
-    "h3": "1.5rem",
-    "h4": "1.125rem",
-    "h5": "1rem",
-    "h6": "0.875rem",
+    h1: "5rem",
+    h2: "3rem",
+    h3: "1.5rem",
+    h4: "1.125rem",
+    h5: "1rem",
+    h6: "0.875rem",
   },
   lineHeights: {
-    "h1": "100%",
-    "h2": "3.625rem",
-    "h3": "100%",
-    "h4": "1.375rem",
-    "h5": "1.188rem",
-    "h6": "1.063rem",
-    "heading6": "1.063rem",
+    h1: "100%",
+    h2: "3.625rem",
+    h3: "100%",
+    h4: "1.375rem",
+    h5: "1.188rem",
+    h6: "1.063rem",
+    heading6: "1.063rem",
   },
   breakpoints: {
     xs: "24em",
@@ -145,8 +147,7 @@ const theme = extendTheme(proTheme, {
     md: "48em",
     lg: "62em",
     xl: "80em",
-    "2xl": "96em"
+    "2xl": "96em",
   },
-
 });
 export default theme;
