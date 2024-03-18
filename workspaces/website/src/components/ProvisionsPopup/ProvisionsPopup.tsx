@@ -74,7 +74,8 @@ const ProvisionsPopup = () => {
             top="10px"
             width="28px"
             height="28px"
-            style={{ backgroundColor: "transparent" }}
+            bgColor="transparent"
+            _dark={{ bgColor: "transparent" }}
             onClick={onClose}
           >
             <CloseIcon />
