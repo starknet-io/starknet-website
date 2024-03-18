@@ -30,6 +30,7 @@
     "@algolia/autocomplete-plugin-query-suggestions": "^1.9.2",
     "@algolia/autocomplete-plugin-recent-searches": "^1.9.2",
     "@algolia/autocomplete-theme-classic": "^1.9.2",
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/pro-theme": "^0.0.66",
     "@chakra-ui/react": "^2.6.0",
     "@crowdin/cli": "^3.11.0",
