@@ -21,25 +21,21 @@ const array = [
 const LatestAnnouncements = () => {
   return (
     <Box
-      position={{ xs: "relative", md: "relative", lg: "absolute" }}
-      top={{ xs: "unset", md: "unset", lg: "224px" }}
-      right={{ xs: "unset", md: "unset", lg: "32px" }}
-      width={{ xs: "100%", md: "100%", lg: "225px" }}
+      position={{ base: "relative", lg: "absolute" }}
+      top={{ base: "unset", lg: "224px" }}
+      right={{ base: "unset", lg: "32px" }}
+      width={{ base: "100%", lg: "225px" }}
       mt={{ base: 6, lg: "unset" }}
       p={3}
       gap={6}
       backgroundColor="surface"
       borderRadius={8}
-      zIndex={{ sm: "unset", md: "unset", lg: 100 }}
+      zIndex={{ base: "unset", lg: 100 }}
     >
       <Heading as="h5" fontSize="18px" fontWeight={600} textAlign="left">
         Latest announcements
       </Heading>
-      <Box
-        display="flex"
-        flexDir={{ xs: "row", sm: "row", md: "row", lg: "column" }}
-        gap={4}
-      >
+      <Box display="flex" flexDir={{ base: "row", lg: "column" }} gap={4}>
         {array &&
           array.map((announcement) => (
             <LatestAnnouncementCard announcement={announcement} />
