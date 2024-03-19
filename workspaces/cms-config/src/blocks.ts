@@ -812,7 +812,7 @@ export const blocks = [
       },
       {
         name: "buttonLink",
-        label: "ButtonText",
+        label: "buttonLink",
         widget: "string",
         crowdin: true,
       },
