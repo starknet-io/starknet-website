@@ -1,12 +1,18 @@
-import { Center, Text, Button, IconButton } from "@chakra-ui/react";
+import { Center, Text, IconButton } from "@chakra-ui/react";
+import { Button } from "@ui/Button";
 import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
-const text =
-  "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
 
-interface NavbarBannerProps {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+interface NavbarStickyBannerProps {
+  text: string;
+  buttonText: string;
+  buttonLink: string;
 }
-const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
+
+const NavbarStickyBanner = ({
+  text,
+  buttonText,
+  buttonLink,
+}: NavbarStickyBannerProps) => {
   return (
     <Center
       height={{ base: "87px", sm: 12 }}
@@ -27,6 +33,7 @@ const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
           {text}
         </Text>
         <Button
+          href={buttonLink}
           px={4}
           py={1}
           borderRadius={8}
@@ -41,8 +48,9 @@ const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
             borderColor: "darkMode.card",
           }}
           _hover={{ bgColor: "white" }}
+          variant="outline"
         >
-          See more
+          {buttonText}
         </Button>
       </Center>
       <IconButton
@@ -61,4 +69,4 @@ const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
   );
 };
 
-export default NavbarBanner;
+export default NavbarStickyBanner;

@@ -133,6 +133,15 @@ export interface HomeHeroBlock {
     readonly heroText: string;
   };
 }
+
+export interface NavStickyBannerBlock {
+  readonly type: "nav_sticky_banner";
+  readonly text: string
+  readonly buttonText: string
+  readonly buttonLink: string
+  readonly isActive: boolean
+}
+
 export interface LinkListBlock {
   readonly type: "link_list";
   readonly heading?: string;
@@ -183,6 +192,7 @@ export type Block =
   | YoutubeBlock
   | HeroBlock
   | HomeHeroBlock
+  | NavStickyBannerBlock
   | LinkListBlock
   | PageHeaderBlock
   | AccordionBlock

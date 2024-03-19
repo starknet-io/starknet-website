@@ -1,8 +1,4 @@
-import type {
-  FlexLayoutBlock,
-  Page as PageType,
-  TopLevelBlock,
-} from "@starknet-io/cms-data/src/pages";
+import type { Page as PageType } from "@starknet-io/cms-data/src/pages";
 import { PageLayout } from "@ui/Layout/PageLayout";
 import moment from "moment";
 import { Heading } from "@ui/Typography/Heading";
@@ -19,8 +15,6 @@ import {
 import "@ui/CodeHighlight/code-highlight-init";
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
 import NotFound from "@ui/NotFound/NotFound";
-import { useState } from "react";
-import NavbarBanner from "src/pages/(components)/NavbarBanner/NavbarBanner";
 type CMSPageProps = {
   data: PageType;
   env: {
@@ -30,18 +24,13 @@ type CMSPageProps = {
 };
 export default function CMSPage({ data, env, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
-  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   if (data?.hidden_page) {
     return <NotFound type="page" />;
   }
 
-  const isTypeEqualsToGroup = data?.blocks?.some(
-    (block) => block.type === "group"
-  );
   return (
     <Box>
-      {isTypeEqualsToGroup && isOpen && <NavbarBanner setIsOpen={setIsOpen} />}
       <PageLayout
         contentMaxW={data.template === "narrow content" ? "846px" : undefined}
         breadcrumbs={

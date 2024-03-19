@@ -14,7 +14,7 @@ import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/PageContextProvider";
-import NavbarBanner from "./NavbarBanner/NavbarBanner";
+import NavbarStickyBanner from "./NavbarStickyBanner/NavbarStickyBanner";
 
 export interface Props {
   readonly mainMenu: MainMenu;
