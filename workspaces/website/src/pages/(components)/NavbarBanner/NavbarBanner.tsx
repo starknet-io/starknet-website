@@ -1,6 +1,5 @@
 import { Center, Text, Button, IconButton } from "@chakra-ui/react";
 import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
-import { useState } from "react";
 const text =
   "Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.";
 
@@ -10,15 +9,20 @@ interface NavbarBannerProps {
 const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
   return (
     <Center
-      height={12}
+      height={{ base: "87px", sm: 12 }}
+      px={{ base: 2, xl: "unset" }}
       bgColor={"snNavy"}
       display="flex"
-      gap={6}
+      gap={{ xs: 3, base: 6 }}
       zIndex={10}
       _dark={{ bgColor: "#A4A4EA" }}
     >
-      <Center margin="auto" gap={6}>
-        <Text color="white" _dark={{ color: "snNavy" }}>
+      <Center margin="auto" gap={{ xs: 1, sm: 6 }} height="100%">
+        <Text
+          color="white"
+          _dark={{ color: "snNavy" }}
+          width={{ base: "245px", sm: "unset" }}
+        >
           {text}
         </Text>
         <Button
@@ -27,11 +31,15 @@ const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
           borderRadius={8}
           bgColor="white"
           color="snNavy"
+          fontWeight={600}
+          lineHeight="21px"
+          fontSize={{ base: 12, sm: 14 }}
           _dark={{
             color: "white",
             bgColor: "darkMode.card",
             borderColor: "darkMode.card",
           }}
+          _hover={{ bgColor: "white" }}
         >
           See more
         </Button>
