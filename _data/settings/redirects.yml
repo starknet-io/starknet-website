@@ -146,4 +146,4 @@ items:
   - source: /corestars
     destination: https://76b3bqt1cf1.typeform.com/corestars
   - source: /en/learn/frequently-asked-questions
-    destination: en/learn/starknet-frequently-asked-questions
+    destination: /starknet-frequently-asked-questions
