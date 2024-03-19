@@ -5,6 +5,12 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
+  - type: nav_sticky_banner
+    isActive: true
+    text: " Starknet is the secure scaling technology bringing Ethereum’s benefits
+      to the world."
+    buttonText: see more
+    buttonLink: /
   - type: group
     blocks:
       - type: home_hero
