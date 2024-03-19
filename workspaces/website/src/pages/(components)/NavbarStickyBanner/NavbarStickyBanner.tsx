@@ -1,6 +1,7 @@
 import { Center, Text, IconButton } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
+import { useState } from "react";
 
 interface NavbarStickyBannerProps {
   text: string;
@@ -13,13 +14,17 @@ const NavbarStickyBanner = ({
   buttonText,
   buttonLink,
 }: NavbarStickyBannerProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <Center
+      position="fixed"
+      top="78px"
+      left={0}
       height={{ base: "87px", sm: 12 }}
       width="100%"
       px={{ base: 2, xl: "unset" }}
       bgColor={"snNavy"}
-      display="flex"
+      display={isOpen ? "flex" : "none"}
       gap={{ xs: 3, base: 6 }}
       zIndex={10}
       _dark={{ bgColor: "#A4A4EA" }}

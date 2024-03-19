@@ -800,23 +800,27 @@ export const blocks = [
     fields: [
       {
         name: "text",
+        label: "Text",
         widget: "string",
         crowdin: true,
       },
       {
         name: "buttonText",
+        label: "ButtonText",
         widget: "string",
         crowdin: true,
       },
       {
         name: "buttonLink",
+        label: "ButtonText",
         widget: "string",
         crowdin: true,
       },
       {
         name: "isActive",
+        label: "IsActive",
         widget: "boolean",
-        default: false,
+        default: true,
       },
     ],
   },
