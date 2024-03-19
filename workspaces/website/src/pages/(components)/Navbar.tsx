@@ -34,7 +34,6 @@ export default function Navbar({
   languageCenterSeo,
 }: Props) {
   const { locale, urlPathname: pathname } = usePageContext();
-  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   return (
     <>
@@ -191,7 +190,6 @@ export default function Navbar({
             </NavAccordian.Root>
           }
         />
-        {isOpen && <NavbarBanner setIsOpen={setIsOpen} />}
       </NavbarContainer>
     </>
   );

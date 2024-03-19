@@ -10,6 +10,7 @@ const NavbarBanner = ({ setIsOpen }: NavbarBannerProps) => {
   return (
     <Center
       height={{ base: "87px", sm: 12 }}
+      width="100%"
       px={{ base: 2, xl: "unset" }}
       bgColor={"snNavy"}
       display="flex"
