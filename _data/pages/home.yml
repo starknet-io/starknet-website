@@ -2,6 +2,8 @@ id: e27b992a-2ca3-4f78-8f11-ae755307f0dc
 title: Home
 seoTitle: "Starknet | Secure scaling technology bringing Ethereum’s benefits worldwide "
 template: landing
+hideToc: false
+hidden_page: false
 breadcrumbs: false
 page_last_updated: false
 blocks:
@@ -205,3 +207,18 @@ blocks:
     md: 2
     lg: 4
     heading: FAQs
+  - type: side_sticky_banner
+    blocks:
+      - type: side_sticky_banner_card
+        isActive: true
+        text: enter title here
+        buttonText: see more
+        buttonLink: /
+        image: https://s3-alpha-sig.figma.com/img/4f25/c2db/258212229ef560d9d1532f86afece898?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MNRLkOJFL7kX7dw3SFz9~oJT5-lOeiAaUN2K~hkoyIWl7~ywwXn-7H4QFYTPnfI2xuPlwFWq2PwE4nS13bCD--1LU9fn7Qvj5tVwQH2C4412u1KvAyDArz1B7RQKLISYU799PhMVyPHrMUJ875RGJJrG515m~b~pzoes0zLE96qkYJxdliOxXTbH0C5kz2ceD~er-6eUCx7eYeMWBWLgwgmIwpsxXx8-aceuuMzz9O6rN54fhiGMjMpXF-YfMdQSi1Mmng2q3lwH7pIAgRxgMlXFSZHRnea3VNm5gkL6PBtjdUx8kaROpx7ryVcYBiGuRe5Olvji9rLl8rqeUa9bdA__
+      - type: side_sticky_banner_card
+        isActive: true
+        text: enter title here
+        buttonText: see more
+        image: https://s3-alpha-sig.figma.com/img/4f25/c2db/258212229ef560d9d1532f86afece898?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MNRLkOJFL7kX7dw3SFz9~oJT5-lOeiAaUN2K~hkoyIWl7~ywwXn-7H4QFYTPnfI2xuPlwFWq2PwE4nS13bCD--1LU9fn7Qvj5tVwQH2C4412u1KvAyDArz1B7RQKLISYU799PhMVyPHrMUJ875RGJJrG515m~b~pzoes0zLE96qkYJxdliOxXTbH0C5kz2ceD~er-6eUCx7eYeMWBWLgwgmIwpsxXx8-aceuuMzz9O6rN54fhiGMjMpXF-YfMdQSi1Mmng2q3lwH7pIAgRxgMlXFSZHRnea3VNm5gkL6PBtjdUx8kaROpx7ryVcYBiGuRe5Olvji9rLl8rqeUa9bdA__
+        buttonLink: /
+    isActive: true
