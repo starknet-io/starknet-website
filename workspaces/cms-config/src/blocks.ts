@@ -793,6 +793,38 @@ export const blocks = [
       },
     ],
   },
+  {
+    name: "side_sticky_banner_card",
+    label: "Side Sticky Banner Card",
+    widget: "object",
+    fields: [
+      {
+        name: "text",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "buttonText",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "buttonLink",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "image",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "isActive",
+        widget: "boolean",
+        default: false,
+      },
+    ],
+  },
 ] satisfies CmsFieldList["types"];
 
 const flexLayout = {
@@ -839,38 +871,6 @@ const flexLayout = {
       widget: "list",
       types: blocks,
       default: [],
-    },
-    {
-      name: "side_sticky_banner_card",
-      label: "Side Sticky Banner Card",
-      widget: "object",
-      fields: [
-        {
-          name: "text",
-          widget: "string",
-          crowdin: true,
-        },
-        {
-          name: "buttonText",
-          widget: "string",
-          crowdin: true,
-        },
-        {
-          name: "buttonLink",
-          widget: "string",
-          crowdin: true,
-        },
-        {
-          name: "image",
-          widget: "string",
-          crowdin: true,
-        },
-        {
-          name: "isActive",
-          widget: "boolean",
-          default: false,
-        },
-      ],
     },
   ],
 } satisfies CmsField;
