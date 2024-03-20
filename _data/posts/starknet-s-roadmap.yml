@@ -84,8 +84,9 @@ blocks:
       ## More (!) reduced transaction fees
 
 
-      **V.0.14.0** is currently planned to focus on further fee reduction. The precise content of this upgrade will depend on the long term effects of EIP-4844 and the performance improvements leading up to it. Currently, three main improvements are considered to the end of fee reduction: 
+      **V.0.14.0** is currently planned to focus on further fee reduction. The precise content of this upgrade will depend on the long term effects of EIP-4844 and the performance improvements leading up to it. Currently, three main improvements are being:
 
+        
 
       * Volition: Volition will facilitate hybrid Data Availability (DA) on Starknet, meaning developers will be able to create dApps that store data on Starknet instead of Ethereum. In doing so, developers in effect cut transaction costs for end users by trimming their L1 footprint. For more info about Volition’s design, [read here](https://www.starknet.io/en/content/volition-on-starknet-your-data-your-choice). 
 
@@ -97,7 +98,7 @@ blocks:
       ## Summary 
 
 
-      In the coming up months, Starknet users and developers will experience improvements in throughput and event more fee reductions, beyond the ones achieved lately as a result of a string of key performance upgrades, following requests from the Starknet community. 
+      In the coming up months, Starknet users and developers will experience improvements in throughput and even more fee reductions, beyond the ones achieved lately as a result of a string of key performance upgrades, following requests from the Starknet community. 
 
 
       The short-term roadmap for Starknet v0.13.0 (v0.13.1 and v0.13.2)is fixed, however, the mid-to-long term roadmap is more moldable. The Starknet community plays a major role in the trajectory of the network, and community feedback is welcome. What’s for certain is everyone can expect innovative solutions that will continue to improve scalability on the leading Ethereum L2 going forward.
