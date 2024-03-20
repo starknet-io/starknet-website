@@ -1,7 +1,7 @@
 import { Center, Text, IconButton } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface NavbarStickyBannerProps {
   text: string;
@@ -15,7 +15,7 @@ const NavbarStickyBanner = ({
   buttonLink,
 }: NavbarStickyBannerProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
-
+  const centerRef = useRef<HTMLDivElement>(null);
   const gtmEvent = (target: string) =>
     window.gtag?.("event", target, { event_category: "engagement" });
 
@@ -32,11 +32,12 @@ const NavbarStickyBanner = ({
       document.getElementById("navbar_banner")?.offsetHeight;
     const div = document.getElementById("home_hero");
     if (!div || !componentHeight) return;
-    div.style.marginTop = `${componentHeight}`;
-  }, []);
+    div.style.marginTop = `${componentHeight}px`;
+  }, [centerRef]);
 
   return (
     <Center
+      ref={centerRef}
       id="navbar_banner"
       position="fixed"
       top="78px"
@@ -50,48 +51,52 @@ const NavbarStickyBanner = ({
       zIndex={10}
       _dark={{ bgColor: "accent" }}
     >
-      <Center margin="auto" gap={{ xs: 1, sm: 6 }} height="100%">
-        <Text
-          color="white"
-          _dark={{ color: "snNavy" }}
-          width={{ base: "245px", sm: "unset" }}
-        >
-          {text}
-        </Text>
-        <Button
-          onClick={onReadMore}
-          href={buttonLink}
-          px={4}
-          py={1}
-          borderRadius={8}
-          bgColor="white"
-          color="snNavy"
-          fontWeight={600}
-          lineHeight="21px"
-          fontSize={{ base: 12, sm: 14 }}
-          _dark={{
-            color: "white",
-            bgColor: "darkMode.card",
-            borderColor: "darkMode.card",
-          }}
-          _hover={{ bgColor: "white" }}
-          variant="solid"
-        >
-          {buttonText}
-        </Button>
-      </Center>
-      <IconButton
-        aria-label="Close"
-        _dark={{
-          color: "snNavy",
-          bgColor: "transparent",
-          borderColor: "transparent",
-          _hover: { bgColor: "transparent" },
-        }}
-        onClick={onClose}
-      >
-        <CloseIcon />
-      </IconButton>
+      {centerRef && (
+        <>
+          <Center margin="auto" gap={{ xs: 1, sm: 6 }} height="100%">
+            <Text
+              color="white"
+              _dark={{ color: "snNavy" }}
+              width={{ base: "245px", sm: "unset" }}
+            >
+              {text}
+            </Text>
+            <Button
+              onClick={onReadMore}
+              href={buttonLink}
+              px={4}
+              py={1}
+              borderRadius={8}
+              bgColor="white"
+              color="snNavy"
+              fontWeight={600}
+              lineHeight="21px"
+              fontSize={{ base: 12, sm: 14 }}
+              _dark={{
+                color: "white",
+                bgColor: "darkMode.card",
+                borderColor: "darkMode.card",
+              }}
+              _hover={{ bgColor: "white" }}
+              variant="solid"
+            >
+              {buttonText}
+            </Button>
+          </Center>
+          <IconButton
+            aria-label="Close"
+            _dark={{
+              color: "snNavy",
+              bgColor: "transparent",
+              borderColor: "transparent",
+              _hover: { bgColor: "transparent" },
+            }}
+            onClick={onClose}
+          >
+            <CloseIcon />
+          </IconButton>
+        </>
+      )}
     </Center>
   );
 };
