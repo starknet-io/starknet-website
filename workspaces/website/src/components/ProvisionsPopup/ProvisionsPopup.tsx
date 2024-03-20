@@ -29,7 +29,7 @@ const ProvisionsPopup = () => {
     setIsOpenStorage(false);
   };
 
-  if (!isOpenStorage) return;
+  if (!isOpenStorage) return null;
 
   return (
     <Fade

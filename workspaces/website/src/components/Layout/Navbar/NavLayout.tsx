@@ -35,13 +35,17 @@ export const NavLayout = (props: NavLayoutProps) => {
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
-        'event_category': "engagement",
-        'value': colorMode
+        event_category: "engagement",
+        value: colorMode,
       });
     }
-  }
+  };
   return (
-    <Container py={{ base: "4", lg: "17px" }} px={{ base: "16px", md: "32px" }} maxW="1344px">
+    <Container
+      py={{ base: "4", lg: "17px" }}
+      px={{ base: "16px", md: "32px" }}
+      maxW="1344px"
+    >
       <HStack spacing="4" justify="space-between">
         <HStack>
           <a href={`/${locale}/`}>
@@ -55,46 +59,58 @@ export const NavLayout = (props: NavLayoutProps) => {
         </HStack>
         <HStack spacing={6}>
           {props.searchArea}
-          <Box display={{ base: "none", xl: "block" }} sx={{marginInlineStart: "12px !important"}}>
-              <IconButton
-                icon={
-                  colorMode === "light" ? (
-                    <Icon as={HiOutlineMoon} fontSize="xl" />
-                  ) : (
-                    <Icon as={HiOutlineSun} fontSize="xl" />
-                  )
-                }
-                aria-label="Toggle color mode"
-                onClick={toogleTheme}
+          <Box
+            display={{ base: "none", xl: "block" }}
+            sx={{ marginInlineStart: "12px !important" }}
+          >
+            <IconButton
+              icon={
+                colorMode === "light" ? (
+                  <Icon as={HiOutlineMoon} fontSize="xl" />
+                ) : (
+                  <Icon as={HiOutlineSun} fontSize="xl" />
+                )
+              }
+              aria-label="Toggle color mode"
+              onClick={toogleTheme}
+              marginInlineStart="0 !important"
+            />
+          </Box>
+
+          {!!props.languageSwitcher && (
+            <>
+              <Box
+                w="1px"
+                bg="nav-footer-br"
+                h="30px"
+                position="relative"
+                marginInlineStart="12px !important"
+                display={{ base: "none", xl: "block" }}
+              />
+              <Box
+                display={{ base: "none", xl: "block" }}
                 marginInlineStart="0 !important"
-              />
-            </Box>
+              >
+                {props.languageSwitcher}
+              </Box>
+            </>
+          )}
 
-            {!!props.languageSwitcher && (
-              <>
-                <Box
-                  w="1px"
-                  bg="nav-footer-br"
-                  h="30px"
-                  position="relative"
-                  marginInlineStart="12px !important"
-                  display={{ base: "none", xl: "block" }}
-                />
-                <Box display={{ base: "none", xl: "block" }} marginInlineStart="0 !important">
-                  {props.languageSwitcher}
-                </Box>
-              </>
-            )}
-
-            <Box display={{ base: "block", xl: "none" }} marginInlineStart="0px !important">
-              <IconButton
-                ref={menuButtonRef}
-                icon={<Icon as={MenuIcon} fontSize="2xl" />}
-                aria-label="Open Menu"
-                onClick={onClickMenu}
-                marginInlineStart={{ base: "0px !important", md: "12px !important" }}
-              />
-            </Box>
+          <Box
+            display={{ base: "block", xl: "none" }}
+            marginInlineStart="0px !important"
+          >
+            <IconButton
+              ref={menuButtonRef}
+              icon={<Icon as={MenuIcon} fontSize="2xl" />}
+              aria-label="Open Menu"
+              onClick={onClickMenu}
+              marginInlineStart={{
+                base: "0px !important",
+                md: "12px !important",
+              }}
+            />
+          </Box>
         </HStack>
       </HStack>
     </Container>
