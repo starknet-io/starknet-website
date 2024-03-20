@@ -21,40 +21,42 @@ import { HeadingContainer } from "./HeadingContainer";
 import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
+import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
+import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
 
 interface Props {
   disallowH1?: boolean;
   readonly block: TopLevelBlock;
   env: {
     CLOUDFLARE_RECAPTCHA_KEY: string;
-  }
+  };
   readonly locale: string;
 }
 
-export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | null {
+export function Block({
+  disallowH1,
+  block,
+  env,
+  locale,
+}: Props): JSX.Element | null {
   if (block.type === "basic_card") {
     return <BasicCard {...block} locale={locale} />;
   } else if (block.type === "container") {
     return (
       <Container maxWidth={block.max_width}>
         {block.blocks.map((block, i) => (
-          <Block
-            env={env}
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block env={env} key={i} block={block} locale={locale} />
         ))}
       </Container>
     );
   } else if (block.type === "image_icon_link_card") {
     return <ImageIconCard {...block} locale={locale} />;
   } else if (block.type === "youtube") {
-    return <YoutubePlayer videoId={block.videoId} />
+    return <YoutubePlayer videoId={block.videoId} />;
   } else if (block.type === "newsletter_popup") {
     return <NewsletterCard {...block} env={env} locale={locale} />;
   } else if (block.type === "markdown") {
-    return <MarkdownBlock disallowH1={disallowH1} body={block.body} /> ;
+    return <MarkdownBlock disallowH1={disallowH1} body={block.body} />;
   } else if (block.type === "ambassadors_list") {
     return <AmbassadorsList {...block} />;
   } else if (block.type === "community_events") {
@@ -76,12 +78,7 @@ export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | 
         headingVariant={block.heading_variant}
       >
         {block.blocks.map((block, i) => (
-          <Block
-            env={env}
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block env={env} key={i} block={block} locale={locale} />
         ))}
       </BlockCards>
     );
@@ -121,25 +118,18 @@ export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | 
     return (
       <BlockGrouping>
         {block.blocks.map((block, i) => (
-          <Block
-            env={env}
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block env={env} key={i} block={block} locale={locale} />
         ))}
       </BlockGrouping>
     );
-  }else if (block.type === "heading_container") {
+  } else if (block.type === "heading_container") {
     return (
-      <HeadingContainer heading={block.heading} headingVariant={block.heading_variant}>
+      <HeadingContainer
+        heading={block.heading}
+        headingVariant={block.heading_variant}
+      >
         {block.blocks.map((block, i) => (
-          <Block
-            env={env}
-            key={i}
-            block={block}
-            locale={locale}
-          />
+          <Block env={env} key={i} block={block} locale={locale} />
         ))}
       </HeadingContainer>
     );
@@ -170,10 +160,25 @@ export function Block({ disallowH1, block, env, locale }: Props): JSX.Element | 
         }}
       />
     );
+  } else if (block.type === "side_sticky_banner") {
+    return block.isActive ? (
+      <SideStickyBanner>
+        {block.blocks.map((block, i) => (
+          <Block env={env} key={i} block={block} locale={locale} />
+        ))}
+      </SideStickyBanner>
+    ) : null;
+  } else if (block.type === "side_sticky_banner_card") {
+    return block.isActive ? (
+      <SideStickyBannerCard
+        image={block.image}
+        text={block.text}
+        buttonText={block.buttonText}
+        buttonLink={block.buttonLink}
+      />
+    ) : null;
   } else if (block.type === "video_section") {
-    return (
-      <VideoSectionBlock {...block} />
-    )
+    return <VideoSectionBlock {...block} />;
   } else {
     // this will report type error if there is unhandled block.type
     block satisfies never;

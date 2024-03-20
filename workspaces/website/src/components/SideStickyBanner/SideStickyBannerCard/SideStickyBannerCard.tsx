@@ -3,23 +3,28 @@ import { Link } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 interface LatestAnnouncementCardProps {
-  announcement: any;
+  image: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
 }
-const LatestAnnouncementCard = ({
-  announcement,
+const SideStickyBannerCard = ({
+  image,
+  text,
+  buttonText,
+  buttonLink,
 }: LatestAnnouncementCardProps) => {
-  const { image, title, buttonText, link } = announcement;
   return (
     <Box mb={6}>
       <Image src={image} alt={image} borderRadius={8} />
       <Text fontSize="14px" fontWeight={600} mt={3} mb={2}>
-        {title}
+        {text}
       </Text>
-      <Link href={link} color="Link">
+      <Link href={buttonLink} color="Link">
         {buttonText} <ArrowForwardIcon boxSize="14px" mb={0.5} />
       </Link>
     </Box>
   );
 };
 
-export default LatestAnnouncementCard;
+export default SideStickyBannerCard;
