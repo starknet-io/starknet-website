@@ -10,6 +10,11 @@ category:
 topic:
   - decentralization
   - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+short_desc: "Starknet is enhancing its network in response to community
+  feedback, focusing on improved performance, lower fees, and fewer version
+  updates. The roadmap includes advancements like parallel transactions and
+  Cairo-native integration, aimed at significantly increasing throughput while
+  reducing fees. "
 post_desc: |
   A major boost in throughput and slashed transaction fees are on the way.
 seo_desc: Developers and users on Starknet can look forward to a major boost in
