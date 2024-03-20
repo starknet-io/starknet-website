@@ -15,6 +15,18 @@ const NavbarStickyBanner = ({
   buttonLink,
 }: NavbarStickyBannerProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
+  const gtmEvent = (target: string) =>
+    window.gtag?.("event", target, { event_category: "engagement" });
+
+  const onClose = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    gtmEvent("Navbar_banner_close");
+  };
+
+  const onReadMore = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    gtmEvent("Navbar_banner_read_more");
+  };
   return (
     <Center
       position="fixed"
@@ -38,6 +50,7 @@ const NavbarStickyBanner = ({
           {text}
         </Text>
         <Button
+          onClick={onReadMore}
           href={buttonLink}
           px={4}
           py={1}
@@ -66,7 +79,10 @@ const NavbarStickyBanner = ({
           borderColor: "transparent",
           _hover: { bgColor: "transparent" },
         }}
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={(e) => {
+          onClose(e);
+          setIsOpen((prev) => !prev);
+        }}
       >
         <CloseIcon />
       </IconButton>
