@@ -75,7 +75,7 @@ blocks:
 
       * EIP-4844 compatibility: V0.13.1 added support for Ethereum’s long-awaited EIP-4844, resulting in significant fee reduction. Transactions on Starknet go with an average fee of $0.017 per transaction, and keeps dropping!
 
-        ![Starknet's daily average USDC transfer fee ](/assets/starknet-daily-average-usdc-transfer-fee-.png)
+        ![Starknet's daily average USDC transfer fee ](/assets/starknetdailyaverageusdctransferfee-ezgif.com-resize.png)
       * Transaction parallelization: V0.13.2 will enable concurrent execution of independent transactions. This means Starknet will process a greater number of transactions simultaneously, resulting in improved throughput and faster L2 finality. ERC-20 transfers from different users, for example, will be executed concurrently instead of sequentially.
 
       * Cairo-native integration: V0.13.3 will integrate the state-of-the-art Cairo Native project by LambdaClass into the Starknet sequencer. The integration is a joint effort with Nethermind and will result in a massive performance improvement by allowing the sequencer to transition from the Cairo VM to direct execution on x86 architecture, making the running a transaction on Starknet much faster. This in effect will greatly accelerate transaction execution, reducing latency and increasing throughput.
@@ -86,7 +86,6 @@ blocks:
 
       **V.0.14.0** is currently planned to focus on further fee reduction. The precise content of this upgrade will depend on the long term effects of EIP-4844 and the performance improvements leading up to it. Currently, three main improvements are being:
 
-        
 
       * Volition: Volition will facilitate hybrid Data Availability (DA) on Starknet, meaning developers will be able to create dApps that store data on Starknet instead of Ethereum. In doing so, developers in effect cut transaction costs for end users by trimming their L1 footprint. For more info about Volition’s design, [read here](https://www.starknet.io/en/content/volition-on-starknet-your-data-your-choice). 
 
