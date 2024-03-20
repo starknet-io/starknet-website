@@ -1,0 +1,101 @@
+id: 90c74597-1d04-4053-ad04-10f063f17c0c
+post_type: article
+isFeatured: false
+title: Starknet’s Roadmap
+seoTitle: "What’s coming next for Starknet "
+published_date: 2024-03-20T11:49:45.532Z
+image: /assets/digital-board-game.jpg
+category:
+  - a20b045f-7820-4a63-842f-0eb3753f1ec6
+topic:
+  - decentralization
+  - bf9c7bc3-ba10-4865-8e69-8be4cfa68f29
+post_desc: |
+  A major boost in throughput and slashed transaction fees are on the way.
+seo_desc: Developers and users on Starknet can look forward to a major boost in
+  throughput and reduction in transaction fees this year.
+seoFocusKeywords:
+  - starkent
+  - fees
+blocks:
+  - type: markdown
+    body: >-
+      ## TL;DR
+
+
+      * We hear you! In 2023 the Starknet community demanded greater focus on improving Starknet’s performance, reducing fees, and wider intervals between version upgrades.
+
+      * The Starknet roadmap homes in on all this, plus improved scalability.
+
+      * From parallel transactions and greater data availability to Cairo-native integration, Starknet devs and users can rely on a major boost in throughput and a huge reduction in transaction fees this year.
+
+
+      ## Intro 
+
+
+      Starknet is home to the fastest-growing Layer 2 (L2) developer community. Over the past year, the network marked the beginning of its quantum leap forward in enhanced performance and scalability (featuring a 10x increase in throughput with the release of Starknet Alpha v0.12.0), as well as welcomed its first appchain, the crypto-derivatives exchange Paradex, and more.
+
+
+      Throughout 2023, the Starknet team has paid attention to feedback from the community - users and developers - regarding what they would like to see going forward. This primarily included:
+
+
+      * Performance improvements and fees reductions, to which you can see our recently shared [game plan](https://www.starknet.io/en/content/starknets-game-plan-for-slashing-fees-in-2024).
+
+      * More time between versions to allow developers to maximize development time and minimize the overhead of upgrades.
+
+
+      This blog post will outline [Starknet's Roadmap](https://community.starknet.io/t/starknet-2024-roadmap-plan-of-intent/113006) and the major performance upgrades and fee reduction plans that aim to further enhance Starknet’s scaling capabilities.
+
+
+      ![Starknet Roadmap for 2024 ](/assets/2-10-.png)
+
+
+      ## Performance: Post Dencun
+
+
+      One of Starknet’s main goals for the coming months is to improve network performance—specifically throughput—in order to support the expected rise in the number of users and developers on the network. This is why we made sure to be EIP-4844 ready from day one. Starknet enabled the blob function within a few hours of the Dencun upgrade and was the first L2 to offer a major drop in users’ fees. 
+
+
+      ![Transaction cost post EIP 4844 ](/assets/screenshot-2024-03-17-at-11.17.48.png)
+
+
+      Source: https://fees-growthepie.streamlit.app/
+
+
+      Starknet is ideally positioned to capitalize on EIP-4844, adding scalability measures of its own on top of the upgrade. 
+
+
+      After kicking off 2024 with Starknet [v0.13.0](https://community.starknet.io/t/starknet-v0-13-0-support-for-fee-payment-in-strk-reduced-transaction-fees/109608), which expanded block size on the network and reduced transaction fees by up to 25%, here are additional upgrades to boost Starknet’s performance:
+
+
+      * EIP-4844 compatibility: V0.13.1 added support for Ethereum’s long-awaited EIP-4844, resulting in significant fee reduction. Transactions on Starknet go with an average fee of $0.017 per transaction, and keeps dropping!
+
+        ![Starknet's daily average USDC transfer fee ](/assets/starknet-daily-average-usdc-transfer-fee-.png)
+      * Transaction parallelization: V0.13.2 will enable concurrent execution of independent transactions. This means Starknet will process a greater number of transactions simultaneously, resulting in improved throughput and faster L2 finality. ERC-20 transfers from different users, for example, will be executed concurrently instead of sequentially.
+
+      * Cairo-native integration: V0.13.3 will integrate the state-of-the-art Cairo Native project by LambdaClass into the Starknet sequencer. The integration is a joint effort with Nethermind and will result in a massive performance improvement by allowing the sequencer to transition from the Cairo VM to direct execution on x86 architecture, making the running a transaction on Starknet much faster. This in effect will greatly accelerate transaction execution, reducing latency and increasing throughput.
+
+
+      ## More (!) reduced transaction fees
+
+
+      **V.0.14.0** is currently planned to focus on further fee reduction. The precise content of this upgrade will depend on the long term effects of EIP-4844 and the performance improvements leading up to it. Currently, three main improvements are considered to the end of fee reduction: 
+
+
+      * Volition: Volition will facilitate hybrid Data Availability (DA) on Starknet, meaning developers will be able to create dApps that store data on Starknet instead of Ethereum. In doing so, developers in effect cut transaction costs for end users by trimming their L1 footprint. For more info about Volition’s design, [read here](https://www.starknet.io/en/content/volition-on-starknet-your-data-your-choice). 
+
+      * Applicative recursion: Applicative recursion will allow for batching of the L1 footprints (evidence for data storage) of many blocks, leading to better batching of L1 costs and, consequently, fee reduction for end users. 
+
+      * DA compression: As its name suggests, DA compression will reduce Starknet's data footprint on L1, translating into lower fees for end users. Currently, we are exploring two possible recursion methods to enable this feature.   
+
+
+      ## Summary 
+
+
+      In the coming up months, Starknet users and developers will experience improvements in throughput and event more fee reductions, beyond the ones achieved lately as a result of a string of key performance upgrades, following requests from the Starknet community. 
+
+
+      The short-term roadmap for Starknet v0.13.0 (v0.13.1 and v0.13.2)is fixed, however, the mid-to-long term roadmap is more moldable. The Starknet community plays a major role in the trajectory of the network, and community feedback is welcome. What’s for certain is everyone can expect innovative solutions that will continue to improve scalability on the leading Ethereum L2 going forward.
+
+
+      For updates on performance upgrades and more, follow Starknet on [X](https://twitter.com/Starknet?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) and keep an eye on the [Starknet Community Forum](https://community.starknet.io/)!
