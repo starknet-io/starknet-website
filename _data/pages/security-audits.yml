@@ -77,6 +77,12 @@ blocks:
         image: /assets/zellic_telegram-badge_hexagon-1.png
         twitter: https://twitter.com/zellic_io
         website_url: https://www.zellic.io/
+      - title: CairoSecurityClan
+        description: Most talented Starknet auditors united to secure the Starknet
+          ecosystem.
+        image: /assets/img_7042.png
+        website_url: https://cairosecurityclan.com/
+        twitter: https://twitter.com/cairoaudit
   - type: card_list
     randomize: true
     title: Bug Bounty Program
