@@ -123,4 +123,9 @@ blocks:
         twitter: https://twitter.com/getblockio
         discord: https://discord.gg/Hxw3BQ53
         image: /assets/logotype1.png
+      - title: Reddio
+        description: A globally low-latency Starknet RPC node service
+        image: /assets/logo_bak.jpg
+        website_url: https://www.reddio.com/node
+        twitter: https://twitter.com/reddio-com
     randomize: true
