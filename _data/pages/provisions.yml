@@ -1,0 +1,406 @@
+id: 0d92334b-d365-40c5-a2b3-8b1109a3d825
+title: dApps on Starknet
+template: landing
+hideToc: false
+hidden_page: false
+breadcrumbs: true
+page_last_updated: true
+blocks:
+  - type: hero
+    variant: dapps
+    title: dApps on Starknet
+    description: ""
+  - type: heading_container
+    heading_variant: h3
+    blocks: []
+    heading: test
+  - type: flex_layout
+    heading_variant: null
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: AVNU
+        icon: /assets/avnu-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: AVNU is the Starknet Liquidity Infrastructure empowering traders,
+          dApps and wallets with Execution Swap.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Fibrous
+        icon: /assets/fibrous-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: Fibrous gathers all AMMs of Starknet at one place.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: OpenOcean
+        icon: /assets/openocean-logo.webp
+        type: image_icon_link_card
+        description: OpenOcean is a leading DEX Aggregator, offering users swap return
+          for decentralized crypto trading.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Ekubo
+        icon: /assets/ekubo-logo.png
+        type: image_icon_link_card
+        description: Ekubo Protocol is a highly optimized AMM for Starknet, featuring
+          concentrated liquidity and extensibility.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: 10K Swap
+        icon: /assets/10k-swap-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: 10KSwap is a Layer 2 AMM protocol building on Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Hashstack
+        icon: /assets/hashstack-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: Hashstack is a non-custodial Zk-native money market protocol
+          enabling secure under-collateralized loans.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: "Carmine Options "
+        icon: /assets/carmine-options-logo.jpg
+        type: image_icon_link_card
+        description: Carmine Options is an Automated Market Maker enabling anyone to buy
+          and sell options at a fair price.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: zkLend
+        icon: /assets/zklend-logo.png
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: zkLend is a money market protocol combining zk rollup scalability,
+          transaction speed with Ethereum's security.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Orbiter Finance
+        icon: /assets/orbiter.jpg
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://www.orbiter.finance/?source=Ethereum&dest=Starknet
+        description: "Orbiter allows users to send funda across multiple L2 networks. "
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Rhino.fi
+        icon: /assets/rhino.fi-logo.png
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=ETHEREUM
+        description: "Rhino.fi is a lightning-fast secure bridge for seamless
+          cross-chain transactions. "
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Carbonable
+        icon: /assets/carbonable-logo.jpg
+        type: image_icon_link_card
+        link:
+          custom_external_link: https://t.co/k8BuwALPag
+        description: Carbonable allows users to fund high-quality nature regeneration
+          projects and get prime carbon credits.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Layerswap
+        icon: /assets/layerswap.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: Layerswap allows users to move crypto between exchanges and layer 2s.
+        columns: "4"
+    base: 1
+    md: 2
+    lg: 3
+    xl: 4
+    heading: DeFi
+  - type: flex_layout
+    heading_variant: sm
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Loot Survivor
+        icon: /assets/loot-survivor-logo.png
+        type: image_icon_link_card
+        description: Loot Survivor, a fully onchain game where strategy meets adventure.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Influence
+        icon: /assets/influence-logo.png
+        type: image_icon_link_card
+        description: Influence is an open-economy, space strategy MMO in which players
+          own all of their content.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Shoshin
+        icon: /assets/shoshin-logo.png
+        type: image_icon_link_card
+        description: Shoshin is a TPS-agnostic Asynchronous Strategy Game on Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Tsubasa
+        type: image_icon_link_card
+        description: Tsubasa is an onchain game built with Dojo Engine, running on a
+          Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Eykar
+        icon: /assets/eykar-logo.png
+        type: image_icon_link_card
+        description: Eykar is a decentralized strategy game powered by Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: GoL2
+        icon: /assets/gol2-logo.jpg
+        type: image_icon_link_card
+        description: Game of Life (also knows as "Life"), is a well known example of a
+          cellular automaton.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: The Ninth
+        icon: /assets/the-ninth-logo.png
+        type: image_icon_link_card
+        description: A crypto-native and strongly on-chain metagame powered by Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Phantom Spirit Arena
+        icon: /assets/phantom-spirit-arena-logo.jpg
+        type: image_icon_link_card
+        description: An exciting PVP game that combines blockchain technology and
+          fantasy elements on Starknet.
+        columns: "4"
+    base: 11
+    md: 2
+    lg: 5
+    xl: 4
+    heading: Gaming
+  - type: flex_layout
+    heading_variant: sm
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Focus Tree
+        icon: /assets/focus-tree-logo.jpg
+        type: image_icon_link_card
+        description: Focus Tree is a web3 focus app to help you spend less time on your
+          phone.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: briq
+        icon: /assets/briq-logo.png
+        type: image_icon_link_card
+        description: briq allows users to build NFTs out of tiny cubes stored on the
+          blockchain called briqs.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Lotus
+        icon: /assets/lotus-logo.png
+        type: image_icon_link_card
+        description: Lotus is a permissionless NFT raffle platform, creating new use
+          cases for NFTs.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: StarkRocks
+        icon: /assets/starkrocks-logo.jpeg
+        type: image_icon_link_card
+        description: 444 OG Rocks of Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Ark Project
+        icon: /assets/ark-project-logo-new.jpg
+        type: image_icon_link_card
+        description: Build the liquidity layer for digital assets uniting markets,
+          empowering creators, bridging the gap to mass adoption.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Starknet.id
+        icon: /assets/starknet-id-logo.jpg
+        type: image_icon_link_card
+        description: Starknet.id is an identity and naming service for Starknet. Mint
+          your identity and choose your .stark domain now.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Ducks Everywhere
+        icon: /assets/ducks-everywhere-logo.jpeg
+        type: image_icon_link_card
+        description: "Handmade PFP collection of duuucks made from Briq by OutSmth. "
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Pxls
+        icon: /assets/pxls-logo.png
+        type: image_icon_link_card
+        description: "Pxls is an on-chain collaborative commissioned art experiment. "
+        columns: "4"
+    base: 1
+    md: 62
+    lg: 3
+    xl: 4
+    heading: "Entertainment & Social "
+  - type: flex_layout
+    heading_variant: sm
+    blocks:
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Argent
+        icon: /assets/argent.jpg
+        type: image_icon_link_card
+        link:
+          custom_title: ""
+        description: Argent is a simple and secure smart wallet for Starknet. Argent
+          have a mobile app and Argent X, their browser wallet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: Braavos
+        icon: /assets/braavos-logo.png
+        type: image_icon_link_card
+        description: Braavos is a smart contract wallet for managing funds and NFTs, and
+          connecting to dApps on Starknet.
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: OKX
+        icon: /assets/okx-logo.jpg
+        type: image_icon_link_card
+        description: "OKX is a leading Web3 multi-chain wallet. "
+        columns: "4"
+      - size: large
+        color: blue-default
+        variant: image_icon_link_card
+        orientation: left
+        withIllustration: false
+        title: MetaMask Snaps
+        icon: /assets/starkware-metamask.png
+        type: image_icon_link_card
+        description: "Manage your Starknet assets with MetaMask Snap. "
+        columns: "4"
+    base: 1
+    md: 2
+    lg: 3
+    xl: 4
+    heading: Wallets
