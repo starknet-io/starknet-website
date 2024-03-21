@@ -9,12 +9,10 @@ import { getLatestAnnouncements } from "@starknet-io/cms-data/src/settings/lates
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
   const { locale } = defaultPageContext;
-  const latestAnnouncements = await getLatestAnnouncements(pageContext.context);
-  console.log("latestAnnouncements", latestAnnouncements);
 
   const pageProps: Props = {
     categories: await getCategories(locale, pageContext.context),
-    latestAnnouncements: latestAnnouncements,
+    latestAnnouncements: await getLatestAnnouncements(pageContext.context),
     topics: await getTopics(locale, pageContext.context),
     roadmapVersions: await getRoadmapVersions(locale, pageContext.context),
   };

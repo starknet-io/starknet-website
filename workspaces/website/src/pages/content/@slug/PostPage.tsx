@@ -319,19 +319,20 @@ export function PostPage(props: Props): JSX.Element {
             locale: [locale],
           }}
         />
-        <SideStickyBanner>
-          <div>hhhhhhh</div>
-          {/* {latestAnnouncements.map((announcement) =>
-          announcement.isActive ? (
-            <SideStickyBannerCard
-              image={announcement.image}
-              text={announcement.text}
-              buttonText={announcement.buttonText}
-              buttonLink={announcement.buttonLink}
-            />
-          ) : null
-        )} */}
-        </SideStickyBanner>
+        {latestAnnouncements && (
+          <SideStickyBanner>
+            {latestAnnouncements.map((announcement) =>
+              announcement.isActive ? (
+                <SideStickyBannerCard
+                  image={announcement.image}
+                  text={announcement.text}
+                  buttonText={announcement.buttonText}
+                  buttonLink={announcement.buttonLink}
+                />
+              ) : null
+            )}
+          </SideStickyBanner>
+        )}
         <RelatedSection post={post} topics={topics} />
       </InstantSearch>
     </Container>
