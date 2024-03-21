@@ -20,12 +20,14 @@ import { PostTypeFilter } from "@ui/Blog/Filters/PostType";
 import qs from "qs";
 import { TopicList } from "@ui/Blog/TopicsList";
 import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
+import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
+import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
   readonly featuredSections: readonly string[];
   readonly topics: readonly Topic[];
-  readonly latestAnnouncementsSection: readonly LatestAnnouncements[];
+  readonly latestAnnouncementsSection: LatestAnnouncements[];
   readonly params: LocaleParams & {
     readonly postType?: string;
     readonly topicFilters?: readonly string[];
@@ -41,8 +43,8 @@ export function PostsPage({
   env,
   params,
   categories,
-  featuredSections,
   latestAnnouncementsSection,
+  featuredSections,
   topics,
 }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
@@ -78,7 +80,6 @@ export function PostsPage({
             [params.locale]
           )}
         />
-
         <Container
           maxW="1344px"
           display={"grid"}
@@ -163,6 +164,18 @@ export function PostsPage({
               </InstantSearch>
             ))}
           </Flex>
+          <SideStickyBanner>
+            {latestAnnouncementsSection.map((announcement) =>
+              announcement.isActive ? (
+                <SideStickyBannerCard
+                  image={announcement.image}
+                  text={announcement.text}
+                  buttonText={announcement.buttonText}
+                  buttonLink={announcement.buttonLink}
+                />
+              ) : null
+            )}
+          </SideStickyBanner>
         </Container>
       </InstantSearch>
 

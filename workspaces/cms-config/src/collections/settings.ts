@@ -384,7 +384,7 @@ export const settingsCollectionConfig = {
     {
       label: "Latest Announcements",
       name: "LatestAnnouncements",
-      file: `_data/settings/latestAnnouncements.yml`,
+      file: `_data/settings/latest-announcements.yml`,
       crowdin: false,
       fields: [
         {

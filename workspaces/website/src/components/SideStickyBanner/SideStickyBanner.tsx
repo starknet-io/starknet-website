@@ -8,7 +8,7 @@ interface NavbarStickyBannerProps {
 const SideStickyBanner = ({ children }: NavbarStickyBannerProps) => {
   return (
     <Box
-      position={{ base: "relative", lg: "absolute" }}
+      position={{ base: "relative", lg: "fixed" }}
       top={{ base: "unset", lg: "224px" }}
       right={{ base: "unset", lg: "32px" }}
       width={{ base: "100%", lg: "225px" }}

@@ -5,21 +5,20 @@ export type LatestAnnouncements = {
   text: string;
   buttonText: string;
   buttonLink: string;
-}[];
+  isActive: boolean;
+};
 
-/**
- * Export `getFeaturedSections` function.
- */
 export async function getLatestAnnouncements(
   context: EventContext<{}, any, Record<string, unknown>>
 ) {
   try {
-    const sections = await getJSON(
+    const latestAnnouncements = await getJSON(
       "data/latest-announcements/latest-announcements",
       context
     );
-    console.log("sections", sections);
-    return sections;
+    console.log("latestAnnouncements", latestAnnouncements);
+
+    return latestAnnouncements;
   } catch (cause) {
     throw new Error("getFeaturedSection failed!", {
       cause,

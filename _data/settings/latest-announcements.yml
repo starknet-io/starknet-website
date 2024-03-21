@@ -1,9 +1,10 @@
-items:
-- image: avi
-  text: tal
-  buttonText: tal
-  buttonLink: go
-- image: gil
-  text: kobi
-  buttonText: dani
-  buttonLink: boy
+  - isActive: true
+    image: /
+    text: dfdf
+    buttonText: dfdf
+    buttonLink: /
+  - isActive: true
+    image: /
+    text: sdfgsdfsg
+    buttonText: sdfgsdfg
+    buttonLink: /
