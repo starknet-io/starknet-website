@@ -1,6 +1,11 @@
 import { getJSON } from "@starknet-io/cms-utils/src/index";
 
-export type FeaturedSections = string[];
+export type LatestAnnouncements = {
+  image: string;
+  text: string;
+  buttonText: string;
+  buttonLink: string;
+}[];
 
 /**
  * Export `getFeaturedSections` function.
@@ -14,8 +19,7 @@ export async function getLatestAnnouncements(
       context
     );
     console.log("sections", sections);
-    return;
-    // return sections.items.map((item: { category: string }) => item.category);
+    return sections;
   } catch (cause) {
     throw new Error("getFeaturedSection failed!", {
       cause,

@@ -5,16 +5,23 @@ import { Props } from "./PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 import { getFeaturedSections } from "@starknet-io/cms-data/src/settings/featured-settings";
 import qs from "qs";
+import { getLatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
-  const query = qs.parse((pageContext as any)._urlPristine?.split("?")[1] ?? '');
+  const query = qs.parse(
+    (pageContext as any)._urlPristine?.split("?")[1] ?? ""
+  );
   const { locale } = defaultPageContext;
   const featuredSections = await getFeaturedSections(pageContext.context);
+  const latestAnnouncementsSection = await getLatestAnnouncements(
+    pageContext.context
+  );
 
   const pageProps: Props = {
     categories: await getCategories(locale, pageContext.context),
     featuredSections,
+    latestAnnouncementsSection,
     topics: await getTopics(locale, pageContext.context),
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
@@ -23,12 +30,14 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     },
     params: {
       locale,
-      ...query.postType && {
+      ...(query.postType && {
         postType: query.postType as string,
-      },
-      ...!!query.topicFilters && {
-        topicFilters: (Array.isArray(query.topicFilters) ? query.topicFilters : [query.topicFilters]) as string[],
-      }
+      }),
+      ...(!!query.topicFilters && {
+        topicFilters: (Array.isArray(query.topicFilters)
+          ? query.topicFilters
+          : [query.topicFilters]) as string[],
+      }),
     },
   };
 

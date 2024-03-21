@@ -8,10 +8,7 @@ import {
 
 import { useMemo } from "react";
 import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-} from "react-instantsearch-hooks-web";
+import { InstantSearch, Configure } from "react-instantsearch-hooks-web";
 
 import type { Category } from "@starknet-io/cms-data/src/categories";
 import type { Topic } from "@starknet-io/cms-data/src/topics";
@@ -22,11 +19,13 @@ import { FilterButton } from "@ui/Blog/Filters/Button";
 import { PostTypeFilter } from "@ui/Blog/Filters/PostType";
 import qs from "qs";
 import { TopicList } from "@ui/Blog/TopicsList";
+import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
   readonly featuredSections: readonly string[];
   readonly topics: readonly Topic[];
+  readonly latestAnnouncementsSection: readonly LatestAnnouncements[];
   readonly params: LocaleParams & {
     readonly postType?: string;
     readonly topicFilters?: readonly string[];
@@ -48,19 +47,21 @@ export function PostsPage({
   const searchClient = useMemo(() => {
     return algoliasearch(env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY);
   }, [env.ALGOLIA_APP_ID, env.ALGOLIA_SEARCH_API_KEY]);
-  
+
   const featuredCategories = useMemo(() => {
-    return categories.filter(category => featuredSections.includes(category.id))
+    return categories.filter((category) =>
+      featuredSections.includes(category.id)
+    );
   }, [categories, featuredSections]);
 
-  const isMobile = useBreakpointValue({ base: true, lg: false })
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
     <Box
       pt="18"
       minH="100vh"
       sx={{
-        '--posts-gutter': isMobile ? `24px` : `64px`
+        "--posts-gutter": isMobile ? `24px` : `64px`,
       }}
     >
       <InstantSearch
@@ -79,38 +80,38 @@ export function PostsPage({
 
         <Container
           maxW="1344px"
-          display={'grid'}
+          display={"grid"}
           gridTemplateColumns={{
-            base: 'auto',
-            lg: 'auto  1fr'
+            base: "auto",
+            lg: "auto  1fr",
           }}
-          columnGap={'115px'}
+          columnGap={"115px"}
           mt={{
-            base: '8px',
-            lg: '78px'
+            base: "8px",
+            lg: "78px",
           }}
-          mb={'4px'}
+          mb={"4px"}
           padding={`0 var(--posts-gutter) !important`}
-          rowGap={'24px'}
+          rowGap={"24px"}
         >
           {!isMobile && (
             <>
               <Heading
-                alignSelf={'end'}
-                color={'heading-navy-fg'}
-                fontSize={'20px'}
-                variant={'h5'}
+                alignSelf={"end"}
+                color={"heading-navy-fg"}
+                fontSize={"20px"}
+                variant={"h5"}
               >
-                {'Explore'}
+                {"Explore"}
               </Heading>
 
               <PostTypeFilter
-                display={'flex'}
-                columnGap={'12px'}
-                ml={'auto'}
-                buttonHref={postType => 
+                display={"flex"}
+                columnGap={"12px"}
+                ml={"auto"}
+                buttonHref={(postType) =>
                   `/${params.locale}/content/category/all?${qs.stringify({
-                    postType
+                    postType,
                   })}`
                 }
               />
@@ -121,32 +122,26 @@ export function PostsPage({
             <CategoryList categories={categories} params={params} />
           )}
 
-          <Flex
-            flexDirection={'column'}
-            rowGap={'96px'}
-          >
+          <Flex flexDirection={"column"} rowGap={"96px"}>
             <Box>
               {!isMobile && (
-                <TopicList 
+                <TopicList
                   category={{
-                    id: 'all',
-                    name: 'All posts',
-                    slug: 'all'
+                    id: "all",
+                    name: "All posts",
+                    slug: "all",
                   }}
-                  marginBottom={'24px'}
+                  marginBottom={"24px"}
                   params={params}
                   query={{}}
                   topics={topics}
                 />
               )}
 
-              <FeaturedSection
-                topics={topics as Topic[]}
-                params={params}
-              />
+              <FeaturedSection topics={topics as Topic[]} params={params} />
             </Box>
 
-            {featuredCategories.map(category => (
+            {featuredCategories.map((category) => (
               <InstantSearch
                 key={category.id}
                 searchClient={searchClient}
@@ -156,7 +151,7 @@ export function PostsPage({
                   hitsPerPage={6}
                   facetsRefinements={{
                     category: [category.id],
-                    locale: [params.locale]
+                    locale: [params.locale],
                   }}
                 />
 
@@ -172,11 +167,7 @@ export function PostsPage({
       </InstantSearch>
 
       {isMobile && (
-        <FilterButton
-          categories={categories}
-          params={params}
-          topics={topics}
-        />
+        <FilterButton categories={categories} params={params} topics={topics} />
       )}
     </Box>
   );
@@ -189,14 +180,14 @@ type VideoData = {
   snippet: object;
   contentDetails: {
     duration: string;
-  }
-}
+  };
+};
 
 type Video = {
   data: VideoData;
   url: string;
   id: string;
-}
+};
 
 export type BlogHit = {
   readonly id: string;
