@@ -89,9 +89,9 @@ blocks:
 
       * Volition: Volition will facilitate hybrid Data Availability (DA) on Starknet, meaning developers will be able to create dApps that store data on Starknet instead of Ethereum. In doing so, developers in effect cut transaction costs for end users by trimming their L1 footprint. For more info about Volition’s design, [read here](https://www.starknet.io/en/content/volition-on-starknet-your-data-your-choice). 
 
-      * Applicative compression: Applicative compression will allow for batching of the L1 footprints (evidence for data storage) of many blocks, leading to better batching of L1 costs and, consequently, fee reduction for end users. 
+      * Applicative recursion: Applicative compression will allow for batching of the L1 footprints (evidence for data storage) of many blocks, leading to better batching of L1 costs and, consequently, fee reduction for end users. 
 
-      * DA compression: As its name suggests, DA compression will reduce Starknet's data footprint on L1, translating into lower fees for end users. Currently, we are exploring two possible compression methods to enable this feature.   
+      * DA recursion: As its name suggests, DA compression will reduce Starknet's data footprint on L1, translating into lower fees for end users. Currently, we are exploring two possible compression methods to enable this feature.   
 
 
       ## Summary 
