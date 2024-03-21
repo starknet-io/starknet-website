@@ -89,9 +89,9 @@ blocks:
 
       * Volition: Volition will facilitate hybrid Data Availability (DA) on Starknet, meaning developers will be able to create dApps that store data on Starknet instead of Ethereum. In doing so, developers in effect cut transaction costs for end users by trimming their L1 footprint. For more info about Volition’s design, [read here](https://www.starknet.io/en/content/volition-on-starknet-your-data-your-choice). 
 
-      * Applicative recursion: Applicative recursion will allow for batching of the L1 footprints (evidence for data storage) of many blocks, leading to better batching of L1 costs and, consequently, fee reduction for end users. 
+      * Applicative compression: Applicative compression will allow for batching of the L1 footprints (evidence for data storage) of many blocks, leading to better batching of L1 costs and, consequently, fee reduction for end users. 
 
-      * DA compression: As its name suggests, DA compression will reduce Starknet's data footprint on L1, translating into lower fees for end users. Currently, we are exploring two possible recursion methods to enable this feature.   
+      * DA compression: As its name suggests, DA compression will reduce Starknet's data footprint on L1, translating into lower fees for end users. Currently, we are exploring two possible compression methods to enable this feature.   
 
 
       ## Summary 
@@ -100,7 +100,7 @@ blocks:
       In the coming up months, Starknet users and developers will experience improvements in throughput and even more fee reductions, beyond the ones achieved lately as a result of a string of key performance upgrades, following requests from the Starknet community. 
 
 
-      The short-term roadmap for Starknet v0.13.0 (v0.13.1 and v0.13.2)is fixed, however, the mid-to-long term roadmap is more moldable. The Starknet community plays a major role in the trajectory of the network, and community feedback is welcome. What’s for certain is everyone can expect innovative solutions that will continue to improve scalability on the leading Ethereum L2 going forward.
+      The short-term roadmap for Starknet v0.13.0 (v0.13.1 and v0.13.2) is fixed, however, the mid-to-long term roadmap is more moldable. The Starknet community plays a major role in the trajectory of the network, and community feedback is welcome. What’s for certain is everyone can expect innovative solutions that will continue to improve scalability on the leading Ethereum L2 going forward.
 
 
       For updates on performance upgrades and more, follow Starknet on [X](https://twitter.com/Starknet?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) and keep an eye on the [Starknet Community Forum](https://community.starknet.io/)!
