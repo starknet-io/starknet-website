@@ -1,7 +1,7 @@
 import { Center, Text, IconButton } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 interface NavbarStickyBannerProps {
   text: string;
@@ -15,35 +15,19 @@ const NavbarStickyBanner = ({
   buttonLink,
 }: NavbarStickyBannerProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
-  const centerRef = useRef<HTMLDivElement>(null);
+
   const gtmEvent = (target: string) =>
     window.gtag?.("event", target, { event_category: "engagement" });
 
-  const onClose = (event: React.MouseEvent) => {
+  const onClose = () => {
     gtmEvent("Navbar_banner_close");
     setIsOpen(false);
   };
 
-  const onReadMore = (event: React.MouseEvent) =>
-    gtmEvent("Navbar_banner_read_more");
-
-  useEffect(() => {
-    const componentHeight =
-      document.getElementById("navbar_banner")?.offsetHeight;
-    const div = document.getElementById("home_hero");
-    if (!div || !componentHeight) return;
-    div.style.marginTop = `${componentHeight}px`;
-  }, [centerRef]);
+  const onReadMore = () => gtmEvent("Navbar_banner_read_more");
 
   return (
     <Center
-      ref={centerRef}
-      id="navbar_banner"
-      position="fixed"
-      top="78px"
-      left={0}
-      right={0}
-      height={{ base: "87px", sm: 12 }}
       px={{ base: 2, xl: "unset" }}
       bgColor="snNavy"
       display={isOpen ? "flex" : "none"}
@@ -51,7 +35,7 @@ const NavbarStickyBanner = ({
       zIndex={10}
       _dark={{ bgColor: "accent" }}
     >
-      {centerRef && (
+      {
         <>
           <Center margin="auto" gap={{ xs: 1, sm: 6 }} height="100%">
             <Text
@@ -96,7 +80,7 @@ const NavbarStickyBanner = ({
             <CloseIcon />
           </IconButton>
         </>
-      )}
+      }
     </Center>
   );
 };

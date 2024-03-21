@@ -12,6 +12,7 @@ import { ThemeProvider } from "./ThemeProvider";
 import { PageContainer } from "src/pages/(components)/PageContainer";
 import Navbar from "src/pages/(components)/Navbar";
 import { Footer } from "src/pages/(components)/Footer";
+import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 
 interface Props {
   readonly pageContext: PageContext;
@@ -58,9 +59,12 @@ function PageLayout(props: Props) {
             ALGOLIA_APP_ID: import.meta.env.VITE_ALGOLIA_APP_ID!,
             ALGOLIA_SEARCH_API_KEY: import.meta.env
               .VITE_ALGOLIA_SEARCH_API_KEY!,
+            CLOUDFLARE_RECAPTCHA_KEY: import.meta.env
+              .VITE_CLOUDFLARE_RECAPTCHA_KEY!,
           }}
           searchSEO={pageContext.seo?.search}
           languageCenterSeo={pageContext.seo?.language}
+          pageBlocks={pageContext.pageProps?.data?.blocks as TopLevelBlock[]}
         />
         {children}
       </PageContainer>
