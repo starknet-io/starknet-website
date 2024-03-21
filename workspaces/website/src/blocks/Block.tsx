@@ -160,24 +160,26 @@ export function Block({
         }}
       />
     );
-  } else if (block.type === "side_sticky_banner") {
-    return block.isActive ? (
-      <SideStickyBanner>
-        {block.blocks.map((block, i) => (
-          <Block env={env} key={i} block={block} locale={locale} />
-        ))}
-      </SideStickyBanner>
-    ) : null;
-  } else if (block.type === "side_sticky_banner_card") {
-    return block.isActive ? (
-      <SideStickyBannerCard
-        image={block.image}
-        text={block.text}
-        buttonText={block.buttonText}
-        buttonLink={block.buttonLink}
-      />
-    ) : null;
-  } else if (block.type === "video_section") {
+  }
+  //  else if (block.type === "side_sticky_banner") {
+  //   return block.isActive ? (
+  //     <SideStickyBanner>
+  //       {block.blocks.map((block, i) => (
+  //         <Block env={env} key={i} block={block} locale={locale} />
+  //       ))}
+  //     </SideStickyBanner>
+  //   ) : null;
+  // } else if (block.type === "side_sticky_banner_card") {
+  //   return block.isActive ? (
+  //     <SideStickyBannerCard
+  //       image={block.image}
+  //       text={block.text}
+  //       buttonText={block.buttonText}
+  //       buttonLink={block.buttonLink}
+  //     />
+  //   ) : null;
+  // }
+  else if (block.type === "video_section") {
     return <VideoSectionBlock {...block} />;
   } else {
     // this will report type error if there is unhandled block.type

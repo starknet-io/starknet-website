@@ -24,5 +24,5 @@ export const collections: CmsConfig["collections"] = [
   SEOCollectionConfig,
   roadmapPostsCollectionConfig,
   roadmapVersionsCollectionConfig,
-  announcementsCollectionConfig
+  announcementsCollectionConfig,
 ];

@@ -16,10 +16,9 @@ const SideStickyBannerCard = ({
 }: LatestAnnouncementCardProps) => {
   const gtmEvent = (target: string) =>
     window.gtag?.("event", target, { event_category: "engagement" });
-  const onReadMore = (event: React.MouseEvent) => {
-    event.stopPropagation();
-    gtmEvent("Latest_announcement_read_more");
-  };
+
+  const onReadMore = () => gtmEvent("Latest_announcement_read_more");
+
   return (
     <Box mb={6}>
       <Image src={image} alt={image} borderRadius={8} />

@@ -1,0 +1,9 @@
+items:
+- image: avi
+  text: tal
+  buttonText: tal
+  buttonLink: go
+- image: gil
+  text: kobi
+  buttonText: dani
+  buttonLink: boy
