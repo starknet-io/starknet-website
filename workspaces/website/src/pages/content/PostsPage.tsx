@@ -42,6 +42,7 @@ export function PostsPage({
   params,
   categories,
   featuredSections,
+  latestAnnouncementsSection,
   topics,
 }: Props): JSX.Element | null {
   const searchClient = useMemo(() => {
@@ -140,7 +141,6 @@ export function PostsPage({
 
               <FeaturedSection topics={topics as Topic[]} params={params} />
             </Box>
-
             {featuredCategories.map((category) => (
               <InstantSearch
                 key={category.id}
