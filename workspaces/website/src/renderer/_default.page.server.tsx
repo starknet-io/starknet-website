@@ -47,15 +47,16 @@ export async function render(pageContext: PageContextServer) {
     userAgent: pageContext.userAgent,
   });
 
-  const GOOGLE_TAG_ID = "G-WY42TERK5P";
+  const GOOGLE_GTM_ID = "GTM-K6LVSCS9";
+
   const pageSeo = (pageProps?.data ??
     pageProps?.roadmapPost ??
     pageProps?.tutorial) as SeoType;
   const documentProps =
     pageContext.documentProps ?? pageContext.exports.documentProps;
 
-  // @ts-ignore
   const isGeoRegulationsPage =
+    // @ts-ignore
     pageProps?.data?.slug === "provisions-geo-regulations";
 
   const title = isGeoRegulationsPage
@@ -123,15 +124,14 @@ export async function render(pageContext: PageContextServer) {
        }
        </script>
 
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+       <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','${GOOGLE_GTM_ID}');</script>
+      <!-- End Google Tag Manager -->
 
-        gtag('config', '${GOOGLE_TAG_ID}');
-      </script>
       <!-- Hotjar Tracking Code for Starknet -->
       <script>
           (function(h,o,t,j,a,r){
@@ -146,13 +146,16 @@ export async function render(pageContext: PageContextServer) {
 
       ${
         pageSeo?.seoCanonicalUrl
-          ? `
-        <link rel="canonical" href="${pageSeo?.seoCanonicalUrl}" />
-      `
+          ? `<link rel="canonical" href="${pageSeo?.seoCanonicalUrl}" />`
           : ""
       }
     </head>
     <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GOOGLE_GTM_ID}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
       <div id="page-view">${stream}</div>
     </body>
   </html>`;
