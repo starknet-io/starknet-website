@@ -85,6 +85,20 @@ blocks:
         title: Token Flow
         image: /assets/token-flow-logo.jpg
         website_url: https://tokenflow.live/
+      - title: Footprint Analytics
+        description: Footprint Analytics is a data platform blending web2 and web3 data
+          with abstractions.
+        image: /assets/5336301-180.png
+        website_url: https://www.footprint.network/research/chain/chain-stats/starknet-overview?series_date-80244=past90days
+        twitter: https://twitter.com/Footprint_Data
+        discord: https://discord.gg/3HYaR6USM7
+      - title: DipDup
+        description: DipDup is an open-source indexing stack, providing GraphQL access
+          to  decoded on-chain data, NFT balances & transfers, and app-specific
+          collections.
+        twitter: https://twitter.com/dipdup_io
+        website_url: https://dipdup.io/
+        image: /assets/photo_2024-03-24-18.14.02.jpeg
   - type: card_list
     randomize: true
     title: Enhanced API
