@@ -128,4 +128,11 @@ blocks:
         image: /assets/logo_bak.jpg
         website_url: https://www.reddio.com/node
         twitter: https://twitter.com/reddio-com
+      - title: QuickNode
+        description: From elastic APIs to powerful tools and analytics, QuickNode has
+          everything you need for accessing the Starknet blockchain.
+        image: /assets/isolated-color.png
+        website_url: https://www.quicknode.com/chains/strk
+        discord: https://discord.gg/quicknode
+        twitter: https://twitter.com/quicknode
     randomize: true
