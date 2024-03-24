@@ -32,6 +32,7 @@ const NavbarStickyBanner = ({
       bgColor="snNavy"
       display={isOpen ? "flex" : "none"}
       gap={{ xs: 3, base: 6 }}
+      py={2}
       zIndex={10}
       _dark={{ bgColor: "accent" }}
     >
