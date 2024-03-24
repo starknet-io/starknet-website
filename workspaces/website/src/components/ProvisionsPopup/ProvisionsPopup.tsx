@@ -1,7 +1,7 @@
 import { Box, Image, Icon, Fade, IconButton } from "@chakra-ui/react";
 import Background from "./popup-background.png";
 import Logo from "./popup-text.svg";
-import CloseIcon from "./CloseIcon/CloseIcon";
+import CloseIcon from "@ui/Icons/CloseIcon/CloseIcon";
 import ArrowRight from "./ArrowRight/ArrowRight";
 import { Button } from "@ui/Button";
 import { useLocalStorage } from "usehooks-ts";

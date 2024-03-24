@@ -1,6 +1,6 @@
 import { Center, Text, IconButton } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
-import CloseIcon from "@ui/ProvisionsPopup/CloseIcon/CloseIcon";
+import CloseIcon from "@ui/Icons/CloseIcon/CloseIcon";
 import { useState } from "react";
 
 interface NavbarStickyBannerProps {
@@ -34,12 +34,13 @@ const NavbarStickyBanner = ({
       gap={{ xs: 3, base: 6 }}
       py={2}
       zIndex={10}
-      _dark={{ bgColor: "accent" }}
+      _dark={{ bgColor: "surfaceAccent" }}
     >
       {
         <>
           <Center margin="auto" gap={{ xs: 1, sm: 6 }} height="100%">
             <Text
+              textAlign={{ base: "left", md: "center" }}
               color="white"
               _dark={{ color: "snNavy" }}
               width={{ base: "245px", sm: "unset" }}
@@ -69,9 +70,12 @@ const NavbarStickyBanner = ({
             </Button>
           </Center>
           <IconButton
+            width="22px"
+            height="22px"
             aria-label="Close"
+            mx={3}
             _dark={{
-              color: "snNavy",
+              color: "darkMode.card",
               bgColor: "transparent",
               borderColor: "transparent",
               _hover: { bgColor: "transparent" },

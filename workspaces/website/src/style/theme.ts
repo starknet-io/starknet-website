@@ -84,7 +84,7 @@ const theme = extendTheme(proTheme, {
       100: "#FFEDEB",
       200: "#E7D5D4",
     },
-    accent: "#A4A4EA",
+    surfaceAccent: "#A4A4EA",
   },
   components: {
     Accordion: accordionTheme,

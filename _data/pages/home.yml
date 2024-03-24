@@ -7,8 +7,8 @@ page_last_updated: false
 blocks:
   - type: nav_sticky_banner
     text: Starknet is the secure scaling technology bringing Ethereum’s benefits to the world.
-    buttonText: see more
-    buttonLink: /
+    buttonText: See more
+    buttonLink: https://starkware.co
     isActive: true
   - type: group
     blocks:
