@@ -1,13 +1,6 @@
 /**
  * Module dependencies.
  */
-
-import {
-  AiFillFacebook,
-  AiFillLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
-
 import {
   Box,
   Button,
@@ -17,7 +10,6 @@ import {
   Grid,
   HStack,
   Heading,
-  Icon,
   Img,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -28,12 +20,6 @@ import {
   InstantSearch,
   useHits,
 } from "react-instantsearch-hooks-web";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-} from "react-share";
-
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { TableOfContents } from "src/pages/(components)/TableOfContents/TableOfContents";
 import { Text } from "@ui/Typography/Text";
@@ -51,6 +37,7 @@ import { BlogBreadcrumbs } from "@ui/Blog/BlogBreadcrumbs";
 import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
 import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
 import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
+import SocialShare from "./SocialShare/SocialShare";
 
 /**
  * Export `Props` type.
@@ -104,7 +91,7 @@ export function PostPage(props: Props): JSX.Element {
       env?.ALGOLIA_SEARCH_API_KEY ?? ""
     );
   }, [env?.ALGOLIA_APP_ID, env?.ALGOLIA_SEARCH_API_KEY]);
-  console.log(latestAnnouncements);
+  console.log(latestAnnouncements, "latestAnnouncements");
 
   return (
     <Container py="0" pb="16" maxW={"1624px"}>
@@ -265,39 +252,7 @@ export function PostPage(props: Props): JSX.Element {
                 </Button>
               ))}
             </Flex>
-
-            <Flex gap={"24px"}>
-              <Text>Share this post:</Text>
-
-              <Flex alignItems={"center"} gap={"8px"}>
-                <TwitterShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiOutlineTwitter}
-                  />
-                </TwitterShareButton>
-
-                <LinkedinShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiFillLinkedin}
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiFillFacebook}
-                  />
-                </FacebookShareButton>
-              </Flex>
-            </Flex>
+            <SocialShare env={env} params={{ slug, locale }} />
           </Box>
         </Box>
       </Grid>

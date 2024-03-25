@@ -215,11 +215,6 @@ export interface GroupBlock {
   readonly type: "group";
   readonly blocks: readonly Block[];
 }
-export interface SideStickyBannerBlock {
-  readonly type: "side_sticky_banner";
-  readonly blocks: readonly Block[];
-  readonly isActive: boolean;
-}
 export interface HeadingContainerBlock {
   readonly type: "heading_container";
   readonly heading: string;
@@ -232,8 +227,7 @@ export type TopLevelBlock =
   | FlexLayoutBlock
   | GroupBlock
   | Container
-  | HeadingContainerBlock
-  | SideStickyBannerBlock;
+  | HeadingContainerBlock;
 
 export interface Page extends Meta {
   readonly id: string;
