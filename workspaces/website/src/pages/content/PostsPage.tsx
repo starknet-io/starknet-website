@@ -19,9 +19,6 @@ import { FilterButton } from "@ui/Blog/Filters/Button";
 import { PostTypeFilter } from "@ui/Blog/Filters/PostType";
 import qs from "qs";
 import { TopicList } from "@ui/Blog/TopicsList";
-import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
-import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
-import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
 
 export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
