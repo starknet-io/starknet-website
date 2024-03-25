@@ -16,7 +16,6 @@ export const HomepageHero = ({ seo }: Props) => {
     <>
       <ProvisionsPopup />
       <Box
-        id="home_hero"
         as="section"
         pt="46px"
         pb="93px"
