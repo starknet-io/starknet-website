@@ -10,6 +10,7 @@ import {
   Grid,
   HStack,
   Heading,
+  Icon,
   Img,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -37,7 +38,16 @@ import { BlogBreadcrumbs } from "@ui/Blog/BlogBreadcrumbs";
 import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
 import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
 import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
-import SocialShare from "./SocialShare/SocialShare";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
+import {
+  AiFillFacebook,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 /**
  * Export `Props` type.
@@ -252,7 +262,38 @@ export function PostPage(props: Props): JSX.Element {
                 </Button>
               ))}
             </Flex>
-            <SocialShare env={env} params={{ slug, locale }} />
+            <Flex gap={"24px"}>
+              <Text>Share this post:</Text>
+
+              <Flex alignItems={"center"} gap={"8px"}>
+                <TwitterShareButton url={shareUrl}>
+                  <Icon
+                    boxSize="28px"
+                    opacity={0.6}
+                    color="text-hero-fg"
+                    as={AiOutlineTwitter}
+                  />
+                </TwitterShareButton>
+
+                <LinkedinShareButton url={shareUrl}>
+                  <Icon
+                    boxSize="28px"
+                    opacity={0.6}
+                    color="text-hero-fg"
+                    as={AiFillLinkedin}
+                  />
+                </LinkedinShareButton>
+
+                <FacebookShareButton url={shareUrl}>
+                  <Icon
+                    boxSize="28px"
+                    opacity={0.6}
+                    color="text-hero-fg"
+                    as={AiFillFacebook}
+                  />
+                </FacebookShareButton>
+              </Flex>
+            </Flex>
           </Box>
         </Box>
       </Grid>
