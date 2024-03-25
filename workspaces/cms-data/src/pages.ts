@@ -194,8 +194,7 @@ export type Block =
   | ListCardItemsBlock
   | AmbassadorsListBlock
   | VideoSectionBlock
-  | NewsletterBlock
-  | SideStickyBannerCardBlock;
+  | NewsletterBlock;
 
 export interface Container {
   readonly type: "container";
@@ -211,14 +210,6 @@ export interface FlexLayoutBlock {
   readonly heading?: string;
   readonly heading_variant?: HeadingVariant;
   readonly blocks: readonly Block[];
-}
-export interface SideStickyBannerCardBlock {
-  readonly type: "side_sticky_banner_card";
-  readonly text: string;
-  readonly buttonText: string;
-  readonly buttonLink: string;
-  readonly image: string;
-  readonly isActive: boolean;
 }
 export interface GroupBlock {
   readonly type: "group";
