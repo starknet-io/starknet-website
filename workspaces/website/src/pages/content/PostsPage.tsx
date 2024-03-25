@@ -27,7 +27,6 @@ export interface Props extends LocaleProps {
   readonly categories: readonly Category[];
   readonly featuredSections: readonly string[];
   readonly topics: readonly Topic[];
-  readonly latestAnnouncementsSection: LatestAnnouncements[];
   readonly params: LocaleParams & {
     readonly postType?: string;
     readonly topicFilters?: readonly string[];
@@ -43,7 +42,6 @@ export function PostsPage({
   env,
   params,
   categories,
-  latestAnnouncementsSection,
   featuredSections,
   topics,
 }: Props): JSX.Element | null {
@@ -164,18 +162,6 @@ export function PostsPage({
               </InstantSearch>
             ))}
           </Flex>
-          <SideStickyBanner>
-            {latestAnnouncementsSection.map((announcement) =>
-              announcement.isActive ? (
-                <SideStickyBannerCard
-                  image={announcement.image}
-                  text={announcement.text}
-                  buttonText={announcement.buttonText}
-                  buttonLink={announcement.buttonLink}
-                />
-              ) : null
-            )}
-          </SideStickyBanner>
         </Container>
       </InstantSearch>
 

@@ -5,7 +5,6 @@ import { Props } from "./PostsPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
 import { getFeaturedSections } from "@starknet-io/cms-data/src/settings/featured-settings";
 import qs from "qs";
-import { getLatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
@@ -14,14 +13,10 @@ export async function onBeforeRender(pageContext: PageContextServer) {
   );
   const { locale } = defaultPageContext;
   const featuredSections = await getFeaturedSections(pageContext.context);
-  const latestAnnouncementsSection = await getLatestAnnouncements(
-    pageContext.context
-  );
 
   const pageProps: Props = {
     categories: await getCategories(locale, pageContext.context),
     featuredSections,
-    latestAnnouncementsSection,
     topics: await getTopics(locale, pageContext.context),
     env: {
       ALGOLIA_INDEX: import.meta.env.VITE_ALGOLIA_INDEX!,
