@@ -27,10 +27,7 @@ const NavbarStickyBanner = ({
 
   useEffect(() => {
     if (!isOpenStorage || isOpenStorage.hash.toString() !== hash)
-      return setIsOpenStorage({
-        hash,
-        isActive: true,
-      });
+      return setIsOpenStorage({ hash, isActive: true });
   }, [isOpenStorage]);
 
   const gtmEvent = (target: string) =>
@@ -38,10 +35,7 @@ const NavbarStickyBanner = ({
 
   const onClose = () => {
     gtmEvent("Navbar_banner_close");
-    setIsOpenStorage({
-      hash,
-      isActive: false,
-    });
+    setIsOpenStorage({ hash, isActive: false });
   };
 
   const onReadMore = () => gtmEvent("Navbar_banner_read_more");
