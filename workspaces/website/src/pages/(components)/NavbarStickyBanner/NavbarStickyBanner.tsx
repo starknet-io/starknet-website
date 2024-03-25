@@ -1,8 +1,9 @@
 import { Center, Text, IconButton } from "@chakra-ui/react";
 import { Button } from "@ui/Button";
 import CloseIcon from "@ui/Icons/CloseIcon/CloseIcon";
-import { useState } from "react";
-
+import { useEffect, useMemo } from "react";
+import { useLocalStorage } from "usehooks-ts";
+import { sha256 } from "js-sha256";
 interface NavbarStickyBannerProps {
   text: string;
   buttonText: string;
@@ -14,14 +15,33 @@ const NavbarStickyBanner = ({
   buttonText,
   buttonLink,
 }: NavbarStickyBannerProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpenStorage, setIsOpenStorage] = useLocalStorage(
+    "isNavbarStickyBannerOpen",
+    { hash: "", isActive: false }
+  );
+
+  const hash = useMemo(
+    () => sha256(text + buttonLink + buttonText).toString(),
+    []
+  );
+
+  useEffect(() => {
+    if (!isOpenStorage || isOpenStorage.hash.toString() !== hash)
+      return setIsOpenStorage({
+        hash,
+        isActive: true,
+      });
+  }, [isOpenStorage]);
 
   const gtmEvent = (target: string) =>
     window.gtag?.("event", target, { event_category: "engagement" });
 
   const onClose = () => {
     gtmEvent("Navbar_banner_close");
-    setIsOpen(false);
+    setIsOpenStorage({
+      hash,
+      isActive: false,
+    });
   };
 
   const onReadMore = () => gtmEvent("Navbar_banner_read_more");
@@ -30,7 +50,7 @@ const NavbarStickyBanner = ({
     <Center
       px={{ base: 2, xl: "unset" }}
       bgColor="snNavy"
-      display={isOpen ? "flex" : "none"}
+      display={isOpenStorage.isActive ? "flex" : "none"}
       gap={{ xs: 3, base: 6 }}
       py={2}
       zIndex={10}
