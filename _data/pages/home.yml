@@ -5,6 +5,12 @@ template: landing
 breadcrumbs: false
 page_last_updated: false
 blocks:
+  - type: nav_sticky_banner
+    isActive: true
+    lastUpdated: 2024-03-25T08:45:30.302Z
+    text: FGFG
+    buttonText: hello
+    buttonLink: /starknet.ioioioioioiooooioddo
   - type: group
     blocks:
       - type: home_hero
