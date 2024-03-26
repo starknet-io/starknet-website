@@ -16,6 +16,7 @@ export async function getLatestAnnouncements(
       "data/latest-announcements/latest-announcements",
       context
     );
+
     return latestAnnouncements;
   } catch (cause) {
     throw new Error("getFeaturedSection failed!", {
