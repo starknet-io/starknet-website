@@ -1,13 +1,13 @@
 import { Flex, Icon, Text } from "@chakra-ui/react";
 import {
-  FacebookShareButton,
+  // FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   TelegramShareButton,
 } from "react-share";
 import { FaTelegram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa6";
+// import { FaDiscord } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 
 interface Props {
@@ -47,14 +47,14 @@ const SocialShare = ({ params: { slug, locale }, env }: Props) => {
           />
         </TelegramShareButton>
         {/* need to be discord */}
-        <FacebookShareButton url={shareUrl}>
+        {/* <FacebookShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
             opacity={0.6}
             color="text-hero-fg"
             as={FaDiscord}
           />
-        </FacebookShareButton>
+        </FacebookShareButton> */}
         <LinkedinShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
