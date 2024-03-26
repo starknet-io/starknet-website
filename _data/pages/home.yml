@@ -55,18 +55,17 @@ blocks:
             variant: large_card
             orientation: vertical
             withIllustration: false
-            title: Thriving Ecosystem
+            title: Developer Hub
             icon: /assets/creativity-unleased.png
             type: image_icon_link_card
             link:
-              custom_title: The Growing Starknet Stack
-              custom_internal_link: /content/the-starknet-stacks-growth-spurt
-            description: Starknet's meteoric rise as a blockchain ecosystem is fueled by its
-              passionate community of developers, users, and partners. With the
-              Starknet Stack evolving at an astounding pace, this vibrant
-              collective has developed the most decentralized Rollup Stack,
-              enhancing network security, censorship resistance, resilience, and
-              transparency.
+              custom_title: Get Started with Starknet
+              custom_internal_link: /developers
+            description: Starknet is home to the fastest-growing Layer 2 (L2) developer
+              community due to its novel approach to scaling Ethereum and making
+              it economically feasible to build even the most complex dApps. The
+              Developer Hub provides a variety of manuals and resources for
+              builders, by builders, on how to get started on Starknet.
             columns: "4"
         base: 1
         md: 2
