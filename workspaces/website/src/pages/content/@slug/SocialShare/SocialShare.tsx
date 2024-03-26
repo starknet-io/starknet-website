@@ -26,10 +26,21 @@ const SocialShare = ({ params: { slug, locale }, env }: Props) => {
     env?.SITE_URL || "https://www.starknet.io"
   }${locale}/content/${slug}`;
   return (
-    <Flex gap={"24px"}>
-      <Text>Share this post:</Text>
+    <Flex
+      gap={"24px"}
+      position={{ base: "relative", lg: "fixed" }}
+      top={{ base: "unset", lg: "200px" }}
+      right={{ base: "unset", lg: "60px" }}
+      width={{ base: "100%", lg: "225px" }}
+      mt={{ base: 6, lg: "unset" }}
+    >
+      <Text display={{ base: "unset", lg: "none" }}>Share this post:</Text>
 
-      <Flex alignItems={"center"} gap={"8px"}>
+      <Flex
+        alignItems={"center"}
+        gap={"8px"}
+        flexDir={{ base: "row", lg: "column" }}
+      >
         <TwitterShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
