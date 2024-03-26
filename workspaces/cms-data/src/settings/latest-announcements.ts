@@ -16,7 +16,6 @@ export async function getLatestAnnouncements(
       "data/latest-announcements/latest-announcements",
       context
     );
-    // console.log(latestAnnouncements);
 
     return latestAnnouncements;
   } catch (cause) {

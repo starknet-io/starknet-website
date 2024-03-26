@@ -28,7 +28,7 @@ export default function LivePreviewPage({
   roadmapVersions,
 }: Props) {
   const data = usePreviewData();
-  console.log(latestAnnouncements);
+
   return (
     <ThemeProvider>
       <div className="preview-content">
