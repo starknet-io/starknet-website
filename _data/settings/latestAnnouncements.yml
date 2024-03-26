@@ -1,11 +1,11 @@
 announcements:
   - isActive: true
-    image: dfdf
-    text: dfdf
-    buttonText: dfdf
-    buttonLink: dfdf
+    image: https://s3-alpha-sig.figma.com/img/4f25/c2db/258212229ef560d9d1532f86afece898?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ao1axaEB3JqMVanh7MzyFZlST22jXH8441ELokTblRwulD~Q1IACgohvjJqQpekTgAoG4L9P4G~HZ0KD3l~kQjAXKpu8qhCjdCo2-l7ja-D-rQNyIUBO6i825yUjF~ufB6bxtI2nvQGAvPS5WeSlvqaWHhG7yqN~jIgOc6RALX0XPLAHMSjsNvztzP17pA6ru~9HcbylujwKoWJ66eIJX0d4FpiObXMGV7NwUdADh3A1yHlpnJG8XuqPYO8J9x~XMdBeq-l9tKiDVdJQxnZUjJRQ~PlGQGnuzhoi4h757vmHMGNvVbiUDPv6t952~1tzFrB06rwVI5Mxs6KJ3Bfmng__
+    text: tal ben avi
+    buttonText: code
+    buttonLink: https://www.starknet.io/
   - isActive: true
-    image: sdfgsfdg
-    text: sdfgsdfsg
-    buttonText: sdfgsdfg
-    buttonLink: sdfgsfdg
+    image: https://s3-alpha-sig.figma.com/img/4f25/c2db/258212229ef560d9d1532f86afece898?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ao1axaEB3JqMVanh7MzyFZlST22jXH8441ELokTblRwulD~Q1IACgohvjJqQpekTgAoG4L9P4G~HZ0KD3l~kQjAXKpu8qhCjdCo2-l7ja-D-rQNyIUBO6i825yUjF~ufB6bxtI2nvQGAvPS5WeSlvqaWHhG7yqN~jIgOc6RALX0XPLAHMSjsNvztzP17pA6ru~9HcbylujwKoWJ66eIJX0d4FpiObXMGV7NwUdADh3A1yHlpnJG8XuqPYO8J9x~XMdBeq-l9tKiDVdJQxnZUjJRQ~PlGQGnuzhoi4h757vmHMGNvVbiUDPv6t952~1tzFrB06rwVI5Mxs6KJ3Bfmng__
+    text: tal ben avi
+    buttonText: code
+    buttonLink: https://www.starknet.io/
