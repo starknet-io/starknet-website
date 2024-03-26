@@ -1,11 +1,11 @@
 import { getJSON } from "@starknet-io/cms-utils/src/index";
 
 export type LatestAnnouncements = {
-  image: string;
-  text: string;
-  buttonText: string;
-  buttonLink: string;
-  isActive: boolean;
+  readonly image: string;
+  readonly text: string;
+  readonly buttonText: string;
+  readonly buttonLink: string;
+  readonly isActive: boolean;
 };
 
 export async function getLatestAnnouncements(
@@ -16,6 +16,7 @@ export async function getLatestAnnouncements(
       "data/latest-announcements/latest-announcements",
       context
     );
+    // console.log(latestAnnouncements);
 
     return latestAnnouncements;
   } catch (cause) {

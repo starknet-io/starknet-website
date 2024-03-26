@@ -10,24 +10,20 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
-  Divider
+  Divider,
 } from "@chakra-ui/react";
-import '@ui/CodeHighlight/code-highlight-init'
+import "@ui/CodeHighlight/code-highlight-init";
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
 import NotFound from "@ui/NotFound/NotFound";
 
 type CMSPageProps = {
   data: PageType;
-  env: {
+  env?: {
     CLOUDFLARE_RECAPTCHA_KEY: string;
-  }
+  };
   locale: string;
 };
-export default function CMSPage({
-  data,
-  env,
-  locale,
-}: CMSPageProps) {
+export default function CMSPage({ data, env, locale }: CMSPageProps) {
   const date = data?.gitlog?.date;
 
   if (data?.hidden_page) {
@@ -77,38 +73,46 @@ export default function CMSPage({
           <Flex
             direction="column"
             gap={{
-              base: (data.template === "content" || data.template === "narrow content") ? "32px" : "56px",
-              lg: (data.template === "content" || data.template === "narrow content") ? "32px" : "136px",
+              base:
+                data.template === "content" ||
+                data.template === "narrow content"
+                  ? "32px"
+                  : "56px",
+              lg:
+                data.template === "content" ||
+                data.template === "narrow content"
+                  ? "32px"
+                  : "136px",
             }}
           >
-            {data.show_title ? <>
-              <Box pb="6">
-                <Heading
-                  as="h1"
-                  variant="h2"
-                  color="heading-navy-fg"
-                  fontWeight="extrabold"
-                >
-                  {data.title}
-                </Heading>
-                <Divider variant="primary" mt="8px" />
-              </Box>
-            </> : null}
+            {data.show_title ? (
+              <>
+                <Box pb="6">
+                  <Heading
+                    as="h1"
+                    variant="h2"
+                    color="heading-navy-fg"
+                    fontWeight="extrabold"
+                  >
+                    {data.title}
+                  </Heading>
+                  <Divider variant="primary" mt="8px" />
+                </Box>
+              </>
+            ) : null}
             {data.blocks?.map((block, i) => {
-              return (
-                <Block
-                  env={env}
-                  key={i}
-                  block={block}
-                  locale={locale}
-                />
-              );
+              return <Block env={env} key={i} block={block} locale={locale} />;
             })}
           </Flex>
         }
         rightAside={
           data.template === "content" && !data.hideToc ? (
-            <TableOfContents headings={blocksToTOC(data.blocks, 1)} {...data.tocCustomTitle && { tocCustomTitle: data.tocCustomTitle }} />
+            <TableOfContents
+              headings={blocksToTOC(data.blocks, 1)}
+              {...(data.tocCustomTitle && {
+                tocCustomTitle: data.tocCustomTitle,
+              })}
+            />
           ) : null
         }
       />

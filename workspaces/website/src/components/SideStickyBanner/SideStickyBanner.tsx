@@ -13,6 +13,7 @@ const SideStickyBanner = ({ children }: NavbarStickyBannerProps) => {
       right={{ base: "unset", lg: "32px" }}
       width={{ base: "100%", lg: "225px" }}
       mt={{ base: 6, lg: "unset" }}
+      mb={{ base: 6, lg: "unset" }}
       p={3}
       gap={6}
       backgroundColor="surface"

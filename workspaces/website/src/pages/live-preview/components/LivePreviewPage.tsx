@@ -12,7 +12,7 @@ import RoadmapPost from "src/pages/roadmap/@slug/(components)/RoadmapPost";
 import { RoadmapVersion } from "@starknet-io/cms-data/src/roadmap";
 import RoadmapPostVersion from "src/pages/roadmap/(components)/RoadmapPostVersion";
 import { PostPage } from "src/pages/content/@slug/PostPage";
-import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
+import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcements";
 
 export interface Props {
   readonly categories: readonly Category[];
@@ -28,7 +28,7 @@ export default function LivePreviewPage({
   roadmapVersions,
 }: Props) {
   const data = usePreviewData();
-
+  console.log(latestAnnouncements);
   return (
     <ThemeProvider>
       <div className="preview-content">

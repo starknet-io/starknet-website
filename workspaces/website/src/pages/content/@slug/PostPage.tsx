@@ -37,7 +37,7 @@ import { BlogHit } from "../PostsPage";
 import { BlogBreadcrumbs } from "@ui/Blog/BlogBreadcrumbs";
 import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
 import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
-import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcenents";
+import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcements";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -59,7 +59,7 @@ export interface Props {
   };
   readonly categories: readonly Category[];
   readonly topics: readonly Topic[];
-  readonly latestAnnouncements: LatestAnnouncements[];
+  readonly latestAnnouncements: readonly LatestAnnouncements[];
   readonly post: Post;
   readonly env?: {
     readonly ALGOLIA_INDEX: string;
@@ -82,15 +82,14 @@ export interface MarkdownBlock {
  * Export `PostPage` component.
  */
 
-export function PostPage(props: Props): JSX.Element {
-  const {
-    params: { slug, locale },
-    categories,
-    topics,
-    latestAnnouncements,
-    post,
-    env,
-  } = props;
+export function PostPage({
+  params: { slug, locale },
+  categories,
+  topics,
+  latestAnnouncements,
+  post,
+  env,
+}: Props): JSX.Element {
   const postCategories = categories.filter((c) => post.category.includes(c.id));
   const videoId = post.post_type !== "article" ? post.video?.id : undefined;
   const shareUrl = `${env?.SITE_URL}/content/${slug}`;
@@ -101,7 +100,6 @@ export function PostPage(props: Props): JSX.Element {
       env?.ALGOLIA_SEARCH_API_KEY ?? ""
     );
   }, [env?.ALGOLIA_APP_ID, env?.ALGOLIA_SEARCH_API_KEY]);
-  console.log(latestAnnouncements, "latestAnnouncements");
 
   return (
     <Container py="0" pb="16" maxW={"1624px"}>
