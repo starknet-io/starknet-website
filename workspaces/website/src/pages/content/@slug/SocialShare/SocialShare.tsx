@@ -28,32 +28,30 @@ const SocialShare = ({ params: { slug, locale }, env }: Props) => {
   return (
     <Flex
       gap={"24px"}
-      position={{ base: "relative", lg: "fixed" }}
-      top={{ base: "unset", lg: "200px" }}
-      right={{ base: "unset", lg: "60px" }}
-      width={{ base: "100%", lg: "225px" }}
-      mt={{ base: 6, lg: "unset" }}
+      position={{ base: "relative", xl: "fixed" }}
+      top={{ base: "unset", xl: "200px" }}
+      right={{ base: "unset", xl: "300px" }}
     >
-      <Text display={{ base: "unset", lg: "none" }}>Share this post:</Text>
+      <Text display={{ base: "unset", xl: "none" }}>Share this post:</Text>
 
       <Flex
         alignItems={"center"}
         gap={"8px"}
-        flexDir={{ base: "row", lg: "column" }}
+        flexDir={{ base: "row", xl: "column" }}
       >
         <TwitterShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
-            opacity={0.6}
-            color="text-hero-fg"
+            color="grey.coolText"
+            _dark={{ color: "grey.morning" }}
             as={FaTwitter}
           />
         </TwitterShareButton>
         <TelegramShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
-            opacity={0.6}
-            color="text-hero-fg"
+            color="grey.coolText"
+            _dark={{ color: "grey.morning" }}
             as={FaTelegram}
           />
         </TelegramShareButton>
@@ -69,8 +67,8 @@ const SocialShare = ({ params: { slug, locale }, env }: Props) => {
         <LinkedinShareButton url={shareUrl}>
           <Icon
             boxSize="28px"
-            opacity={0.6}
-            color="text-hero-fg"
+            color="grey.coolText"
+            _dark={{ color: "grey.morning" }}
             as={FaLinkedin}
           />
         </LinkedinShareButton>
