@@ -210,3 +210,8 @@ blocks:
     md: 2
     lg: 4
     heading: FAQs
+  - type: nav_sticky_banner
+    isActive: true
+    text: Test Test
+    buttonText: test bitton
+    buttonLink: https://www.cairo-lang.org/blog/
