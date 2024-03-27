@@ -7,18 +7,18 @@ const CloseIcon = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1_600)">
+      <g clipPath="url(#clip0_1_600)">
         <path
           d="M20.125 20.125L7.875 7.875M20.125 7.875L7.875 20.125"
-          stroke="white"
-          stroke-width="1.75"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          stroke="currentColor"
+          strokeWidth="1.75"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
-        <clipPath id="clip0_1_600">
-          <rect width="28" height="28" fill="white" />
+        <clipPath>
+          <rect width="28" height="28" fill="currentColor" />
         </clipPath>
       </defs>
     </svg>
