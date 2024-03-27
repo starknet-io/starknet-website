@@ -23,7 +23,7 @@ type Props = {
   mobileNavItems?: React.ReactNode;
   languageSwitcher?: React.ReactNode;
   search?: React.ReactNode;
-  seo: SEOTexts['language'];
+  seo: SEOTexts["language"];
 };
 
 declare global {
@@ -37,7 +37,7 @@ export const NavBar = ({
   mobileNavItems,
   languageSwitcher,
   search,
-  seo
+  seo,
 }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const menuButtonRef = React.useRef<HTMLButtonElement>(null);
@@ -52,11 +52,11 @@ export const NavBar = ({
     toggleColorMode();
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "theme_change", {
-        'event_category': "engagement",
-        'value': colorMode
+        event_category: "engagement",
+        value: colorMode,
       });
     }
-  }
+  };
 
   return (
     <Box as="nav" bg="navbar-bg" boxShadow={useColorModeValue("xs", "sm-dark")}>

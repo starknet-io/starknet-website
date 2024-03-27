@@ -1,4 +1,3 @@
-
 import * as NavAccordian from "@ui/Layout/Navbar/NavAccordion";
 import type { MainMenu } from "@starknet-io/cms-data/src/settings/main-menu";
 import { NavBar } from "@ui/Layout/Navbar/Navbar";
@@ -6,15 +5,16 @@ import { MenuItemWithDropdown } from "@ui/Layout/Navbar/MenuItemWithDropdown";
 import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
-import { Flex } from "@chakra-ui/react";
+import { Box, ButtonGroup, Flex } from "@chakra-ui/react";
 import { getComputedLinkData } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
-import { Box, ButtonGroup } from "@chakra-ui/react";
 import { IconButton } from "@ui/IconButton";
 import { SiDiscord, SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import { SEOTexts } from "@starknet-io/cms-data/src/seo";
 import { usePageContext } from "src/renderer/PageContextProvider";
+import type { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
+import { Block, BlockPlacements } from "../../blocks/Block";
 
 export interface Props {
   readonly mainMenu: MainMenu;
@@ -22,9 +22,11 @@ export interface Props {
     readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
     readonly ALGOLIA_SEARCH_API_KEY: string;
+    readonly CLOUDFLARE_RECAPTCHA_KEY: string;
   };
-  readonly searchSEO: SEOTexts['search'];
-  readonly languageCenterSeo: SEOTexts['language'];
+  readonly searchSEO: SEOTexts["search"];
+  readonly languageCenterSeo: SEOTexts["language"];
+  readonly pageBlocks?: TopLevelBlock[];
 }
 
 export default function Navbar({
@@ -32,6 +34,7 @@ export default function Navbar({
   env,
   searchSEO,
   languageCenterSeo,
+  pageBlocks,
 }: Props) {
   const { locale, urlPathname: pathname } = usePageContext();
 
@@ -88,7 +91,9 @@ export default function Navbar({
                                   ) : item.custom_icon === "SiTwitter" ? (
                                     <SiTwitter fontSize="1.25rem" />
                                   ) : item.custom_icon === "SiYoutube" ? (
-                                    <Box ml="-16px"><SiYoutube fontSize="1.25rem" /></Box>
+                                    <Box ml="-16px">
+                                      <SiYoutube fontSize="1.25rem" />
+                                    </Box>
                                   ) : (
                                     <React.Fragment />
                                   )
@@ -187,6 +192,17 @@ export default function Navbar({
           </NavAccordian.Root>
         }
       />
+      {pageBlocks?.map((block, i) => {
+        return (
+          <Block
+            env={env}
+            key={i}
+            block={block}
+            locale={locale}
+            placement={BlockPlacements.NAVBAR}
+          />
+        );
+      })}
     </NavbarContainer>
   );
 }
