@@ -11,10 +11,19 @@ import type {
   PageContextBuiltInClientWithServerRouting as PageContextBuiltInClient
   //*/
 } from "vite-plugin-ssr/types";
+import { TopLevelBlock } from "@starknet-io/cms-data/src/pages";
 
 type Page = (pageProps: PageProps) => React.ReactElement;
 
-export type PageProps = Record<string, unknown>;
+interface DeepNestedObject<T> {
+  [key: string]: T | DeepNestedObject<T>;
+}
+
+export type PageProps = DeepNestedObject<unknown> & {
+  data?: DeepNestedObject<unknown> & {
+    blocks: TopLevelBlock[];
+  };
+};
 
 export interface DocumentProps {
   title?: string;
@@ -28,7 +37,7 @@ export type SeoType = {
   seoCanonicalUrl?: string;
   seoDescription?: string;
   seoFocusKeywords?: string[];
-}
+};
 
 export type PageContextCustom = {
   Page: Page;

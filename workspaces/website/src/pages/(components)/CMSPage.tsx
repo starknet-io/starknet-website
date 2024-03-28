@@ -15,7 +15,6 @@ import {
 import "@ui/CodeHighlight/code-highlight-init";
 import { blocksToTOC } from "./TableOfContents/blocksToTOC";
 import NotFound from "@ui/NotFound/NotFound";
-
 type CMSPageProps = {
   data: PageType;
   env?: {
@@ -56,7 +55,6 @@ export default function CMSPage({ data, env, locale }: CMSPageProps) {
                     {data.breadcrumbs_data[0].title}
                   </BreadcrumbLink>
                 </BreadcrumbItem>
-
                 <BreadcrumbItem isCurrentPage>
                   <BreadcrumbLink fontSize="sm">{data.title}</BreadcrumbLink>
                 </BreadcrumbItem>

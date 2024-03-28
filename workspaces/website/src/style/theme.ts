@@ -86,6 +86,7 @@ const theme = extendTheme(proTheme, {
     },
     surface: "#EDF2F7",
     Link: "#1061FF",
+    surfaceAccent: "#A4A4EA",
   },
   components: {
     Accordion: accordionTheme,

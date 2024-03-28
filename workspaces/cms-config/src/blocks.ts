@@ -793,6 +793,37 @@ export const blocks = [
       },
     ],
   },
+  {
+    name: "nav_sticky_banner",
+    label: "Sticky Banner Under Nav",
+    widget: "object",
+    fields: [
+      {
+        name: "text",
+        label: "Text",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "buttonText",
+        label: "ButtonText",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "buttonLink",
+        label: "buttonLink",
+        widget: "string",
+        crowdin: true,
+      },
+      {
+        name: "isActive",
+        label: "IsActive",
+        widget: "boolean",
+        default: true,
+      },
+    ],
+  },
 ] satisfies CmsFieldList["types"];
 
 const flexLayout = {

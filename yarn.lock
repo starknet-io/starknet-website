@@ -4804,6 +4804,7 @@ __metadata:
     highlight.js: ^11.8.0
     highlightjs-cairo: ^0.2.0
     itty-router: ^4.0.11
+    js-sha256: ^0.11.0
     marked: ^5.1.0
     moment: ^2.29.4
     moment-timezone: ^0.5.43
@@ -12146,6 +12147,13 @@ __metadata:
   version: 4.4.0
   resolution: "js-sdsl@npm:4.4.0"
   checksum: 7bb08a2d746ab7ff742720339aa006c631afe05e77d11eda988c1c35fae8e03e492e4e347e883e786e3ce6170685d4780c125619111f0730c11fdb41b04059c7
+  languageName: node
+  linkType: hard
+
+"js-sha256@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "js-sha256@npm:0.11.0"
+  checksum: 742d34a0c6eb15247309f1c74889b5a51df01a96e4307375b420fbe973f2f25585012b4d3c8fa52a1b18546153d12587e6463bb725dc1bc58686da03e892c334
   languageName: node
   linkType: hard
 

@@ -1,7 +1,7 @@
 import { Box, Image, Icon, Fade, IconButton } from "@chakra-ui/react";
 import Background from "./popup-background.png";
 import Logo from "./popup-text.svg";
-import CloseIcon from "./CloseIcon/CloseIcon";
+import CloseIcon from "@ui/Icons/CloseIcon/CloseIcon";
 import ArrowRight from "./ArrowRight/ArrowRight";
 import { Button } from "@ui/Button";
 import { useLocalStorage } from "usehooks-ts";
@@ -29,7 +29,7 @@ const ProvisionsPopup = () => {
     setIsOpenStorage(false);
   };
 
-  if (!isOpenStorage) return;
+  if (!isOpenStorage) return null;
 
   return (
     <Fade
@@ -74,7 +74,8 @@ const ProvisionsPopup = () => {
             top="10px"
             width="28px"
             height="28px"
-            style={{ backgroundColor: "transparent" }}
+            bgColor="transparent"
+            _dark={{ bgColor: "transparent" }}
             onClick={onClose}
           >
             <CloseIcon />

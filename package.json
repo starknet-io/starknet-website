@@ -64,6 +64,7 @@
     "highlight.js": "^11.8.0",
     "highlightjs-cairo": "^0.2.0",
     "itty-router": "^4.0.11",
+    "js-sha256": "^0.11.0",
     "marked": "^5.1.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",

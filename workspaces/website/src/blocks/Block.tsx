@@ -21,8 +21,15 @@ import { HeadingContainer } from "./HeadingContainer";
 import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
+import NavbarStickyBanner from "../pages/(components)/NavbarStickyBanner/NavbarStickyBanner";
+
+export enum BlockPlacements {
+  DEFAULT = "DEFAULT",
+  NAVBAR = "NAVBAR",
+}
 
 interface Props {
+  placement?: BlockPlacements;
   disallowH1?: boolean;
   readonly block: TopLevelBlock;
   env: {
@@ -32,137 +39,175 @@ interface Props {
 }
 
 export function Block({
+  placement = BlockPlacements.DEFAULT,
   disallowH1,
   block,
   env,
   locale,
 }: Props): JSX.Element | null {
-  if (block.type === "basic_card") {
-    return <BasicCard {...block} locale={locale} />;
-  } else if (block.type === "container") {
-    return (
-      <Container maxWidth={block.max_width}>
-        {block.blocks.map((block, i) => (
-          <Block env={env} key={i} block={block} locale={locale} />
-        ))}
-      </Container>
-    );
-  } else if (block.type === "image_icon_link_card") {
-    return <ImageIconCard {...block} locale={locale} />;
-  } else if (block.type === "youtube") {
-    return <YoutubePlayer videoId={block.videoId} />;
-  } else if (block.type === "newsletter_popup") {
-    return <NewsletterCard {...block} env={env} locale={locale} />;
-  } else if (block.type === "markdown") {
-    return <MarkdownBlock disallowH1={disallowH1} body={block.body} />;
-  } else if (block.type === "ambassadors_list") {
-    return <AmbassadorsList {...block} />;
-  } else if (block.type === "community_events") {
-    return (
-      <BlockCommunityEvents
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "flex_layout") {
-    return (
-      <BlockCards
-        base={block.base}
-        md={block.md}
-        lg={block.lg}
-        xl={block.xl}
-        heading={block.heading}
-        headingVariant={block.heading_variant}
-      >
-        {block.blocks.map((block, i) => (
-          <Block env={env} key={i} block={block} locale={locale} />
-        ))}
-      </BlockCards>
-    );
-  } else if (block.type === "link_list") {
-    return <LinkList {...block} />;
-  } else if (block.type === "accordion") {
-    return (
-      <AccordionRoot heading={block.heading}>
-        {block.blocks?.map((block, i) => (
-          <AccordionItem key={i} label={block.label}>
-            <MarkdownBlock disallowH1={disallowH1} body={block.body} />
-          </AccordionItem>
-        ))}
-      </AccordionRoot>
-    );
-  } else if (block.type === "ordered_block") {
-    let blocks = Array.from(block.blocks || []).sort((a, b) => {
-      return a.title.localeCompare(b.title);
-    });
+  switch (placement) {
+    case BlockPlacements.DEFAULT:
+      switch (block.type) {
+        case "basic_card":
+          return <BasicCard {...block} locale={locale} />;
 
-    return (
-      <OrderedBlock>
-        {blocks.map((block: any, i: number) => {
+        case "container":
           return (
-            <OrderedBlockItem key={i} title={block.title}>
-              <MarkdownBlock disallowH1={disallowH1} body={block.body} />
-            </OrderedBlockItem>
+            <Container maxWidth={block.max_width}>
+              {block.blocks.map((block, i) => (
+                <Block env={env} key={i} block={block} locale={locale} />
+              ))}
+            </Container>
           );
-        })}
-      </OrderedBlock>
-    );
-  } else if (block.type === "page_header") {
-    return (
-      <PageHeaderBlock title={block.title} description={block.description} />
-    );
-  } else if (block.type === "group") {
-    return (
-      <BlockGrouping>
-        {block.blocks.map((block, i) => (
-          <Block env={env} key={i} block={block} locale={locale} />
-        ))}
-      </BlockGrouping>
-    );
-  } else if (block.type === "heading_container") {
-    return (
-      <HeadingContainer
-        heading={block.heading}
-        headingVariant={block.heading_variant}
-      >
-        {block.blocks.map((block, i) => (
-          <Block env={env} key={i} block={block} locale={locale} />
-        ))}
-      </HeadingContainer>
-    );
-  } else if (block.type === "hero") {
-    return (
-      <HeroImage
-        title={block.title}
-        description={block.description}
-        variant={block.variant}
-        buttonText={block.buttonText}
-        buttonUrl={block.buttonUrl}
-        leftBoxMaxWidth={block.leftBoxMaxWidth}
-      />
-    );
-  } else if (block.type === "home_hero") {
-    const pageContext = usePageContext();
-    const homeSEO = useAsync(["getBlockExplorers", locale], () =>
-      getHomeSEO(locale, pageContext.context)
-    );
 
-    return <HomepageHero seo={homeSEO} />;
-  } else if (block.type === "card_list") {
-    return (
-      <ListCardItems
-        {...block}
-        params={{
-          locale,
-        }}
-      />
-    );
-  } else if (block.type === "video_section") {
-    return <VideoSectionBlock {...block} />;
-  } else {
-    // this will report type error if there is unhandled block.type
-    block satisfies never;
+        case "image_icon_link_card":
+          return <ImageIconCard {...block} locale={locale} />;
+
+        case "youtube":
+          return <YoutubePlayer videoId={block.videoId} />;
+
+        case "newsletter_popup":
+          return <NewsletterCard {...block} env={env} locale={locale} />;
+
+        case "markdown":
+          return <MarkdownBlock disallowH1={disallowH1} body={block.body} />;
+
+        case "ambassadors_list":
+          return <AmbassadorsList {...block} />;
+
+        case "community_events":
+          return (
+            <BlockCommunityEvents
+              params={{
+                locale,
+              }}
+            />
+          );
+
+        case "flex_layout":
+          return (
+            <BlockCards
+              base={block.base}
+              md={block.md}
+              lg={block.lg}
+              xl={block.xl}
+              heading={block.heading}
+              headingVariant={block.heading_variant}
+            >
+              {block.blocks.map((block, i) => (
+                <Block env={env} key={i} block={block} locale={locale} />
+              ))}
+            </BlockCards>
+          );
+
+        case "link_list":
+          return <LinkList {...block} />;
+
+        case "accordion":
+          return (
+            <AccordionRoot heading={block.heading}>
+              {block.blocks?.map((block, i) => (
+                <AccordionItem key={i} label={block.label}>
+                  <MarkdownBlock disallowH1={disallowH1} body={block.body} />
+                </AccordionItem>
+              ))}
+            </AccordionRoot>
+          );
+
+        case "ordered_block":
+          let blocks = Array.from(block.blocks || []).sort((a, b) => {
+            return a.title.localeCompare(b.title);
+          });
+          return (
+            <OrderedBlock>
+              {blocks.map((block: any, i: number) => {
+                return (
+                  <OrderedBlockItem key={i} title={block.title}>
+                    <MarkdownBlock disallowH1={disallowH1} body={block.body} />
+                  </OrderedBlockItem>
+                );
+              })}
+            </OrderedBlock>
+          );
+
+        case "page_header":
+          return (
+            <PageHeaderBlock
+              title={block.title}
+              description={block.description}
+            />
+          );
+
+        case "group":
+          return (
+            <BlockGrouping>
+              {block.blocks.map((block, i) => (
+                <Block env={env} key={i} block={block} locale={locale} />
+              ))}
+            </BlockGrouping>
+          );
+
+        case "heading_container":
+          return (
+            <HeadingContainer
+              heading={block.heading}
+              headingVariant={block.heading_variant}
+            >
+              {block.blocks.map((block, i) => (
+                <Block env={env} key={i} block={block} locale={locale} />
+              ))}
+            </HeadingContainer>
+          );
+
+        case "hero":
+          return (
+            <HeroImage
+              title={block.title}
+              description={block.description}
+              variant={block.variant}
+              buttonText={block.buttonText}
+              buttonUrl={block.buttonUrl}
+              leftBoxMaxWidth={block.leftBoxMaxWidth}
+            />
+          );
+
+        case "home_hero":
+          const pageContext = usePageContext();
+          const homeSEO = useAsync(["getBlockExplorers", locale], () =>
+            getHomeSEO(locale, pageContext.context)
+          );
+
+          return <HomepageHero seo={homeSEO} />;
+
+        case "card_list":
+          return (
+            <ListCardItems
+              {...block}
+              params={{
+                locale,
+              }}
+            />
+          );
+        case "video_section":
+          return <VideoSectionBlock {...block} />;
+      }
+      break;
+
+    //========================================
+
+    case BlockPlacements.NAVBAR:
+      switch (block.type) {
+        case "nav_sticky_banner":
+          if (!block.isActive) return null;
+          return (
+            <NavbarStickyBanner
+              text={block.text}
+              buttonText={block.buttonText}
+              buttonLink={block.buttonLink}
+            />
+          );
+      }
+      break;
   }
 
   return null;
