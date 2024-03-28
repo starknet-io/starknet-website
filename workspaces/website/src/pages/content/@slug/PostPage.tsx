@@ -1,13 +1,6 @@
 /**
  * Module dependencies.
  */
-
-import {
-  AiFillFacebook,
-  AiFillLinkedin,
-  AiOutlineTwitter
-} from "react-icons/ai";
-
 import {
   Box,
   Button,
@@ -17,18 +10,16 @@ import {
   Grid,
   HStack,
   Heading,
-  Icon,
   Img,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { Category } from "@starknet-io/cms-data/src/categories";
-import { Configure, InstantSearch, useHits } from "react-instantsearch-hooks-web";
 import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-} from "react-share";
+  Configure,
+  InstantSearch,
+  useHits,
+} from "react-instantsearch-hooks-web";
 
 import { Post } from "@starknet-io/cms-data/src/posts";
 import { TableOfContents } from "src/pages/(components)/TableOfContents/TableOfContents";
@@ -44,18 +35,15 @@ import algoliasearch from "algoliasearch";
 import { BlogCard } from "@ui/Blog/BlogCard";
 import { BlogHit } from "../PostsPage";
 import { BlogBreadcrumbs } from "@ui/Blog/BlogBreadcrumbs";
-
-/**
- * Export `Props` type.
- */
+import SocialShare from "./SocialShare/SocialShare";
 
 export interface Props {
   readonly params: LocaleParams & {
     readonly slug: string;
   };
-  readonly categories: readonly Category[]
-  readonly topics: readonly Topic[]
-  readonly post: Post
+  readonly categories: readonly Category[];
+  readonly topics: readonly Topic[];
+  readonly post: Post;
   readonly env?: {
     readonly ALGOLIA_INDEX: string;
     readonly ALGOLIA_APP_ID: string;
@@ -78,56 +66,61 @@ export interface MarkdownBlock {
  */
 
 export function PostPage(props: Props): JSX.Element {
-  const { params: { slug, locale }, categories, topics, post, env } = props;
+  const {
+    params: { slug, locale },
+    categories,
+    topics,
+    post,
+    env,
+  } = props;
   const postCategories = categories.filter((c) => post.category.includes(c.id));
   const videoId = post.post_type !== "article" ? post.video?.id : undefined;
-  const shareUrl = `${env?.SITE_URL}/content/${slug}`
   const isMobile = useBreakpointValue({ base: true, lg: false });
   const searchClient = useMemo(() => {
-    return algoliasearch(env?.ALGOLIA_APP_ID ?? '', env?.ALGOLIA_SEARCH_API_KEY ?? '');
+    return algoliasearch(
+      env?.ALGOLIA_APP_ID ?? "",
+      env?.ALGOLIA_SEARCH_API_KEY ?? ""
+    );
   }, [env?.ALGOLIA_APP_ID, env?.ALGOLIA_SEARCH_API_KEY]);
-  
+
   return (
     <Container py="0" pb="16" maxW={"1624px"}>
       <Grid
         gridTemplateAreas={{
           base: '"breadcrumbs" "post"',
           lg: '". breadcrumbs ." "timeline post ."',
-        }} 
+        }}
         gridTemplateColumns={{
-          base: '1fr',
-          lg: '240px 1fr 240px',
-        }} 
-        gridColumnGap={'105px'}
+          base: "1fr",
+          lg: "240px 1fr 240px",
+        }}
+        gridColumnGap={"105px"}
       >
-        <BlogBreadcrumbs 
-          gridArea={'breadcrumbs'}
+        <BlogBreadcrumbs
+          gridArea={"breadcrumbs"}
           height={{
-            base: '68px',
-            lg: '118px'
+            base: "68px",
+            lg: "118px",
           }}
-          alignItems={'center'}
+          alignItems={"center"}
           locale={locale}
           title={post.title}
         />
 
-       {!!post.toc && !isMobile ? ( 
-          <Box 
-            alignSelf={'start'}
-            gridArea={'timeline'}
-            as={'aside'}
-            role={'complementary'}
-            position={'sticky'}
-            top={'100px'}
+        {!!post.toc && !isMobile ? (
+          <Box
+            alignSelf={"start"}
+            gridArea={"timeline"}
+            as={"aside"}
+            role={"complementary"}
+            position={"sticky"}
+            top={"100px"}
           >
             <TableOfContents headings={blocksToTOC(post.blocks, 1)} />
           </Box>
         ) : null}
 
-        <Box
-          gridArea={'post'}
-          overflow={'hidden'}
-        >
+        <Box gridArea={"post"} overflow={"hidden"}>
           <Box maxWidth="1024px">
             {post.post_type === "article" ? (
               <Box>
@@ -135,31 +128,31 @@ export function PostPage(props: Props): JSX.Element {
                   borderRadius={"8px"}
                   src={post.image}
                   alt={post.title}
-                  width={'100%'}
+                  width={"100%"}
                 />
 
                 <Flex
                   alignItems={{
-                    base: 'start',
-                    md: 'center'
+                    base: "start",
+                    md: "center",
                   }}
                   flexDirection={{
-                    base: 'column',
-                    md: 'row'
+                    base: "column",
+                    md: "row",
                   }}
                   height={{
-                    base: 'unset',
-                    md: '60px'
+                    base: "unset",
+                    md: "60px",
                   }}
                   justifyContent={{
-                    base: 'unset',
-                    md: 'space-between'
+                    base: "unset",
+                    md: "space-between",
                   }}
                   margin={{
-                    base: '16px 0 32px',
-                    md: '0'
+                    base: "16px 0 32px",
+                    md: "0",
                   }}
-                  rowGap={'16px'}
+                  rowGap={"16px"}
                 >
                   <HStack>
                     <Text fontSize="sm" color="muted">
@@ -171,7 +164,7 @@ export function PostPage(props: Props): JSX.Element {
                     </Text>
                   </HStack>
 
-                  <Text fontSize={'sm'} color={'muted'}>
+                  <Text fontSize={"sm"} color={"muted"}>
                     {`Page last updated ${moment(
                       post?.gitlog?.date
                     ).fromNow()}`}
@@ -181,25 +174,20 @@ export function PostPage(props: Props): JSX.Element {
             ) : null}
 
             <Heading
-              as={'h1'}
+              as={"h1"}
               color="heading-navy-fg"
-              fontSize={'40px'}
-              marginBottom={'48px'}
+              fontSize={"40px"}
+              marginBottom={"48px"}
               variant="h2"
             >
               {post.title}
             </Heading>
 
             {post.post_desc && (
-              <Heading
-                size={'20px'}
-                marginBottom={'56px'}
-                variant="h4"
-              >
+              <Heading size={"20px"} marginBottom={"56px"} variant="h4">
                 {post.post_desc}
               </Heading>
             )}
-
 
             <Divider mt="8px" mb="48px" />
 
@@ -208,10 +196,10 @@ export function PostPage(props: Props): JSX.Element {
                 <YoutubePlayer videoId={videoId} />
 
                 <Flex
-                  alignItems={'center'}
-                  height={'60px'}
-                  justifyContent={'space-between'}
-                  marginTop={'-50px'}
+                  alignItems={"center"}
+                  height={"60px"}
+                  justifyContent={"space-between"}
+                  marginTop={"-50px"}
                 >
                   <HStack>
                     <Text fontSize="sm" color="muted">
@@ -223,7 +211,7 @@ export function PostPage(props: Props): JSX.Element {
                     </Text>
                   </HStack>
 
-                  <Text fontSize={'sm'} color={'muted'}>
+                  <Text fontSize={"sm"} color={"muted"}>
                     {`Page last updated ${moment(
                       post?.gitlog?.date
                     ).fromNow()}`}
@@ -233,91 +221,40 @@ export function PostPage(props: Props): JSX.Element {
             )}
 
             {(post.blocks?.length ?? 0) > 0 && (
-              <Flex direction="column" gap="32px" marginBottom={'96px'}>
+              <Flex direction="column" gap="32px" marginBottom={"96px"}>
                 {post.blocks?.map((block, i) => (
-                  <Block
-                    disallowH1
-                    key={i}
-                    block={block}
-                    locale={locale}
-                  />
+                  <Block disallowH1 key={i} block={block} locale={locale} />
                 ))}
               </Flex>
             )}
 
-            <Flex 
-              direction={'row'} 
-              gap={'12px'}
-              marginBottom={'48px'}
-            >
+            <Flex direction={"row"} gap={"12px"} marginBottom={"48px"}>
               {post.topic?.map((topic, i) => (
                 <Button
                   key={i}
-                  variant={'smallFilter'}
-                  as={'a'}
+                  variant={"smallFilter"}
+                  as={"a"}
                   href={`/content/category/all?${qs.stringify({
-                    topicFilters: topic
+                    topicFilters: topic,
                   })}`}
                 >
                   {topics.find((t) => t.id === topic)?.name}
                 </Button>
               ))}
             </Flex>
-
-            <Flex
-              gap={'24px'}
-            >
-              <Text>
-                Share this post:
-              </Text>
-
-              <Flex
-                alignItems={'center'}
-                gap={'8px'}
-              >
-                <TwitterShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiOutlineTwitter}
-                  />
-                </TwitterShareButton>
-
-                <LinkedinShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiFillLinkedin}
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton url={shareUrl}>
-                  <Icon
-                    boxSize="28px"
-                    opacity={0.6}
-                    color="text-hero-fg"
-                    as={AiFillFacebook}
-                  />
-                </FacebookShareButton>
+            <Flex gap={"24px"}>
+              <Flex alignItems={"center"} gap={"8px"}>
+                <SocialShare params={{ slug, locale }} />
               </Flex>
             </Flex>
           </Box>
         </Box>
       </Grid>
 
-      <Divider
-        mb={'96px'}
-        mt={'80px'}
-      />
+      <Divider mb={"96px"} mt={"80px"} />
 
-      <Heading
-        color="heading-navy-fg"
-        marginBottom={'48px'}
-        variant={'h4'}
-      >
-        {'May also interest you'}
+      <Heading color="heading-navy-fg" marginBottom={"48px"} variant={"h4"}>
+        {"May also interest you"}
       </Heading>
 
       <InstantSearch
@@ -328,39 +265,35 @@ export function PostPage(props: Props): JSX.Element {
           hitsPerPage={5}
           facetsRefinements={{
             topic: post.topic[0] ? [post.topic[0]] : [],
-            locale: [locale]
+            locale: [locale],
           }}
         />
 
-        <RelatedSection post={post} topics={topics}/>
+        <RelatedSection post={post} topics={topics} />
       </InstantSearch>
     </Container>
-  )
+  );
 }
 
 /**
  * `RelatedSection` component.
  */
 
-function RelatedSection({ post, topics }: Pick<Props,'post' | 'topics'>) {
+function RelatedSection({ post, topics }: Pick<Props, "post" | "topics">) {
   const { hits } = useHits<BlogHit>();
-  const normalizedHits = hits.filter((hit) => hit.id !== post.id).slice(0,4);
+  const normalizedHits = hits.filter((hit) => hit.id !== post.id).slice(0, 4);
 
   return (
     <Grid
-      gridGap={'24px'}
-      gridTemplateColumns={'repeat(4, 1fr)'}
-      marginBottom={'96px'}
-      maxWidth={'100%'}
-      overflowX={'auto'}
+      gridGap={"24px"}
+      gridTemplateColumns={"repeat(4, 1fr)"}
+      marginBottom={"96px"}
+      maxWidth={"100%"}
+      overflowX={"auto"}
     >
       {normalizedHits.map((hit, index) => (
-        <BlogCard
-          key={index}
-          post={hit}
-          topics={topics as Topic[]}
-        />
+        <BlogCard key={index} post={hit} topics={topics as Topic[]} />
       ))}
     </Grid>
-  )
+  );
 }
