@@ -17,7 +17,7 @@ import { blocksToTOC } from "./TableOfContents/blocksToTOC";
 import NotFound from "@ui/NotFound/NotFound";
 type CMSPageProps = {
   data: PageType;
-  env: {
+  env?: {
     CLOUDFLARE_RECAPTCHA_KEY: string;
   };
   locale: string;

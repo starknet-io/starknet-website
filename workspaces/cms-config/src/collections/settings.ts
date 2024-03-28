@@ -1,7 +1,6 @@
 import { linkFields } from "../blocks";
 import { CmsCollection } from "../types";
 
-
 const permissionOptions = [
   {
     label: "All",
@@ -43,7 +42,7 @@ const permissionOptions = [
     label: "Roadmap and Announcements",
     value: "roadmap",
   },
-]
+];
 
 export const settingsCollectionConfig = {
   crowdin: true,
@@ -65,7 +64,7 @@ export const settingsCollectionConfig = {
               label: "Title",
               name: "title",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Columns",
@@ -83,7 +82,7 @@ export const settingsCollectionConfig = {
                       name: "title",
                       required: false,
                       widget: "string",
-                      crowdin: true
+                      crowdin: true,
                     },
                     {
                       label: "Menu Items",
@@ -120,12 +119,12 @@ export const settingsCollectionConfig = {
             {
               name: "source",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               name: "destination",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
           ],
         },
@@ -143,14 +142,14 @@ export const settingsCollectionConfig = {
           widget: "list",
           fields: [
             {
-              name: 'category',
-              label: 'Category',
-              widget: 'relation',
-              collection: 'categories',
-              search_fields: ['name'],
-              value_field: 'id',
-              display_fields: ['name'],
-              options_length: 300
+              name: "category",
+              label: "Category",
+              widget: "relation",
+              collection: "categories",
+              search_fields: ["name"],
+              value_field: "id",
+              display_fields: ["name"],
+              options_length: 300,
             },
           ],
         },
@@ -171,7 +170,7 @@ export const settingsCollectionConfig = {
               label: "Name",
               name: "name",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               label: "Type",
@@ -202,19 +201,19 @@ export const settingsCollectionConfig = {
               label: "Twitter handle",
               name: "twitter",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Website url",
               name: "website_url",
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
             {
               label: "Description",
               name: "body",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
           ],
         },
@@ -255,7 +254,7 @@ export const settingsCollectionConfig = {
               name: "title",
               label: "Title",
               widget: "string",
-              crowdin: true
+              crowdin: true,
             },
             {
               name: "body",
@@ -268,7 +267,7 @@ export const settingsCollectionConfig = {
               hint: "If page url is not specified (e.g. 'learn/glossary'), it will be used globally",
               required: false,
               widget: "string",
-              crowdin: false
+              crowdin: false,
             },
           ],
         },
@@ -294,7 +293,7 @@ export const settingsCollectionConfig = {
           search_fields: ["title"],
           value_field: "id",
           display_fields: ["title"],
-          options_length: 300
+          options_length: 300,
         },
       ],
     },
@@ -315,36 +314,36 @@ export const settingsCollectionConfig = {
           label: "Hero banner title",
           widget: "string",
           required: true,
-          crowdin: true
+          crowdin: true,
         },
         {
           name: "hero_description",
           label: "Hero description",
           widget: "string",
           required: true,
-          crowdin: true
+          crowdin: true,
         },
         {
           name: "show_hero_cta",
           label: "Show hero banner CTA",
           widget: "boolean",
           default: true,
-          crowdin: true
+          crowdin: true,
         },
         {
           name: "hero_cta_copy",
           label: "Hero banner CTA copy",
           widget: "string",
           required: false,
-          crowdin: true
+          crowdin: true,
         },
         {
           name: "roadmap_post_ps",
           label: "Roadmap post p.s. copy",
           widget: "markdown",
           required: false,
-          crowdin: true
-        }
+          crowdin: true,
+        },
       ],
     },
     {
@@ -369,14 +368,55 @@ export const settingsCollectionConfig = {
               label: "Name",
               widget: "string",
               crowdin: false,
-              required: false
+              required: false,
             },
             {
               name: "access",
               label: "Access to collections",
               multiple: true,
               widget: "select",
-              options: permissionOptions
+              options: permissionOptions,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Latest Announcements",
+      name: "LatestAnnouncements",
+      file: `_data/settings/latest-announcements.yml`,
+      crowdin: false,
+      fields: [
+        {
+          label: "announcements",
+          name: "announcements",
+          widget: "list",
+          fields: [
+            {
+              name: "image",
+              widget: "image",
+              crowdin: false,
+            },
+            {
+              name: "text",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "buttonText",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "buttonLink",
+              widget: "string",
+              crowdin: false,
+            },
+            {
+              name: "isActive",
+              widget: "boolean",
+              default: true,
+              crowdin: false,
             },
           ],
         },

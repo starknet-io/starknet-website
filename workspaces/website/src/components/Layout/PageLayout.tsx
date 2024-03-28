@@ -1,6 +1,4 @@
 import { Box, Container, Flex, Spacer, Stack } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import { useLocalStorage } from "react-use";
 import { SectionHeader } from "@ui/SectionHeader/SectionHeader";
 import { Text } from "@ui/Typography/Text";
 // import { SummitPromo } from "./SummitPromo";
@@ -23,7 +21,12 @@ type Props = {
 
 export const PageLayout = (props: Props) => {
   return (
-    <Container py="0" pb="16" flex="1" maxW={props.maxW ? props.maxW : "1344px"}>
+    <Container
+      py="0"
+      pb="16"
+      flex="1"
+      maxW={props.maxW ? props.maxW : "1344px"}
+    >
       <Flex py="4" direction={{ base: "column", lg: "row" }}>
         <Box>{props.breadcrumbs}</Box>
         <Spacer />
@@ -57,13 +60,7 @@ export const PageLayout = (props: Props) => {
           </Box>
         )}
 
-        <Box
-          as="main"
-          role="main"
-          width="full"
-          mt="0 !important"
-          minW='0px'
-        >
+        <Box as="main" role="main" width="full" mt="0 !important" minW="0px">
           <Box minH="lg">
             {props.sectionHeaderTitle && (
               <SectionHeader

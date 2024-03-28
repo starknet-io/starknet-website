@@ -8,7 +8,9 @@ import qs from "qs";
 
 export async function onBeforeRender(pageContext: PageContextServer) {
   const defaultPageContext = await getDefaultPageContext(pageContext);
-  const query = qs.parse((pageContext as any)._urlPristine?.split("?")[1] ?? '');
+  const query = qs.parse(
+    (pageContext as any)._urlPristine?.split("?")[1] ?? ""
+  );
   const { locale } = defaultPageContext;
   const featuredSections = await getFeaturedSections(pageContext.context);
 
@@ -23,12 +25,14 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     },
     params: {
       locale,
-      ...query.postType && {
+      ...(query.postType && {
         postType: query.postType as string,
-      },
-      ...!!query.topicFilters && {
-        topicFilters: (Array.isArray(query.topicFilters) ? query.topicFilters : [query.topicFilters]) as string[],
-      }
+      }),
+      ...(!!query.topicFilters && {
+        topicFilters: (Array.isArray(query.topicFilters)
+          ? query.topicFilters
+          : [query.topicFilters]) as string[],
+      }),
     },
   };
 

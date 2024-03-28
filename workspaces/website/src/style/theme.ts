@@ -84,6 +84,8 @@ const theme = extendTheme(proTheme, {
       100: "#FFEDEB",
       200: "#E7D5D4",
     },
+    surface: "#EDF2F7",
+    Link: "#1061FF",
     surfaceAccent: "#A4A4EA",
   },
   components: {

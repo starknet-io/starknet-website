@@ -8,6 +8,7 @@ import { getTopics } from "@starknet-io/cms-data/src/topics";
 import { DocumentProps, PageContextServer } from "src/renderer/types";
 import { Props } from "./PostPage";
 import { getDefaultPageContext } from "src/renderer/helpers";
+import { getLatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcements";
 
 /**
  * Export `onBeforeRender` function.
@@ -21,10 +22,10 @@ export async function onBeforeRender(pageContext: PageContextServer) {
     pageContext.routeParams.slug,
     locale,
     pageContext.context
-  )
+  );
 
   const pageProps: Props = {
-    post ,
+    post,
     categories: await getCategories(locale, pageContext.context),
     topics: await getTopics(locale, pageContext.context),
     env: {
@@ -33,6 +34,7 @@ export async function onBeforeRender(pageContext: PageContextServer) {
       ALGOLIA_SEARCH_API_KEY: import.meta.env.VITE_ALGOLIA_SEARCH_API_KEY!,
       SITE_URL: import.meta.env.VITE_SITE_URL,
     },
+    latestAnnouncements: await getLatestAnnouncements(pageContext.context),
     params: {
       locale,
       slug: pageContext.routeParams!.slug!,

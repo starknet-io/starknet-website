@@ -936,6 +936,25 @@ export const topLevelBlocks = [
       },
     ],
   },
+  {
+    name: "side_sticky_banner",
+    label: "Side Sticky Banner",
+    widget: "object",
+    fields: [
+      {
+        name: "blocks",
+        label: "Blocks",
+        widget: "list",
+        types: [...blocks, flexLayout],
+        default: [],
+      },
+      {
+        name: "isActive",
+        widget: "boolean",
+        default: false,
+      },
+    ],
+  },
   flexLayout,
   ...blocks,
 ] satisfies CmsFieldList["types"];

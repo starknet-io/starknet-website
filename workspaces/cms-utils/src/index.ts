@@ -10,7 +10,7 @@ export function youtubeVideoIdFromURL(url: string): string | undefined | void {
       if (obj.pathname.startsWith("/live/")) {
         return obj.pathname.replace("/live/", "");
       }
-      if(obj.pathname.startsWith("/embed/")) {
+      if (obj.pathname.startsWith("/embed/")) {
         return obj.pathname.replace("/embed/", "");
       }
     } else if (obj.hostname === "youtu.be") {
@@ -64,9 +64,11 @@ export async function getJSON(
 ): Promise<any> {
   if (import.meta.env.SSR || context) {
     if (context) {
-      const res = await context.env.ASSETS.fetch(new URL("/" + src + ".json", "http://localhost:3000"))
+      const res = await context.env.ASSETS.fetch(
+        new URL("/" + src + ".json", "http://localhost:3000")
+      );
 
-      return res.json()
+      return res.json();
     } else if (import.meta.env.DEV) {
       const fs = await import("node:fs/promises");
       const path = await import("node:path");
