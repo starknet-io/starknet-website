@@ -2032,30 +2032,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/icon@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@chakra-ui/icon@npm:3.2.0"
-  dependencies:
-    "@chakra-ui/shared-utils": 2.0.5
-  peerDependencies:
-    "@chakra-ui/system": ">=2.0.0"
-    react: ">=18"
-  checksum: d417e2b343837d6862eb37739e3d02b8e8bbeeefa4c7e4f1d4a7fcfcdf1c7a4401de9094d7a08ba1419f73465ab30456427f8dbf2f2ffe29b77a14ad4b341b00
-  languageName: node
-  linkType: hard
-
-"@chakra-ui/icons@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@chakra-ui/icons@npm:2.1.1"
-  dependencies:
-    "@chakra-ui/icon": 3.2.0
-  peerDependencies:
-    "@chakra-ui/system": ">=2.0.0"
-    react: ">=18"
-  checksum: b7acf209bcb8f40494e5be64195c1f6b6d31bd425342731892b577ded6b3d02bc0399be18c3c503cf19086d1b89bcda71a3570c797a5c1b09bd5de997cee359b
-  languageName: node
-  linkType: hard
-
 "@chakra-ui/image@npm:2.0.16":
   version: 2.0.16
   resolution: "@chakra-ui/image@npm:2.0.16"
@@ -4792,7 +4768,6 @@ __metadata:
     "@algolia/autocomplete-plugin-recent-searches": ^1.9.2
     "@algolia/autocomplete-theme-classic": ^1.9.2
     "@chakra-ui/cli": ^2.4.0
-    "@chakra-ui/icons": ^2.1.1
     "@chakra-ui/pro-theme": ^0.0.66
     "@chakra-ui/react": ^2.6.0
     "@crowdin/cli": ^3.11.0

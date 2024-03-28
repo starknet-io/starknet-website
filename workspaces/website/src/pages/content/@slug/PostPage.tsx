@@ -35,8 +35,7 @@ import algoliasearch from "algoliasearch";
 import { BlogCard } from "@ui/Blog/BlogCard";
 import { BlogHit } from "../PostsPage";
 import { BlogBreadcrumbs } from "@ui/Blog/BlogBreadcrumbs";
-import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
-import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
+import LatestAnnouncementsBlock from "@ui/LatestAnnouncementsBlock/LatestAnnouncementsBlock";
 import { LatestAnnouncements } from "@starknet-io/cms-data/src/settings/latest-announcements";
 import {
   FacebookShareButton,
@@ -314,18 +313,7 @@ export function PostPage({
           }}
         />
         {latestAnnouncements && (
-          <SideStickyBanner>
-            {latestAnnouncements.map((announcement) =>
-              announcement.isActive ? (
-                <SideStickyBannerCard
-                  image={announcement.image}
-                  text={announcement.text}
-                  buttonText={announcement.buttonText}
-                  buttonLink={announcement.buttonLink}
-                />
-              ) : null
-            )}
-          </SideStickyBanner>
+          <LatestAnnouncementsBlock list={latestAnnouncements} />
         )}
         <RelatedSection post={post} topics={topics} />
       </InstantSearch>

@@ -21,8 +21,6 @@ import { HeadingContainer } from "./HeadingContainer";
 import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
-import SideStickyBanner from "@ui/SideStickyBanner/SideStickyBanner";
-import SideStickyBannerCard from "@ui/SideStickyBanner/SideStickyBannerCard/SideStickyBannerCard";
 
 interface Props {
   disallowH1?: boolean;

@@ -19,7 +19,7 @@ export async function getLatestAnnouncements(
 
     return latestAnnouncements;
   } catch (cause) {
-    throw new Error("getFeaturedSection failed!", {
+    throw new Error("getLatestAnnouncements failed!", {
       cause,
     });
   }

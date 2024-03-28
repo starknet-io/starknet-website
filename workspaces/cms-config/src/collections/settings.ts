@@ -394,7 +394,7 @@ export const settingsCollectionConfig = {
           fields: [
             {
               name: "image",
-              widget: "string",
+              widget: "image",
               crowdin: false,
             },
             {
