@@ -76,3 +76,7 @@ blocks:
           page: 5ecdf9cf-d433-478a-a280-07e0f860534f
         description: Get to know the ambassadors activities within Starknet community.
         columns: "4"
+  - type: group
+    blocks:
+      - type: basic_card
+        size: sm
