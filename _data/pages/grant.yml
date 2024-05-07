@@ -1,5 +1,5 @@
 id: 80c9a40d-ac4c-4bee-8c78-dd83667a1a97
-title: Grant
+title: Seed Grant Program
 show_title: false
 seoTitle: Seed Grant Program | Starknet
 seoDescription: The Seed Grants Program is designed to provide teams with grants
@@ -31,24 +31,20 @@ blocks:
               This program has a simplified application and evaluation process, aiming to provide a decision approximately two weeks after submission. 
 
 
-              A Seed Grant is appropriate for projects and teams that meet any of the following criteria:
+              Seed Grants  are  intended for projects that have already developed a minimum viable product (MVP) or proof of concept, but haven’t yet gone to market. They are appropriate for projects and teams that meet the following criteria:
 
 
-              * Actively involved in the Starknet community and/ or participated in a Starknet hackathon, builder program, or other entry-level initiative.
+              * actively involved in the Starknet community and / or participated in a Starknet hackathon, builder program, or other entry-level initiative;
 
-              * Already developed an MVP or proof of concept.
+              * developed an MVP or proof of concept; and
 
-              * Willing to submit a demo or links to a proof of concept or MVP.
-
-              * Planning on using or building upon existing Starknet tools and integrations.
-
-              * You’re experimenting with innovative concepts aimed at pushing boundaries of what is possible on Starknet.
+              * planning on using or building upon existing Starknet tools and integrations.
 
 
-              All teams should present a clear plan detailing how the grant will be used within the next three months.
+              **All teams should present a clear plan detailing how the grant will be used within the next three months.**
 
 
-              We welcome applications from all industries, and there are no restrictions on the types of projects we consider.
+              We welcome applications from all industries, and there are no restrictions on the types of products we consider.
         heading: ""
         xl: 1
         lg: 1
@@ -58,25 +54,26 @@ blocks:
   - type: card_display
     title: Application Process
     button: Apply Now
-    buttonLink: https://starknet.questbook.app/proposal_form/?grantId=661667585afea0acb56c9f08&chainId=10&newTab=true
+    buttonLink: https://tinyurl.com/snf-seed-grants
     card_display_items:
       - title: Application
-        description: "To apply, fill out the Questbook form provided. "
+        description: "Apply via our grants submission form to submit your project. You
+          will need to submit a clear roadmap of how the grant will be utilized
+          over the next 3 months. "
       - title: Internal Evaluation
-        description: " Each application will be assessed by an experienced review
-          committee based on potential impact, innovation, milestones, community
-          engagement & track record, and embeddedness with the Starknet
-          ecosystem."
+        description: An internal committee will assess each application based on
+          potential impact, innovation, milestones, community engagement & track
+          record, and embeddedness with the Starknet ecosystem.
       - title: Results
         description: "We plan to communicate decisions on your application within an
           approximate two week timeframe. "
       - title: Onboarding
         description: After successfully completing KYC and signing a grant agreement,
           you will receive funds.
-      - title: Grant Deliverables
-        description: "After completion of the work, the Foundation will assess results
-          and share deliverables (blog post, video, AMA) with the team and
-          expect regular updates. "
+      - title: Post Grant Check-in
+        description: "After three months, the Foundation will check-in with Grantees and
+          assess the results. The Grantee should share regular updates (blog
+          posts, videos, AMAs etc) with the team to assist in this process.  "
   - type: container
     blocks:
       - type: flex_layout
@@ -84,8 +81,10 @@ blocks:
         blocks:
           - type: markdown
             body: >-
-              If your project is currently part of the Starknet Foundation’s
-              Developer Partnership, you cannot apply for this grant. 
+              This program is not for mature stage projects. 
+
+
+              If your product has been live on mainnet for over three months and / or has a core group of users already, it will not be eligible for a Seed Grant. 
 
 
               We do not accept applications related to:
@@ -117,93 +116,100 @@ blocks:
       - title: Seed Grant Program Application Form
         description: Application Form
         image: /assets/sn-symbol-gradient.png
-        website_url: "https://starknet.questbook.app/proposal_form/?grantId=661667585af\
-          ea0acb56c9f08&chainId=10&newTab=true "
+        website_url: https://tinyurl.com/snf-seed-grants
   - type: container
     blocks:
       - type: accordion
         heading: FAQs
         blocks:
           - label: What is the Seed Grants Program?
-            body: The Seed Grants Program offers teams developing on Starknet grants up to
-              $25,000 to foster the growth of the Starknet ecosystem.
+            body: The Seed Grants Program is designed to provide teams with grants up to
+              $25,000 in USDC in non-dilutive funding to enhance the growth of
+              the Starknet ecosystem.
           - label: Who can apply?
             body: >-
-              
+              The Seed Grants Program aims to support early stage teams that
+              have already developed a minimum viable product (MVP) or proof of
+              concept, but haven’t yet gone to market. 
 
-              * The grants will be awarded to individuals and teams demonstrating promising results in building applications on Starknet, using any combination of the following criteria:
 
-              * * Prior development experience on Starknet.
-                * Active involvement in the Starknet community, indicated by participation in a Starknet hackathon, builder program, or another entry-level initiative.
-                * Willing to submit a demo or links to a proof of concept or MVP.
-                * Planning on using or building upon existing Starknet tools and integrations.
-                * Experimenting with innovative concepts aimed at pushing boundaries on Starknet.
-              * All applicants will be required to provide an explanation detailing how the grant will be used within the next three months.
+              If you or your project satisfy the following criteria, consider applying for Seed Grants:
 
-              * Please note that projects currently affiliated with the Starknet Foundation’s Developer Partnership are not eligible to participate in the Seed Grants Program.
+
+              * actively involved in the Starknet community and / or participated in a Starknet hackathon, builder program, or other entry-level initiative;
+
+              * developed an MVP or proof of concept; and
+
+              * planning on using or building upon existing Starknet tools and integrations.
           - label: What currency are grants paid in?
             body: Grants are paid out in USDC.
           - label: How long will it take to receive a response on my application?
-            body: You should receive a response around two weeks after submission.
+            body: Results will be communicated to applicants within two weeks.
           - label: What types of projects do you provide grants to?
-            body: Any project building on Starknet can be eligible for a grant. We welcome
-              applications from all industries, and there are no restrictions on
-              the types of projects we consider.
+            body: There are no restrictions on the types of products we consider.  Any
+              project building on Starknet that is not ineligible can apply for
+              a grant.
           - label: Who is reviewing grant applications?
-            body: Starknet Foundation and Starkware team members will be reviewing the
-              applications.
+            body: An internal committee will assess each application.
           - label: Is my application confidential?
             body: Applications will not be made public and will only be shared amongst the
-              Starknet Foundation and Starkware team.
+              Starknet Foundation and StarkWare team.
           - label: Will I hear back if my request is rejected?
-            body: Yes — you will hear back if your application is not accepted.
+            body: Yes, you will hear back if your application is not accepted.
           - label: Are there application deadlines?
-            body: No – you can apply for Seed Grants on an ongoing basis.  Applications will
+            body: No, you can apply for Seed Grants on an ongoing basis.  Applications will
               be reviewed in rounds.
           - label: How can I apply for a grant?
-            body: Please apply via this link, where you will be asked to fill out several
-              questions.
+            body: Please apply via this [link](https://tinyurl.com/snf-seed-grants), where
+              you will be asked to fill out several questions.
           - label: How will the reviewers evaluate my application?
-            body: Each application will be assessed by an experienced review committee based
-              on potential impact, innovation, milestones, community engagement
-              & track record, and embeddedness with the Starknet ecosystem.
+            body: An internal committee will assess each application based on potential
+              impact, innovation, milestones, community engagement & track
+              record, and embeddedness with the Starknet ecosystem.
           - label: Can candidates apply more than once?
             body: Yes, however, you will be asked if you have previously applied to the Seed
               Grants program. If you have, please include details on how your
               project has evolved and improved since the last time you applied.
-          - label: Can candidates apply who have received other funding from Starkware or
+          - label: Can candidates apply who have received other funding from StarkWare or
               the Starknet Foundation?
             body: We encourage existing Starknet funded projects to apply and illustrate
-              what they will use the Seed Grant for. However, please note that
-              projects currently under a Developer Partnership will not be
-              eligible for Seed Grants.
+              what they will use the Seed Grant for.However, please note that
+              mature projects already live on Starknet with a core group of
+              users are not eligible to participate in the Seed Grants Program.
           - label: Will there be a KYC/ KYB process involved?
-            body: Yes, we are legally required to perform KYC/ KYB to verify identities and
-              ensure funds are properly distributed. Any project unwilling to
-              complete the required KYC/KYB procedures will not be eligible for
-              a grant.
+            body: >-
+              Yes, we are legally required to perform KYC/ KYB to verify
+              identities and ensure funds are properly distributed. 
+
+
+              Any project unwilling to complete the required KYC/KYB procedures will not be eligible for a grant.
           - label: What are some tips for a good application?
-            body: When completing your application, it's crucial to provide a comprehensive
-              overview of your project, outlining its objectives, potential
-              impact, and how it aligns with the Starknet ecosystem.Clearly
-              articulate the unique value proposition of your project and how it
-              addresses existing challenges or opportunities within the
-              ecosystem.Additionally, detail your team's expertise, experience,
-              and contributions, showcasing why you're the right group to bring
-              this project to life.Finally, a well-thought-out plan for using
-              the grant money is essential, as it will demonstrate a clear
-              understanding of how the funds will be allocated to drive project
-              success.
+            body: >-
+              When completing your application, it's crucial to provide a
+              comprehensive overview of your project, outlining its objectives,
+              potential impact, and how it aligns with the Starknet ecosystem.
+
+
+              Clearly articulate the unique value proposition of your project and how it addresses existing challenges or opportunities within the ecosystem.
+
+
+              Additionally, detail your team's expertise, experience, and contributions, showcasing why you're the right group to bring this project to life.
+
+
+              A well-thought-out plan for using the grant money is essential, as it will demonstrate a clear understanding of how the funds will be allocated to drive project success.
           - label: Are there any particular industries you are focused on?
             body: We welcome applications from all industries, and there are no restrictions
               on the types of projects we consider.
           - label: What if I need more than $25,000?
-            body: If you require more than $25,000, we recommend considering other funding
-              options or discussing your specific needs with our team.While the
-              Seed Grants program offers grants up to $25,000, we understand
-              that some projects may require additional funding. Feel free to
-              reach out to us to discuss potential alternatives or opportunities
-              for further support
+            body: >-
+              If you require more than $25,000, we recommend considering other
+              funding options or discussing your specific needs with our team.
+
+
+              While the Seed Grants program offers grants up to $25,000, we understand that some projects may require additional funding.  
+
+
+              Feel free to reach out to us to discuss potential alternatives or opportunities for further support
           - label: Will you give priority to those already building and participating in
               Starknet?
             body: While any project can apply, your project has a much better chance of
