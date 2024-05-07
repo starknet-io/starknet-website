@@ -23,82 +23,15 @@ blocks:
         blocks:
           - type: markdown
             body: >-
-              The Seed Grants Program is designed to provide teams with grants
-              up to $25,000 in USDC in non-dilutive funding to enhance the
-              growth of the Starknet ecosystem. 
+              The Seed Grant Program is designed to provide teams with grants up
+              to $25,000 in USDC in non-dilutive funding to enhance the growth
+              of the Starknet ecosystem. 
 
 
               This program has a simplified application and evaluation process, aiming to provide a decision approximately two weeks after submission. 
 
 
-              A Seed Grant is appropriate for projects and teams that meet any of the following criteria:
-
-
-              * Actively involved in the Starknet community and/ or participated in a Starknet hackathon, builder program, or other entry-level initiative.
-
-              * Already developed an MVP or proof of concept.
-
-              * Willing to submit a demo or links to a proof of concept or MVP.
-
-              * Planning on using or building upon existing Starknet tools and integrations.
-
-              * You’re experimenting with innovative concepts aimed at pushing boundaries of what is possible on Starknet.
-
-
-              All teams should present a clear plan detailing how the grant will be used within the next three months.
-
-
-              We welcome applications from all industries, and there are no restrictions on the types of projects we consider.
-        heading: Seed Grants Program
-        xl: 1
-        lg: 1
-        md: 1
-        base: 1
-    max_width: 1062
-  - type: card_display
-    title: Application Process
-    button: Apply Now
-    buttonLink: https://starknet.questbook.app/proposal_form/?grantId=661667585afea0acb56c9f08&chainId=10&newTab=true
-    card_display_items:
-      - title: Application
-        description: "Apply via our grants submission form to submit your project. You
-          will need to submit a clear roadmap of how the grant will be utilized
-          over the next 3 months. "
-        icon: Application
-      - title: Internal Evaluation
-        description: An internal committee will assess each application based on
-          potential impact, innovation, milestones, community engagement & track
-          record, and embeddedness with the Starknet ecosystem.
-        icon: Internal Evaluation
-      - title: Results
-        description: "We plan to communicate decisions on your application within an
-          approximate two week timeframe. "
-        icon: Results
-      - title: Onboarding
-        description: After successfully completing KYC and signing a grant agreement,
-          you will receive funds.
-        icon: Onboarding
-      - title: Post Grant Check-in
-        description: "After three months, the Foundation will check-in with Grantees and
-          assess the results. The Grantee should share regular updates (blog
-          posts, videos, AMAs etc) with the team to assist in this process.  "
-        icon: Post Grant Check-in
-  - type: container
-    blocks:
-      - type: flex_layout
-        heading_variant: sm
-        blocks:
-          - type: markdown
-            body: >-
-              The Seed Grant Program is designed to provide teams with grants up
-              to $25,000 in USDC in non-dilutive funding to enhance the growth
-              of the Starknet ecosystem. 
-
-
-              This program has a simplified application and evaluation process, aiming to provide a decision approximately two weeks after submission. 
-
-
-              Seed Grants  are  intended for projects that have already developed a minimum viable product (MVP) or proof of concept, but haven't yet gone to market. They are appropriate for projects and teams that meet the following criteria:
+              Seed Grants are intended for projects that have already developed a minimum viable product (MVP) or proof of concept, but haven’t yet gone to market. They are appropriate for projects and teams that meet the following criteria:
 
 
               * actively involved in the Starknet community and / or participated in a Starknet hackathon, builder program, or other entry-level initiative;
@@ -151,7 +84,7 @@ blocks:
               This program is not for mature stage projects. 
 
 
-              If your product has been live on mainnet for over three months and / or has a core group of users already, it will not be eligible for a Seed Grant. 
+              If your product has been live on mainnet for over three months and / or has a core group of users already, it will not be eligible for a Seed Grant. 
 
 
               We do not accept applications related to:
@@ -197,7 +130,7 @@ blocks:
             body: >-
               The Seed Grants Program aims to support early stage teams that
               have already developed a minimum viable product (MVP) or proof of
-              concept, but haven't yet gone to market. 
+              concept, but haven’t yet gone to market. 
 
 
               If you or your project satisfy the following criteria, consider applying for Seed Grants:
