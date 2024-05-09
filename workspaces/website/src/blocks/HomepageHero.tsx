@@ -4,6 +4,8 @@ import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { Intro } from "./Intro";
 import ProvisionsPopup from "@ui/ProvisionsPopup/ProvisionsPopup";
+import { gtmEvent } from "src/utils/utils";
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
 type Props = {
   readonly seo: {
@@ -120,7 +122,8 @@ export const HomepageHero = ({ seo }: Props) => {
               >
                 <Button
                   href="/en/developers"
-                  size="lg"
+                  size="xl"
+                  fontSize="lg"
                   minW="210px"
                   variant="primaryHero"
                 >
@@ -128,19 +131,19 @@ export const HomepageHero = ({ seo }: Props) => {
                 </Button>
                 <Button
                   size="lg"
+                  fontSize="lg"
+                  gap={2}
                   variant="secondaryHero"
                   href="https://starkgate.starknet.io/"
                   target="_blank"
+                  onClick={() => gtmEvent("Bridge_button_click")}
                 >
                   Bridge
+                  <HiArrowTopRightOnSquare strokeWidth={0.5} />
                 </Button>
               </Stack>
             </Box>
-            <Box
-              zIndex={0}
-              order={{ base: 0, lg: 1 }}
-              // boxSize={{ base: "20", lg: "8" }}
-            />
+            <Box zIndex={0} order={{ base: 0, lg: 1 }} />
             <Img
               position="relative"
               marginRight={{

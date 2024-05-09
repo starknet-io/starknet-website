@@ -53,7 +53,7 @@ const NavbarStickyBanner = ({
             textAlign={{ base: "left", md: "center" }}
             color="white"
             _dark={{ color: "snNavy" }}
-            width={{ base: "245px", sm: "unset" }}
+            width={{ base: "unset", sm: "245px" }}
           >
             {text}
           </Text>
