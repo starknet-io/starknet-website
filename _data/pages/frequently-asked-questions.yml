@@ -76,7 +76,7 @@ blocks:
           test them. 
 
 
-          You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://discord.com/invite/QypNMzkHbc) server.
+          You can become part of the developers’ community, and support it, by joining the [Starknet Discord](https://starknet.io/discord ) server.
       - type: accordion_item
         body: SHARP (shared prover) is a service for computing proofs of the correct
           execution of Cairo programs. It can be used to prove the correct
@@ -517,7 +517,7 @@ blocks:
             * Make sure you’ve installed the latest versions of Chrome and all relevant extensions.
 
               * If your wallet extension has been reset and you receive this message, your wallet should ask you to upgrade your account. Follow the wallet’s instructions.
-          * If the above doesn’t work, please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+          * If the above doesn’t work, please contact us on [Discord](https://starknet.io/discord ) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
 
 
           The portal doesn’t offer my Ethereum wallet as a connection option.
@@ -535,7 +535,7 @@ blocks:
           The portal doesn’t offer my Starknet wallet as a connection option.
 
 
-          Please contact us on [Discord](https://discord.com/invite/qypnmzkhbc) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
+          Please contact us on [Discord](https://starknet.io/discord ) or [Telegram](https://t.me/+efDitGbILOFmMDNk).
       - label: "What is the reason for implementing Sybil-resistance mechanisms in the
           Provisions allocation? "
         body: >-
