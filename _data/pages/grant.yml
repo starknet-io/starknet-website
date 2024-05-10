@@ -13,7 +13,7 @@ blocks:
   - type: hero
     variant: seed_grant_program
     buttonUrl: ""
-    title: Seed Grant Program
+    title: Seed Grants Program
     description: ""
     darkTextColor: true
   - type: container
@@ -83,64 +83,6 @@ blocks:
           assess the results. The Grantee should share regular updates (blog
           posts, videos, AMAs etc) with the team to assist in this process.  "
         icon: Post Grant Check-in
-  - type: container
-    blocks:
-      - type: flex_layout
-        heading_variant: sm
-        blocks:
-          - type: markdown
-            body: >-
-              The Seed Grant Program is designed to provide teams with grants up
-              to $25,000 in USDC in non-dilutive funding to enhance the growth
-              of the Starknet ecosystem. 
-
-
-              This program has a simplified application and evaluation process, aiming to provide a decision approximately two weeks after submission. 
-
-
-              Seed Grants  are  intended for projects that have already developed a minimum viable product (MVP) or proof of concept, but haven't yet gone to market. They are appropriate for projects and teams that meet the following criteria:
-
-
-              * actively involved in the Starknet community and / or participated in a Starknet hackathon, builder program, or other entry-level initiative;
-
-              * developed an MVP or proof of concept; and
-
-              * planning on using or building upon existing Starknet tools and integrations.
-
-
-              **All teams should present a clear plan detailing how the grant will be used within the next three months.**
-
-
-              We welcome applications from all industries, and there are no restrictions on the types of products we consider.
-        heading: ""
-        xl: 1
-        lg: 1
-        md: 1
-        base: 1
-    max_width: 1062
-  - type: card_display
-    title: Application Process
-    button: Apply Now
-    buttonLink: https://tinyurl.com/snf-seed-grants
-    card_display_items:
-      - title: Application
-        description: "Apply via our grants submission form to submit your project. You
-          will need to submit a clear roadmap of how the grant will be utilized
-          over the next 3 months. "
-      - title: Internal Evaluation
-        description: An internal committee will assess each application based on
-          potential impact, innovation, milestones, community engagement & track
-          record, and embeddedness with the Starknet ecosystem.
-      - title: Results
-        description: "We plan to communicate decisions on your application within an
-          approximate two week timeframe. "
-      - title: Onboarding
-        description: After successfully completing KYC and signing a grant agreement,
-          you will receive funds.
-      - title: Post Grant Check-in
-        description: "After three months, the Foundation will check-in with Grantees and
-          assess the results. The Grantee should share regular updates (blog
-          posts, videos, AMAs etc) with the team to assist in this process.  "
   - type: container
     blocks:
       - type: flex_layout
