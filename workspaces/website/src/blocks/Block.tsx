@@ -215,6 +215,7 @@ export function Block({
               text={block.text}
               buttonText={block.buttonText}
               buttonLink={block.buttonLink}
+              openNewPage={block.openNewPage}
             />
           );
       }

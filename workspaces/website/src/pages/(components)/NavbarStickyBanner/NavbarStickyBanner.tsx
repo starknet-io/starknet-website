@@ -11,12 +11,14 @@ interface NavbarStickyBannerProps {
   text: string;
   buttonText: string;
   buttonLink: string;
+  openNewPage?: boolean;
 }
 
 const NavbarStickyBanner = ({
   text,
   buttonText,
   buttonLink,
+  openNewPage = false,
 }: NavbarStickyBannerProps) => {
   const hash = useMemo(
     () => sha256(text + buttonLink + buttonText).slice(-8),
@@ -77,6 +79,7 @@ const NavbarStickyBanner = ({
             }}
             _hover={{ bgColor: "white" }}
             variant="solid"
+            target={openNewPage ? "_blank" : ""}
           >
             {buttonText}
           </Button>

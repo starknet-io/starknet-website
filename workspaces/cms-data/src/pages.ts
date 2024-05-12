@@ -168,6 +168,7 @@ export interface NavStickyBannerBlock {
   readonly buttonText: string;
   readonly buttonLink: string;
   readonly isActive: boolean;
+  readonly openNewPage: boolean;
 }
 
 export interface LinkListBlock {

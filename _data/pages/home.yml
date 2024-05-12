@@ -11,6 +11,7 @@ blocks:
     buttonText: See more
     buttonLink: https://starkware.co
     isActive: false
+    openNewPage: true
   - type: group
     blocks:
       - type: home_hero

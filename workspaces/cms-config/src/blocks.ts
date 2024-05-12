@@ -910,6 +910,12 @@ export const blocks = [
         widget: "boolean",
         default: true,
       },
+      {
+        name: "openNewPage",
+        label: "openNewPage",
+        widget: "boolean",
+        default: false,
+      },
     ],
   },
 ] satisfies CmsFieldList["types"];
