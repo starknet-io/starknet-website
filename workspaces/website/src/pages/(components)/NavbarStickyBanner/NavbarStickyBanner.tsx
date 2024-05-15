@@ -28,12 +28,16 @@ const NavbarStickyBanner = ({
     true
   );
 
-  const onClose = () => {
+  const onReadMore = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    gtmEvent("Navbar_banner_read_more");
+  };
+
+  const onClose = (event: React.MouseEvent) => {
+    event.stopPropagation();
     gtmEvent("Navbar_banner_close");
     setIsOpenStorage(false);
   };
-
-  const onReadMore = () => gtmEvent("Navbar_banner_read_more");
 
   return (
     <ClientOnly>
@@ -60,8 +64,8 @@ const NavbarStickyBanner = ({
             {text}
           </Text>
           <Button
-            onClick={onReadMore}
             href={buttonLink}
+            onClick={onReadMore}
             px={4}
             py={1}
             borderRadius={8}

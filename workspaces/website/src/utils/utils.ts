@@ -49,5 +49,8 @@ export function loadScript(url: string) {
     head.appendChild(script);
   });
 }
-export const gtmEvent = (target: string) =>
+export const gtmEvent = (target: string) => {
+  console.log(target);
+
   window.gtag?.("event", target, { event_category: "engagement" });
+};
