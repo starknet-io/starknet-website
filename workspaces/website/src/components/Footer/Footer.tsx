@@ -19,14 +19,14 @@ import { StarknetLogo } from "../Logo/StarknetLogo";
 type RootProps = {
   children: React.ReactNode;
 } & ChakraBoxProps & {
-    seo: {
-      footerText: string;
-      footerDisclaimers: {
-        text: string;
-        link: string;
-      }[];
-    };
+  seo: {
+    footerText: string;
+    footerDisclaimers: {
+      text: string;
+      link: string;
+    }[];
   };
+};
 
 const Root = ({ children, seo, ...rest }: RootProps) => {
   return (
@@ -67,7 +67,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
               pt="40px"
               pb={{ base: "40px", md: "0px" }}
               px="30px"
-              gap={{ base: "16px", md: "24px"}}
+              gap={{ base: "16px", md: "24px" }}
               display={{ base: "flex", xl: "none" }}
               direction={{ base: "column", md: "row" }}
             >
@@ -109,7 +109,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                 maxW="1200"
                 width="100%"
                 px="30px"
-                justifyContent={{ md: "space-between"}}
+                justifyContent={{ md: "space-between" }}
               >
                 <Stack
                   gap={{ base: "24px", md: "0px" }}
@@ -121,7 +121,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                   <Box>
                     <StarknetLogo height="32" />
                   </Box>
-                  <Divider orientation="vertical" display={{ base: "none", md: "block" }}/>
+                  <Divider orientation="vertical" display={{ base: "none", md: "block" }} />
                   <Text
                     fontSize="sm"
                     color={useColorModeValue(
@@ -158,7 +158,7 @@ const Root = ({ children, seo, ...rest }: RootProps) => {
                 >
                   <IconButton
                     as="a"
-                    href="https://starknet.io/discord"
+                    href="https://discord.com/invite/starknet-community"
                     aria-label="Discord"
                     icon={<SiDiscord fontSize="1.25rem" />}
                     size="small"

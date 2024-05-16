@@ -17,7 +17,7 @@ blocks:
       - type: link_list_item
         link:
           custom_title: Discord
-          custom_external_link: https://starknet.io/discord
+          custom_external_link: https://discord.com/invite/starknet-community
         subLabel:
           label: "Join the conversation on Discord "
       - type: link_list_item

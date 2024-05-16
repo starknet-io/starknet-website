@@ -76,7 +76,7 @@ items:
                 custom_external_link: https://www.youtube.com/@starkware_ltd
               - custom_title: Discord
                 custom_icon: SiDiscord
-                custom_external_link: https://starknet.io/discord
+                custom_external_link: https://discord.com/invite/starknet-community
               - custom_title: GitHub
                 custom_icon: SiGithub
                 custom_external_link: https://github.com/keep-starknet-strange/awesome-starknet
