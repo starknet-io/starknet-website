@@ -1,0 +1,14 @@
+id: f28bb377-f870-4593-827f-a7e58ae54082
+post_type: article
+title: Test
+published_date: 2024-02-15T12:51:16.589Z
+category:
+  - community-and-events
+topic:
+  - cairo
+short_desc: test
+blocks:
+  - type: youtube
+    videoId: yBsfkA4Tvrg
+  - type: markdown
+    body: t﻿est
