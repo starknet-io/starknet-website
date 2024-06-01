@@ -22,7 +22,7 @@ The StarkNet website includes the following features:
 - [Storybook](https://storybook.js.org/) for component development and testing
 - [Crowdin](https://crowdin.com/) for translations
 - [Yarn](https://yarnpkg.com/) as the package manager
-- [NetlifyCMS](https://www.netlifycms.org) Give non-technical users a simple way to edit and add content
+- [NetlifyCMS](https://www.netlifycms.org) to give non-technical users a simple way to edit and add content
 
 ## Getting Started
 
