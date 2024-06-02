@@ -4,6 +4,7 @@ import { Heading } from "@ui/Typography/Heading";
 import { Text } from "@ui/Typography/Text";
 import { Intro } from "./Intro";
 import ProvisionsPopup from "@ui/ProvisionsPopup/ProvisionsPopup";
+import { EVENT_CATEGORY, gtmEvent } from "src/utils/utils";
 
 type Props = {
   readonly seo: {
@@ -80,8 +81,6 @@ export const HomepageHero = ({ seo }: Props) => {
             align="flex-end"
             direction={{ base: "column", lg: "row" }}
             justify="space-between"
-            // paddingBottom="33px"
-            // mb="56px"
           >
             <Box
               top={{ lg: "-64px" }}
@@ -123,6 +122,9 @@ export const HomepageHero = ({ seo }: Props) => {
                   size="lg"
                   minW="210px"
                   variant="primaryHero"
+                  onClick={() =>
+                    gtmEvent("Build_on_Starknet", EVENT_CATEGORY.BUTTON_CLICK)
+                  }
                 >
                   Build on Starknet
                 </Button>
@@ -131,16 +133,15 @@ export const HomepageHero = ({ seo }: Props) => {
                   variant="secondaryHero"
                   href="https://starkgate.starknet.io/"
                   target="_blank"
+                  onClick={() =>
+                    gtmEvent("Explore_Starknet", EVENT_CATEGORY.BUTTON_CLICK)
+                  }
                 >
                   Bridge
                 </Button>
               </Stack>
             </Box>
-            <Box
-              zIndex={0}
-              order={{ base: 0, lg: 1 }}
-              // boxSize={{ base: "20", lg: "8" }}
-            />
+            <Box zIndex={0} order={{ base: 0, lg: 1 }} />
             <Img
               position="relative"
               marginRight={{

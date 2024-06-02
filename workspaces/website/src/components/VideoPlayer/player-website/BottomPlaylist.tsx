@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies
  */
@@ -26,7 +25,7 @@ type BottomPlaylistProps = {
 export default function BottomPlaylist({
   chapters,
   currentChapter,
-  onChapterChange
+  onChapterChange,
 }: BottomPlaylistProps) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -35,14 +34,14 @@ export default function BottomPlaylist({
       borderColor="border.divider"
       borderStyle="solid"
       display="flex"
-      flexDirection={{ base: "row", lg: 'row' }}
+      flexDirection={{ base: "row", lg: "row" }}
       flexWrap="nowrap"
       gap={{
         base: "40px",
-        lg: '40px',
+        lg: "40px",
       }}
-      marginTop={'24px'}
-      maxH={{ base: "auto", lg: 'auto' }}
+      marginTop={"24px"}
+      maxH={{ base: "auto", lg: "auto" }}
       overflowX="auto"
       ref={ref}
       sx={{
@@ -67,14 +66,14 @@ export default function BottomPlaylist({
             }}
             minW={{
               base: "151px",
-              md: "175px"
+              md: "175px",
             }}
             maxW={{
               base: "151px",
-              md: "175px"
+              md: "175px",
             }}
             flexDirection={{
-              base: "column"
+              base: "column",
             }}
             flexWrap="nowrap"
             padding={{
@@ -84,26 +83,26 @@ export default function BottomPlaylist({
             gap="16px"
             _first={{
               marginLeft: {
-                base: "auto"
+                base: "auto",
               },
             }}
             _last={{
               marginRight: {
-                base: "auto"
+                base: "auto",
               },
             }}
           >
             <Box
               minW={{
                 base: "151px",
-                md: "175px"
+                md: "175px",
               }}
             >
               <Image
                 src={chapter.thumbnail}
                 width={{
                   base: "151px",
-                  md: "175px"
+                  md: "175px",
                 }}
                 height="auto"
                 alt={chapter.title}
@@ -126,13 +125,13 @@ export default function BottomPlaylist({
                 {chapter.subtitle}
                 <Box
                   display={{
-                    base: "block"
+                    base: "block",
                   }}
                 >
                   {chapter.durationTime}
                 </Box>
               </Box>
-              
+
               <Box as="h5" fontSize="15px" fontWeight="600" lineHeight="21px">
                 {chapter.title}
               </Box>
@@ -143,7 +142,7 @@ export default function BottomPlaylist({
                 lineHeight="normal"
                 flex={1}
                 display={{
-                  base: "none"
+                  base: "none",
                 }}
                 alignItems="flex-end"
               >

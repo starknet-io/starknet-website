@@ -2,6 +2,7 @@ import { Box, Image } from "@chakra-ui/react";
 import { Chapter } from "../constants";
 import styled from "@emotion/styled";
 import { useEffect } from "react";
+import { EVENT_CATEGORY, gtmEvent } from "src/utils/utils";
 
 const ChaptersPlaylistWrapper = styled(Box)`
   ::-webkit-scrollbar {
@@ -22,7 +23,6 @@ export default function ChaptersPlaylist({
   currentChapter,
   onChapterChange,
 }: ChaptersPlaylistProps) {
-
   useEffect(() => {
     const chapterElement = document.getElementById(currentChapter.id);
     const parentElement = chapterElement?.parentElement;
@@ -69,12 +69,17 @@ export default function ChaptersPlaylist({
             padding={{ lg: "0px 4px 0px 0px" }}
             height="max-content"
           >
-            <Box minW={{ base: "151px", md: "175px" }}>
+            <Box
+              minW={{ base: "151px", md: "175px" }}
+              onClick={() =>
+                gtmEvent(chapter.title || "", EVENT_CATEGORY.CLICK)
+              }
+            >
               <Image
                 src={chapter.thumbnail}
                 width={{
                   base: "151px",
-                  md: "175px"
+                  md: "175px",
                 }}
                 height="auto"
                 alt={chapter.title}
@@ -86,7 +91,13 @@ export default function ChaptersPlaylist({
               />
             </Box>
 
-            <Box display="flex" width="100%" flexDir="column" gap="4px" color={textColor}>            
+            <Box
+              display="flex"
+              width="100%"
+              flexDir="column"
+              gap="4px"
+              color={textColor}
+            >
               <Box
                 fontSize="12px"
                 fontWeight={500}
@@ -97,7 +108,7 @@ export default function ChaptersPlaylist({
                 {chapter.subtitle}
                 <Box
                   display={{
-                    base: "block"
+                    base: "block",
                   }}
                 >
                   {chapter.durationTime}
@@ -114,7 +125,7 @@ export default function ChaptersPlaylist({
                 lineHeight="normal"
                 flex={1}
                 display={{
-                  base: "none"
+                  base: "none",
                 }}
                 alignItems="flex-end"
               >

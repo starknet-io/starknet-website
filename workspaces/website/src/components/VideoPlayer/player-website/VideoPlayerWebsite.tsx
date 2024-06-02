@@ -1,4 +1,3 @@
-
 import { Box } from "@chakra-ui/react";
 import React, { CSSProperties, useCallback, useMemo, useState } from "react";
 import { useUpdateEffect } from "react-use";
@@ -47,12 +46,15 @@ export function VideoPlayerWebsite({
     [setVideoContainerHeightChange]
   );
 
-  const playlistProps = useMemo(() => ({
-    height: videoContainerHeight,
-    chapters,
-    currentChapter,
-    onChapterChange,
-  }), [videoContainerHeight, chapters, currentChapter, onChapterChange]);
+  const playlistProps = useMemo(
+    () => ({
+      height: videoContainerHeight,
+      chapters,
+      currentChapter,
+      onChapterChange,
+    }),
+    [videoContainerHeight, chapters, currentChapter, onChapterChange]
+  );
 
   const videoWrapperStyle: CSSProperties = isFullscreen
     ? { position: "absolute", inset: 0, height: "100%", width: "100%" }
@@ -105,9 +107,9 @@ export function VideoPlayerWebsite({
         )}
       />
       {playlistOnBottom ? (
-        <BottomPlaylist {...playlistProps}/>
+        <BottomPlaylist {...playlistProps} />
       ) : (
-        <ChaptersPlaylist {...playlistProps}/>
+        <ChaptersPlaylist {...playlistProps} />
       )}
     </Box>
   );

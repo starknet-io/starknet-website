@@ -49,5 +49,20 @@ export function loadScript(url: string) {
     head.appendChild(script);
   });
 }
-export const gtmEvent = (target: string) =>
-  window.gtag?.("event", target, { event_category: "engagement" });
+
+export enum EVENT_CATEGORY {
+  CLICK = "click",
+  BUTTON_CLICK = "button_click",
+  PAGE_VIEW = "page_view",
+  FORM_SUBMISSION = "form_submission",
+  CUSTOM_EVENT = "custom_event",
+  USER_ENGAGEMENT = "user_engagement",
+  SCROLL = "scroll",
+  LINK = "link",
+  ENGAGEMENT = "engagement",
+}
+
+export const gtmEvent = (
+  target: string,
+  event_category = EVENT_CATEGORY.ENGAGEMENT
+) => window.gtag?.("event", target, { event_category: event_category });

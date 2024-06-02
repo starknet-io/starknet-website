@@ -6,7 +6,7 @@ import { NavbarContainer } from "@ui/Layout/Navbar/NavbarContainer";
 import { NavBarLink } from "@ui/Layout/Navbar/NavBarLink";
 import { NavbarHeading } from "@ui/Layout/Navbar/NavbarHeading";
 import { Box, ButtonGroup, Flex } from "@chakra-ui/react";
-import { getComputedLinkData } from "src/utils/utils";
+import { EVENT_CATEGORY, getComputedLinkData, gtmEvent } from "src/utils/utils";
 import { MainSearch } from "./MainSearch";
 import React, { Fragment } from "react";
 import { IconButton } from "@ui/IconButton";
@@ -53,14 +53,7 @@ export default function Navbar({
               key={`${mainMenuItemIndex}-${pathname}`}
               label={mainMenuItem.title}
             >
-              <Flex
-                // bg="red"
-                maxW="900px"
-                mx="auto"
-                gap="48px"
-                // display="block"
-                // sx={{ columnCount: [1, 2, 3, 4] }}
-              >
+              <Flex maxW="900px" mx="auto" gap="48px">
                 {mainMenuItem.columns?.length &&
                   mainMenuItem.columns?.map((column, columnIndex) => (
                     <Box key={columnIndex}>
@@ -72,13 +65,25 @@ export default function Navbar({
                           );
 
                           if (!href) {
-                            return <span key={itemIndex}>{label}</span>;
+                            return (
+                              <span
+                                key={itemIndex}
+                                //!this needs slugify!!!
+                                onClick={() =>
+                                  gtmEvent(
+                                    label || "",
+                                    EVENT_CATEGORY.BUTTON_CLICK
+                                  )
+                                }
+                              >
+                                {label}
+                              </span>
+                            );
                           }
 
                           if (item.custom_icon) {
                             return (
                               <IconButton
-                                // isExternal={item.custom_external_link != null}
                                 href={href}
                                 key={itemIndex}
                                 as="a"

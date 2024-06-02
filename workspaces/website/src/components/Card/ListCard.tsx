@@ -17,7 +17,7 @@ import { Text } from "@ui/Typography/Text";
 import { HiArrowTopRightOnSquare, HiGlobeAlt } from "react-icons/hi2";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { CardGradientBorder } from "@ui/Card/components/CardGradientBorder";
-import { titleCase } from "src/utils/utils";
+import { EVENT_CATEGORY, gtmEvent, titleCase } from "src/utils/utils";
 import { Button } from "@ui/Button";
 
 interface Type {
@@ -71,7 +71,15 @@ export const ListCard = ({
 
   return (
     <Box maxW="5xl">
-      <LinkBox sx={{ textDecoration: "none!important", cursor: "pointer" }}>
+      <LinkBox
+        sx={{ textDecoration: "none!important", cursor: "pointer" }}
+        onClick={() =>
+          gtmEvent(
+            (title || "List_card").replace(/ /g, "_"),
+            EVENT_CATEGORY.BUTTON_CLICK
+          )
+        }
+      >
         <CardGradientBorder padding="0" borderRadius={{ base: "16px" }}>
           <Box
             w={{ base: "full" }}

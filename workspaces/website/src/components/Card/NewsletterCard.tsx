@@ -6,13 +6,12 @@ import { useState } from "react";
 import RoadmapSubscribeForm from "src/pages/(components)/roadmap/RoadmapSubscribeForm";
 import { ImageIconCard } from "./ImageIconCard";
 
-
 /**
- * `Props` type.  
+ * `Props` type.
  */
 
 type Props = {
-  description: string,
+  description: string;
   env: {
     CLOUDFLARE_RECAPTCHA_KEY: string;
   };
@@ -24,31 +23,22 @@ type Props = {
  * Export `NewsletterCard` component.
  */
 
-export const NewsletterCard = ({
-  description,
-  env,
-  locale,
-  title
-}: Props) => {
+export const NewsletterCard = ({ description, env, locale, title }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <RoadmapSubscribeForm 
-        env={env}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-      />
+      <RoadmapSubscribeForm env={env} isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <ImageIconCard 
+      <ImageIconCard
         columns={4}
-        defaultIcon={'/assets/cards/newsletter.svg'}
+        defaultIcon={"/assets/cards/newsletter.svg"}
         description={description}
         onClick={() => setIsOpen(true)}
-        orientation={'left'}
-        size={'large'}
+        orientation={"left"}
+        size={"large"}
         title={title}
-        variant={'community_card'}
+        variant={"community_card"}
         locale={locale}
         withIllustration={false}
       />

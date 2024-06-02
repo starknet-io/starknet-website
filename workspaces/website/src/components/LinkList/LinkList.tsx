@@ -5,6 +5,7 @@ import { Box, Icon, Flex, FlexProps, Link, Avatar } from "@chakra-ui/react";
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { createContext, useContext } from "react";
 import { ArrowUpIcon } from "./ArrowUpIcon";
+import { EVENT_CATEGORY, gtmEvent } from "src/utils/utils";
 
 export type ListSize = "sm" | "md" | "lg";
 
@@ -138,6 +139,12 @@ const Item = ({ subLabel, link, avatar, ...rest }: ItemProps) => {
             gap="8px"
             color="listLink-fg"
             _hover={{ textDecoration: "underline" }}
+            onClick={() =>
+              gtmEvent(
+                (link.custom_title || "Link_list_item").replace(/ /g, "_"),
+                EVENT_CATEGORY.BUTTON_CLICK
+              )
+            }
           >
             {(link.hasIcon ?? true) && (
               <Icon boxSize="24px" as={getLinkIcon(link.custom_icon)} />

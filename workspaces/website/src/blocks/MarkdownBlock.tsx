@@ -12,8 +12,8 @@ import {
 import { slugify } from "@starknet-io/cms-utils/src/index";
 import { ReactMarkdownProps } from "react-markdown/lib/complex-types";
 import CodeHighlight from "@ui/CodeHighlight/CodeHighlight";
-import remarkGfm from 'remark-gfm'
-import '../style/table.css'
+import remarkGfm from "remark-gfm";
+import "../style/table.css";
 interface Props {
   readonly disallowH1?: boolean;
   readonly body: string;
@@ -27,10 +27,6 @@ export function MarkdownBlock({ disallowH1, body }: Props): JSX.Element {
         components={{
           h2: (props) => (
             <>
-              {/* <Spacer
-                height="140px"
-                id={`toc-${slugify(props.children.join(" "))}`}
-              /> */}
               <Heading
                 as={disallowH1 ? "h2" : "h1"}
                 id={`toc-${slugify(props.children.join(" "))}`}
@@ -44,10 +40,6 @@ export function MarkdownBlock({ disallowH1, body }: Props): JSX.Element {
           ),
           h3: (props) => (
             <>
-              {/* <Spacer
-                height="140px"
-                id={`toc-${slugify(props.children.join(" "))}`}
-              /> */}
               <Heading
                 color="heading-navy-fg"
                 marginBottom="16px"
@@ -67,51 +59,63 @@ export function MarkdownBlock({ disallowH1, body }: Props): JSX.Element {
             <Heading color="heading-navy-fg" variant="h6" {...props} />
           ),
           p: (props) => (
-            <Text
-            pt={2}
-            pb={4}
-            lineHeight="32px"
-            variant="body"
-            {...props}
-          />
+            <Text pt={2} pb={4} lineHeight="32px" variant="body" {...props} />
           ),
           ul: (props) => <UnorderedList pl={1} mb={4} {...props} />,
           ol: (props) => <OrderedList mb={4} pl={1} {...props} />,
           li: (props) => <ListItem lineHeight="32px" {...props} />,
-          img: (props) => <Img my="40px" borderRadius="8px" _dark={{ background: 'white' }} {...props} />,
+          img: (props) => (
+            <Img
+              my="40px"
+              borderRadius="8px"
+              _dark={{ background: "white" }}
+              {...props}
+            />
+          ),
           a: (props) => <Link variant="standard" {...props} />,
           pre: (props) => {
             // @ts-ignore
-            if(props.node.children[0]?.tagName === 'code'){
-
+            if (props.node.children[0]?.tagName === "code") {
               //@ts-ignore
-              const codeProps = props.children[0]?.props as (undefined | Omit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLPreElement>, HTMLPreElement>, "ref"> & ReactMarkdownProps)
+              const codeProps = props.children[0]?.props as
+                | undefined
+                | (Omit<
+                    React.DetailedHTMLProps<
+                      React.HTMLAttributes<HTMLPreElement>,
+                      HTMLPreElement
+                    >,
+                    "ref"
+                  > &
+                    ReactMarkdownProps);
 
-              const code = typeof codeProps?.children?.[0] === 'string' ? codeProps?.children?.[0]: ''
-              const language = codeProps?.className?.split("-")?.[1]
+              const code =
+                typeof codeProps?.children?.[0] === "string"
+                  ? codeProps?.children?.[0]
+                  : "";
+              const language = codeProps?.className?.split("-")?.[1];
 
-              if(!code){
-                return <pre {...props}>{props.children}</pre>
+              if (!code) {
+                return <pre {...props}>{props.children}</pre>;
               }
-              
-              return <CodeHighlight language={language} code={code} />
-            }else {
-              return <pre {...props}>{props.children}</pre>
+
+              return <CodeHighlight language={language} code={code} />;
+            } else {
+              return <pre {...props}>{props.children}</pre>;
             }
           },
           table: (props) => (
-            <Box 
-              overflowX={'auto'}
-              _dark={{ 
+            <Box
+              overflowX={"auto"}
+              _dark={{
                 th: {
-                  borderColor: 'fg-default'
+                  borderColor: "fg-default",
                 },
                 td: {
-                  borderColor: 'fg-default'
-                }
+                  borderColor: "fg-default",
+                },
               }}
             >
-              <table  {...props}>{props.children}</table>
+              <table {...props}>{props.children}</table>
             </Box>
           ),
         }}

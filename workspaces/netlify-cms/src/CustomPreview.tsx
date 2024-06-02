@@ -49,8 +49,8 @@ export default function CustomPreview(props: CustomPreviewProps) {
   const { height } = useWindowSize();
   const { type, entry, getAsset } = props;
 
-  const fixImagePreview = async (_item: any, key = 'image') => {
-    const item = {..._item}
+  const fixImagePreview = async (_item: any, key = "image") => {
+    const item = { ..._item };
     const asset = getAsset(item[key]);
     if (item[key] && asset.url) {
       if (asset.path === "empty.svg") {
@@ -62,7 +62,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
       }
     }
 
-    return item
+    return item;
   };
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
           _data.image = image.replace("public", "");
         }
       }
-    }
+    };
 
     const getDataWithBlobImage = async (blocks: TopLevelBlock[]) => {
       return Promise.all(
@@ -95,11 +95,12 @@ export default function CustomPreview(props: CustomPreviewProps) {
           } else if (block.type === "card_list") {
             //@ts-ignore
             block.card_list_items = await Promise.all(
-              block.card_list_items.map(async (item) => await fixImagePreview(item))
+              block.card_list_items.map(
+                async (item) => await fixImagePreview(item)
+              )
             );
-          } 
-          else if(block.type === "image_icon_link_card") {
-            block = await fixImagePreview(block, 'icon')
+          } else if (block.type === "image_icon_link_card") {
+            block = await fixImagePreview(block, "icon");
           }
 
           return block;
@@ -108,7 +109,7 @@ export default function CustomPreview(props: CustomPreviewProps) {
     };
 
     const sendDataToLivePreviewRenderer = async (_data: any) => {
-      fixTopLevelImagePreview(_data)
+      fixTopLevelImagePreview(_data);
 
       if (type === CustomPreviewType.TUTORIALS) {
         _data.tags = convertStringTagsToArray(_data.tags);

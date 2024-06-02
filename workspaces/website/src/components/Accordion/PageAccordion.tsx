@@ -1,4 +1,3 @@
-
 //todo: Rewrite this component post launch
 
 import React from "react";
@@ -11,6 +10,7 @@ import {
   Icon,
   Box,
 } from "@chakra-ui/react";
+import { EVENT_CATEGORY, gtmEvent } from "src/utils/utils";
 
 type RootProps = {
   children: React.ReactNode;
@@ -29,7 +29,11 @@ type ItemProps = {
 };
 const Item = ({ label, children }: ItemProps) => {
   return (
-    <AccordionItem>
+    <AccordionItem
+      onClick={() =>
+        gtmEvent(label.replace(/ /g, "_"), EVENT_CATEGORY.BUTTON_CLICK)
+      }
+    >
       {({ isExpanded }) => (
         <>
           <AccordionButton>
