@@ -1,8 +1,9 @@
 import fs from "fs/promises";
 import * as path from "path";
-
+import { ApiResponse } from "./types";
+import { Project } from "../../cms-data/src/starknet-db-projects-dapps";
 process.chdir(path.resolve(__dirname, "../../.."));
-
+import slugify from "slugify";
 import { write, yaml } from "./utils";
 import { locales } from "@starknet-io/cms-data/src/i18n/config";
 import { MainMenu } from "./main-menu";
@@ -22,7 +23,7 @@ import {
   updateBlocks,
 } from "./data";
 import { translateFile } from "./crowdin";
-
+import fetch from "node-fetch";
 const createRoadmapDetails = async () => {
   await fs.mkdir(`public/data/roadmap-details`, { recursive: true });
   for (const locale of locales) {
@@ -301,7 +302,70 @@ await write(
   `public/data/featured-sections/featured-sections.json`,
   featuredSections
 );
+const fetchProjects = async () => {
+  try {
+    return await fetch("https://api.starknet-db.com/projects?size=10000").then(
+      (response) => response.json() as unknown as ApiResponse
+    );
+  } catch (error) {
+    console.error("Error fetching projects from api.starknet-db:", error);
+    throw error;
+  }
+};
+const dAppsData: ApiResponse = await fetchProjects();
+export interface TagObject {
+  label: string;
+  slug: string;
+}
+const blackListTags = [
+  "all",
+  "governance",
+  "pfp",
+  "green finance",
+  "cairo",
+  "formal-verification",
+  "dex, wallet, multi-chain, cross-chain, okx, bridge, blockchain",
+  "staking",
+  "access node",
+  "data",
+  "starkware",
+];
 
+const slugifyTags = (objects: Project[]): Project[] => {
+  return objects.map((obj) => {
+    const newObj: Project = {
+      ...obj,
+      tags: obj.tags.map((tag) => slugify(tag, "_")),
+    };
+    return newObj;
+  });
+};
+
+const extractTags = (projects: Project[]): TagObject[] => {
+  const tagsSet = new Set<string>();
+  projects.forEach((project) => {
+    project.tags.forEach((tag: string) => tagsSet.add(tag.toLowerCase()));
+  });
+  // const tagArray = Array.from(tagsSet);
+  const filteredArray = Array.from(tagsSet).filter(
+    (item) => !blackListTags.includes(item)
+  );
+
+  return filteredArray.map((tag) => ({
+    label: tag,
+    slug: slugify(tag, "_"),
+  }));
+};
+const slugifyDApps = slugifyTags(dAppsData.content);
+const categories = extractTags(dAppsData.content).sort((a, b) =>
+  a.label > b.label ? 1 : b.label > a.label ? -1 : 0
+);
+
+await fs.mkdir("public/data/starknet-db-projects-dapps", { recursive: true });
+await write(
+  `public/data/starknet-db-projects-dapps/starknet-db-projects-dapps.json`,
+  { list: slugifyDApps, categories }
+);
 await createRoadmapDetails();
 await createAnnouncementDetails();
 await createSharedData();

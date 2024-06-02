@@ -24,6 +24,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-streaming": "^0.3.10",
+    "slugify": "^1.6.6",
     "vite": "^4.3.9",
     "vite-node": "0.30.1",
     "vite-plugin-ssr": "^0.4.131",

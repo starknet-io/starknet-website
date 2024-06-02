@@ -6,6 +6,7 @@ import {
   getShuffledArray,
 } from "@starknet-io/cms-utils/src/index";
 import type { Meta } from "@starknet-io/cms-utils/src/index";
+import { Project } from "./starknet-db-projects-dapps";
 
 export interface MarkdownBlock {
   readonly type: "markdown";
@@ -256,13 +257,17 @@ export interface HeadingContainerBlock {
   readonly heading_variant: HeadingVariant;
   readonly blocks: readonly Block[];
 }
-
+export interface DappsBlock {
+  readonly type: "dapps";
+  readonly blocks?: readonly Project[];
+}
 export type TopLevelBlock =
   | Block
   | FlexLayoutBlock
   | GroupBlock
   | Container
-  | HeadingContainerBlock;
+  | HeadingContainerBlock
+  | DappsBlock;
 
 export interface Page extends Meta {
   readonly id: string;

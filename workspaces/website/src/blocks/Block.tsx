@@ -22,6 +22,8 @@ import VideoSectionBlock from "./VideoSectionBlock";
 import { NewsletterCard } from "@ui/Card/NewsletterCard";
 import { YoutubePlayer } from "@ui/YoutubePlayer/YoutubePlayer";
 import NavbarStickyBanner from "../pages/(components)/NavbarStickyBanner/NavbarStickyBanner";
+import DappsPage from "src/pages/starknet-db-projects-dapps/(components)/DappsPage";
+import { getStarknetDappsDbProjects } from "@starknet-io/cms-data/src/starknet-db-projects-dapps";
 import DisplayCardItems from "./DisplayCardItems";
 
 export enum BlockPlacements {
@@ -48,6 +50,7 @@ export function Block({
 }: Props): JSX.Element | null {
   switch (placement) {
     case BlockPlacements.DEFAULT:
+      const pageContext = usePageContext();
       switch (block.type) {
         case "basic_card":
           return <BasicCard {...block} locale={locale} />;
@@ -172,9 +175,13 @@ export function Block({
               darkTextColor={block.darkTextColor}
             />
           );
+        case "dapps":
+          const data = useAsync(["getBlockExplorers", locale], () =>
+            getStarknetDappsDbProjects(pageContext.context)
+          );
+          return <DappsPage list={data.list} categories={data.categories} />;
 
         case "home_hero":
-          const pageContext = usePageContext();
           const homeSEO = useAsync(["getBlockExplorers", locale], () =>
             getHomeSEO(locale, pageContext.context)
           );

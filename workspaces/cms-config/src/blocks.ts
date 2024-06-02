@@ -343,6 +343,17 @@ export const blocks = [
     ],
   },
   {
+    name: "dapps",
+    label: "Dapps",
+    widget: "object",
+    fields: [
+      {
+        name: "type",
+        widget: "hidden",
+      },
+    ],
+  },
+  {
     name: "community_events",
     label: "Community events block",
     widget: "object",

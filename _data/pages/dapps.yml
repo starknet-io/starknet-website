@@ -8,28 +8,10 @@ breadcrumbs: false
 page_last_updated: true
 blocks:
   - type: hero
+    variant: block_explorers
+    title: Hundreds of dApps, Services & Wallets
+    description: Immerse yourself in the Starknet Ecosystem by discovering projects, jobs, metrics and learning resources.
+  - type: dapps
     variant: dapps
     title: dApps
-    description: Discover apps in the Starknet ecosystem across NFTs, Gaming, Defi,
-      DAOs and more.
-  - type: card_list
-    card_list_items:
-      - title: Starknet-ecosystem
-        description: Immerse yourself in the Starknet Ecosystem by discovering projects,
-          jobs, metrics and learning resources.
-        website_url: https://www.starknet-ecosystem.com
-        twitter: https://twitter.com/StarkNetEco
-        link_url: https://www.starknet-ecosystem.com
-        image: /assets/sn-ecosystem.jpg
-      - title: Dappland
-        description: Discover and rate the best apps on Starknet.
-        link_url: https://www.dappland.com
-        website_url: https://www.dappland.com
-        twitter: https://twitter.com/argentHQ
-        image: /assets/dappland.jpg
-      - website_url: https://www.ethereum-ecosystem.com/blockchains/starknet
-        title: Ethereum Ecosystem
-        description: Discover the best of Ethereum and its layer 2s. All in one place.
-        image: /assets/logo.webp
-        twitter: https://twitter.com/web3xplore
-    randomize: true
+    description: ""
