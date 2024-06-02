@@ -95,6 +95,7 @@ blocks:
   - type: newsletter_popup
     title: Starknet Devs Newsletter
     description: Stay up to date on Starknet news and version updates.
+    buttonText: Join Now
   - type: flex_layout
     heading_variant: h3
     base: 1
