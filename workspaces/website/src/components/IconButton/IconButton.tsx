@@ -8,14 +8,16 @@ export interface Props extends IconButtonProps {
   href?: string;
   size?: | "default" | "small";
   variant?: 'outline' | 'primary';
+  target?: "_blank";
 };
 
-export const IconButton = forwardRef<HTMLButtonElement, Props>(({ 
-  href, 
-  toId, 
+export const IconButton = forwardRef<HTMLButtonElement, Props>(({
+  href,
+  toId,
   size,
   variant = 'primary' as keyof typeof iconButtonTheme.variants,
-  ...rest 
+  target,
+  ...rest
 }, ref) => {
   const paddingValue = size === "small" ? "0" : "11px";
   const minWidthValue = size === "small" ? "auto" : "2.5rem";
@@ -33,6 +35,7 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(({
       onClick={handleOnClick}
       padding={paddingValue}
       minWidth={minWidthValue}
+      target={target}
       sx={iconButtonTheme?.variants?.[variant]}
       {...rest}
     />
