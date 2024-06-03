@@ -1,0 +1,117 @@
+id: d97816b3-1679-4718-b214-82360887ec3b
+post_type: video
+title: Test title
+published_date: 2024-03-12T15:25:39.758Z
+video:
+  url: https://youtu.be/CRla8ILUlu0
+  id: CRla8ILUlu0
+  data:
+    kind: youtube#video
+    etag: T7Gr8q0WphYHvC9DTAZQ7sgq0-s
+    id: CRla8ILUlu0
+    snippet:
+      publishedAt: 2024-02-04T09:04:49Z
+      channelId: UCnDWguR8mE2oDBsjhQkgbvg
+      title: "KZG vs FRI: Polynomial Commitment Schemes Revisited"
+      description: >-
+        At Stanford Blockchain Conference 2023, Eli Ben Sasson made a comparison
+        of two main polynomial commitment schemes (PCS) used in practice: 
+
+
+        1. KZG, used in DankSharding and many a SNARK
+
+        2. FRI, used in Stone and other STARKs. 
+
+
+        This talk will revisit the topic and add Binius - a new PCS based on towers of binary fields. 
+
+
+        Topics to be discussed: 
+
+        - What is the cost of committing to data in different commitment schemes?
+
+        - The impact of choice of finite field - large prime (KZG) vs. small prime (FRI) vs. small binary towers (Binius)
+
+        - Additional considerations when deploying inside a SNARK, STARK or other ARKs
+
+
+        Speakers:
+
+        Eli Ben-Sasson, CEO of StarkWare
+
+        Shahar Papini, Software Engineer at StarkWare
+
+        Jim Posen, Co-Founder at Ulvetanna
+
+        Zac Williamson, CEO and Co-Founder at Aztec Labs
+
+        Mamy Ratsimbazafy, Head of Proof Systems at Taiko
+      thumbnails:
+        default:
+          url: https://i.ytimg.com/vi/CRla8ILUlu0/default.jpg
+          width: 120
+          height: 90
+        medium:
+          url: https://i.ytimg.com/vi/CRla8ILUlu0/mqdefault.jpg
+          width: 320
+          height: 180
+        high:
+          url: https://i.ytimg.com/vi/CRla8ILUlu0/hqdefault.jpg
+          width: 480
+          height: 360
+        standard:
+          url: https://i.ytimg.com/vi/CRla8ILUlu0/sddefault.jpg
+          width: 640
+          height: 480
+        maxres:
+          url: https://i.ytimg.com/vi/CRla8ILUlu0/maxresdefault.jpg
+          width: 1280
+          height: 720
+      channelTitle: StarkWare
+      categoryId: "28"
+      liveBroadcastContent: none
+      localized:
+        title: "KZG vs FRI: Polynomial Commitment Schemes Revisited"
+        description: >-
+          At Stanford Blockchain Conference 2023, Eli Ben Sasson made a
+          comparison of two main polynomial commitment schemes (PCS) used in
+          practice: 
+
+
+          1. KZG, used in DankSharding and many a SNARK
+
+          2. FRI, used in Stone and other STARKs. 
+
+
+          This talk will revisit the topic and add Binius - a new PCS based on towers of binary fields. 
+
+
+          Topics to be discussed: 
+
+          - What is the cost of committing to data in different commitment schemes?
+
+          - The impact of choice of finite field - large prime (KZG) vs. small prime (FRI) vs. small binary towers (Binius)
+
+          - Additional considerations when deploying inside a SNARK, STARK or other ARKs
+
+
+          Speakers:
+
+          Eli Ben-Sasson, CEO of StarkWare
+
+          Shahar Papini, Software Engineer at StarkWare
+
+          Jim Posen, Co-Founder at Ulvetanna
+
+          Zac Williamson, CEO and Co-Founder at Aztec Labs
+
+          Mamy Ratsimbazafy, Head of Proof Systems at Taiko
+      defaultAudioLanguage: en-US
+    contentDetails:
+      duration: PT1H12M31S
+      dimension: 2d
+      definition: hd
+      caption: "false"
+      licensedContent: false
+      contentRating: {}
+      projection: rectangular
