@@ -147,14 +147,14 @@ blocks:
           label: A local testnet
       - link:
           hasIcon: true
-          custom_title: Rust devent
+          custom_title: Rust devnet
           custom_external_link: https://github.com/0xSpaceShard/starknet-devnet-rs
         subLabel:
           label: A local testnet for Starknet in Rust
       - link:
           hasIcon: true
           custom_title: Katana
-          custom_external_link: https://book.dojoengine.org/toolchain/katana/overview.html
+          custom_external_link: https://book.dojoengine.org/toolchain/katana
         subLabel:
           label: A local Starknet node, designed to support local development with Dojo
       - link:
@@ -198,10 +198,10 @@ blocks:
     blocks:
       - link:
           hasIcon: true
-          custom_title: Starknet Goerli ETH faucet
-          custom_external_link: https://faucet.goerli.starknet.io/
+          custom_title: Starknet Faucet Sepolia
+          custom_external_link: https://starknet-faucet.vercel.app/
         subLabel:
-          label: "Testnet ETH faucet "
+          label: "Testnet ETH/STRK faucet "
       - link:
           hasIcon: true
           custom_title: "Empiric network "
