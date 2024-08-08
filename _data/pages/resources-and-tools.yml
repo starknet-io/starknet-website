@@ -204,8 +204,8 @@ blocks:
           label: "Testnet ETH faucet "
       - link:
           hasIcon: true
-          custom_title: "Empiric network "
-          custom_external_link: https://docs.empiric.network/
+          custom_title: "Pragma "
+          custom_external_link: https://docs.pragma.build/
         subLabel:
           label: "Starknet native oracle "
       - link:
