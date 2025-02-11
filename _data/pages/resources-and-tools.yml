@@ -164,6 +164,16 @@ blocks:
         subLabel:
           label: A collection of React hooks for Starknet
   - type: link_list
+    randomize: false
+    heading: Debugger
+    blocks:
+      - link:
+          hasIcon: true
+          custom_title: Walnut
+          custom_external_link: https://walnut.dev
+        subLabel:
+          label: "Transaction debugger and simulator for Starknet"
+  - type: link_list
     heading: "General "
     listSize: lg
     randomize: true
